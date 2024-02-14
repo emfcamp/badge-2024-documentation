@@ -1,6 +1,7 @@
 site_name: Nodular Badge Documentation
 theme:
   name: material
+  logo: "images/badge icon_64 wide cutouts.svg"
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -11,8 +12,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: deep purple
+      primary: deep purple
+      accent: teal
 
       toggle:
         icon: material/brightness-7
