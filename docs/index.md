@@ -2,11 +2,11 @@
 
 As in previous years, we're making a badge. Unlike previous years, we're trying to make a longer-lasting platform. We're publishing more information ahead of the event so that people can build things for the badge early on. You can reasonably expect things you build for this year's badge to work in future years too.
 
-![A hexagonal camp badge, made up of two PCBs with a gap between them, lit by RGB LEDs on top, with more LEDs shining inside. It has illustrations of cats on the silkscreen.](/images/badge-photos/badge-in-the-dark.jpg "Tildagon in the dark")
+![A hexagonal camp badge, made up of two PCBs with a gap between them, lit by RGB LEDs on top, with more LEDs shining inside. It has illustrations of cats on the silkscreen.](images/badge-photos/badge-in-the-dark.jpg "Tildagon in the dark")
 
 This year's badge is the Tildagon badge. It's a hexagon with a slot on each side that you can plug hexpansions into. A hexpansion is a 1 mm thick object with a particular shape on one edge. It can be made of cardstock, so you can quickly add some cat ears to your badge, or it can be a printed circuit board.
 
-![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout pins peaking out from the edges.](/images/badge-photos/badge-with-hexpansions.jpg "Tildagon with attached Hexpansions")
+![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout pins peaking out from the edges.](images/badge-photos/badge-with-hexpansions.jpg "Tildagon with attached Hexpansions")
 
 * Hardware - [emfcamp/badge-2024-hardware](https://github.com/emfcamp/badge-2024-hardware)
 * Software - [emfcamp/badge-2024-software](https://github.com/emfcamp/badge-2024-software)
@@ -24,7 +24,7 @@ The processor in the badge will be the same as in 2022, and it will run [MicroPy
 
 ## Hexpansions
 
-![A small spirit level, attached to a 3D printed hexagonal mount with notches to attach it to the badge. The mounting hexagon is slightly larger than the thumb holding it.](/images/badge-photos/hexpansion.png "A Hexpansion")
+![A small spirit level, attached to a 3D printed hexagonal mount with notches to attach it to the badge. The mounting hexagon is slightly larger than the thumb holding it.](images/badge-photos/hexpansion.png "A Hexpansion")
 
 Hexpansions are things that plug into the badge's expansion connectors. Almost anything can be a hexpansion: the simplest hexpansion is just a piece of 1 mm card cut into the right shape. Hexpansion connectors provide:
 
