@@ -34,7 +34,7 @@ Hexpansions are things that plug into the badge's expansion connectors. Almost a
 * 5 lower-speed GPIO pins connected to a GPIO expander/LED driver
 * 1 hexpansion detection pin (also used to switch power to the hexpansion on/off if needed)
 
-A hexpansion can optionally provide an I2C EEPROM from the list of [approved devices]<!--FIXME add the link-->. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there. <!-- You may not use address 0x77 on the badge I2C bus (if you do, the I2C connection between your hexpansion and the badge will be disabled). -->
+A hexpansion can optionally provide an I2C EEPROM from the list of [approved devices]<!--FIXME add the link-->. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there. 
 
 The hexpansion technical documentation, pinout, and paper and PCB templates for them, are in [this repository]<!--FIXME add the link-->.
 
