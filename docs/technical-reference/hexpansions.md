@@ -21,3 +21,12 @@ Electronic hexpansions will be provided with the following facilities:
 Hexpansions have a default hexagonal size and shape, but may extend outside the specified shape within documented constraints
 
 There will be mechanical mounting posts for hexpansions to attach to the baseboard with 2mm screws. This is only necessary if the hexpansions are expected to experience mechanical load
+
+## Supported EEPROMs
+
+The following EEPROMs are supported on your hexpansion, more may be supported in the future:
+
+* ZD24C64A-XGMT
+* M24C16-RMN6TP
+
+You may not use address 0x77 on the badge I2C bus (if you do, the I2C connection between your hexpansion and the badge will be disabled).
