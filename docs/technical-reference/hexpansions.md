@@ -21,6 +21,8 @@ A Hexpansion is a thing that plugs into one of the hexpansion ports of a tildago
 
 You can make a Hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest Hexpansion is a piece of 1mm cardstock cut into a particular shape.
 
+There are some [example 3D printable STL files on Printables](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template), which may be useful as a starting point for prototyping. These have been tested and fit in the slots of a prototype of the 2024 badge.
+
 ## Shape and size
 
 To fit into the slot, the Hexpansion has to have a tab sticking out that is **9.2mm** wide and **6.5mm** long. That tab is 17.75mm away from the board edge.
