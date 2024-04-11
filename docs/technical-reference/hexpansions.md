@@ -47,7 +47,7 @@ If your hexpansion is electronic, it will connect to the tildagon with some pads
 
 The connector has the same pinout at the SFP interface used in networking equipment (if you feel like making an extremely cursed transceiver, go ahead!). The pinout is as follows:
 
-| Top side | Signal  | | Bot side | Signal |
+| Bot side | Signal  | | Top side | Signal |
 | -------- | --------|-| -------- |--- |
 | 1     | GND        |.| 11     | GND |
 | 2     | Low speed 1|.| 12     | High speed 1 |
