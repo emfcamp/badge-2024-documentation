@@ -17,9 +17,13 @@ Hexpansion hardware developer guide
 
 A Hexpansion is a thing that plugs into one of the hexpansion ports of a tildagon badge (and hopefully into other things in the future).
 
-**A Hexpansion must be 1mm thick!!!** If it's any other thickness, it will not fit the port, and it will not work.
+**A Hexpansion must be 1 mm thick!** If it's any other thickness, it will not fit the port, and it will not work. The connector
+specifies a 0.1 mm tolerance for thickness.
 
 You can make a Hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest Hexpansion is a piece of 1mm cardstock cut into a particular shape.
+
+If you're laser-cutting a hexpansion out of plastic, note that *cast* acrylic sheet can vary quite a lot in thickness. *Extruded*
+acrylic sheet has better dimensional tolerance and is recommended for building hexpansions.
 
 There are some [example 3D printable STL files on Printables](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template), which may be useful as a starting point for prototyping. These have been tested and fit in the slots of a prototype of the 2024 badge.
 
@@ -35,7 +39,7 @@ The template project has guidelines to make this easier.
 
 The "ears" around the connector tab are optional but help with mechanical stability.
 
-If your hexpansion is a PCB, it may not have any depanelization tabs in the connector area.
+If your hexpansion is a PCB, it must not have any depanelization tabs in the connector area.
 
 ## Mounting holes
 
