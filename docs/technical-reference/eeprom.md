@@ -32,7 +32,7 @@ The header is 32 bytes long and contains the following values:
     - 0x0000 if unused, otherwise unique ID
         - This may be used to identify individual hexpansion instances of the same kind. Leave at zero if not using, otherwise ensure each hexpansion instance has a unique value.
 - Friendly name (offset 22, length 9, padded with 0x00)
-    - This is an ASCII string containing a name to be displayed in menus and prompts so that users can identify the hexpansion. It can contain up to ten characters, and unused characters should be set to 0x00.
+    - This is an ASCII string containing a name to be displayed in menus and prompts so that users can identify the hexpansion. It can contain up to nine characters, and unused characters should be set to 0x00.
 - Checksum (offset 31, length 1)
     - This is a checksum calculated by the following algorithm:
     1. Start with a variable S with the value 0x55
