@@ -40,7 +40,8 @@ The header is 32 bytes long and contains the following values:
     3. when all 30 bytes have been processed, store the result in the checksum position
 
     An example implementation of the checksum algorithm in Python:
-    ```Python 
+
+  ```Python 
     def calc_checksum(header): #header assumed to be of type bytes
         value=0x55
         for b in header[1:]:
