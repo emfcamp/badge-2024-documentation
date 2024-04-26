@@ -6,8 +6,8 @@ This document is a work in progress. More details will be added as they become a
 If you want your eeprom-equipped hexpansion to do something automatically, you need to write some data to the eeprom. The data consists of a header which contains hexpansion metadata and a littlefs file system which contains your application and data. The minimal application consists of a file called `app.py` that contains your code.
 
 We will look for eeproms on the following i2c addresses:
-- 0x50
 - 0x57
+- 0x50
 
 The header is 32 bytes long and contains the following values:
 
@@ -25,7 +25,7 @@ The header is 32 bytes long and contains the following values:
     - 4 bytes total size (total filesystem size in bytes)
 - VID/PID (offset 16, length 4)
     - 2 bytes VID
-        - This is a Vendor ID. To obtain a Vendor ID, contact the Unnecessary Hexpansion Bureaucracy Implementers Forum (UHB-IF) at (location to be disclosed). If you don't want to do that, use vendor id f055.
+        - This is a Vendor ID. Vendor IDs are assigned by the Unnecessary Hexpansion Bureaucracy Implementers Forum ([UHB-IF](https://badge.emfcamp.org/wiki/UHB-IF)) To obtain a Vendor ID, contact the UHB-IF at (location to be disclosed). If you don't want to do that, use a vendor ID from [here](https://badge.emfcamp.org/wiki/UHB-IF/Uncontrolled_IDs).
     - 2 bytes PID
         - This is a Product ID. If you have a Vendor ID, you can choose your own Product ID. If you are using the free-for-all Vendor ID, you will have to coordinate number assignments with other users on a wiki page (to be disclosed). Each hexpansion design with an eeprom needs a unique VID/PID combination.
 - Unique ID (offset 20, length 2)
@@ -43,15 +43,15 @@ The header is 32 bytes long and contains the following values:
 
 ```python
   
-    def calc_checksum(header): #header assumed to be of type bytes
-        value=0x55
-        for b in header[1:]:
-            value= value ^ b
-        return value
+def calc_checksum(header): #header assumed to be of type bytes
+    value=0x55
+    for b in header[1:]:
+        value= value ^ b
+    return value
         
-    header_w_checksum = header+bytes([calc_checksum(header)]) #to generate a checksum
+header_w_checksum = header+bytes([calc_checksum(header)]) #to generate a checksum
     
-    calc_checksum(header_w_checksum) # should return 0 if checksum is correct
+calc_checksum(header_w_checksum) # should return 0 if checksum is correct
     
 ```
 
