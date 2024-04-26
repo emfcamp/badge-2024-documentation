@@ -41,8 +41,8 @@ The header is 32 bytes long and contains the following values:
 
     An example implementation of the checksum algorithm in Python:
 
-```
-:::python
+```python
+
 def calc_checksum(header): #header assumed to be of type bytes
     value=0x55
     for b in header[1:]:
