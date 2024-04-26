@@ -41,7 +41,7 @@ The header is 32 bytes long and contains the following values:
 
     An example implementation of the checksum algorithm in Python:
 
-  ```Python
+```python
   
     def calc_checksum(header): #header assumed to be of type bytes
         value=0x55
@@ -53,7 +53,7 @@ The header is 32 bytes long and contains the following values:
     
     calc_checksum(header_w_checksum) # should return 0 if checksum is correct
     
-    ```
+```
 
 The header format uses little-endian byte ordering for the individual values, e.g. 0x0123 = 0x01 as least significant byte and 0x23 as most significant byte, resulting in a value of 8961
 
