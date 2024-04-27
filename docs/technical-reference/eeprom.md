@@ -6,6 +6,7 @@ This document is a work in progress. More details will be added as they become a
 If you want your eeprom-equipped hexpansion to do something automatically, you need to write some data to the eeprom. The data consists of a header which contains hexpansion metadata and a littlefs file system which contains your application and data. The minimal application consists of a file called `app.py` that contains your code.
 
 We will look for eeproms on the following i2c addresses:
+
 - 0x57
 - 0x50
 
