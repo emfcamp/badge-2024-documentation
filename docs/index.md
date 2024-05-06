@@ -4,7 +4,7 @@ As in previous years, we're making a badge. Unlike previous years, we're trying 
 
 <div class="grid cards" markdown>
 
-- [I'm an emfcamp attendee and I want to know how to use the badge](using-the-badge)
+- [I'm a badge holder and I want to know how to use the badge](using-the-badge)
 - [I'm a software hacker and I want to make a badge app](tildagonos-apps)
 - [I'm a hardware hacker and I want to make a hexpansion](hexpansions)
 - [I'm a volunteer (or I want to be) and I want to hack on badge firmware](tildagonos-firmware)

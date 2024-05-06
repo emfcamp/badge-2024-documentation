@@ -22,7 +22,7 @@ For more info check out our [Getting Started guide](./how-to-write-a-tildagon-os
 
 ## Publishing your app
 
-Apps can be published to the app store to be made available to other emfcamp
+Apps can be published to the app store to be made available to other EMF2024
 attendees. To publish your app to the app store, put your app in a GitHub
 repository and make sure it's accompanied with an app manifest. Tag your repo with
 the `tildagon-app` tag, and the app store will pick it up within about 10 minutes.
