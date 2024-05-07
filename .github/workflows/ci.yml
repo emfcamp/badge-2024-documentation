@@ -22,7 +22,10 @@ jobs:
         uses: VaultVulp/action-pipenv@v2.0.1
         with:
           command: install -d
-      - run: pipenv run mkdocs build
+      - name: Build docs
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: run mkdocs build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
