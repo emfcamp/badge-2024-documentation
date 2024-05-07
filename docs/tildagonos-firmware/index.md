@@ -25,4 +25,4 @@ A few ways you can get involved:
 [badge-2024-software]: https://www.github.com/emfcamp/badge-2024-software
 [badge-2024-documentation]: https://www.github.com/emfcamp/badge-2024-documentation
 [badge-2024-app-store]: https://www.github.com/emfcamp/badge-2024-app-store
-[badge-tent-volunteering]: ./badge-tent-volunteering
+[badge-tent-volunteering]: ./badge-tent-volunteering.md

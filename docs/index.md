@@ -93,3 +93,7 @@ In future events, we will reuse the base part and maintain compatibility in soft
 - Keyboard
 
 [matrix]: https://matrix.to/#/#badge:emfcamp.org
+[using-the-badge]: "./using-the-badge"
+[tildagonos-apps]: "./tildagonos-apps"
+[hexpansions]: "./hexpansions"
+[tildagonos-firmware]: "./tildagonos-firmware"

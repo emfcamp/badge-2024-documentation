@@ -18,7 +18,7 @@ You can use most micropython libraries, and for some functionality we provide
 abstractions - for example, a semantic interface to the buttons, so that your
 app uses a consistent button interface to other apps.
 
-For more info check out our [Getting Started guide](./how-to-write-a-tildagon-os-app).
+For more info check out our [Getting Started guide][app-getting-started].
 
 ## Publishing your app
 
@@ -28,3 +28,4 @@ repository and make sure it's accompanied with an app manifest. Tag your repo wi
 the `tildagon-app` tag, and the app store will pick it up within about 10 minutes.
 
 [simulator]: https://github.com/emfcamp/badge-2024-software/tree/main/sim
+[app-getting-started]: ./how-to-write-a-tildagon-os-app.md

@@ -10,8 +10,8 @@ This guide will help you write an "Hello, World" app for the Tildagon badge.
 
 <div class="grid cards" markdown>
 
-- [Tildagon OS Programming Interface Reference](./reference)
-- [Interfacing with badge hardware](./guides/using-badge-hardware)
+- [Tildagon OS Programming Interface Reference](./reference.md)
+- [Interfacing with badge hardware](./guides/using-badge-hardware.md)
 - [Using the badge simulator][simulator]
 
 </div>
