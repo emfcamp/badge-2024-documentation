@@ -41,8 +41,7 @@ Unlike in previous years, [Emfcamp](https://www.emfcamp.org/) is trying to make 
 
 ![A small spirit level, attached to a 3D printed hexagonal mount with notches to attach it to the badge. The mounting hexagon is slightly larger than the thumb holding it.](images/badge-photos/hexpansion.png "A Hexpansion"){: style="width:300px;height: auto;margin:auto;display:block;" }
 
-Hexpansions are accessories that plug into the badge's expansion connectors.
-Almost anything can be a hexpansion: the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape.
+Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion: the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape.
 
 ??? note "Expand to show a list of variously realistic hexpansion ideas"
 
@@ -89,21 +88,15 @@ Instead of redesigning badges from scratch every two years, we're building:
 
 ### Why are we doing this?
 
-We want to let you make physical things that interact with the badge more easily, in the knowledge that those things are going to continue working with future event badges.
-In previous years, expandability has always been an afterthought - people still managed to do amazing things with their badges, but it was a lot of effort.
+We want to let you make physical things that interact with the badge more easily, in the knowledge that those things are going to continue working with future event badges. In previous years, expandability has always been an afterthought - people still managed to do amazing things with their badges, but it was a lot of effort.
 
-Additionally, we're tired of building the same thing over and over just to make it new and special.
-We're tired of putting ever-increasing stacks of e-waste into the drawers of the hacking world.
-We're especially tired of people not being able to meaningfully build things for the badge before the event, and none of those things working by the next event.
+Additionally, we're tired of building the same thing over and over just to make it new and special. We're tired of putting ever-increasing stacks of e-waste into the drawers of the hacking world. We're especially tired of people not being able to meaningfully build things for the badge before the event, and none of those things working by the next event.
 
 The Tildagon will not only let us waste fewer materials, but it also provides us and attendees with a stable base to build on and invest in.
 
-For us, the stable infrastructure means we do not need to rewrite software and drivers for every event.
-Instead we can focus our efforts on the smaller event-specific part.
+For us, the stable infrastructure means we do not need to rewrite software and drivers for every event. Instead we can focus our efforts on the smaller event-specific part.
 
-Investing in the Tildagon for multiple years also means we've put more effort and better parts than usual into the base board.
-We put all the expensive and hard-to-get-right functionality on the base part.
-In future events, we will reuse this base part and maintain compatibility in software and hardware for existing hexpansions.
+Investing in the Tildagon for multiple years also means we've put more effort and better parts than usual into the base board. We put all the expensive and hard-to-get-right functionality on the base part. In future events, we will reuse this base part and maintain compatibility in software and hardware for existing hexpansions.
 
 The most energy-intensive part of each badge is the battery, so we've made it compatible with the batteries from the 2016 and 2018 badges.
 
