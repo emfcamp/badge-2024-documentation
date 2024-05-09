@@ -19,7 +19,7 @@ Unlike in previous years, [Emfcamp](https://www.emfcamp.org/) is trying to make 
 
 </div>
 
-!!! info "Need help? Ask in one of these two channels:"
+!!! info "Need help? Ask here:
 
     - irc: __irc.libera.chat #emfcamp-badge__
     - matrix: __[#badge:emfcamp.org][matrix]__
