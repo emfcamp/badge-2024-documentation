@@ -26,6 +26,18 @@ acrylic sheet has better dimensional tolerance and is recommended for building h
 
 There are some [example 3D printable STL files on Printables](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template), which may be useful as a starting point for prototyping. These have been tested and fit in the slots of a prototype of the 2024 badge.
 
+## Connectors
+
+Hexpansion connectors provide:
+
+- Up to 600mA of 3.3V power (current-limited)
+- An I2C bus (separate for each hexpansion)
+- 4 high-speed GPIO pins connected directly to the ESP32-S3
+- 5 lower-speed GPIO pins connected to a GPIO expander/LED driver
+- 1 hexpansion detection pin (also used to switch power to the hexpansion on/off if needed)
+
+A hexpansion can optionally provide an I2C EEPROM from the list of approved devices. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there.
+
 ## Shape and size
 
 To fit into the slot, the Hexpansion has to have a tab sticking out that is **9.2mm** wide and **6.5mm** long. That tab is 17.75mm away from the board edge.
