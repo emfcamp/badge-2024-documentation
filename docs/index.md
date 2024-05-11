@@ -4,7 +4,7 @@
 
 This year's badge is the Tildagon badge. It's a hexagon with a slot on each side that you can plug _[hexpansions](#hexpansions)_ into. A hexpansion is a 1 mm thick object with a hexagon shape on one edge (a six-sided polygon like this: ⬡). It can be made of cardstock, so you can quickly add some cat ears to your badge, or it can be a printed circuit.
 
-Unlike in previous years, [Emfcamp](https://www.emfcamp.org/) is trying to make a [longer-lasting platform](#a-reusable-platform-with-an-interchangeable-part) so any apps developed for it will work for multiple years.
+Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is trying to make a [longer-lasting platform](#a-reusable-platform-with-an-interchangeable-part) so any apps developed for it will work for multiple years.
 
 <br>
 
@@ -12,8 +12,8 @@ Unlike in previous years, [Emfcamp](https://www.emfcamp.org/) is trying to make 
 
 <div class="grid cards" markdown>
 
-- [I want to know how to use the badge](using-the-badge)
-- [I want to make a badge app](tildagonos-apps)
+- [I want to know how to use the badge](using-the-badge/end-user-manual/)
+- [I want to make a badge app](tildagonos-apps/how-to-write-a-tildagon-os-app/)
 - [I want to make a hexpansion](hexpansions)
 - [I want to hack on badge firmware](tildagonos-firmware)
 
