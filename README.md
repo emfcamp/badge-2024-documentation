@@ -48,3 +48,7 @@ python3 -m http.server 9000 --directory public
 ## Contribute to the documentation
 
 Want to improve our documentation? Please do! You can [open a PR](https://docs.github.com/en/desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop) and we'll take a look.
+
+Resources:
+
+- [Style Guide](https://www.emfcamp.org/about/branding)
