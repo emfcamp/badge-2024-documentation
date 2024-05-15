@@ -41,12 +41,12 @@ To test the app, go to the instructions for [simulating your app](./simulate.md)
 
 ### Premade elements
 
-You can use the following premade [`app_components`](guides/ui-widget-overview.md) to create user interfaces:
+You can use the following premade [`app_components`](guides/ui-widgets.md) to create user interfaces:
 
-- [`Menu`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/menu.py): scroll up/down and select
-- [`Notification`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/notification.py): pop up notifications
-- [`Dialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py): create yes or no dialogues
-- [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py):
+- [`Menu`](guides/ui-widgets.md#menu): scroll up/down and select
+- [`Notification`](guides/ui-widgets.md#notification): pop up notifications
+- [`Dialog`](guides/ui-widgets.md#dialog): create yes or no dialogues
+- [`Tokens`](guides/ui-widgets.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
 
