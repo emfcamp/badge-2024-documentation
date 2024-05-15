@@ -37,4 +37,5 @@ markdown_extensions:
   - pymdownx.superfences
 plugins:
    - glightbox
+   - mkdocs-nav-weight
 
