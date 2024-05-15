@@ -1,10 +1,14 @@
 # UI Widget Overview
 
-You can use the following premade [`app_components`](guides/ui-widgets.md) to create user interfaces:
+You can use the following premade [`app_components`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/menu.py) to create user interfaces:
 
 ## Menu
 
 The [`Menu`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/menu.py) component, allows you to create menus with which you can scroll through a list of options and select an item.
+
+### Example
+
+### Usage
 
 ## Notification
 
@@ -81,9 +85,17 @@ To use a notification:
 
 The [`Dialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py) component allows you to create yes or no dialogues.
 
+### Example
+
+### Usage
+
 
 ## Tokens
 
 The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use:
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
+
+### Example
+
+### Usage
