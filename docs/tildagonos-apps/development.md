@@ -11,23 +11,31 @@ This guide will help you write an "Hello, World" app for the Tildagon badge.
 
 ## Hello World app
 
-This is a small Tildagon app of only 11 lines. The app imports the app base class and writes `Hello, world!` to the badge screen:
+This is a small Tildagon app. The app imports the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), sets a button to allow you to cancel out of the app, and writes `Hello, world!` to the badge screen:
 
 ```python
-from app import app
+import asyncio
+import app
 
-class HelloWorld(App):
-  def __init__():
-    pass
+from events.input import Buttons, BUTTON_TYPES
 
-  def update():
-    pass:
 
-  def draw():
-    ctx.move_to(0, 0).text("Hello, world!"]
+class ExampleApp(app.App):
+      def __init__(self):
+      self.button_states = Buttons(self)
+
+      def update(self, delta):
+      if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.minimise()
+
+      def draw(self, ctx):
+      ctx.save()
+      ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
+      ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
+      ctx.restore()
 ```
 
-To test the app you can [simulate it](./simulate.md) or [publish it](./publish.md) for testing on your real-life badge.
+To test the app, go to the instructions for [simulating your app](./simulate.md) or [publishing it](./publish.md) for testing on your real-life badge.
 
 ## Creating User Interfaces
 

@@ -10,11 +10,11 @@ weight: 4
 To publish your Tildagon App, you need to create a GitHub repository with:
 
 - a `main.py` file containing the app
-- a `tildagon.toml` file containing metadata about the app
+- a [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) file containing metadata about the app
 - a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
 - the `tildagon-app` [label applied to the repo](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label)
 
-## Get started
+## Instructions
 
 1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this [GitHub repository](https://github.com/hughrawlinson/tildagon-demo/).
 2. Edit the app properties in the [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) with your name, the category of the app, and other metadata:
@@ -65,17 +65,25 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 3. Edit the `main.py`. This is a simple hello world app:
 
       ```python
-      from app import app
+      import asyncio
+      import app
 
-      class HelloWorld(App):
-      def __init__():
-      pass
+      from events.input import Buttons, BUTTON_TYPES
 
-      def update():
-      pass:
 
-      def draw():
-      ctx.move_to(0, 0).text("Hello, world!"]
+      class ExampleApp(app.App):
+            def __init__(self):
+            self.button_states = Buttons(self)
+
+            def update(self, delta):
+            if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+                  self.minimise()
+
+            def draw(self, ctx):
+            ctx.save()
+            ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
+            ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
+            ctx.restore()
       ```
 
 4. Add the `tildagon-app` [label applied to the repo](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label).
