@@ -11,7 +11,7 @@ This guide will help you write an "Hello, World" app for the Tildagon badge.
 
 ## Hello World app
 
-This is a small Tildagon app of only 11 lines. The app imports the app base class and writes `Hello, wold!` to the badge screen:
+This is a small Tildagon app of only 11 lines. The app imports the app base class and writes `Hello, world!` to the badge screen:
 
 ```python
 from app import app
@@ -27,13 +27,13 @@ class HelloWorld(App):
     ctx.move_to(0, 0).text("Hello, world!"]
 ```
 
-To test the app you can [simulate it](/tildagonos-apps/simlulate/) or [publish it](/tildagonos-apps/publish/) for testing on your real-life badge.
+To test the app you can [simulate it](./simulate.md) or [publish it](./publish.md) for testing on your real-life badge.
 
 ## Creating User Interfaces
 
 ### Premade elements
 
-You can use the following premade [`app_components`](/tildagonos-apps/guides/ui-widget-overview/) to create user interfaces:
+You can use the following premade [`app_components`](guides/ui-widget-overview.md) to create user interfaces:
 
 - [`Menu`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/menu.py): scroll up/down and select
 - [`Notification`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/notification.py): pop up notifications

@@ -23,6 +23,6 @@ pipenv run python run.py
 
 <div class="grid cards" markdown>
 
-- [Publish an app](/tildagonos-apps/publish/)
+- [Publish an app](./publish.md)
 
 </div>

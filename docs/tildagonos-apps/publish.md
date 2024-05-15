@@ -98,7 +98,7 @@ You can currently only publish Tildagon Apps through GitHub. Contributions to su
 
 <div class="grid cards" markdown>
 
-- [End user manual](/using-the-badge/end-user-manual/)
+- [End user manual](../using-the-badge/end-user-manual.md)
 
 </div>
 
