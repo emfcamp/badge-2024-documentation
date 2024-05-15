@@ -12,6 +12,8 @@ The [`Notification`](https://github.com/emfcamp/badge-2024-software/blob/main/mo
 
 ### Example
 
+This example app shows the notification `down!` when you press the down button.
+
 ```python
 from app import App
 from app_components import Notification, clear_background
@@ -27,16 +29,13 @@ class NotificationDemo(App):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             self.minimise()
         if self.button_states.get(BUTTON_TYPES["DOWN"]):
-            self.notification = Notification("You pressed down!")
-
-    def draw(self, ctx):
-        clear_background(ctx)
-        if self.notification:
-            self.notification.draw(ctx)
-
-    def update(self, delta):
+            self.notification = Notification("down!")
         if self.notification:
             self.notification.update(delta)
+
+    def draw(self, ctx):
+        if self.notification:
+            self.notification.draw(ctx)
 
 ```
 
