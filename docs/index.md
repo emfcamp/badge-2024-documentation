@@ -13,7 +13,7 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 <div class="grid cards" markdown>
 
 - [I want to know how to use the badge](using-the-badge/end-user-manual/)
-- [I want to make a badge app](tildagonos-apps/how-to-write-a-tildagon-os-app/)
+- [I want to make a badge app](tildagonos-apps/development/)
 - [I want to make a hexpansion](hexpansions)
 - [I want to hack on badge firmware](tildagonos-firmware)
 

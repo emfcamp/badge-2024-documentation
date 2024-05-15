@@ -28,4 +28,4 @@ repository and make sure it's accompanied with an app manifest. Tag your repo wi
 the `tildagon-app` tag, and the app store will pick it up within about 10 minutes.
 
 [simulator]: https://github.com/emfcamp/badge-2024-software/tree/main/sim
-[app-getting-started]: ./how-to-write-a-tildagon-os-app.md
+[app-getting-started]: ./development.md

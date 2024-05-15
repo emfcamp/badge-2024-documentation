@@ -1,6 +1,6 @@
 ---
 title: Publish Your App
-weight: -2
+weight: 4
 ---
 
 !!! danger
@@ -98,7 +98,7 @@ You can currently only publish Tildagon Apps through GitHub. Contributions to su
 
 <div class="grid cards" markdown>
 
-- [Using the badge simulator][simulator]
+- [End user manual](/using-the-badge/end-user-manual/)
 
 </div>
 
