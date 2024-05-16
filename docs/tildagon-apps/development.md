@@ -50,8 +50,6 @@ You can use the following premade [`app_components`](guides/ui-widgets.md) to cr
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
 
-You can see how these components work in the [`menu_demo.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/menu_demo.py).
-
 ### The `ctx` library
 
 You can also create your own user interfaces using the [`ctx` graphics library](https://ctx.graphics/). This is the same library we use for the premade UI elements, so you can look at  examples in the [`app_components` folder](https://github.com/emfcamp/badge-2024-software/tree/main/modules/app_components).

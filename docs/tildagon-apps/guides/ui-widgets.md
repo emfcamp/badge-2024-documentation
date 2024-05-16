@@ -8,6 +8,8 @@ The [`Menu`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/ap
 
 ### Example
 
+You can see how these components work in the [`menu_demo.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/menu_demo.py).
+
 ### Usage
 
 ## Notification

@@ -92,7 +92,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
       -  `v0.0.1` for your tag
       -  `v0.0.1` for your release title
 
-Your app will now become available in the Tildagon App store.
+Your app will become available in the Tildagon App store within about 10 minutes.
 
 !!! note "Updating the version"
 
