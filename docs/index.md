@@ -12,10 +12,10 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 
 <div class="grid cards" markdown>
 
-- [I want to know how to use the badge](using-the-badge/end-user-manual/)
-- [I want to make a badge app](tildagonos-apps/how-to-write-a-tildagon-os-app/)
-- [I want to make a hexpansion](hexpansions)
-- [I want to hack on badge firmware](tildagonos-firmware)
+- [I want to know how to use the badge](using-the-badge/end-user-manual.md)
+- [I want to make a badge app](tildagonos-apps/development.md)
+- [I want to make a hexpansion](hexpansions/index.md)
+- [I want to hack on badge firmware](tildagonos-firmware/index.md)
 
 </div>
 
@@ -74,7 +74,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 
 For more information, see:
 
-- [Hexpansion hardware developer guide](/hexpansions/).
+- [Hexpansion hardware developer guide](hexpansions/index.md).
 - [Technical documentation, pinout, and paper and PCB templates][badge-2024-hardware].
 
 ## A reusable platform with an interchangeable part
