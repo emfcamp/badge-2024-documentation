@@ -41,12 +41,12 @@ To test the app, go to the instructions for [simulating your app](./simulate.md)
 
 ### Premade elements
 
-You can use the following premade [`app_components`](guides/ui-widgets.md) to create user interfaces:
+You can use the following premade [`app_components`](widgets-and-hardware/ui-elements.md) to create user interfaces:
 
-- [`Menu`](guides/ui-widgets.md#menu): scroll up/down and select
-- [`Notification`](guides/ui-widgets.md#notification): pop up notifications
-- [`Dialog`](guides/ui-widgets.md#dialog): create yes or no dialogues
-- [`Tokens`](guides/ui-widgets.md#tokens):
+- [`Menu`](widgets-and-hardware/ui-elements.md#menu): scroll up/down and select
+- [`Notification`](widgets-and-hardware/ui-elements.md#notification): pop up notifications
+- [`Dialog`](widgets-and-hardware/ui-elements.md#dialog): create yes or no dialogues
+- [`Tokens`](widgets-and-hardware/ui-elements.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
 
@@ -58,9 +58,9 @@ You can also create your own user interfaces using the [`ctx` graphics library](
 
 <div class="grid cards" markdown>
 
-- [Tildagon OS Programming Interface Reference](./reference.md)
+- [Tildagon OS Programming Interface Reference](./widgets-and-hardware/reference.md)
 - [Publish your app](./publish.md)
-- [Interfacing with badge hardware](./guides/using-badge-hardware.md)
+- [Interfacing with badge hardware](./widgets-and-hardware/badge-hardware.md)
 - [Using the badge simulator][simulator]
 
 </div>
