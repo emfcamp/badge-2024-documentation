@@ -38,10 +38,6 @@ To test the app, go to the instructions for [simulating your app](./simulate.md)
 
 ## The `App` class
 
-!!! quote "Quote by Tom Catshoek"
-
-    Apps are just objects with `update()` and `draw()` methods. And optionally async `background_update()`.
-
 To make a badge app in Python, you subclass the [`App` class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py). When you subclass the `App` class to create your app, you need to _overwrite_ some of its methods to make it do something useful.
 
 ??? note "Wondering what a subclass is or what _overwrite_ means? Expand this!"
@@ -124,9 +120,15 @@ To make a badge app in Python, you subclass the [`App` class](https://github.com
 
 ### Usage
 
-This section walks you through the most [common usage](#common-usage) first which is enough to build many apps. Afterwards, you'll learn how to [update state while an app is minimized](#update-app-state-while-minimised), how to [draw multiple objects](#draw-multiple-objects), and how to [add asynchronous functionality](#asynchronous-functionality).
+This section walks you through the most [common usage](#common-usage) first which is enough to build many apps.
+
+Afterwards, you'll learn how to [update state while an app is minimized](#update-app-state-while-minimised), how to [draw multiple objects](#draw-multiple-objects), and how to [add asynchronous functionality](#asynchronous-functionality).
 
 #### Common Usage
+
+!!! important ""
+
+    You can think of the apps on your badge as objects with `update()` and `draw()` methods.
 
 1. To be able to subclass the `App` class, import the `app` package at the top of your Python file:
 
@@ -361,7 +363,7 @@ By default, the `background_task()` method is automatically run by the scheduler
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `overlays` | Any object with a draw method. | Your app's list of overlays. |
+| `overlays` | An array of objects that each have a draw method. | Your app's list of overlays. |
 
 ### Methods
 
