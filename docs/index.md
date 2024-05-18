@@ -71,7 +71,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     - Gnat attractor
     - Keyboard
 
-
 For more information, see:
 
 - [Hexpansion hardware developer guide](hexpansions/index.md)
@@ -107,3 +106,4 @@ Instead of having a lanyard, we are making the USB cable itself be the lanyard f
 [badge-2024-documentation]: https://www.github.com/emfcamp/badge-2024-documentation
 [badge-2024-app-store]: https://www.github.com/emfcamp/badge-2024-app-store
 [badge-tent-volunteering]: ./badge-tent-volunteering.md
+[matrix]: https://matrix.to/#/#badge:emfcamp.org
