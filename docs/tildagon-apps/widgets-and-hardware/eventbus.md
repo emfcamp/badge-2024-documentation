@@ -44,7 +44,7 @@ You can use your own events directly with an event handler that you register on 
 
     ```python
     def __init__(self):
-        eventbus.on(SpecialEvent, self.handle_event_async, self.app)
+        eventbus.on_async(SpecialEvent, self.handle_event_async, self.app)
     ```
 
 5. Add code to emit the event, for example in your app's `update()` method. Depending on whether the event handler is a synchronous or asynchronous method call `emit()` or `emit_async()`:
@@ -56,9 +56,9 @@ You can use your own events directly with an event handler that you register on 
     ```
 
     ```python
-    def update(self, delta):
+    async def update(self, delta):
         # If something happens
-        eventbus.emit_async(SpecialEvent())
+        await eventbus.emit_async(SpecialEvent())
     ```
 
 6. Remove the event handler when the app is minimised or closed.
