@@ -77,6 +77,10 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            # The button_states do not update while you are in the background.
+            # Calling clear() ensures the next time you open the app, it stays open.
+            # Without it the app would close again immediately.
+            self.button_states.clear()
             self.minimise()
 
     def draw(self, ctx):

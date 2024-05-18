@@ -3,6 +3,10 @@ title: Programming Interface Overview
 weight: -3
 ---
 
+## `App` class
+
+For a detailed overview of the `App` class, see [The `App` class](../development.md#the-app-class).
+
 ## Premade UI elements
 
 You can use the following premade [`app_components`](./ui-elements.md) to create user interfaces:
