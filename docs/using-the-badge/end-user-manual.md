@@ -1,4 +1,7 @@
-# Tildagon End User Manual
+---
+title: Tildagon End User Manual
+weight: 1
+---
 
 ![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout
 pins peaking out from the edges, and a screen showing

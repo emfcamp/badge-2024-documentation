@@ -124,12 +124,12 @@ To use a menu:
 
 You can use the following methods on a `Menu` object:
 
-| Method | Description | Returns |
-| ------ | ----------- | ------- |
-| `up_handler()` | Manually moves you up one position in the menu. | None |
-| `down_handler()` | Manually moves you down one position in the menu. | None |
-| `update(delta)` | Update the menu as animations are happening. You need to call this method in your app's `update()` method. | None |
-| `draw(ctx)` | Add the menu to the screen. You need to call this method in your app's `draw()` method. | None |
+| Method | Description | Parameter | Returns |
+| ------ | ----------- | --------- | ------- |
+| `up_handler()` | Manually moves you up one position in the menu. | None | None |
+| `down_handler()` | Manually moves you down one position in the menu. | None | None |
+| `update(delta)` | Update the menu as animations are happening. You need to call this method in your app's `update()` method. | `delta`: Time difference between the last update call and the current update call. | None |
+| `draw(ctx)` | Add the menu to the screen. You need to call this method in your app's `draw()` method. | `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
 
 ## Notification
 
@@ -223,12 +223,12 @@ To use a notification:
 
 You can use the following methods on a `Notification` object:
 
-| Method | Description | Returns |
-| ------ | ----------- | ------- |
-| `open()` | Manually open the notification. | None |
-| `close()` | Manually close the notification. | None |
-| `update(delta)` | Automatically display the notification for a period of 5 seconds. You need to call this method in your app's `update()` method. | None |
-| `draw(ctx)` | Add the notification to the screen. You need to call this method in your app's `draw()` method. | None |
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `open()` | Manually open the notification. | None | None |
+| `close()` | Manually close the notification. | None | None |
+| `update(delta)` | Automatically display the notification for a period of 5 seconds. You need to call this method in your app's `update()` method. | `delta`: Time difference between the last update call and the current update call. | None |
+| `draw(ctx)` | Add the notification to the screen. You need to call this method in your app's `draw()` method. | `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
 
 ## Dialog
 
@@ -341,11 +341,11 @@ To use a dialog:
 
 You can use the following methods on a `Notification` object:
 
-| Method | Description | Returns |
-| ------ | ----------- | ------- |
-| `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `True` or `False` |
-| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | None |
-| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | None |
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `render_update`: method that triggers a `draw()` call when updates are complete. | `True` or `False` |
+| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
+| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
 
 ## Tokens
 
@@ -355,10 +355,10 @@ The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/
 
 ### Functions
 
-| Method | Description | Returns |
-| ------ | ----------- | ------- |
-| `clear_background(ctx)` | Clear the badge background. | None |
-| `set_color(ctx, color)` | Set the color for the context. The color must be provided as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. | None |
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `clear_background(ctx)` | Clear the badge background. | `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
+| `set_color(ctx, color)` | Set the color for the context. The color must be provided as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. | - `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
 
 
 
