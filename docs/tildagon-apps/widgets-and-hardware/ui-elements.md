@@ -358,7 +358,7 @@ The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `clear_background(ctx)` | Clear the badge background. | `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
-| `set_color(ctx, color)` | Set the color for the context. The color must be provided as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. | - `ctx`: context that let's you add graphics or texts. See [`ctx` library](../development.md#the-ctx-library). | None |
+| `set_color(ctx, color)` | Set the color for the context. | <ul><li><code>ctx</code>: context that let's you add graphics or texts. See <a href="../../development#the-ctx-library"><code>ctx</code> library</a>.</li><li><code>color</code>: The provided color as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. </li></ul> | None |
 
 
 

@@ -150,27 +150,10 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
 
     ```python
     from events.input import Button, BUTTON_TYPES, ButtonDownEvent, ButtonUpEvent
+    from system.eventbus import eventbus
     ```
 
-2. Add an event handler in the `__init__` method of your app with the event (`ButtonDownEvent` or `ButtonUpEvent`) and a function that should be called when the event happens:
-
-    ```python
-    def __init__(self):
-        eventbus.on(ButtonDownEvent, self._handle_buttondown, self.app)
-    ```
-
-3. Remove the event handler when the app is minimised or closed:
-
-    ```python
-    def _cleanup(self):
-        eventbus.remove(ButtonDownEvent, self._handle_buttondown, self.app)
-    ```
-
-    !!! caution
-
-        Make sure you remove the event handler when the app is minimised or closed!
-
-4. Add a function to handle the event:
+2. Add a method to handle the event:
 
     ```python
     def _handle_buttondown(self, event: ButtonDownEvent):
@@ -182,5 +165,24 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
             self._cleanup()
             # perform other actions as needed
     ```
+
+3. Add an event handler in the `__init__` method of your app with the event (`ButtonDownEvent` or `ButtonUpEvent`) and a function that should be called when the event happens.  Depending on whether the event handler is a synchronoush or asynchronoush method call `on()` or `on_async`:
+
+    ```python
+    def __init__(self):
+        eventbus.on(ButtonDownEvent, self._handle_buttondown, self.app)
+        # eventbus.on_async(ButtonDownEvent, self._handle_buttondown, self.app)
+    ```
+
+4. Remove the event handler when the app is minimised or closed:
+
+    ```python
+    def _cleanup(self):
+        eventbus.remove(ButtonDownEvent, self._handle_buttondown, self.app)
+    ```
+
+    !!! caution
+
+        Make sure you remove the event handler when the app is minimised or closed!
 
 You can see a more comprehensive example in [`dialog.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py).

@@ -74,8 +74,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 
 For more information, see:
 
-- [Hexpansion hardware developer guide](hexpansions/index.md).
-- [Technical documentation, pinout, and paper and PCB templates][badge-2024-hardware].
+- [Hexpansion hardware developer guide](hexpansions/index.md)
+- [Technical documentation, pinout, and paper and PCB templates][badge-2024-hardware]
 
 ## A reusable platform with an interchangeable part
 
