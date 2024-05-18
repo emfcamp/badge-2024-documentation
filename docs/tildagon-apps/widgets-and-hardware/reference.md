@@ -17,3 +17,10 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
 - [`Tokens`](./ui-elements.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
+
+## Badge hardware
+
+You can use the following hardware with the inbuilt interfaces:
+
+- [LEDs](./badge-hardware.md#leds)
+- [Buttons](./badge-hardware.md#buttons)
