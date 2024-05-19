@@ -67,7 +67,7 @@ You can use your own events directly with an event handler that you register on 
     eventbus.remove(SpecialEvent, self.handle_event, self.app)
     ```
 
-    !!! caution
+    !!! warning
 
         Make sure you remove the event handler when the app is minimised or closed!
 

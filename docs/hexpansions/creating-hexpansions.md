@@ -1,42 +1,46 @@
-# Hexpansion hardware developer guide
+# Hexpansion Creation
 
-# tl;dr:
+Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape. Here are some community examples:
 
-- Hexpansions **MUST BE 1mm thick!** (more on this below)
-- Hexpansions can be a PCB, or can be made of any other **non-conductive material**
-- Hexpansions that are a PCB must have **ENIG finish**.
-- Hexpansions have to stay **within their hexagon segment**.
-- There are **part height restrictions** on some parts of the board
-- **Detect pin** needs to be **connected to GND** on the hexpansion if you want power to your board.
-- If you use I2C, **you** must provide **I2C pullups**
-- Hexpansions may **not** contain anything that uses the I2C address **0x77**
-- Use the **KiCad template project** provided
+<div class="scroll-container">
+{%
+   include-markdown "../index.md"
+   start="<!--hexpansions-start-->"
+   end="<!--hexpansions-end-->"
+%}
+</div>
 
-## What is a hexpansion?
+There's three hexpansion categories:
 
-A Hexpansion is a thing that plugs into one of the hexpansion ports of a tildagon badge (and hopefully into other things in the future).
+- purely mechanical ones which just have to have the the right shape
+- PCB ones which use power and where the badge can detect insertion
+- electronically marked ones that the badge can identify and automatically do things with
 
-**A Hexpansion must be 1 mm thick!** If it's any other thickness, it will not fit the port, and it will not work. The connector
-specifies a 0.1 mm tolerance for thickness.
+On the rest of this page, you will find the spec for the requirements these hexpansions must meet.
+
+!!! tip "tl;dr:"
+
+    - Hexpansions **MUST BE 1mm thick!** (more on this below)
+    - Hexpansions can be a PCB, or can be made of any other **non-conductive material**
+    - Hexpansions that are a PCB must have **ENIG finish**.
+    - Hexpansions have to stay **within their hexagon segment**.
+    - There are **part height restrictions** on some parts of the board
+    - **Detect pin** needs to be **connected to GND** on the hexpansion if you want power to your board.
+    - If you use I2C, **you** must provide **I2C pullups**
+    - Hexpansions may **not** contain anything that uses the I2C address **0x77**
+    - Use the provided **KiCad template project**
+
+## Hexpansion specs
+
+**A Hexpansion must be 1 mm thick!** If it's any other thickness, it will not fit the port, and it will not work. The connector itself specifies a 0.1 mm tolerance for thickness.
 
 You can make a Hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest Hexpansion is a piece of 1mm cardstock cut into a particular shape.
 
-If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sheet can vary quite a lot in thickness. _Extruded_
-acrylic sheet has better dimensional tolerance and is recommended for building hexpansions.
+If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sheet can vary quite a lot in thickness. _Extruded_ acrylic sheet has better dimensional tolerance and is recommended for building hexpansions.
 
-There are some [example 3D printable STL files on Printables](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template), which may be useful as a starting point for prototyping. These have been tested and fit in the slots of a prototype of the 2024 badge.
+!!! tip "Templates for 3D printing Hexpansions"
 
-## Connectors
-
-Hexpansion connectors provide:
-
-- Up to 600mA of 3.3V power (current-limited)
-- An I2C bus (separate for each hexpansion)
-- 4 high-speed GPIO pins connected directly to the ESP32-S3
-- 5 lower-speed GPIO pins connected to a GPIO expander/LED driver
-- 1 hexpansion detection pin (also used to switch power to the hexpansion on/off if needed)
-
-A hexpansion can optionally provide an I2C EEPROM from the list of approved devices. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there.
+    There are some [example 3D printable STL files on Printables](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template), which may be useful as a starting point for prototyping. These have been tested and fit in the slots of a prototype of the 2024 badge.
 
 ## Shape and size
 
@@ -57,6 +61,20 @@ If your hexpansion is a PCB, it must not have any depanelization tabs in the con
 Hexpansions will be held in place snugly by the connector they plug into. In most cases they will not need additional mechanical support. However, if your hexpansion extends far outside the board, will be subjected to heavy mechanical loads, or has an external connector that can be subject to heavy loads, we have an additional mechanical attachment option.
 
 There are two M2-size standoffs below the board, 25mm apart. They are 3.525mm from the centerline of the standard hexagon, and 14.25mm from the front edge of the connection tab. You can use two M2 size screws to attach your hexpansion to these standoffs for increased mechanical strength. Unfortunately, it's not possible to do this without removing the top board of the main badge, so installing and removing hexpansions with these screws is a bit more effort.
+
+## Connectors
+
+Hexpansion connectors provide:
+
+- Up to 600mA of 3.3V power (current-limited)
+- An I2C bus (separate for each hexpansion)
+- 4 high-speed GPIO pins connected directly to the ESP32-S3
+- 5 lower-speed GPIO pins connected to a GPIO expander/LED driver
+- 1 hexpansion detection pin (also used to switch power to the hexpansion on/off if needed)
+
+A hexpansion can optionally provide an I2C EEPROM from the list of approved devices. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there.
+
+For more information see [Eeprom format](./eeprom.md)
 
 ## Electrical interface
 
