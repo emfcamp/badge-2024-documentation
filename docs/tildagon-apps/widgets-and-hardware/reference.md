@@ -18,6 +18,10 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
 
+## Drawing on the canvas with `ctx`
+
+TODO
+
 ## Badge hardware
 
 You can use the following hardware with the inbuilt interfaces:
