@@ -80,6 +80,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Le Carnard de Bleu by Dan</span>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/breadbeard.jpg" alt="Breadbord hexpansion">
+    <span class="label">Breadbeard Hexpansion by Danny Walker</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/robotmad.jpg" alt="Hex-Drive plugged into Hex-Dev">
     <span class="label">Hex-Drive and Hex-Dev by Team RobotMad</span>
   </span>
@@ -102,7 +106,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <!--hexpansions-end-->
 </div>
 
-??? note "Expand to show a list of variously realistic hexpansion ideas"
+!!! info "If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or post it on the irc!"
+
+??? tip "Expand to show a list of variously realistic hexpansion ideas"
 
     - GPS / compass / IMU (for joust)
     - Buzzer (for notifing the wearer and joust)
