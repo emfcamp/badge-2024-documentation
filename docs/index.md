@@ -48,6 +48,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/eeh.gif" alt="Rabbit hexpansion">
+    <span class="label">EEH Hexpansion by Matt</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/goose.png" alt="Skyler's goose prototype">
     <span class="label">Untitled Goose by Skyler Mansfield</span>
   </span>
@@ -69,7 +73,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src="/images/badge-photos/hexpansion.png" alt="Spirit level hexpansion">
-    <span class="label">Spirit level by ?</span>
+    <span class="label">Spirit level by Chris</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/rabbit.jpg" alt="Rabbit hexpansion">
