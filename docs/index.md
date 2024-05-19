@@ -72,7 +72,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Omni wheel by Nathan Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/low-tech/mysterious-qr.jpg" alt="A hexpansion with a QR code that might rickroll you">
+    <img src="/images/hexpansions/mysterious-qr.jpg" alt="A hexpansion with a QR code that might rickroll you">
     <span class="label">Mysterious QR Code by grajohnt</span>
   </span>
   <span class="img-container">
@@ -86,6 +86,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src="/images/hexpansions/duck.jpg" alt="Rabbit hexpansion">
     <span class="label">Le Carnard de Bleu by Dan</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/fidget.jpg" alt="Fidget Spinner hexpansion">
+    <span class="label">Fidget Spinner by Catherine</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/breadbeard.jpg" alt="Breadbord hexpansion">
