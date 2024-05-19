@@ -60,11 +60,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/high-tech/floppy-disk.jpg" alt="Floppy disk hexpansion">
+    <img src="/images/hexpansions/floppy-disk.jpg" alt="Floppy disk hexpansion">
     <span class="label">Floppy disk "Flopagon" by Nathan Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/high-tech/wheel.jpg" alt="Wheel hexpansion">
+    <img src="/images/hexpansions/wheel.jpg" alt="Wheel hexpansion">
     <span class="label">Omni wheel by Nathan Dumont</span>
   </span>
   <span class="img-container">
