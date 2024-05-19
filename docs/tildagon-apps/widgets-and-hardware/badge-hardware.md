@@ -181,7 +181,7 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
         eventbus.remove(ButtonDownEvent, self._handle_buttondown, self.app)
     ```
 
-    !!! caution
+    !!! warning
 
         Make sure you remove the event handler when the app is minimised or closed!
 

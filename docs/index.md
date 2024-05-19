@@ -14,7 +14,7 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 
 - [I want to know how to use the badge](using-the-badge/end-user-manual.md)
 - [I want to make a badge app](tildagon-apps/development.md)
-- [I want to make a hexpansion](hexpansions/index.md)
+- [I want to make a hexpansion](hexpansions/creating-hexpansions.md)
 - [I want to hack on badge firmware](tildagon-firmware/index.md)
 
 </div>
@@ -39,9 +39,68 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 
 ## Hexpansions
 
-![A small spirit level, attached to a 3D printed hexagonal mount with notches to attach it to the badge. The mounting hexagon is slightly larger than the thumb holding it.](images/badge-photos/hexpansion.png "A Hexpansion"){: style="width:300px;height: auto;margin:auto;display:block;" }
+Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape. Here are some community examples:
 
-Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion: the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape.
+<div class="scroll-container">
+<!--hexpansions-start-->
+  <span class="img-container">
+    <img src="/images/hexpansions/tabasco.jpg" alt="Hot Sauce hexpansion (chipotle flavor)">
+    <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/goose.png" alt="Skyler's goose prototype">
+    <span class="label">Untitled Goose by Skyler Mansfield</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/rainbow.jpg" alt="LED Rainbow Filament hexpansion">
+    <span class="label">LED Filament hexpansion by John Thurmond</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/makerspace.gif" alt="Rabbit hexpansion">
+    <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/high-tech/floppy-disk.jpg" alt="Floppy disk hexpansion">
+    <span class="label">Floppy disk "Flopagon" by Nathan Dumont</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/high-tech/wheel.jpg" alt="Wheel hexpansion">
+    <span class="label">Omni wheel by Nathan Dumont</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/badge-photos/hexpansion.png" alt="Spirit level hexpansion">
+    <span class="label">Spirit level by ?</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/rabbit.jpg" alt="Rabbit hexpansion">
+    <span class="label">That Rabbit by Dan</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/duck.jpg" alt="Rabbit hexpansion">
+    <span class="label">Le Carnard de Bleu by Dan</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/robotmad.jpg" alt="Hex-Drive plugged into Hex-Dev">
+    <span class="label">Hex-Drive and Hex-Dev by Team RobotMad</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/robotmad2.jpg" alt="Many Hex-Drives">
+    <span class="label">Hex-Drives by Team RobotMad</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/gridfinity-expansion.webp" alt="Gridfinity expansion">
+    <span class="label"><a href="https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity">Gridfinity expansion hexpansion</a> by Jack Fitton</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/markers.jpg" alt="GCHQ.net markers">
+    <span class="label">GCHQ.net markers by Skyler Mansfield and a group of friends GCHQ.net</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/cable.jpg" alt="Megadrive controller hexpansion">
+    <span class="label">Megadrive controller by Matthew Wilkes</span>
+  </span>
+<!--hexpansions-end-->
+</div>
 
 ??? note "Expand to show a list of variously realistic hexpansion ideas"
 
@@ -73,7 +132,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 
 For more information, see:
 
-- [Hexpansion hardware developer guide](hexpansions/index.md)
+- [Hexpansion hardware developer guide](hexpansions/creating-hexpansions.md)
 - [Technical documentation, pinout, and paper and PCB templates][badge-2024-hardware]
 
 ## A reusable platform with an interchangeable part

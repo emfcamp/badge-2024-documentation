@@ -27,6 +27,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+extra_css:
+  - style.css
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -38,4 +40,5 @@ markdown_extensions:
 plugins:
    - glightbox
    - mkdocs-nav-weight
+   - include-markdown
 

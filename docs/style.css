@@ -1,0 +1,29 @@
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 0px 10px;
+  max-height: 150px;
+}
+
+div.scroll-container .img-container {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.img-container > a {
+  margin: auto;
+}
+
+div.scroll-container .img-container .label {
+  max-width: 130px;
+  text-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  line-height: normal;
+}
