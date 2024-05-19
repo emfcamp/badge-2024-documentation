@@ -1,6 +1,10 @@
 # Hexpansion Creation
 
-Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape. Here are some community examples:
+{%
+   include-markdown "../index.md"
+   start="<!--hexpansions-definition-start-->"
+   end="<!--hexpansions-definition-end-->"
+%}
 
 <div class="scroll-container">
 {%

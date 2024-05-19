@@ -39,7 +39,12 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 
 ## Hexpansions
 
-Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape. Here are some community examples:
+<!--hexpansions-definition-start-->
+Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape. Here are some community examples: (1)
+{ .annotate }
+
+1.  If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or let us know on the irc! We'd love to feature all of your creations!
+<!--hexpansions-definition-end-->
 
 <div class="scroll-container">
 <!--hexpansions-start-->
@@ -118,8 +123,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <!--hexpansions-end-->
 </div>
 
-!!! info "If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or post it on the irc!"
-
 ??? tip "Expand to show a list of variously realistic hexpansion ideas"
 
     - GPS / compass / IMU (for joust)
@@ -150,7 +153,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 
 For more information, see:
 
-- [Hexpansion hardware developer guide](hexpansions/creating-hexpansions.md)
+- [Hexpansion Creation](hexpansions/creating-hexpansions.md)
 - [Technical documentation, pinout, and paper and PCB templates][badge-2024-hardware]
 
 ## A reusable platform with an interchangeable part
