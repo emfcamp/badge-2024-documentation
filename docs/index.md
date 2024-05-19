@@ -72,6 +72,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Omni wheel by Nathan Dumont</span>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/low-tech/mysterious-qr.jpg" alt="A hexpansion with a QR code that might rickroll you">
+    <span class="label">Mysterious QR Code by grajohnt</span>
+  </span>
+  <span class="img-container">
     <img src="/images/badge-photos/hexpansion.png" alt="Spirit level hexpansion">
     <span class="label">Spirit level by Chris</span>
   </span>
