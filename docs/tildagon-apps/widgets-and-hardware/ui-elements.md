@@ -82,9 +82,9 @@ To use a menu:
     | `back_handler` | `method` | The method to be called when the cancel button is pressed. |
     | `position` | `int` | _Optional_. The menu position to start at. Default: `0`. |
     | `speed_ms` | `int` | _Optional_. The speed to redraw the UI at. Default: `300`. |
-    | `item_font_size` | `float` | _Optional_. The item line height. Default: `26.04`. |
-    | `item_line_height` | `float` |_Optional_. The item line height. Default: `39.0625`. |
-    | `focused_item_font_size` | `float` | _Optional_. The font size of the focused item. Default: `46.875`. |
+    | `item_font_size` | `float` | _Optional_. The item line height. Default: [`tokens.ten_pt`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
+    | `item_line_height` | `float` |_Optional_. The item line height. Default: [`tokens.label_font_size * tokens.line_height`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
+    | `focused_item_font_size` | `float` | _Optional_. The font size of the focused item. Default: [`tokens.heading_font_size`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
     | `focused_item_margin` | `float` | _Optional_. The margin on the focused item. Default: `20`. |
 
 4. If you are creating a multi-layered menu, also create a variable like `current_menu` in the `__init__` method of your app to store the users menu state:
