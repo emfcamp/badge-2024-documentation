@@ -395,7 +395,7 @@ You can use the following premade [`app_components`](widgets-and-hardware/ui-ele
 
 ### The `ctx` library
 
-You can also create your own user interfaces using the [`ctx` graphics library](https://ctx.graphics/). This is the same library we use for the premade UI elements, so you can look at  examples in the [`app_components` folder](https://github.com/emfcamp/badge-2024-software/tree/main/modules/app_components).
+You can also create your own user interfaces using the [`ctx` graphics library](./widgets-and-hardware/ctx.md).
 
 ## What next?
 
