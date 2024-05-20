@@ -2,6 +2,8 @@
 
 You can use the [`ctx`](https://github.com/emfcamp/badge-2024-software/blob/main/sim/fakes/ctx.py) package to draw lines, shapes, text, and images on a canvas.
 
+This is the same library we use for the premade UI elements, so you can look at examples in the [`app_components` folder](https://github.com/emfcamp/badge-2024-software/tree/main/modules/app_components).
+
 The docs are based on the [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/) which port the `ctx` library to JavaScript. It provides many more visual examples and we recommend you to look there for further instruction.
 
 ## Usage
@@ -140,7 +142,7 @@ class ExampleApp(app.App):
             self.button_states.clear()
 
     def draw(self, ctx):
-        # clear_background(ctx)
+        clear_background(ctx)
         ctx.save()
 
         # red left circle
@@ -153,6 +155,101 @@ class ExampleApp(app.App):
 ```
 
 ![A red circle next to a blue circle with 50% opacity](../../images/ctx-examples/2circles_opacity.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Gradients: radial and linear
+
+This example shows an example of a radial gradient on a rectangle.
+
+```python
+import app
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+
+        ctx.radial_gradient(30, 30, 80, -30, -50, 70)
+        ctx.add_stop(0, (100,0,100), 0.5)
+        ctx.add_stop(1, (100,0,0), 0.8)
+        ctx.rectangle(-100, -100, 200, 200).fill()
+
+        ctx.restore()
+```
+
+![A red circle next to a blue circle](../../images/ctx-examples/radial.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+This example shows an example of a linear gradient on a rectangle.
+
+```python
+import app
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+
+        ctx.linear_gradient(30, 30, -30, -50)
+        ctx.add_stop(0, (100,0,100), 0.5)
+        ctx.add_stop(1, (100,0,0), 0.8)
+        ctx.rectangle(-100, -100, 200, 200).fill()
+
+        ctx.restore()
+```
+
+![A red circle next to a blue circle](../../images/ctx-examples/linear.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Gray
+
+This example places three circles next to each other with some overlap. One is black, the next gray, and the last one white.
+
+```python
+import app
+import math
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        ctx.gray(0.0).arc(-30, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.gray(0.5).arc(0, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.gray(1.0).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.restore()
+```
+
+![Three circles in black, gray and white](../../images/ctx-examples/gray.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ### Creating text
 
@@ -228,6 +325,163 @@ class ExampleApp(app.App):
 ```
 
 ![Hello there world text split across two lines](../../images/ctx-examples/text_long.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Shapes: Arcs and Rectangles
+
+This example draws a big yellow filled circle. It then draws a filled green rectangle on top with opacity 50%. Finally, it draws the outline of a blue circle on top.
+
+```python
+import app
+import math
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        # Yellow circle in the middle
+        ctx.rgb(255, 234, 0).arc(0, 0, 60, 0, 2 * math.pi, True).fill()
+        # Green rectangle with 50% opacity
+        ctx.rgba(0, 200, 0, 0.5).rectangle(-25, -25, 50, 50).fill()
+        # Blue circle outline
+        ctx.rgb(0, 0, 200).arc(0, 0, 10, 0, 2 * math.pi, True).stroke()
+        ctx.restore()
+```
+
+![Multiple shapes stacked](../../images/ctx-examples/shapes.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Clipping
+
+This example draws a white circle and clips a square out of it.
+
+```python
+import app
+import math
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        # White circle with a square cutout in the middle
+        ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
+        ctx.rectangle(-25, -25, 50, 50).clip
+        ctx.rgb(255, 255, 255).fill()
+        ctx.restore()
+```
+
+![A white circle with a square cut out](../../images/ctx-examples/clip.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Scale, rotate, and translate
+
+This example applies a scaling transformation to the canvas units vertically which makes the green rectangle 3 times as big!
+
+```python
+import app
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        ctx.rgb(100,0,0).rectangle(-40, 0, 40, 20).fill()
+        ctx.scale(1, 3)
+        ctx.rgb(0,100,0).rectangle(0, 0, 40, 20).fill()
+        ctx.restore()
+```
+
+![A red rectangle next to a green rectangle with a scaling factor applied](../../images/ctx-examples/scale.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+This example adds a rotation to the transformation matrix to move the previous image upside down.
+
+```python
+import app
+import math
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        ctx.rotate(math.pi)
+        ctx.rgb(100,0,0).rectangle(-40, 0, 40, 20).fill()
+        ctx.scale(1, 3)
+        ctx.rgb(0,100,0).rectangle(0, 0, 40, 20).fill()
+        ctx.restore()
+```
+
+![A red rectangle next to a green rectangle with a scaling factor applied and rotated 180 degrees](../../images/ctx-examples/rotate.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+This example adds a translation transformation to the current matrix by moving the canvas and its origin `x` units horizontally and `y` units vertically on the grid.
+
+```python
+import app
+import math
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        ctx.translate(-50,0)
+        ctx.rotate(math.pi)
+        ctx.rgb(100,0,0).rectangle(-40, 0, 40, 20).fill()
+        ctx.scale(1, 3)
+        ctx.rgb(0,100,0).rectangle(0, 0, 40, 20).fill()
+        ctx.restore()
+```
+
+![A red rectangle next to a green rectangle with a scaling factor applied, rotated 180 degrees, and translated to the left](../../images/ctx-examples/translate.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ### Creating multiple sub-paths
 
@@ -378,25 +632,11 @@ class ExampleApp(app.App):
 
 ![A bézier curve](../../images/ctx-examples/bezier.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
-<!-- ### Image example
+<!--
 
-### Translate
+### Image example TODO
 
-### Scale and Rotate
-
-### Gray
-
-### Shapes: Arcs and Rectangles
-
-### Drawing additional shapes and using stroke() and fill()
-
-### Gradients: radial and linear
-
-### add stop
-
-### Clipping
-
-### Scope -->
+-->
 
 ## Methods
 
@@ -416,12 +656,12 @@ You can use the following methods on a `ctx` canvas object:
 | `line_to(x, y)` | Add a straight line to the current sub-path by connecting the sub-path's last point to the specified `(x, y)` coordinates. Like other methods that modify the current path, this method does not directly render anything. To draw the path onto a canvas, you can use the `fill()` or `stroke()` methods. | <ul><li>`x`: The x-axis coordinate of the line's end point.</li><li>`y`: The y-axis coordinate of the line's end point.</li></ul> | `self`: The `ctx` object. |
 | `rel_line_to(x, y)` | Add a straight line to the current sub-path by connecting the sub-path's last point to a point moved `x` units horizontally and `y` units vertically on the grid. Like other methods that modify the current path, this method does not directly render anything. To draw the path onto a canvas, you can use the `fill()` or `stroke()` methods. | <ul><li>`x`: The path will be drawn towards a point moved horizontally by `x` units and vertically by `y` units.</li><li>`y`: The path will be drawn towards a point moved horizontally by `x` units and vertically by `y` units.</li></ul> | `self`: The `ctx` object. |
 | `rotate(v)` | Add a rotation to the transformation matrix. The rotation center point is always the canvas origin. To change the center point, you will need to move the canvas by using the `translate()` method. | `v`: The rotation angle, clockwise in radians. You can use degree * pi / 180 to calculate a radian from a degree. | `self`: The `ctx` object. |
-| `gray(v)` | Sets the gray source and color model of the canvas. | `v`: TODO. | `self`: The `ctx` object. |
+| `gray(v)` | Sets the color of the canvas to a color between `0.0` (black) and `1.0`. | `v`: Intensity of the gray color. `0.0` results in black and `1.0` in white. | `self`: The `ctx` object. |
 | `rgba(r, g, b, a)` | Color the canvas in the color `(r, g, b)` with an alpha channel. | <ul><li>`r`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`g`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`b`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`a`: The alpha channel which specifies the opacity for a color between `0.0` (fully transparent) and `1.0` (not transparent at all).</li></ul> | `self`: The `ctx` object. |
 | `rgb(r, g, b)` | Color the canvas in the color `(r, g, b)`. | <ul><li>`r`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`g`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`b`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li></ul> | `self`: The `ctx` object. |
 | `text(s)` | Draw the provided text on the canvas. | `s`: The text to draw provided as a string. | `self`: The `ctx` object. |
 | `round_rectangle(x, y, width, height, radius)` | Add a rectangle on the canvas at position `(x, y)` with the provided width, height, and corner radius. | <ul><li>`x`: The horizontal position to draw the rectangle at.</li><li>`y`: The vertical position to draw the rectangle at.</li><li>`width`: The width of the rectangle to draw.</li><li>`height`: The height of the rectangle to draw.</li><li>`radius`: The radius of the rectangle's corners.</li></ul> | `self`: The `ctx` object. |
-| `image(path, x, y, w, h)` | Draw a path onto the canvas. | <ul><li>`path`: TODO</li><li>`x`: The x-axis coordinate of the top left corner of the path to draw.</li><li>`y`: The y-axis coordinate of the top left corner of the path to draw.</li><li>`w`: The width of the path to draw.</li><li>`h`: The height of the path to draw.</li></ul> | `self`: The `ctx` object. |
+| `image(path, x, y, w, h)` | Draw an image to be read from the provided path onto the canvas. | <ul><li>`path`: The path to an image file.</li><li>`x`: The x-axis coordinate of the top left corner of the image to draw.</li><li>`y`: The y-axis coordinate of the top left corner of the image to draw.</li><li>`w`: The width of the image to draw.</li><li>`h`: The height of the image to draw.</li></ul> | `self`: The `ctx` object. |
 | `rectangle(x, y, width, height)` | Add a rectangle to the current path. Like other methods that modify the current path, this method does not directly render anything. To draw the rectangle onto a canvas, you can use the `fill()` or `stroke()` methods. The `rect()` method creates a rectangular path whose starting point is at `(x, y)` and whose size is specified by width and height. | <ul><li>`x`: The x-axis coordinate (horizontal) of the rectangle's starting point. </li><li>`y`: The y-axis coordinate (vertical) of the rectangle's starting point.</li><li>`width`: The rectangle's width. Positive values are to the right, and negative to the left.</li><li>`height`: The rectangle's height. Positive values are down, and negative are up.</li></ul> | `self`: The `ctx` object. |
 | `stroke()` | Stroke (outline) the current or given path with the current stroke style. | None. | `self`: The `ctx` object. |
 | `save()` | Save the entire state of the canvas by pushing the current state onto a stack. | None. | `self`: The `ctx` object. |
@@ -429,10 +669,9 @@ You can use the following methods on a `ctx` canvas object:
 | `fill()` | Fill the current or given path. | None. | `self`: The `ctx` object. |
 | `radial_gradient(x0, y0, r0, x1, y1, r1)` | Create a radial gradient using the size and coordinates of two circles. | <ul><li>`x0`: The x-axis coordinate of the start circle.</li><li>`y0`: The y-axis coordinate of the start circle.</li><li>`r0`: The radius of the start circle. Must be non-negative and finite.</li><li>`x1`: The x-axis coordinate of the end circle.</li><li>`y1`: The y-axis coordinate of the end circle.</li><li>`r1`: The radius of the end circle. Must be non-negative and finite.</li></ul> | `self`: The `ctx` object. |
 | `linear_gradient(x0, y0, x1, y1)` | Create a gradient along the line connecting two given coordinates. | <ul><li>`x0`: The x-axis coordinate of the start point.</li><li>`y0`: The y-axis coordinate of the start point.</li><li>`x1`: The x-axis coordinate of the end point.</li><li>`y1`: The y-axis coordinate of the end point.</li></ul> | `self`: The `ctx` object. |
-| `add_stop(pos, color, alpha)` | TODO | <ul>`pos`: <li></li><li>`color`: </li><li>`alpha`: </li></ul> | `self`: The `ctx` object. |
+| `add_stop(pos, color, alpha)` | Adds a color stop in a gradient with the provided position, color, and alpha values. | <ul>`pos`: The position of the stop determining the order of the stops. <li></li><li>`color`: The colour at the stop. </li><li>`alpha`: The opacity value of the colour at the stop.</li></ul> | `self`: The `ctx` object. |
 | `begin_path()` | Start a new path by emptying the list of sub-paths. Call this method when you want to create a new path. | None. | `self`: The `ctx` object. |
 | `arc(x, y, radius, arc_from, arc_to, direction)` | Add a circular arc to the current sub-path. | <ul><li>`x`: The horizontal coordinate of the arc's center.</li><li>`y`: The vertical coordinate of the arc's center.</li><li>`radius`: The arc's radius. Must be positive.</li><li>`arg_from`: The angle at which the arc starts in radians, measured from the positive x-axis.</li><li>`arg_to`: The angle at which the arc ends in radians, measured from the positive x-axis.</li><li>`direction`: A boolean value. If true, draws the arc counter-clockwise between the start and end angles. </li></ul> | `self`: The `ctx` object. |
 | `text_width(text)` | Calculate the width of the provided text. | `text`: The text to calculate the width of. | `width`: The width of the provided text. |
 | `clip()` |  Turn the current or given path into the current clipping region. The previous clipping region, if any, is intersected with the current or given path to create the new clipping region. For a visual example, see the [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clip). | None. | `self`: The `ctx` object. |
 | `get_font_name(i)` | Get the name of one of the 9 fonts: `"Arimo Regular"`, `"Arimo Bold"`, `"Arimo Italic"`, `"Arimo Bold Italic"`, `"Camp Font 1"`, `"Camp Font 2"`, `"Camp Font 3"`, `"Material Icons"`, and `"Comic Mono"`. | `i`: The number of the font to get the name of. A number between `0` and `8`.  | `font_name`: The font. |
-| `scope()` | TODO | None. | `self`: The `ctx` object. |
