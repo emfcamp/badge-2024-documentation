@@ -77,6 +77,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Omni wheel by Nathan Dumont</span>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/segment-display.jpg" alt="A 7 segment display hexpansion">
+    <span class="label">7-Segment display by Iain Yarnall.</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/mysterious-qr.jpg" alt="A hexpansion with a QR code that might rickroll you">
     <span class="label">Mysterious QR Code by grajohnt</span>
   </span>
