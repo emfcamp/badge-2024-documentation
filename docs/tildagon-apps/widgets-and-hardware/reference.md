@@ -20,7 +20,7 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
 
 ## Drawing on the canvas with `ctx`
 
-You can use the [`ctx`](https://github.com/emfcamp/badge-2024-software/blob/main/sim/fakes/ctx.py) package to draw lines, shapes, text, and images on a canvas.
+You can use the [`ctx`](./ctx.md) package to draw lines, shapes, text, and images on a canvas.
 
 ## Badge hardware
 
