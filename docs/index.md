@@ -118,7 +118,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/markers.jpg" alt="GCHQ.net markers">
-    <span class="label">GCHQ.net markers by Skyler Mansfield and a group of friends GCHQ.net</span>
+    <span class="label">GCHQ.NET markers by <a href="https://gchq.net/">GCHQ.NET</a></span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/cable.jpg" alt="Megadrive controller hexpansion">
