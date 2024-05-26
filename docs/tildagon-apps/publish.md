@@ -90,7 +90,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
         ctx.restore()
     ```
 
-4. Add the `tildagon-app` [label applied to the repo](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label).
+4. Add the `tildagon-app` [topic to the repo](https://docs.github.com/en/enterprise-server@3.10/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository).
 
 5. Create a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) using GitHub. If you are unsure what settings to use, choose
       -  `v0.0.1` for your tag
