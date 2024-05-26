@@ -33,6 +33,69 @@ class ExampleApp(app.App):
 
 ![An empty background](../../images/ctx-examples/empty.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
+### Coordinates of the display area
+
+With `ctx`, you need to provide a place for where to draw objects using coordinates in teh form of `(x,y)`. The x-coordinate represents the horizontal coordinate and the y-coordinate the vertical. The middle is at `(0,0)`.
+
+![An app drawing the axes](){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+!!! note "Updating the coordinates"
+
+      If you use the [`scale()` method](#scale-rotate-and-translate) you change the coordinates by a scaling factor and the above image will no longer reflect the positions where your objects will be drawn if you provide the associated coordinates.
+
+The following is the code for the axes drawing:
+
+```python
+import app
+import math
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+from app_components.tokens import line_height
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.rgb(0, 1, 0).begin_path()
+        ctx.move_to(-120,0)
+        ctx.line_to(120, 0)
+        ctx.move_to(0, 120)
+        ctx.line_to(0, -120)
+
+        for i in range(-5,6):
+            # draw indicator lines for x
+            ctx.move_to(i*20, 5)
+            ctx.line_to(i*20, -5)
+            # draw indicator lines for y
+            ctx.move_to(-5, i*20)
+            ctx.line_to(5, i*20)
+
+        # text for x and y
+        ctx.stroke()
+
+        for i in range(-5,6):
+            ctx.font_size = 12
+            width = ctx.text_width(str(i*20))
+            # x axes
+            ctx.rgb(0, 1, 0).move_to(i*20 - width/2, 15).text(i*20)
+            # y axes
+            ctx.rgb(0, 1, 0).move_to(-15 - width, i*20 + 2*line_height).text(i*20)
+
+        width = ctx.text_width("y")
+        ctx.rgb(0, 1, 0).move_to(+15, -100+2*line_height).text("y")
+
+        width = ctx.text_width("x")
+        ctx.rgb(0, 1, 0).move_to(100 - width/2, -15).text("x")
+```
+
 ### State of the canvas
 
 Think of the `ctx` object as a canvas. The object stores the drawing state of the canvas on a stack. The drawing state consists of:
