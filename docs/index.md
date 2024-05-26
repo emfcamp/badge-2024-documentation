@@ -124,6 +124,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/cable.jpg" alt="Megadrive controller hexpansion">
     <span class="label">Megadrive controller by Matthew Wilkes</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/eyes.jpg" alt="Eye hexpansion">
+    <span class="label">Eye hexpansion by Alistair</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/smile.webp" alt="Smile hexpansion">
+    <span class="label">Smile hexpansion by Alistair</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
