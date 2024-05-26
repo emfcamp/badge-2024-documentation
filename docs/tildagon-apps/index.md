@@ -1,6 +1,6 @@
 # Tildagon OS Apps
 
-Tildagon OS is the name for the firmware that runs on the badge. It is based on MicroPython, and provides some software interfaces for apps to use to interact with the badge hardware, and to provide a user interface.
+Tildagon OS is the name for the firmware that runs on the badge. It is based on [MicroPython](https://docs.micropython.org/en/latest/), and provides some software interfaces for apps to use to interact with the badge hardware, and to provide a user interface.
 
 ## App Development
 
