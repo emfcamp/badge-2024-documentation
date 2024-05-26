@@ -982,6 +982,8 @@ if self.notification:
     self.notification.draw(ctx)
 ```
 
+### Finished code
+
 Your app should now resemble this:
 
 ```python
