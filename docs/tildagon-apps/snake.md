@@ -40,9 +40,9 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
             ctx.restore()
     ```
 
-    !!! question "Don't know what this code does?"
+    ??? question "Don't know what this code does?"
 
-      If you want to read up on what this code does read [Write A Tildagon OS App](./development.md#hello-world-app).
+        If you want to read up on what this code does read [Write A Tildagon OS App](./development.md#hello-world-app).
 
 
 3. In the same folder, create a file called `__init__.py` and use it to import your app's class `SnakeApp`:
@@ -85,9 +85,9 @@ from app_components import clear_background
 
 The `ctx` library allows you to draw many things onto the canvas of your app. One method it provides is the `rectangle()` method which takes an x- and a y- coordinate alongside a width and a height for the rectangle and draws the rectangle on the canvas. The width and height of the screen is `240`. Because the screen of your badge is a circle, we're going to use less than the full width and height of the screen and go with `160` for both.
 
-    !!! info "Learn more"
+!!! info "Learn more"
 
-      You can learn more about the `ctx` library by reading the [`ctx` docs which provide many example apps](../widgets-and-hardware/ctx.md).
+    You can learn more about the `ctx` library by reading the [`ctx` docs which provide many example apps](./widgets-and-hardware/ctx.md).
 
 Use the `clear_background()` and the `rectangle()` method in the `draw()` method of your app:
 
