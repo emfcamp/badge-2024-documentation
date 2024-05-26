@@ -124,6 +124,10 @@ This section walks you through the most [common usage](#common-usage) first whic
 
 Afterwards, you'll learn how to [update state while an app is minimized](#update-app-state-while-minimised), how to [draw multiple objects](#draw-multiple-objects), and how to [add asynchronous functionality](#asynchronous-functionality).
 
+!!! tip ""
+
+    If you would like to dive straight in, follow this tutorial to [build a snake app](./snake.md).
+
 #### Common Usage
 
 !!! important ""
@@ -402,9 +406,10 @@ You can also create your own user interfaces using the [`ctx` graphics library](
 <div class="grid cards" markdown>
 
 - [Tildagon OS Programming Interface Reference](./widgets-and-hardware/reference.md)
+- [Using the badge simulator][simulator]
 - [Publish your app](./publish.md)
 - [Interfacing with badge hardware](./widgets-and-hardware/badge-hardware.md)
-- [Using the badge simulator][simulator]
+- [Tutorial: Build a snake app](./snake.md)
 
 </div>
 
