@@ -166,7 +166,7 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
             # perform other actions as needed
     ```
 
-3. Add an event handler in the `__init__` method of your app with the event (`ButtonDownEvent` or `ButtonUpEvent`) and a function that should be called when the event happens.  Depending on whether the event handler is a synchronoush or asynchronoush method call `on()` or `on_async`:
+3. Add an event handler in the `__init__` method of your app with the event (`ButtonDownEvent` or `ButtonUpEvent`) and a function that should be called when the event happens.  Depending on whether the event handler is a synchronous or asynchronous method call `on()` or `on_async`:
 
     ```python
     def __init__(self):
