@@ -255,7 +255,7 @@ class DialogDemo(app.App):
         await render_update()
 
         # Create a yes/no dialogue, add it to the overlays
-        dialog = YesNoDialog("Happy day?", self)
+        dialog = YesNoDialog("Are you having a very\n happy day?", self)
         self.overlays = [dialog]
         # Wait for an answer from the dialogue.
         # if the answer was yes, the dialog.run() will return a true value
