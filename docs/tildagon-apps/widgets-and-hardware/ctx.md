@@ -35,7 +35,7 @@ class ExampleApp(app.App):
 
 ### Coordinates of the display area
 
-With `ctx`, you need to provide a place for where to draw objects using coordinates in teh form of `(x,y)`. The x-coordinate represents the horizontal coordinate and the y-coordinate the vertical. The middle is at `(0,0)`.
+With `ctx`, you need to provide a place for where to draw objects using coordinates in the form of `(x,y)`. The x-coordinate represents the horizontal coordinate and the y-coordinate the vertical. The middle is at `(0,0)`.
 
 ![An app drawing the axes](../../images/ctx-examples/coordinates.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
