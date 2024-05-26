@@ -4,6 +4,9 @@ weight: 4
 ---
 
 This tutorial, will guide you through building your own snake app, step by step.
+
+![App showing the finished snake game](../images/snake/snake-game.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
 If you want to see the finished code, see [Finished Code](#finished-code).
 
 ## Environment setup
