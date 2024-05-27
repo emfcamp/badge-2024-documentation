@@ -132,6 +132,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/smile.webp" alt="Smile hexpansion">
     <span class="label">Smile hexpansion by Alistair</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/spirits.jpg" alt="Spirit level hexpansions">
+    <span class="label"><a href="https://www.printables.com/model/893545-spirit-level-hexpansions">Spirit level hexpansions</a> by Andy Piper</span>
+  </span>
+    <span class="img-container">
+    <img src="/images/hexpansions/duckpond.jpg" alt="Duck pond hexpansion">
+    <span class="label">Duck pond hexpansion by Andy Piper</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
