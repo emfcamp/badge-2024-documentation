@@ -230,9 +230,9 @@ You can use the following methods on a `Notification` object:
 | `update(delta)` | Automatically display the notification for a period of 5 seconds. You need to call this method in your app's `update()` method. | `delta`: Time difference between the last update call and the current update call. | None |
 | `draw(ctx)` | Add the notification to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
 
-## Dialog
+## Yes/No Dialog
 
-The [`Dialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py) component allows you to create yes or no dialogues.
+The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py) component allows you to create yes or no dialogues.
 
 ### Example
 
@@ -284,7 +284,7 @@ class DialogDemo(app.App):
 
 ### Usage
 
-To use a dialog:
+To use the Yes/No dialog:
 
 1. Import the `YesNoDialog` component:
 
@@ -341,7 +341,120 @@ To use a dialog:
 
 ### Methods
 
-You can use the following methods on a `Notification` object:
+You can use the following methods on a `YesNoDialog` object:
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `render_update`: The method that triggers a `draw()` call when updates are complete. | `True` or `False` |
+| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
+| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
+
+## Text Dialog
+
+The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py) component allows you to create ask for text input.
+
+### Example
+
+This example app shows a dialog that asks you for a name and then says hello.
+
+```python
+import app
+from app_components import TextDialog, clear_background
+
+
+class TextDemo(app.App):
+    def __init__(self):
+        super().__init__()
+        self.name = "world!"
+
+    async def run(self, render_update):
+        await render_update()
+
+        dialog = TextDialog("What is your name?", self)
+        self.overlays = [dialog]
+
+        if await dialog.run(render_update):
+            self.name = dialog.text
+
+        self.overlays = []
+        await render_update()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+
+        ctx.save()
+        ctx.text_align = "center"
+        ctx.gray(1).move_to(0, 0).text("Hello " + self.name)
+        ctx.restore()
+
+        self.draw_overlays(ctx)
+
+```
+
+
+
+### Usage
+
+To use the text dialog:
+
+1. Import the `TextDialog` component:
+
+    ```python
+    from app_components import TextDialog
+    ```
+
+2. Add the following line to the `__init__` method of your app to initialize the inherited object:
+
+    ```python
+    super().__init__()
+    ```
+
+3. Use the `run()` method which supports asynchronous calls. You need asynchronous calls to wait for the answer to the dialog:
+
+    ```python
+    async def run(self, render_update):
+        # Render initial state
+        await render_update()
+
+        # Create a text dialogue, add it to the overlays
+        dialog = TextDialog("What is your name?", self)
+        self.overlays = [dialog]
+        # Wait for an answer from the dialogue, and if it was yes, do something
+        if await dialog.run(render_update):
+            # this sets a variable that can be used in the draw method
+            self.name = dialog.text
+        else:
+            # this is run when the user cancels the dialog
+            self.answer = "anonymous"
+        # Remove the dialogue and re-render
+        self.overlays = []
+        await render_update()
+
+    ```
+
+    `TextDialog()` supports the following parameters:
+
+    | Parameter | Type | Description |
+    | --------- | ---- | ----------- |
+    | `message` | `str` | The dialog message. |
+    | `app` | `App` | The app opening the dialog. |
+    | `masked` | `bool` | _Optional_. Whether to obscure the text buffer with asterisks (for example, for passwords). Default: `False`. |
+    | `on_complete` | `method` | _Optional_. Call the provided handler method or return the text entry if the text entry is confirmed and no handler is provided. Default: `None`. |
+    | `on_cancel` | `method` | _Optional_. Call the provided handler method or return `False` if answer is cancelled and no handler is provided. Default: `None`. |
+
+4. Add the following lines in your `draw()` method to clear the background and draw the dialog's overlays:
+
+    ```python
+    # in def draw(self, ctx):
+        clear_background(ctx)
+        self.draw_overlays(ctx)
+    ```
+
+    To make the dialog's answers have an effect you need to do something with the answer you received. The response from the dialog is saved in `text` on the dialog (e.g. `dialog.text`). Check the example for an idea.
+
+### Methods
+
+You can use the following methods on a `TextDialog` object:
 
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
