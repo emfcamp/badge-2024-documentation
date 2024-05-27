@@ -1,8 +1,56 @@
-# Eeprom format
+# Write an app to a hexpansion
 
 !!! warning "This document is a work in progress. More details will be added as they become available."
 
-If you want your eeprom-equipped hexpansion to do something automatically, you need to write some data to the eeprom. The data consists of a header which contains hexpansion metadata and a littlefs file system which contains your application and data. The minimal application consists of a file called `app.py` that contains your code.
+If you want your eeprom-equipped hexpansion to do something automatically, you need to [write some data to the eeprom](#how-to-write-app-to-eeprom). The data consists of a header which contains hexpansion metadata and a littlefs file system which contains your application and data. The minimal application consists of a file called `app.py` that contains your code.
+
+## How to write app to eeprom
+
+1. Attach the hexpansion to the badge and connect the badge to your computer.
+2. Clone the [`badge-2024-software`](https://github.com/emfcamp/badge-2024-software) repo and `cd` into it.
+3. Modify the port in the [`prepare_eeprom.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/scripts/prepare_eeprom.py) script:
+
+    ```python
+    # Set up i2c
+    port = 2  # <<-- Customize!!
+    i2c = I2C(port)
+    ```
+
+4. Adjust the header information as you desire:
+
+    ```python
+    # Fill in your desired header info here:
+    header = HexpansionHeader(
+        manifest_version="2024",
+        fs_offset=32,
+        eeprom_page_size=16,
+        eeprom_total_size=1024 * (16 // 8) // 8,
+        vid=0xCA75,
+        pid=0x1337,
+        unique_id=0x0,
+        friendly_name="Flopagon",
+    )
+    ```
+
+    For more information see [Eeprom format](#eeprom-format).
+
+5. Use [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) to mount the storage module and run the script to flash a header to the first page of the eeprom:
+
+    ```sh
+    mpremote mount modules + run modules/scripts/prepare_eeprom.py
+    ```
+
+    `mpremote` should automatically detect the port the board is plugged into. If it doesn't, manually specify the port. For more information see the [`mpremote` reference docs](https://docs.micropython.org/en/latest/reference/mpremote.html#shortcuts).
+
+6. Use `mpremote` to mount the module, then mount the storage on your hexpansion, and copy your app file to it, with the following command:
+
+    ```sh
+    mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp path/to/your/app.py :/hexpansion_{YOUR-HEXPANSION-PORT-NUMBER}/app.py
+    # For example:
+    # mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp sim/apps/snake/app.py :/hexpansion_1/app.py
+    ```
+
+## Eeprom format
 
 The badge will look for eeproms on the following i2c addresses:
 
@@ -63,7 +111,7 @@ The Littlefs filesystem should start on a page boundary of the eeprom. If your e
 
 The filesystem should contain a file named `app.py` which contains micropython code conformant to the app framework API (to be disclosed). It may contain other Python files or data.
 
-# Example
+### Example
 
 `b'THEX2024\x40\x00\\x40\x00\x00\x00\x01\x00\x55\xf0\x01\x00\x02\x00EXAMPLE\x00\x00\x8b'`
 
