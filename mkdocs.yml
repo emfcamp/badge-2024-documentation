@@ -1,8 +1,8 @@
 site_name: Tildagon Badge Documentation
+repo_url: https://github.com/emfcamp/badge-2024-documentation
 theme:
   name: material
   logo: "images/badge icon_64 wide cutouts.svg"
-  repo_url: https://github.com/emfcamp/badge-2024-documentation
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
