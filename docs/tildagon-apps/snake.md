@@ -936,13 +936,13 @@ if y < 0 or y >= 32:
     self.game = "OVER"
 ```
 
-Lastly, let's add a notification at the end of the game to say that the game is over. Import the `Notification` class from the `app_components` package:
+Lastly, let's add a dialogue at the end of the game to say that the game is over and to allow the player to start a new came. Import the `YesNoDialog` class from the `app_components` package:
 
 ```python
-from app_components import Notification, clear_background
+from app_components import YesNoDialog, clear_background
 ```
 
-Then add a property to the `app` for the notification:
+Then add a property to the `app` for the YesNoDialog:
 
 ```python
 def __init__(self):
@@ -955,10 +955,10 @@ def __init__(self):
     self.button_states = Buttons(self)
     self.step = 0
     self.game = ""
-    self.notification = None
+    self.dialog = None
 ```
 
-At the end of the `update()` method set the notification and add the logic that will call the notification's `update()` method:
+At the end of the `update()` method set the `self.dialog` property. Pass it some dialogue and two methods that handle the yes and no options of the dialog. Call them `_reset` for the option that starts a new game and `_exit` for the other option:
 
 ```python
 # Only move snake every half second
@@ -968,18 +968,40 @@ if self.game == "ON":
         self.step = 0
         self._move_snake()
 elif self.game == "OVER":
-    self.notification = Notification("Game Over. Cancel to quit.")
-    self.game = ""
+    self.dialog = YesNoDialog(
+        message="Game Over.\nPlay Again?",
+        on_yes=self._reset,
+        on_no=self._exit,
+        app=self,
+    )
+```
 
-if self.notification:
-    self.notification.update(delta)
+Define the `_reset()` method and make it reset the game state:
+
+```python
+def _reset(self):
+    self.game = ""
+    self.snake = [(16,16)]
+    self.food = []
+    self.direction = ""
+    self.score = 0
+    self.dialog = None
+```
+
+The `_exit()` method, should clear the button state and minimise the app. If you don't clear the button state, the next time you open the app it will close again immediately because it will check the button state and see that the cancel button was clicked. I think it also makes sense to reset the game state before exiting, so the `_exit()` method will also call the `_reset()` method:
+
+```python
+def _exit(self):
+    self._reset()
+    self.button_states.clear()
+    self.minimise()
 ```
 
 Lastly, add the logic in the `draw()` method to draw the notification:
 
 ```python
-if self.notification:
-    self.notification.draw(ctx)
+if self.dialog:
+    self.dialog.draw(ctx)
 ```
 
 ### Finished code
@@ -991,7 +1013,7 @@ import app
 import asyncio
 import random
 
-from app_components import Notification, clear_background
+from app_components import YesNoDialog, clear_background
 from events.input import Buttons, BUTTON_TYPES
 
 
@@ -1006,7 +1028,21 @@ class SnakeApp(app.App):
         self.step = 0
         self.score = 0
         self.game = ""
-        self.notification = None
+        self.dialog = None
+
+    def _reset(self):
+        self.game = ""
+        self.snake = [(16,16)]
+        self.food = []
+        self.direction = ""
+        self.score = 0
+        self.dialog = None
+
+    def _exit(self):
+        self._reset()
+        self.button_states.clear()
+        self.minimise()
+
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
@@ -1033,11 +1069,12 @@ class SnakeApp(app.App):
                 self.step = 0
                 self._move_snake()
         elif self.game == "OVER":
-            self.notification = Notification("Game Over. Cancel to quit.")
-            self.game = ""
-
-        if self.notification:
-            self.notification.update(delta)
+            self.dialog = YesNoDialog(
+                message="Game Over.\nPlay Again?",
+                on_yes=self._reset,
+                on_no=self._exit,
+                app=self,
+            )
 
     def _move_snake(self):
         first_x, first_y = self.snake[0]
@@ -1101,8 +1138,8 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
-        if self.notification:
-            self.notification.draw(ctx)
+        if self.dialog:
+            self.dialog.draw(ctx)
 ```
 
 Go ahead and run your app in the simulator to test the game state logic:
