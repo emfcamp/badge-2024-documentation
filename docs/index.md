@@ -130,11 +130,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/eyes.jpg" alt="Eye hexpansion">
-    <span class="label">Eye hexpansion by Alistair</span>
+    <span class="label"><a href="https://www.thingiverse.com/thing:6633547">Eye hexpansion</a> by Alistair</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/smile.webp" alt="Smile hexpansion">
-    <span class="label">Smile hexpansion by Alistair</span>
+    <span class="label"><a href="https://www.thingiverse.com/thing:6635025">Smile hexpansion</a> by Alistair</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/spirits.jpg" alt="Spirit level hexpansions">
@@ -155,6 +155,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src="/images/hexpansions/display.webp" alt="Display platform hexpansion">
     <span class="label"><a href="https://www.printables.com/model/894438-display-platform-hexpansion">Display platform hexpansion</a> by adie</span>
+  </span>
+  <span class="img-container">
+    <img src="images/hexpansions/glonouns.jpg" alt="glowing pronoun hexpansions">
+    <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Glowing pronoun hexpansions</a> by adie</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/pronouns.jpg" alt="pronoun hexpansions">
+    <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Pronoun hexpansions</a> by adie</span>
   </span>
 <!--hexpansions-end-->
 </div>
