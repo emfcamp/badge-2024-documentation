@@ -290,7 +290,7 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
 
 === "Asynchronous"
 
-    This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message. It overwrites the `run()` method to be able to use the `run()` method on the `YesNoDialog` which allows you to perform asynchronous actions based on the output the dialog:
+    This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message. It overwrites the `run()` method to be able to use the `run()` method on the `YesNoDialog` which allows you to perform asynchronous actions based on the output of the dialog:
 
     ```python
     import app
@@ -351,7 +351,7 @@ To use the Yes/No dialog:
 
 === "Synchronous"
 
-      3. Create the `YesNoDialog` from your `update()` method. Since the `update()` method gets called repeatedly, make sure it only gets called once:
+      3. Create the `YesNoDialog` from your `update()` method and pass in the `message` to display, as well as handlers for what to do when the user responds with yes or no. Since the `update()` method gets called repeatedly, make sure it only gets called once:
 
         ```python
         self.dialog = YesNoDialog(
@@ -395,15 +395,27 @@ To use the Yes/No dialog:
 | `on_yes` | `method` | _Optional_. Call the provided handler method or return `True` if answer is yes and no handler is provided. Default: `None`. |
 | `on_no` | `method` | _Optional_. Call the provided handler method or return `False` if answer is yes and no handler is provided. Default: `None`. |
 
-4. Add the following lines in your `draw()` method to draw the dialog's overlays:
+=== "Synchronous"
 
-    ```python
-    # in def draw(self, ctx):
-        if self.dialog:
-            self.dialog.draw(ctx)
-    ```
+      4. Add the following lines in your `draw()` method to draw the dialog's overlays:
 
-    To make the dialog's answers have an effect you need to do something based on the input you have received from the `YesNoDialog`. Check the example for an idea.
+          ```python
+          # in def draw(self, ctx):
+              if self.dialog:
+                  self.dialog.draw(ctx)
+          ```
+
+=== "Asynchronous"
+
+      4. Add the following lines in your `draw()` method to clear the background and draw the dialog's overlays:
+
+          ```python
+          # in def draw(self, ctx):
+              clear_background(ctx)
+              self.draw_overlays(ctx)
+          ```
+
+To make the dialog's answers have an effect you need to do something based on the input you have received from the `YesNoDialog`. Check the example for an idea.
 
 ### Methods
 
@@ -421,41 +433,91 @@ The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modu
 
 ### Example
 
-This example app shows a dialog that asks you for a name and then says hello.
+=== "Synchronous"
 
-```python
-import app
-from app_components import TextDialog, clear_background
+    This example app shows a dialog that asks you for your name and then says hell:
+
+    ```python
+    import app
+    from app_components import TextDialog, clear_background
 
 
-class TextDemo(app.App):
-    def __init__(self):
-        super().__init__()
-        self.name = "world!"
+    class TextDemo(app.App):
+        def __init__(self):
+            super().__init__()
+            self.name = ""
+            self.dialog = None
+            self.displayed = False
 
-    async def run(self, render_update):
-        await render_update()
+        def _cancel_handler(self):
+            self.name = "world!"
+            self.dialog._cleanup()
+            self.dialog = None
 
-        dialog = TextDialog("What is your name?", self)
-        self.overlays = [dialog]
+        def _complete_handler(self):
+            self.name = self.dialog.text
+            self.dialog._cleanup()
+            self.dialog = None
 
-        if await dialog.run(render_update):
-            self.name = dialog.text
+        def update(self, delta):
+            if not self.displayed:
+                self.displayed = True
+                self.dialog = TextDialog(
+                    "What is your name?",
+                    self,
+                    masked=False,
+                    on_complete=self._complete_handler,
+                    on_cancel=self._cancel_handler)
 
-        self.overlays = []
-        await render_update()
+        def draw(self, ctx):
+            clear_background(ctx)
 
-    def draw(self, ctx):
-        clear_background(ctx)
+            ctx.save()
+            if self.name:
+                ctx.text_align = "center"
+                ctx.gray(1).move_to(0, 0).text("Hello " + self.name)
+            ctx.restore()
 
-        ctx.save()
-        ctx.text_align = "center"
-        ctx.gray(1).move_to(0, 0).text("Hello " + self.name)
-        ctx.restore()
+            if self.dialog:
+                self.dialog.draw(ctx)
+    ```
 
-        self.draw_overlays(ctx)
+=== "Asynchronous"
 
-```
+    This example app shows a dialog that asks you for a name and then says hello. It overwrites the `run()` method to be able to use the `run()` method on the `TextDialog` which allows you to perform asynchronous actions based on the output of the dialog:
+
+    ```python
+    import app
+    from app_components import TextDialog, clear_background
+
+
+    class TextDemo(app.App):
+        def __init__(self):
+            super().__init__()
+            self.name = "world!"
+
+        async def run(self, render_update):
+            await render_update()
+
+            dialog = TextDialog("What is your name?", self)
+            self.overlays = [dialog]
+
+            if await dialog.run(render_update):
+                self.name = dialog.text
+
+            self.overlays = []
+            await render_update()
+
+        def draw(self, ctx):
+            clear_background(ctx)
+
+            ctx.save()
+            ctx.text_align = "center"
+            ctx.gray(1).move_to(0, 0).text("Hello " + self.name)
+            ctx.restore()
+
+            self.draw_overlays(ctx)
+    ```
 
 ### Usage
 
@@ -473,48 +535,75 @@ To use the text dialog:
     super().__init__()
     ```
 
-3. Use the `run()` method which supports asynchronous calls. You need asynchronous calls to wait for the answer to the dialog:
+=== "Synchronous"
 
-    ```python
-    async def run(self, render_update):
-        # Render initial state
-        await render_update()
+      3. Create the `TextDialog` from your `update()` method and pass in the `message` to display, whether to mask (that means obscure) the input while the suer is entering it, as well as handlers for what to do when the user completes their input or cancels entering input. Since the `update()` method gets called repeatedly, make sure it only gets called once:
 
-        # Create a text dialogue, add it to the overlays
-        dialog = TextDialog("What is your name?", self)
-        self.overlays = [dialog]
-        # Wait for an answer from the dialogue, and if it was yes, do something
-        if await dialog.run(render_update):
-            # this sets a variable that can be used in the draw method
-            self.name = dialog.text
-        else:
-            # this is run when the user cancels the dialog
-            self.answer = "anonymous"
-        # Remove the dialogue and re-render
-        self.overlays = []
-        await render_update()
+        ```python
+        self.dialog = TextDialog(
+            "What is your name?",
+            self,
+            masked=False,
+            on_complete=self._complete_handler,
+            on_cancel=self._cancel_handler)
+        ```
 
-    ```
+=== "Asynchronous"
 
-    `TextDialog()` supports the following parameters:
+      3. Use the `run()` method which supports asynchronous calls. You need asynchronous calls to wait for the answer to the dialog:
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `message` | `str` | The dialog message. |
-    | `app` | `App` | The app opening the dialog. |
-    | `masked` | `bool` | _Optional_. Whether to obscure the text buffer with asterisks (for example, for passwords). Default: `False`. |
-    | `on_complete` | `method` | _Optional_. Call the provided handler method or return the text entry if the text entry is confirmed and no handler is provided. Default: `None`. |
-    | `on_cancel` | `method` | _Optional_. Call the provided handler method or return `False` if answer is cancelled and no handler is provided. Default: `None`. |
+          ```python
+          async def run(self, render_update):
+              # Render initial state
+              await render_update()
 
-4. Add the following lines in your `draw()` method to clear the background and draw the dialog's overlays:
+              # Create a text dialogue, add it to the overlays
+              dialog = TextDialog("What is your name?", self)
+              self.overlays = [dialog]
+              # Wait for an answer from the dialogue, and if it was yes, do something
+              if await dialog.run(render_update):
+                  # this sets a variable that can be used in the draw method
+                  self.name = dialog.text
+              else:
+                  # this is run when the user cancels the dialog
+                  self.answer = "anonymous"
+              # Remove the dialogue and re-render
+              self.overlays = []
+              await render_update()
 
-    ```python
-    # in def draw(self, ctx):
-        clear_background(ctx)
-        self.draw_overlays(ctx)
-    ```
+          ```
 
-    To make the dialog's answers have an effect you need to do something with the answer you received. The response from the dialog is saved in `text` on the dialog (e.g. `dialog.text`). Check the example for an idea.
+`TextDialog()` supports the following parameters:
+
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| `message` | `str` | The dialog message. |
+| `app` | `App` | The app opening the dialog. |
+| `masked` | `bool` | _Optional_. Whether to obscure the text buffer with asterisks (for example, for passwords). Default: `False`. |
+| `on_complete` | `method` | _Optional_. Call the provided handler method or return the text entry if the text entry is confirmed and no handler is provided. Default: `None`. |
+| `on_cancel` | `method` | _Optional_. Call the provided handler method or return `False` if answer is cancelled and no handler is provided. Default: `None`. |
+
+=== "Synchronous"
+
+      4. Add the following lines in your `draw()` method to draw the dialog's overlays:
+
+          ```python
+          # in def draw(self, ctx):
+              if self.dialog:
+                  self.dialog.draw(ctx)
+          ```
+
+=== "Asynchronous"
+
+      4. Add the following lines in your `draw()` method to clear the background and draw the dialog's overlays:
+
+          ```python
+          # in def draw(self, ctx):
+              clear_background(ctx)
+              self.draw_overlays(ctx)
+          ```
+
+To make the dialog's answer have an effect you need to do something with the answer you received. The response from the dialog is saved in `text` on the dialog (for example `dialog.text`). Check the example for an idea.
 
 ### Methods
 
