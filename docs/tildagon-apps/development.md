@@ -315,7 +315,7 @@ The last two available methods allow you to add functionality with `asynchronous
 
     Read more about this at [geeksforgeeks](https://www.geeksforgeeks.org/asyncio-in-python/).
 
-The `run()` method allows you to call asynchronous methods, enabling you to wait for user input with the [`Dialog`](./widgets-and-hardware/ui-elements.md#dialog) ui element.
+The `run()` method allows you to call asynchronous methods, enabling you to wait for user input, for example with the [`Dialog`](./widgets-and-hardware/ui-elements.md#yesno-dialog) ui element.
 
 The following example app, overwrites the `run()` method to prompt the user every 2 seconds whether they want to change the color displayed on the screen and then waits for user input:
 
@@ -393,7 +393,8 @@ You can use the following premade [`app_components`](widgets-and-hardware/ui-ele
 
 - [`Menu`](widgets-and-hardware/ui-elements.md#menu): scroll up/down and select
 - [`Notification`](widgets-and-hardware/ui-elements.md#notification): pop up notifications
-- [`Dialog`](widgets-and-hardware/ui-elements.md#dialog): create yes or no dialogues
+- [`YesNoDialog`](widgets-and-hardware/ui-elements.md#yesno-dialog): create yes or no dialogues
+- [`TextDialog`](widgets-and-hardware/ui-elements.md#text-dialog): create text dialogues
 - [`Tokens`](widgets-and-hardware/ui-elements.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color

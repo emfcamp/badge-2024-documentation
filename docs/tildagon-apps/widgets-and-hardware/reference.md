@@ -13,7 +13,8 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
 
 - [`Menu`](./ui-elements.md#menu): scroll up/down and select
 - [`Notification`](./ui-elements.md#notification): pop up notifications
-- [`Dialog`](./ui-elements.md#dialog): create yes or no dialogues
+- [`YesNoDialog`](./ui-elements.md#yesno-dialog): create yes or no dialogues
+- [`TextDialog`](./ui-elements.md#text-dialog): create text dialogues
 - [`Tokens`](./ui-elements.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color

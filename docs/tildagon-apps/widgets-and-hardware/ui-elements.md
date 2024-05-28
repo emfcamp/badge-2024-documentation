@@ -236,106 +236,102 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
 
 ### Example
 
-This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message. It calls the `YesNoDialog` in a synchronous way:
+=== "Synchronous"
 
-```python
-import app
+    This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message. It calls the `YesNoDialog` in a synchronous way:
 
-from app_components import YesNoDialog, clear_background
+    ```python
+    import app
 
-
-class DialogDemo(app.App):
-    def __init__(self):
-        # Need to call to access overlays for dialog
-        super().__init__()
-        self.dialog = None
-        self.answer = ""
-        self.displayed = False
-
-    def _no_handler(self):
-        self.dialog._cleanup()
-        self.answer = "I'm sorry"
-        self.dialog = None
-
-    def _yes_handler(self):
-        self.dialog._cleanup()
-        self.answer = "YAY!"
-        self.dialog = None
-
-    def update(self, delta):
-        if not self.displayed:
-            self.displayed = True
-            self.dialog = YesNoDialog(
-                message="Are you having a very\n happy day?",
-                on_yes=self._yes_handler,
-                on_no=self._no_handler,
-                app=self,
-            )
-
-    def draw(self, ctx):
-        clear_background(ctx)
-
-        ctx.save()
-        if self.answer:
-            ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
-        ctx.restore()
-
-        if self.dialog:
-            self.dialog.draw(ctx)
-
-```
-
-This example app also shows a dialog that asks you if it's a happy day and responds with an appropriate message. It calls the `YesNoDialog` in an asynchronous way:
-
-```
-
-```
-
-This example overwrites the `run()` method to be able to use the `run()` method on the `YesNoDialog` object:
-
-```python
-import app
-
-from app_components import YesNoDialog, clear_background
+    from app_components import YesNoDialog, clear_background
 
 
-class DialogDemo(app.App):
-    def __init__(self):
-        # Need to call to access overlays for dialog
-        super().__init__()
-        self.answer = None
+    class DialogDemo(app.App):
+        def __init__(self):
+            # Need to call to access overlays for dialog
+            super().__init__()
+            self.dialog = None
+            self.answer = ""
+            self.displayed = False
 
-    async def run(self, render_update):
-        # Render initial state
-        await render_update()
-
-        # Create a yes/no dialogue, add it to the overlays
-        dialog = YesNoDialog("Are you having a very\n happy day?", self)
-        self.overlays = [dialog]
-        # Wait for an answer from the dialogue.
-        # if the answer was yes, the dialog.run() will return a true value
-        # and we set an appropriate answer
-        if await dialog.run(render_update):
-            self.answer = "YAY!"
-        else:
+        def _no_handler(self):
+            self.dialog._cleanup()
             self.answer = "I'm sorry"
-        # Remove the dialogue and re-render
-        self.overlays = []
-        await render_update()
+            self.dialog = None
 
+        def _yes_handler(self):
+            self.dialog._cleanup()
+            self.answer = "YAY!"
+            self.dialog = None
 
-    def draw(self, ctx):
-        clear_background(ctx)
-        if self.answer:
+        def update(self, delta):
+            if not self.displayed:
+                self.displayed = True
+                self.dialog = YesNoDialog(
+                    message="Are you having a very\n happy day?",
+                    on_yes=self._yes_handler,
+                    on_no=self._no_handler,
+                    app=self,
+                )
+
+        def draw(self, ctx):
+            clear_background(ctx)
+
             ctx.save()
-            ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
+            if self.answer:
+                ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
+                ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
             ctx.restore()
-        self.draw_overlays(ctx)
-```
+
+            if self.dialog:
+                self.dialog.draw(ctx)
+
+    ```
+
+=== "Asynchronous"
+
+    This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message. It overwrites the `run()` method to be able to use the `run()` method on the `YesNoDialog` which allows you to perform asynchronous actions based on the output the dialog:
+
+    ```python
+    import app
+
+    from app_components import YesNoDialog, clear_background
 
 
+    class DialogDemo(app.App):
+        def __init__(self):
+            # Need to call to access overlays for dialog
+            super().__init__()
+            self.answer = None
+
+        async def run(self, render_update):
+            # Render initial state
+            await render_update()
+
+            # Create a yes/no dialogue, add it to the overlays
+            dialog = YesNoDialog("Are you having a very\n happy day?", self)
+            self.overlays = [dialog]
+            # Wait for an answer from the dialogue.
+            # if the answer was yes, the dialog.run() will return a true value
+            # and we set an appropriate answer
+            if await dialog.run(render_update):
+                self.answer = "YAY!"
+            else:
+                self.answer = "I'm sorry"
+            # Remove the dialogue and re-render
+            self.overlays = []
+            await render_update()
+
+
+        def draw(self, ctx):
+            clear_background(ctx)
+            if self.answer:
+                ctx.save()
+                ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
+                ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
+                ctx.restore()
+            self.draw_overlays(ctx)
+    ```
 
 ### Usage
 
@@ -460,8 +456,6 @@ class TextDemo(app.App):
         self.draw_overlays(ctx)
 
 ```
-
-
 
 ### Usage
 
