@@ -974,13 +974,14 @@ elif self.game == "OVER":
         on_no=self._exit,
         app=self,
     )
+    # Reset the game variable to ensure this dialog is only created once
+    self.game = ""
 ```
 
 Define the `_reset()` method and make it reset the game state:
 
 ```python
 def _reset(self):
-    self.game = ""
     self.snake = [(16,16)]
     self.food = []
     self.direction = ""
@@ -1031,7 +1032,6 @@ class SnakeApp(app.App):
         self.dialog = None
 
     def _reset(self):
-        self.game = ""
         self.snake = [(16,16)]
         self.food = []
         self.direction = ""
@@ -1075,6 +1075,8 @@ class SnakeApp(app.App):
                 on_no=self._exit,
                 app=self,
             )
+            # Reset the game variable to ensure this dialog is only created once
+            self.game = ""
 
     def _move_snake(self):
         first_x, first_y = self.snake[0]
