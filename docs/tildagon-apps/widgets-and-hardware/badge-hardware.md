@@ -1,4 +1,4 @@
-# Badge Hardware Overview
+# Badge hardware overview
 
 ## LEDs
 

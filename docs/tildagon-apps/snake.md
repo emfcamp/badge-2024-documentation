@@ -1146,7 +1146,7 @@ class SnakeApp(app.App):
 
 Go ahead and run your app in the simulator to test the game state logic:
 
-![App showing the game over notification](../images/snake/over.gif){: style="margin:auto;display:block;" }
+![App showing the game over dialogue](../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Next steps
 
