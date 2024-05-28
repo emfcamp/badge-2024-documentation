@@ -69,6 +69,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
   </span>
   <span class="img-container">
+    <img src="images/hexpansions/plotter.gif" alt="Plotter hexpansion">
+    <span class="label">Plotter hexpansion by Danny Walker</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/floppy-disk.jpg" alt="Floppy disk hexpansion">
     <span class="label">Floppy disk "Flopagon" by Nathan Dumont</span>
   </span>
@@ -148,7 +152,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/not_lego_but_compatible.webp" alt="Not lego baseplate hexpansion">
     <span class="label"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion">Not lego baseplate hexpansion</a> by adie</span>
   </span>
-    <span class="img-container">
+  <span class="img-container">
     <img src="/images/hexpansions/display.webp" alt="Display platform hexpansion">
     <span class="label"><a href="https://www.printables.com/model/894438-display-platform-hexpansion">Display platform hexpansion</a> by adie</span>
   </span>
