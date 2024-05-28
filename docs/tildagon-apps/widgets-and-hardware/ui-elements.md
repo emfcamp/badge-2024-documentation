@@ -236,7 +236,63 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
 
 ### Example
 
-This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message.
+This example app shows a dialog that asks you if it's a happy day and responds with an appropriate message. It calls the `YesNoDialog` in a synchronous way:
+
+```python
+import app
+
+from app_components import YesNoDialog, clear_background
+
+
+class DialogDemo(app.App):
+    def __init__(self):
+        # Need to call to access overlays for dialog
+        super().__init__()
+        self.dialog = None
+        self.answer = ""
+        self.displayed = False
+
+    def _no_handler(self):
+        self.dialog._cleanup()
+        self.answer = "I'm sorry"
+        self.dialog = None
+
+    def _yes_handler(self):
+        self.dialog._cleanup()
+        self.answer = "YAY!"
+        self.dialog = None
+
+    def update(self, delta):
+        if not self.displayed:
+            self.displayed = True
+            self.dialog = YesNoDialog(
+                message="Are you having a very\n happy day?",
+                on_yes=self._yes_handler,
+                on_no=self._no_handler,
+                app=self,
+            )
+
+    def draw(self, ctx):
+        clear_background(ctx)
+
+        ctx.save()
+        if self.answer:
+            ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
+            ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
+        ctx.restore()
+
+        if self.dialog:
+            self.dialog.draw(ctx)
+
+```
+
+This example app also shows a dialog that asks you if it's a happy day and responds with an appropriate message. It calls the `YesNoDialog` in an asynchronous way:
+
+```
+
+```
+
+This example overwrites the `run()` method to be able to use the `run()` method on the `YesNoDialog` object:
 
 ```python
 import app
@@ -277,7 +333,6 @@ class DialogDemo(app.App):
             ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
             ctx.restore()
         self.draw_overlays(ctx)
-
 ```
 
 
@@ -298,46 +353,61 @@ To use the Yes/No dialog:
     super().__init__()
     ```
 
-3. Use the `run()` method which supports asynchronous calls. You need asynchronous calls to wait for the answer to the dialog:
+=== "Synchronous"
 
-    ```python
-    async def run(self, render_update):
-        # Render initial state
-        await render_update()
+      3. Create the `YesNoDialog` from your `update()` method. Since the `update()` method gets called repeatedly, make sure it only gets called once:
 
-        # Create a yes/no dialogue, add it to the overlays
-        dialog = YesNoDialog("Happy day?", self)
-        self.overlays = [dialog]
-        # Wait for an answer from the dialogue, and if it was yes, do something
-        if await dialog.run(render_update):
-            # this sets a variable that can be used in the draw method
-            self.answer = "YAY!"
-        else:
-            self.answer = "I'm sorry"
-        # Remove the dialogue and re-render
-        self.overlays = []
-        await render_update()
+        ```python
+        self.dialog = YesNoDialog(
+            message="Are you having a very\n happy day?",
+            on_yes=self._yes_handler,
+            on_no=self._no_handler,
+            app=self,
+        )
+        ```
 
-    ```
+=== "Asynchronous"
 
-    `YesNoDialog()` supports the following parameters:
+      3. Use the `run()` method which supports asynchronous calls. You need asynchronous calls to wait for the answer to the dialog:
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `message` | `str` | The dialog message. |
-    | `app` | `App` | The app opening the dialog. |
-    | `on_yes` | `method` | _Optional_. Call the provided handler method or return `True` if answer is yes and no handler is provided. Default: `None`. |
-    | `on_no` | `method` | _Optional_. Call the provided handler method or return `False` if answer is yes and no handler is provided. Default: `None`. |
+          ```python
+          async def run(self, render_update):
+              # Render initial state
+              await render_update()
 
-4. Add the following lines in your `draw()` method to clear the background and draw the dialog's overlays:
+              # Create a yes/no dialogue, add it to the overlays
+              dialog = YesNoDialog("Are you having a very\n happy day?", self)
+              self.overlays = [dialog]
+              # Wait for an answer from the dialogue, and if it was yes, do something
+              if await dialog.run(render_update):
+                  # this sets a variable that can be used in the draw method
+                  self.answer = "I'm sorry"
+              else:
+                  self.answer = "YAY!"
+              # Remove the dialogue and re-render
+              self.overlays = []
+              await render_update()
+
+          ```
+
+`YesNoDialog()` supports the following parameters:
+
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| `message` | `str` | The dialog message. |
+| `app` | `App` | The app opening the dialog. |
+| `on_yes` | `method` | _Optional_. Call the provided handler method or return `True` if answer is yes and no handler is provided. Default: `None`. |
+| `on_no` | `method` | _Optional_. Call the provided handler method or return `False` if answer is yes and no handler is provided. Default: `None`. |
+
+4. Add the following lines in your `draw()` method to draw the dialog's overlays:
 
     ```python
     # in def draw(self, ctx):
-        clear_background(ctx)
-        self.draw_overlays(ctx)
+        if self.dialog:
+            self.dialog.draw(ctx)
     ```
 
-    To make the dialog's answers have an effect you need to do something with the answer you received. Check the example for an idea.
+    To make the dialog's answers have an effect you need to do something based on the input you have received from the `YesNoDialog`. Check the example for an idea.
 
 ### Methods
 

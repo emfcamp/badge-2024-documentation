@@ -36,10 +36,15 @@ markdown_extensions:
   - codehilite
   - fenced_code
   - admonition
+  - sane_lists
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 plugins:
-   - glightbox
-   - mkdocs-nav-weight
-   - include-markdown
-
+  - glightbox
+  - mkdocs-nav-weight
+  - include-markdown
