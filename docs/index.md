@@ -136,9 +136,21 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/spirits.jpg" alt="Spirit level hexpansions">
     <span class="label"><a href="https://www.printables.com/model/893545-spirit-level-hexpansions">Spirit level hexpansions</a> by Andy Piper</span>
   </span>
-    <span class="img-container">
+  <span class="img-container">
     <img src="/images/hexpansions/duckpond.jpg" alt="Duck pond hexpansion">
     <span class="label">Duck pond hexpansion by Andy Piper</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/batwings.jpg" alt="Bat wing hexpansion">
+    <span class="label">Bat wing hexpansions by clayalien</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/duckpond.jpg" alt="Duck pond hexpansion">
+    <span class="label"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion">Not lego baseplate hexpansion</a> by adie</span>
+  </span>
+    <span class="img-container">
+    <img src="/images/hexpansions/duckpond.jpg" alt="Duck pond hexpansion">
+    <span class="label"><a href="https://www.printables.com/model/894438-display-platform-hexpansion">Display platform hexpansion</a> by adie</span>
   </span>
 <!--hexpansions-end-->
 </div>
