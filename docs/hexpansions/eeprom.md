@@ -61,11 +61,18 @@ If you want your EEPROM-equipped hexpansion to do something automatically, you n
       and run the command again.
 
 6. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `mount_hexpansion` script to mount the storage on your hexpansion, and then copies your app file from the provided location to `/hexpansion_1/app.py`:
+7. _Optional_ but recommended to make apps faster and save space. Use [`mpy-cross`](https://pypi.org/project/mpy-cross/) to compile your python code:
 
     ```sh
-    mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp path/to/your/app.py :/hexpansion_{YOUR-HEXPANSION-PORT-NUMBER}/app.py
+    python -m mpy_cross path/to/your/app.py
+    ```
+
+8. Use `mpremote` to mount the module, then mount the storage on your hexpansion, and copy your app file to it, with the following command:
+
+    ```sh
+    mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp path/to/your/app.mpy :/hexpansion_{YOUR-HEXPANSION-PORT-NUMBER}/app.mpy
     # For example:
-    # mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp sim/apps/snake/app.py :/hexpansion_1/app.py
+    # mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp sim/apps/snake/app.mpy :/hexpansion_1/app.mpy
     ```
 
 ## EEPROM format
