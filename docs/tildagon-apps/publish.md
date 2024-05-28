@@ -9,7 +9,7 @@ weight: 4
 
 To publish your Tildagon App, you need to create a GitHub repository with:
 
-- a `main.py` file containing the app
+- an `app.py` file containing the app
 - a [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) file containing metadata about the app
 - a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
 - the `tildagon-app` [label applied to the repo](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label)
@@ -62,7 +62,9 @@ To publish your Tildagon App, you need to create a GitHub repository with:
     version = "0.0.1"
     ```
 
-3. Edit the `main.py`. This is a simple hello world app:
+3. Edit the `app.py` to set the `__app_export__` variable and to add your app contents.
+
+   This is a simple hello world app:
 
     ```python
     import asyncio
@@ -70,6 +72,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 
     from events.input import Buttons, BUTTON_TYPES
 
+    __app_export__ = ExampleApp
 
     class ExampleApp(app.App):
         def __init__(self):
