@@ -1,4 +1,4 @@
-# UI Widget Overview
+# UI widget overview
 
 You can use the following premade [`app_components`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/menu.py) to create user interfaces:
 

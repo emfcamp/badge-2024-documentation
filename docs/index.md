@@ -189,7 +189,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 
 For more information, see:
 
-- [Hexpansion Creation](hexpansions/creating-hexpansions.md)
+- [Create a hexpansion](hexpansions/creating-hexpansions.md)
 - [Technical documentation, pinout, and paper and PCB templates][badge-2024-hardware]
 
 ## A reusable platform with an interchangeable part

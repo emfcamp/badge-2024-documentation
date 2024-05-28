@@ -1,4 +1,4 @@
-# Hexpansion Creation
+# Create a hexpansion
 
 {%
    include-markdown "../index.md"

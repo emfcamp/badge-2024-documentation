@@ -1,5 +1,5 @@
 ---
-title: Write A Tildagon OS App
+title: Write a Tildagon OS app
 weight: -3
 ---
 
@@ -377,7 +377,7 @@ You can use the following methods on an `App` object:
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `__init__()` | Initializes the app. You can overwrite this method to add additional properties or perform tasks. | None | None |
-| `run(render_update)` | _Asynchronous_. By default, the `run()` method calls `render_update` repeatedly. You can overwrite the `run()` method which allows you to call asynchronous methods, enabling you, for example, to wait for user input with the [`Dialog`](./widgets-and-hardware/ui-elements.md#dialog) ui element. If you do overwrite this method, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L13) for reference. | `render_update`: The method that triggers a `draw()` call when updates are complete. | None |
+| `run(render_update)` | _Asynchronous_. By default, the `run()` method calls `render_update` repeatedly. You can overwrite the `run()` method which allows you to call asynchronous methods, enabling you, for example, to wait for user input with the [`YesNoDialog`](./widgets-and-hardware/ui-elements.md#yesno-dialog) ui element. If you do overwrite this method, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L13) for reference. | `render_update`: The method that triggers a `draw()` call when updates are complete. | None |
 | `update(delta)` | By default, This method is called by the `run()` method every 0.05 seconds. By default, it has _no implementation_. You can overwrite this method to perform updates. | `delta`: Time difference between the last update call and the current update call. | None |
 | `draw(ctx)` | By default, this method calls `draw_operlays()`. To add UI elements or other visual elements to your app, you need to overwrite this method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./widgets-and-hardware/ctx.md). | None |
 | `draw_overlays(ctx)` | Draw each overlay stored in `self.overlays` on the screen. If you overwrite your `draw()` method and have any overlays, you need to call this method manually. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./widgets-and-hardware/ctx.md). | None |

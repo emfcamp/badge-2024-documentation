@@ -1,5 +1,5 @@
 ---
-title: Simulate Your App
+title: Simulate your app
 weight: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Publish Your App
+title: Publish your app
 weight: 4
 ---
 
