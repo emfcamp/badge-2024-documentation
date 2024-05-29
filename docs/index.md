@@ -158,11 +158,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src="images/hexpansions/glonouns.jpg" alt="glowing pronoun hexpansions">
-    <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Glowing pronoun hexpansions</a> by adie</span>
+    <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Glowing pronoun hexpansions</a> by Emily Selwood</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/pronouns.jpg" alt="pronoun hexpansions">
-    <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Pronoun hexpansions</a> by adie</span>
+    <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Pronoun hexpansions</a> by Emily Selwood</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/keyboard.png" alt="Keyboard hexpansion">
