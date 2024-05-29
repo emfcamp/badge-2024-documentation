@@ -11,6 +11,10 @@ You can simulate your badge apps with the [Tildagon badge simulator](https://git
 2. Open a terminal and navigate to the [sim](https://github.com/emfcamp/badge-2024-software/tree/main/sim) folder.
 3. From there, run `pipenv install` to install all dependencies.
 
+!!! note "Not running as expected?"
+
+      Check the [known issues](https://github.com/emfcamp/badge-2024-software/tree/main/sim#known-issues).
+
 ## Simulate your app
 
 The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder To test your app, place your app's python file into the `sim/apps/` folder:
