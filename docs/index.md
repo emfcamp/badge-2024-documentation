@@ -176,6 +176,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/eyes-lit.gif" alt="Bob's frog prototype">
     <span class="label">Many eyes by Bob</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/sao.jpg" alt="&quot;Legacy&quot; adapter">
+    <span class="label"><a href="https://github.com/dratini0/legacy-adapter-hexpansion">&quot;Legacy&quot; adapter (SAO, TiDAL, QW/ST)</a> by dratini0</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/hub75.jpg" alt="HUB75 hexpansion">
+    <span class="label"><a href="https://github.com/dratini0/hub75-hexpansion">HUB75 hexpansion</a> by dratini0</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
