@@ -69,7 +69,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
   </span>
   <span class="img-container">
-    <img src="images/hexpansions/plotter.gif" alt="Plotter hexpansion">
+    <img src="/images/hexpansions/plotter.gif" alt="Plotter hexpansion">
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
@@ -157,7 +157,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/894438-display-platform-hexpansion">Display platform hexpansion</a> by adie</span>
   </span>
   <span class="img-container">
-    <img src="images/hexpansions/glonouns.jpg" alt="glowing pronoun hexpansions">
+    <img src="/images/hexpansions/glonouns.jpg" alt="glowing pronoun hexpansions">
     <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Glowing pronoun hexpansions</a> by Emily S</span>
   </span>
   <span class="img-container">
