@@ -110,13 +110,18 @@ That's it!
 
 To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
 
-1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/).
-1. Hold the middle button, designated `boop` (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
-1. Click on the **Connect** button on the web flasher and select the Tildagon.
+1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
+
+   !!! info "The flasher may not work in other browsers."
+
+1. Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
+1. Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.
 1. Select the **Install Tildagon** option.
 1. When prompted to confirm the installation, click *Install*. Installation may take a few minutes.
-1. TODO
 
+![Provisioning flow](../images/badge-photos/provision.gif)
+
+When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](#power-off) and disconnect it from your computer.
 
 ## Operate your badge
 
@@ -134,14 +139,19 @@ Use the buttons **A** (`UP`) and **D** (`DOWN`) to move up and down in the menu.
 
 To power off the badge, select the menu item **Power off**.
 
+## Buttons
 
----
+### Front of the badge
 
-boop boot loader
+- **A** (`UP`)
+- **B** (`RIGHT`)
+- **C** (`CONFIRM`)
+- **D** (`DOWN`)
+- **E** (`LEFT`)
+- **F** (`CANCEL`)
 
-bat - reconnect battery
+### Back of the board
 
-reboop - soft reboot
-
-
-hold boop as you connect power, then press connect
+- **reboop**: Press and hold the **reboop** button to perform a soft (re)boot. This is the button you need to hold to power on your badge.
+- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader
+- **bat**: Press the **bat** button to reconnect the battery.
