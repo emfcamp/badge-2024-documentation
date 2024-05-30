@@ -13,3 +13,135 @@ The Tildagon is a badge that you can wear around your neck. It has a round scree
 The badge will automatically connect to camp wifi, and you can use the app store to install apps.
 
 The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by other attendees.
+
+
+## Assembly
+
+The following components come with each badge kit:
+
+![Badge component](../images/badge-photos/badge-components.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
+
+From top to bottom, left to right:
+
+- Tildagon information with link to docs
+- battery
+- badge front
+- badge back
+- display
+- 3 screws, 2 glue stickers
+- display cable
+- Tildagon sticker
+
+### 1. Assemble the front of the badge
+
+Start with the badge front, display cable, and glue bits:
+
+![Components for the front](../images/badge-photos/front-components.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+Flip the badge front, so you can see the names of the badge team:
+
+![Battery side of the front of the badge](../images/badge-photos/front-battery-side.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
+
+Attach the camera ribbon to connector. Lift the black bit and slide the ribbon cable into the connector. The contacts should be placed towards the board. The blue side of the ribbon should remain visible.
+
+<p style="text-align: center;">
+  <img src="../../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/ribbon2.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
+</p>
+
+Get the battery and hold it in place on the rectangle to get a sense for where it should go. The battery needs to go very close to the ribbon cable to fit inside the rectangle.
+
+![Battery side of the front of the badge](../images/badge-photos/battery-fit.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
+
+Next, attach the glue stickers to the badge front inside the rectangle.
+
+![Glue stickers on the front of the badge](../images/badge-photos/glue.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
+
+Then carefully place the battery ensuring the battery goes completely inside the rectangle.
+
+![Place the battery](../images/badge-photos/place-battery.gif){: style="width:500px;height: auto;margin:auto;display:block;" }
+
+### 2. Attach the display
+
+Attach the other end of the ribbon camera to the back board. Then gently push the display into the pins on the front of the badge.
+
+### 3. Flash your badge
+
+Follow the directions in [Flash your badge](#flash-your-badge) before you continue assembly.
+
+### 4. Attach the battery to the back of the badge
+
+On the back of the battery, remove the plastic lid from the battery connector:
+
+<p style="text-align: center;">
+  <img src="../../images/badge-photos/battery2.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/battery3.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
+</p>
+
+Then attach the batter cable to battery connector on the back board.
+
+<p style="text-align: center;">
+  <img src="../../images/badge-photos/battery4.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/ribbon.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
+</p>
+
+### 5. Screw the badge front to the badge back
+
+Remove the plastic protector stickers on top of the screw mounts.
+
+<p style="text-align: center;">
+  <img src="../../images/badge-photos/screws1.jpg" width="100" alt="Screw mounts" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/screws2.jpg" width="100" alt="Screw mounts without protective stickers" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/screws3.jpg" width="100" alt="Screw mounts with added separator connector" style="width:200px;height: auto;" />
+</p>
+
+Then, use the 3 screws and connectors to screw the badge front to the badge back. The top of the back board is between the two USB-C ports and should be aligned with the top of the front board which is where the A button is.
+
+<p style="text-align: center;">
+  <img src="../../images/badge-photos/orientation.jpg" width="100" alt="Aligned orientation of the front and back" style="width:auto;height: 200px;" />
+  <img src="../../images/badge-photos/connect.jpg" width="100" alt="Connected badge side view" style="width:auto;height: 200px;" />
+</p>
+
+![Finished badge](../images/badge-photos/finished.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
+
+That's it!
+
+## Flash your badge
+
+To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
+
+1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/).
+1. Hold the middle button, designated `boop` (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
+1. Click on the **Connect** button on the web flasher and select the Tildagon.
+1. Select the **Install Tildagon** option.
+1. When prompted to confirm the installation, click *Install*. Installation may take a few minutes.
+1. TODO
+
+
+## Operate your badge
+
+### Power on
+
+To power on your badge, press and hold the bottom button designated _bat_ (the designation is on the back of the badge) for 2 seconds.
+
+### Navigate the menu
+
+Use the buttons **A** (`UP`) and **D** (`DOWN`) to move up and down in the menu. To select a menu item, press **C** (`CONFIRM`). To go back to a previous menu or exit an app, press **F** (`CANCEL`).
+
+!!! info "Note that badge apps may use buttons differently."
+
+### Power off
+
+To power off the badge, select the menu item **Power off**.
+
+
+---
+
+boop boot loader
+
+bat - reconnect battery
+
+reboop - soft reboot
+
+
+hold boop as you connect power, then press connect
