@@ -112,7 +112,7 @@ To flash your badge, it is best if the battery is not yet connected. It may not 
 
 1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
 
-   !!! info "The flasher may not work in other browsers."
+    !!! info "The flasher may not work in other browsers."
 
 1. Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
 1. Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.

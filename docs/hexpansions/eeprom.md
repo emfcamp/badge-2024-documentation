@@ -34,7 +34,7 @@ If you want your eeprom-equipped hexpansion to do something automatically, you n
 
     For more information see [Eeprom format](#eeprom-format).
 
-5. Use [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) to mount the storage module and run the script to flash a header to the first page of the eeprom:
+5. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `prepare_eeprom.py` script from the locally mounted directory. The `prepare_eeprom.py` script flashes a header to the first page of the eeprom:
 
     ```sh
     mpremote mount modules + run modules/scripts/prepare_eeprom.py
@@ -42,7 +42,7 @@ If you want your eeprom-equipped hexpansion to do something automatically, you n
 
     `mpremote` should automatically detect the port the board is plugged into. If it doesn't, manually specify the port. For more information see the [`mpremote` reference docs](https://docs.micropython.org/en/latest/reference/mpremote.html#shortcuts).
 
-6. Use `mpremote` to mount the module, then mount the storage on your hexpansion, and copy your app file to it, with the following command:
+6. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `mount_hexpansion` script to mount the storage on your hexpansion, and then copies your app file from the provided location to `/hexpansion_1/app.py`:
 
     ```sh
     mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp path/to/your/app.py :/hexpansion_{YOUR-HEXPANSION-PORT-NUMBER}/app.py

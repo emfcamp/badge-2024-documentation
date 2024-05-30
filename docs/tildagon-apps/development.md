@@ -34,7 +34,7 @@ class ExampleApp(app.App):
         ctx.restore()
 ```
 
-To test the app, go to the instructions for [simulating your app](./simulate.md) or [publishing it](./publish.md) for testing on your real-life badge.
+To test the app, you can use the [simulator](./simulate.md) or [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). Once you're ready with development, you can [publish it](./publish.md) to the app store.
 
 ## The `App` class
 
@@ -402,6 +402,44 @@ You can use the following premade [`app_components`](widgets-and-hardware/ui-ele
 ### The `ctx` library
 
 You can also create your own user interfaces using the [`ctx` graphics library](./widgets-and-hardware/ctx.md).
+
+## Use `mpremote` to test an app on your badge
+
+You can test your app on-device, without publishing it, using [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html).
+
+1. Install `mpremote` following the [installation instructions](https://docs.micropython.org/en/latest/reference/mpremote.html).
+2. Create the `apps` folder if it doesn't already exist:
+
+    ```sh
+    mpremote mkdir apps
+    ```
+
+3. Create the folder for your app, for example:
+
+    ```sh
+    mpremote mkdir apps/snake
+    ```
+
+4. Copy your app files to the new folder:
+
+    ```sh
+    mpremote cp apps/snake/* :/apps/snake/
+    ```
+
+5. Restart your app by holding the **reboop** button for 2 seconds.
+
+### Debug your app on your badge
+
+If your app crashes when it's started, you can get debug information from `mpremote`:
+
+1. Run `mpremote` to get a shell with access to the device:
+
+    ```sh
+    mpremote
+    ```
+
+2. Press `CTRL-C` to cancel the current running program and then `CTRL-D` to do a soft-reset.
+3. Now you can use the badge menu to start your app.
 
 ## What next?
 
