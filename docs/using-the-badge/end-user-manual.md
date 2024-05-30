@@ -145,10 +145,10 @@ To power off the badge, select the menu item **Power off**.
 
 - **A** (`UP`): In the menu, this button navigates up. In apps the functionality may vary.
 - **B** (`RIGHT`): When entering text in a dialogue, this button allows you to add another letter. In apps the functionality may vary.
-- **C** (`CONFIRM`)
+- **C** (`CONFIRM`): This generally confirm the selection. In a dialogue, this button means yes. In apps the functionality may vary.
 - **D** (`DOWN`): In the menu, this button navigates down. In apps the functionality may vary.
-- **E** (`LEFT`) When entering text in a dialogue, this button allows you to move leftadd another letter. In apps the functionality may vary.
-- **F** (`CANCEL`)
+- **E** (`LEFT`): When entering text in a dialogue, this button allows you to move leftadd another letter. In apps the functionality may vary.
+- **F** (`CANCEL`): This generally cancels the selection. In a dialogue, this button means no. In apps the functionality may vary.
 
 ### Back of the board
 

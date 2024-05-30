@@ -184,6 +184,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/hub75.jpg" alt="HUB75 hexpansion">
     <span class="label"><a href="https://github.com/dratini0/hub75-hexpansion">HUB75 hexpansion</a> by dratini0</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/blank.jpg" alt="blank hexpansion">
+    <span class="label">Blank Hexpansion by Nathan Dumont</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
