@@ -12,7 +12,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 - an `app.py` file containing the app
 - a [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) file containing metadata about the app
 - a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
-- the `tildagon-app` [label applied to the repo](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label)
+- the `tildagon-app` [topic applied to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository)
 
 ## Instructions
 
@@ -93,13 +93,13 @@ To publish your Tildagon App, you need to create a GitHub repository with:
         ctx.restore()
     ```
 
-4. Add the `tildagon-app` [topic to the repo](https://docs.github.com/en/enterprise-server@3.10/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository).
+4. Add the `tildagon-app` [topic to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository).
 
 5. Create a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) using GitHub. If you are unsure what settings to use, choose
       -  `v0.0.1` for your tag
       -  `v0.0.1` for your release title
 
-Your app will become available in the Tildagon App store within about 10 minutes.
+Your app will become available in the Tildagon App store within 15 minutes.
 
 !!! note "Updating the version"
 
