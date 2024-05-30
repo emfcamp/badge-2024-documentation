@@ -408,25 +408,19 @@ You can also create your own user interfaces using the [`ctx` graphics library](
 You can test your app on-device, without publishing it, using [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html).
 
 1. Install `mpremote` following the [installation instructions](https://docs.micropython.org/en/latest/reference/mpremote.html).
-2. Create the `apps` folder if it doesn't already exist:
+2. Create the folder for your app, for example:
 
     ```sh
-    mpremote mkdir apps
+    mpremote mkdir snake
     ```
 
-3. Create the folder for your app, for example:
+3. Copy your app files to the new folder:
 
     ```sh
-    mpremote mkdir apps/snake
+    mpremote cp snake/* :/snake/
     ```
 
-4. Copy your app files to the new folder:
-
-    ```sh
-    mpremote cp apps/snake/* :/apps/snake/
-    ```
-
-5. Restart your app by holding the **reboop** button for 2 seconds.
+4. Restart your app by holding the **reboop** button for 2 seconds.
 
 ### Debug your app on your badge
 
