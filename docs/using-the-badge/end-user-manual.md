@@ -49,17 +49,13 @@ Attach the camera ribbon to connector. Lift the black bit and slide the ribbon c
   <img src="../../images/badge-photos/ribbon2.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
 </p>
 
-Get the battery and hold it in place on the rectangle to get a sense for where it should go. The battery needs to go very close to the ribbon cable to fit inside the rectangle.
-
-![Battery side of the front of the badge](../images/badge-photos/battery-fit.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
-
 Next, attach the glue stickers to the badge front inside the rectangle.
 
-![Glue stickers on the front of the badge](../images/badge-photos/glue.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
+![Glue stickers on the front of the badge](../images/badge-photos/gluedots.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
 
-Then carefully place the battery ensuring the battery goes completely inside the rectangle.
+Get the battery and place it **over** the ribbon cable inside the rectangle ensuring the battery goes completely inside the rectangle.
 
-![Place the battery](../images/badge-photos/place-battery.gif){: style="width:500px;height: auto;margin:auto;display:block;" }
+![Place the battery](../images/badge-photos/battery-over-ribbon.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
 
 ### 2. Attach the display
 
