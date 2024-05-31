@@ -108,6 +108,8 @@ That's it!
 
 ## Flash your badge
 
+** Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed! **
+
 To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
 
 1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
