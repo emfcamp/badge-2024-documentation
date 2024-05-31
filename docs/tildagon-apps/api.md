@@ -1,5 +1,5 @@
 ---
-title: Using an API in an app
+title: Use an API in an app
 weight: 5
 ---
 

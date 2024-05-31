@@ -106,6 +106,15 @@ Your app will become available in the Tildagon [app store](https://apps.badge.em
 
       If you make changes to your app, you will need to update the version number in the `tildagon.toml` file create a new release on GitHub with an incremented version number.
 
+## Troubleshooting
+
+### My app isn't showing up
+
+If your app doesn't show up within 15 minutes, check the [Errors page](https://apps.badge.emfcamp.org/errors/) page. If there's no error there, that means either:
+
+- the app store can't see your app, for example because your repository is private or that you may need to [add the `tildagon-app` topic to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository), or
+- your app is listed and available to the badge - and may have an error there. In this case, check [debug your app on your badge](./development.md#debug-your-app-on-your-badge).
+
 ## Support
 
 You can currently only publish Tildagon Apps through GitHub. Contributions to support other ways of publishing are welcome at [emfcamp/badge-2024-app-store](https://github.com/emfcamp/badge-2024-app-store)!
