@@ -41,6 +41,8 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
             ctx.font_size = 14
             ctx.rgb(1,0,0).move_to(-90,0).text("This will be my snake game soon!")
             ctx.restore()
+
+    __app_export__ = SnakeApp
     ```
 
     ??? question "Don't know what this code does?"
@@ -150,6 +152,8 @@ class SnakeApp(app.App):
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
         ctx.restore()
+
+    __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure you can see the board:
@@ -223,6 +227,8 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure you can see the snake:
@@ -352,6 +358,8 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator, then press the up, down, right, or left buttons to ensure you can move the snake. Be aware that your snake can currently move off the visible screen, so pay attention when you open the app!
@@ -444,6 +452,8 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure your snake now moves more slowly:
@@ -598,6 +608,8 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to see your food appear:
@@ -720,6 +732,8 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure your snake can eat the food:
@@ -862,6 +876,8 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to check the score:
@@ -1142,6 +1158,8 @@ class SnakeApp(app.App):
 
         if self.dialog:
             self.dialog.draw(ctx)
+
+__app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to test the game state logic:

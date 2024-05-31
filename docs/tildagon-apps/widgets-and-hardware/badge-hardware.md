@@ -44,6 +44,8 @@ class LEDExampleApp(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
+
+__app_export__ = LEDExampleApp
 ```
 
 You can see a more comprehensive example in the [`intro_app.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/intro_app.py).
@@ -108,6 +110,8 @@ class LEDExampleApp(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
+
+__app_export__ = LEDExampleApp
 ```
 
 ### Usage
@@ -236,6 +240,8 @@ class GPIOExample(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
+
+__app_export__ = GPIOExample
 ```
 
 You can see a more comprehensive example in the [`intro_app.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/intro_app.py).
