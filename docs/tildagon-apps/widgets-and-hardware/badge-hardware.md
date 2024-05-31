@@ -189,7 +189,7 @@ You can see a more comprehensive example in [`dialog.py`](https://github.com/emf
 
 ## eGPIO
 
-!!! tip "You've found an app CHALLENGE!"
+!!! tip "You've found a badge CHALLENGE!"
 
     Your challenge, should you choose to accept it, is to test eGPIO and finish the following documentation. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/70).
 
