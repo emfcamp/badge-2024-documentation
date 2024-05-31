@@ -10,7 +10,6 @@ This guide will help you write an "Hello, World" app for the Tildagon badge.
 This is a small Tildagon app. The app imports the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), sets a button to allow you to cancel out of the app, and writes `Hello, world!` to the badge screen:
 
 ```python
-import asyncio
 import app
 
 from events.input import Buttons, BUTTON_TYPES
@@ -26,6 +25,7 @@ class ExampleApp(app.App):
             # Calling clear() ensures the next time you open the app, it stays open.
             # Without it the app would close again immediately.
             self.button_states.clear()
+            self.minimise()
 
     def draw(self, ctx):
         ctx.save()
@@ -34,6 +34,12 @@ class ExampleApp(app.App):
         ctx.restore()
 
 __app_export__ = ExampleApp
+```
+
+If you place this code in a file called `app.py`, you may also need to add a separate file called `__init__.py` containing this line:
+
+```python
+from .app import ExampleApp
 ```
 
 To test the app, you can use the [simulator](./simulate.md) or [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
@@ -420,12 +426,13 @@ You can also create your own user interfaces using the [`ctx` graphics library](
 
 You can test your app on-device, without publishing it, using [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html).
 
-1. Create a `metadata.json` file in your app's directory. This is necessary **only** during development. Remove this file before publishing your app to the app store.
+1. Create a `metadata.json` file in your app's directory. This is necessary **only** during development. Remove this file before publishing your app to the app store. You may also need to specify a `callable` -- this should be the same as the name of your app's main class.
 
     ```json
     {
         "name": "<app-name>",
-        "path": "apps.<folder-name>.app"
+        "path": "apps.<folder-name>.app",
+        "callable": "ExampleApp"
     }
     ```
 
@@ -434,7 +441,8 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
     ```json
     {
         "name": "The OG Snake app",
-        "path": "apps.snake.app"
+        "path": "apps.snake.app",
+        "callable": "SnakeApp"
     }
     ```
 
