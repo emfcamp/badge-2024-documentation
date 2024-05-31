@@ -32,6 +32,9 @@ class ExampleApp(app.App):
         ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
         ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
         ctx.restore()
+
+__app_export__ = ExampleApp
+
 ```
 
 To test the app, you can use the [simulator](./simulate.md) or [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
@@ -171,6 +174,8 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
         def draw(self, ctx):
             ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
             ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+
+    __app_export__ = RightButtonCounterApp
     ```
 
     If you want to instead count a button press once, you can do that by clearing the `button_state` after the first time it's counted:
@@ -193,6 +198,8 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
         def draw(self, ctx):
             ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
             ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+
+    __app_export__ = RightButtonCounterApp
     ```
 
 4. Currently, the `RightButtonCounterApp` from step 3 does not allow you to leave the app. To remedy that, we should add functionality to the overwritten `update()` method to call the `App`'s `minimise()` method when the cancel button is pressed. You should always provide a way to get out of an app!
@@ -222,6 +229,8 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
         def draw(self, ctx):
             ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
             ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+
+    __app_export__ = RightButtonCounterApp
     ```
 
 With these methods you can create many apps. There are a few more available that will allow you to do a bit more. We'll go over two that allow you to perform background updates and draw overlays next.
@@ -254,6 +263,8 @@ class TimeCounterApp(app.App):
     def draw(self, ctx):
         ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
         ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+
+__app_export__ = TimeCounterApp
 ```
 
 #### Draw multiple objects
@@ -305,6 +316,8 @@ class OverlaysApp(app.App):
         # do not, then the menu remains visible when the app is opened.
         clear_background(ctx)
         self.draw_overlays(ctx)
+
+__app_export__ = OverlaysApp
 ```
 
 #### Asynchronous functionality
@@ -359,6 +372,8 @@ class BasicApp(app.App):
         ctx.restore()
 
         self.draw_overlays(ctx)
+
+__app_export__ = BasicApp
 ```
 
 
@@ -407,26 +422,44 @@ You can also create your own user interfaces using the [`ctx` graphics library](
 
 You can test your app on-device, without publishing it, using [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html).
 
+1. Create a `metadata.json` file in your app's directory. This is necessary **only** during development. Remove this file before publishing your app to the app store.
+
+    ```json
+    {
+        "name": "<app-name>",
+        "path": "apps.<folder-name>.app"
+    }
+    ```
+
+    The folder name is the name of the folder you will copy the app to. For example
+
+    ```json
+    {
+        "name": "The OG Snake app",
+        "path": "apps.snake.app
+    }
+    ```
+
 1. Install `mpremote` following the [installation instructions](https://docs.micropython.org/en/latest/reference/mpremote.html).
-2. Create the `apps` folder if it doesn't already exist:
+1. Create the `apps` folder if it doesn't already exist:
 
     ```sh
     mpremote mkdir apps
     ```
 
-3. Create the folder for your app, for example:
+1. Create the folder for your app, for example:
 
     ```sh
     mpremote mkdir /snake
     ```
 
-4. Copy your app files to the new folder:
+1. Copy your app files to the new folder:
 
     ```sh
     mpremote cp apps/snake/* :/snake/
     ```
 
-5. Restart your app by holding the **reboop** button for 2 seconds.
+1. Restart your app by holding the **reboop** button for 2 seconds.
 
 ### Debug your app on your badge
 

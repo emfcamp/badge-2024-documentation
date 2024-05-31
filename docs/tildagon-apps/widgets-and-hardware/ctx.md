@@ -29,6 +29,8 @@ class ExampleApp(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
+
+__app_export__ = ExampleApp
 ```
 
 ![An empty background](../../images/ctx-examples/empty.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -94,6 +96,8 @@ class ExampleApp(app.App):
 
         width = ctx.text_width("x")
         ctx.rgb(0, 1, 0).move_to(100 - width/2, -15).text("x")
+
+__app_export__ = ExampleApp
 ```
 
 ### State of the canvas
@@ -147,6 +151,8 @@ class ExampleApp(app.App):
         ctx.rectangle(0, 20, 5, 5).fill()
         ctx.rectangle(0, 30, 5, 5).fill()
         ctx.rectangle(0, 40, 5, 5).fill()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red circle next to a blue circle](../../images/ctx-examples/state.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -182,6 +188,8 @@ class ExampleApp(app.App):
         ctx.rgb(0, 0, 255).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
 
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 You can add opacity to colors by using the `rgba()` method which makes the color translucent. You can specify the opacity on a scale from `0` (entirely see-through) to `1.0` (not see-through at all).
@@ -215,6 +223,8 @@ class ExampleApp(app.App):
         ctx.rgba(0, 0, 100, 0.5).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
 
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red circle next to a blue circle with 50% opacity](../../images/ctx-examples/2circles_opacity.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -248,6 +258,8 @@ class ExampleApp(app.App):
         ctx.rectangle(-100, -100, 200, 200).fill()
 
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red circle next to a blue circle](../../images/ctx-examples/radial.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -279,6 +291,8 @@ class ExampleApp(app.App):
         ctx.rectangle(-100, -100, 200, 200).fill()
 
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red circle next to a blue circle](../../images/ctx-examples/linear.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -310,6 +324,8 @@ class ExampleApp(app.App):
         ctx.gray(0.5).arc(0, 0, 40, 0, 2 * math.pi, True).fill()
         ctx.gray(1.0).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![Three circles in black, gray and white](../../images/ctx-examples/gray.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -338,6 +354,8 @@ class ExampleApp(app.App):
         ctx.rgb(100, 0, 0).rectangle(-120,-120,240,240).fill()
         ctx.rgb(255, 0, 0).move_to(-80,0).text("Hello world")
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![Hello world visible in red on a lighter red background](../../images/ctx-examples/text.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -385,6 +403,8 @@ class ExampleApp(app.App):
         else:
            ctx.rgb(255, 0, 0).move_to(-55, 0).text(text)
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![Hello there world text split across two lines](../../images/ctx-examples/text_long.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -419,6 +439,8 @@ class ExampleApp(app.App):
         # Blue circle outline
         ctx.rgb(0, 0, 200).arc(0, 0, 10, 0, 2 * math.pi, True).stroke()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![Multiple shapes stacked](../../images/ctx-examples/shapes.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -451,6 +473,8 @@ class ExampleApp(app.App):
         ctx.rectangle(-25, -25, 50, 50).clip
         ctx.rgb(255, 255, 255).fill()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A white circle with a square cut out](../../images/ctx-examples/clip.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -481,6 +505,8 @@ class ExampleApp(app.App):
         ctx.scale(1, 3)
         ctx.rgb(0,100,0).rectangle(0, 0, 40, 20).fill()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red rectangle next to a green rectangle with a scaling factor applied](../../images/ctx-examples/scale.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -511,6 +537,8 @@ class ExampleApp(app.App):
         ctx.scale(1, 3)
         ctx.rgb(0,100,0).rectangle(0, 0, 40, 20).fill()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red rectangle next to a green rectangle with a scaling factor applied and rotated 180 degrees](../../images/ctx-examples/rotate.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -542,6 +570,8 @@ class ExampleApp(app.App):
         ctx.scale(1, 3)
         ctx.rgb(0,100,0).rectangle(0, 0, 40, 20).fill()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A red rectangle next to a green rectangle with a scaling factor applied, rotated 180 degrees, and translated to the left](../../images/ctx-examples/translate.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -574,6 +604,8 @@ class ExampleApp(app.App):
         ctx.line_to(50, 80)
         ctx.stroke()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 The provided example results in the following drawing:
@@ -608,6 +640,8 @@ class ExampleApp(app.App):
         ctx.line_to(50, 80)
         ctx.stroke()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A drawing of two differently colored lines](../../images/ctx-examples/2lines_2colors.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -641,6 +675,8 @@ class ExampleApp(app.App):
         ctx.close_path()
         ctx.stroke()
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A triangle](../../images/ctx-examples/triangle.png){: style="width:400px;height: auto;margin:auto;display:block;" }
@@ -691,15 +727,17 @@ class ExampleApp(app.App):
         ctx.fill()
 
         ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
 ![A bézier curve](../../images/ctx-examples/bezier.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
-<!--
+### Add an image
 
-### Image example TODO
+!!! tip "You've found a badge CHALLENGE!"
 
--->
+    Your challenge, should you choose to accept it, is to create a minimal example app that shows how you can add an image to an app. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/74).
 
 ## Methods
 

@@ -45,6 +45,8 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
             ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
             ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
             ctx.restore()
+
+    __app_export__ = ExampleApp
     ```
 
 3. In the same folder, create a file called `__init__.py` and use it to import your app's class. If you called your python app `app.py` and the class for your app is called `ExampleApp`, you would use the following content:

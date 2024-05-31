@@ -40,6 +40,8 @@ class MenuDemo(App):
         self.menu.update(delta)
         if self.notification:
             self.notification.update(delta)
+
+__app_export__ = MenuDemo
 ```
 
 You can see a more comprehensive example in the [`menu_demo.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/menu_demo.py).
@@ -171,6 +173,7 @@ class NotificationDemo(App):
         if self.notification:
             self.notification.draw(ctx)
 
+__app_export__ = NotificationDemo
 ```
 
 ### Usage
@@ -286,6 +289,7 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
             if self.dialog:
                 self.dialog.draw(ctx)
 
+    __app_export__ = DialogDemo
     ```
 
 === "Asynchronous"
@@ -331,6 +335,8 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
                 ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
                 ctx.restore()
             self.draw_overlays(ctx)
+
+    __app_export__ = DialogDemo
     ```
 
 ### Usage
@@ -480,6 +486,8 @@ The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modu
 
             if self.dialog:
                 self.dialog.draw(ctx)
+
+    __app_export__ = TextDemo
     ```
 
 === "Asynchronous"
@@ -517,6 +525,8 @@ The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modu
             ctx.restore()
 
             self.draw_overlays(ctx)
+
+    __app_export__ = TextDemo
     ```
 
 ### Usage
