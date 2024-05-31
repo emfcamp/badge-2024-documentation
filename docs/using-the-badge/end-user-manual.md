@@ -26,13 +26,25 @@ From top to bottom, left to right:
 - Tildagon information with link to docs
 - battery
 - badge front
-- badge back
+- badge base
 - display
 - 3 screws, 2 glue stickers
 - display cable
 - Tildagon sticker
 
-### 1. Assemble the front of the badge
+### 1. Attach the standoffs to the base of the badge
+
+Get the three golden standoffs. Remove the plastic protector stickers on top of the middle screw mounts wherever you see three mounts together:
+
+<p style="text-align: center;">
+  <img src="../../images/badge-photos/screws1.jpg" width="100" alt="Screw mounts" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/screws2.jpg" width="100" alt="Screw mounts without protective stickers" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/screws3.jpg" width="100" alt="Screw mounts with added separator connector" style="width:200px;height: auto;" />
+</p>
+
+![The standoffs attached to the badge](../images/badge-photos/standoffs.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
+
+### 2. Assemble the front of the badge
 
 Start with the badge front, display cable, and glue bits:
 
@@ -57,15 +69,15 @@ Get the battery and place it **over** the ribbon cable inside the rectangle ensu
 
 ![Place the battery](../images/badge-photos/battery-over-ribbon.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
 
-### 2. Attach the display
+### 3. Attach the display
 
 Attach the other end of the ribbon camera to the back board. Then gently push the display into the pins on the front of the badge.
 
-### 3. Flash your badge
+### 4. Flash your badge
 
 Follow the directions in [Flash your badge](#flash-your-badge) before you continue assembly.
 
-### 4. Attach the battery to the back of the badge
+### 5. Attach the battery to the back of the badge
 
 On the back of the battery, remove the plastic lid from the battery connector:
 
@@ -74,24 +86,16 @@ On the back of the battery, remove the plastic lid from the battery connector:
   <img src="../../images/badge-photos/battery3.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
 </p>
 
-Then attach the batter cable to battery connector on the back board.
+Then attach the battery cable to battery connector on the back board.
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/battery4.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
   <img src="../../images/badge-photos/ribbon.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
 </p>
 
-### 5. Screw the badge front to the badge back
+### 6. Screw the badge front to the badge back
 
-Remove the plastic protector stickers on top of the screw mounts.
-
-<p style="text-align: center;">
-  <img src="../../images/badge-photos/screws1.jpg" width="100" alt="Screw mounts" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/screws2.jpg" width="100" alt="Screw mounts without protective stickers" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/screws3.jpg" width="100" alt="Screw mounts with added separator connector" style="width:200px;height: auto;" />
-</p>
-
-Then, use the 3 screws and connectors to screw the badge front to the badge back. The top of the back board is between the two USB-C ports and should be aligned with the top of the front board which is where the A button is.
+Use the 3 screws to screw the badge front to the badge base. The top of the base board is between the two USB-C ports and should be aligned with the top of the front board which is where the **A** button is.
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/orientation.jpg" width="100" alt="Aligned orientation of the front and back" style="width:auto;height: 200px;" />
@@ -118,6 +122,10 @@ To flash your badge, it is best if the battery is not yet connected. It may not 
 ![Provisioning flow](../images/badge-photos/provision.gif)
 
 When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](#power-off) and disconnect it from your computer.
+
+!!! info "Don't want to use chromium?"
+
+    You can also manually flash the badge following the instructions in the [`badge-2024-software` Readme](https://github.com/emfcamp/badge-2024-software).
 
 ## Operate your badge
 
