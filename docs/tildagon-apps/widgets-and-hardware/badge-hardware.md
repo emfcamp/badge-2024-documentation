@@ -189,6 +189,11 @@ You can see a more comprehensive example in [`dialog.py`](https://github.com/emf
 
 ## eGPIO
 
+!!! danger
+
+      This part is not fully documented. PRs are welcome.
+
+
 You can use the board's eGPIO pins with the [`tildagonos`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py) package:
 
 ### Methods
@@ -197,8 +202,8 @@ You can use the board's eGPIO pins with the [`tildagonos`](https://github.com/em
 | ------ | ----------- | --------- | ------- |
 | `tildagonos.set_egpio_pin()` | Set the eGPIO state of a pin. | `pin`: The pin to get the state for. | <ul><li>`pin`: The pin to get the state for. Valid values are: `EPIN_LED_POWER`, `EPIN_ND_A`, `EPIN_ND_B`, `EPIN_ND_C`, `EPIN_ND_D`, `EPIN_ND_E`, `EPIN_ND_F`.</li><li> `boolean`: The state of the pin.<li></ul> |
 | `tildagonos.check_egpio_state()` | Get the eGPIO state of a pin. | `pin`: The pin to get the state for. Valid values are: `EPIN_LED_POWER`, `EPIN_ND_A`, `EPIN_ND_B`, `EPIN_ND_C`, `EPIN_ND_D`, `EPIN_ND_E`, `EPIN_ND_F`. | `boolean`: The state of the pin. |
-| `tildagonos.read_egpios()` | Reads the current eGPIO states and stores them for calls to `tildagonos.check_egpio_state()`. | | None. |
-| `tildagonos.set_led_power()` | | | None. |
+| `tildagonos.read_egpios()` | Reads the current eGPIO states and stores them for calls to `tildagonos.check_egpio_state()`. | None. | None. |
+| `tildagonos.set_led_power()` | `state` (`boolean`): The state of the pin. | `boolean`: `True` sets the LED to on, `False` sets the LED to off. | None. |
 
 
 ### Example
@@ -236,11 +241,7 @@ To use the LEDs:
 1. Import the `tildagonos` package:
 
     ```python
-    from tildagonos import tildagonos, led_colours
+    from tildagonos import tildagonos
     ```
 
-2. Set the LEDs by assigning a color tuple to one of the 12 LEDs:
-
-   ```python
-    tildagonos.leds[2] = (255, 0, 0)
-   ```
+2. TODO
