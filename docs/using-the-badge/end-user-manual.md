@@ -3,6 +3,8 @@ title: Tildagon End User Manual
 weight: 1
 ---
 
+!!! warning "Apps can be published on the [app store](https://apps.badge.emfcamp.org/) but currently do not run on the badge yet. The badge team are currently working on this as fast as they can, please be patient!"
+
 ![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout
 pins peaking out from the edges, and a screen showing
 @emfcamp](../images/badge-photos/badge-with-screen.jpg "Tildagon with attached
