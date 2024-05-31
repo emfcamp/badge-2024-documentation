@@ -449,13 +449,13 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
 1. Create the folder for your app, for example:
 
     ```sh
-    mpremote mkdir /snake
+    mpremote mkdir /apps/snake
     ```
 
 1. Copy your app files to the new folder:
 
     ```sh
-    mpremote cp apps/snake/* :/snake/
+    mpremote cp apps/snake/* :/apps/snake/
     ```
 
 1. Restart your app by holding the **reboop** button for 2 seconds.
