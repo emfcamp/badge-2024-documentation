@@ -189,6 +189,11 @@ You can see a more comprehensive example in [`dialog.py`](https://github.com/emf
 
 ## eGPIO
 
+!!! tip "You've found an app CHALLENGE!"
+
+    Your challenge, should you choose to accept it, is to test eGPIO and finish the following documentation. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/70).
+
+
 !!! danger
 
       This part is not fully documented. PRs are welcome.
@@ -223,6 +228,7 @@ class GPIOExample(app.App):
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
+            # TODO
             tildagonos.read_egpios()
             tildagonos.check_egpio_state()
             tildagonos.set_egpio_pin()

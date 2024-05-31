@@ -75,6 +75,12 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
 ![Hello world simulation](../images/hello-world-sim.gif){: style="margin:auto;display:block;" }
 
+## Troubleshooting
+
+!!! note "It runs in the simulator but not on the badge?"
+
+      The simulator uses regular Python, while the badge runs apps with [MicroPython](https://docs.micropython.org/en/latest/). That means language specifics like match case statements will work in the simulator but not on the badge. To test whether your app runs on the badge, follow the instructions to [debug your app on your badge](./development.md#debug-your-app-on-your-badge).
+
 ## What next?
 
 <div class="grid cards" markdown>
