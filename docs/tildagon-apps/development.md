@@ -375,7 +375,6 @@ class BasicApp(app.App):
 __app_export__ = BasicApp
 ```
 
-
 By default, the `background_task()` method is automatically run by the scheduler, regardless of whether the app is in the foreground or background, and calls `background_update()` every 0.05 seconds. You can overwrite this method to change the frequency at which you perform tasks or call the `background_update()` method.
 
 ### Properties
@@ -430,12 +429,12 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
     }
     ```
 
-    The folder name is the name of the folder you will copy the app to. For example
+    The folder name is the name of the folder you will copy the app to. For example:
 
     ```json
     {
         "name": "The OG Snake app",
-        "path": "apps.snake.app
+        "path": "apps.snake.app"
     }
     ```
 
@@ -446,10 +445,10 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
     mpremote mkdir apps
     ```
 
-1. Create the folder for your app, for example:
+1. Create the folder for your app inside the `apps` folder, for example:
 
-    ```sh
-    mpremote mkdir /apps/snake
+    ```shain
+    mpremote mkdir apps/snake
     ```
 
 1. Copy your app files to the new folder:
