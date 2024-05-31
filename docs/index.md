@@ -188,6 +188,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/blank.jpg" alt="blank hexpansion">
     <span class="label">Blank Hexpansion by Nathan Dumont</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/falcon.jpg" alt="Corellian Freigher hexpansion">
+    <span class="label">Corellian Freighter Hexpansion by Andy Piper</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
