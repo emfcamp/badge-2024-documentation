@@ -447,7 +447,7 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
 
 1. Create the folder for your app inside the `apps` folder, for example:
 
-    ```sh
+    ```shain
     mpremote mkdir apps/snake
     ```
 
