@@ -1156,4 +1156,4 @@ Congratulations! You now have a finished snake app! There are many more features
 - Obstacles and obstacle collision checks.
 - You could add a hunger mechanic to ensure a snake must eat within a certain time frame.
 
-If you change the app, please [add it to the App store](./publish.md).
+If you change the app, please [publish it to the App store](./publish.md).

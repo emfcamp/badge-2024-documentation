@@ -5,7 +5,7 @@ weight: 4
 
 !!! danger
 
-      This guide is subject to change. If you start developing now, check back later to see if anything has changed.
+      This guide is subject to change. Published apps may show up in the [app store](https://apps.badge.emfcamp.org/) currently but do not run yet. If you start developing now, check back later to see if anything has changed.
 
 To publish your Tildagon App, you need to create a GitHub repository with:
 
@@ -99,7 +99,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
       -  `v0.0.1` for your tag
       -  `v0.0.1` for your release title
 
-Your app will become available in the Tildagon App store within 15 minutes.
+Your app will become available in the Tildagon [app store](https://apps.badge.emfcamp.org/) within 15 minutes.
 
 !!! note "Updating the version"
 
