@@ -72,8 +72,6 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 
     from events.input import Buttons, BUTTON_TYPES
 
-    __app_export__ = ExampleApp
-
     class ExampleApp(app.App):
         def __init__(self):
             self.button_states = Buttons(self)
@@ -91,11 +89,14 @@ To publish your Tildagon App, you need to create a GitHub repository with:
         ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
         ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
         ctx.restore()
+
+    __app_export__ = ExampleApp
     ```
 
 4. Add the `tildagon-app` [topic to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository).
 
 5. Create a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) using GitHub. If you are unsure what settings to use, choose
+
       -  `v0.0.1` for your tag
       -  `v0.0.1` for your release title
 
