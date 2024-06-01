@@ -261,7 +261,7 @@ To use the LEDs:
 
 ## `IMU` overview
 
-The IMU device is a highly integrated, low power inertial measurement unit (IMU) that combines precise acceleration and angular rate (gyroscopic) measurement. The tripple axis device has been configured to measure 2g and 2 degree per second ranges.
+The IMU device is a highly integrated, low power inertial measurement unit (IMU) that combines precise acceleration and angular rate (gyroscopic) measurement. The triple axis device has been configured to measure 2g and 2 degree per second ranges.
 
 ```python
 import imu
