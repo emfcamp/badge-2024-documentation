@@ -10,7 +10,6 @@ This guide will help you write an "Hello, World" app for the Tildagon badge.
 This is a small Tildagon app. The app imports the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), sets a button to allow you to cancel out of the app, and writes `Hello, world!` to the badge screen:
 
 ```python
-import asyncio
 import app
 
 from events.input import Buttons, BUTTON_TYPES
@@ -26,6 +25,7 @@ class ExampleApp(app.App):
             # Calling clear() ensures the next time you open the app, it stays open.
             # Without it the app would close again immediately.
             self.button_states.clear()
+            self.minimise()
 
     def draw(self, ctx):
         ctx.save()
