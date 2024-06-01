@@ -14,10 +14,16 @@ import app
 from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 from tildagonos import tildagonos
+from system.eventbus import eventbus
+from system.patterndisplay.events import *
 
 class LEDExampleApp(app.App):
     def __init__(self):
         self.button_states = Buttons(self)
+
+        # This disables the patterndisplay system module, which does the default colour spinny thing
+        eventbus.emit(PatternDisable())
+
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
