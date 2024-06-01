@@ -62,10 +62,15 @@ To use the LEDs:
 1. Import the `tildagonos` package:
 
     ```python
-    from tildagonos import tildagonos, led_colours
+    from tildagonos import tildagonos
     ```
+2. Enable the LEDs (this step is generally optional, but needed if running outside of an app (or from repl):
 
-2. Set the LEDs by assigning a color tuple to one of the 12 LEDs:
+   ```python
+   tildagonos.set_led_power(True)
+   ```
+
+3. Set the LEDs by assigning a color tuple to one of the 12 LEDs:
 
    ```python
     tildagonos.leds[2] = (255, 0, 0)
