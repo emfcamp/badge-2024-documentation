@@ -267,7 +267,7 @@ The IMU device is a highly integrated, low power inertial measurement unit (IMU)
 
 !!! note "More information about the sensor"
 
-    For more information see [Inertial Measurement Unit BMI270 | Bosch Sensortec (bosch-sensortec.com)](https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi270/))
+    For more information see [Inertial Measurement Unit BMI270 | Bosch Sensortec (bosch-sensortec.com)](https://www.bosch-sensortec.com/products/motion-sensors/imus/bmi270/).
 
 ```python
 import app
