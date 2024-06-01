@@ -23,7 +23,7 @@ import app
 import requests
 
 from app_components import Menu, Notification, clear_background
-from events.input import Buttons, BUTTON_TYPES
+from events.input import Buttons
 
 
 class FilmScheduleApp(app.App):
@@ -33,12 +33,15 @@ class FilmScheduleApp(app.App):
         # for us, it really is that good!
         self.schedule = requests.get("https://emffilms.org/schedule.json").json()
         self.button_states = Buttons(self)
-        # Setup a list to hold our film titles
+        # Setup lists to hold our film titles and timings
         main_menu_items = []
+        self.timings = []
         # Iterate over the films, adding the title to the menu
         for film in self.schedule['films']:
             text = f"{film['title']}"
+            time = f"{film['showing']['text']}"
             main_menu_items.append(text)
+            self.timings.append(time)
         # Create the menu object
         self.menu = Menu(
             self,
@@ -48,10 +51,11 @@ class FilmScheduleApp(app.App):
         )
         self.notification = None
 
-    def select_handler(self, item):
-        self.notification = Notification('You selected "' + item + '"!')
+    def select_handler(self, item, position):
+        self.notification = Notification('Showing at ' + self.timings[position] + '!')
 
     def back_handler(self):
+        self.button_states.clear()
         self.minimise()
 
     def update(self, delta):
@@ -69,7 +73,6 @@ class FilmScheduleApp(app.App):
             self.notification.draw(ctx)
 
 __app_export__ = FilmScheduleApp
-
 ```
 
 You can see the full app at [https://github.com/proffalken/tildagon-basic-api-demo](https://github.com/proffalken/tildagon-basic-api-demo),
