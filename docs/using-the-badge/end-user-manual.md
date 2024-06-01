@@ -67,7 +67,7 @@ Next, attach the glue stickers to the badge front inside the rectangle.
 
 ![Glue stickers on the front of the badge](../images/badge-photos/gluedots.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
 
-Get the battery and place it **over** the ribbon cable inside the rectangle ensuring the battery goes completely inside the rectangle.
+Peel the protectors from the glue stickers to attach the battery. Then, get the battery and place it **over** the ribbon cable inside the rectangle ensuring the battery goes completely inside the rectangle.
 
 ![Place the battery](../images/badge-photos/battery-over-ribbon.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
 
