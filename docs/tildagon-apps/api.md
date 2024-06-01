@@ -10,6 +10,10 @@ python requests to retrieve and format the data into something we can work with.
 
 Even better, requests is included in the libraries on the badge, so we can easily use it!
 
+## Examples
+
+### Film schedule example
+
 Here's an example that takes the output from the EMF Film API and lists all the films that are on show over the
 weekend:
 
@@ -79,3 +83,8 @@ You can see the full app at [https://github.com/proffalken/tildagon-basic-api-de
 and it's listed in the app store as "API Demo" so you can install it and have a play!
 
 Good luck, and happy API-ing! 
+
+### Weather example
+
+- [A simple example to fetch and display current weather at EMFCamp location](https://github.com/ntflix/Tildagon-Weather).
+=======
