@@ -31,3 +31,7 @@ You can use the following hardware with the inbuilt interfaces:
 - [Buttons](./badge-hardware.md#buttons)
 - [eGPIO](./badge-hardware.md#egpio)
 - [IMU](./badge-hardware.md#imu)
+
+## Using APIs
+
+To learn how to use APIs in your APPs, see [Use an API in an app](../api.md#examples).
