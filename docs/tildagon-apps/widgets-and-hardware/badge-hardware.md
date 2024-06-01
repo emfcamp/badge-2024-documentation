@@ -24,7 +24,6 @@ class LEDExampleApp(app.App):
         # This disables the patterndisplay system module, which does the default colour spinny thing
         eventbus.emit(PatternDisable())
 
-
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
             tildagonos.leds[2] = (255, 0, 0)
