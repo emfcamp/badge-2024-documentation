@@ -271,7 +271,7 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
             if not self.displayed:
                 self.displayed = True
                 self.dialog = YesNoDialog(
-                    message="Are you having a very\n happy day?",
+                    message="Is it a happy day?",
                     on_yes=self._yes_handler,
                     on_no=self._no_handler,
                     app=self,
@@ -313,7 +313,7 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
             await render_update()
 
             # Create a yes/no dialogue, add it to the overlays
-            dialog = YesNoDialog("Are you having a very\n happy day?", self)
+            dialog = YesNoDialog("Is it a happy day?", self)
             self.overlays = [dialog]
             # Wait for an answer from the dialogue.
             # if the answer was yes, the dialog.run() will return a true value
@@ -361,7 +361,7 @@ To use the Yes/No dialog:
 
         ```python
         self.dialog = YesNoDialog(
-            message="Are you having a very\n happy day?",
+            message="Is it a happy day?",
             on_yes=self._yes_handler,
             on_no=self._no_handler,
             app=self,
@@ -378,7 +378,7 @@ To use the Yes/No dialog:
               await render_update()
 
               # Create a yes/no dialogue, add it to the overlays
-              dialog = YesNoDialog("Are you having a very\n happy day?", self)
+              dialog = YesNoDialog("Is it a happy day?", self)
               self.overlays = [dialog]
               # Wait for an answer from the dialogue, and if it was yes, do something
               if await dialog.run(render_update):
