@@ -75,6 +75,10 @@ Peel the protectors from the glue stickers to attach the battery. Then, get the 
 
 Attach the other end of the ribbon camera to the back board. Then gently push the display into the pins on the front of the badge.
 
+!!! note "Display not working?"
+
+    If your display is broken, you can acquire a new one on [Aliexpress](https://www.aliexpress.com/item/1005005936868343.html) or [Amazon](https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/).
+
 ### 4. Flash your badge
 
 Follow the directions in [Flash your badge](#flash-your-badge) before you continue assembly.
