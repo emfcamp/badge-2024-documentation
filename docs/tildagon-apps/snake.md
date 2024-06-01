@@ -1166,6 +1166,80 @@ Go ahead and run your app in the simulator to test the game state logic:
 
 ![App showing the game over dialogue](../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
 
+## Optional: Use the IMU
+
+You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](./development.md#debug-your-app-on-your-badge).
+
+To use the imu, import the `imu` package:
+
+```python
+import imu
+```
+
+Then add the `self.acc_read` variable to the ``__init__()` method:
+
+```python
+def __init__(self):
+    # Need to call to access overlays
+    super().__init__()
+    self.button_states = Buttons(self)
+    self.snake = [(16, 16)]
+    self.food = []
+    self.direction = ""
+    self.step = 0
+    self.score = 0
+    self.game = ""
+    self.dialog = None
+    self.acc_read = None
+```
+
+And finally change the `update()` method to use the IMU readings:
+
+```python
+def update(self, delta):
+    self.acc_read = imu.acc_read()
+    if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+        self.button_states.clear()
+        self.game = ""
+        self.minimise()
+
+    # Check whether Y or X coordinate
+    if abs(self.acc_read[0]) > abs(self.acc_read[1]):
+        # Use X coordinate to go up or down
+        if self.acc_read[0] > 0:
+            self.direction = "DOWN"
+            self.game = "ON"
+        else:
+            self.direction = "UP"
+            self.game = "ON"
+    else:
+        # Use Y coordinate to go left or right
+        if self.acc_read[1] > 0:
+            self.direction = "RIGHT"
+            self.game = "ON"
+        else:
+            self.direction = "LEFT"
+            self.game = "ON"
+
+    # Only move snake every half second
+    self.step = self.step + delta
+    if self.game == "ON":
+        if self.step > 500:
+            self.step = 0
+            self._move_snake()
+    elif self.game == "OVER":
+        self.dialog = YesNoDialog(
+            message="Game Over.\nPlay Again?",
+            on_yes=self._reset,
+            on_no=self._exit,
+            app=self,
+        )
+        # Reset the game variable to ensure this dialog is only created once
+        self.game = ""
+```
+
+Follow the instructions in [debug your app on your badge](./development.md#debug-your-app-on-your-badge) to test your app.
+
 ## Next steps
 
 Congratulations! You now have a finished snake app! There are many more features you could add:
