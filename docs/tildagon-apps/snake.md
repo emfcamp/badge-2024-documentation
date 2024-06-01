@@ -1193,7 +1193,7 @@ def __init__(self):
     self.acc_read = None
 ```
 
-And finally change the `update()` method to use the IMU readings:
+And finally change the `update()` method to use the IMU readings. The IMU readings contain `(x, y, z)` coordinates describing the tilt of the badge. The code checks whether the X or Y value is most tilted and then sets the snake's direction to be the corresponding direction.
 
 ```python
 def update(self, delta):
@@ -1202,24 +1202,34 @@ def update(self, delta):
         self.button_states.clear()
         self.game = ""
         self.minimise()
+    # Press confirm to start the game
+    elif self.button_states.get(BUTTON_TYPES["CONFIRM"]):
+        self.button_states.clear()
+        self.game = "ON"
 
-    # Check whether Y or X coordinate
-    if abs(self.acc_read[0]) > abs(self.acc_read[1]):
-        # Use X coordinate to go up or down
-        if self.acc_read[0] > 0:
-            self.direction = "DOWN"
-            self.game = "ON"
+    # If the game is not over or unset
+    if self.game not in ["", "OVER"]:
+        # Check whether Y or X coordinate
+        if abs(self.acc_read[0]) > abs(self.acc_read[1]):
+            # Use X coordinate to go up or down
+            if self.acc_read[0] > 0:
+                # A positive X coordinate indicates the bottom is tilted down
+                self.direction = "DOWN"
+                self.game = "ON"
+            else:
+                # A negative X coordinate indicates the top is tilted down
+                self.direction = "UP"
+                self.game = "ON"
         else:
-            self.direction = "UP"
-            self.game = "ON"
-    else:
-        # Use Y coordinate to go left or right
-        if self.acc_read[1] > 0:
-            self.direction = "RIGHT"
-            self.game = "ON"
-        else:
-            self.direction = "LEFT"
-            self.game = "ON"
+            # Use Y coordinate to go left or right
+            if self.acc_read[1] > 0:
+                # A positive Y coordinate indicates the badge is tilted to the right
+                self.direction = "RIGHT"
+                self.game = "ON"
+            else:
+                # A positive Y coordinate indicates the badge is tilted to the left
+                self.direction = "LEFT"
+                self.game = "ON"
 
     # Only move snake every half second
     self.step = self.step + delta
@@ -1236,6 +1246,7 @@ def update(self, delta):
         )
         # Reset the game variable to ensure this dialog is only created once
         self.game = ""
+        self.direction = ""
 ```
 
 Follow the instructions in [debug your app on your badge](./development.md#debug-your-app-on-your-badge) to test your app.
