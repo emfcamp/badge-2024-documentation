@@ -257,3 +257,31 @@ To use the LEDs:
     ```
 
 2. TODO
+
+
+## `IMU` overview
+
+The IMU device is a highly integrated, low power inertial measurement unit (IMU) that combines precise acceleration and angular rate (gyroscopic) measurement. The triple axis device has been configured to measure 2g and 2 degree per second ranges.
+
+```python
+import imu
+
+#read the data 1000 times    
+count = 0
+while True:
+    count += 1
+    if count >= 1000:
+        break
+    accel = imu.acc_read()
+    print( f"accel x,y,z: %f, %f, %f", accel[0], accel[1], accel[2] )
+
+```
+
+## Methods
+
+The api currently only allows access to the raw data.
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| acc_read() | getter for the accelerometer data | None | x,y,z tuple of floats (m/s^2) | 
+| gyro_read() | getter for the gyro data| None | x,y,z tuple of floats (d/s) |
