@@ -9,7 +9,7 @@ weight: 7
 3. Use the direction sensor (accelerometer which is part of the IMU).
 
 ## Building your badge
-If you haven't already built your badge, you need to [follow the instructions here](/using-the-badge/end-user-manual).
+If you haven't already built your badge, you need to [follow the instructions here](../using-the-badge/end-user-manual.md).
 
 ## What software do I need?
 For this workshop, you will need to download [Thonny](https://thonny.org/). It is a free Python editor.
@@ -33,7 +33,7 @@ Using Thonny with the file manager open (if it isn't, select `View -> Files` on 
 
 ## Flashing some LEDs
 The Tildagon badge includes a number of RGB (red, green, blue, aka multicoloured) LEDs onboard.   
-![](/images/badge-photos/badge-in-the-dark.jpg)
+![](../images/badge-photos/badge-in-the-dark.jpg)
 
 Each of these LEDs has a number written beside it.
 
@@ -65,7 +65,7 @@ The `[255, 0, 0]` section represents Red, Green, Blue mixing. Each can go up to 
     ```
     ImportError: no module named 'simple_tildagon'
     ```
-    This means your badge needs updated before you can do this workshop. See [here on how to do this](/using-the-badge/end-user-manual), or use the built in OTA updater.   
+    This means your badge needs updated before you can do this workshop. See [here on how to do this](../using-the-badge/end-user-manual.md), or use the built in OTA updater.   
 
 ### Exercise 1
 Try to set the following LEDs to colours
@@ -159,4 +159,4 @@ You might want to make sure you use a very short `time.sleep(X)` value for this 
 
 ## Building a full app
 With the basics out of the way, using the `boot.py` file, the next step is to build a full application (that will work alongside all the other apps). You're also able to use the screen to display text/images, along with using the event system.     
-For more details on this, check out the [Write a  Tildagon OS App guide](tildagon-apps/development/)
+For more details on this, check out the [Write a  Tildagon OS App guide](../tildagon-apps/development.md)
