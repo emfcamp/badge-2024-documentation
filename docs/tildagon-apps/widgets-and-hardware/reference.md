@@ -31,6 +31,7 @@ You can use the following hardware with the inbuilt interfaces:
 - [Buttons](./badge-hardware.md#buttons)
 - [eGPIO](./badge-hardware.md#egpio)
 - [IMU](./badge-hardware.md#imu)
+- [Power](./badge-hardware.md#power)
 
 ## Using APIs
 
