@@ -109,7 +109,7 @@ Your app will become available in the Tildagon [app store](https://apps.badge.em
 If your app doesn't show up within 15 minutes, check the [Errors page](https://apps.badge.emfcamp.org/errors/) page. If there's no error there, that means either:
 
 - the app store can't see your app, for example because your repository is private or that you may need to [add the `tildagon-app` topic to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository), or
-- your app is listed and available to the badge - and may have an error there. In this case, check [debug your app on your badge](./development.md#debug-your-app-on-your-badge).
+- your app is listed and available to the badge - and may have an error there. In this case, check [debug your app on your badge](./run-on-badge.md).
 
 ## Support
 

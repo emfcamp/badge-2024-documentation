@@ -1168,7 +1168,7 @@ Go ahead and run your app in the simulator to test the game state logic:
 
 ## Optional: Use the IMU
 
-You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](./development.md#debug-your-app-on-your-badge).
+You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](./run-on-badge.md).
 
 To use the imu, import the `imu` package:
 
@@ -1249,7 +1249,7 @@ def update(self, delta):
         self.direction = ""
 ```
 
-Follow the instructions in [debug your app on your badge](./development.md#debug-your-app-on-your-badge) to test your app.
+Follow the instructions in [debug your app on your badge](./run-on-badge.md) to test your app.
 
 ## Next steps
 
