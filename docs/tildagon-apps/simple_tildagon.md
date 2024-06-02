@@ -37,6 +37,19 @@ The Tildagon badge includes a number of RGB (red, green, blue, aka multicoloured
 
 Each of these LEDs has a number written beside it.
 
+### Disable the pattern generator
+
+Before using the below LED code, you need to disable the built in pattern generator (once), as it will take over once your program finishes if you don't.    
+This code below only needs to be run once.   
+```python
+import settings
+settings.set("pattern_generator_enable", False)
+settings.save()
+```
+You can re-enable it from the main badge settings app.
+
+### Using the LEDs
+
 To turn one of these on, use the following code in the `boot.py` file.   
 ```python
 import simple_tildagon as st
@@ -95,7 +108,7 @@ If they shake, it should reset them all back to off.
 
 
 ## Buttons
-There are 6 buttons around the outside of the badge labeled A-F (plus 3 additional badges on the bottom layer circuit board used for managing the badge). You can check if the 6 buttons are being pressed with the following program.   
+There are 6 buttons around the outside of the badge labeled A-F (plus 3 additional buttons on the bottom layer circuit board used for managing the badge). You can check if the 6 buttons are being pressed with the following program.   
 
 To use it
 ```python
