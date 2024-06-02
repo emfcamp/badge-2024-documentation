@@ -309,44 +309,97 @@ The api currently only allows access to the raw data.
 | acc_read() | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
 | gyro_read() | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 
-
-
 ## Power
 
+The `power` package allows you to perform multiple battery related functions, like powering off the badge or getting the battery level.
+
+### Example
+
+This example shows you how to power off the badge when the `UP` button is pressed. Note that your badge will only power off if it is not connected to power through USB. It technically only disconnects the battery.
+
 ```python
-
 import power
+import app
 
-power.DisconnectBattery()
+from events.input import Buttons, BUTTON_TYPES
 
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.minimise()
+        if self.button_states.get(BUTTON_TYPES["UP"]):
+            power.Off()
+
+    def draw(self, ctx):
+        ctx.save()
+        ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
+        ctx.rgb(1,0,0).move_to(-80,0).text("Press up to\npower off")
+        ctx.restore()
+
+__app_export__ = ExampleApp
 ```
+
+### Usage
+
+To use the power package:
+
+1. Import the `power` package:
+
+    ```python
+    import power
+    ```
+
+2. Call one of the methods, for example power.Off().
+
+    ```python
+    power.Off()
+    ```
+
 ### Methods
 
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| Off()| Turn off the battery. When the usb is disconnected the badge will turn off.| None | None |
-| BatteryChargeState()| Status of the Battery cahring cycle | None | Not Charging, Pre-Charging, Fast Charging, Terminated |
-| BatteryLevel() | Returns the battery charge level |  None  | float (%) |
-| Enable5V(enable)| enable the usb out 5V supply | Enable - Bool | None |
-| Fault()| Get the PMIC fault status | None | Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
-| SupplyCapabilities()| read the capabilities of the power supply | None | List of tuples containing supply type, voltage (V) and current (mA)|
-| Icharge()| Battery Charge current | None | float (mA) |
-| Vbat() | Battery Voltage | None | float (V) |
-| Vin() | Input Voltage (V) | None | float (V) |
-| Vsys() | System Voltage | None | float (V) |
+| `Off()` | Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
+| `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
+| `BatteryLevel()` | Return the battery charge level. |  None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
+| `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
+| `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
+| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA). |
+| `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in mA. |
+| `Vbat()` | Get the battery voltage. | None. | `voltage` (`float`): The battery voltage in V. |
+| `Vin()` | Get the input voltage. | None. | `voltage` (`float`): The input voltage in V. |
+| `Vsys()` (`float`) | Get the system voltage. | None. | `voltage` (`float`): Get the system voltage in V. |
 
 ### Events
 
+If you want to use the [`EventBus`](./eventbus.md), you can use it with the following events:
 
-RequestChargeEvent
-RequestBatFaultEvent
-RequestBoostFaultEvent
-RequestChargeFaultEvent
-RequestTimeoutFaultEvent
-RequestHostAttachEvent
-RequestHostDetachEvent
-RequestDeviceAttachEvent
-RequestDeviceDetachEvent
-RequestLanyardAttachEvent
-RequestLanyardDetachEvent
- 
+- `RequestChargeEvent`
+- `RequestBatFaultEvent`
+- `RequestBoostFaultEvent`
+- `RequestChargeFaultEvent`
+- `RequestTimeoutFaultEvent`
+- `RequestHostAttachEvent`
+- `RequestHostDetachEvent`
+- `RequestDeviceAttachEvent`
+- `RequestDeviceDetachEvent`
+- `RequestLanyardAttachEvent`
+- `RequestLanyardDetachEvent`
+
+To use events with the `EventBus`, import the following package:
+
+```python
+from system.power import events
+```
+
+Then `emit()` the event as following:
+
+```python
+eventbus.emit(
+    events.RequestChargeEvent(events.PowerEvent("Charge Cycle change"))
+)
+```
