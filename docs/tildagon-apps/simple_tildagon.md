@@ -1,5 +1,5 @@
 ---
-title: Kids badge workshop
+title: Beginners badge workshop
 weight: 7
 ---
 
