@@ -46,6 +46,14 @@ st.led.set(3, [255, 0, 0])
 The program above will **set LED 3 to red**.    
 The `[255, 0, 0]` section represents Red, Green, Blue mixing. Each can go up to 255 (full brightness for that colour).   
 
+!!! warning
+
+    Have you got the following error?
+    ```
+    ImportError: no module named 'simple_tildagon'
+    ```
+    This means your badge needs updated before you can do this workshop. See [here on how to do this](/using-the-badge/end-user-manual), or use the built in OTA updater.   
+
 ### Exercise 1
 Try to set the following LEDs to colours
 
