@@ -305,7 +305,7 @@ class ExampleApp(app.App):
 __app_export__ = ExampleApp
 ```
 
-## Methods
+### Methods
 
 The api currently only allows access to the raw data.
 
@@ -313,3 +313,45 @@ The api currently only allows access to the raw data.
 | ------ | ----------- | --------- | ------- |
 | acc_read() | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
 | gyro_read() | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
+
+
+
+## Power
+
+```python
+
+import power
+
+power.DisconnectBattery()
+
+```
+### Methods
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| Off()| Turn off the battery. When the usb is disconnected the badge will turn off.| None | None |
+| BatteryChargeState()| Status of the Battery cahring cycle | None | Not Charging, Pre-Charging, Fast Charging, Terminated |
+| BatteryLevel() | Returns the battery charge level |  None  | float (%) |
+| Enable5V(enable)| enable the usb out 5V supply | Enable - Bool | None |
+| Fault()| Get the PMIC fault status | None | Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
+| SupplyCapabilities()| read the capabilities of the power supply | None | List of tuples containing supply type, voltage (V) and current (mA)|
+| Icharge()| Battery Charge current | None | float (mA) |
+| Vbat() | Battery Voltage | None | float (V) |
+| Vin() | Input Voltage (V) | None | float (V) |
+| Vsys() | System Voltage | None | float (V) |
+
+### Events
+
+
+RequestChargeEvent
+RequestBatFaultEvent
+RequestBoostFaultEvent
+RequestChargeFaultEvent
+RequestTimeoutFaultEvent
+RequestHostAttachEvent
+RequestHostDetachEvent
+RequestDeviceAttachEvent
+RequestDeviceDetachEvent
+RequestLanyardAttachEvent
+RequestLanyardDetachEvent
+ 
