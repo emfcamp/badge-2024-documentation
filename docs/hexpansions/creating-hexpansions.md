@@ -120,10 +120,14 @@ There are four high-speed pins (HS1-HS4) that are directly attached to the micro
 
 ![](./df9d2843-4b89-4341-98a9-61f1c9b1f780.png)
 
-# Mechanical clearance
+## Mechanical clearance
 
 Because there is a battery between the top and bottom board of the tildagon, there are restrictions to how tall components on hexpansions can be. Here are the height restrictions and their relevant areas:
 
 ![](./52437fff-3c14-4c18-aa22-a656f64f00f0.png)
 
 The two upper hexpansion slots are right above the two USB connectors. Because of the cable overmold there may not be anything sticking out below the board in those slots. Hexpansions that go into other slots have 1mm of clearance below the PCB surface up to the tildagon board edge, and unlimited clearance beyond the edge. If you have through-hole components on your hexpansion PCB, they cannot be used in the slots over the USB connectors as the solder tails below the board will interfere with the USB cable overmolding.
+
+## Troubleshooting
+
+For common issues, see [](../using-the-badge/common-problems.md.)
