@@ -92,7 +92,7 @@ This is an example that shows you how to fetch and display current weather at EM
 
 !!! note "API key required"
 
-    You need to add a tile called `api_key.txt` with an API key in it to your app's folder. You can optain a free API key from [OpenWeather](https://openweathermap.org/api).
+    You need to add a tile called `api_key.txt` with an API key in it to your app's folder. You can obtain a free API key from [OpenWeather](https://openweathermap.org/api).
 
 ```python
 import app
