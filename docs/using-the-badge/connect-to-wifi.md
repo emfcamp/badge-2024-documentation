@@ -16,7 +16,7 @@ This is the easiest option, but a real pain to do because you have to type out e
 2. Scroll through the key to "WIFI SSID" and press enter.
 3. Use the up and down keys to select each letter, pressing B to select.
 4. Press B to save.
-5. Repeat for the "WIFI passsword" option.
+5. Repeat for the "WIFI password" option.
 6. Push the Reboop button and try connecting.
 
 # Option 2 - Use Tildagon Flasher
