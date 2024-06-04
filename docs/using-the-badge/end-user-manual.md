@@ -56,7 +56,7 @@ Flip the badge front, so you can see the names of the badge team:
 
 ![Battery side of the front of the badge](../images/badge-photos/front-battery-side.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
 
-Attach the camera ribbon to connector. Lift the black bit and slide the ribbon cable into the connector. The contacts should be placed towards the board. The blue side of the ribbon should remain visible.
+Attach the display ribbon to connector. Lift the black bit and slide the ribbon cable into the connector. The contacts should be placed towards the board. The blue side of the ribbon should remain visible.
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
@@ -73,7 +73,7 @@ Peel the protectors from the glue stickers to attach the battery. Then, get the 
 
 ### 3. Attach the display
 
-Attach the other end of the ribbon camera to the back board. Then gently push the display into the pins on the front of the badge.
+Attach the other end of the ribbon display cable to the back board. Then gently push the display into the pins on the front of the badge.
 
 !!! note "Display not working?"
 
