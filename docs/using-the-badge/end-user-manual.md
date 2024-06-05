@@ -165,7 +165,7 @@ To power off the badge, select the menu item **Power off**.
 ### Back of the board
 
 - **reboop**: Press and hold the **reboop** button to perform a soft (re)boot.
-- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader.
+- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader (the badge needs to be powered off before connecting to power)
 - **bat**: Press the **bat** button to power on your badge.
 
 ### Troubleshooting
