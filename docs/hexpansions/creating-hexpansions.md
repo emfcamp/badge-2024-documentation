@@ -131,3 +131,8 @@ The two upper hexpansion slots are right above the two USB connectors. Because o
 ## Troubleshooting
 
 For common issues, see [](../using-the-badge/common-problems.md.)
+
+## Congratulations
+
+Well done on creating your Hexpansion! Feel free to share your creation in the
+[Hexpansion Showcase](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md#hexpansions) in these docs, or in the [Hexpansions Registry](https://github.com/hughrawlinson/hexpansion-registry)
