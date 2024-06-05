@@ -3,8 +3,6 @@ title: Tildagon End User Manual
 weight: 1
 ---
 
-!!! warning "Apps can be published on the [app store](https://apps.badge.emfcamp.org/) but currently do not run on the badge yet. The badge team are currently working on this as fast as they can, please be patient!"
-
 ![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout
 pins peaking out from the edges, and a screen showing
 @emfcamp](../images/badge-photos/badge-with-screen.jpg "Tildagon with attached
@@ -15,7 +13,6 @@ The Tildagon is a badge that you can wear around your neck. It has a round scree
 The badge will automatically connect to camp wifi, and you can use the [app store](https://apps.badge.emfcamp.org/) to install apps.
 
 The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by other attendees.
-
 
 ## Assembly
 
@@ -114,7 +111,9 @@ That's it!
 
 ## Flash your badge
 
-** Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed! **
+!!! info "Optional"
+
+    Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed!
 
 To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
 
@@ -131,7 +130,7 @@ To flash your badge, it is best if the battery is not yet connected. It may not 
 
 When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](#power-off) and disconnect it from your computer.
 
-!!! info "Don't want to use chromium?"
+!!! info "Don't want to use Chromium?"
 
     You can also manually flash the badge following the instructions in the [`badge-2024-software` Readme](https://github.com/emfcamp/badge-2024-software).
 
@@ -159,7 +158,7 @@ To power off the badge, select the menu item **Power off**.
 - **B** (`RIGHT`): When entering text in a dialogue, this button allows you to add another letter. In apps the functionality may vary.
 - **C** (`CONFIRM`): This generally confirm the selection. In a dialogue, this button means yes. In apps the functionality may vary.
 - **D** (`DOWN`): In the menu, this button navigates down. In apps the functionality may vary.
-- **E** (`LEFT`): When entering text in a dialogue, this button allows you to move leftadd another letter. In apps the functionality may vary.
+- **E** (`LEFT`): When entering text in a dialogue, this button allows you to move left. In apps the functionality may vary.
 - **F** (`CANCEL`): This generally cancels the selection. In a dialogue, this button means no. In apps the functionality may vary.
 
 ### Back of the board
