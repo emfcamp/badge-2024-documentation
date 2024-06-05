@@ -408,3 +408,30 @@ eventbus.emit(
     events.RequestChargeEvent(events.PowerEvent("Charge Cycle change"))
 )
 ```
+
+## I2C
+
+The badge supports I2C on busses per hexpansion slot. Hexpansion slots are numbered
+1-6, with 1 being the top right slot and the numbers increasing clockwise. To
+create an I2C bus for a given slot, use:
+
+```python
+from machine import I2C
+
+bus = I2C(slot)
+```
+
+You can then use the standard MicroPython I2C API to communicate with devices on
+the bus.
+
+If you're not sure which hexpansion slot your device is connected to, you will
+need to scan each slot in turn to find it.
+
+!!! danger
+    You've found an issue! We need example code to demonstrate how to scan each
+    port. Please feel free to open a PR with your submission.
+
+### Hexpansion apps
+
+If your app is loaded from EEPROM on an hexpansion, you can use the slot in the
+hexpansion config object that is passed to your app to select the correct slot.
