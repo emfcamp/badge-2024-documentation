@@ -74,7 +74,7 @@ Attach the other end of the ribbon display cable to the back board. Then gently 
 
 !!! note "Display not working?"
 
-    If your display is broken, you can acquire a new one on [Aliexpress](https://www.aliexpress.com/item/1005005936868343.html) or [Amazon](https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/).
+    If your display is broken, you can acquire a new one on [Aliexpress with connector soldered on](https://www.aliexpress.com/item/1005004392903184.html) or [Aliexpress with loose connector](https://www.aliexpress.com/item/1005005936868343.html) or [Amazon](https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/).
 
 ### 4. Flash your badge
 
