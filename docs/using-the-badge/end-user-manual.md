@@ -3,8 +3,6 @@ title: Tildagon End User Manual
 weight: 1
 ---
 
-!!! warning "Apps can be published on the [app store](https://apps.badge.emfcamp.org/) but currently do not run on the badge yet. The badge team are currently working on this as fast as they can, please be patient!"
-
 ![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout
 pins peaking out from the edges, and a screen showing
 @emfcamp](../images/badge-photos/badge-with-screen.jpg "Tildagon with attached
@@ -15,7 +13,6 @@ The Tildagon is a badge that you can wear around your neck. It has a round scree
 The badge will automatically connect to camp wifi, and you can use the [app store](https://apps.badge.emfcamp.org/) to install apps.
 
 The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by other attendees.
-
 
 ## Assembly
 
@@ -56,7 +53,7 @@ Flip the badge front, so you can see the names of the badge team:
 
 ![Battery side of the front of the badge](../images/badge-photos/front-battery-side.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
 
-Attach the camera ribbon to connector. Lift the black bit and slide the ribbon cable into the connector. The contacts should be placed towards the board. The blue side of the ribbon should remain visible.
+Attach the display ribbon to connector. Lift the black bit and slide the ribbon cable into the connector. The contacts should be placed towards the board. The blue side of the ribbon should remain visible.
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
@@ -73,7 +70,7 @@ Peel the protectors from the glue stickers to attach the battery. Then, get the 
 
 ### 3. Attach the display
 
-Attach the other end of the ribbon camera to the back board. Then gently push the display into the pins on the front of the badge.
+Attach the other end of the ribbon display cable to the back board. Then gently push the display into the pins on the front of the badge.
 
 !!! note "Display not working?"
 
@@ -114,7 +111,9 @@ That's it!
 
 ## Flash your badge
 
-** Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed! **
+!!! info "Optional"
+
+    Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed!
 
 To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
 
@@ -131,7 +130,7 @@ To flash your badge, it is best if the battery is not yet connected. It may not 
 
 When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](#power-off) and disconnect it from your computer.
 
-!!! info "Don't want to use chromium?"
+!!! info "Don't want to use Chromium?"
 
     You can also manually flash the badge following the instructions in the [`badge-2024-software` Readme](https://github.com/emfcamp/badge-2024-software).
 
@@ -159,13 +158,13 @@ To power off the badge, select the menu item **Power off**.
 - **B** (`RIGHT`): When entering text in a dialogue, this button allows you to add another letter. In apps the functionality may vary.
 - **C** (`CONFIRM`): This generally confirm the selection. In a dialogue, this button means yes. In apps the functionality may vary.
 - **D** (`DOWN`): In the menu, this button navigates down. In apps the functionality may vary.
-- **E** (`LEFT`): When entering text in a dialogue, this button allows you to move leftadd another letter. In apps the functionality may vary.
+- **E** (`LEFT`): When entering text in a dialogue, this button allows you to move left. In apps the functionality may vary.
 - **F** (`CANCEL`): This generally cancels the selection. In a dialogue, this button means no. In apps the functionality may vary.
 
 ### Back of the board
 
 - **reboop**: Press and hold the **reboop** button to perform a soft (re)boot.
-- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader.
+- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader (the badge needs to be powered off before connecting to power)
 - **bat**: Press the **bat** button to power on your badge.
 
 ### Troubleshooting

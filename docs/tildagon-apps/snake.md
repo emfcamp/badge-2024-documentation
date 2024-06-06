@@ -518,7 +518,7 @@ def __init__(self):
     self.step = 0
 ```
 
-To draw the food on the screen, you must also add it to the `draw()` method. Add teh following lines after you draw the game board and before you draw the snake. `ctx` draws things in the order provided, so you want to make sure that the food is on top of the board and the snake is on top of the food.
+To draw the food on the screen, you must also add it to the `draw()` method. Add the following lines after you draw the game board and before you draw the snake. `ctx` draws things in the order provided, so you want to make sure that the food is on top of the board and the snake is on top of the food.
 
 ```python
 # draw food

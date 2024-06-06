@@ -105,7 +105,7 @@ while True:
 
 There is also a check for shaking using `st.imu.is_shaken()`.
 
-### Execise 2
+### Exercise 2
 
 Create a program that has individual LEDs switched on using the `is_tilted...`  methods. So if you tilt the badge left, LED 9 and 10 should come on.
 If they shake, it should reset them all back to off.
@@ -138,7 +138,7 @@ while True:
 
     Be careful, you can only have 1 `while True` loop running. Add any code you want to use within it, as the program won't progress beyond the `while True` unless you use the `break` command to exit the loop.
 
-### Execise 3
+### Exercise 3
 
 Extend your previous program to switch all LEDs to purple once you press B button.
 
