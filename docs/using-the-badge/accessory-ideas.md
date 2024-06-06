@@ -9,6 +9,7 @@ The badge uses a GC9A01 1.28" round LCD module, commonly available from ebay, al
 
 Some links to the correct screen:
 
+- https://www.aliexpress.com/item/1005004392903184.html
 - https://www.aliexpress.com/item/1005005936868343.html
 - https://www.ebay.co.uk/itm/135013745191
 - https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/
