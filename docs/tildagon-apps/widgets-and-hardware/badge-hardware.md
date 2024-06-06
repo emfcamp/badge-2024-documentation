@@ -75,6 +75,12 @@ To use the LEDs:
    ```python
    tildagonos.leds[2] = (255, 0, 0)
    ```
+   
+4. Write the updated values to the LEDs
+
+   ```python
+   tildagonos.leds.write()
+   ```
 
 ## Buttons
 
