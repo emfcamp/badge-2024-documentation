@@ -73,7 +73,7 @@ To use the LEDs:
 3. Set the LEDs by assigning a color tuple to one of the 12 LEDs:
 
    ```python
-    tildagonos.leds[2] = (255, 0, 0)
+   tildagonos.leds[2] = (255, 0, 0)
    ```
 
 ## Buttons
