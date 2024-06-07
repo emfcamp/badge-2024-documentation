@@ -35,7 +35,11 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 import settings
 settings.set("wifi_ssid", "changeme")
 settings.set("wifi_password", "changeme")
-# If connecting to non-wpa2enterprise networks
+```
+
+If you are connecting to a WPA2-Enterprise network, you also need to run the following command, swapping out `wifi_wpa2ent_username` for your WPA2-Enterprise username:
+
+```
 settings.set("wifi_wpa2ent_username", None)
 settings.save()
 ```
