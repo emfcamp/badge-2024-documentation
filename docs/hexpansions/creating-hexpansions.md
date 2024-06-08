@@ -16,9 +16,9 @@
 
 There are three categories of hexpansion:
 
-- purely mechanical ones, which just have to be the right shape to fit;
-- PCB ones, which use power, and where the badge can detect insertion;
-- electronically marked ones, that the badge can identify and automatically do things with.
+- purely mechanical ones which just have to be the right shape to fit;
+- PCB ones which use power and where the badge can detect insertion;
+- electronically marked ones that the badge can identify and automatically do things with.
 
 On the rest of this page, you will find the spec for the requirements these hexpansions must meet.
 
@@ -56,7 +56,7 @@ The standard hexpansion shape is a hexagon with 32mm between flats. This means t
 
 The [template project](https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion) has guidelines to make this easier.
 
-The "ears" around the connector tab are optional, but help with mechanical stability.
+The "ears" around the connector tab are optional but help with mechanical stability.
 
 If your hexpansion is a PCB, it must not have any depanelization tabs in the connector area.
 
