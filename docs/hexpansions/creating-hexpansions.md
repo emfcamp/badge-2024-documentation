@@ -130,7 +130,7 @@ The two upper hexpansion slots are right above the two USB connectors. Because o
 
 ## Troubleshooting
 
-For common issues, see [](../using-the-badge/common-problems.md.)
+For common issues, see [](../using-the-badge/common-problems.md).
 
 ## Congratulations
 
