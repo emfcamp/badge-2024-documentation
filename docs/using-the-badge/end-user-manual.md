@@ -12,7 +12,18 @@ The Tildagon is a badge that you can wear around your neck. It has a round scree
 
 The badge will automatically connect to camp wifi, and you can use the [app store](https://apps.badge.emfcamp.org/) to install apps.
 
-The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by other attendees.
+The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by [yourself](../hexpansions/creating-hexpansions.md) or other attendees.
+
+<div class="grid cards" markdown>
+
+- [I want to know how to assemble the badge](#assembly)
+- [I want to connect to another Wi-Fi network](./connect-to-wifi.md)
+- [(Re)flash your badge](#flash-your-badge)
+- [Operate your badge](#operate-your-badge)
+- [Accessories](./accessory-ideas.md)
+- [Common problems](./common-problems.md)
+
+</div>
 
 ## Assembly
 
@@ -113,9 +124,9 @@ That's it!
 
 !!! info "Optional"
 
-    Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed!
+    If you received your badge after 1pm Friday 31st May, you do not need to complete this step as badges were pre-flashed!
 
-To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
+To flash your badge, your badge must be completely powered off. If your badge is not yet flashed, it is best if the battery is not yet connected because. It may not work with the battery connected.
 
 1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
 
@@ -124,6 +135,9 @@ To flash your badge, it is best if the battery is not yet connected. It may not 
 1. Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
 1. Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.
 1. Select the **Install Tildagon** option.
+
+    !!! warning "This will erase all data on the badge"
+
 1. When prompted to confirm the installation, click *Install*. Installation may take a few minutes.
 
 ![Provisioning flow](../images/badge-photos/provision.gif)

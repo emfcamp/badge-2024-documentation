@@ -5,13 +5,13 @@ weight: 4
 
 This tutorial, will guide you through building your own snake app, step by step.
 
-![App showing the finished snake game](../images/snake/snake-game.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the finished snake game](../../images/snake/snake-game.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 If you want to see the finished code, see [Finished Code](#finished-code).
 
 ## Environment setup
 
-To start developing your own app, you first need to set up your environment. Follow the installation steps in [Simulate your app](./simulate.md).
+To start developing your own app, you first need to set up your environment. Follow the installation steps in [Simulate your app](../simulate.md).
 
 ## Create the app and test is
 
@@ -47,7 +47,7 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
     ??? question "Don't know what this code does?"
 
-        If you want to read up on what this code does read [Write A Tildagon OS App](./development.md#hello-world-app).
+        If you want to read up on what this code does read [Write A Tildagon OS App](../development.md#hello-world-app).
 
 
 3. In the same folder, create a file called `__init__.py` and use it to import your app's class `SnakeApp`:
@@ -76,7 +76,7 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
     pipenv run python run.py
     ```
 
-![App showing text This will be my snake game soon](../images/snake/soon.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing text This will be my snake game soon](../../images/snake/soon.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Draw the game background
 
@@ -92,7 +92,7 @@ The `ctx` library allows you to draw many things onto the canvas of your app. On
 
 !!! info "Learn more"
 
-    You can learn more about the `ctx` library by reading the [`ctx` docs which provide many example apps](./widgets-and-hardware/ctx.md).
+    You can learn more about the `ctx` library by reading the [`ctx` docs which provide many example apps](../reference/ctx.md).
 
 Use the `clear_background()` and the `rectangle()` method in the `draw()` method of your app:
 
@@ -109,7 +109,7 @@ def draw(self, ctx):
 
 If you try this code, you'll notice the board is not centered. That's because the coordinates `(0, 0)` are the center of the screen, rather than the top left corner. The rectangle is drawn 160 to the bottom and 160 to the right from there currently.
 
-![An app drawing the axes](../images/ctx-examples/coordinates.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![An app drawing the axes](../../images/ctx-examples/coordinates.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 While we could draw the rectangle from `(-80, 80)`, it is easier for our game if we can use the coordinates `(0, 0)` to mean the top left of the board. The `ctx` library provides a method called `translate()` which allows us to do just that:
 
@@ -158,7 +158,7 @@ class SnakeApp(app.App):
 
 Go ahead and run your app in the simulator to ensure you can see the board:
 
-![App showing the snake game board](../images/snake/board.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the snake game board](../../images/snake/board.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 !!! tip "If you want to, please feel free to customize your snake app with different colours, sized, functionality..."
 
@@ -233,7 +233,7 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator to ensure you can see the snake:
 
-![App showing the snake game board](../images/snake/snake-start.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the snake game board](../../images/snake/snake-start.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Move the snake
 
@@ -364,7 +364,7 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator, then press the up, down, right, or left buttons to ensure you can move the snake. Be aware that your snake can currently move off the visible screen, so pay attention when you open the app!
 
-![App showing the snake moving slowlier](../images/snake/run-off.gif){: style="margin:auto;display:block;" }
+![App showing the snake moving slowlier](../../images/snake/run-off.gif){: style="margin:auto;display:block;" }
 
 ### Adjust the speed of the game
 
@@ -458,7 +458,7 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator to ensure your snake now moves more slowly:
 
-![App showing the snake moving slowlier](../images/snake/slower.gif){: style="margin:auto;display:block;" }
+![App showing the snake moving slowlier](../../images/snake/slower.gif){: style="margin:auto;display:block;" }
 
 ## Add food
 
@@ -614,7 +614,7 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator to see your food appear:
 
-![App showing food appearing](../images/snake/food.gif){: style="margin:auto;display:block;" }
+![App showing food appearing](../../images/snake/food.gif){: style="margin:auto;display:block;" }
 
 ### Eat food and grow
 
@@ -738,7 +738,7 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator to ensure your snake can eat the food:
 
-![App showing the snake moving slowlier](../images/snake/eat.gif){: style="margin:auto;display:block;" }
+![App showing the snake moving slowlier](../../images/snake/eat.gif){: style="margin:auto;display:block;" }
 
 ## Keep score
 
@@ -882,7 +882,7 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator to check the score:
 
-![App showing the score](../images/snake/score.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the score](../../images/snake/score.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Constraints and game state
 
@@ -1164,11 +1164,11 @@ __app_export__ = SnakeApp
 
 Go ahead and run your app in the simulator to test the game state logic:
 
-![App showing the game over dialogue](../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the game over dialogue](../../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Optional: Use the IMU
 
-You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](./run-on-badge.md).
+You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](../run-on-badge.md).
 
 To use the imu, import the `imu` package:
 
@@ -1249,7 +1249,7 @@ def update(self, delta):
         self.direction = ""
 ```
 
-Follow the instructions in [debug your app on your badge](./run-on-badge.md) to test your app.
+Follow the instructions in [debug your app on your badge](../run-on-badge.md) to test your app.
 
 ## Next steps
 
@@ -1259,4 +1259,4 @@ Congratulations! You now have a finished snake app! There are many more features
 - Obstacles and obstacle collision checks.
 - You could add a hunger mechanic to ensure a snake must eat within a certain time frame.
 
-If you change the app, please [publish it to the App store](./publish.md).
+If you change the app, please [publish it to the App store](../publish.md).
