@@ -9,14 +9,13 @@ There are several ways to connect your Tildagon to Wi-Fi depending on what appro
 
 !!! warning "Early versions of the firmware did not include support for updating the Wi-Fi details through the GUI, you'll need to update the firmware before completing this option."
 
-
 This is the easiest option, but a real pain to do because you have to type out each letter using the up (A), down (D) and select (B) keys.
 
 1. On the home screen scroll down to settings using the D key, and enter using C key.
 2. Scroll through the key to "WIFI SSID" and press enter.
 3. Use the up and down keys to select each letter, pressing B to select.
 4. Press C to save.
-5. Repeat for the "WIFI passsword" option.
+5. Repeat for the "WIFI password" option.
 6. If not using WPA2 Enterprise, empty the Enterprise username by editing then submitting without picking any characters.
 7. Exit the Settings app using F.
 8. Push the Reboop button and try connecting.
@@ -37,7 +36,8 @@ settings.set("wifi_ssid", "changeme")
 settings.set("wifi_password", "changeme")
 ```
 
-If you are connecting to a WPA2-Enterprise network, you also need to run the following command, swapping out `wifi_wpa2ent_username` for your WPA2-Enterprise username:
+If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value.
+If you are connecting to a WPA2-Enterprise network, replace `None` with the username for your WPA2-Enterprise username:
 
 ```
 settings.set("wifi_wpa2ent_username", None)
