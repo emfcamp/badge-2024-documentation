@@ -447,7 +447,7 @@ __app_export__ = ExampleApp
 
 ### Clipping
 
-This example draws a white circle and clips a square out of it.
+This example draws a blue circle and clips a square out of it and colors it red, resulting in a quarter of the circle being red.
 
 ```python
 import app
@@ -468,10 +468,16 @@ class ExampleApp(app.App):
     def draw(self, ctx):
         clear_background(ctx)
         ctx.save()
-        # White circle with a square cutout in the middle
+        # Blue circle
         ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
-        ctx.rectangle(-25, -25, 50, 50).clip
-        ctx.rgb(255, 255, 255).fill()
+        ctx.rgb(0, 0, 255).fill()
+
+        # Define a clipping area for the circle
+        ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
+        ctx.clip()
+        # Add the shape into the clipping area
+        ctx.rectangle(0, 0, 80, 80)
+        ctx.rgb(255, 0, 0).fill()
         ctx.restore()
 
 __app_export__ = ExampleApp
