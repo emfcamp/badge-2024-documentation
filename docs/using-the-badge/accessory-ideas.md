@@ -3,17 +3,6 @@ title: Accessories
 weight: 5
 ---
 
-## Replacement Parts
-
-The badge uses a GC9A01 1.28" round LCD module, commonly available from ebay, aliexpress etc.
-
-Some links to the correct screen:
-
-- https://www.aliexpress.com/item/1005004392903184.html
-- https://www.aliexpress.com/item/1005005936868343.html
-- https://www.ebay.co.uk/itm/135013745191
-- https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/
-
 ## General Accessories
 
 The badge uses a USB-C to USB-C cable as the lanyard - any USB-C cable will do, we recommend one around a meter long but it's up to you! You can also use regular lanyards if you would prefer.

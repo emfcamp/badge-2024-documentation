@@ -14,3 +14,19 @@ For example, if you plug a hexpansion into the port on the right-hand side of th
 ## Unable to update
 
 If your badge fails the update, try moving to a spot with better WiFi. If the updates continues to fail, you may have to follow the steps to [flash your badge](./end-user-manual.md#flash-your-badge).
+
+## Replace your screen
+
+If you need to replace your screen, you can order a replacement part from ebay, aliexpress etc.
+
+The badge uses a GC9A01 1.28" round LCD module.
+
+Some links to the correct screen:
+
+- [Aliexpress with connector soldered on](https://www.aliexpress.com/item/1005004392903184.html)
+- [Aliexpress with loose connector](https://www.aliexpress.com/item/1005005936868343.html)
+- [https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/](Amazon)
+
+Carefully pull the connector of the display up at a 90 degree angle. If you bought a new display with a connector that is soldered on, carefully push the connector of the new display into the slots. The display is held in place by friction, so this is all you need to do.
+
+If you bought a display with a loose connector you have to also push the display onto the connector. If you have soldering tools, you can permanently affix the display to the connector.
