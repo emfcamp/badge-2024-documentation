@@ -194,7 +194,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Corellian Freighter Hexpansion by Andy Piper</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/catear.webp" alt="Corellian Freigher hexpansion">
+    <img src="/images/hexpansions/catear.webp" alt="Cat ears and whiskers hexpansion">
     <span class="label"><a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion">Cat ears and whiskers</a> by catnerd</span>
   </span>
 <!--hexpansions-end-->

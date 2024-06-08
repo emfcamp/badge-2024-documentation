@@ -1,5 +1,5 @@
 div.scroll-container {
-  background-color: #333;
+  background-color: transparent;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
@@ -27,3 +27,4 @@ div.scroll-container .img-container .label {
   margin: auto;
   line-height: normal;
 }
+

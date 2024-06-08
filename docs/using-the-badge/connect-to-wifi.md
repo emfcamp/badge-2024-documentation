@@ -46,6 +46,8 @@ settings.save()
 
 6. Push the Reboop button and try connecting.
 
+!!! info "If the Wi-Fi won't connect after performing these steps, try changing the SSID and password commands to be in single quotes instead of double quotes. This seems to make a difference in certain circumstances."
+
 # Option 3 - Create a clone of the EMF Wi-Fi network
 
 This could be a good option if you manage a Makerspace or other location where multiple EMF badges might visit.
