@@ -177,4 +177,4 @@ Now that you know the basics of using the hardware on the badge, here's a few ot
 ## Building a full app
 
 With the basics out of the way, using the `boot.py` file, the next step is to build a full application (that will work alongside all the other apps). You're also able to use the screen to display text/images, along with using the event system.
-For more details on this, check out the [Write a  Tildagon OS App guide](../tildagon-apps/development.md) and the [Build the snake game tutorial](./snake.md).
+For more details on this, check out the [Write a  Tildagon OS App guide](../tildagon-apps/development.md) and the [Build the snake game tutorial](./examples/snake.md).

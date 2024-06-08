@@ -1,6 +1,5 @@
 ---
 title: Simulate your app
-weight: 3
 ---
 
 You can simulate your badge apps with the [Tildagon badge simulator](https://github.com/emfcamp/badge-2024-software/tree/main/sim).
