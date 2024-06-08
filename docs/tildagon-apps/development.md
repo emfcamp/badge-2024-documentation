@@ -128,7 +128,7 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
 
 !!! tip ""
 
-    If you would like to dive straight in, follow this tutorial to [build a snake app](./snake.md).
+    If you would like to dive straight in, follow this tutorial to [build a snake app](./examples/snake.md).
 
 #### Common Usage
 
@@ -327,7 +327,7 @@ The last two available methods allow you to add functionality with `asynchronous
 
     Read more about this at [geeksforgeeks](https://www.geeksforgeeks.org/asyncio-in-python/).
 
-The `run()` method allows you to call asynchronous methods, enabling you to wait for user input, for example with the [`Dialog`](./widgets-and-hardware/ui-elements.md#yesno-dialog) ui element.
+The `run()` method allows you to call asynchronous methods, enabling you to wait for user input, for example with the [`Dialog`](./reference/ui-elements.md#yesno-dialog) ui element.
 
 The following example app, overwrites the `run()` method to prompt the user every 2 seconds whether they want to change the color displayed on the screen and then waits for user input:
 
@@ -390,10 +390,10 @@ You can use the following methods on an `App` object:
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `__init__()` | Initializes the app. You can overwrite this method to add additional properties or perform tasks. | None | None |
-| `run(render_update)` | _Asynchronous_. By default, the `run()` method calls `render_update` repeatedly. You can overwrite the `run()` method which allows you to call asynchronous methods, enabling you, for example, to wait for user input with the [`YesNoDialog`](./widgets-and-hardware/ui-elements.md#yesno-dialog) ui element. If you do overwrite this method, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L13) for reference. | `render_update`: The method that triggers a `draw()` call when updates are complete. | None |
+| `run(render_update)` | _Asynchronous_. By default, the `run()` method calls `render_update` repeatedly. You can overwrite the `run()` method which allows you to call asynchronous methods, enabling you, for example, to wait for user input with the [`YesNoDialog`](./reference/ui-elements.md#yesno-dialog) ui element. If you do overwrite this method, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L13) for reference. | `render_update`: The method that triggers a `draw()` call when updates are complete. | None |
 | `update(delta)` | By default, This method is called by the `run()` method every 0.05 seconds. By default, it has _no implementation_. You can overwrite this method to perform updates. | `delta`: Time difference between the last update call and the current update call. | None |
-| `draw(ctx)` | By default, this method calls `draw_operlays()`. To add UI elements or other visual elements to your app, you need to overwrite this method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./widgets-and-hardware/ctx.md). | None |
-| `draw_overlays(ctx)` | Draw each overlay stored in `self.overlays` on the screen. If you overwrite your `draw()` method and have any overlays, you need to call this method manually. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./widgets-and-hardware/ctx.md). | None |
+| `draw(ctx)` | By default, this method calls `draw_operlays()`. To add UI elements or other visual elements to your app, you need to overwrite this method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./reference/ctx.md). | None |
+| `draw_overlays(ctx)` | Draw each overlay stored in `self.overlays` on the screen. If you overwrite your `draw()` method and have any overlays, you need to call this method manually. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./reference/ctx.md). | None |
 | `background_task()` | _Asynchronous_. A loop for all applications, regardless of focused status. By default, it will call `background_update()` every 0.05 seconds. You can overwrite this behaviour. If you do, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L39) for reference.  | None | None |
 | `background_update(delta)` | This method is called by `background_task()` every 0.05 seconds. By default, it has _no implementation_. You can overwrite this method to perform updates in the background, that means even if your app is not in the foreground. | `delta`: Time difference between the last update call and the current update call. | None |
 | `minimise()` | Minimise the app. | None | None |
@@ -402,19 +402,19 @@ You can use the following methods on an `App` object:
 
 ### Premade elements
 
-You can use the following premade [`app_components`](widgets-and-hardware/ui-elements.md) to create user interfaces:
+You can use the following premade [`app_components`](reference/ui-elements.md) to create user interfaces:
 
-- [`Menu`](widgets-and-hardware/ui-elements.md#menu): scroll up/down and select
-- [`Notification`](widgets-and-hardware/ui-elements.md#notification): pop up notifications
-- [`YesNoDialog`](widgets-and-hardware/ui-elements.md#yesno-dialog): create yes or no dialogues
-- [`TextDialog`](widgets-and-hardware/ui-elements.md#text-dialog): create text dialogues
-- [`Tokens`](widgets-and-hardware/ui-elements.md#tokens):
+- [`Menu`](reference/ui-elements.md#menu): scroll up/down and select
+- [`Notification`](reference/ui-elements.md#notification): pop up notifications
+- [`YesNoDialog`](reference/ui-elements.md#yesno-dialog): create yes or no dialogues
+- [`TextDialog`](reference/ui-elements.md#text-dialog): create text dialogues
+- [`Tokens`](reference/ui-elements.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color
 
 ### The `ctx` library
 
-You can also create your own user interfaces using the [`ctx` graphics library](./widgets-and-hardware/ctx.md).
+You can also create your own user interfaces using the [`ctx` graphics library](./reference/ctx.md).
 
 ## Use `mpremote` to test an app on your badge
 
@@ -424,11 +424,11 @@ You can test your app on-device, without publishing it, see the instructions to 
 
 <div class="grid cards" markdown>
 
-- [Tildagon OS Programming Interface Reference](./widgets-and-hardware/reference.md)
+- [Tildagon OS Programming Interface Reference](./reference/reference.md)
 - [Using the badge simulator][simulator]
 - [Publish your app](./publish.md)
-- [Interfacing with badge hardware](./widgets-and-hardware/badge-hardware.md)
-- [Tutorial: Build a snake app](./snake.md)
+- [Interfacing with badge hardware](./reference/badge-hardware.md)
+- [Tutorial: Build a snake app](./examples/snake.md)
 
 </div>
 

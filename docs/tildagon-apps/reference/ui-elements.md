@@ -131,7 +131,7 @@ You can use the following methods on a `Menu` object:
 | `up_handler()` | Manually moves you up one position in the menu. | None | None |
 | `down_handler()` | Manually moves you down one position in the menu. | None | None |
 | `update(delta)` | Update the menu as animations are happening. You need to call this method in your app's `update()` method. | `delta`: Time difference between the last update call and the current update call. | None |
-| `draw(ctx)` | Add the menu to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
+| `draw(ctx)` | Add the menu to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
 ## Notification
 
@@ -231,7 +231,7 @@ You can use the following methods on a `Notification` object:
 | `open()` | Manually open the notification. | None | None |
 | `close()` | Manually close the notification. | None | None |
 | `update(delta)` | Automatically display the notification for a period of 5 seconds. You need to call this method in your app's `update()` method. | `delta`: Time difference between the last update call and the current update call. | None |
-| `draw(ctx)` | Add the notification to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
+| `draw(ctx)` | Add the notification to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
 ## Yes/No Dialog
 
@@ -430,8 +430,8 @@ You can use the following methods on a `YesNoDialog` object:
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `render_update`: The method that triggers a `draw()` call when updates are complete. | `True` or `False` |
-| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
-| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
+| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
+| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
 ## Text Dialog
 
@@ -622,8 +622,8 @@ You can use the following methods on a `TextDialog` object:
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `render_update`: The method that triggers a `draw()` call when updates are complete. | `True` or `False` |
-| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
-| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
+| `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
+| `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
 ## Tokens
 
@@ -635,8 +635,8 @@ The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/
 
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| `clear_background(ctx)` | Clear the badge background. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md). | None |
-| `set_color(ctx, color)` | Set the color for the canvas. | <ul><li><code>ctx</code>: The canvas that let's you add graphics or texts. See [`ctx` library](../widgets-and-hardware/ctx.md).</li><li><code>color</code>: The provided color as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. </li></ul> | None |
+| `clear_background(ctx)` | Clear the badge background. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
+| `set_color(ctx, color)` | Set the color for the canvas. | <ul><li><code>ctx</code>: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md).</li><li><code>color</code>: The provided color as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. </li></ul> | None |
 
 
 

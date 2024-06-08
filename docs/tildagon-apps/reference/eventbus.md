@@ -1,4 +1,4 @@
-# Eventbus
+# Eventbus overview
 
 You can register your events and event handlers with the [`Eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py) package:
 
