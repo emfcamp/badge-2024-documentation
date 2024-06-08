@@ -46,6 +46,12 @@ If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sh
 
     There are some [example 3D printable STL files on Printables](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template), which may be useful as a starting point for prototyping. These have been tested and fit in the slots of a prototype of the 2024 badge.
 
+
+!!! tip "Templates for PCB Hexpansions"
+
+    There is a [sample KiCAD hexpansion project](https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion), which is the easiest way of getting started making a Hexpansion PCB.
+
+
 ## Shape and size
 
 To fit into the slot, the Hexpansion has to have a tab sticking out that is **9.2mm** wide and **6.5mm** long. That tab is 17.75mm away from the board edge.
@@ -127,10 +133,6 @@ Because there is a battery between the top and bottom board of the tildagon, the
 ![](./52437fff-3c14-4c18-aa22-a656f64f00f0.png)
 
 The two upper hexpansion slots are right above the two USB connectors. Because of the cable overmold there may not be anything sticking out below the board in those slots. Hexpansions that go into other slots have 1mm of clearance below the PCB surface up to the tildagon board edge, and unlimited clearance beyond the edge. If you have through-hole components on your hexpansion PCB, they cannot be used in the slots over the USB connectors as the solder tails below the board will interfere with the USB cable overmolding.
-
-## Troubleshooting
-
-For common issues, see [](../using-the-badge/common-problems.md.)
 
 ## Congratulations
 
