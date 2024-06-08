@@ -35,4 +35,4 @@ You can use the following hardware with the inbuilt interfaces:
 
 ## Using APIs
 
-To learn how to use APIs in your APPs, see [Use an API in an app](../api.md#examples).
+To learn how to use APIs in your APPs, see [Use an API in an app](../examples/api.md#examples).

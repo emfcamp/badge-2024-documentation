@@ -267,9 +267,9 @@ __app_export__ = ExampleApp
 This example shows an example of a linear gradient on a rectangle.
 
 ```python
+import asyncio
 import app
 
-from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 
 
@@ -279,23 +279,27 @@ class ExampleApp(app.App):
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-            self.button_states.clear()
+            self.minimise()
 
     def draw(self, ctx):
-        clear_background(ctx)
         ctx.save()
+        ctx.linear_gradient(0.18*120,0.5*120,0.95*120,0.5*120)
+        ctx.add_stop(0.0, (255, 0, 0), 1.0)
+        ctx.add_stop(0.2, (255, 255, 0), 1.0)
+        ctx.add_stop(0.4, (0, 255, 0), 1.0)
+        ctx.add_stop(0.6, (0, 255, 255), 1.0)
+        ctx.add_stop(0.8, (0, 0, 255), 1.0)
+        ctx.add_stop(1.0, (255, 0, 255), 1.0)
 
-        ctx.linear_gradient(30, 30, -30, -50)
-        ctx.add_stop(0, (100,0,100), 0.5)
-        ctx.add_stop(1, (100,0,0), 0.8)
-        ctx.rectangle(-100, -100, 200, 200).fill()
+        ctx.rectangle(-120, -120, 240, 240)
+        ctx.fill()
 
         ctx.restore()
 
 __app_export__ = ExampleApp
 ```
 
-![A red circle next to a blue circle](../../images/ctx-examples/linear.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![rainbow linear gradient](../../images/ctx-examples/linear.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ### Gray
 
@@ -447,7 +451,7 @@ __app_export__ = ExampleApp
 
 ### Clipping
 
-This example draws a white circle and clips a square out of it.
+This example draws a blue circle and clips a square out of it and colors it red, resulting in a quarter of the circle being red.
 
 ```python
 import app
@@ -468,10 +472,16 @@ class ExampleApp(app.App):
     def draw(self, ctx):
         clear_background(ctx)
         ctx.save()
-        # White circle with a square cutout in the middle
+        # Blue circle
         ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
-        ctx.rectangle(-25, -25, 50, 50).clip
-        ctx.rgb(255, 255, 255).fill()
+        ctx.rgb(0, 0, 255).fill()
+
+        # Define a clipping area for the circle
+        ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
+        ctx.clip()
+        # Add the shape into the clipping area
+        ctx.rectangle(0, 0, 80, 80)
+        ctx.rgb(255, 0, 0).fill()
         ctx.restore()
 
 __app_export__ = ExampleApp
