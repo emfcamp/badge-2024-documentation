@@ -52,200 +52,200 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <div class="scroll-container admonition info">
 <!--hexpansions-start-->
   <span class="img-container">
-    <img src="/images/hexpansions/tabasco.jpg" alt="Hot Sauce hexpansion (chipotle flavor)">
+    <img src="/images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)">
     <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/eeh.gif" alt="Rabbit hexpansion">
+    <img src="/images/hexpansions/eeh.gif" loading="lazy" alt="Rabbit hexpansion">
     <span class="label">EEH Hexpansion by Matt</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/goose.png" alt="Skyler's goose prototype">
+    <img src="/images/hexpansions/goose.png" loading="lazy" alt="Skyler's goose prototype">
     <span class="label">Untitled Goose by Skyler Mansfield</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/rainbow.jpg" alt="LED Rainbow Filament hexpansion">
+    <img src="/images/hexpansions/rainbow.jpg" loading="lazy" alt="LED Rainbow Filament hexpansion">
     <span class="label">LED Filament hexpansion by John Thurmond</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/makerspace.gif" alt="Rabbit hexpansion">
+    <img src="/images/hexpansions/makerspace.gif" loading="lazy" alt="Rabbit hexpansion">
     <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/plotter.gif" alt="Plotter hexpansion">
+    <img src="/images/hexpansions/plotter.gif" loading="lazy" alt="Plotter hexpansion">
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/floppy-disk.jpg" alt="Floppy disk hexpansion">
+    <img src="/images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion">
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/googly.png" alt="Floppy disk hexpansion">
+    <img src="/images/hexpansions/googly.png" loading="lazy" alt="Floppy disk hexpansion">
     <span class="label">40mm Googly Eye by John Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/wheel.jpg" alt="Wheel hexpansion">
+    <img src="/images/hexpansions/wheel.jpg" loading="lazy" alt="Wheel hexpansion">
     <span class="label"><a href="https://github.com/hairymnstr/omni-wheel-hexpansion">Omni wheel</a> by Nathan Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/segment-display.jpg" alt="A 7 segment display hexpansion">
+    <img src="/images/hexpansions/segment-display.jpg" loading="lazy" alt="A 7 segment display hexpansion">
     <span class="label"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">7-Segment display</a> by Iain Yarnall.</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/mysterious-qr.jpg" alt="A hexpansion with a QR code that might rickroll you">
+    <img src="/images/hexpansions/mysterious-qr.jpg" loading="lazy" alt="A hexpansion with a QR code that might rickroll you">
     <span class="label">Mysterious QR Code by grajohnt</span>
   </span>
   <span class="img-container">
-    <img src="/images/badge-photos/hexpansion.png" alt="Spirit level hexpansion">
+    <img src="/images/badge-photos/hexpansion.png" loading="lazy" alt="Spirit level hexpansion">
     <span class="label">Spirit level by Chris</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/rabbit.jpg" alt="Rabbit hexpansion">
+    <img src="/images/hexpansions/rabbit.jpg" loading="lazy" alt="Rabbit hexpansion">
     <span class="label">That Rabbit by Dan</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/duck.jpg" alt="Rabbit hexpansion">
+    <img src="/images/hexpansions/duck.jpg" loading="lazy" alt="Rabbit hexpansion">
     <span class="label">Le Carnard de Bleu by Dan</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/fidget.jpg" alt="Fidget Spinner hexpansion">
+    <img src="/images/hexpansions/fidget.jpg" loading="lazy" alt="Fidget Spinner hexpansion">
     <span class="label">Fidget Spinner by Catherine</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/breadbeard.jpg" alt="Breadbord hexpansion">
+    <img src="/images/hexpansions/breadbeard.jpg" loading="lazy" alt="Breadbord hexpansion">
     <span class="label">Breadbeard Hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/robotmad.jpg" alt="Hex-Drive plugged into Hex-Dev">
+    <img src="/images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev">
     <span class="label">Hex-Drive and Hex-Dev by Team RobotMad</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/robotmad2.jpg" alt="Many Hex-Drives">
+    <img src="/images/hexpansions/robotmad2.jpg" loading="lazy" alt="Many Hex-Drives">
     <span class="label">Hex-Drives by Team RobotMad</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/gridfinity-expansion.webp" alt="Gridfinity expansion">
+    <img src="/images/hexpansions/gridfinity-expansion.webp" loading="lazy" alt="Gridfinity expansion">
     <span class="label"><a href="https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity">Gridfinity expansion hexpansion</a> by Jack Fitton</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/markers.jpg" alt="GCHQ.net markers">
+    <img src="/images/hexpansions/markers.jpg" loading="lazy" alt="GCHQ.net markers">
     <span class="label">GCHQ.NET markers by <a href="https://gchq.net/">GCHQ.NET</a></span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/cable.jpg" alt="Megadrive controller hexpansion">
+    <img src="/images/hexpansions/cable.jpg" loading="lazy" alt="Megadrive controller hexpansion">
     <span class="label">Megadrive controller by Matthew Wilkes</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/eyes.jpg" alt="Eye hexpansion">
+    <img src="/images/hexpansions/eyes.jpg" loading="lazy" alt="Eye hexpansion">
     <span class="label"><a href="https://www.thingiverse.com/thing:6633547">Eye hexpansion</a> by Alistair</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/smile.webp" alt="Smile hexpansion">
+    <img src="/images/hexpansions/smile.webp" loading="lazy" alt="Smile hexpansion">
     <span class="label"><a href="https://www.thingiverse.com/thing:6635025">Smile hexpansion</a> by Alistair</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/spirits.jpg" alt="Spirit level hexpansions">
+    <img src="/images/hexpansions/spirits.jpg" loading="lazy" alt="Spirit level hexpansions">
     <span class="label"><a href="https://www.printables.com/model/893545-spirit-level-hexpansions">Spirit level hexpansions</a> by Andy Piper</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/duckpond.jpg" alt="Duck pond hexpansion">
+    <img src="/images/hexpansions/duckpond.jpg" loading="lazy" alt="Duck pond hexpansion">
     <span class="label">Duck pond hexpansion by Andy Piper</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/batwings.jpg" alt="Bat wing hexpansion">
+    <img src="/images/hexpansions/batwings.jpg" loading="lazy" alt="Bat wing hexpansion">
     <span class="label">Bat wing hexpansions by clayalien</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/not_lego_but_compatible.webp" alt="Not lego baseplate hexpansion">
+    <img src="/images/hexpansions/not_lego_but_compatible.webp" loading="lazy" alt="Not lego baseplate hexpansion">
     <span class="label"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion">Not lego baseplate hexpansion</a> by adie</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/display.webp" alt="Display platform hexpansion">
+    <img src="/images/hexpansions/display.webp" loading="lazy" alt="Display platform hexpansion">
     <span class="label"><a href="https://www.printables.com/model/894438-display-platform-hexpansion">Display platform hexpansion</a> by adie</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/glonouns.jpg" alt="glowing pronoun hexpansions">
+    <img src="/images/hexpansions/glonouns.jpg" loading="lazy" alt="glowing pronoun hexpansions">
     <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Glowing pronoun hexpansions</a> by Emily S</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/pronouns.jpg" alt="pronoun hexpansions">
+    <img src="/images/hexpansions/pronouns.jpg" loading="lazy" alt="pronoun hexpansions">
     <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Pronoun hexpansions</a> by Emily S</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/keyboard.png" alt="Keyboard hexpansion">
+    <img src="/images/hexpansions/keyboard.png" loading="lazy" alt="Keyboard hexpansion">
     <span class="label">Keyboard by Bob</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/bob-frog.jpg" alt="Bob's frog prototype">
+    <img src="/images/hexpansions/bob-frog.jpg" loading="lazy" alt="Bob's frog prototype">
     <span class="label">Frog prototype by Bob</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/eyes-lit.gif" alt="Bob's frog prototype">
+    <img src="/images/hexpansions/eyes-lit.gif" loading="lazy" alt="Bob's frog prototype">
     <span class="label">Many eyes by Bob</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/sao.jpg" alt="&quot;Legacy&quot; adapter">
+    <img src="/images/hexpansions/sao.jpg" loading="lazy" alt="&quot;Legacy&quot; adapter">
     <span class="label"><a href="https://github.com/dratini0/legacy-adapter-hexpansion">&quot;Legacy&quot; adapter (SAO, TiDAL, QW/ST)</a> by dratini0</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/hub75.jpg" alt="HUB75 hexpansion">
+    <img src="/images/hexpansions/hub75.jpg" loading="lazy" alt="HUB75 hexpansion">
     <span class="label"><a href="https://github.com/dratini0/hub75-hexpansion">HUB75 hexpansion</a> by dratini0</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/blank.jpg" alt="blank hexpansion">
+    <img src="/images/hexpansions/blank.jpg" loading="lazy" alt="blank hexpansion">
     <span class="label">Blank Hexpansion by Nathan Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/falcon.jpg" alt="Corellian Freigher hexpansion">
+    <img src="/images/hexpansions/falcon.jpg" loading="lazy" alt="Corellian Freigher hexpansion">
     <span class="label">Corellian Freighter Hexpansion by Andy Piper</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/catear.webp" alt="Cat ears and whiskers hexpansion">
+    <img src="/images/hexpansions/catear.webp" loading="lazy" alt="Cat ears and whiskers hexpansion">
     <span class="label"><a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion">Cat ears and whiskers</a> by catnerd</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/ECHQ.jpg" alt="ECHQ hexpansion">
+    <img src="/images/hexpansions/ECHQ.jpg" loading="lazy" alt="ECHQ hexpansion">
     <span class="label">ECHQ hexpansion by ECHQ village</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/breakout-garden.jpg" alt="Breakout Garden hexpansion">
+    <img src="/images/hexpansions/breakout-garden.jpg" loading="lazy" alt="Breakout Garden hexpansion">
     <span class="label">Pimoroni Breakout Garden I2C by <a href="https://github.com/jpwsutton">James Sutton</a></span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/hexpansaputer.jpg" alt="Hexaspansaputer">
+    <img src="/images/hexpansions/hexpansaputer.jpg" loading="lazy" alt="Hexaspansaputer">
     <span class="label">Hexaspansaputer (hexpansion supercomputer) by o0mouse0o</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/pride-rainbow.jpg" alt="Pride rainbow LED strips hexpansion">
+    <img src="/images/hexpansions/pride-rainbow.jpg" loading="lazy" alt="Pride rainbow LED strips hexpansion">
     <span class="label">A pride rainbow by o0mouse0o</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/6flags.webp" alt="small flag hexpansion">
+    <img src="/images/hexpansions/6flags.webp" loading="lazy" alt="small flag hexpansion">
     <span class="label"><a href="https://www.printables.com/model/895999-6flags-hexpansion">6flags Hexpansion</a> by Ambrosia</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/interposer.png" alt="interposer hexpansion">
+    <img src="/images/hexpansions/interposer.png" loading="lazy" alt="interposer hexpansion">
     <span class="label"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka">Interposer</a> by The Untitled Goose</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/honk.png" alt="goose hexpansion">
+    <img src="/images/hexpansions/honk.png" loading="lazy" alt="goose hexpansion">
     <span class="label">Simple Honk by The Untitled Goose</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/pacman.png" alt="Pacman hexpansion">
+    <img src="/images/hexpansions/pacman.png" loading="lazy" alt="Pacman hexpansion">
     <span class="label">Pacman by The Untitled Goose</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/keycard.png" alt="Doom Keycard hexpansion">
-    <span class="label">>Doom Keycard by The Untitled Goose</span>
+    <img src="/images/hexpansions/keycard.png" loading="lazy" alt="Doom Keycard hexpansion">
+    <span class="label">Doom Keycard by The Untitled Goose</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/hexnotoad.gif" alt="Hexnotoad hexpansion">
-    <span class="label">>Hexnotoad by The Untitled Goose</span>
+    <img src="/images/hexpansions/hexnotoad.gif" loading="lazy" alt="Hexnotoad hexpansion">
+    <span class="label">Hexnotoad by The Untitled Goose</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/hacktheplanet.png" alt="Hack the Planet hexpansion">
-    <span class="label">>Hack the Planet by The Untitled Goose</span>
+    <img src="/images/hexpansions/hacktheplanet.png" loading="lazy" alt="Hack the Planet hexpansion">
+    <span class="label">Hack the Planet by The Untitled Goose</span>
   </span>
 <!--hexpansions-end-->
 </div>
