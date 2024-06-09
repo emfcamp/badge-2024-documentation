@@ -439,82 +439,117 @@ from machine import I2C
 bus = I2C(slot)
 ```
 
-If your app is loaded from EEPROM on an hexpansion, you can get the slot in the
-hexpansion config object that is passed to your app to select the correct slot.
+=== "App loaded from EEPROM"
+
+    If your app is loaded from EEPROM on an hexpansion, you can get the slot in the
+    hexpansion config object that is passed to your app to select the correct slot.
 
 
-```python
-TODO
-```
+    !!! note "Untested"
 
-If it's a normal app, you'll need to check each port:
+        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/71).
 
-```python
-import app
+    ```python
+    import app
 
-from machine import I2C
+    from app_components import clear_background
+    from events.input import Buttons, BUTTON_TYPES
 
-from app_components import clear_background
-from events.input import Buttons, BUTTON_TYPES
-from system.eventbus import eventbus
-from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
-from system.hexpansion.config import HexpansionConfig
-from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
+    class ExampleApp(app.App):
+        def __init__(self, config=None):
+            self.button_states = Buttons(self)
+            self.hexpansion_config = config
 
-class ExampleApp(app.App):
-    def __init__(self):
-        self.button_states = Buttons(self)
-        self.text = "No hexpansion found."
-        self.hexpansion_config = self.scan_for_hexpansion()
+        def update(self, delta):
+            if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+                self.minimise()
 
-        eventbus.on(HexpansionInsertionEvent, self.handle_hexpansion_insertion, self)
-        eventbus.on(HexpansionRemovalEvent, self.handle_hexpansion_removal, self)
+            if self.hexpansion_config:
+                print(self.hexpansion_config.i2c)
 
-    def handle_hexpansion_insertion(self, event):
-        self.hexpansion_config = self.scan_for_hexpansion()
+        def draw(self, ctx):
+            ctx.save()
+            clear_background(ctx)
+            ctx.rgb(0,1,0).move_to(-90,-40).text("Hello from your\nhexpansion!")
+            ctx.restore()
+
+            return None
+
+    __app_export__ = ExampleApp
+    ```
+
+=== "App loaded from badge"
+
+    If it's an app loaded from the badge, you'll need to check each port:
+
+    ```python
+    import app
+
+    from machine import I2C
+
+    from app_components import clear_background
+    from events.input import Buttons, BUTTON_TYPES
+    from system.eventbus import eventbus
+    from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+    from system.hexpansion.config import HexpansionConfig
+    from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
+
+    class ExampleApp(app.App):
+        def __init__(self):
+            self.button_states = Buttons(self)
+            self.text = "No hexpansion found."
+            self.hexpansion_config = self.scan_for_hexpansion()
+
+            eventbus.on(HexpansionInsertionEvent, self.handle_hexpansion_insertion, self)
+            eventbus.on(HexpansionRemovalEvent, self.handle_hexpansion_removal, self)
+
+        def handle_hexpansion_insertion(self, event):
+            self.hexpansion_config = self.scan_for_hexpansion()
 
 
-    def handle_hexpansion_removal(self, event):
-        self.hexpansion_config = self.scan_for_hexpansion()
+        def handle_hexpansion_removal(self, event):
+            self.hexpansion_config = self.scan_for_hexpansion()
 
 
-    def update(self, delta):
-        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-            self.minimise()
+        def update(self, delta):
+            if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+                self.minimise()
 
-        if self.hexpansion_config:
-            print(self.hexpansion_config.i2c)
+            if self.hexpansion_config:
+                print(self.hexpansion_config.i2c)
 
-    def draw(self, ctx):
-        ctx.save()
-        clear_background(ctx)
-        ctx.rgb(0,1,0).move_to(-90,-40).text(self.text)
-        ctx.restore()
+        def draw(self, ctx):
+            ctx.save()
+            clear_background(ctx)
+            ctx.rgb(0,1,0).move_to(-90,-40).text(self.text)
+            ctx.restore()
 
-    def scan_for_hexpansion(self):
-        for port in range(1, 7):
-            print(f"Searching for hexpansion on port: {port}")
-            i2c = I2C(port)
-            addr = detect_eeprom_addr(i2c)
+        def scan_for_hexpansion(self):
+            for port in range(1, 7):
+                print(f"Searching for hexpansion on port: {port}")
+                i2c = I2C(port)
+                addr = detect_eeprom_addr(i2c)
 
-            if addr is None:
-                continue
-            else:
-                print("Found EEPROM at addr " + hex(addr))
+                if addr is None:
+                    continue
+                else:
+                    print("Found EEPROM at addr " + hex(addr))
 
-            header = read_hexpansion_header(i2c, addr)
-            if header is None:
-                continue
-            else:
-                print("Read header: " + str(header))
-            self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
-            return HexpansionConfig(port)
+                header = read_hexpansion_header(i2c, addr)
+                if header is None:
+                    continue
+                else:
+                    print("Read header: " + str(header))
+                self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
+                return HexpansionConfig(port)
 
-        self.color = (1,0,0)
-        self.text = "No hexpansion found."
+            self.color = (1,0,0)
+            self.text = "No hexpansion found."
 
-        return None
-```
+            return None
+
+        __app_export__ = ExampleApp
+    ```
 
 You can then use the standard MicroPython I2C API to communicate with devices on the bus.
 
