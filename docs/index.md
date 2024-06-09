@@ -207,6 +207,18 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/breakout-garden.jpg" alt="ECHQ hexpansion">
     <span class="label">Pimoroni Breakout Garden I2C by <a href="https://github.com/jpwsutton">James Sutton</a></span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/hexpansaputer.jpg" alt="Hexaspansaputer">
+    <span class="label">Hexaspansaputer (hexpansion supercomputer) by o0mouse0o</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/pride-rainbow.jpg" alt="ECHQ hexpansion">
+    <span class="label">A pride rainbow by o0mouse0o</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/6flags.webp" alt="ECHQ hexpansion">
+    <span class="label"><a href="https://www.printables.com/model/895999-6flags-hexpansion">6flags Hexpansion</a> by Ambrosia</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
