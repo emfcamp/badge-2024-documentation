@@ -30,3 +30,15 @@ Some links to the correct screen:
 Carefully pull the connector of the display up at a 90 degree angle. If you bought a new display with a connector that is soldered on, carefully push the connector of the new display into the slots. The display is held in place by friction, so this is all you need to do.
 
 If you bought a display with a loose connector you have to also push the display onto the connector. If you have soldering tools, you can permanently affix the display to the connector.
+
+## I entered my name wrong
+
+If you want to retain your data, you can [install `mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) and follow the steps in [Debug your app on your badge](../tildagon-apps/run-on-badge.md#debug-your-app-on-your-badge) to get a shell on your badge and then change the setting by running the following commands, replacing `YourNewName` with your name:
+
+```sh
+import settings
+settings.set("name", "YourNewName")
+settings.save()
+```
+
+If you don't have any important data on your badge you can [flash your badge](./end-user-manual.md#flash-your-badge) which will erase all your data.
