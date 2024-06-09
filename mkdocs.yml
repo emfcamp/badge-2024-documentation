@@ -54,4 +54,3 @@ plugins:
   - include-markdown
   - social:
       cards: true
-      log: true
