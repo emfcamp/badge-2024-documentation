@@ -80,8 +80,12 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/googly.jpg" alt="Floppy disk hexpansion">
+    <span class="label">40mm Googly Eye by John Dumont</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/wheel.jpg" alt="Wheel hexpansion">
-    <span class="label">Omni wheel by Nathan Dumont</span>
+    <span class="label"><a href="https://github.com/hairymnstr/omni-wheel-hexpansion">Omni wheel</a> by Nathan Dumont</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/segment-display.jpg" alt="A 7 segment display hexpansion">
