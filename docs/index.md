@@ -203,6 +203,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/ECHQ.jpg" alt="ECHQ hexpansion">
     <span class="label">ECHQ hexpansion by ECHQ village</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/breakout-garden.jpg" alt="ECHQ hexpansion">
+    <span class="label">Pimoroni Breakout Garden I2C by <a href="https://github.com/jpwsutton">James Sutton</a></span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
