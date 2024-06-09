@@ -30,6 +30,12 @@ You can also use one that doesn't glow, search for "usb c to usb c", or add "rgb
 
    Unfortunately, not all badges support the glowing USB cables. We're not currently sure why.
 
+### Share your addon
+
+!!! note "Have an addon to share?"
+
+    Share it in the [badge-2024-addons](https://github.com/emfcamp/badge-2024-addons/tree/main) repository!
+
 ## Accessory Hexpansions
 
 <div class="scroll-container">

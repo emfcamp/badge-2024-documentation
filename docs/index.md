@@ -180,8 +180,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Frog prototype by Bob</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/eyes-lit.gif" loading="lazy" alt="Bob's frog prototype">
-    <span class="label">Many eyes by Bob</span>
+    <img src="/images/hexpansions/eyes-lit.gif" loading="lazy" alt="Bob's googly eye hexpansion">
+    <span class="label"><a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion">Many eyes</a> by Bob</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/sao.jpg" loading="lazy" alt="&quot;Legacy&quot; adapter">
