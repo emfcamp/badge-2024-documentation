@@ -42,6 +42,24 @@ If you want your EEPROM-equipped hexpansion to do something automatically, you n
 
     `mpremote` should automatically detect the port the board is plugged into. If it doesn't, manually specify the port. For more information see the [`mpremote` reference docs](https://docs.micropython.org/en/latest/reference/mpremote.html#shortcuts).
 
+    !! note "Failed to decode header?"
+
+      If you are receiving this error, try to change this code
+
+      ```python
+      write_header(
+          port, header, addr=addr, addr_len=addr_len, page_size=header.eeprom_page_size
+      )
+      ```
+
+      to
+
+      ```python
+      i2c.writeto(addr, bytes([0, 0]) + header.to_bytes())
+      ```
+
+      and run the command again.
+
 6. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `mount_hexpansion` script to mount the storage on your hexpansion, and then copies your app file from the provided location to `/hexpansion_1/app.py`:
 
     ```sh
