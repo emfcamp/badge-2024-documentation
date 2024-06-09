@@ -164,6 +164,8 @@ Use the buttons **A** (`UP`) and **D** (`DOWN`) to move up and down in the menu.
 
 To power off the badge, select the menu item **Power off**.
 
+If your screen is broken, follow the steps in [Turn off badge with broken screen](./common-problems.md#turn-off-badge-with-broken-screen).
+
 ## Buttons
 
 ### Front of the badge
