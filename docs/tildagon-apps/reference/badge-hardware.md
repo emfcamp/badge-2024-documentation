@@ -75,7 +75,7 @@ To use the LEDs:
    ```python
    tildagonos.leds[2] = (255, 0, 0)
    ```
-   
+
 4. Write the updated values to the LEDs
 
    ```python
@@ -407,6 +407,19 @@ To use events with the `EventBus`, import the following package:
 from system.power import events
 ```
 
+You can also use the following hexpansion-related events
+
+- `HexpansionRemovalEvent`
+- `HexpansionInsertionEvent`
+- `HexpansionFormattedEvent`
+- `HexpansionMountedEvent`
+
+To use these events with the `EventBus`, import the following package:
+
+```python
+from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+```
+
 Then `emit()` the event as following:
 
 ```python
@@ -417,9 +430,8 @@ eventbus.emit(
 
 ## I2C
 
-The badge supports I2C on busses per hexpansion slot. Hexpansion slots are numbered
-1-6, with 1 being the top right slot and the numbers increasing clockwise. To
-create an I2C bus for a given slot, use:
+The badge supports the [I2C communication protocol](https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/) on a bus for each hexpansion slot. Hexpansion slots are numbered
+1-6, with 1 being the top right slot and the numbers increasing clockwise. To create an I2C bus for a given slot, use:
 
 ```python
 from machine import I2C
@@ -427,17 +439,99 @@ from machine import I2C
 bus = I2C(slot)
 ```
 
-You can then use the standard MicroPython I2C API to communicate with devices on
-the bus.
-
-If you're not sure which hexpansion slot your device is connected to, you will
-need to scan each slot in turn to find it.
-
-!!! danger
-    You've found an issue! We need example code to demonstrate how to scan each
-    port. Please feel free to open a PR with your submission.
-
-### Hexpansion apps
-
-If your app is loaded from EEPROM on an hexpansion, you can use the slot in the
+If your app is loaded from EEPROM on an hexpansion, you can get the slot in the
 hexpansion config object that is passed to your app to select the correct slot.
+
+
+```python
+TODO
+```
+
+If it's a normal app, you'll need to check each port:
+
+```python
+import app
+
+from machine import I2C
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+from system.eventbus import eventbus
+from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+from system.hexpansion.config import HexpansionConfig
+from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+        self.text = "No hexpansion found."
+        self.hexpansion_config = self.scan_for_hexpansion()
+
+        eventbus.on(HexpansionInsertionEvent, self.handle_hexpansion_insertion, self)
+        eventbus.on(HexpansionRemovalEvent, self.handle_hexpansion_removal, self)
+
+    def handle_hexpansion_insertion(self, event):
+        self.hexpansion_config = self.scan_for_hexpansion()
+
+
+    def handle_hexpansion_removal(self, event):
+        self.hexpansion_config = self.scan_for_hexpansion()
+
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.minimise()
+
+        if self.hexpansion_config:
+            print(self.hexpansion_config.i2c)
+
+    def draw(self, ctx):
+        ctx.save()
+        clear_background(ctx)
+        ctx.rgb(0,1,0).move_to(-90,-40).text(self.text)
+        ctx.restore()
+
+    def scan_for_hexpansion(self):
+        for port in range(1, 7):
+            print(f"Searching for hexpansion on port: {port}")
+            i2c = I2C(port)
+            addr = detect_eeprom_addr(i2c)
+
+            if addr is None:
+                continue
+            else:
+                print("Found EEPROM at addr " + hex(addr))
+
+            header = read_hexpansion_header(i2c, addr)
+            if header is None:
+                continue
+            else:
+                print("Read header: " + str(header))
+            self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
+            return HexpansionConfig(port)
+
+        self.color = (1,0,0)
+        self.text = "No hexpansion found."
+
+        return None
+```
+
+You can then use the standard MicroPython I2C API to communicate with devices on the bus.
+
+Example usage from the [MicroPython I2C docs](https://docs.micropython.org/en/latest/library/machine.I2C.html):
+
+```python
+from machine import I2C
+
+i2c.scan()                      # scan for peripherals, returning a list of 7-bit addresses
+
+i2c.writeto(42, b'123')         # write 3 bytes to peripheral with 7-bit address 42
+i2c.readfrom(42, 4)             # read 4 bytes from peripheral with 7-bit address 42
+
+i2c.readfrom_mem(42, 8, 3)      # read 3 bytes from memory of peripheral 42,
+                                #   starting at memory-address 8 in the peripheral
+i2c.writeto_mem(42, 2, b'\x10') # write 1 byte to memory of peripheral 42
+                                #   starting at address 2 in the peripheral
+```
+
+For more information, see [MicroPython I2C docs](https://docs.micropython.org/en/latest/library/machine.I2C.html).
