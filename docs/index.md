@@ -199,6 +199,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/catear.webp" alt="Cat ears and whiskers hexpansion">
     <span class="label"><a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion">Cat ears and whiskers</a> by catnerd</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/ECHQ.jpg" alt="ECHQ hexpansion">
+    <span class="label">ECHQ hexpansion by ECHQ village</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
