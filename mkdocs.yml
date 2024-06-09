@@ -1,4 +1,5 @@
 site_name: Tildagon Badge Documentation
+site_url: https://tildagon.badge.emfcamp.org
 repo_url: https://github.com/emfcamp/badge-2024-documentation
 theme:
   name: material
@@ -48,3 +49,4 @@ plugins:
   - glightbox
   - mkdocs-nav-weight
   - include-markdown
+  - social
