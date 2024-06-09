@@ -35,6 +35,8 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 - Six [hexpansion](#hexpansions) connectors
 - Round screen, six buttons, lots of colourful LEDs
 - Power management, motion sensing
+- An IMU (gyro + accelerometer)
+- BLE
 
 !!! info "The processor in the badge is the same as in 2022, and it will run [MicroPython](https://micropython.org/)."
 

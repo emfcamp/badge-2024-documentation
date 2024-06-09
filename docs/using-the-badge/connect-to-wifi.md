@@ -28,19 +28,19 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 2. With the device connected via USB-C to your computer press "Connect".
 3. Select the Tildagon from the list.
 4. Select "Logs & Console".
-5. Enter the following commands one at a time, followed by enter, editing the "changeme" sections with your details :
+5. Enter the following commands one at a time, followed by enter, editing the 'changeme' sections with your details :
 
 ```
 import settings
-settings.set("wifi_ssid", "changeme")
-settings.set("wifi_password", "changeme")
+settings.set('wifi_ssid', 'changeme')
+settings.set('wifi_password', 'changeme')
 ```
 
 If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value.
-If you are connecting to a WPA2-Enterprise network, replace `None` with the username for your WPA2-Enterprise username. If you are not using a WPA2-Enterprise network, set the value to `None`:
+If you are connecting to a WPA2-Enterprise network, add your WPA2-Enterprise username into `''`. If you are not using a WPA2-Enterprise network, set the value to `''`:
 
 ```
-settings.set("wifi_wpa2ent_username", None)
+settings.set('wifi_wpa2ent_username', '')
 settings.save()
 ```
 
