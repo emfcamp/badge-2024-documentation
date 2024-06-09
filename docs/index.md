@@ -80,7 +80,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/googly.jpg" alt="Floppy disk hexpansion">
+    <img src="/images/hexpansions/googly.png" alt="Floppy disk hexpansion">
     <span class="label">40mm Googly Eye by John Dumont</span>
   </span>
   <span class="img-container">
