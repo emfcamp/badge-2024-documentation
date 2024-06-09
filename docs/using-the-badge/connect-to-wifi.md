@@ -37,10 +37,10 @@ settings.set('wifi_password', 'changeme')
 ```
 
 If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value.
-If you are connecting to a WPA2-Enterprise network, add your WPA2-Enterprise username into `''`. If you are not using a WPA2-Enterprise network, set the value to `''`:
+If you are connecting to a WPA2-Enterprise network, replace `None` with your WPA2-Enterprise username.
 
 ```
-settings.set('wifi_wpa2ent_username', '')
+settings.set('wifi_wpa2ent_username', None)
 settings.save()
 ```
 
