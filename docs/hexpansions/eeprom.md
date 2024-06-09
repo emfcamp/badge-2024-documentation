@@ -2,7 +2,7 @@
 
 !!! warning "This document is a work in progress. More details will be added as they become available."
 
-If you want your EEPROM-equipped hexpansion to do something automatically, you need to [write some data to the eeprom](#how-to-write-app-to-eeprom). The data consists of a header which contains hexpansion metadata, and a LittleFS file system which contains your application and data. The minimal application consists of a file called `app.py` that contains your code.
+If you want your EEPROM-equipped hexpansion to do something automatically, you need to [write some data to the EEPROM](#how-to-write-app-to-eeprom). The data consists of a header which contains hexpansion metadata, and a LittleFS file system which contains your application and data. The minimal application consists of a file called `app.py` that contains your code.
 
 ## How to write app to EEPROM
 
@@ -42,7 +42,7 @@ If you want your EEPROM-equipped hexpansion to do something automatically, you n
 
     `mpremote` should automatically detect the port the board is plugged into. If it doesn't, manually specify the port. For more information see the [`mpremote` reference docs](https://docs.micropython.org/en/latest/reference/mpremote.html#shortcuts).
 
-    !! note "Failed to decode header?"
+    !!! note "Failed to decode header?"
 
       If you are receiving this error, try to change this code
 
@@ -84,7 +84,7 @@ The header is 32 bytes long and contains the following values:
   - ASCII `2024`
     - This must match exactly
 - Filesystem info (offset 8, length 8):
-  - 2 bytes offset (bytes from beginning of eeprom)
+  - 2 bytes offset (bytes from beginning of EEPROM)
     - This is the number of bytes from the start of the EEPROM to the start of the LittleFS filesystem. It must be a multiple of the EEPROM page size, and greater or equal to 32.
   - 2 bytes page size (EEPROM page size in bytes)
     - As specified in the EEPROM datasheet
