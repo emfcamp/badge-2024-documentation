@@ -219,6 +219,30 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/6flags.webp" alt="small flag hexpansion">
     <span class="label"><a href="https://www.printables.com/model/895999-6flags-hexpansion">6flags Hexpansion</a> by Ambrosia</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/interposer.png" alt="interposer hexpansion">
+    <span class="label"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka">Interposer</a> by The Untitled Goose</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/honk.png" alt="goose hexpansion">
+    <span class="label">Simple Honk by The Untitled Goose</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/pacman.png" alt="Pacman hexpansion">
+    <span class="label">Pacman by The Untitled Goose</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/keycard.png" alt="Doom Keycard hexpansion">
+    <span class="label">>Doom Keycard by The Untitled Goose</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/hexnotoad.gif" alt="Hexnotoad hexpansion">
+    <span class="label">>Hexnotoad by The Untitled Goose</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/hacktheplanet.png" alt="Hack the Planet hexpansion">
+    <span class="label">>Hack the Planet by The Untitled Goose</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
