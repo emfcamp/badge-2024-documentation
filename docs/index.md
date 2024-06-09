@@ -247,6 +247,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/hacktheplanet.png" loading="lazy" alt="Hack the Planet hexpansion">
     <span class="label">Hack the Planet by The Untitled Goose</span>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/henchmen.jpg" loading="lazy" alt="Henchmen hexpansion">
+    <span class="label">Henchmen by Brian Corteil</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/alien.jpg" loading="lazy" alt="Googly Eye Alien hexpansion">
+    <span class="label">Googly Eye Alien by Brian Corteil</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
