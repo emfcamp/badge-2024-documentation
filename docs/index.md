@@ -36,17 +36,17 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 - Round screen, six buttons, lots of colourful LEDs
 - Power management, motion sensing
 - An IMU (gyro + accelerometer)
-- BLE
+- Bluetooth (BLE)
 
 !!! info "The processor in the badge is the same as in 2022, and it will run [MicroPython](https://micropython.org/)."
 
 ## Hexpansions
 
 <!--hexpansions-definition-start-->
-Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1 mm card cut into the right hexagonal shape. Here are some community examples: (1)
+Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1mm card cut into the right hexagonal shape. Here are some community examples: (1)
 { .annotate }
 
-1.  If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or let us know on the irc! We'd love to feature all of your creations!
+1. If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or let us know on the IRC/Matrix! We'd love to feature all of your creations!
 <!--hexpansions-definition-end-->
 
 <div class="scroll-container admonition info">
@@ -77,7 +77,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/floppy-disk.jpg" alt="Floppy disk hexpansion">
-    <span class="label">Floppy disk "Flopagon" by Nathan Dumont</span>
+    <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/wheel.jpg" alt="Wheel hexpansion">
@@ -85,7 +85,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/segment-display.jpg" alt="A 7 segment display hexpansion">
-    <span class="label">7-Segment display by Iain Yarnall.</span>
+    <span class="label"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">7-Segment display</a> by Iain Yarnall.</span>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/mysterious-qr.jpg" alt="A hexpansion with a QR code that might rickroll you">
@@ -204,7 +204,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">ECHQ hexpansion by ECHQ village</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/breakout-garden.jpg" alt="ECHQ hexpansion">
+    <img src="/images/hexpansions/breakout-garden.jpg" alt="Breakout Garden hexpansion">
     <span class="label">Pimoroni Breakout Garden I2C by <a href="https://github.com/jpwsutton">James Sutton</a></span>
   </span>
   <span class="img-container">
@@ -212,11 +212,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Hexaspansaputer (hexpansion supercomputer) by o0mouse0o</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/pride-rainbow.jpg" alt="ECHQ hexpansion">
+    <img src="/images/hexpansions/pride-rainbow.jpg" alt="Pride rainbow LED strips hexpansion">
     <span class="label">A pride rainbow by o0mouse0o</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/6flags.webp" alt="ECHQ hexpansion">
+    <img src="/images/hexpansions/6flags.webp" alt="small flag hexpansion">
     <span class="label"><a href="https://www.printables.com/model/895999-6flags-hexpansion">6flags Hexpansion</a> by Ambrosia</span>
   </span>
 <!--hexpansions-end-->
