@@ -25,7 +25,7 @@ Some links to the correct screen:
 
 - [Aliexpress with connector soldered on](https://www.aliexpress.com/item/1005004392903184.html)
 - [Aliexpress with loose connector](https://www.aliexpress.com/item/1005005936868343.html)
-- [https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/](Amazon)
+- [Amazon](https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/)
 
 Carefully pull the connector of the display up at a 90 degree angle. If you bought a new display with a connector that is soldered on, carefully push the connector of the new display into the slots. The display is held in place by friction, so this is all you need to do.
 
