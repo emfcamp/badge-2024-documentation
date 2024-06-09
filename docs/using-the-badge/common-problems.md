@@ -31,6 +31,27 @@ Carefully pull the connector of the display up at a 90 degree angle. If you boug
 
 If you bought a display with a loose connector you have to also push the display onto the connector. If you have soldering tools, you can permanently affix the display to the connector.
 
+## Turn off badge with broken screen
+
+### Option 1: Buttons only
+
+1. Restart the badge by pressing the **Reboop** button until the light pattern restarts.
+2. Press **D** (down) three times.
+3. Press **C** (confirm) twice.
+
+### Option 2: `mpremote`
+
+[Install `mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) and follow the steps in [Debug your app on your badge](../tildagon-apps/run-on-badge.md#debug-your-app-on-your-badge) to get a shell on your badge and then run the following commands:
+
+```sh
+import machine
+import bq25895
+
+bq25895.bq25895(machine.I2C(7)).disconnect_battery()
+```
+
+After running the command, disconnect your badge from the USB cable and your badge will be turned off.
+
 ## I entered my name wrong
 
 If you want to retain your data, you can [install `mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) and follow the steps in [Debug your app on your badge](../tildagon-apps/run-on-badge.md#debug-your-app-on-your-badge) to get a shell on your badge and then change the setting by running the following commands, replacing `YourNewName` with your name:
