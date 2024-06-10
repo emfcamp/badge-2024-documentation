@@ -46,7 +46,8 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1mm card cut into the right hexagonal shape. Here are some community examples: (1)
 { .annotate }
 
-1. If you want to add your hexpansion to this gallery, you can [add them to the registry](https://github.com/hughrawlinson/hexpansion-registry), [add them to this issue](https://github.com/emfcamp/badge-2024-documentation/issues/149) or let us know on the IRC/Matrix! We'd love to feature all of your creations!
+1. If you want to add your hexpansions to this gallery, you can [add them to the registry](https://github.com/hughrawlinson/hexpansion-registry) or [add them to this issue](https://github.com/emfcamp/badge-2024-documentation/issues/149) or let us know on the IRC/Matrix! We'd love to feature all of your creations!
+
 <!--hexpansions-definition-end-->
 
 <div class="scroll-container scroll-container-large admonition info">
@@ -54,6 +55,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src="/images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)" data-title="Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond" data-description="">
     <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/ducks.jpg" loading="lazy" alt="Tildagon badge with five duck hexpansions and an emergency hot sauce hexpansion" data-title="Duck hexpansion by Tiff" data-description=".custom-desc-ducks">
+    <span class="label"><a href="https://www.instagram.com/tiffleek/reel/C7yx5jmNJ9d/">Ducks hexpansion</a> by Tiff</span>
+    <div class="glightbox-desc custom-desc-ducks">
+      <p>EMF ducks sixties style flying porcelain ducks</p>
+      <p>Link: <a href="https://www.instagram.com/tiffleek/reel/C7yx5jmNJ9d/">Instagram</a></p>
+    </div>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/eeh.gif" loading="lazy" alt="Rabbit hexpansion" data-title="EEH Hexpansion by Matt" data-description="">
@@ -333,33 +342,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <!--hexpansions-end-->
 </div>
 
-??? tip "Expand to show a list of variously realistic hexpansion ideas"
+!!! tip "Add your hexpansion! We'd love to feature all of your creations!"
 
-    - GPS / compass / IMU (for joust)
-    - Buzzer (for notifing the wearer and joust)
-    - Speaker (for notifying everyone near the wearer and joust)
-    - Heart rate monitor
-    - Modular synthesizer
-    - Pretty / blinding LEDs
-    - ePaper
-    - Actual paper
-    - Sandpaper
-    - Cat ears
-    - Drone arms
-    - Hexapod legs
-    - Fuzzy tail
-    - Googly eyes
-    - Memory card reader
-    - RFID reader
-    - TV-b-gone
-    - Infrared communication port
-    - Ultrasonic emitter
-    - Big red button
-    - Weather station
-    - Bicycle mount
-    - Polearm attachment
-    - Gnat attractor
-    - Keyboard
+    If you want to add your hexpansions to this gallery, you can [add them to the registry](https://github.com/hughrawlinson/hexpansion-registry) or [add them to this issue](https://github.com/emfcamp/badge-2024-documentation/issues/149) or let us know on the IRC/Matrix! We'll do the rest!
 
 For more information, see:
 
