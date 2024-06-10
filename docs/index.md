@@ -46,7 +46,7 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 Hexpansions are accessories that plug into the badge's expansion connectors. Almost anything can be a hexpansion - the simplest hexpansion is just a piece of 1mm card cut into the right hexagonal shape. Here are some community examples: (1)
 { .annotate }
 
-1. If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or let us know on the IRC/Matrix! We'd love to feature all of your creations!
+1. If you want to add your hexpansion to this gallery, you can [add them to the registry](https://github.com/hughrawlinson/hexpansion-registry), [add them to this issue](https://github.com/emfcamp/badge-2024-documentation/issues/149) or let us know on the IRC/Matrix! We'd love to feature all of your creations!
 <!--hexpansions-definition-end-->
 
 <div class="scroll-container-large admonition info">
