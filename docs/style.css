@@ -29,9 +29,16 @@ div.scroll-container .img-container {
 div.scroll-container-large .img-container {
   display: inline-flex;
   flex-direction: column;
-  max-width: 120px;
-  width: 120px;
+  max-width: 200px;
+  width: 200px;
   padding: 10px 0px;
+}
+
+@media (max-width: 768px) {
+  div.scroll-container-large .img-container {
+    max-width: 120px;
+    width: 120px;
+  }
 }
 
 .img-container > a {
