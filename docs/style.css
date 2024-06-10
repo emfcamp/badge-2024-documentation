@@ -5,7 +5,14 @@ div.scroll-container {
   padding: 10px;
 }
 
-div.scroll-container img {
+div.scroll-container-large {
+  background-color: transparent;
+  overflow: auto;
+  padding: 10px;
+  display: grid;
+}
+
+div.scroll-container img, div.scroll-container-large img {
   padding: 0px 10px;
   max-height: 150px;
 }
@@ -17,11 +24,19 @@ div.scroll-container .img-container {
   padding: 10px 0px;
 }
 
+div.scroll-container-large .img-container {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 200px;
+  width: 200px;
+  padding: 10px 0px;
+}
+
 .img-container > a {
   margin: auto;
 }
 
-div.scroll-container .img-container .label {
+.img-container .label {
   max-width: 130px;
   text-wrap: wrap;
   text-align: center;
