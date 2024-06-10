@@ -339,6 +339,20 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <p>Link: <a href="https://github.com/walkerdanny/caffeine-jitters/">GitHub</a></p>
     </div>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/petals.jpg" loading="lazy" alt="petal hexpansions on a badge" data-title="Petals by lornajane" data-description=".custom-desc-petals">
+    <span class="label">Petals by <a href="https://indieweb.social/@lornajane/112536772003752312">lornajane</a></span>
+    <div class="glightbox-desc custom-desc-petals">
+      <p>Petals on a badge</p>
+    </div>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/laser.jpg" loading="lazy" alt="Laser Tag and Shieldallion hexpansions" data-title="Laser Tag Shieldallion by kianryan" data-description=".custom-desc-jittery">
+    <span class="label">Laser Tag Shieldallion by <a href="https://oldbytes.space/@kianryan/112541772244815335">kianryan</a></span>
+    <div class="glightbox-desc custom-desc-jittery">
+      <p>Sofware link may be available later...</p>
+    </div>
+  </span>
 <!--hexpansions-end-->
 </div>
 
