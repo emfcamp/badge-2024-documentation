@@ -236,7 +236,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Pacman by The Untitled Goose</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/keycard.png" loading="lazy" alt="Doom Keycard hexpansion">
+    <img src="/images/hexpansions/keycard.jpg" loading="lazy" alt="Doom Keycard hexpansion">
     <span class="label">Doom Keycard by The Untitled Goose</span>
   </span>
   <span class="img-container">
@@ -254,6 +254,18 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src="/images/hexpansions/alien.jpg" loading="lazy" alt="Googly Eye Alien hexpansion">
     <span class="label">Googly Eye Alien by Brian Corteil</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/tilde-lamp.jpg" loading="lazy" alt="Lamp hexpansion">
+    <span class="label">Lamp hexpansion by Tilde</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/tilde-breakout.jpg" loading="lazy" alt="Breakout hexpansion">
+    <span class="label">Breakout hexpansion by Tilde</span>
+  </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/jittery.jpg" loading="lazy" alt="Breakout hexpansion">
+    <span class="label"><a href="https://github.com/walkerdanny/caffeine-jitters/">Caffeine Jitters</a> by Danny Walker</span>
   </span>
 <!--hexpansions-end-->
 </div>
