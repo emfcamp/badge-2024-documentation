@@ -1,4 +1,4 @@
-# Write an app to a hexpansion
+# Write an app to an EEPROM
 
 !!! warning "This document is a work in progress. More details will be added as they become available."
 
