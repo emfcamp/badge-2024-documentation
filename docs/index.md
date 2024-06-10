@@ -49,7 +49,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 1. If you want to add your hexpansion to this gallery, you can [file a PR](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md) or let us know on the IRC/Matrix! We'd love to feature all of your creations!
 <!--hexpansions-definition-end-->
 
-<div class="scroll-container admonition info">
+<div class="scroll-container-large admonition info">
 <!--hexpansions-start-->
   <span class="img-container">
     <img src="/images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)" data-title="Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond" data-description="">
