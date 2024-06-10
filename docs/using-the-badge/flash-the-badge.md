@@ -14,6 +14,12 @@ To flash your badge, your badge **must be completely powered off**. If your badg
     !!! info "The flasher may not work in other browsers."
 
 1. Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
+
+    !!! info "Not working?"
+
+        If you cannot power off your badge or disconnect the power, you can instead press and hold **bat** while the badge is unplugged for ~20 seconds which will do a hard reboot of the badge by cutting and reapplying power.
+        If you do this while boop is held, it'll go into the bootloader and wait there.
+
 1. Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.
 1. Select the **Install Tildagon** option.
 
