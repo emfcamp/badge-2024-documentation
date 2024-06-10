@@ -5,11 +5,13 @@ div.scroll-container {
   padding: 10px;
 }
 
-div.scroll-container-large {
+div.scroll-container.scroll-container-large {
   background-color: transparent;
   overflow: auto;
   padding: 10px;
-  display: grid;
+  display: inline-table;
+  text-align: center;
+  white-space: normal;
 }
 
 div.scroll-container img, div.scroll-container-large img {
