@@ -7,7 +7,9 @@ There are several ways to connect your Tildagon to Wi-Fi depending on what appro
 
 # Option 1 - Through the GUI
 
-!!! warning "Early versions of the firmware did not include support for updating the Wi-Fi details through the GUI, you'll need to update the firmware before completing this option."
+!!! warning ""
+
+    Early versions of the firmware did not include support for updating the Wi-Fi details through the badge settings menu. If you are on an early version, you'll need to [update the firmware](./flash-the-badge.md) before completing this option.
 
 This is the easiest option, but a real pain to do because you have to type out each letter using the up (A), down (D) and select (B) keys.
 
