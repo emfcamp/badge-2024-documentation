@@ -266,11 +266,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/hexpansaputer.jpg" loading="lazy" alt="Hexaspansaputer" data-title="Hexaspansaputer (hexpansion supercomputer) by o0mouse0o" data-description="">
+    <img src="/images/hexpansions/hexpansaputer.jpg" loading="lazy" alt="Hexaspansaputer" data-title="Hexaspansaputer (hexpansion supercomputer) by o0mouse0o" data-description="A mini flashing supercomputer in RED, BLUE and GREEN. Called Hexaspansaputer - a pun on Hexpansion and Supercomputer and might be familiar to people who view Big Clives Livestreams.">
     <span class="label">Hexaspansaputer (hexpansion supercomputer) by o0mouse0o</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/pride-rainbow.jpg" loading="lazy" alt="Pride rainbow LED strips hexpansion" data-title="A pride rainbow by o0mouse0o" data-description="">
+    <img src="/images/hexpansions/pride-rainbow.jpg" loading="lazy" alt="Pride rainbow LED strips hexpansion" data-title="A pride rainbow by o0mouse0o" data-description="A static Pride Flag with 42 LEDs.">
     <span class="label">A pride rainbow by o0mouse0o</span>
   </span>
   <span class="img-container">
