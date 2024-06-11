@@ -39,7 +39,7 @@ From top to bottom, left to right:
 - badge base
 - display
 - 3 screws, 2 glue stickers
-- display cable
+- flexible cable
 - Tildagon sticker
 
 ### 1. Attach the standoffs to the base of the badge
@@ -56,7 +56,7 @@ Get the three golden standoffs. Remove the plastic protector stickers on top of 
 
 ### 2. Assemble the front of the badge
 
-Start with the badge front, display cable, and glue bits:
+Start with the badge front, flexible cable, and glue bits:
 
 ![Components for the front](../images/badge-photos/front-components.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
@@ -81,7 +81,7 @@ Peel the protectors from the glue stickers to attach the battery. Then, get the 
 
 ### 3. Attach the display
 
-Attach the other end of the ribbon display cable to the back board. Then gently push the display into the pins on the front of the badge.
+Attach the other end of the flexible ribbon cable to the back board. Then gently push the display into the pins on the front of the badge.
 
 !!! note "Display not working?"
 
