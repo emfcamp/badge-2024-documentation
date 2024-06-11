@@ -110,11 +110,37 @@ Think of the `ctx` object as a canvas. The object stores the drawing state of th
 - The current values of the following attributes:
     - `x`: The current x coordinate. Think of it as where your cursor is on the canvas, ready to draw.
     - `y`: The current y coordinate.
-    - `font`: The font to be used for text.
-    - `font_size`: The font size to be used for text.
-    - `text_align`: The alignment to be used for text.
-    - `text_baseline`: The baseline to be used for text.
-    - `line_width` The line width to be used for text:
+    - `font`: The font to be used for text. Default: `""`.
+        Options:
+            - `"Arimo Regular"`
+            - `"Arimo Bold"`
+            - `"Arimo Italic"`
+            - `"Arimo Bold Italic"`
+            - `"Camp Font 1"`
+            - `"Camp Font 2"`
+            - `"Camp Font 3"`
+            - `"Material Icons"`
+            - `"Comic Mono"`
+    - `font_size`: The font size to be used for text. Default: `10.0`.
+    - `global_alpha`: The alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas. Default: `1.0`.
+    - `text_align`: The alignment to be used for text. Default: `"start"`.
+        Options:
+            - `"right"`: The text is right-aligned.
+            - `"left"`: The text is left-aligned.
+            - `"justify"`: The text is justified.
+            - `"center`: The text is centered.
+            - `"start"`: The text is aligned at the normal start of the line (left-aligned for left-to-right locales, right-aligned for right-to-left locales).
+            - `"end"`: The text is aligned at the normal end of the line (right-aligned for left-to-right locales, left-aligned for right-to-left locales).
+
+    - `text_baseline`: The baseline to be used for text. Default `"alphabetic"`.
+        Options:
+            - `"alphabetic"`: The text baseline is the normal alphabetic baseline.
+            - `"hanging"`: The text baseline is the hanging baseline. (Used by Tibetan and other Indic scripts.)
+            - `"top"`: The text baseline is the top of the em square.
+            - `"middle"`: The text baseline is the middle of the em square.
+            - `"bottom"`: The text baseline is the bottom of the bounding box. This differs from the ideographic baseline in that the ideographic baseline doesn't consider descenders.
+            - `"ideographic"`: The text baseline is the ideographic baseline; this is the bottom of the body of the characters, if the main body of characters protrudes beneath the alphabetic baseline. (Used by Chinese, Japanese, and Korean scripts.)
+    - `line_width` The line width to be used for drawing lines. Default: `1.0`.
     - `image_smoothing`: Determines whether scaled images are smoothed. Default `True`.
     - `compositing_mode`: The current compositing mode.
     - `global_alpha`: The alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas.
