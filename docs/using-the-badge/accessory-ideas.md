@@ -7,9 +7,15 @@ weight: 5
 
 ### A 3D-printed case
 
-You can pring the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
+You can print the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
 
 ![Badge bumper case](../images/badge-photos/Bumper%20Case.png)
+
+### A 3D-printed stand
+
+You can print a [Tildagon stand](https://www.printables.com/model/909352-tildagon-stand) to better display your badge.
+
+![Tildagon stand](../images/badge-photos/stand.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ### Fancy lanyard
 

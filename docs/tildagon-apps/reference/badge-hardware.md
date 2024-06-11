@@ -447,7 +447,7 @@ bus = I2C(slot)
 
     !!! note "Untested"
 
-        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/71).
+        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/176).
 
     ```python
     import app

@@ -12,7 +12,7 @@ There are three options for your hexpansion app:
 
 1. Your hexpansion has an EEPROM and your app will be written to it and run from it.
 2. Your hexpansion has an EEPROM, but your app is going to be downloaded from the app store and run separately.
-3. Your hexpansion does not have an EEPROM, so your app will be downloaded  from the app store and run separately. 
+3. Your hexpansion does not have an EEPROM, so your app will be downloaded  from the app store and run separately.
 
 Which aproach you use is dependent on the hexpansion you're writing an app for and your own personal preference. If your app is likely to be so large that it'll exceed the space on the EEPROM, you might want to explore cross-compiling your app using [mpy-cross](https://pypi.org/project/mpy-cross/) to reduce its size. If your app is still too large, option 2 is your best bet.
 
@@ -32,7 +32,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
 
     !!! note "Untested"
 
-        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/71).
+        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/176).
 
     ```python
     import app
@@ -141,7 +141,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     ```
 
 === "App loaded from badge, no EEPROM"
-    
+
     If your hexpansion does not have an EEPROM, there is nothing for the badge to look for to detect it's presence. Because of this, you can ask the user to select the hexpansion port manually using a simple [menu](../tildagon-apps/reference/ui-elements.md#menu) system:
 
     ```python
@@ -171,10 +171,10 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 self.menu.update(delta)
             # else:
                 # We have a hexpansion config, do some stuff with it!
-                
+
         def draw(self, ctx):
             clear_background(ctx)
-            
+
             if self.hexpansion_config is None:
                 self.menu.draw(ctx)
 
@@ -188,7 +188,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 prompt_message = "Select hexpansion port:"
                 ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
                 ctx.restore()
-            
+
             else:
                 ctx.save()
                 ctx.font_size = 24
@@ -210,7 +210,7 @@ The `HexpansionConfig` object that you get after following the examples is where
 | Object | Description | Example Usage |
 | ------ | ----------- | --------- |
 | `HexpansionConfig.port` | The port number your hexpansion is connected to. |  |
-| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html)  | 
+| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html)  |
 | `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. |  [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
 | `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
