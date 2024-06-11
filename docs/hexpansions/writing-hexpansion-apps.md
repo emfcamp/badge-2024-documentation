@@ -22,13 +22,13 @@ If your hexpansion has no EEPROM then you can still interact with it from your a
 
 ## Finding your hexpansion
 
-In order to make your hexpansion do something, you'll need to know where it is plugged in on the badge. The six hexpansion slots are numbered 1-6, clockwise from the upper-right-hand slot. 
+In order to make your hexpansion do something, you'll need to know where it is plugged in on the badge. The six hexpansion ports are numbered 1-6, clockwise from the upper-right-hand port. 
 
-Below is an example of how you find which slot your hexpansion is plugged in to for each of the three scenarios.
+Below is an example of how you find which port your hexpansion is plugged in to for each of the three scenarios.
 
 === "App loaded from EEPROM"
 
-    If your app is loaded from EEPROM on a hexpansion, you can get the slot from the `HexpansionConfig` object that is automatically passed to your app:
+    If your app is loaded from EEPROM on a hexpansion, you can get the port from the `HexpansionConfig` object that is automatically passed to your app:
 
     !!! note "Untested"
 
@@ -178,21 +178,21 @@ Below is an example of how you find which slot your hexpansion is plugged in to 
             if self.hexpansion_config is None:
                 self.menu.draw(ctx)
 
-                # This might look weird, but we're just drawing a shape as a slot indicator.
+                # This might look weird, but we're just drawing a shape as a port indicator.
                 ctx.save()
                 ctx.font_size = 22
                 ctx.rgb(*colors["dark_green"]).rectangle(-120,-120, 240, 100).fill()
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
                 rotation_angle = self.menu.position*pi/3
                 ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80,-120,40,240).fill()
-                prompt_message = "Select hexpansion slot:"
+                prompt_message = "Select hexpansion port:"
                 ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
                 ctx.restore()
             
             else:
                 ctx.save()
                 ctx.font_size = 24
-                msg = "Hexpansion in slot " + str(self.hexpansion_config.port)
+                msg = "Hexpansion in port " + str(self.hexpansion_config.port)
                 msg_width = ctx.text_width(msg)
                 ctx.rgb(1,1,1).move_to(-msg_width/2,0).text(msg)
                 ctx.restore()
@@ -201,7 +201,7 @@ Below is an example of how you find which slot your hexpansion is plugged in to 
     ```
 
 
-In all of these examples, the `HexpansionConfig` object is used to provide information about the slot your hexpansion is plugged into.
+In all of these examples, the `HexpansionConfig` object is used to provide information about the port your hexpansion is plugged into.
 
 ## The HexpansionConfig class
 
@@ -210,9 +210,9 @@ The `HexpansionConfig` object that you get after following the examples is where
 | Object | Description | Example Usage |
 | ------ | ----------- | --------- |
 | `HexpansionConfig.port` | The port number your hexpansion is connected to. |  |
-| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion slot. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html)  | 
-| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion slot. These are the emulated, low-speed GPIO pins for this hexpansion slot. |  [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
-| `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion slot. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
+| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html)  | 
+| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. |  [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
+| `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
 ### Pin vs ePin
 
@@ -220,7 +220,10 @@ Hexpansion ports have two types of GPIO pins -  `Pin` objects and `ePin` objects
 
 `Pin` objects are regular high speed GPIO pins. These are available through `HexpansionConfig.pin[]`. They are connected directly to the GPIO pins of the ESP32-S3, and can be controlled using the standard MicroPython `Pin` API. These pins are available for routing any of the unused peripherals from the ESP32-S3 to, so you could configure them as an `SPI` bus, use the `RMT` peripheral, be a `PWM` output etc. You can also use them for any other GPIO tasks where switching speed is important, such as communicating on an arbitrary protocol. Don't try to source or sink too much current from these pins - the usual rules for connecting things to microcontroller pins apply here.
 
-`ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware.
+!!! note "Using the ADC"
+    If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
+
+`ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
 
 
 ## Further development
