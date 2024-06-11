@@ -15,9 +15,9 @@ Some links to the correct screen:
 - [Aliexpress with loose connector](https://www.aliexpress.com/item/1005005936868343.html)
 - [Amazon](https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/)
 
-Carefully pull the connector of the display up at a 90 degree angle. If you bought a new display with a connector that is soldered on, carefully push the connector of the new display into the slots. The display is held in place by friction, so this is all you need to do.
+Carefully pull the connector of the display up perpendicular to the board surface, without bending the pins. If you bought a new display with a connector that is soldered on, carefully push the connector of the new display into the slots. The display is held in place by friction, so this is all you need to do.
 
-If you bought a display with a loose connector you have to also push the display onto the connector. If you have soldering tools, you can permanently affix the display to the connector.
+If you bought a display with a loose pins you have to also push the display onto the pin and solder it on the screen site, otherwise it won't make electrical contact.
 
 ## Replace the FPC connector
 
@@ -45,7 +45,7 @@ The badge uses [TS24CA tactile switches](https://www.lcsc.com/product-detail/Tac
 
 !!! tip "You've found a badge CHALLENGE!"
 
-    Your challenge, should you choose to accept it, is to document how you replaced your button if you do so. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/175).
+    Your challenge, should you choose to accept it, is to document how you replaced one of your buttons if you do so. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/175).
 
 ## Replace an LED
 
@@ -60,7 +60,7 @@ The badge uses two types of LEDs:
 
 ## Replace a battery
 
-The badge uses a [2000mAh 3.7V LiPo Battery](https://thepihut.com/products/2000mah-3-7v-lipo-battery). You can look for batteries with higher or lower mAh numbers, this just affects how long the battery lasts (higher number, longer battery life).
+The badge uses a [2000mAh 3.7V LiPo Battery](https://thepihut.com/products/2000mah-3-7v-lipo-battery). You can look for batteries with higher or lower mAh numbers, this just affects how long the battery lasts (higher number, longer battery life). The battery size maximum is 64x40x7mm. Bigger batteries will not fit. Smaller ones will fit.
 
 Make sure the connector and pinout are correct. Compare the photo of the connector with the battery you have and ensure the colours match.
 
