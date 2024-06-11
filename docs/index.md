@@ -371,7 +371,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src="/images/hexpansions/brainslug.jpeg" loading="lazy" alt="Brain slug hexpansions" data-title="Brainslug by Paul Beech" data-description=".custom-desc-jittery">
     <span class="label">Brainslug by <a href="https://x.com/guru/status/1793620540403613986">Paul Beech</a></span>
     <div class="glightbox-desc custom-desc-jittery">
-      <p>Link: <a href="https://x.com/guru/status/1793620540403613986">Twitter</x></p>
+      <p>Link: <a href="https://x.com/guru/status/1793620540403613986">Twitter</a></p>
     </div>
   </span>
 <!--hexpansions-end-->
