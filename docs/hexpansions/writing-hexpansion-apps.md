@@ -22,7 +22,7 @@ If your hexpansion has no EEPROM then you can still interact with it from your a
 
 ## Finding your hexpansion
 
-In order to make your hexpansion do something, you'll need to know where it is plugged in on the badge. The six hexpansion ports are numbered 1-6, clockwise from the upper-right-hand port. 
+In order to make your hexpansion do something, you'll need to know where it is plugged in on the badge. The six hexpansion ports are numbered 1-6, clockwise from the upper-right-hand port (the port above the USB out connector).
 
 Below is an example of how you find which port your hexpansion is plugged in to for each of the three scenarios.
 
