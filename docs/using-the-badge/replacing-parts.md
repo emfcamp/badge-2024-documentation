@@ -28,7 +28,7 @@ The badge uses a [JUSHUO AFC01-S30FCC-00](https://www.lcsc.com/product-detail/FF
 
     Your challenge, should you choose to accept it, is to document how you replaced your FPC if you do so (pictures would be great!). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/175).
 
-## Replace the display cable
+## Replace the flexible cable
 
 The badge uses a [HCTL HC-FFC05-30P-100-A-01 (30 pin 0.5mm pitch 100mm same side connector)](https://www.lcsc.com/product-detail/FFC-FPC-Connect-Cables_HCTL-HC-FFC05-30P-100-A-01_C6575029.html).
 
