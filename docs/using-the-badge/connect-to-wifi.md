@@ -30,21 +30,39 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 2. With the device connected via USB-C to your computer press "Connect".
 3. Select the Tildagon from the list.
 4. Select "Logs & Console".
-5. Enter the following commands one at a time, followed by enter, editing the 'changeme' sections with your details :
+5. Enter the following commands one at a time, followed by enter, editing the 'changeme' sections with your details:
 
-```
-import settings
-settings.set('wifi_ssid', 'changeme')
-settings.set('wifi_password', 'changeme')
-```
+=== "Regular networks"
 
-If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value.
-If you are connecting to a WPA2-Enterprise network, replace `None` with your WPA2-Enterprise username.
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    ```
 
-```
-settings.set('wifi_wpa2ent_username', None)
-settings.save()
-```
+    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
+
+    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
+
+    ```
+    settings.set('wifi_wpa2ent_username', None)
+    ```
+
+    Run the following commant to save the settings
+
+    ```
+    settings.save()
+    ```
+
+=== "WPA2 Enterprise network"
+
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    settings.set('wifi_wpa2ent_username', 'username')
+    settings.save()
+    ```
 
 6. Push the Reboop button and try connecting.
 
@@ -58,14 +76,40 @@ settings.save()
    > Connected to MicroPython at /dev/ttyACM0<br>
    > Use Ctrl-] or Ctrl-x to exit this shell
 4. Hold down the `ctrl` key on your computer. While holding it down, press the `C` key on your computer. This will open up a shell for you to enter commands.
-5. Enter the following commands one at a time, followed by enter, editing the "changeme" sections with your details :
+5. Enter the following commands one at a time, followed by enter, editing the "changeme" sections with your details:
 
-```
-import settings
-settings.set("wifi_ssid", "changeme")
-settings.set("wifi_password", "changeme")
-settings.save()
-```
+=== "Regular networks"
+
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    ```
+
+    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
+
+    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
+
+    ```
+    settings.set('wifi_wpa2ent_username', None)
+    ```
+
+    Run the following commant to save the settings
+
+    ```
+    settings.save()
+    ```
+
+=== "WPA2 Enterprise network"
+
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    settings.set('wifi_wpa2ent_username', 'username')
+    settings.save()
+    ```
+
 6. Restart the badge. Holdidown the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
 7. To test if you are connected, open the "App store"
 
