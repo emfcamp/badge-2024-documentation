@@ -366,6 +366,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <p>Link: <a href="https://x.com/guru/status/1793620540403613986">Twitter</x></p>
     </div>
   </span>
+  <span class="img-container">
+    <img src="/images/hexpansions/cat.jpg" loading="lazy" alt="Cat hexpansion" data-title="Cat hexpansion" data-description="">
+    <span class="label">Cat hexpansion</span>
+  </span>
 <!--hexpansions-end-->
 </div>
 
