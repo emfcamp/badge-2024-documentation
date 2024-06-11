@@ -50,7 +50,26 @@ settings.save()
 
 !!! info "If the Wi-Fi won't connect after performing these steps, try changing the SSID and password commands to be in single quotes instead of double quotes. This seems to make a difference in certain circumstances."
 
-# Option 3 - Create a clone of the EMF Wi-Fi network
+# Option 3 - Use mpremote
+
+1. Install [mpremote](https://docs.micropython.org/en/latest/reference/mpremote.html)
+2. Connect the Tildagon to your computer using a USB-C data cable
+3. On your computer's command line, run `mpremote`. You should see:
+   > Connected to MicroPython at /dev/ttyACM0<br>
+   > Use Ctrl-] or Ctrl-x to exit this shell
+4. Hold down the `ctrl` key on your computer. While holding it down, press the `C` key on your computer. This will open up a shell for you to enter commands.
+5. Enter the following commands one at a time, followed by enter, editing the "changeme" sections with your details :
+
+```
+import settings
+settings.set("wifi_ssid", "changeme")
+settings.set("wifi_password", "changeme")
+settings.save()
+```
+6. Restart the badge. Holdidown the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
+7. To test if you are connected, open the "App store"
+
+# Option 4 - Create a clone of the EMF Wi-Fi network
 
 This could be a good option if you manage a Makerspace or other location where multiple EMF badges might visit.
 
