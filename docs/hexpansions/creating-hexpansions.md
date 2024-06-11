@@ -6,7 +6,7 @@
    end="<!--hexpansions-definition-end-->"
 %}
 
-<div class="scroll-container">
+<div class="scroll-container admonition info">
 {%
    include-markdown "../index.md"
    start="<!--hexpansions-start-->"
