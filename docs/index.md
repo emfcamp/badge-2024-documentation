@@ -112,6 +112,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/monsters.jpg" loading="lazy" alt="little monster hexpansions" data-title="Little Monsters by Talula" data-description="">
+    <span class="label">Little Monsters by Talula</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/segment-display.jpg" loading="lazy" alt="A 7 segment display hexpansion" data-title="7-segment display by Iain Yarnall" data-description=".custom-desc-segment">
     <span class="label"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">7-Segment display</a> by Iain Yarnall.</span>
     <div class="glightbox-desc custom-desc-segment">
@@ -360,15 +364,15 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
+    <img src="/images/hexpansions/cat.jpg" loading="lazy" alt="Cat hexpansion" data-title="Cat hexpansion" data-description="">
+    <span class="label">Cat hexpansion</span>
+  </span>
+  <span class="img-container">
     <img src="/images/hexpansions/brainslug.jpeg" loading="lazy" alt="Brain slug hexpansions" data-title="Brainslug by Paul Beech" data-description=".custom-desc-jittery">
     <span class="label">Brainslug by <a href="https://x.com/guru/status/1793620540403613986">Paul Beech</a></span>
     <div class="glightbox-desc custom-desc-jittery">
       <p>Link: <a href="https://x.com/guru/status/1793620540403613986">Twitter</x></p>
     </div>
-  </span>
-  <span class="img-container">
-    <img src="/images/hexpansions/cat.jpg" loading="lazy" alt="Cat hexpansion" data-title="Cat hexpansion" data-description="">
-    <span class="label">Cat hexpansion</span>
   </span>
 <!--hexpansions-end-->
 </div>
