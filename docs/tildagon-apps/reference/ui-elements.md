@@ -46,7 +46,6 @@ __app_export__ = MenuDemo
 
 You can see a more comprehensive example in the [`menu_demo.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/menu_demo.py).
 
-
 ### Usage
 
 To use a menu:
@@ -625,6 +624,30 @@ You can use the following methods on a `TextDialog` object:
 | `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 | `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
+## TextDisplay
+
+!!! tip "You've found a badge CHALLENGE!"
+
+    Your challenge, should you choose to accept it, is to document the [`TextDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+
+## ButtonDisplay
+
+!!! tip "You've found a badge CHALLENGE!"
+
+    Your challenge, should you choose to accept it, is to document the [`ButtonDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+
+## DefinitionDisplay
+
+!!! tip "You've found a badge CHALLENGE!"
+
+    Your challenge, should you choose to accept it, is to document the [`DefinitionDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+
+## LinearLayout
+
+!!! tip "You've found a badge CHALLENGE!"
+
+    Your challenge, should you choose to accept it, is to document the [`LinearLayout` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+
 ## Tokens
 
 The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use:
@@ -637,8 +660,6 @@ The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/
 | ------ | ----------- | --------- | ------- |
 | `clear_background(ctx)` | Clear the badge background. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 | `set_color(ctx, color)` | Set the color for the canvas. | <ul><li><code>ctx</code>: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md).</li><li><code>color</code>: The provided color as a string from the following options: `pale_green`, `mid_green`, `dark_green`, `colors.yellow`, `colors.orange`, `colors.pink`, `colors.blue`, `ui_colors.background`, `ui_colors.label`. </li></ul> | None |
-
-
 
 #### Usage
 
