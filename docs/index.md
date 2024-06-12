@@ -198,8 +198,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Duck pond hexpansion by Andy Piper</span>
   </span>
   <span class="img-container">
-    <img src="/images/hexpansions/batwings.jpg" loading="lazy" alt="Bat wing hexpansion" data-title="Bat wing hexpansions by clayalien" data-description="">
-    <span class="label">Bat wing hexpansions by clayalien</span>
+    <img src="/images/hexpansions/batwings.jpg" loading="lazy" alt="Bat wing hexpansion" data-title="Bat wing hexpansions by clayalien" data-description=".custom-desc-wings">
+    <span class="label"><a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion">Bat wing hexpansions</a> by clayalien</span>
+    <div class="glightbox-desc custom-desc-wings">
+      <p>Link: <a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion">Printables</a></p>
+    </div>
   </span>
   <span class="img-container">
     <img src="/images/hexpansions/not_lego_but_compatible.webp" loading="lazy" alt="Not lego baseplate hexpansion" data-title="Not lego baseplate hexpansion by adie" data-description=".custom-desc-compatible">
