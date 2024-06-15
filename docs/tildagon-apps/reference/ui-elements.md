@@ -661,6 +661,10 @@ class TextDisplayDemo(app.App):
 __app_export__ = TextDisplayDemo
 ```
 
+!!! tip "You've found a badge CHALLENGE!"
+
+    Your challenge, should you choose to accept it, is to document an advanced version of using the [`TextDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py) that supports scrolling. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+
 ### Usage
 
 To use a text display:
@@ -687,10 +691,9 @@ To use a text display:
 
     | Parameter | Type | Description |
     | --------- | ---- | ----------- |
-    | `app` | `App` | The app to add the text display to. |
     | `text` | `str` | The long text to display. |
     | `font_size` | `int` | The font size to display the text in. |
-    | `rgb` | `method` | The color to display the text in. |
+    | `rgb` | `tuple` | The color to display the text in. |
 
 1. Add the following lines in your `draw()` method to draw the app's menu:
 
