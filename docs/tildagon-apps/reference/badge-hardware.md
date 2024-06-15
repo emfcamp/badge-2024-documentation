@@ -207,69 +207,152 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
 
 You can see a more comprehensive example in [`dialog.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/dialog.py).
 
-## eGPIO
+## Pins
 
-!!! tip "You've found a badge CHALLENGE!"
+Each hexpansion has:
 
-    Your challenge, should you choose to accept it, is to test eGPIO and finish the following documentation. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/70).
+- 5 low speed (LS) emulated GPIO (eGPIO) pins which you can use with [the tildagonos `Pin`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py) (2, 3, 7, 8, 9)
+- 4 high speed (HS) GPIO pins which you can use with the `machine.Pin` library (12, 13, 18, 19)
+- 6 GND pins (1, 10, 11, 14, 17, 20)
+- 1 pin that detects insertion (6)
+- 2 3.3V Power pins (15, 16)
+- 1 SDA pin (Data) (4)
+- 1 SCL pin (Clock) (5)
 
+!!! warning
 
-!!! danger
-
-      This part is not fully documented. PRs are welcome.
-
-
-You can use the board's eGPIO pins with the [`tildagonos`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py) package:
-
-### Methods
-
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `tildagonos.set_egpio_pin()` | Set the eGPIO state of a pin. | `pin`: The pin to get the state for. | <ul><li>`pin`: The pin to get the state for. Valid values are: `EPIN_LED_POWER`, `EPIN_ND_A`, `EPIN_ND_B`, `EPIN_ND_C`, `EPIN_ND_D`, `EPIN_ND_E`, `EPIN_ND_F`.</li><li> `boolean`: The state of the pin.<li></ul> |
-| `tildagonos.check_egpio_state()` | Get the eGPIO state of a pin. | `pin`: The pin to get the state for. Valid values are: `EPIN_LED_POWER`, `EPIN_ND_A`, `EPIN_ND_B`, `EPIN_ND_C`, `EPIN_ND_D`, `EPIN_ND_E`, `EPIN_ND_F`. | `boolean`: The state of the pin. |
-| `tildagonos.read_egpios()` | Reads the current eGPIO states and stores them for calls to `tildagonos.check_egpio_state()`. | None. | None. |
-| `tildagonos.set_led_power()` | `state` (`boolean`): The state of the pin. | `boolean`: `True` sets the LED to on, `False` sets the LED to off. | None. |
-
+    eGPIO does not work correctly in version 1.6.0.
 
 ### Example
 
-This example TODO.
+Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can  see how to access an toggle the `Pin`s in the update methods:
 
 ```python
 import app
 
-from app_components import clear_background
+from system.hexpansion.config import *
+from app_components import clear_background, Menu
+from app_components.tokens import colors
 from events.input import Buttons, BUTTON_TYPES
-from tildagonos import tildagonos
+from math import pi
 
-class GPIOExample(app.App):
+menu_items = ["1", "2", "3", "4", "5", "6"]
+
+class ExampleApp(app.App):
     def __init__(self):
+        self.menu = Menu(self, menu_items, select_handler=self.select_handler, back_handler=self.back_handler)
+        self.hexpansion_config = None
         self.button_states = Buttons(self)
+        self.pins = {}
+
+    def select_handler(self, item, idx):
+        self.hexpansion_config = HexpansionConfig(idx+1)
+        self.menu = None
+
+    def back_handler(self):
+        self.minimise()
 
     def update(self, delta):
-        if self.button_states.get(BUTTON_TYPES["RIGHT"]):
-            # TODO
-            tildagonos.read_egpios()
-            tildagonos.check_egpio_state()
-            tildagonos.set_egpio_pin()
-            tildagonos.set_led_power()
+        if self.hexpansion_config is None:
+            self.menu.update(delta)
+
+        if self.hexpansion_config and not self.pins:
+            # eGPIO pins
+            self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
+
+            # GPIO pins
+            self.pins["hs_1"] = self.hexpansion_config.pin[0]
+            # All HS pins start in low mode. Initialize them as follows:
+            self.pins["hs_1"].init(self.pins["hs_1"].OUT)
+
+        if not self.menu and self.button_states.get(BUTTON_TYPES["UP"]):
+            print()
+            self.button_states.clear()
+            # Toggle pin ls_1
+            if self.pins["ls_1"].value():
+                self.pins["ls_1"].off()
+            else:
+                self.pins["ls_1"].on()
+        if not self.menu and self.button_states.get(BUTTON_TYPES["DOWN"]):
+            self.button_states.clear()
+            # Toggle pin hs_1
+            if self.pins["hs_1"].value():
+                self.pins["hs_1"].off()
+            else:
+                self.pins["hs_1"].on()
 
     def draw(self, ctx):
         clear_background(ctx)
 
-__app_export__ = GPIOExample
+        if self.hexpansion_config is None:
+            self.menu.draw(ctx)
+
+            # Drawing a shape as a port indicator.
+            ctx.save()
+            ctx.font_size = 22
+            ctx.rgb(*colors["dark_green"]).rectangle(-120,-120, 240, 100).fill()
+            ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
+            rotation_angle = self.menu.position*pi/3
+            ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80,-120,40,240).fill()
+            prompt_message = "Select hexpansion port:"
+            ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
+            ctx.restore()
+
+        else:
+            ctx.save()
+            ctx.font_size = 24
+            msg = "Hexpansion in port " + str(self.hexpansion_config.port)
+            msg_width = ctx.text_width(msg)
+            ctx.rgb(1,1,1).move_to(-msg_width/2,0).text(msg)
+
+            # draw pin values
+            pin_ls_1 = "LS_1: " + str(self.pins["ls_1"].value())
+            msg_width = ctx.text_width(pin_ls_1)
+            ctx.rgb(1,1,1).move_to(-msg_width/2,-90).text(pin_ls_1)
+
+            pin_hs_1 = "HS_1: " + str(self.pins["hs_1"].value())
+            msg_width = ctx.text_width(pin_hs_1)
+            ctx.rgb(1,1,1).move_to(-msg_width/2,90).text(pin_hs_1)
+
+            ctx.restore()
+
+__app_export__ = ExampleApp
 ```
 
-You can see a more comprehensive example in the [`intro_app.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/intro_app.py).
+A more elaborate example is this [breadboard tester app](https://github.com/npentrel/tildagon-breadboard-tester/blob/main/app.py) which allows you to toggle all GPIO and eGPIO pins.
+
+### Methods
+
+GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html).
+
+[eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) support the following methods:
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `on()` | Drive the pin high. | None | None |
+| `off()` | Drive the pin low. | None | None |
+| `value()` | If provided with a value, sets the `Pin` value. If called without value, gets the `Pin` value. | None | `value`: The pin value. If called without a `value`. |
 
 ### Usage
 
-To use the LEDs:
+To use the `Pin`s:
 
-1. Import the `tildagonos` package:
+1. Access the pins from the `HexpansionConfig` object and for GPIO pins, initialize the pins:
 
     ```python
-    from tildagonos import tildagonos
+    # eGPIO pins
+    self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
+
+    # GPIO pins
+    self.pins["hs_1"] = self.hexpansion_config.pin[0]
+    # All HS pins start in low mode. Initialize them as follows:
+    self.pins["hs_1"].init(self.pins["hs_1"].OUT)
+    ```
+
+2. Call one of the methods, for example `off()`.
+
+    ```python
+    self.pins["hs_1"].off()
     ```
 
 ## `IMU`
@@ -317,8 +400,24 @@ The api currently only allows access to the raw data.
 
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| acc_read() | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
-| gyro_read() | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
+| `acc_read()` | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
+| `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
+
+### Usage
+
+To use the `imu` package:
+
+1. Import the `power` package:
+
+    ```python
+    import power
+    ```
+
+2. Call one of the methods, for example `imu.acc_read()`.
+
+    ```python
+    imu.acc_read()
+    ```
 
 ## Power
 
@@ -356,7 +455,7 @@ __app_export__ = ExampleApp
 
 ### Usage
 
-To use the power package:
+To use the `power` package:
 
 1. Import the `power` package:
 
@@ -364,7 +463,7 @@ To use the power package:
     import power
     ```
 
-2. Call one of the methods, for example power.Off().
+2. Call one of the methods, for example `power.Off()`.
 
     ```python
     power.Off()
