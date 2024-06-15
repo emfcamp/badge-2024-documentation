@@ -626,9 +626,86 @@ You can use the following methods on a `TextDialog` object:
 
 ## TextDisplay
 
-!!! tip "You've found a badge CHALLENGE!"
+The [`TextDisplay`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py) component allows you to display text.
 
-    Your challenge, should you choose to accept it, is to document the [`TextDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+### Example
+
+```
+import app
+
+from app_components import clear_background
+from app_components.layout import TextDisplay
+from events.input import Buttons, BUTTON_TYPES
+
+class TextDisplayDemo(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+        self.text_display = None
+
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+            self.minimise()
+        long_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        self.text_display = TextDisplay(
+            long_text, font_size=8, rgb=(0,0,50))
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        if self.text_display:
+            self.text_display.draw(ctx)
+        ctx.save()
+        ctx.restore()
+
+__app_export__ = TextDisplayDemo
+```
+
+### Usage
+
+To use a text display:
+
+1. Import the `TextDisplay` component:
+
+    ```python
+    from app_components.layout import TextDisplay
+    ```
+
+1. Initialize a variable to hold the menu in the `__init__` method of your app:
+
+    ```python
+    self.text_display = None
+    ```
+
+1. Initialize the text_display in your `__init__` or in your `update` method:
+
+    ```python
+    self.text_display = TextDisplay("My long text", font_size=8, rgb=(0,0,50))
+    ```
+
+    To initialize the Menu use the following parameters:
+
+    | Parameter | Type | Description |
+    | --------- | ---- | ----------- |
+    | `app` | `App` | The app to add the text display to. |
+    | `text` | `str` | The long text to display. |
+    | `font_size` | `int` | The font size to display the text in. |
+    | `rgb` | `method` | The color to display the text in. |
+
+1. Add the following lines in your `draw()` method to draw the app's menu:
+
+    ```python
+    # in def draw(self, ctx):
+    self.text_display.draw(ctx)
+    ```
+
+### Methods
+
+You can use the following methods on a `TextDisplay` object:
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `draw(ctx)` | Add the text to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
 ## ButtonDisplay
 
