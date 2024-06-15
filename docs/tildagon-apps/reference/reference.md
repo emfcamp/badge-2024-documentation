@@ -15,6 +15,7 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
 - [`Notification`](./ui-elements.md#notification): pop up notifications
 - [`YesNoDialog`](./ui-elements.md#yesno-dialog): create yes or no dialogues
 - [`TextDialog`](./ui-elements.md#text-dialog): create text dialogues
+- [`Layout`](./ui-elements.md#layouts): create menu layouts like the settings app
 - [`Tokens`](./ui-elements.md#tokens):
     - constants for the display properties and colors
     - functions for clearing the background and setting a color

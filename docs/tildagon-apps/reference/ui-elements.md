@@ -624,297 +624,249 @@ You can use the following methods on a `TextDialog` object:
 | `draw_message(ctx)` | Helper method to add your message to the screen. This method is called by the `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 | `draw(ctx)` | Add the dialog to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
-## TextDisplay
+## Layouts
 
-The [`TextDisplay`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py) component allows you to display text.
+You can componse menu layouts out of the following display layouts:
 
-### Example
-
-```
-import app
-
-from app_components import clear_background
-from app_components.layout import TextDisplay
-from events.input import Buttons, BUTTON_TYPES
-
-class TextDisplayDemo(app.App):
-    def __init__(self):
-        self.button_states = Buttons(self)
-        self.text_display = None
-
-
-    def update(self, delta):
-        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-            self.button_states.clear()
-            self.minimise()
-        long_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        self.text_display = TextDisplay(
-            long_text, font_size=8, rgb=(0,0,50))
-
-    def draw(self, ctx):
-        clear_background(ctx)
-        if self.text_display:
-            self.text_display.draw(ctx)
-        ctx.save()
-        ctx.restore()
-
-__app_export__ = TextDisplayDemo
-```
-
-!!! tip "You've found a badge CHALLENGE!"
-
-    Your challenge, should you choose to accept it, is to document an advanced version of using the [`TextDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py) that supports scrolling. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
-
-### Usage
-
-To use a text display:
-
-1. Import the `TextDisplay` component:
-
-    ```python
-    from app_components.layout import TextDisplay
-    ```
-
-1. Initialize a variable to hold the text display in the `__init__` method of your app:
-
-    ```python
-    self.text_display = None
-    ```
-
-1. Initialize the text_display in your `__init__` or in your `update` method:
-
-    ```python
-    self.text_display = TextDisplay("My long text", font_size=8, rgb=(0,0,50))
-    ```
-
-    To initialize the `TextDisplay` use the following parameters:
-
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `text` | `str` | The long text to display. |
-    | `font_size` | `int` | The font size to display the text in. |
-    | `rgb` | `tuple` | The color to display the text in. |
-
-1. Add the following lines in your `draw()` method to draw the app's text display:
-
-    ```python
-    # in def draw(self, ctx):
-    self.text_display.draw(ctx)
-    ```
-
-### Methods
-
-You can use the following methods on a `TextDisplay` object:
-
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `draw(ctx)` | Add the text to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
-
-## ButtonDisplay
-
-The `ButtonDisplay` component allows you to display a button and register a handler for the button.
+- [`TextDisplay`](#textdisplay): The `TextDisplay` component allows you to display long texts.
+- [`ButtonDisplay`](#buttondisplay): The `ButtonDisplay` component allows you to display a button and register a handler for the button.
+- [`DefinitionDisplay`](#definitiondisplay): The `DefinitionDisplay` component allows you to display a label and a definition for the label.
 
 ### Example
 
-This example displays a button reading "Select me". When you press the **CONFIRM** button, you see a notification that reads "You selected the button!".
+This example creates what could be a small game menu with three parts:
+
+- one text field that can be edited for the game player's name
+- one selector field where you can select an option, in this case the difficulty level
+- one field that displays a lot of text, in this case lorem ipsum text
 
 ```python
 import app
 
-from app_components import clear_background, Notification
-from app_components.layout import ButtonDisplay
-from events.input import Buttons, BUTTON_TYPES
+from app_components import clear_background, TextDialog
+from app_components.layout import TextDisplay, ButtonDisplay, DefinitionDisplay, LinearLayout
+from events.input import BUTTON_TYPES, ButtonDownEvent
+from system.eventbus import eventbus
 
-class ButtonDisplayDemo(app.App):
+DIFFICULTY_VALUES = ["easy", "normal", "hard"]
+
+def string_formatter(value):
+    if value is None:
+        return "Default"
+    else:
+        return str(value)
+
+class LayoutMenuDemo(app.App):
     def __init__(self):
-        self.button_states = Buttons(self)
-        self.displayed = False
-        self.button_display = None
-        self.notification = None
+        self.layout = LinearLayout(items=[DefinitionDisplay("", "")])
+        self.dialog = None
+        self.options = {
+            ("text_setting", "Player Name", string_formatter, self.string_editor),
+            ("button_selector", "Difficulty selector", string_formatter, None),
+            ("text", "Game Instructions", string_formatter, None),
+        }
+        self.app_settings = {
+            "text_setting": "Naomi",
+            "button_selector": "easy",
+            "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+        eventbus.on_async(ButtonDownEvent, self._button_handler, self)
 
-    def select_handler(self, event):
-        if BUTTON_TYPES["CONFIRM"] in event.button:
-            self.notification = Notification('You selected the button!')
-        self.button_display = None
+    async def string_editor(self, label, id, render_update):
+        self.dialog = TextDialog(label, self)
+        self.dialog._settings_id = id
+
+    async def _button_handler(self, event):
+        layout_handled = await self.layout.button_event(event)
+        if not layout_handled:
+            if BUTTON_TYPES["CANCEL"] in event.button:
+                self.minimise()
+
+    async def update_values(self):
+        for item in self.layout.items:
+            if isinstance(item, DefinitionDisplay):
+                for id, label, formatter, _ in self.options:
+                    if item.label == label:
+                        if id in self.app_settings.keys():
+                            value = self.app_settings[id]
+                        else:
+                            value = ""
+                        item.value = formatter(value)
+
+    async def run(self, render_update):
+        while True:
+            self.layout.items = []
+            for id, label, formatter, editor in self.options:
+                if id in self.app_settings.keys():
+                    value = self.app_settings[id
+                    ]
+                else:
+                   value = ""
+                if editor:
+                    async def _button_event(event, label=label, id=id, editor=editor):
+                        if BUTTON_TYPES["CONFIRM"] in event.button:
+                            await editor(label, id, render_update)
+                            return True
+                        return False
+
+                    entry = DefinitionDisplay(
+                        label, formatter(value), button_handler=_button_event
+                    )
+                else:
+                    entry = DefinitionDisplay(label, formatter(value))
+                self.layout.items.append(entry)
+                if id == "text":
+                    async def _button_event(event):
+                        if BUTTON_TYPES["CONFIRM"] in event.button:
+                            return True
+                        return False
+
+                    entry = TextDisplay(self.app_settings["instructions"])
+
+                    self.layout.items.append(entry)
+
+                if id == "button_selector":
+                    async def _button_selector_event(event):
+                        value = self.app_settings[id]
+                        if BUTTON_TYPES["CONFIRM"] in event.button:
+                            if value == DIFFICULTY_VALUES[0]:
+                                self.app_settings[id] = DIFFICULTY_VALUES[1]
+                            if value == DIFFICULTY_VALUES[1]:
+                                self.app_settings[id] = DIFFICULTY_VALUES[2]
+                            if value == DIFFICULTY_VALUES[2]:
+                                self.app_settings[id] = DIFFICULTY_VALUES[0]
+                            await self.update_values()
+                            await render_update()
+                            return True
+                        return False
+
+                    entry = ButtonDisplay(
+                        "Change", button_handler=_button_selector_event
+                    )
+                    self.layout.items.append(entry)
+            while True:
+                await render_update()
+                if self.dialog:
+                    result = await self.dialog.run(render_update)
+                    if (
+                        result is not False
+                    ):  #!= because we want to allow entering empty strings
+                        self.app_settings[self.dialog._settings_id] = result
+                    self.dialog = None
+                    if result:
+                        break
+
 
     def update(self, delta):
-        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-            self.displayed = False
-            self.button_states.clear()
-            self.minimise()
-        if not self.displayed:
-            self.displayed = True
-            self.button_display = ButtonDisplay(
-                text="Select me",
-                app=self,
-                font_size=8,
-                rgb=(50,0,0),
-                button_handler=self.select_handler)
-        if self.notification:
-            self.notification.update(delta)
+        return True
 
     def draw(self, ctx):
         clear_background(ctx)
-        if self.button_display:
-            self.button_display.draw(ctx)
-        if self.notification:
-            self.notification.draw(ctx)
+        self.layout.draw(ctx)
 
-__app_export__ = ButtonDisplayDemo
+__app_export__ = LayoutMenuDemo
 ```
+
+A longer example of a layout is the [Settings app](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/settings_app.py).
 
 ### Usage
 
-To use a button display:
+To use layouts:
 
-1. Import the `ButtonDisplay` component:
-
-    ```python
-    from app_components.layout import ButtonDisplay
-    ```
-
-1. Initialize a variable to hold the button display in the `__init__` method of your app:
+1. Import the different layouts:
 
     ```python
-    self.button_display = None
+    from app_components.layout import *
     ```
 
-1. Initialize the button_display in your `__init__` or in your `update` method:
+1. Initialize a variable to hold the layouts in the `__init__` method of your app:
 
     ```python
-    self.button_display = ButtonDisplay(
-        text="Select me",
-        app=self,
-        font_size=8,
-        rgb=(50,0,0),
-        button_handler=self.select_handler)
+    self.layout = LinearLayout(items=[DefinitionDisplay("", "")])
     ```
 
-    To initialize the button display use the following parameters:
+1. Add one or more layouts:
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `text` | `str` | The long text to display. |
-    | `app` | `App` | The app to add the button display to. |
-    | `font_size` | `int` | The font size to display the text in. |
-    | `rgb` | `tuple` | The color to display the text in. |
-    | `button_handler` | `method` | The handler for button events. |
+    === "DefinitionDisplay"
 
-1. Create a synchronous `select_handler` that does somethign when a button is pressed and then optionally resets `self.button_display` to `None`.
+        The `DefinitionDisplay` component allows you to display a label and a definition for the label.
 
-    ```python
-        def select_handler(self, event):
-            if BUTTON_TYPES["CONFIRM"] in event.button:
-                # do something
-            self.button_display = None
-    ```
+        Initialize the button_display in your `__init__` or in your `update` method:
 
-1. Add the following lines in your `draw()` method to draw the app's button display:
+        ```python
+        definition_display = DefinitionDisplay("Label", "value")
+        self.layout.items.append(definition_display)
+        ```
 
-    ```python
-    # in def draw(self, ctx):
-    self.button_display.draw(ctx)
-    ```
+        To initialize the definition display use the following parameters:
 
-### Methods
+        | Parameter | Type | Description |
+        | --------- | ---- | ----------- |
+        | `label` | `str` | The text to display for the label. |
+        | `value` | `str` | The text to display for the definition. |
+        | `height` | `int` | The height at which to display the definition display. |
+        | `button_handler` | `method` | The handler for button events. |
 
-You can use the following methods on a `ButtonDisplay` object:
+    === "TextDisplay"
 
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `draw(ctx)` | Add the text to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
+        The [`TextDisplay`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py) component allows you to display long texts.
 
+        Initialize the text_display in your `__init__` or in your `update` method and add it to the `self.layout.items` variable:
 
-## DefinitionDisplay
+        ```python
+        text_display = TextDisplay("My long text", font_size=8, rgb=(0,0,50))
+        self.layout.items.append(text_display)
+        ```
 
-The `DefinitionDisplay` component allows you to display a label and a definition for the label.
+        To initialize the `TextDisplay` use the ?following parameters:
 
-### Example
+        | Parameter | Type | Description |
+        | --------- | ---- | ----------- |
+        | `text` | `str` | The long text to display. |
+        | `font_size` | `int` | The font size to display the text in. |
+        | `rgb` | `tuple` | The color to display the text in. |
 
-The following example shows a label "Wifi" with a second line that says "emfcamp".
+    === "ButtonDisplay"
 
-```python
-import app
+        The `ButtonDisplay` component allows you to display a button and register a handler for the button.
 
-from app_components import clear_background
-from app_components.layout import DefinitionDisplay
-from events.input import Buttons, BUTTON_TYPES
+        Initialize the button_display in your `__init__` or in your `update` method:
 
-class DefinitionDisplayDemo(app.App):
-    def __init__(self):
-        self.button_states = Buttons(self)
-        self.displayed = False
-        self.definition_display = None
+        ```python
+        button_display = ButtonDisplay(
+            text="Select me",
+            app=self,
+            font_size=8,
+            rgb=(50,0,0),
+            button_handler=self.select_handler)
+        self.layout.items.append(button_display)
+        ```
 
-    def update(self, delta):
-        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-            self.displayed = False
-            self.button_states.clear()
-            self.minimise()
-        if not self.displayed:
-            self.displayed = True
-            self.definition_display = DefinitionDisplay(
-                "Wifi", "emfcamp")
+        To initialize the button display use the following parameters:
 
-    def draw(self, ctx):
-        clear_background(ctx)
-        if self.definition_display:
-            self.definition_display.draw(ctx)
+        | Parameter | Type | Description |
+        | --------- | ---- | ----------- |
+        | `text` | `str` | The long text to display. |
+        | `app` | `App` | The app to add the button display to. |
+        | `font_size` | `int` | The font size to display the text in. |
+        | `rgb` | `tuple` | The color to display the text in. |
+        | `button_handler` | `method` | The handler for button events. |
 
-__app_export__ = DefinitionDisplayDemo
-```
+        Create an asynchronous `select_handler` that does something when a button is pressed:
 
-### Usage
+        ```python
+            async def select_handler(event):
+                if BUTTON_TYPES["CONFIRM"] in event.button:
+                    # do something
+                return False
+        ```
 
-To use a definition display:
-
-1. Import the `DefinitionDisplay` component:
-
-    ```python
-    from app_components.layout import DefinitionDisplay
-    ```
-
-1. Initialize a variable to hold the definition display in the `__init__` method of your app:
-
-    ```python
-    self.definition_display = None
-    ```
-
-1. Initialize the button_display in your `__init__` or in your `update` method:
-
-    ```python
-    self.button_display = DefinitionDisplay("Wifi", "emfcamp")
-    ```
-
-    To initialize the definition display use the following parameters:
-
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `label` | `str` | The text to display for the label. |
-    | `value` | `str` | The text to display for the definition. |
-    | `height` | `int` | The height at which to display the definition display. |
-    | `button_handler` | `method` | The handler for button events. |
-
-1. Add the following lines in your `draw()` method to draw the app's definition display:
+1. Add the following lines in your `draw()` method to draw the app's layout:
 
     ```python
     # in def draw(self, ctx):
-    self.definition_display.draw(ctx)
+     self.layout.draw(ctx)
     ```
-
-### Methods
-
-You can use the following methods on a `ButtonDisplay` object:
-
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `draw(ctx)` | Add the text to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
-
-## LinearLayout
-
-!!! tip "You've found a badge CHALLENGE!"
-
-    Your challenge, should you choose to accept it, is to document the [`LinearLayout` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
 
 ## Tokens
 
