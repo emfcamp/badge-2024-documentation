@@ -33,6 +33,8 @@ theme:
         name: Switch to system preference
 extra_css:
   - style.css
+extra_javascript:
+  - index.js
 markdown_extensions:
   - attr_list
   - md_in_html
