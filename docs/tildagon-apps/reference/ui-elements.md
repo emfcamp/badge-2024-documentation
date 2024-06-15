@@ -675,7 +675,7 @@ To use a text display:
     from app_components.layout import TextDisplay
     ```
 
-1. Initialize a variable to hold the menu in the `__init__` method of your app:
+1. Initialize a variable to hold the text display in the `__init__` method of your app:
 
     ```python
     self.text_display = None
@@ -687,7 +687,7 @@ To use a text display:
     self.text_display = TextDisplay("My long text", font_size=8, rgb=(0,0,50))
     ```
 
-    To initialize the Menu use the following parameters:
+    To initialize the `TextDisplay` use the following parameters:
 
     | Parameter | Type | Description |
     | --------- | ---- | ----------- |
@@ -695,7 +695,7 @@ To use a text display:
     | `font_size` | `int` | The font size to display the text in. |
     | `rgb` | `tuple` | The color to display the text in. |
 
-1. Add the following lines in your `draw()` method to draw the app's menu:
+1. Add the following lines in your `draw()` method to draw the app's text display:
 
     ```python
     # in def draw(self, ctx):
@@ -773,7 +773,7 @@ To use a button display:
     from app_components.layout import ButtonDisplay
     ```
 
-1. Initialize a variable to hold the menu in the `__init__` method of your app:
+1. Initialize a variable to hold the button display in the `__init__` method of your app:
 
     ```python
     self.button_display = None
@@ -790,7 +790,7 @@ To use a button display:
         button_handler=self.select_handler)
     ```
 
-    To initialize the Menu use the following parameters:
+    To initialize the button display use the following parameters:
 
     | Parameter | Type | Description |
     | --------- | ---- | ----------- |
@@ -809,7 +809,7 @@ To use a button display:
             self.button_display = None
     ```
 
-1. Add the following lines in your `draw()` method to draw the app's menu:
+1. Add the following lines in your `draw()` method to draw the app's button display:
 
     ```python
     # in def draw(self, ctx):
@@ -827,9 +827,88 @@ You can use the following methods on a `ButtonDisplay` object:
 
 ## DefinitionDisplay
 
-!!! tip "You've found a badge CHALLENGE!"
+The `DefinitionDisplay` component allows you to display a label and a definition for the label.
 
-    Your challenge, should you choose to accept it, is to document the [`DefinitionDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+### Example
+
+The following example shows a label "Wifi" with a second line that says "emfcamp".
+
+```python
+import app
+
+from app_components import clear_background
+from app_components.layout import DefinitionDisplay
+from events.input import Buttons, BUTTON_TYPES
+
+class DefinitionDisplayDemo(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+        self.displayed = False
+        self.definition_display = None
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.displayed = False
+            self.button_states.clear()
+            self.minimise()
+        if not self.displayed:
+            self.displayed = True
+            self.definition_display = DefinitionDisplay(
+                "Wifi", "emfcamp")
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        if self.definition_display:
+            self.definition_display.draw(ctx)
+
+__app_export__ = DefinitionDisplayDemo
+```
+
+### Usage
+
+To use a definition display:
+
+1. Import the `DefinitionDisplay` component:
+
+    ```python
+    from app_components.layout import DefinitionDisplay
+    ```
+
+1. Initialize a variable to hold the definition display in the `__init__` method of your app:
+
+    ```python
+    self.definition_display = None
+    ```
+
+1. Initialize the button_display in your `__init__` or in your `update` method:
+
+    ```python
+    self.button_display = DefinitionDisplay("Wifi", "emfcamp")
+    ```
+
+    To initialize the definition display use the following parameters:
+
+    | Parameter | Type | Description |
+    | --------- | ---- | ----------- |
+    | `label` | `str` | The text to display for the label. |
+    | `value` | `str` | The text to display for the definition. |
+    | `height` | `int` | The height at which to display the definition display. |
+    | `button_handler` | `method` | The handler for button events. |
+
+1. Add the following lines in your `draw()` method to draw the app's definition display:
+
+    ```python
+    # in def draw(self, ctx):
+    self.definition_display.draw(ctx)
+    ```
+
+### Methods
+
+You can use the following methods on a `ButtonDisplay` object:
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `draw(ctx)` | Add the text to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
 
 ## LinearLayout
 
