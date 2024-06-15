@@ -712,9 +712,118 @@ You can use the following methods on a `TextDisplay` object:
 
 ## ButtonDisplay
 
-!!! tip "You've found a badge CHALLENGE!"
+The `ButtonDisplay` component allows you to display a button and register a handler for the button.
 
-    Your challenge, should you choose to accept it, is to document the [`ButtonDisplay` component](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/layout.py). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/186).
+### Example
+
+This example displays a button reading "Select me". When you press the **CONFIRM** button, you see a notification that reads "You selected the button!".
+
+```python
+import app
+
+from app_components import clear_background, Notification
+from app_components.layout import ButtonDisplay
+from events.input import Buttons, BUTTON_TYPES
+
+class ButtonDisplayDemo(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+        self.displayed = False
+        self.button_display = None
+        self.notification = None
+
+    def select_handler(self, event):
+        if BUTTON_TYPES["CONFIRM"] in event.button:
+            self.notification = Notification('You selected the button!')
+        self.button_display = None
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.displayed = False
+            self.button_states.clear()
+            self.minimise()
+        if not self.displayed:
+            self.displayed = True
+            self.button_display = ButtonDisplay(
+                text="Select me",
+                app=self,
+                font_size=8,
+                rgb=(50,0,0),
+                button_handler=self.select_handler)
+        if self.notification:
+            self.notification.update(delta)
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        if self.button_display:
+            self.button_display.draw(ctx)
+        if self.notification:
+            self.notification.draw(ctx)
+
+__app_export__ = ButtonDisplayDemo
+```
+
+### Usage
+
+To use a button display:
+
+1. Import the `ButtonDisplay` component:
+
+    ```python
+    from app_components.layout import ButtonDisplay
+    ```
+
+1. Initialize a variable to hold the menu in the `__init__` method of your app:
+
+    ```python
+    self.button_display = None
+    ```
+
+1. Initialize the button_display in your `__init__` or in your `update` method:
+
+    ```python
+    self.button_display = ButtonDisplay(
+        text="Select me",
+        app=self,
+        font_size=8,
+        rgb=(50,0,0),
+        button_handler=self.select_handler)
+    ```
+
+    To initialize the Menu use the following parameters:
+
+    | Parameter | Type | Description |
+    | --------- | ---- | ----------- |
+    | `text` | `str` | The long text to display. |
+    | `app` | `App` | The app to add the button display to. |
+    | `font_size` | `int` | The font size to display the text in. |
+    | `rgb` | `tuple` | The color to display the text in. |
+    | `button_handler` | `method` | The handler for button events. |
+
+1. Create a synchronous `select_handler` that does somethign when a button is pressed and then optionally resets `self.button_display` to `None`.
+
+    ```python
+        def select_handler(self, event):
+            if BUTTON_TYPES["CONFIRM"] in event.button:
+                # do something
+            self.button_display = None
+    ```
+
+1. Add the following lines in your `draw()` method to draw the app's menu:
+
+    ```python
+    # in def draw(self, ctx):
+    self.button_display.draw(ctx)
+    ```
+
+### Methods
+
+You can use the following methods on a `ButtonDisplay` object:
+
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `draw(ctx)` | Add the text to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
+
 
 ## DefinitionDisplay
 
