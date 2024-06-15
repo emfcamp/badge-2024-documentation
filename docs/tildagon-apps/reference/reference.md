@@ -30,7 +30,7 @@ You can use the following hardware with the inbuilt interfaces:
 
 - [LEDs](./badge-hardware.md#leds)
 - [Buttons](./badge-hardware.md#buttons)
-- [eGPIO](./badge-hardware.md#egpio)
+- [Pins](./badge-hardware.md#pins)
 - [IMU](./badge-hardware.md#imu)
 - [Power](./badge-hardware.md#power)
 
