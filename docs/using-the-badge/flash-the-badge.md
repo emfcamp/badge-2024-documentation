@@ -9,23 +9,23 @@ You can do this to reset your badge or to update the operating system on the bad
 
 To flash your badge, your badge **must be completely powered off**. If your badge is not yet flashed, it is best if the battery is not yet connected. Flashing may not work with the battery connected.
 
-1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
+1.  Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
 
     !!! info "The flasher may not work in other browsers."
 
-1. Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
+1.  Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
 
     !!! info "Not working?"
 
         If you cannot power off your badge or disconnect the power, you can instead press and hold **bat** while the badge is unplugged for ~20 seconds which will do a hard reboot of the badge by cutting and reapplying power.
         If you do this while boop is held, it'll go into the bootloader and wait there.
 
-1. Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.
-1. Select the **Install Tildagon** option.
+1.  Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.
+1.  Select the **Install Tildagon** option.
 
     !!! warning "This will erase all data on the badge"
 
-1. When prompted to confirm the installation, click *Install*. Installation may take a few minutes.
+1.  When prompted to confirm the installation, click _Install_. Installation may take a few minutes.
 
 ![Provisioning flow](../images/badge-photos/provision.gif)
 

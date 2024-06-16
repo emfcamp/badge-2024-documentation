@@ -10,63 +10,63 @@ If you want your EEPROM-equipped hexpansion to do something automatically, you n
 2. Clone the [`badge-2024-software`](https://github.com/emfcamp/badge-2024-software) repo and `cd` into it.
 3. Modify the port in the [`prepare_eeprom.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/scripts/prepare_eeprom.py) script:
 
-    ```python
-    # Set up i2c
-    port = 2  # <<-- Customize!!
-    i2c = I2C(port)
-    ```
+   ```python
+   # Set up i2c
+   port = 2  # <<-- Customize!!
+   i2c = I2C(port)
+   ```
 
 4. Adjust the header information as you desire:
 
-    ```python
-    # Fill in your desired header info here:
-    header = HexpansionHeader(
-        manifest_version="2024",
-        fs_offset=32,
-        eeprom_page_size=16,
-        eeprom_total_size=1024 * (16 // 8) // 8,
-        vid=0xCA75,
-        pid=0x1337,
-        unique_id=0x0,
-        friendly_name="Flopagon",
-    )
-    ```
+   ```python
+   # Fill in your desired header info here:
+   header = HexpansionHeader(
+       manifest_version="2024",
+       fs_offset=32,
+       eeprom_page_size=16,
+       eeprom_total_size=1024 * (16 // 8) // 8,
+       vid=0xCA75,
+       pid=0x1337,
+       unique_id=0x0,
+       friendly_name="Flopagon",
+   )
+   ```
 
-    For more information see [EEPROM format](#eeprom-format).
+   For more information see [EEPROM format](#eeprom-format).
 
 5. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `prepare_eeprom.py` script from the locally mounted directory. The `prepare_eeprom.py` script flashes a header to the first page of the EEPROM:
 
-    ```sh
-    mpremote mount modules + run modules/scripts/prepare_eeprom.py
-    ```
+   ```sh
+   mpremote mount modules + run modules/scripts/prepare_eeprom.py
+   ```
 
-    `mpremote` should automatically detect the port the board is plugged into. If it doesn't, manually specify the port. For more information see the [`mpremote` reference docs](https://docs.micropython.org/en/latest/reference/mpremote.html#shortcuts).
+   `mpremote` should automatically detect the port the board is plugged into. If it doesn't, manually specify the port. For more information see the [`mpremote` reference docs](https://docs.micropython.org/en/latest/reference/mpremote.html#shortcuts).
 
-    !!! note "Failed to decode header?"
+   !!! note "Failed to decode header?"
 
-      If you are receiving this error, try to change this code
+   If you are receiving this error, try to change this code
 
-      ```python
-      write_header(
-          port, header, addr=addr, addr_len=addr_len, page_size=header.eeprom_page_size
-      )
-      ```
+   ```python
+   write_header(
+       port, header, addr=addr, addr_len=addr_len, page_size=header.eeprom_page_size
+   )
+   ```
 
-      to
+   to
 
-      ```python
-      i2c.writeto(addr, bytes([0, 0]) + header.to_bytes())
-      ```
+   ```python
+   i2c.writeto(addr, bytes([0, 0]) + header.to_bytes())
+   ```
 
-      and run the command again.
+   and run the command again.
 
 6. The following [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) command mounts the `modules` directory and runs the `mount_hexpansion` script to mount the storage on your hexpansion, and then copies your app file from the provided location to `/hexpansion_1/app.py`:
 
-    ```sh
-    mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp path/to/your/app.py :/hexpansion_{YOUR-HEXPANSION-PORT-NUMBER}/app.py
-    # For example:
-    # mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp sim/apps/snake/app.py :/hexpansion_1/app.py
-    ```
+   ```sh
+   mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp path/to/your/app.py :/hexpansion_{YOUR-HEXPANSION-PORT-NUMBER}/app.py
+   # For example:
+   # mpremote mount modules + run modules/scripts/mount_hexpansions.py + cp sim/apps/snake/app.py :/hexpansion_1/app.py
+   ```
 
 ## EEPROM format
 
@@ -100,6 +100,7 @@ The header is 32 bytes long and contains the following values:
 - Friendly name (offset 22, length 9, padded with 0x00)
   - This is an ASCII string containing a name to be displayed in menus and prompts so that users can identify the hexpansion. It can contain up to nine characters, and unused characters should be set to 0x00.
 - Checksum (offset 31, length 1)
+
   - This is a checksum calculated by the following algorithm:
 
   1. Start with a variable S with the value 0x55

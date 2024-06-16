@@ -46,11 +46,9 @@ If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sh
 
     There are some [example 3D printable STL files](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template) and a [FreeCAD template](https://www.printables.com/model/881594-tildagon-hexpansion-freecad-templates-and-nfc) on Printables, which may be useful as a starting point for prototyping.
 
-
 !!! tip "Templates for PCB Hexpansions"
 
     There is a [sample KiCAD hexpansion project](https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion), which is the easiest way of getting started making a Hexpansion PCB.
-
 
 ## Shape and size
 

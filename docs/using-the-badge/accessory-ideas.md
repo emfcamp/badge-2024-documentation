@@ -51,4 +51,3 @@ You can also use one that doesn't glow, search for "usb c to usb c", or add "rgb
    end="<!--hexpansions-end-->"
 %}
 </div>
-

@@ -61,9 +61,10 @@ To use the LEDs:
 
 1. Import the `tildagonos` package:
 
-    ```python
-    from tildagonos import tildagonos
-    ```
+   ```python
+   from tildagonos import tildagonos
+   ```
+
 2. Enable the LEDs (this step is generally optional, but needed if running outside of an app (or from repl):
 
    ```python
@@ -136,16 +137,16 @@ To use the buttons:
 
 1. Import the `events.input` package:
 
-    ```python
-    from events.input import Buttons, BUTTON_TYPES
-    ```
+   ```python
+   from events.input import Buttons, BUTTON_TYPES
+   ```
 
 2. Initialize a variable to hold the `button_states` in the `__init__` method of your app:
 
-    ```python
-    def __init__(self):
-        self.button_states = Buttons(self)
-    ```
+   ```python
+   def __init__(self):
+       self.button_states = Buttons(self)
+   ```
 
 3. Check for `button_state`. You can access the different `BUTTON_TYPES` with the names `"UP"`, `"RIGHT"`, `"CONFIRM"`, `"DOWN"`, `"LEFT"`, `"CANCEL"`:
 
@@ -166,14 +167,14 @@ To use the buttons:
 
 You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an event handler that you register on the [`eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py).
 
-1. Import the `events.input` package:
+1.  Import the `events.input` package:
 
     ```python
     from events.input import Button, BUTTON_TYPES, ButtonDownEvent, ButtonUpEvent
     from system.eventbus import eventbus
     ```
 
-2. Add a method to handle the event:
+2.  Add a method to handle the event:
 
     ```python
     def _handle_buttondown(self, event: ButtonDownEvent):
@@ -186,7 +187,7 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
             # perform other actions as needed
     ```
 
-3. Add an event handler in the `__init__` method of your app with the event (`ButtonDownEvent` or `ButtonUpEvent`) and a function that should be called when the event happens.  Depending on whether the event handler is a synchronous or asynchronous method call `on()` or `on_async`:
+3.  Add an event handler in the `__init__` method of your app with the event (`ButtonDownEvent` or `ButtonUpEvent`) and a function that should be called when the event happens. Depending on whether the event handler is a synchronous or asynchronous method call `on()` or `on_async`:
 
     ```python
     def __init__(self):
@@ -194,7 +195,7 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
         # eventbus.on_async(ButtonDownEvent, self._handle_buttondown, self.app)
     ```
 
-4. Remove the event handler when the app is minimised or closed:
+4.  Remove the event handler when the app is minimised or closed:
 
     ```python
     def _cleanup(self):
@@ -225,7 +226,7 @@ Each hexpansion has:
 
 ### Example
 
-Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can  see how to access an toggle the `Pin`s in the update methods:
+Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can see how to access an toggle the `Pin`s in the update methods:
 
 ```python
 import app
@@ -327,11 +328,11 @@ GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.
 
 [eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) support the following methods:
 
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `on()` | Drive the pin high. | None | None |
-| `off()` | Drive the pin low. | None | None |
-| `value()` | If provided with a value, sets the `Pin` value. If called without value, gets the `Pin` value. | None | `value`: The pin value. If called without a `value`. |
+| Method    | Description                                                                                    | Arguments | Returns                                              |
+| --------- | ---------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------- |
+| `on()`    | Drive the pin high.                                                                            | None      | None                                                 |
+| `off()`   | Drive the pin low.                                                                             | None      | None                                                 |
+| `value()` | If provided with a value, sets the `Pin` value. If called without value, gets the `Pin` value. | None      | `value`: The pin value. If called without a `value`. |
 
 ### Usage
 
@@ -339,21 +340,21 @@ To use the `Pin`s:
 
 1. Access the pins from the `HexpansionConfig` object and for GPIO pins, initialize the pins:
 
-    ```python
-    # eGPIO pins
-    self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
+   ```python
+   # eGPIO pins
+   self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
 
-    # GPIO pins
-    self.pins["hs_1"] = self.hexpansion_config.pin[0]
-    # All HS pins start in low mode. Initialize them as follows:
-    self.pins["hs_1"].init(self.pins["hs_1"].OUT)
-    ```
+   # GPIO pins
+   self.pins["hs_1"] = self.hexpansion_config.pin[0]
+   # All HS pins start in low mode. Initialize them as follows:
+   self.pins["hs_1"].init(self.pins["hs_1"].OUT)
+   ```
 
 2. Call one of the methods, for example `off()`.
 
-    ```python
-    self.pins["hs_1"].off()
-    ```
+   ```python
+   self.pins["hs_1"].off()
+   ```
 
 ## `IMU`
 
@@ -398,10 +399,10 @@ __app_export__ = ExampleApp
 
 The api currently only allows access to the raw data.
 
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `acc_read()` | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
-| `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
+| Method        | Description                 | Arguments | Returns                                                         |
+| ------------- | --------------------------- | --------- | --------------------------------------------------------------- |
+| `acc_read()`  | Get the accelerometer data. | None      | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
+| `gyro_read()` | Get the gyro data.          | None      | `(x,y,z)`: The gyro data as a tuple of floats (d/s).            |
 
 ### Usage
 
@@ -409,15 +410,15 @@ To use the `imu` package:
 
 1. Import the `power` package:
 
-    ```python
-    import power
-    ```
+   ```python
+   import power
+   ```
 
 2. Call one of the methods, for example `imu.acc_read()`.
 
-    ```python
-    imu.acc_read()
-    ```
+   ```python
+   imu.acc_read()
+   ```
 
 ## Power
 
@@ -459,30 +460,30 @@ To use the `power` package:
 
 1. Import the `power` package:
 
-    ```python
-    import power
-    ```
+   ```python
+   import power
+   ```
 
 2. Call one of the methods, for example `power.Off()`.
 
-    ```python
-    power.Off()
-    ```
+   ```python
+   power.Off()
+   ```
 
 ### Methods
 
-| Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- |
-| `Off()` | Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
-| `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
-| `BatteryLevel()` | Return the battery charge level. |  None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
-| `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
-| `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
-| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA). |
-| `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in mA. |
-| `Vbat()` | Get the battery voltage. | None. | `voltage` (`float`): The battery voltage in V. |
-| `Vin()` | Get the input voltage. | None. | `voltage` (`float`): The input voltage in V. |
-| `Vsys()` (`float`) | Get the system voltage. | None. | `voltage` (`float`): Get the system voltage in V. |
+| Method                 | Description                                                                 | Arguments                                                         | Returns                                                                                                                                                  |
+| ---------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Off()`                | Turn off the battery. When the usb is disconnected the badge will turn off. | None                                                              | None                                                                                                                                                     |
+| `BatteryChargeState()` | Status of the Battery charing cycle.                                        | None                                                              | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`.                                                              |
+| `BatteryLevel()`       | Return the battery charge level.                                            | None.                                                             | `level` (`float`): Battery charge level as a float representing the charge percentage.                                                                   |
+| `Enable5V()`           | Enable the usb out 5V supply.                                               | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None.                                                                                                                                                    |
+| `Fault()`              | Get the PMIC fault status.                                                  | None.                                                             | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
+| `SupplyCapabilities()` | Read the capabilities of the power supply.                                  | None.                                                             | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA).                                                            |
+| `Icharge()`            | Get the battery charge current                                              | None.                                                             | `current` (`float`): The charge current in mA.                                                                                                           |
+| `Vbat()`               | Get the battery voltage.                                                    | None.                                                             | `voltage` (`float`): The battery voltage in V.                                                                                                           |
+| `Vin()`                | Get the input voltage.                                                      | None.                                                             | `voltage` (`float`): The input voltage in V.                                                                                                             |
+| `Vsys()` (`float`)     | Get the system voltage.                                                     | None.                                                             | `voltage` (`float`): Get the system voltage in V.                                                                                                        |
 
 ### Events
 

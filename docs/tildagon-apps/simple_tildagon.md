@@ -46,21 +46,25 @@ Each of these LEDs has a number written beside it.
 
 Before using the below LED code, you need to disable the built in pattern generator (once), as it will take over once your program finishes if you don't.
 This code below only needs to be run once.
+
 ```python
 import settings
 settings.set("pattern_generator_enable", False)
 settings.save()
 ```
+
 You can re-enable it from the main badge settings app.
 
 ### Using the LEDs
 
 To turn one of these on, use the following code in the `boot.py` file.
+
 ```python
 import simple_tildagon as st
 
 st.led.set(3, [255, 0, 0])
 ```
+
 The program above will **set LED 3 to red**.
 The `[255, 0, 0]` section represents Red, Green, Blue mixing. Each can go up to 255 (full brightness for that colour).
 
@@ -77,18 +81,18 @@ The `[255, 0, 0]` section represents Red, Green, Blue mixing. Each can go up to 
 Try to set the following LEDs to colours
 
 | LED number | Colour |
-|------------|--------|
+| ---------- | ------ |
 | 2          | Blue   |
 | 5          | Purple |
 | 9          | White  |
 | 11         | Yellow |
-
 
 ## Inertial Measurement Unit (IMU)
 
 The badge contains an IMU (Inertial Measurement Unit). This is a combination of an accelerometer, gyroscopes and sometimes a magnetometer (compass). It allows you to measure movement of the badge and for example the direction it is tilting.
 
 To use it
+
 ```python
 
 import simple_tildagon as st
@@ -107,13 +111,12 @@ There is also a check for shaking using `st.imu.is_shaken()`.
 
 ### Exercise 2
 
-Create a program that has individual LEDs switched on using the `is_tilted...`  methods. So if you tilt the badge left, LED 9 and 10 should come on.
+Create a program that has individual LEDs switched on using the `is_tilted...` methods. So if you tilt the badge left, LED 9 and 10 should come on.
 If they shake, it should reset them all back to off.
 
 !!! info "Tip"
 
     Use a `while True` loop as in the example. Don't forget the `time.sleep(1)` command, which would pause the program for 1 seconds in inside your `while True`. You can edit the amount of time if needed.
-
 
 ## Buttons
 
@@ -150,20 +153,19 @@ Extend your previous program to switch all LEDs to purple once you press B butto
 
 Extend your previous program to finish when the `F` button is pressed. This will need you to use the `break` command in Python to exit the while loop that should be running.
 
-
 ## Extensions
 
 Now that you know the basics of using the hardware on the badge, here's a few other extension activities you could try
 
 1. If the badge is shaken, show a random LED pattern - You might find the `random.randint(your_lower_num, your_upper_num)` a useful command for this. Don't forget to import it at the top using `import random`.
 
-    For example:
+   For example:
 
-    ```python
-    import random
+   ```python
+   import random
 
-    print(random.randint(0, 5))
-    ```
+   print(random.randint(0, 5))
+   ```
 
 2. Can you create an LED toggle? If you press the `E` button, if the LED is off, turn it on (to whatever colour you want), but if it is already on, turn it off - You will need to use a variable for this.
 
@@ -171,10 +173,9 @@ Now that you know the basics of using the hardware on the badge, here's a few ot
 
 4. Create a reaction game - An LEDs shows up by a button, the user must quickly press that button, after which another random LED lights up and they must press the button nearest that.
 
-    You might want to make sure you use a very short `time.sleep(X)` value for this in the `while True:` loop!
-
+   You might want to make sure you use a very short `time.sleep(X)` value for this in the `while True:` loop!
 
 ## Building a full app
 
 With the basics out of the way, using the `boot.py` file, the next step is to build a full application (that will work alongside all the other apps). You're also able to use the screen to display text/images, along with using the event system.
-For more details on this, check out the [Write a  Tildagon OS App guide](../tildagon-apps/development.md) and the [Build the snake game tutorial](./examples/snake.md).
+For more details on this, check out the [Write a Tildagon OS App guide](../tildagon-apps/development.md) and the [Build the snake game tutorial](./examples/snake.md).

@@ -17,8 +17,8 @@ To start developing your own app, you first need to set up your environment. Fol
 
 The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder.
 
-1. Create a folder for your snake app called `snake`.
-2. In the new folder (`sim/apps/snake/`), create a file called `app.py` and add the following code:
+1.  Create a folder for your snake app called `snake`.
+2.  In the new folder (`sim/apps/snake/`), create a file called `app.py` and add the following code:
 
     ```python
     import app
@@ -49,28 +49,28 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
         If you want to read up on what this code does read [Write A Tildagon OS App](../development.md#hello-world-app).
 
-
-3. In the same folder, create a file called `__init__.py` and use it to import your app's class `SnakeApp`:
+3.  In the same folder, create a file called `__init__.py` and use it to import your app's class `SnakeApp`:
 
     ```python
     from .app import SnakeApp
     ```
 
-4. In the same folder, create a file called `metadata.json` and add your app's metadata. The file needs to contain:
-      - your app's name `SnakeApp`
-      - the category for the app
-      - the `callable` - which is the Python class for your app. When your app is run, this is the class that will be called to instantiate your app:
+4.  In the same folder, create a file called `metadata.json` and add your app's metadata. The file needs to contain:
+
+    - your app's name `SnakeApp`
+    - the category for the app
+    - the `callable` - which is the Python class for your app. When your app is run, this is the class that will be called to instantiate your app:
 
     ```json
     {
-            "callable": "SnakeApp",
-            "name": "Snake Game",
-            "category": "unknown",
-            "hidden": false
-        }
+      "callable": "SnakeApp",
+      "name": "Snake Game",
+      "category": "unknown",
+      "hidden": false
+    }
     ```
 
-5. At this point you can run your app with the simulator for the first time. You should do this before continuing the tutorial to test that everything is working:
+5.  At this point you can run your app with the simulator for the first time. You should do this before continuing the tutorial to test that everything is working:
 
     ```sh
     pipenv run python run.py
