@@ -628,9 +628,9 @@ You can use the following methods on a `TextDialog` object:
 
 You can componse menu layouts out of the following display layouts:
 
-- [`TextDisplay`](#textdisplay): The `TextDisplay` component allows you to display long texts.
-- [`ButtonDisplay`](#buttondisplay): The `ButtonDisplay` component allows you to display a button and register a handler for the button.
-- [`DefinitionDisplay`](#definitiondisplay): The `DefinitionDisplay` component allows you to display a label and a definition for the label.
+- [`TextDisplay`](./#textdisplay): The `TextDisplay` component allows you to display long texts.
+- [`ButtonDisplay`](./#buttondisplay): The `ButtonDisplay` component allows you to display a button and register a handler for the button.
+- [`DefinitionDisplay`](./#definitiondisplay): The `DefinitionDisplay` component allows you to display a label and a definition for the label.
 
 ### Example
 
