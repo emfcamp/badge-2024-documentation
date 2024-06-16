@@ -1,0 +1,23 @@
+name: Lint Python Code Snippets
+
+concurrency:
+  group: pullrequest-untrusted-pythonlint-${{ github.event.number }}
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  python_lint:
+    name: Check Python snippets in Markdown files
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Flake8 Markdown linter
+        run: pip3 install flake8-markdown
+
+      - name: Markdown Lint
+        run: flake8-markdown "docs/**/*.md"
