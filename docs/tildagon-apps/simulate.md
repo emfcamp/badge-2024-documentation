@@ -41,8 +41,8 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
        def draw(self, ctx):
            ctx.save()
-           ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
-           ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
+           ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
            ctx.restore()
 
    __app_export__ = ExampleApp

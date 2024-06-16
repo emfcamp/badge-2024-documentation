@@ -104,7 +104,7 @@ while True:
     # is_tilted_foward, is_tilted_back
     if st.imu.is_tilted_left():
         print("Left!")
-    time.sleep(1) # Only checking every second
+    time.sleep(1)  # Only checking every second
 ```
 
 There is also a check for shaking using `st.imu.is_shaken()`.
@@ -131,10 +131,11 @@ import time
 
 
 while True:
-    # Options include is_tilted_left, is_tilted_right, is_tilted_foward, is_tilted_back
+    # Options include is_tilted_left, is_tilted_right, is_tilted_foward,
+    # is_tilted_back
     if st.button.get("A"):
         print("Button A is being pressed!")
-    time.sleep(1) # Only checking every second
+    time.sleep(1)  # Only checking every second
 ```
 
 !!! warning "Multiple loops"

@@ -22,16 +22,17 @@ class ExampleApp(app.App):
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             # The button_states do not update while you are in the background.
-            # Calling clear() ensures the next time you open the app, it stays open.
-            # Without it the app would close again immediately.
+            # Calling clear() ensures the next time you open the app, it stays
+            # open. Without it the app would close again immediately.
             self.button_states.clear()
             self.minimise()
 
     def draw(self, ctx):
         ctx.save()
-        ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
-        ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
+        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
         ctx.restore()
+
 
 __app_export__ = ExampleApp
 ```
@@ -171,8 +172,8 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
                self.counter = self.counter + 1
 
        def draw(self, ctx):
-           ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-           ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+           ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
 
    __app_export__ = RightButtonCounterApp
    ```
@@ -195,8 +196,8 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
                self.counter = self.counter + 1
 
        def draw(self, ctx):
-           ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-           ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+           ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
 
    __app_export__ = RightButtonCounterApp
    ```
@@ -225,8 +226,8 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
                self.counter = self.counter + 1
 
        def draw(self, ctx):
-           ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-           ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+           ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
 
    __app_export__ = RightButtonCounterApp
    ```
@@ -244,6 +245,7 @@ import app
 
 from events.input import Buttons, BUTTON_TYPES
 
+
 class TimeCounterApp(app.App):
     def __init__(self):
         self.button_states = Buttons(self)
@@ -254,13 +256,14 @@ class TimeCounterApp(app.App):
             self.button_states.clear()
             self.minimise()
 
-    def background_update():
+    def background_update(self):
         # if self.button_states.get(BUTTON_TYPES["RIGHT"]):
         self.counter = self.counter + 1
 
     def draw(self, ctx):
-        ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-        ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+        ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
+
 
 __app_export__ = TimeCounterApp
 ```
@@ -280,6 +283,7 @@ import random
 from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 
+
 class Rectangle(object):
     def __init__(self):
         self.r = random.random()
@@ -287,7 +291,7 @@ class Rectangle(object):
         self.b = random.random()
 
     def draw(self, ctx):
-        ctx.rgb(self.r, self.g, self.b).rectangle(-60,-60,120,120).fill()
+        ctx.rgb(self.r, self.g, self.b).rectangle(-60, -60, 120, 120).fill()
 
 
 class OverlaysApp(app.App):
@@ -314,6 +318,7 @@ class OverlaysApp(app.App):
         # do not, then the menu remains visible when the app is opened.
         clear_background(ctx)
         self.draw_overlays(ctx)
+
 
 __app_export__ = OverlaysApp
 ```
@@ -354,9 +359,11 @@ class BasicApp(app.App):
             # Create a yes/no dialogue, add it to the overlays
             dialog = YesNoDialog("Change the colour?", self)
             self.overlays = [dialog]
-            # Wait for an answer from the dialogue, and if it was yes, randomise colour
+            # Wait for an answer from the dialogue, and if it was yes,
+            # randomise colour
             if await dialog.run(render_update):
-                self.color = (random.random(), random.random(), random.random())
+                self.color = (
+                    random.random(), random.random(), random.random())
 
             # Remove the dialogue and re-render
             self.overlays = []
@@ -370,6 +377,7 @@ class BasicApp(app.App):
         ctx.restore()
 
         self.draw_overlays(ctx)
+
 
 __app_export__ = BasicApp
 ```

@@ -15,13 +15,15 @@ from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 from tildagonos import tildagonos
 from system.eventbus import eventbus
-from system.patterndisplay.events import *
+from system.patterndisplay.events import PatternDisable
+
 
 class LEDExampleApp(app.App):
     def __init__(self):
         self.button_states = Buttons(self)
 
-        # This disables the patterndisplay system module, which does the default colour spinny thing
+        # This disables the patterndisplay system module, which does the
+        # default colour spinny thing
         eventbus.emit(PatternDisable())
 
     def update(self, delta):
@@ -44,11 +46,12 @@ class LEDExampleApp(app.App):
             tildagonos.leds[4] = (255, 0, 255)
             tildagonos.leds[5] = (255, 0, 255)
         else:
-            for i in range(0,12):
+            for i in range(0, 12):
                 tildagonos.leds[i+1] = (0, 0, 0)
 
     def draw(self, ctx):
         clear_background(ctx)
+
 
 __app_export__ = LEDExampleApp
 ```
@@ -98,6 +101,7 @@ from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 from tildagonos import tildagonos
 
+
 class LEDExampleApp(app.App):
     def __init__(self):
         self.button_states = Buttons(self)
@@ -122,11 +126,12 @@ class LEDExampleApp(app.App):
             tildagonos.leds[4] = (255, 0, 255)
             tildagonos.leds[5] = (255, 0, 255)
         else:
-            for i in range(0,12):
+            for i in range(0, 12):
                 tildagonos.leds[i+1] = (0, 0, 0)
 
     def draw(self, ctx):
         clear_background(ctx)
+
 
 __app_export__ = LEDExampleApp
 ```
@@ -170,7 +175,8 @@ You can also use the `ButtonDownEvent` and the `ButtonUpEvent` directly with an 
 1.  Import the `events.input` package:
 
     ```python
-    from events.input import Button, BUTTON_TYPES, ButtonDownEvent, ButtonUpEvent
+    from events.input import \
+        Button, BUTTON_TYPES, ButtonDownEvent, ButtonUpEvent
     from system.eventbus import eventbus
     ```
 
@@ -231,7 +237,7 @@ Select a hexpansion port, then press the **UP** button to toggle the eGPIO value
 ```python
 import app
 
-from system.hexpansion.config import *
+from system.hexpansion.config import HexpansionConfig
 from app_components import clear_background, Menu
 from app_components.tokens import colors
 from events.input import Buttons, BUTTON_TYPES
@@ -239,9 +245,11 @@ from math import pi
 
 menu_items = ["1", "2", "3", "4", "5", "6"]
 
+
 class ExampleApp(app.App):
     def __init__(self):
-        self.menu = Menu(self, menu_items, select_handler=self.select_handler, back_handler=self.back_handler)
+        self.menu = Menu(self, menu_items, select_handler=self.select_handler,
+                         back_handler=self.back_handler)
         self.hexpansion_config = None
         self.button_states = Buttons(self)
         self.pins = {}
@@ -291,12 +299,16 @@ class ExampleApp(app.App):
             # Drawing a shape as a port indicator.
             ctx.save()
             ctx.font_size = 22
-            ctx.rgb(*colors["dark_green"]).rectangle(-120,-120, 240, 100).fill()
-            ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
+            ctx.rgb(*colors["dark_green"]).rectangle(
+                -120, -120, 240, 100).fill()
+            ctx.rgb(*colors["dark_green"]).rectangle(
+                -120, 20, 240, 100).fill()
             rotation_angle = self.menu.position*pi/3
-            ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80,-120,40,240).fill()
+            ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(
+                80, -120, 40, 240).fill()
             prompt_message = "Select hexpansion port:"
-            ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
+            ctx.rgb(1, 1, 1).rotate(-rotation_angle).move_to(
+                0, -45).text(prompt_message)
             ctx.restore()
 
         else:
@@ -304,18 +316,19 @@ class ExampleApp(app.App):
             ctx.font_size = 24
             msg = "Hexpansion in port " + str(self.hexpansion_config.port)
             msg_width = ctx.text_width(msg)
-            ctx.rgb(1,1,1).move_to(-msg_width/2,0).text(msg)
+            ctx.rgb(1, 1, 1).move_to(-msg_width/2, 0).text(msg)
 
             # draw pin values
             pin_ls_1 = "LS_1: " + str(self.pins["ls_1"].value())
             msg_width = ctx.text_width(pin_ls_1)
-            ctx.rgb(1,1,1).move_to(-msg_width/2,-90).text(pin_ls_1)
+            ctx.rgb(1, 1, 1).move_to(-msg_width/2, -90).text(pin_ls_1)
 
             pin_hs_1 = "HS_1: " + str(self.pins["hs_1"].value())
             msg_width = ctx.text_width(pin_hs_1)
-            ctx.rgb(1,1,1).move_to(-msg_width/2,90).text(pin_hs_1)
+            ctx.rgb(1, 1, 1).move_to(-msg_width/2, 90).text(pin_hs_1)
 
             ctx.restore()
+
 
 __app_export__ = ExampleApp
 ```
@@ -328,11 +341,12 @@ GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.
 
 [eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) support the following methods:
 
-| Method    | Description                                                                                    | Arguments | Returns                                              |
-| --------- | ---------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------- |
-| `on()`    | Drive the pin high.                                                                            | None      | None                                                 |
-| `off()`   | Drive the pin low.                                                                             | None      | None                                                 |
-| `value()` | If provided with a value, sets the `Pin` value. If called without value, gets the `Pin` value. | None      | `value`: The pin value. If called without a `value`. |
+<!-- prettier-ignore -->
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `on()` | Drive the pin high. | None | None |
+| `off()` | Drive the pin low. | None | None |
+| `value()` | If provided with a value, sets the `Pin` value. If called without value, gets the `Pin` value. | None | `value`: The pin value. If called without a `value`. |
 
 ### Usage
 
@@ -385,12 +399,15 @@ class ExampleApp(app.App):
 
     def draw(self, ctx):
         ctx.save()
-        ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
+        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
         if self.acc_read:
-            ctx.rgb(1,0,0).move_to(-80,-40).text("accel x,y,z:\n{},\n{},\n{}".format(self.acc_read[0], self.acc_read[1], self.acc_read[2]))
+            ctx.rgb(1, 0, 0).move_to(-80, -40).text(
+                "accel x,y,z:\n{},\n{},\n{}".format(
+                    self.acc_read[0], self.acc_read[1], self.acc_read[2]))
         else:
-            ctx.rgb(1,0,0).move_to(-80,0).text("no readings yet")
+            ctx.rgb(1, 0, 0).move_to(-80, 0).text("no readings yet")
         ctx.restore()
+
 
 __app_export__ = ExampleApp
 ```
@@ -399,10 +416,11 @@ __app_export__ = ExampleApp
 
 The api currently only allows access to the raw data.
 
-| Method        | Description                 | Arguments | Returns                                                         |
-| ------------- | --------------------------- | --------- | --------------------------------------------------------------- |
-| `acc_read()`  | Get the accelerometer data. | None      | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
-| `gyro_read()` | Get the gyro data.          | None      | `(x,y,z)`: The gyro data as a tuple of floats (d/s).            |
+<!-- prettier-ignore -->
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `acc_read()` | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
+| `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 
 ### Usage
 
@@ -447,9 +465,10 @@ class ExampleApp(app.App):
 
     def draw(self, ctx):
         ctx.save()
-        ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
-        ctx.rgb(1,0,0).move_to(-80,0).text("Press up to\npower off")
+        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(1, 0, 0).move_to(-80, 0).text("Press up to\npower off")
         ctx.restore()
+
 
 __app_export__ = ExampleApp
 ```
@@ -472,18 +491,19 @@ To use the `power` package:
 
 ### Methods
 
-| Method                 | Description                                                                 | Arguments                                                         | Returns                                                                                                                                                  |
-| ---------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Off()`                | Turn off the battery. When the usb is disconnected the badge will turn off. | None                                                              | None                                                                                                                                                     |
-| `BatteryChargeState()` | Status of the Battery charing cycle.                                        | None                                                              | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`.                                                              |
-| `BatteryLevel()`       | Return the battery charge level.                                            | None.                                                             | `level` (`float`): Battery charge level as a float representing the charge percentage.                                                                   |
-| `Enable5V()`           | Enable the usb out 5V supply.                                               | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None.                                                                                                                                                    |
-| `Fault()`              | Get the PMIC fault status.                                                  | None.                                                             | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
-| `SupplyCapabilities()` | Read the capabilities of the power supply.                                  | None.                                                             | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA).                                                            |
-| `Icharge()`            | Get the battery charge current                                              | None.                                                             | `current` (`float`): The charge current in mA.                                                                                                           |
-| `Vbat()`               | Get the battery voltage.                                                    | None.                                                             | `voltage` (`float`): The battery voltage in V.                                                                                                           |
-| `Vin()`                | Get the input voltage.                                                      | None.                                                             | `voltage` (`float`): The input voltage in V.                                                                                                             |
-| `Vsys()` (`float`)     | Get the system voltage.                                                     | None.                                                             | `voltage` (`float`): Get the system voltage in V.                                                                                                        |
+<!-- prettier-ignore -->
+| Method | Description | Arguments | Returns |
+| ------ | ----------- | --------- | ------- |
+| `Off()`| Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
+| `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
+| `BatteryLevel()` | Return the battery charge level. | None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
+| `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
+| `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
+| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA). |
+| `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in mA. |
+| `Vbat()` | Get the battery voltage. | None. | `voltage` (`float`): The battery voltage in V. |
+| `Vin()` | Get the input voltage. | None. | `voltage` (`float`): The input voltage in V. |
+| `Vsys()` (`float`) | Get the system voltage. | None. | `voltage` (`float`): Get the system voltage in V. |
 
 ### Events
 
@@ -517,7 +537,8 @@ You can also use the following hexpansion-related events
 To use these events with the `EventBus`, import the following package:
 
 ```python
-from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+from system.hexpansion.events import \
+    HexpansionRemovalEvent, HexpansionInsertionEvent
 ```
 
 Then `emit()` the event as following:
@@ -536,7 +557,7 @@ The badge supports the [I2C communication protocol](https://www.circuitbasics.co
 ```python
 from machine import I2C
 
-bus = I2C(slot)
+bus = I2C(1)
 ```
 
 === "App loaded from EEPROM"
@@ -570,7 +591,7 @@ bus = I2C(slot)
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0,1,0).move_to(-90,-40).text("Hello from your\nhexpansion!")
+            ctx.rgb(0, 1, 0).move_to(-90, -40).text("Hello from your\nhexpansion!")
             ctx.restore()
 
             return None
@@ -621,7 +642,7 @@ bus = I2C(slot)
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0,1,0).move_to(-90,-40).text(self.text)
+            ctx.rgb(0, 1, 0).move_to(-90, -40).text(self.text)
             ctx.restore()
 
         def scan_for_hexpansion(self):
@@ -643,7 +664,7 @@ bus = I2C(slot)
                 self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
                 return HexpansionConfig(port)
 
-            self.color = (1,0,0)
+            self.color = (1, 0, 0)
             self.text = "No hexpansion found."
 
             return None
@@ -658,15 +679,21 @@ Example usage from the [MicroPython I2C docs](https://docs.micropython.org/en/la
 ```python
 from machine import I2C
 
-i2c.scan()                      # scan for peripherals, returning a list of 7-bit addresses
+i2c = I2C(freq=400000)
 
-i2c.writeto(42, b'123')         # write 3 bytes to peripheral with 7-bit address 42
-i2c.readfrom(42, 4)             # read 4 bytes from peripheral with 7-bit address 42
+# scan for peripherals, returning a list of 7-bit addresses
+i2c.scan()
 
-i2c.readfrom_mem(42, 8, 3)      # read 3 bytes from memory of peripheral 42,
-                                #   starting at memory-address 8 in the peripheral
-i2c.writeto_mem(42, 2, b'\x10') # write 1 byte to memory of peripheral 42
-                                #   starting at address 2 in the peripheral
+# write 3 bytes to peripheral with 7-bit address 42
+i2c.writeto(42, b'123')
+# read 4 bytes from peripheral with 7-bit address 42
+i2c.readfrom(42, 4)
+# read 3 bytes from memory of peripheral 42, starting at memory-address 8 in
+# the peripheral
+i2c.readfrom_mem(42, 8, 3)
+# write 1 byte to memory of peripheral 42 starting at address 2 in the
+# peripheral
+i2c.writeto_mem(42, 2, b'\x10')
 ```
 
 For more information, see [MicroPython I2C docs](https://docs.micropython.org/en/latest/library/machine.I2C.html).

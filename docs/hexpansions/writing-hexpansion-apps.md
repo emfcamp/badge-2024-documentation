@@ -55,7 +55,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0,1,0).move_to(-90,-40).text("Hello from your\nhexpansion!")
+            ctx.rgb(0, 1, 0).move_to(-90, -40).text("Hello from your\nhexpansion!")
             ctx.restore()
 
             return None
@@ -109,7 +109,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0,1,0).move_to(-90,-40).text(self.text)
+            ctx.rgb(0, 1, 0).move_to(-90, -40).text(self.text)
             ctx.restore()
 
         def scan_for_hexpansion(self):
@@ -132,7 +132,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 # You can add some logic here to check the PID and VID match your hexpansion
                 return HexpansionConfig(port)
 
-            self.color = (1,0,0)
+            self.color = (1, 0, 0)
             self.text = "No hexpansion found."
 
             return None
@@ -181,12 +181,12 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 # This might look weird, but we're just drawing a shape as a port indicator.
                 ctx.save()
                 ctx.font_size = 22
-                ctx.rgb(*colors["dark_green"]).rectangle(-120,-120, 240, 100).fill()
+                ctx.rgb(*colors["dark_green"]).rectangle(-120, -120, 240, 100).fill()
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
                 rotation_angle = self.menu.position*pi/3
-                ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80,-120,40,240).fill()
+                ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80, -120, 40, 240).fill()
                 prompt_message = "Select hexpansion port:"
-                ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
+                ctx.rgb(1, 1, 1).rotate(-rotation_angle).move_to(0, -45).text(prompt_message)
                 ctx.restore()
 
             else:
@@ -194,7 +194,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 ctx.font_size = 24
                 msg = "Hexpansion in port " + str(self.hexpansion_config.port)
                 msg_width = ctx.text_width(msg)
-                ctx.rgb(1,1,1).move_to(-msg_width/2,0).text(msg)
+                ctx.rgb(1, 1, 1).move_to(-msg_width/2, 0).text(msg)
                 ctx.restore()
 
     __app_export__ = ExampleApp
@@ -206,12 +206,13 @@ In all of these examples, the `HexpansionConfig` object is used to provide infor
 
 The `HexpansionConfig` object that you get after following the examples is where the magic all happens. It allows you to access the following:
 
-| Object                      | Description                                                                                                                | Example Usage                                                                           |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `HexpansionConfig.port`     | The port number your hexpansion is connected to.                                                                           |                                                                                         |
-| `HexpansionConfig.pin[]`    | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port.                            | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html) |
-| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio)                         |
-| `HexpansionConfig.i2c`      | The dedicated `I2C` object for this hexpansion port.                                                                       | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c)                             |
+<!-- prettier-ignore -->
+| Object | Description | Example Usage |
+| ------ | ----------- | ------------- |
+| `HexpansionConfig.port` | The port number your hexpansion is connected to. | |
+| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html) |
+| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
+| `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
 ### Pin vs ePin
 

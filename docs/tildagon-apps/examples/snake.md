@@ -37,9 +37,9 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
         def draw(self, ctx):
             ctx.save()
-            ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
+            ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
             ctx.font_size = 14
-            ctx.rgb(1,0,0).move_to(-90,0).text("This will be my snake game soon!")
+            ctx.rgb(1, 0, 0).move_to(-90, 0).text("This will be my snake game soon!")
             ctx.restore()
 
     __app_export__ = SnakeApp
@@ -118,7 +118,7 @@ def draw(self, ctx):
     clear_background(ctx)
     ctx.save()
 
-    ctx.translate(-80,-80)
+    ctx.translate(-80, -80)
     # draw game board
     ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -147,7 +147,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -218,7 +218,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -227,6 +227,7 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
 
 __app_export__ = SnakeApp
 ```
@@ -242,12 +243,16 @@ Next, you'll make your snake move up, down, left, and right using the respective
 ```python
 def update(self, delta):
     if self.button_states.get(BUTTON_TYPES["RIGHT"]):
+        print("right")
         # do something
     elif self.button_states.get(BUTTON_TYPES["LEFT"]):
+        print("left")
         # do something
     elif self.button_states.get(BUTTON_TYPES["UP"]):
+        print("up")
         # do something
     elif self.button_states.get(BUTTON_TYPES["DOWN"]):
+        print("down")
         # do something
     elif self.button_states.get(BUTTON_TYPES["CANCEL"]):
         self.button_states.clear()
@@ -349,7 +354,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -358,6 +363,7 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
 
 __app_export__ = SnakeApp
 ```
@@ -404,7 +410,6 @@ class SnakeApp(app.App):
         self.direction = ""
         self.step = 0
 
-
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
             self.direction = "RIGHT"
@@ -443,7 +448,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -452,6 +457,7 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
 
 __app_export__ = SnakeApp
 ```
@@ -486,17 +492,17 @@ Then, define a `_generate_food()` method that creates random coordinates for a n
 ```python
 def _generate_food(self):
     coordinates = (random.randrange(32), random.randrange(32))
-    if not coordinates in self.food:
+    if coordinates not in self.food:
         self.food = self.food + [coordinates]
 ```
 
 You could call this method in multiple ways. I suggest you use the `background_task()` method which allows you to add food asynchronously every few seconds:
 
 ```python
-    async def background_task(self):
-        while True:
-            await asyncio.sleep(5)
-            self._generate_food()
+async def background_task(self):
+    while True:
+        await asyncio.sleep(5)
+        self._generate_food()
 ```
 
 Add the `asyncio` package at the top of your file:
@@ -583,7 +589,7 @@ class SnakeApp(app.App):
 
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -595,7 +601,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -608,6 +614,7 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
 
 __app_export__ = SnakeApp
 ```
@@ -704,10 +711,9 @@ class SnakeApp(app.App):
             self.food.remove(self.snake[0])
             self.snake = self.snake + [self.snake[0]]
 
-
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -719,7 +725,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -732,6 +738,7 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
 
 __app_export__ = SnakeApp
 ```
@@ -777,7 +784,7 @@ Draw the score before you call the `translate()` method:
 # draw score
 ctx.font_size = 12
 width = ctx.text_width("Score: {}".format(self.score))
-ctx.rgb(1,0,0).move_to(0 - width/2,100).text("Score: {}".format(self.score))
+ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text("Score: {}".format(self.score))
 ```
 
 Your app should now resemble this:
@@ -801,7 +808,6 @@ class SnakeApp(app.App):
         self.direction = ""
         self.step = 0
         self.score = 0
-
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
@@ -843,10 +849,9 @@ class SnakeApp(app.App):
             self.snake = self.snake + [self.snake[0]]
             self.score = self.score + 1
 
-
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -861,9 +866,10 @@ class SnakeApp(app.App):
         # draw score
         ctx.font_size = 12
         width = ctx.text_width("Score: {}".format(self.score))
-        ctx.rgb(1,0,0).move_to(0 - width/2,100).text("Score: {}".format(self.score))
+        ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text(
+            "Score: {}".format(self.score))
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -876,6 +882,7 @@ class SnakeApp(app.App):
             ctx.rgb(0, 0, 1).rectangle(x*5, y*5, 5, 5).fill()
 
         ctx.restore()
+
 
 __app_export__ = SnakeApp
 ```
@@ -998,7 +1005,7 @@ Define the `_reset()` method and make it reset the game state:
 
 ```python
 def _reset(self):
-    self.snake = [(16,16)]
+    self.snake = [(16, 16)]
     self.food = []
     self.direction = ""
     self.score = 0
@@ -1048,7 +1055,7 @@ class SnakeApp(app.App):
         self.dialog = None
 
     def _reset(self):
-        self.snake = [(16,16)]
+        self.snake = [(16, 16)]
         self.food = []
         self.direction = ""
         self.score = 0
@@ -1058,7 +1065,6 @@ class SnakeApp(app.App):
         self._reset()
         self.button_states.clear()
         self.minimise()
-
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
@@ -1091,7 +1097,8 @@ class SnakeApp(app.App):
                 on_no=self._exit,
                 app=self,
             )
-            # Reset the game variable to ensure this dialog is only created once
+            # Reset the game variable to ensure this dialog is only created
+            # once
             self.game = ""
 
     def _move_snake(self):
@@ -1124,7 +1131,7 @@ class SnakeApp(app.App):
 
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -1140,9 +1147,10 @@ class SnakeApp(app.App):
         # draw score
         ctx.font_size = 12
         width = ctx.text_width("Score: {}".format(self.score))
-        ctx.rgb(1,0,0).move_to(0 - width/2,100).text("Score: {}".format(self.score))
+        ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text(
+            "Score: {}".format(self.score))
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -1158,6 +1166,7 @@ class SnakeApp(app.App):
 
         if self.dialog:
             self.dialog.draw(ctx)
+
 
 __app_export__ = SnakeApp
 ```
@@ -1223,11 +1232,13 @@ def update(self, delta):
         else:
             # Use Y coordinate to go left or right
             if self.acc_read[1] > 0:
-                # A positive Y coordinate indicates the badge is tilted to the right
+                # A positive Y coordinate indicates the badge is tilted to the
+                # right
                 self.direction = "RIGHT"
                 self.game = "ON"
             else:
-                # A positive Y coordinate indicates the badge is tilted to the left
+                # A positive Y coordinate indicates the badge is tilted to the
+                # left
                 self.direction = "LEFT"
                 self.game = "ON"
 
