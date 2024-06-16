@@ -12,3 +12,4 @@ jobs:
         check-modified-files-only: 'no'
         folder-path: 'docs/'
         base-branch: 'main'
+        config-file: 'mlc_config.json'

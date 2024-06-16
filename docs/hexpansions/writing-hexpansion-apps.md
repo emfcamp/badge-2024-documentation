@@ -223,8 +223,9 @@ Hexpansion ports have two types of GPIO pins -  `Pin` objects and `ePin` objects
 !!! note "Using the ADC"
     If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
 
+<!-- markdown-link-check-disable -->
 `ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
-
+<!-- markdown-link-check-enable -->
 
 ## Further development
 
