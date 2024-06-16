@@ -53,7 +53,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <!--hexpansions-start-->
   <span class="img-container">
     <img src="/images/hexpansions/og-hexpansion.jpg" loading="lazy" alt="hexpansion exposing pins" data-title="The OG Hexpansion by kliment" data-description=".custom-desc-og">
-    <span class="label"><a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion">OG Hexpansion</a> by kliment</span>
+    <span class="label"><a href="https://githb.com/emfcamp/badge-2024-hardware/tree/main/hexpansion">OG Hexpansion</a> by kliment</span>
     <div class="glightbox-desc custom-desc-og">
       <p>Link: <a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion">GitHub</a></p>
     </div>
