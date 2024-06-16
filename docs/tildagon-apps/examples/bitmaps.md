@@ -3,8 +3,6 @@ title: Drawing Bitmaps
 weight: 3
 ---
 
-# Drawing Bitmaps on Tildagon
-
 [Here is an example of drawing a bitmap emoji on Tildagon](https://github.com/ntflix/Tildagon-Bitmap-Demo).
 
 1. Use the `utils/img2bitmap.py` tool in [st7789_mpy](https://github.com/russhughes/st7789_mpy) repo to convert your image to a compatible bitmap module

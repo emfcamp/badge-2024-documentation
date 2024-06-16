@@ -82,8 +82,8 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 
    def draw(self, ctx):
        ctx.save()
-       ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
-       ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
+       ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+       ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
        ctx.restore()
 
    __app_export__ = ExampleApp
@@ -122,5 +122,3 @@ You can currently only publish Tildagon Apps through GitHub. Contributions to su
 - [End user manual](../using-the-badge/end-user-manual.md)
 
 </div>
-
-[simulator]: https://github.com/emfcamp/badge-2024-software/tree/main/sim

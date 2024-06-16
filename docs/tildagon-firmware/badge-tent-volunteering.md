@@ -1,4 +1,6 @@
-# Badge Tent Volunteering
+# Volunteering
+
+## Badge Tent Volunteering
 
 During EMF2024, we'll have a badge tent where attendees can come to pick up
 their badge and get help. We need volunteers to help staff the tent.
@@ -12,7 +14,7 @@ Tasks include:
 
 Signup instructions will be posted here closer to the event.
 
-# Volunteering from anywhere
+## Volunteering from anywhere
 
 ## Issues on GitHub
 

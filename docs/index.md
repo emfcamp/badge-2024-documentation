@@ -426,8 +426,3 @@ The most energy-intensive part of each badge is the battery, so we've made it co
 Instead of having a lanyard, we are making the USB cable itself be the lanyard for this badge - cables in different lengths are available for people of different sizes, and it can also be used for badge-to-badge and badge-to-computer communication.
 
 [badge-2024-hardware]: https://github.com/emfcamp/badge-2024-hardware
-[badge-2024-software]: https://www.github.com/emfcamp/badge-2024-software
-[badge-2024-documentation]: https://www.github.com/emfcamp/badge-2024-documentation
-[badge-2024-app-store]: https://www.github.com/emfcamp/badge-2024-app-store
-[badge-tent-volunteering]: ./badge-tent-volunteering.md
-[matrix]: https://matrix.to/#/#badge:emfcamp.org
