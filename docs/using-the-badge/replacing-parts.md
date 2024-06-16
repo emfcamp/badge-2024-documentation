@@ -23,7 +23,6 @@ If you bought a display with a loose pins you have to also push the display onto
 
 The badge uses a [JUSHUO AFC01-S30FCC-00](https://www.lcsc.com/product-detail/FFC-FPC-Connectors_JUSHUO-AFC01-S30FCC-00_C262279.html).
 
-
 !!! tip "You've found a badge CHALLENGE!"
 
     Your challenge, should you choose to accept it, is to document how you replaced your FPC if you do so (pictures would be great!). To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/175).

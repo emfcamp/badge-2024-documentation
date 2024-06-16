@@ -22,16 +22,17 @@ class ExampleApp(app.App):
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             # The button_states do not update while you are in the background.
-            # Calling clear() ensures the next time you open the app, it stays open.
-            # Without it the app would close again immediately.
+            # Calling clear() ensures the next time you open the app, it stays
+            # open. Without it the app would close again immediately.
             self.button_states.clear()
             self.minimise()
 
     def draw(self, ctx):
         ctx.save()
-        ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
-        ctx.rgb(1,0,0).move_to(-80,0).text("Hello world")
+        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
         ctx.restore()
+
 
 __app_export__ = ExampleApp
 ```
@@ -138,99 +139,98 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
 
 1. To be able to subclass the `App` class, import the `app` package at the top of your Python file:
 
-    ```python
-    import app
-    ```
+   ```python
+   import app
+   ```
 
 2. Next define your class:
 
-    ```python
-    class ExampleApp(app.App):
-    ```
+   ```python
+   class ExampleApp(app.App):
+   ```
 
 3. When subclassing the `App` class you need to choose which methods to overwrite. Most apps will overwrite at least the `__init__()`, `update()`, and `draw()` methods:
 
-     1. The `__init__()` method allows you to store information about your app. For example, you might have a counter for when the right button is pressed.
-     2. The `update()` is called every 0.05 seconds. It's there to allow you to update state. For example, to make an app that counts up when the right button is pressed, you would want to check whether the right button is pressed and if it is, increase the counter. Note that in this example the counter will count up while the button is pressed every time this method is called so the counter will increase every 0.05 seconds instead of only once when you initially press the button!
-     3. The `draw()` method is also called roughly every 0.05 seconds and is there to update what is visible on the screen using the `ctx` library. More on this library [later](#the-ctx-library). In the example below, we overwrite the `draw` method so that it draws a big light-green rectangle that functions as the background, and then it puts the counter as text on the screen.
+   1. The `__init__()` method allows you to store information about your app. For example, you might have a counter for when the right button is pressed.
+   2. The `update()` is called every 0.05 seconds. It's there to allow you to update state. For example, to make an app that counts up when the right button is pressed, you would want to check whether the right button is pressed and if it is, increase the counter. Note that in this example the counter will count up while the button is pressed every time this method is called so the counter will increase every 0.05 seconds instead of only once when you initially press the button!
+   3. The `draw()` method is also called roughly every 0.05 seconds and is there to update what is visible on the screen using the `ctx` library. More on this library [later](#the-ctx-library). In the example below, we overwrite the `draw` method so that it draws a big light-green rectangle that functions as the background, and then it puts the counter as text on the screen.
 
-    Here's a minimal example which shows a counter that counts up when the right button is pressed. The counter is stored as a property on the app and increased in the `update()` method if the button is presses/held. The `draw()` method reads the current value every 0.05 seconds and updates what's on the display:
+   Here's a minimal example which shows a counter that counts up when the right button is pressed. The counter is stored as a property on the app and increased in the `update()` method if the button is presses/held. The `draw()` method reads the current value every 0.05 seconds and updates what's on the display:
 
-    ```python
-    import app
+   ```python
+   import app
 
-    from events.input import Buttons, BUTTON_TYPES
+   from events.input import Buttons, BUTTON_TYPES
 
-    class RightButtonCounterApp(app.App):
-        def __init__(self):
-            self.button_states = Buttons(self)
-            self.counter = 0
+   class RightButtonCounterApp(app.App):
+       def __init__(self):
+           self.button_states = Buttons(self)
+           self.counter = 0
 
-        def update(self, delta):
-            if self.button_states.get(BUTTON_TYPES["RIGHT"]):
-                self.counter = self.counter + 1
+       def update(self, delta):
+           if self.button_states.get(BUTTON_TYPES["RIGHT"]):
+               self.counter = self.counter + 1
 
-        def draw(self, ctx):
-            ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+       def draw(self, ctx):
+           ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
 
-    __app_export__ = RightButtonCounterApp
-    ```
+   __app_export__ = RightButtonCounterApp
+   ```
 
-    If you want to instead count a button press once, you can do that by clearing the `button_state` after the first time it's counted:
+   If you want to instead count a button press once, you can do that by clearing the `button_state` after the first time it's counted:
 
-    ```python
-    import app
+   ```python
+   import app
 
-    from events.input import Buttons, BUTTON_TYPES
+   from events.input import Buttons, BUTTON_TYPES
 
-    class RightButtonCounterApp(app.App):
-        def __init__(self):
-            self.button_states = Buttons(self)
-            self.counter = 0
+   class RightButtonCounterApp(app.App):
+       def __init__(self):
+           self.button_states = Buttons(self)
+           self.counter = 0
 
-        def update(self, delta):
-            if self.button_states.get(BUTTON_TYPES["RIGHT"]):
-                self.button_states.clear()
-                self.counter = self.counter + 1
+       def update(self, delta):
+           if self.button_states.get(BUTTON_TYPES["RIGHT"]):
+               self.button_states.clear()
+               self.counter = self.counter + 1
 
-        def draw(self, ctx):
-            ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+       def draw(self, ctx):
+           ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
 
-    __app_export__ = RightButtonCounterApp
-    ```
+   __app_export__ = RightButtonCounterApp
+   ```
 
 4. Currently, the `RightButtonCounterApp` from step 3 does not allow you to leave the app. To remedy that, we should add functionality to the overwritten `update()` method to call the `App`'s `minimise()` method when the cancel button is pressed. You should always provide a way to get out of an app!
 
+   ```python
+   import app
 
-    ```python
-    import app
+   from events.input import Buttons, BUTTON_TYPES
 
-    from events.input import Buttons, BUTTON_TYPES
+   class RightButtonCounterApp(app.App):
+       def __init__(self):
+           self.button_states = Buttons(self)
+           self.counter = 0
 
-    class RightButtonCounterApp(app.App):
-        def __init__(self):
-            self.button_states = Buttons(self)
-            self.counter = 0
+       def update(self, delta):
+           if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+               # The button_states do not update while you are in the background.
+               # Calling clear() ensures the next time you open the app, it stays open.
+               # Without it the app would close again immediately.
+               self.button_states.clear()
+               self.minimise()
+           if self.button_states.get(BUTTON_TYPES["RIGHT"]):
+               self.button_states.clear()
+               self.counter = self.counter + 1
 
-        def update(self, delta):
-            if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-                # The button_states do not update while you are in the background.
-                # Calling clear() ensures the next time you open the app, it stays open.
-                # Without it the app would close again immediately.
-                self.button_states.clear()
-                self.minimise()
-            if self.button_states.get(BUTTON_TYPES["RIGHT"]):
-                self.button_states.clear()
-                self.counter = self.counter + 1
+       def draw(self, ctx):
+           ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+           ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
 
-        def draw(self, ctx):
-            ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
-
-    __app_export__ = RightButtonCounterApp
-    ```
+   __app_export__ = RightButtonCounterApp
+   ```
 
 With these methods you can create many apps. There are a few more available that will allow you to do a bit more. We'll go over two that allow you to perform background updates and draw overlays next.
 
@@ -245,6 +245,7 @@ import app
 
 from events.input import Buttons, BUTTON_TYPES
 
+
 class TimeCounterApp(app.App):
     def __init__(self):
         self.button_states = Buttons(self)
@@ -255,13 +256,14 @@ class TimeCounterApp(app.App):
             self.button_states.clear()
             self.minimise()
 
-    def background_update():
+    def background_update(self):
         # if self.button_states.get(BUTTON_TYPES["RIGHT"]):
         self.counter = self.counter + 1
 
     def draw(self, ctx):
-        ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-        ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
+        ctx.rgb(0, 0.2, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(0, 1, 0).move_to(-80, 0).text(str(self.counter))
+
 
 __app_export__ = TimeCounterApp
 ```
@@ -281,6 +283,7 @@ import random
 from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 
+
 class Rectangle(object):
     def __init__(self):
         self.r = random.random()
@@ -288,7 +291,7 @@ class Rectangle(object):
         self.b = random.random()
 
     def draw(self, ctx):
-        ctx.rgb(self.r, self.g, self.b).rectangle(-60,-60,120,120).fill()
+        ctx.rgb(self.r, self.g, self.b).rectangle(-60, -60, 120, 120).fill()
 
 
 class OverlaysApp(app.App):
@@ -315,6 +318,7 @@ class OverlaysApp(app.App):
         # do not, then the menu remains visible when the app is opened.
         clear_background(ctx)
         self.draw_overlays(ctx)
+
 
 __app_export__ = OverlaysApp
 ```
@@ -355,9 +359,11 @@ class BasicApp(app.App):
             # Create a yes/no dialogue, add it to the overlays
             dialog = YesNoDialog("Change the colour?", self)
             self.overlays = [dialog]
-            # Wait for an answer from the dialogue, and if it was yes, randomise colour
+            # Wait for an answer from the dialogue, and if it was yes,
+            # randomise colour
             if await dialog.run(render_update):
-                self.color = (random.random(), random.random(), random.random())
+                self.color = (
+                    random.random(), random.random(), random.random())
 
             # Remove the dialogue and re-render
             self.overlays = []
@@ -372,6 +378,7 @@ class BasicApp(app.App):
 
         self.draw_overlays(ctx)
 
+
 __app_export__ = BasicApp
 ```
 
@@ -379,6 +386,7 @@ By default, the `background_task()` method is automatically run by the scheduler
 
 ### Properties
 
+<!-- prettier-ignore -->
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | `overlays` | An array of objects that each have a draw method. | Your app's list of overlays. |
@@ -387,6 +395,7 @@ By default, the `background_task()` method is automatically run by the scheduler
 
 You can use the following methods on an `App` object:
 
+<!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `__init__()` | Initializes the app. You can overwrite this method to add additional properties or perform tasks. | None | None |
@@ -394,7 +403,7 @@ You can use the following methods on an `App` object:
 | `update(delta)` | By default, This method is called by the `run()` method every 0.05 seconds. By default, it has _no implementation_. You can overwrite this method to perform updates. | `delta`: Time difference between the last update call and the current update call. | None |
 | `draw(ctx)` | By default, this method calls `draw_operlays()`. To add UI elements or other visual elements to your app, you need to overwrite this method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./reference/ctx.md). | None |
 | `draw_overlays(ctx)` | Draw each overlay stored in `self.overlays` on the screen. If you overwrite your `draw()` method and have any overlays, you need to call this method manually. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./reference/ctx.md). | None |
-| `background_task()` | _Asynchronous_. A loop for all applications, regardless of focused status. By default, it will call `background_update()` every 0.05 seconds. You can overwrite this behaviour. If you do, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L39) for reference.  | None | None |
+| `background_task()` | _Asynchronous_. A loop for all applications, regardless of focused status. By default, it will call `background_update()` every 0.05 seconds. You can overwrite this behaviour. If you do, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L39) for reference. | None | None |
 | `background_update(delta)` | This method is called by `background_task()` every 0.05 seconds. By default, it has _no implementation_. You can overwrite this method to perform updates in the background, that means even if your app is not in the foreground. | `delta`: Time difference between the last update call and the current update call. | None |
 | `minimise()` | Minimise the app. | None | None |
 
@@ -410,8 +419,8 @@ You can use the following premade [`app_components`](reference/ui-elements.md) t
 - [`TextDialog`](reference/ui-elements.md#text-dialog): create text dialogues
 - [`Layout`](reference/ui-elements.md#layouts): create menu layouts like the settings app
 - [`Tokens`](reference/ui-elements.md#tokens):
-    - constants for the display properties and colors
-    - functions for clearing the background and setting a color
+  - constants for the display properties and colors
+  - functions for clearing the background and setting a color
 
 ### The `ctx` library
 

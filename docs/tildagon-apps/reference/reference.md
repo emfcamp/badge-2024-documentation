@@ -17,8 +17,8 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
 - [`TextDialog`](./ui-elements.md#text-dialog): create text dialogues
 - [`Layout`](./ui-elements.md#layouts): create menu layouts like the settings app
 - [`Tokens`](./ui-elements.md#tokens):
-    - constants for the display properties and colors
-    - functions for clearing the background and setting a color
+  - constants for the display properties and colors
+  - functions for clearing the background and setting a color
 
 ## Drawing on the canvas with `ctx`
 

@@ -14,6 +14,7 @@ from app_components import Menu, Notification, clear_background
 
 main_menu_items = ["menu_item1", "menu_item2", "menu_item3"]
 
+
 class MenuDemo(App):
     def __init__(self):
         self.menu = Menu(
@@ -41,6 +42,7 @@ class MenuDemo(App):
         if self.notification:
             self.notification.update(delta)
 
+
 __app_export__ = MenuDemo
 ```
 
@@ -52,80 +54,82 @@ To use a menu:
 
 1. Import the `Menu` component:
 
-    ```python
-    from app_components import Menu
-    ```
+   ```python
+   from app_components import Menu
+   ```
 
 2. Define your menu items above your App class:
 
-    ```python
-    menu_items = [ "menu_item1", "menu_item2" ]
-    ```
+   ```python
+   menu_items = [ "menu_item1", "menu_item2" ]
+   ```
 
 3. Initialize a variable to hold the menu in the `__init__` method of your app:
 
-    ```python
-    self.menu = Menu(
-        self,
-        menu_items,
-        select_handler=self.select_handler,
-        back_handler=self.back_handler,
-    )
-    ```
+   ```python
+   self.menu = Menu(
+       self,
+       menu_items,
+       select_handler=self.select_handler,
+       back_handler=self.back_handler,
+   )
+   ```
 
-    To initialize the Menu use the following parameters:
+   To initialize the Menu use the following parameters:
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `app` | `App` | The app to add the menu to. |
-    | `menu_items` | `[str]` | A list of strings containing the menu items. |
-    | `select_handler` | `method` | The method to be called when an item is selected and the confirm button is pressed. |
-    | `back_handler` | `method` | The method to be called when the cancel button is pressed. |
-    | `position` | `int` | _Optional_. The menu position to start at. Default: `0`. |
-    | `speed_ms` | `int` | _Optional_. The speed to redraw the UI at. Default: `300`. |
-    | `item_font_size` | `float` | _Optional_. The item line height. Default: [`tokens.ten_pt`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
-    | `item_line_height` | `float` |_Optional_. The item line height. Default: [`tokens.label_font_size * tokens.line_height`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
-    | `focused_item_font_size` | `float` | _Optional_. The font size of the focused item. Default: [`tokens.heading_font_size`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
-    | `focused_item_margin` | `float` | _Optional_. The margin on the focused item. Default: `20`. |
+ | Parameter | Type | Description |
+ | --------- | ---- | ----------- |
+ | `app` | `App` | The app to add the menu to. |
+ | `menu_items` | `[str]` | A list of strings containing the menu items. |
+ | `select_handler` | `method` | The method to be called when an item is selected and the confirm button is pressed. |
+ | `back_handler` | `method` | The method to be called when the cancel button is pressed. |
+ | `position` | `int` | _Optional_. The menu position to start at. Default: `0`. |
+ | `speed_ms` | `int` | _Optional_. The speed to redraw the UI at. Default: `300`. |
+ | `item_font_size` | `float` | _Optional_. The item line height. Default: [`tokens.ten_pt`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
+ | `item_line_height` | `float` | _Optional_. The item line height. Default: [`tokens.label_font_size * tokens.line_height`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
+ | `focused_item_font_size` | `float` | _Optional_. The font size of the focused item. Default: [`tokens.heading_font_size`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py). |
+ | `focused_item_margin` | `float` | _Optional_. The margin on the focused item. Default: `20`. |
 
 4. If you are creating a multi-layered menu, also create a variable like `current_menu` in the `__init__` method of your app to store the users menu state:
-    ```python
-    self.current_menu = None
-    ```
 
-4. Define the `select_handler` and the `back_handler`:
+   ```python
+   self.current_menu = None
+   ```
 
-    ```python
-    def back_handler(self):
-        # Do something. If in the topmost menu, minimize, otherwise move one menu up.
-        if self.current_menu == "main":
-            self.minimise()
-        self.set_menu("main")
+5. Define the `select_handler` and the `back_handler`:
 
-    def select_handler(self, item):
-        # Do something based on the selection, like moving to a new menu or performing an action.
+   ```python
+   def back_handler(self):
+       # Do something. If in the topmost menu, minimize, otherwise move one menu up.
+       if self.current_menu == "main":
+           self.minimise()
+       self.set_menu("main")
 
-    ```
+   def select_handler(self, item):
+       # Do something based on the selection, like moving to a new menu or performing an action.
 
-5. Add the following lines in your `draw()` method to draw the app's menu:
+   ```
 
-    ```python
-    # in def draw(self, ctx):
-    self.menu.draw(ctx)
-    ```
+6. Add the following lines in your `draw()` method to draw the app's menu:
 
-6. Add the following lines in your `update()` method to update the state of the menu:
+   ```python
+   # in def draw(self, ctx):
+   self.menu.draw(ctx)
+   ```
 
-    ```python
-    # in def update(self, delta):
-    self.menu.update(delta)
-    ```
+7. Add the following lines in your `update()` method to update the state of the menu:
+
+   ```python
+   # in def update(self, delta):
+   self.menu.update(delta)
+   ```
 
 ### Methods
 
 You can use the following methods on a `Menu` object:
 
-| Method | Description | Parameter | Returns |
+<!-- prettier-ignore -->
+| Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `up_handler()` | Manually moves you up one position in the menu. | None | None |
 | `down_handler()` | Manually moves you down one position in the menu. | None | None |
@@ -172,6 +176,7 @@ class NotificationDemo(App):
         if self.notification:
             self.notification.draw(ctx)
 
+
 __app_export__ = NotificationDemo
 ```
 
@@ -181,50 +186,51 @@ To use a notification:
 
 1. Import the `Notification` component:
 
-    ```python
-    from app_components import Notification
-    ```
+   ```python
+   from app_components import Notification
+   ```
 
 2. Initialize the notification in the `__init__` method of your app:
 
-    ```python
-    self.notification = None
-    ```
+   ```python
+   self.notification = None
+   ```
 
 3. Set the notification text in your app's code:
 
-    ```python
-    self.notification = Notification("This is a notification!")
-    ```
+   ```python
+   self.notification = Notification("This is a notification!")
+   ```
 
-    `Notification()` supports the following parameters:
+   `Notification()` supports the following parameters:
 
-    | Parameter | Type | Description |
-    | --------- | ---- | ----------- |
-    | `message` | `str` | The notification message. |
-    | `port` | `int` | _Optional_. The port from which the notification was issued. Default: `0`. |
-    | `open` | `boolean` | _Optional_. Whether to open the notification. Default: `True`. |
+ | Parameter | Type | Description |
+ | --------- | ---- | ----------- |
+ | `message` | `str` | The notification message. |
+ | `port` | `int` | _Optional_. The port from which the notification was issued. Default: `0`. |
+ | `open` | `boolean` | _Optional_. Whether to open the notification. Default: `True`. |
 
 4. Add the following lines in your `draw()` method to draw the notification when `self.notification` contains a notification:
 
-    ```python
-    # in def draw(self, ctx):
-    if self.notification:
-        self.notification.draw(ctx)
-    ```
+   ```python
+   # in def draw(self, ctx):
+   if self.notification:
+       self.notification.draw(ctx)
+   ```
 
 5. Add the following lines in your `update()` method to update the state of the notification:
 
-    ```python
-    # in def update(self, delta):
-    if self.notification:
-        self.notification.update(delta)
-    ```
+   ```python
+   # in def update(self, delta):
+   if self.notification:
+       self.notification.update(delta)
+   ```
 
 ### Methods
 
 You can use the following methods on a `Notification` object:
 
+<!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `open()` | Manually open the notification. | None | None |
@@ -281,8 +287,8 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
 
             ctx.save()
             if self.answer:
-                ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
-                ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
+                ctx.rgb(0, 0, 0.2).rectangle(-120, -120, 240, 240).fill()
+                ctx.rgb(0, 0, 1).move_to(-80, 0).text(self.answer)
             ctx.restore()
 
             if self.dialog:
@@ -330,8 +336,8 @@ The [`YesNoDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/mod
             clear_background(ctx)
             if self.answer:
                 ctx.save()
-                ctx.rgb(0,0,0.2).rectangle(-120,-120,240,240).fill()
-                ctx.rgb(0,0,1).move_to(-80,0).text(self.answer)
+                ctx.rgb(0, 0, 0.2).rectangle(-120, -120, 240, 240).fill()
+                ctx.rgb(0, 0, 1).move_to(-80, 0).text(self.answer)
                 ctx.restore()
             self.draw_overlays(ctx)
 
@@ -344,15 +350,15 @@ To use the Yes/No dialog:
 
 1. Import the `YesNoDialog` component:
 
-    ```python
-    from app_components import YesNoDialog
-    ```
+   ```python
+   from app_components import YesNoDialog
+   ```
 
 2. Add the following line to the `__init__` method of your app to initialize the inherited object:
 
-    ```python
-    super().__init__()
-    ```
+   ```python
+   super().__init__()
+   ```
 
 === "Synchronous"
 
@@ -379,7 +385,8 @@ To use the Yes/No dialog:
               # Create a yes/no dialogue, add it to the overlays
               dialog = YesNoDialog("Is it a happy day?", self)
               self.overlays = [dialog]
-              # Wait for an answer from the dialogue, and if it was yes, do something
+              # Wait for an answer from the dialogue, and if it was yes, do
+              # something
               if await dialog.run(render_update):
                   # this sets a variable that can be used in the draw method
                   self.answer = "I'm sorry"
@@ -426,6 +433,7 @@ To make the dialog's answers have an effect you need to do something based on th
 
 You can use the following methods on a `YesNoDialog` object:
 
+<!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `render_update`: The method that triggers a `draw()` call when updates are complete. | `True` or `False` |
@@ -534,15 +542,15 @@ To use the text dialog:
 
 1. Import the `TextDialog` component:
 
-    ```python
-    from app_components import TextDialog
-    ```
+   ```python
+   from app_components import TextDialog
+   ```
 
 2. Add the following line to the `__init__` method of your app to initialize the inherited object:
 
-    ```python
-    super().__init__()
-    ```
+   ```python
+   super().__init__()
+   ```
 
 === "Synchronous"
 
@@ -618,6 +626,7 @@ To make the dialog's answer have an effect you need to do something with the ans
 
 You can use the following methods on a `TextDialog` object:
 
+<!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `run(render_update)` | Asynchronous. Open the dialog. You need to call this method to display the dialog. | `render_update`: The method that triggers a `draw()` call when updates are complete. | `True` or `False` |
@@ -644,11 +653,20 @@ This example creates what could be a small game menu with three parts:
 import app
 
 from app_components import clear_background, TextDialog
-from app_components.layout import TextDisplay, ButtonDisplay, DefinitionDisplay, LinearLayout
+from app_components.layout import \
+    TextDisplay, ButtonDisplay, DefinitionDisplay, LinearLayout
 from events.input import BUTTON_TYPES, ButtonDownEvent
 from system.eventbus import eventbus
 
 DIFFICULTY_VALUES = ["easy", "normal", "hard"]
+LOREM = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\
+ eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\
+ veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\
+ commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit\
+ esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat \
+ cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\
+ laborum."""
+
 
 def string_formatter(value):
     if value is None:
@@ -656,19 +674,25 @@ def string_formatter(value):
     else:
         return str(value)
 
+
 class LayoutMenuDemo(app.App):
     def __init__(self):
         self.layout = LinearLayout(items=[DefinitionDisplay("", "")])
         self.dialog = None
         self.options = {
-            ("text_setting", "Player Name", string_formatter, self.string_editor),
+            (
+                "text_setting",
+                "Player Name",
+                string_formatter,
+                self.string_editor
+            ),
             ("button_selector", "Difficulty selector", string_formatter, None),
             ("text", "Game Instructions", string_formatter, None),
         }
         self.app_settings = {
             "text_setting": "Naomi",
             "button_selector": "easy",
-            "instructions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "instructions": LOREM
         }
         eventbus.on_async(ButtonDownEvent, self._button_handler, self)
 
@@ -698,12 +722,13 @@ class LayoutMenuDemo(app.App):
             self.layout.items = []
             for id, label, formatter, editor in self.options:
                 if id in self.app_settings.keys():
-                    value = self.app_settings[id
-                    ]
+                    value = self.app_settings[id]
                 else:
-                   value = ""
+                    value = ""
+
                 if editor:
-                    async def _button_event(event, label=label, id=id, editor=editor):
+                    async def _button_event(
+                            event, label=label, id=id, editor=editor):
                         if BUTTON_TYPES["CONFIRM"] in event.button:
                             await editor(label, id, render_update)
                             return True
@@ -750,12 +775,11 @@ class LayoutMenuDemo(app.App):
                     result = await self.dialog.run(render_update)
                     if (
                         result is not False
-                    ):  #!= because we want to allow entering empty strings
+                    ):  # != because we want to allow entering empty strings
                         self.app_settings[self.dialog._settings_id] = result
                     self.dialog = None
                     if result:
                         break
-
 
     def update(self, delta):
         return True
@@ -763,6 +787,7 @@ class LayoutMenuDemo(app.App):
     def draw(self, ctx):
         clear_background(ctx)
         self.layout.draw(ctx)
+
 
 __app_export__ = LayoutMenuDemo
 ```
@@ -773,19 +798,19 @@ A longer example of a layout is the [Settings app](https://github.com/emfcamp/ba
 
 To use layouts:
 
-1. Import the different layouts:
+1.  Import the different layouts:
 
     ```python
     from app_components.layout import *
     ```
 
-1. Initialize a variable to hold the layouts in the `__init__` method of your app:
+1.  Initialize a variable to hold the layouts in the `__init__` method of your app:
 
     ```python
     self.layout = LinearLayout(items=[DefinitionDisplay("", "")])
     ```
 
-1. Add one or more layouts:
+1.  Add one or more layouts:
 
     === "DefinitionDisplay"
 
@@ -800,12 +825,12 @@ To use layouts:
 
         To initialize the definition display use the following parameters:
 
-        | Parameter | Type | Description |
-        | --------- | ---- | ----------- |
-        | `label` | `str` | The text to display for the label. |
-        | `value` | `str` | The text to display for the definition. |
-        | `height` | `int` | The height at which to display the definition display. |
-        | `button_handler` | `method` | The handler for button events. |
+ | Parameter | Type | Description |
+ | --------- | ---- | ----------- |
+ | `label` | `str` | The text to display for the label. |
+ | `value` | `str` | The text to display for the definition. |
+ | `height` | `int` | The height at which to display the definition display. |
+ | `button_handler` | `method` | The handler for button events. |
 
     === "TextDisplay"
 
@@ -814,17 +839,17 @@ To use layouts:
         Initialize the text_display in your `__init__` or in your `update` method and add it to the `self.layout.items` variable:
 
         ```python
-        text_display = TextDisplay("My long text", font_size=8, rgb=(0,0,50))
+        text_display = TextDisplay("My long text", font_size=8, rgb=(0, 0, 50))
         self.layout.items.append(text_display)
         ```
 
         To initialize the `TextDisplay` use the ?following parameters:
 
-        | Parameter | Type | Description |
-        | --------- | ---- | ----------- |
-        | `text` | `str` | The long text to display. |
-        | `font_size` | `int` | The font size to display the text in. |
-        | `rgb` | `tuple` | The color to display the text in. |
+ | Parameter | Type | Description |
+ | --------- | ---- | ----------- |
+ | `text` | `str` | The long text to display. |
+ | `font_size` | `int` | The font size to display the text in. |
+ | `rgb` | `tuple` | The color to display the text in. |
 
     === "ButtonDisplay"
 
@@ -837,20 +862,20 @@ To use layouts:
             text="Select me",
             app=self,
             font_size=8,
-            rgb=(50,0,0),
+            rgb=(50, 0, 0),
             button_handler=self.select_handler)
         self.layout.items.append(button_display)
         ```
 
         To initialize the button display use the following parameters:
 
-        | Parameter | Type | Description |
-        | --------- | ---- | ----------- |
-        | `text` | `str` | The long text to display. |
-        | `app` | `App` | The app to add the button display to. |
-        | `font_size` | `int` | The font size to display the text in. |
-        | `rgb` | `tuple` | The color to display the text in. |
-        | `button_handler` | `method` | The handler for button events. |
+ | Parameter | Type | Description |
+ | --------- | ---- | ----------- |
+ | `text` | `str` | The long text to display. |
+ | `app` | `App` | The app to add the button display to. |
+ | `font_size` | `int` | The font size to display the text in. |
+ | `rgb` | `tuple` | The color to display the text in. |
+ | `button_handler` | `method` | The handler for button events. |
 
         Create an asynchronous `select_handler` that does something when a button is pressed:
 
@@ -861,7 +886,7 @@ To use layouts:
                 return False
         ```
 
-1. Add the following lines in your `draw()` method to draw the app's layout:
+1.  Add the following lines in your `draw()` method to draw the app's layout:
 
     ```python
     # in def draw(self, ctx):
@@ -870,12 +895,11 @@ To use layouts:
 
 ## Tokens
 
-The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use:
-    - functions for clearing the background and setting a color
-    - constants for the display properties and colors
+The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use: - functions for clearing the background and setting a color - constants for the display properties and colors
 
 ### Functions
 
+<!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `clear_background(ctx)` | Clear the badge background. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
