@@ -172,7 +172,7 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
 
         def draw(self, ctx):
             ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+            ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
 
     __app_export__ = RightButtonCounterApp
     ```
@@ -196,7 +196,7 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
 
         def draw(self, ctx):
             ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+            ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
 
     __app_export__ = RightButtonCounterApp
     ```
@@ -227,7 +227,7 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
 
         def draw(self, ctx):
             ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-            ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+            ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
 
     __app_export__ = RightButtonCounterApp
     ```
@@ -261,7 +261,7 @@ class TimeCounterApp(app.App):
 
     def draw(self, ctx):
         ctx.rgb(0,0.2,0).rectangle(-120,-120,240,240).fill()
-        ctx.rgb(0,1,0).move_to(-80,0).text(self.counter)
+        ctx.rgb(0,1,0).move_to(-80,0).text(str(self.counter))
 
 __app_export__ = TimeCounterApp
 ```
