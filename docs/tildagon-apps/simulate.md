@@ -71,7 +71,7 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
 5. Run the simulator an select your app to test it:
 
-   ```
+   ```sh
    pipenv run python run.py
    ```
 

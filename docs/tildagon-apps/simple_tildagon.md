@@ -38,7 +38,8 @@ Using Thonny with the file manager open (if it isn't, select `View -> Files` on 
 ## Flashing some LEDs
 
 The Tildagon badge includes a number of RGB (red, green, blue, aka multicoloured) LEDs onboard.
-![](../images/badge-photos/badge-in-the-dark.jpg)
+
+![A badge lit in the dark](../images/badge-photos/badge-in-the-dark.jpg)
 
 Each of these LEDs has a number written beside it.
 

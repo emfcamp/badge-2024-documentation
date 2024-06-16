@@ -5,7 +5,7 @@ weight: 2
 
 There are several ways to connect your Tildagon to Wi-Fi depending on what approach you want to take.
 
-# Option 1 - Through the GUI
+## Option 1 - Through the GUI
 
 !!! warning ""
 
@@ -22,7 +22,7 @@ This is the easiest option, but a real pain to do because you have to type out e
 7. Exit the Settings app using F.
 8. Push the Reboop button and try connecting.
 
-# Option 2 - Use Tildagon Flasher
+## Option 2 - Use Tildagon Flasher
 
 Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium browser.
 
@@ -68,7 +68,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 
 !!! info "If the Wi-Fi won't connect after performing these steps, try changing the SSID and password commands to be in single quotes instead of double quotes. This seems to make a difference in certain circumstances."
 
-# Option 3 - Use mpremote
+## Option 3 - Use mpremote
 
 1. Install [mpremote](https://docs.micropython.org/en/latest/reference/mpremote.html)
 2. Connect the Tildagon to your computer using a USB-C data cable
@@ -113,7 +113,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 6. Restart the badge. Holdidown the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
 7. To test if you are connected, open the "App store"
 
-# Option 4 - Create a clone of the EMF Wi-Fi network
+## Option 4 - Create a clone of the EMF Wi-Fi network
 
 This could be a good option if you manage a Makerspace or other location where multiple EMF badges might visit.
 
