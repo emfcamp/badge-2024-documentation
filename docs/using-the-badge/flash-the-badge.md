@@ -29,7 +29,7 @@ To flash your badge, your badge **must be completely powered off**. If your badg
 
 ![Provisioning flow](../images/badge-photos/provision.gif)
 
-When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](#power-off) and disconnect it from your computer.
+When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](./#power-off) and disconnect it from your computer.
 
 !!! info "Don't want to use Chromium?"
 

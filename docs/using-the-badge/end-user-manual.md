@@ -47,9 +47,9 @@ From top to bottom, left to right:
 Get the three golden standoffs. Remove the plastic protector stickers on top of the middle screw mounts wherever you see three mounts together:
 
 <p style="text-align: center;">
-  <img src="../../images/badge-photos/screws1.jpg" width="100" alt="Screw mounts" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/screws2.jpg" width="100" alt="Screw mounts without protective stickers" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/screws3.jpg" width="100" alt="Screw mounts with added separator connector" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/screws1.jpg" width="100" alt="Screw mounts" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/screws2.jpg" width="100" alt="Screw mounts without protective stickers" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/screws3.jpg" width="100" alt="Screw mounts with added separator connector" style="width:200px;height: auto;" />
 </p>
 
 ![The standoffs attached to the badge](../images/badge-photos/standoffs.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
@@ -67,8 +67,8 @@ Flip the badge front, so you can see the names of the badge team:
 Attach the display ribbon to connector. Lift the black bit and slide the ribbon cable into the connector. The contacts should be placed towards the board. The blue side of the ribbon should remain visible.
 
 <p style="text-align: center;">
-  <img src="../../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/ribbon2.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/ribbon2.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
 </p>
 
 Next, attach the glue stickers to the badge front inside the rectangle.
@@ -100,15 +100,15 @@ If your badge is not yet flashed, follow the directions in [Flash your badge](./
 On the back of the battery, remove the plastic lid from the battery connector:
 
 <p style="text-align: center;">
-  <img src="../../images/badge-photos/battery2.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/battery3.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/battery2.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/battery3.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
 </p>
 
 Then attach the battery cable to battery connector on the back board.
 
 <p style="text-align: center;">
-  <img src="../../images/badge-photos/battery4.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
-  <img src="../../images/badge-photos/ribbon.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/battery4.jpg" width="100" alt="Battery connector" style="width:200px;height: auto;" />
+  <img src="../images/badge-photos/ribbon.jpg" width="100" alt="Battery connector without lid" style="width:200px;height: auto;" />
 </p>
 
 ### 6. Screw the badge front to the badge back
@@ -116,8 +116,8 @@ Then attach the battery cable to battery connector on the back board.
 Use the 3 screws to screw the badge front to the badge base. The top of the base board is between the two USB-C ports and should be aligned with the top of the front board which is where the **A** button is.
 
 <p style="text-align: center;">
-  <img src="../../images/badge-photos/orientation.jpg" width="100" alt="Aligned orientation of the front and back" style="width:auto;height: 200px;" />
-  <img src="../../images/badge-photos/connect.jpg" width="100" alt="Connected badge side view" style="width:auto;height: 200px;" />
+  <img src="../images/badge-photos/orientation.jpg" width="100" alt="Aligned orientation of the front and back" style="width:auto;height: 200px;" />
+  <img src="../images/badge-photos/connect.jpg" width="100" alt="Connected badge side view" style="width:auto;height: 200px;" />
 </p>
 
 ![Finished badge](../images/badge-photos/finished.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
