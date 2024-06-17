@@ -34,8 +34,8 @@ The badge uses a [HCTL HC-FFC05-30P-100-A-01 (30 pin 0.5mm pitch 100mm same side
 Check out the steps to [Assemble your badge](./end-user-manual.md#assembly) to see how your badge was assembled. Reverse the steps by unscrewing your badge front and then carefully opening the connectors to remove the cable and replace it with the new one.
 
 <p style="text-align: center;">
-  <img src="../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
-  <img src="../images/badge-photos/ribbon2.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
+  <img src="../../images/badge-photos/ribbon2.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
 </p>
 
 ## Replace a button
