@@ -110,7 +110,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     settings.save()
     ```
 
-6. Restart the badge. Holdidown the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
+6. Restart the badge. Hold down the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
 7. To test if you are connected, open the "App store"
 
 ## Option 4 - Create a clone of the EMF Wi-Fi network
