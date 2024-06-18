@@ -12,7 +12,18 @@ The Tildagon is a badge that you can wear around your neck. It has a round scree
 
 The badge will automatically connect to camp wifi, and you can use the [app store](https://apps.badge.emfcamp.org/) to install apps.
 
-The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by other attendees.
+The hexpansions that the badge supports allow you to extend the functionality of the badge with hardware made by [yourself](../hexpansions/creating-hexpansions.md) or other attendees.
+
+<div class="grid cards" markdown>
+
+- [I want to know how to assemble the badge](#assembly)
+- [I want to connect to another Wi-Fi network](./connect-to-wifi.md)
+- [(Re)flash your badge](./flash-the-badge.md)
+- [Operate your badge](#operate-your-badge)
+- [Accessories](./accessory-ideas.md)
+- [Common problems](./common-problems.md)
+
+</div>
 
 ## Assembly
 
@@ -28,7 +39,7 @@ From top to bottom, left to right:
 - badge base
 - display
 - 3 screws, 2 glue stickers
-- display cable
+- flexible cable
 - Tildagon sticker
 
 ### 1. Attach the standoffs to the base of the badge
@@ -45,7 +56,7 @@ Get the three golden standoffs. Remove the plastic protector stickers on top of 
 
 ### 2. Assemble the front of the badge
 
-Start with the badge front, display cable, and glue bits:
+Start with the badge front, flexible cable, and glue bits:
 
 ![Components for the front](../images/badge-photos/front-components.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
@@ -70,15 +81,19 @@ Peel the protectors from the glue stickers to attach the battery. Then, get the 
 
 ### 3. Attach the display
 
-Attach the other end of the ribbon display cable to the back board. Then gently push the display into the pins on the front of the badge.
+Attach the other end of the flexible ribbon cable to the back board. Then gently push the display into the pins on the front of the badge.
 
 !!! note "Display not working?"
 
-    If your display is broken, you can acquire a new one on [Aliexpress with connector soldered on](https://www.aliexpress.com/item/1005004392903184.html) or [Aliexpress with loose connector](https://www.aliexpress.com/item/1005005936868343.html) or [Amazon](https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/).
+    See [Replace your screen](./common-problems.md#replace-your-screen).
 
 ### 4. Flash your badge
 
-Follow the directions in [Flash your badge](#flash-your-badge) before you continue assembly.
+!!! info "Your badge is probably already flashed"
+
+    If you received your badge after 1pm Friday 31st May, you do not need to complete this step as badges were pre-flashed!
+
+If your badge is not yet flashed, follow the directions in [Flash your badge](./flash-the-badge.md) before you continue assembly.
 
 ### 5. Attach the battery to the back of the badge
 
@@ -109,31 +124,6 @@ Use the 3 screws to screw the badge front to the badge base. The top of the base
 
 That's it!
 
-## Flash your badge
-
-!!! info "Optional"
-
-    Note, you don't need to do this step if you received your badge after 1pm Friday 31st May, badges come pre-flashed!
-
-To flash your badge, it is best if the battery is not yet connected. It may not work with the battery connected.
-
-1. Open the [web flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium-based browser.
-
-    !!! info "The flasher may not work in other browsers."
-
-1. Hold the middle button, designated **boop** (the designation is on the back of the badge), while you connect the badge **USB in** port to your computer. This will load the bootloader.
-1. Keep holding the **boop** button until you click on the **Connect** button on the web flasher and select the Tildagon. You can now let go of the **boop** button.
-1. Select the **Install Tildagon** option.
-1. When prompted to confirm the installation, click *Install*. Installation may take a few minutes.
-
-![Provisioning flow](../images/badge-photos/provision.gif)
-
-When you see the **Installation complete** notification, your badge is flashed. To test your badge, press and hold the **reboop** button which will perform a soft reboot. When you are done testing, [power off your badge](#power-off) and disconnect it from your computer.
-
-!!! info "Don't want to use Chromium?"
-
-    You can also manually flash the badge following the instructions in the [`badge-2024-software` Readme](https://github.com/emfcamp/badge-2024-software).
-
 ## Operate your badge
 
 ### Power on
@@ -150,6 +140,8 @@ Use the buttons **A** (`UP`) and **D** (`DOWN`) to move up and down in the menu.
 
 To power off the badge, select the menu item **Power off**.
 
+If your screen is broken, follow the steps in [Turn off badge with broken screen](./common-problems.md#turn-off-badge-with-broken-screen).
+
 ## Buttons
 
 ### Front of the badge
@@ -164,9 +156,9 @@ To power off the badge, select the menu item **Power off**.
 ### Back of the board
 
 - **reboop**: Press and hold the **reboop** button to perform a soft (re)boot.
-- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader (the badge needs to be powered off before connecting to power)
+- **boop**: Press and hold the **boop** button while connecting to power to load the bootloader (the badge needs to be powered off before connecting to power).
 - **bat**: Press the **bat** button to power on your badge.
 
 ### Troubleshooting
 
-For common issues, see [](../using-the-badge/common-problems.md.)
+For common issues, see [Common problems](../using-the-badge/common-problems.md).

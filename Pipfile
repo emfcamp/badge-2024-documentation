@@ -7,9 +7,10 @@ name = "pypi"
 mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-glightbox = "*"
+cairosvg="*"
+social = "*"
 mkdocs-nav-weight = "*"
 mkdocs-include-markdown-plugin = "*"
-
 [dev-packages]
 
 [requires]

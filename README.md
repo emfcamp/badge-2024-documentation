@@ -1,3 +1,8 @@
+[![ci](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/ci.yml/badge.svg)](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/ci.yml)
+[![Check Links](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/check_links.yml/badge.svg)](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/check_links.yml)
+[![Lint Markdown files](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/markdown-lint.yml)
+[![Lint Python Code Snippets](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/python-lint.yml/badge.svg)](https://github.com/emfcamp/badge-2024-documentation/actions/workflows/python-lint.yml)
+
 # Tildagon Badge Documentation
 
 This is the source for the [Tildagon Badge Documentation](https://tildagon.badge.emfcamp.org/).

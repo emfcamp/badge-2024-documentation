@@ -1,8 +1,10 @@
 div.scroll-container {
-  background-color: #333;
+  background-color: transparent;
   overflow: auto;
-  white-space: nowrap;
   padding: 10px;
+  display: inline-table;
+  text-align: center;
+  white-space: normal;
 }
 
 div.scroll-container img {
@@ -14,16 +16,47 @@ div.scroll-container .img-container {
   display: inline-flex;
   flex-direction: column;
   max-width: 200px;
+  width: 200px;
+  padding: 10px 0px;
+}
+
+@media (max-width: 768px) {
+  div.scroll-container .img-container {
+    max-width: 120px;
+    width: 120px;
+  }
 }
 
 .img-container > a {
   margin: auto;
 }
 
-div.scroll-container .img-container .label {
+.img-container .label {
   max-width: 130px;
   text-wrap: wrap;
   text-align: center;
   margin: auto;
   line-height: normal;
+}
+
+.scroll-container.scroll-container > .img-container.collapsed {
+  display: none;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  padding-top: 1rem;
+}
+
+#showmore {
+  background-color: #a47bea;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
 }

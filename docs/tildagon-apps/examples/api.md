@@ -35,7 +35,8 @@ class FilmScheduleApp(app.App):
         # When we load, grab all the API data in JSON format
         # Requests will automatically convert this to a python dict
         # for us, it really is that good!
-        self.schedule = requests.get("https://emffilms.org/schedule.json").json()
+        self.schedule = requests.get(
+            "https://emffilms.org/schedule.json").json()
         self.button_states = Buttons(self)
         # Setup lists to hold our film titles and timings
         main_menu_items = []
@@ -56,7 +57,8 @@ class FilmScheduleApp(app.App):
         self.notification = None
 
     def select_handler(self, item, position):
-        self.notification = Notification('Showing at ' + self.timings[position] + '!')
+        self.notification = Notification(
+            'Showing at ' + self.timings[position] + '!')
 
     def back_handler(self):
         self.button_states.clear()
@@ -67,7 +69,6 @@ class FilmScheduleApp(app.App):
         if self.notification:
             self.notification.update(delta)
 
-
     def draw(self, ctx):
         clear_background(ctx)
         # Display the menu on the device
@@ -75,6 +76,7 @@ class FilmScheduleApp(app.App):
         self.menu.draw(ctx)
         if self.notification:
             self.notification.draw(ctx)
+
 
 __app_export__ = FilmScheduleApp
 ```
@@ -136,6 +138,7 @@ def FetchWeather():
         print("Error fetching weather data")
         raise Exception("Error fetching weather data")
 
+
 class WeatherType:
     id: int
     main: str
@@ -171,6 +174,7 @@ class WeatherInfo:
 
     def human_readable(self):
         return f"{self.weather.main}, {round(self.temp, 1)}°C"
+
 
 class WeatherApp(app.App):
     text: str
@@ -217,7 +221,7 @@ class WeatherApp(app.App):
         try:
             weather = FetchWeather()
             self.text = weather.human_readable()
-        except:
+        except Exception:
             self.text = "API failure.\nTry again."
 
 

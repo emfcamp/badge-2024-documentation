@@ -3,18 +3,21 @@ title: Accessories
 weight: 5
 ---
 
-## Replacement Parts
-
-The badge uses a GC9A01 1.28" round LCD module, commonly available from ebay, aliexpress etc.
-
-Some links to the correct screen:
-
-- https://www.aliexpress.com/item/1005004392903184.html
-- https://www.aliexpress.com/item/1005005936868343.html
-- https://www.ebay.co.uk/itm/135013745191
-- https://www.amazon.co.uk/ARCELI-Arduino-Resolution-Interface-Display/dp/B0CFXVD9HX/
-
 ## General Accessories
+
+### A 3D-printed case
+
+You can print the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
+
+![Badge bumper case](../images/badge-photos/Bumper%20Case.png)
+
+### A 3D-printed stand
+
+You can print a [Tildagon stand](https://www.printables.com/model/909352-tildagon-stand) to better display your badge.
+
+![Tildagon stand](../images/badge-photos/stand.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Fancy lanyard
 
 The badge uses a USB-C to USB-C cable as the lanyard - any USB-C cable will do, we recommend one around a meter long but it's up to you! You can also use regular lanyards if you would prefer.
 
@@ -29,13 +32,22 @@ Some suitable cables are:
 You can also use one that doesn't glow, search for "usb c to usb c", or add "rgb" on the end if you want to research your own glowing ones.
 : Note, that we do not recommend metal-shrouded usb cables as they can short circuits if they touch hexpansions.
 
+!!! info "Lanyard not lighting up?"
+
+    Unfortunately, not all badges support the glowing USB cables. We're not currently sure why.
+
+### Share your addon
+
+!!! note "Have an addon to share?"
+
+    Share it in the [badge-2024-addons](https://github.com/emfcamp/badge-2024-addons/tree/main) repository!
+
 ## Accessory Hexpansions
 
-<div class="scroll-container">
+<div class="scroll-container admonition info">
 {%
    include-markdown "../index.md"
    start="<!--hexpansions-start-->"
    end="<!--hexpansions-end-->"
 %}
 </div>
-

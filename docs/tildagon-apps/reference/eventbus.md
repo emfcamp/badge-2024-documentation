@@ -1,4 +1,4 @@
-# Eventbus
+# Eventbus overview
 
 You can register your events and event handlers with the [`Eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py) package:
 
@@ -6,13 +6,13 @@ You can register your events and event handlers with the [`Eventbus`](https://gi
 
 You can use your own events directly with an event handler that you register on the [`eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py).
 
-1. Import the `system.eventbus` package:
+1.  Import the `system.eventbus` package:
 
     ```python
     from system.eventbus import eventbus
     ```
 
-2. Define an event:
+2.  Define an event:
 
     ```python
     class SpecialEvent:
@@ -23,7 +23,7 @@ You can use your own events directly with an event handler that you register on 
         return "special event"
     ```
 
-3. Define a synchronous or asynchronous method to be called when the event occurs:
+3.  Define a synchronous or asynchronous method to be called when the event occurs:
 
     ```python
     def handle_event(self, event):
@@ -35,7 +35,7 @@ You can use your own events directly with an event handler that you register on 
         # do something
     ```
 
-4. Register your event handler, for example in the `__init__` method of your app with the event and the event handler. Depending on whether the event handler is a synchronous or asynchronous method call `on()` or `on_async()`:
+4.  Register your event handler, for example in the `__init__` method of your app with the event and the event handler. Depending on whether the event handler is a synchronous or asynchronous method call `on()` or `on_async()`:
 
     ```python
     def __init__(self):
@@ -47,7 +47,7 @@ You can use your own events directly with an event handler that you register on 
         eventbus.on_async(SpecialEvent, self.handle_event_async, self.app)
     ```
 
-5. Add code to emit the event, for example in your app's `update()` method. Depending on whether the event handler is a synchronous or asynchronous method call `emit()` or `emit_async()`:
+5.  Add code to emit the event, for example in your app's `update()` method. Depending on whether the event handler is a synchronous or asynchronous method call `emit()` or `emit_async()`:
 
     ```python
     def update(self, delta):
@@ -61,7 +61,7 @@ You can use your own events directly with an event handler that you register on 
         await eventbus.emit_async(SpecialEvent())
     ```
 
-6. Remove the event handler when the app is minimised or closed.
+6.  Remove the event handler when the app is minimised or closed.
 
     ```python
     eventbus.remove(SpecialEvent, self.handle_event, self.app)
@@ -77,6 +77,7 @@ You can see a more comprehensive example in [`dialog.py`](https://github.com/emf
 
 You can use the following methods on the `eventbus`:
 
+<!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `on(event_type, event_handler, app)` | Register an event for an app alongside the synchronous handler to be called when the event fires. | <ul><li><code>event_type</code>: The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`.</li><li><code>event_handler</code>: The synchronous function to be called when the event fires to handle the event.</li><li><code>app</code>: The app this event is being registered for.</li></ul> | None |

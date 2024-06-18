@@ -1,0 +1,4 @@
+[flake8]
+extend-ignore = F704, F821, F401, F841
+exclude = .git,build,dist
+max-complexity = 20

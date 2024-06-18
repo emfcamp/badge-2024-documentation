@@ -5,20 +5,20 @@ weight: 4
 
 This tutorial, will guide you through building your own snake app, step by step.
 
-![App showing the finished snake game](../images/snake/snake-game.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the finished snake game](../../images/snake/snake-game.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 If you want to see the finished code, see [Finished Code](#finished-code).
 
 ## Environment setup
 
-To start developing your own app, you first need to set up your environment. Follow the installation steps in [Simulate your app](./simulate.md).
+To start developing your own app, you first need to set up your environment. Follow the installation steps in [Simulate your app](../simulate.md).
 
 ## Create the app and test is
 
 The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder.
 
-1. Create a folder for your snake app called `snake`.
-2. In the new folder (`sim/apps/snake/`), create a file called `app.py` and add the following code:
+1.  Create a folder for your snake app called `snake`.
+2.  In the new folder (`sim/apps/snake/`), create a file called `app.py` and add the following code:
 
     ```python
     import app
@@ -37,9 +37,9 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
         def draw(self, ctx):
             ctx.save()
-            ctx.rgb(0.2,0,0).rectangle(-120,-120,240,240).fill()
+            ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
             ctx.font_size = 14
-            ctx.rgb(1,0,0).move_to(-90,0).text("This will be my snake game soon!")
+            ctx.rgb(1, 0, 0).move_to(-90, 0).text("This will be my snake game soon!")
             ctx.restore()
 
     __app_export__ = SnakeApp
@@ -47,36 +47,36 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
 
     ??? question "Don't know what this code does?"
 
-        If you want to read up on what this code does read [Write A Tildagon OS App](./development.md#hello-world-app).
+        If you want to read up on what this code does read [Write A Tildagon OS App](../development.md#hello-world-app).
 
-
-3. In the same folder, create a file called `__init__.py` and use it to import your app's class `SnakeApp`:
+3.  In the same folder, create a file called `__init__.py` and use it to import your app's class `SnakeApp`:
 
     ```python
     from .app import SnakeApp
     ```
 
-4. In the same folder, create a file called `metadata.json` and add your app's metadata. The file needs to contain:
-      - your app's name `SnakeApp`
-      - the category for the app
-      - the `callable` - which is the Python class for your app. When your app is run, this is the class that will be called to instantiate your app:
+4.  In the same folder, create a file called `metadata.json` and add your app's metadata. The file needs to contain:
+
+    - your app's name `SnakeApp`
+    - the category for the app
+    - the `callable` - which is the Python class for your app. When your app is run, this is the class that will be called to instantiate your app:
 
     ```json
     {
-            "callable": "SnakeApp",
-            "name": "Snake Game",
-            "category": "unknown",
-            "hidden": false
-        }
+      "callable": "SnakeApp",
+      "name": "Snake Game",
+      "category": "unknown",
+      "hidden": false
+    }
     ```
 
-5. At this point you can run your app with the simulator for the first time. You should do this before continuing the tutorial to test that everything is working:
+5.  At this point you can run your app with the simulator for the first time. You should do this before continuing the tutorial to test that everything is working:
 
     ```sh
     pipenv run python run.py
     ```
 
-![App showing text This will be my snake game soon](../images/snake/soon.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing text This will be my snake game soon](../../images/snake/soon.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Draw the game background
 
@@ -92,7 +92,7 @@ The `ctx` library allows you to draw many things onto the canvas of your app. On
 
 !!! info "Learn more"
 
-    You can learn more about the `ctx` library by reading the [`ctx` docs which provide many example apps](./widgets-and-hardware/ctx.md).
+    You can learn more about the `ctx` library by reading the [`ctx` docs which provide many example apps](../reference/ctx.md).
 
 Use the `clear_background()` and the `rectangle()` method in the `draw()` method of your app:
 
@@ -109,7 +109,7 @@ def draw(self, ctx):
 
 If you try this code, you'll notice the board is not centered. That's because the coordinates `(0, 0)` are the center of the screen, rather than the top left corner. The rectangle is drawn 160 to the bottom and 160 to the right from there currently.
 
-![An app drawing the axes](../images/ctx-examples/coordinates.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![An app drawing the axes](../../images/ctx-examples/coordinates.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 While we could draw the rectangle from `(-80, 80)`, it is easier for our game if we can use the coordinates `(0, 0)` to mean the top left of the board. The `ctx` library provides a method called `translate()` which allows us to do just that:
 
@@ -118,7 +118,7 @@ def draw(self, ctx):
     clear_background(ctx)
     ctx.save()
 
-    ctx.translate(-80,-80)
+    ctx.translate(-80, -80)
     # draw game board
     ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -147,7 +147,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -158,7 +158,7 @@ class SnakeApp(app.App):
 
 Go ahead and run your app in the simulator to ensure you can see the board:
 
-![App showing the snake game board](../images/snake/board.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the snake game board](../../images/snake/board.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 !!! tip "If you want to, please feel free to customize your snake app with different colours, sized, functionality..."
 
@@ -218,7 +218,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -228,12 +228,13 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure you can see the snake:
 
-![App showing the snake game board](../images/snake/snake-start.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the snake game board](../../images/snake/snake-start.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Move the snake
 
@@ -242,12 +243,16 @@ Next, you'll make your snake move up, down, left, and right using the respective
 ```python
 def update(self, delta):
     if self.button_states.get(BUTTON_TYPES["RIGHT"]):
+        print("right")
         # do something
     elif self.button_states.get(BUTTON_TYPES["LEFT"]):
+        print("left")
         # do something
     elif self.button_states.get(BUTTON_TYPES["UP"]):
+        print("up")
         # do something
     elif self.button_states.get(BUTTON_TYPES["DOWN"]):
+        print("down")
         # do something
     elif self.button_states.get(BUTTON_TYPES["CANCEL"]):
         self.button_states.clear()
@@ -349,7 +354,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -359,12 +364,13 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator, then press the up, down, right, or left buttons to ensure you can move the snake. Be aware that your snake can currently move off the visible screen, so pay attention when you open the app!
 
-![App showing the snake moving slowlier](../images/snake/run-off.gif){: style="margin:auto;display:block;" }
+![App showing the snake moving slowlier](../../images/snake/run-off.gif){: style="margin:auto;display:block;" }
 
 ### Adjust the speed of the game
 
@@ -404,7 +410,6 @@ class SnakeApp(app.App):
         self.direction = ""
         self.step = 0
 
-
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
             self.direction = "RIGHT"
@@ -443,7 +448,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -453,12 +458,13 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure your snake now moves more slowly:
 
-![App showing the snake moving slowlier](../images/snake/slower.gif){: style="margin:auto;display:block;" }
+![App showing the snake moving slowlier](../../images/snake/slower.gif){: style="margin:auto;display:block;" }
 
 ## Add food
 
@@ -486,17 +492,17 @@ Then, define a `_generate_food()` method that creates random coordinates for a n
 ```python
 def _generate_food(self):
     coordinates = (random.randrange(32), random.randrange(32))
-    if not coordinates in self.food:
+    if coordinates not in self.food:
         self.food = self.food + [coordinates]
 ```
 
 You could call this method in multiple ways. I suggest you use the `background_task()` method which allows you to add food asynchronously every few seconds:
 
 ```python
-    async def background_task(self):
-        while True:
-            await asyncio.sleep(5)
-            self._generate_food()
+async def background_task(self):
+    while True:
+        await asyncio.sleep(5)
+        self._generate_food()
 ```
 
 Add the `asyncio` package at the top of your file:
@@ -583,7 +589,7 @@ class SnakeApp(app.App):
 
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -595,7 +601,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -609,12 +615,13 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to see your food appear:
 
-![App showing food appearing](../images/snake/food.gif){: style="margin:auto;display:block;" }
+![App showing food appearing](../../images/snake/food.gif){: style="margin:auto;display:block;" }
 
 ### Eat food and grow
 
@@ -704,10 +711,9 @@ class SnakeApp(app.App):
             self.food.remove(self.snake[0])
             self.snake = self.snake + [self.snake[0]]
 
-
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -719,7 +725,7 @@ class SnakeApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -733,12 +739,13 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to ensure your snake can eat the food:
 
-![App showing the snake moving slowlier](../images/snake/eat.gif){: style="margin:auto;display:block;" }
+![App showing the snake moving slowlier](../../images/snake/eat.gif){: style="margin:auto;display:block;" }
 
 ## Keep score
 
@@ -777,7 +784,7 @@ Draw the score before you call the `translate()` method:
 # draw score
 ctx.font_size = 12
 width = ctx.text_width("Score: {}".format(self.score))
-ctx.rgb(1,0,0).move_to(0 - width/2,100).text("Score: {}".format(self.score))
+ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text("Score: {}".format(self.score))
 ```
 
 Your app should now resemble this:
@@ -801,7 +808,6 @@ class SnakeApp(app.App):
         self.direction = ""
         self.step = 0
         self.score = 0
-
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
@@ -843,10 +849,9 @@ class SnakeApp(app.App):
             self.snake = self.snake + [self.snake[0]]
             self.score = self.score + 1
 
-
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -861,9 +866,10 @@ class SnakeApp(app.App):
         # draw score
         ctx.font_size = 12
         width = ctx.text_width("Score: {}".format(self.score))
-        ctx.rgb(1,0,0).move_to(0 - width/2,100).text("Score: {}".format(self.score))
+        ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text(
+            "Score: {}".format(self.score))
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -877,12 +883,13 @@ class SnakeApp(app.App):
 
         ctx.restore()
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to check the score:
 
-![App showing the score](../images/snake/score.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the score](../../images/snake/score.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Constraints and game state
 
@@ -998,7 +1005,7 @@ Define the `_reset()` method and make it reset the game state:
 
 ```python
 def _reset(self):
-    self.snake = [(16,16)]
+    self.snake = [(16, 16)]
     self.food = []
     self.direction = ""
     self.score = 0
@@ -1048,7 +1055,7 @@ class SnakeApp(app.App):
         self.dialog = None
 
     def _reset(self):
-        self.snake = [(16,16)]
+        self.snake = [(16, 16)]
         self.food = []
         self.direction = ""
         self.score = 0
@@ -1058,7 +1065,6 @@ class SnakeApp(app.App):
         self._reset()
         self.button_states.clear()
         self.minimise()
-
 
     def update(self, delta):
         if self.button_states.get(BUTTON_TYPES["RIGHT"]):
@@ -1091,7 +1097,8 @@ class SnakeApp(app.App):
                 on_no=self._exit,
                 app=self,
             )
-            # Reset the game variable to ensure this dialog is only created once
+            # Reset the game variable to ensure this dialog is only created
+            # once
             self.game = ""
 
     def _move_snake(self):
@@ -1124,7 +1131,7 @@ class SnakeApp(app.App):
 
     def _generate_food(self):
         coordinates = (random.randrange(32), random.randrange(32))
-        if not coordinates in self.food:
+        if coordinates not in self.food:
             self.food = self.food + [coordinates]
 
     async def background_task(self):
@@ -1140,9 +1147,10 @@ class SnakeApp(app.App):
         # draw score
         ctx.font_size = 12
         width = ctx.text_width("Score: {}".format(self.score))
-        ctx.rgb(1,0,0).move_to(0 - width/2,100).text("Score: {}".format(self.score))
+        ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text(
+            "Score: {}".format(self.score))
 
-        ctx.translate(-80,-80)
+        ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
 
@@ -1159,16 +1167,17 @@ class SnakeApp(app.App):
         if self.dialog:
             self.dialog.draw(ctx)
 
+
 __app_export__ = SnakeApp
 ```
 
 Go ahead and run your app in the simulator to test the game state logic:
 
-![App showing the game over dialogue](../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
+![App showing the game over dialogue](../../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ## Optional: Use the IMU
 
-You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](./run-on-badge.md).
+You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](../run-on-badge.md).
 
 To use the imu, import the `imu` package:
 
@@ -1223,11 +1232,13 @@ def update(self, delta):
         else:
             # Use Y coordinate to go left or right
             if self.acc_read[1] > 0:
-                # A positive Y coordinate indicates the badge is tilted to the right
+                # A positive Y coordinate indicates the badge is tilted to the
+                # right
                 self.direction = "RIGHT"
                 self.game = "ON"
             else:
-                # A positive Y coordinate indicates the badge is tilted to the left
+                # A positive Y coordinate indicates the badge is tilted to the
+                # left
                 self.direction = "LEFT"
                 self.game = "ON"
 
@@ -1249,7 +1260,7 @@ def update(self, delta):
         self.direction = ""
 ```
 
-Follow the instructions in [debug your app on your badge](./run-on-badge.md) to test your app.
+Follow the instructions in [debug your app on your badge](../run-on-badge.md) to test your app.
 
 ## Next steps
 
@@ -1259,4 +1270,4 @@ Congratulations! You now have a finished snake app! There are many more features
 - Obstacles and obstacle collision checks.
 - You could add a hunger mechanic to ensure a snake must eat within a certain time frame.
 
-If you change the app, please [publish it to the App store](./publish.md).
+If you change the app, please [publish it to the App store](../publish.md).

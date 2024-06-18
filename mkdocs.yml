@@ -1,8 +1,11 @@
 site_name: Tildagon Badge Documentation
+site_description: "Documentation for the Tildagon Badge used at Electromagnetic Field 2024."
+site_url: https://tildagon.badge.emfcamp.org
 repo_url: https://github.com/emfcamp/badge-2024-documentation
 theme:
   name: material
   logo: "images/badge icon_64 wide cutouts.svg"
+
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -30,6 +33,8 @@ theme:
         name: Switch to system preference
 extra_css:
   - style.css
+extra_javascript:
+  - index.js
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -44,7 +49,11 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
+
 plugins:
-  - glightbox
+  - glightbox:
+      caption_position: bottom
   - mkdocs-nav-weight
   - include-markdown
+  - social:
+      cards: true

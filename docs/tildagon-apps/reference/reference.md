@@ -15,9 +15,10 @@ You can use the following premade [`app_components`](./ui-elements.md) to create
 - [`Notification`](./ui-elements.md#notification): pop up notifications
 - [`YesNoDialog`](./ui-elements.md#yesno-dialog): create yes or no dialogues
 - [`TextDialog`](./ui-elements.md#text-dialog): create text dialogues
+- [`Layout`](./ui-elements.md#layouts): create menu layouts like the settings app
 - [`Tokens`](./ui-elements.md#tokens):
-    - constants for the display properties and colors
-    - functions for clearing the background and setting a color
+  - constants for the display properties and colors
+  - functions for clearing the background and setting a color
 
 ## Drawing on the canvas with `ctx`
 
@@ -29,10 +30,10 @@ You can use the following hardware with the inbuilt interfaces:
 
 - [LEDs](./badge-hardware.md#leds)
 - [Buttons](./badge-hardware.md#buttons)
-- [eGPIO](./badge-hardware.md#egpio)
+- [Pins](./badge-hardware.md#pins)
 - [IMU](./badge-hardware.md#imu)
 - [Power](./badge-hardware.md#power)
 
 ## Using APIs
 
-To learn how to use APIs in your APPs, see [Use an API in an app](../api.md#examples).
+To learn how to use APIs in your APPs, see [Use an API in an app](../examples/api.md#examples).
