@@ -95,7 +95,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/protoboard.jpeg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
+    <img src=" ../../images/hexpansions/protoboard.jpg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
     <span class="label"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 Protoboard Hexpansion</a> by Jake Walker</span>
     <div class="glightbox-desc custom-desc-protoboard">
       <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 BUY HERE</a></p>
