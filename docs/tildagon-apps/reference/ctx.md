@@ -148,7 +148,7 @@ Think of the `ctx` object as a canvas. The object stores the drawing state of th
   - `compositing_mode`: The current compositing mode.
   - `global_alpha`: The alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas.
 
-You can `save()` the state of the canvas before drawing something on the canvas and `restore()` the state once you have finished drawing a special item. If for example you want to draw red squares and then draw one green square but don't want to have to respecify the entire state you can do this:
+You can `save()` the state of the canvas before drawing something on the canvas and `restore()` the state once you have finished drawing a special item. If for example you want to draw red squares, and then draw one green square, but don't want to have to re-specify the entire state, you can do this:
 
 ```python
 import app

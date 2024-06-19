@@ -38,7 +38,7 @@ On the rest of this page, you will find the spec for the requirements these hexp
 
 **A hexpansion must be 1mm thick!** If it's any other thickness, it will not fit the port, and it will not work. The connector itself specifies a 0.1mm tolerance for thickness.
 
-You can make a hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest hexpansion is a piece of 1mm cardstock cut into a particular shape.
+You can make a hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest hexpansion is a piece of 1mm card stock cut into a particular shape.
 
 If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sheet can vary quite a lot in thickness. _Extruded_ acrylic sheet has better dimensional tolerance and is recommended for building hexpansions.
 

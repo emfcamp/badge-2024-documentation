@@ -14,7 +14,7 @@ There are three options for your hexpansion app:
 2. Your hexpansion has an EEPROM, but your app is going to be downloaded from the app store and run separately.
 3. Your hexpansion does not have an EEPROM, so your app will be downloaded from the app store and run separately.
 
-Which aproach you use is dependent on the hexpansion you're writing an app for and your own personal preference. If your app is likely to be so large that it'll exceed the space on the EEPROM, you might want to explore cross-compiling your app using [mpy-cross](https://pypi.org/project/mpy-cross/) to reduce its size. If your app is still too large, option 2 is your best bet.
+Which approach you use is dependent on the hexpansion you're writing an app for and your own personal preference. If your app is likely to be so large that it'll exceed the space on the EEPROM, you might want to explore cross-compiling your app using [mpy-cross](https://pypi.org/project/mpy-cross/) to reduce its size. If your app is still too large, option 2 is your best bet.
 
 If you're confident that your app will fit within the EEPROM filesystem of your hexpansion, option 1 is your friend.
 
