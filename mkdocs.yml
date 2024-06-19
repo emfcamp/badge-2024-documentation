@@ -13,11 +13,9 @@ theme:
         icon: material/brightness-auto
         name: Switch to light mode
 
-    # Palette toggle for light mode
+    # # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
-      accent: teal
 
       toggle:
         icon: material/brightness-7
@@ -26,8 +24,6 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
-      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
