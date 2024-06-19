@@ -101,7 +101,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 BUY HERE</a></p>
     </div>
   </span>
-  <span class="img-container">
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="Floppy disk 'Flopagon' by Nathan Dumont" data-description=".custom-desc-flopagon">
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
     <div class="glightbox-desc custom-desc-flopagon">
