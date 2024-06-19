@@ -73,6 +73,30 @@ div.scroll-container .img-container {
   background-color: #213018;
 }
 
+.printme p {
+  background-color: #F77F02;
+  margin: 0.5rem auto;
+  width: 100px;
+  height: 1rem;
+  color: white;
+}
+
+.printme p:hover {
+  background-color: #c54a00;
+}
+
+.viewme p {
+  background-color: #2EADD9;
+  margin: 0.5rem auto;
+  width: 100px;
+  height: 1rem;
+  color: white;
+}
+
+.viewme p:hover {
+  background-color: #2eaed980;
+}
+
 #showmore:hover {
   color: rgba(255,255,255,0.7)
 }
