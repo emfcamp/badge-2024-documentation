@@ -148,8 +148,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Breadbeard Hexpansion by Danny Walker</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description="">
-    <span class="label">Hex-Drive and Hex-Dev by Team RobotMad</span>
+    <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
+    <span class="label"><a href="https://robotmad.odoo.com/shop">Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
+    <div class="glightbox-desc custom-desc-robotmad">
+      <p>Link: <a href="[https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity](https://robotmad.odoo.com/shop)">BUY HERE</a></p>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/robotmad2.jpg" loading="lazy" alt="Many Hex-Drives" data-title="Hex-Drives by Team RobotMad" data-description="">
