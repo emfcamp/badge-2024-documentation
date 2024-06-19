@@ -128,7 +128,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 
     Add the following keys and values to the json object, replacing `MY-NETWORK`, `MY-PASSWORD` and `MY-USER` with the real values for your network. Remember that json can't have trailing commas.
         * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD", "wifi_wpa2ent_username":"MY-USER"
-    
+
 6. Restart the badge by pressing the `reboop` button on the device
 7. To test if you are connected, open the "App store"
 
