@@ -95,6 +95,13 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
+    <img src=" ../../images/hexpansions/protoboard.jpeg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
+    <span class="label"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 Protoboard Hexpansion</a> by Jake Walker</span>
+    <div class="glightbox-desc custom-desc-protoboard">
+      <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 BUY HERE</a></p>
+    </div>
+  </span>
+  <span class="img-container">
     <img src=" ../../images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="Floppy disk 'Flopagon' by Nathan Dumont" data-description=".custom-desc-flopagon">
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
     <div class="glightbox-desc custom-desc-flopagon">
@@ -149,9 +156,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
-    <span class="label"><a href="https://robotmad.odoo.com/shop">Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
+    <span class="label"><a href="https://robotmad.odoo.com/shop">💰 Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
     <div class="glightbox-desc custom-desc-robotmad">
-      <p>Link: <a href="[https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity](https://robotmad.odoo.com/shop)">BUY HERE</a></p>
+      <p>Link: <a href="[https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity](https://robotmad.odoo.com/shop)">💰 BUY HERE</a></p>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
