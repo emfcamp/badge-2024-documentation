@@ -48,7 +48,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     settings.set('wifi_wpa2ent_username', None)
     ```
 
-    Run the following commant to save the settings
+    Run the following command to save the settings
 
     ```
     settings.save()
@@ -94,7 +94,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     settings.set('wifi_wpa2ent_username', None)
     ```
 
-    Run the following commant to save the settings
+    Run the following command to save the settings
 
     ```
     settings.save()
