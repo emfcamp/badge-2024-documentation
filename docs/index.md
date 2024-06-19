@@ -60,10 +60,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)" data-title="Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond" data-description="">
-    <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
-  </span>
-  <span class="img-container">
     <img src=" ../../images/hexpansions/ducks.jpg" loading="lazy" alt="Tildagon badge with five duck hexpansions and an emergency hot sauce hexpansion" data-title="Duck hexpansion by Tiff" data-description=".custom-desc-ducks">
     <span class="label"><a href="https://www.instagram.com/tiffleek/reel/C7yx5jmNJ9d/">Ducks hexpansion</a> by Tiff</span>
     <div class="glightbox-desc custom-desc-ducks">
@@ -96,10 +92,23 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/protoboard.jpg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
-    <span class="label"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 Protoboard Hexpansion</a> by Jake Walker</span>
+    <span class="label"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">Protoboard Hexpansion</a> by Jake Walker</span>
+    <span class="buyme"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/"><p>💰 BUY HERE</p></a></span>
     <div class="glightbox-desc custom-desc-protoboard">
-      <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 BUY HERE</a></p>
+      <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/"></a></p>
     </div>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
+    <span class="label"><a href="https://robotmad.odoo.com/shop">Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
+    <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
+    <div class="glightbox-desc custom-desc-robotmad">
+      <p>Link: <a href="https://robotmad.odoo.com/shop">BUY HERE</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)" data-title="Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond" data-description="">
+    <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="Floppy disk 'Flopagon' by Nathan Dumont" data-description=".custom-desc-flopagon">
@@ -153,13 +162,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/breadbeard.jpg" loading="lazy" alt="Breadbeard hexpansion" data-title="Breadbeard Hexpansion by Danny Walker" data-description="">
     <span class="label">Breadbeard Hexpansion by Danny Walker</span>
-  </span>
-  <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
-    <span class="label"><a href="https://robotmad.odoo.com/shop">💰 Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
-    <div class="glightbox-desc custom-desc-robotmad">
-      <p>Link: <a href="[https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity](https://robotmad.odoo.com/shop)">💰 BUY HERE</a></p>
-    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/robotmad2.jpg" loading="lazy" alt="Many Hex-Drives" data-title="Hex-Drives by Team RobotMad" data-description="">
