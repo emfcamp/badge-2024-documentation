@@ -11,4 +11,3 @@ weight: 3
 3. Import `tildagonos` with `from tildagonos import tildagonos`
 4. Use `tildagonos.tft.bitmap(heartimage, 50, 50)`, replacing the `heartimage`, and the x and y values (`50`, `50`) with your desired values
    - _Found in [badge-2024-software](https://github.com/emfcamp/badge-2024-software/blob/86547c67cc232e2883dd9f5a4561d7c429c36df4/modules/gc9a01py.py)_
-   -

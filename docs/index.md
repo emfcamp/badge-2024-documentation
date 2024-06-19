@@ -2,7 +2,7 @@
 
 ![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout pins peaking out from the edges, and a screen showing @emfcamp](images/badge-photos/badge-with-screen.jpg "Tildagon with attached Hexpansions and screen"){: style="width:300px; height: auto" , align=right }
 
-This year's badge is the Tildagon badge. It's a hexagon with a slot on each side that you can plug _[hexpansions](#hexpansions)_ into. A hexpansion is a 1 mm thick object with a hexagon shape on one edge (a six-sided polygon like this: ⬡). It can be made of cardstock, so you can quickly add some cat ears to your badge, or it can be a printed circuit.
+This year's badge is the Tildagon badge. It's a hexagon with a slot on each side that you can plug _[hexpansions](#hexpansions)_ into. A hexpansion is a 1 mm thick object with a hexagon shape on one edge (a six-sided polygon like this: ⬡). It can be made of card stock, so you can quickly add some cat ears to your badge, or it can be a printed circuit.
 
 Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is trying to make a [longer-lasting platform](#a-reusable-platform-with-an-interchangeable-part) so any apps developed for it will work for multiple years.
 
@@ -84,7 +84,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">LED Filament hexpansion by John Thurmond</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Markerspace hexpansion" data-title="Maker Space badge by Dan" data-description=".custom-desc-makerspace">
+    <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Makerspace hexpansion" data-title="Maker Space badge by Dan" data-description=".custom-desc-makerspace">
     <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
     <div class="glightbox-desc custom-desc-makerspace">
       <p>Link: <a href="https://www.makerspace.org.uk/">GitHub</a></p>
@@ -95,6 +95,13 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
+    <img src=" ../../images/hexpansions/protoboard.jpg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
+    <span class="label"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 Protoboard Hexpansion</a> by Jake Walker</span>
+    <div class="glightbox-desc custom-desc-protoboard">
+      <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">💰 BUY HERE</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="Floppy disk 'Flopagon' by Nathan Dumont" data-description=".custom-desc-flopagon">
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan Dumont</span>
     <div class="glightbox-desc custom-desc-flopagon">
@@ -144,12 +151,15 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Fidget Spinner by Catherine</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/breadbeard.jpg" loading="lazy" alt="Breadbord hexpansion" data-title="Breadbeard Hexpansion by Danny Walker" data-description="">
+    <img src=" ../../images/hexpansions/breadbeard.jpg" loading="lazy" alt="Breadbeard hexpansion" data-title="Breadbeard Hexpansion by Danny Walker" data-description="">
     <span class="label">Breadbeard Hexpansion by Danny Walker</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description="">
-    <span class="label">Hex-Drive and Hex-Dev by Team RobotMad</span>
+    <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
+    <span class="label"><a href="https://robotmad.odoo.com/shop">💰 Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
+    <div class="glightbox-desc custom-desc-robotmad">
+      <p>Link: <a href="[https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity](https://robotmad.odoo.com/shop)">💰 BUY HERE</a></p>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/robotmad2.jpg" loading="lazy" alt="Many Hex-Drives" data-title="Hex-Drives by Team RobotMad" data-description="">

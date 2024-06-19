@@ -12,7 +12,7 @@ For more info check out [Write a Tildagon OS App][app-getting-started] or follow
 
 ## Publishing your app
 
-You can publish your apps to the [app store](https://apps.badge.emfcamp.org/) so EMF2024 attendees can use them. For more info see [Publish your app](publish.md).
+You can publish your apps to the [app store](https://apps.badge.emfcamp.org/) so EMF attendees can use them. For more info see [Publish your app](publish.md).
 
 [app-getting-started]: ./development.md
 

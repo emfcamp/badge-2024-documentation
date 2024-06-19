@@ -102,7 +102,7 @@ import time
 
 while True:
     # Options include is_tilted_left, is_tilted_right,
-    # is_tilted_foward, is_tilted_back
+    # is_tilted_forward, is_tilted_back
     if st.imu.is_tilted_left():
         print("Left!")
     time.sleep(1)  # Only checking every second
@@ -132,7 +132,7 @@ import time
 
 
 while True:
-    # Options include is_tilted_left, is_tilted_right, is_tilted_foward,
+    # Options include is_tilted_left, is_tilted_right, is_tilted_forward,
     # is_tilted_back
     if st.button.get("A"):
         print("Button A is being pressed!")
