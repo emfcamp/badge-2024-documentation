@@ -113,7 +113,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 6. Restart the badge. Hold down the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
 7. To test if you are connected, open the "App store"
 
-8. ## Option 4 - Use mpremote to edit the settings file
+## Option 4 - Use mpremote to edit the settings file
 
 1. Install [mpremote](https://docs.micropython.org/en/latest/reference/mpremote.html)
 2. Connect the Tildagon to your computer using a USB-C data cable
@@ -121,13 +121,13 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 
 === "Regular networks"
 
-Add the following keys and values to the json object, replacing `MY-NETWORK` and `MY-PASSWORD` with the real values for your network. Remember that json can't have trailing commas.
-    * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD"
+    Add the following keys and values to the json object, replacing `MY-NETWORK` and `MY-PASSWORD` with the real values for your network. Remember that json can't have trailing commas.
+        * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD"
 
 === "WPA2 Enterprise network"
 
-Add the following keys and values to the json object, replacing `MY-NETWORK`, `MY-PASSWORD` and `MY-USER` with the real values for your network. Remember that json can't have trailing commas.
-    * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD", "wifi_wpa2ent_username":"MY-USER"
+    Add the following keys and values to the json object, replacing `MY-NETWORK`, `MY-PASSWORD` and `MY-USER` with the real values for your network. Remember that json can't have trailing commas.
+        * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD", "wifi_wpa2ent_username":"MY-USER"
     
 6. Restart the badge by pressing the `reboop` button on the device
 7. To test if you are connected, open the "App store"
