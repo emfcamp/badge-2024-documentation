@@ -10,7 +10,7 @@ Broadcast functionality, which does not require the MAC address of a recipient, 
 
 MAC address can be found through like so:
 
-```python3
+```python
 import network
 import ubinascii
 
@@ -22,5 +22,5 @@ mac_str = ubinascii.hexlify(wlan_mac).decode()
 print(f"MAC address: {mac_str}")
 ```
 
-[See the ESPNOW micropython docs for more information and inspiration](https://docs.micropython.org/en/latest/library/espnow.html).
+[See the ESPNOW MicroPython docs for more information and inspiration](https://docs.micropython.org/en/latest/library/espnow.html).
 If you get broadcast working, please submit a PR on these docs with your solution.

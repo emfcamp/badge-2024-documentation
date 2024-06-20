@@ -6,7 +6,7 @@
    end="<!--hexpansions-definition-end-->"
 %}
 
-<div class="scroll-container">
+<div class="scroll-container admonition info">
 {%
    include-markdown "../index.md"
    start="<!--hexpansions-start-->"
@@ -38,7 +38,7 @@ On the rest of this page, you will find the spec for the requirements these hexp
 
 **A hexpansion must be 1mm thick!** If it's any other thickness, it will not fit the port, and it will not work. The connector itself specifies a 0.1mm tolerance for thickness.
 
-You can make a hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest hexpansion is a piece of 1mm cardstock cut into a particular shape.
+You can make a hexpansion by cutting out a shape out of any sufficiently stiff non-conductive material. The simplest hexpansion is a piece of 1mm card stock cut into a particular shape.
 
 If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sheet can vary quite a lot in thickness. _Extruded_ acrylic sheet has better dimensional tolerance and is recommended for building hexpansions.
 
@@ -46,17 +46,15 @@ If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sh
 
     There are some [example 3D printable STL files](https://www.printables.com/model/826094-emf-tildagon-hexpansion-template) and a [FreeCAD template](https://www.printables.com/model/881594-tildagon-hexpansion-freecad-templates-and-nfc) on Printables, which may be useful as a starting point for prototyping.
 
-
 !!! tip "Templates for PCB Hexpansions"
 
     There is a [sample KiCAD hexpansion project](https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion), which is the easiest way of getting started making a Hexpansion PCB.
-
 
 ## Shape and size
 
 To fit into the slot, the hexpansion has to have a tab sticking out that is **9.2mm** wide and **6.5mm** long. That tab is 17.75mm away from the board edge.
 
-![](./b456ffb9-f5bf-4387-b8ec-fd9796ad957b.png)
+![Hexpansion dimensions](./b456ffb9-f5bf-4387-b8ec-fd9796ad957b.png)
 
 The standard hexpansion shape is a hexagon with 32mm between flats. This means the distance between points is approximately 36.65mm. This shape puts the edge of the badge exactly down the middle of the hexagon. You can make the part on the outside any shape you like, but you have to keep it within the continuation of the lines of the hexagon, so that it won't interfere with other hexpansions. If you intend for something to plug into your hexpansion, make sure that the plug also does not cross into the adjacent segment.
 
@@ -124,17 +122,17 @@ There are five low speed pins (LS1-LS5) that are connected to a GPIO expander IC
 
 There are four high-speed pins (HS1-HS4) that are directly attached to the microcontroller on the Tildagon. Please do not try to source or sink too much current from these pins. You can connect these to any of the peripherals on the ESP32-S3 that are not already in use. Three of the six ports on the Tildagon have high-speed pins that are attached to the internal ADC (analogue to digital converter, for measuring analogue signals). They are the connector behind the row of three buttons, and the connectors either side of that (highlighted in the image below).
 
-![](./df9d2843-4b89-4341-98a9-61f1c9b1f780.png)
+![Badge xray with hexpansions](./df9d2843-4b89-4341-98a9-61f1c9b1f780.png)
 
 ## Mechanical clearance
 
 There is a battery between the top and bottom boards of the Tildagon, and therefore there are restrictions to how tall components on hexpansions can be. Here are the height restrictions and their relevant areas:
 
-![](./52437fff-3c14-4c18-aa22-a656f64f00f0.png)
+![Hexpansion dimension explanation](./52437fff-3c14-4c18-aa22-a656f64f00f0.png)
 
 The two upper hexpansion slots are directly over the two USB connectors. Due to the cable overmold, there may not be anything sticking out below the board in those slots. Hexpansions that go into other slots have 1mm of clearance below the PCB surface up to the Tildagon board edge, and unlimited clearance beyond the edge. If you have through-hole components on your hexpansion PCB, they cannot be used in the slots over the USB connectors as the solder tails below the board will interfere with the USB cable overmolding.
 
-## Congratulations!
+## Congratulations
 
 Well done on creating your hexpansion! We encourage you to share your creation in the
 [Hexpansion Showcase](https://github.com/emfcamp/badge-2024-documentation/blob/main/docs/index.md#hexpansions) in these docs, or in the [Hexpansions Registry](https://github.com/hughrawlinson/hexpansion-registry).

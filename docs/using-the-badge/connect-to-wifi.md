@@ -5,7 +5,7 @@ weight: 2
 
 There are several ways to connect your Tildagon to Wi-Fi depending on what approach you want to take.
 
-# Option 1 - Through the GUI
+## Option 1 - Through the GUI
 
 !!! warning ""
 
@@ -22,7 +22,7 @@ This is the easiest option, but a real pain to do because you have to type out e
 7. Exit the Settings app using F.
 8. Push the Reboop button and try connecting.
 
-# Option 2 - Use Tildagon Flasher
+## Option 2 - Use Tildagon Flasher
 
 Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.github.io/badge-2024-software/) in a Chromium browser.
 
@@ -30,27 +30,109 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
 2. With the device connected via USB-C to your computer press "Connect".
 3. Select the Tildagon from the list.
 4. Select "Logs & Console".
-5. Enter the following commands one at a time, followed by enter, editing the 'changeme' sections with your details :
+5. Enter the following commands one at a time, followed by enter, editing the 'changeme' sections with your details:
 
-```
-import settings
-settings.set('wifi_ssid', 'changeme')
-settings.set('wifi_password', 'changeme')
-```
+=== "Regular networks"
 
-If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value.
-If you are connecting to a WPA2-Enterprise network, replace `None` with your WPA2-Enterprise username.
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    ```
 
-```
-settings.set('wifi_wpa2ent_username', None)
-settings.save()
-```
+    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
+
+    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
+
+    ```
+    settings.set('wifi_wpa2ent_username', None)
+    ```
+
+    Run the following command to save the settings
+
+    ```
+    settings.save()
+    ```
+
+=== "WPA2 Enterprise network"
+
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    settings.set('wifi_wpa2ent_username', 'username')
+    settings.save()
+    ```
 
 6. Push the Reboop button and try connecting.
 
 !!! info "If the Wi-Fi won't connect after performing these steps, try changing the SSID and password commands to be in single quotes instead of double quotes. This seems to make a difference in certain circumstances."
 
-# Option 3 - Create a clone of the EMF Wi-Fi network
+## Option 3 - Use mpremote
+
+1. Install [mpremote](https://docs.micropython.org/en/latest/reference/mpremote.html)
+2. Connect the Tildagon to your computer using a USB-C data cable
+3. On your computer's command line, run `mpremote`. You should see:
+   > Connected to MicroPython at /dev/ttyACM0<br>
+   > Use Ctrl-] or Ctrl-x to exit this shell
+4. Hold down the `ctrl` key on your computer. While holding it down, press the `C` key on your computer. This will open up a shell for you to enter commands.
+5. Enter the following commands one at a time, followed by enter, editing the "changeme" sections with your details:
+
+=== "Regular networks"
+
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    ```
+
+    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
+
+    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
+
+    ```
+    settings.set('wifi_wpa2ent_username', None)
+    ```
+
+    Run the following command to save the settings
+
+    ```
+    settings.save()
+    ```
+
+=== "WPA2 Enterprise network"
+
+    ```
+    import settings
+    settings.set('wifi_ssid', 'changeme')
+    settings.set('wifi_password', 'changeme')
+    settings.set('wifi_wpa2ent_username', 'username')
+    settings.save()
+    ```
+
+6. Restart the badge. Hold down the `ctrl` key on your computer. While holding it down, press the `D` key on your computer.
+7. To test if you are connected, open the "App store"
+
+## Option 4 - Use mpremote to edit the settings file
+
+1. Install [mpremote](https://docs.micropython.org/en/latest/reference/mpremote.html)
+2. Connect the Tildagon to your computer using a USB-C data cable
+3. On your computer's command line, run `mpremote edit settings.json`. This should open your default text editor. If it fails with `edit: $EDITOR not set` then run `EDITOR="nano" mpremote edit settings.json` to use nano to edit the file.
+
+=== "Regular networks"
+
+    Add the following keys and values to the json object, replacing `MY-NETWORK` and `MY-PASSWORD` with the real values for your network. Remember that json can't have trailing commas.
+        * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD"
+
+=== "WPA2 Enterprise network"
+
+    Add the following keys and values to the json object, replacing `MY-NETWORK`, `MY-PASSWORD` and `MY-USER` with the real values for your network. Remember that json can't have trailing commas.
+        * "wifi_ssid": "MY-NETWORK", "wifi_password":"MY-PASSWORD", "wifi_wpa2ent_username":"MY-USER"
+
+6. Restart the badge by pressing the `reboop` button on the device
+7. To test if you are connected, open the "App store"
+
+## Option 5 - Create a clone of the EMF Wi-Fi network
 
 This could be a good option if you manage a Makerspace or other location where multiple EMF badges might visit.
 

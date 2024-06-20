@@ -12,9 +12,9 @@ There are three options for your hexpansion app:
 
 1. Your hexpansion has an EEPROM and your app will be written to it and run from it.
 2. Your hexpansion has an EEPROM, but your app is going to be downloaded from the app store and run separately.
-3. Your hexpansion does not have an EEPROM, so your app will be downloaded  from the app store and run separately. 
+3. Your hexpansion does not have an EEPROM, so your app will be downloaded from the app store and run separately.
 
-Which aproach you use is dependent on the hexpansion you're writing an app for and your own personal preference. If your app is likely to be so large that it'll exceed the space on the EEPROM, you might want to explore cross-compiling your app using [mpy-cross](https://pypi.org/project/mpy-cross/) to reduce its size. If your app is still too large, option 2 is your best bet.
+Which approach you use is dependent on the hexpansion you're writing an app for and your own personal preference. If your app is likely to be so large that it'll exceed the space on the EEPROM, you might want to explore cross-compiling your app using [mpy-cross](https://pypi.org/project/mpy-cross/) to reduce its size. If your app is still too large, option 2 is your best bet.
 
 If you're confident that your app will fit within the EEPROM filesystem of your hexpansion, option 1 is your friend.
 
@@ -32,7 +32,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
 
     !!! note "Untested"
 
-        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/71).
+        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/176).
 
     ```python
     import app
@@ -55,7 +55,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0,1,0).move_to(-90,-40).text("Hello from your\nhexpansion!")
+            ctx.rgb(0, 1, 0).move_to(-90, -40).text("Hello from your\nhexpansion!")
             ctx.restore()
 
             return None
@@ -109,7 +109,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0,1,0).move_to(-90,-40).text(self.text)
+            ctx.rgb(0, 1, 0).move_to(-90, -40).text(self.text)
             ctx.restore()
 
         def scan_for_hexpansion(self):
@@ -132,7 +132,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 # You can add some logic here to check the PID and VID match your hexpansion
                 return HexpansionConfig(port)
 
-            self.color = (1,0,0)
+            self.color = (1, 0, 0)
             self.text = "No hexpansion found."
 
             return None
@@ -141,7 +141,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     ```
 
 === "App loaded from badge, no EEPROM"
-    
+
     If your hexpansion does not have an EEPROM, there is nothing for the badge to look for to detect it's presence. Because of this, you can ask the user to select the hexpansion port manually using a simple [menu](../tildagon-apps/reference/ui-elements.md#menu) system:
 
     ```python
@@ -171,60 +171,91 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 self.menu.update(delta)
             # else:
                 # We have a hexpansion config, do some stuff with it!
-                
+
         def draw(self, ctx):
             clear_background(ctx)
-            
+
             if self.hexpansion_config is None:
                 self.menu.draw(ctx)
 
                 # This might look weird, but we're just drawing a shape as a port indicator.
                 ctx.save()
                 ctx.font_size = 22
-                ctx.rgb(*colors["dark_green"]).rectangle(-120,-120, 240, 100).fill()
+                ctx.rgb(*colors["dark_green"]).rectangle(-120, -120, 240, 100).fill()
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
                 rotation_angle = self.menu.position*pi/3
+<<<<<<< HEAD
                 ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80,-120,40,240).fill()
                 prompt_message = "Select hexpansion port:"
                 ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
+=======
+                ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80, -120, 40, 240).fill()
+                prompt_message = "Select hexpansion port:"
+                ctx.rgb(1, 1, 1).rotate(-rotation_angle).move_to(0, -45).text(prompt_message)
+>>>>>>> upstream/main
                 ctx.restore()
-            
+
             else:
                 ctx.save()
                 ctx.font_size = 24
                 msg = "Hexpansion in port " + str(self.hexpansion_config.port)
                 msg_width = ctx.text_width(msg)
-                ctx.rgb(1,1,1).move_to(-msg_width/2,0).text(msg)
+                ctx.rgb(1, 1, 1).move_to(-msg_width/2, 0).text(msg)
                 ctx.restore()
 
     __app_export__ = ExampleApp
     ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/main
 In all of these examples, the `HexpansionConfig` object is used to provide information about the port your hexpansion is plugged into.
 
 ## The HexpansionConfig class
 
 The `HexpansionConfig` object that you get after following the examples is where the magic all happens. It allows you to access the following:
 
+<!-- prettier-ignore -->
 | Object | Description | Example Usage |
+<<<<<<< HEAD
 | ------ | ----------- | --------- |
 | `HexpansionConfig.port` | The port number your hexpansion is connected to. |  |
 | `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html)  | 
 | `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. |  [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
+=======
+| ------ | ----------- | ------------- |
+| `HexpansionConfig.port` | The port number your hexpansion is connected to. | |
+| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html) |
+| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
+>>>>>>> upstream/main
 | `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
 ### Pin vs ePin
 
+<<<<<<< HEAD
 Hexpansion ports have two types of GPIO pins -  `Pin` objects and `ePin` objects. The difference between these is important, and would have been a key design consideration for your hexpansion.
+=======
+Hexpansion ports have two types of GPIO pins - `Pin` objects and `ePin` objects. The difference between these is important, and would have been a key design consideration for your hexpansion.
+>>>>>>> upstream/main
 
 `Pin` objects are regular high speed GPIO pins. These are available through `HexpansionConfig.pin[]`. They are connected directly to the GPIO pins of the ESP32-S3, and can be controlled using the standard MicroPython `Pin` API. These pins are available for routing any of the unused peripherals from the ESP32-S3 to, so you could configure them as an `SPI` bus, use the `RMT` peripheral, be a `PWM` output etc. You can also use them for any other GPIO tasks where switching speed is important, such as communicating on an arbitrary protocol. Don't try to source or sink too much current from these pins - the usual rules for connecting things to microcontroller pins apply here.
 
 !!! note "Using the ADC"
+<<<<<<< HEAD
     If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
 
 `ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
 
+=======
+If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
+
+<!-- markdown-link-check-disable -->
+
+`ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
+
+<!-- markdown-link-check-enable -->
+>>>>>>> upstream/main
 
 ## Further development
 

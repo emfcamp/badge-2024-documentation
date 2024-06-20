@@ -1,20 +1,13 @@
 div.scroll-container {
   background-color: transparent;
   overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-div.scroll-container.scroll-container-large {
-  background-color: transparent;
-  overflow: auto;
   padding: 10px;
   display: inline-table;
   text-align: center;
   white-space: normal;
 }
 
-div.scroll-container img, div.scroll-container-large img {
+div.scroll-container img {
   padding: 0px 10px;
   max-height: 150px;
 }
@@ -23,19 +16,12 @@ div.scroll-container .img-container {
   display: inline-flex;
   flex-direction: column;
   max-width: 200px;
-  padding: 10px 0px;
-}
-
-div.scroll-container-large .img-container {
-  display: inline-flex;
-  flex-direction: column;
-  max-width: 200px;
   width: 200px;
   padding: 10px 0px;
 }
 
 @media (max-width: 768px) {
-  div.scroll-container-large .img-container {
+  div.scroll-container .img-container {
     max-width: 120px;
     width: 120px;
   }
@@ -53,3 +39,64 @@ div.scroll-container-large .img-container {
   line-height: normal;
 }
 
+.scroll-container.scroll-container > .img-container.collapsed {
+  display: none;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  padding-top: 1rem;
+}
+
+#showmore {
+  background-color: #a47bea;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+}
+
+.buyme p {
+  background-color: #528329;
+  margin: 0.5rem auto;
+  width: 100px;
+  height: 1rem;
+  color: white;
+}
+
+.buyme p:hover {
+  background-color: #213018;
+}
+
+.printme p {
+  background-color: #F77F02;
+  margin: 0.5rem auto;
+  width: 100px;
+  height: 1rem;
+  color: white;
+}
+
+.printme p:hover {
+  background-color: #c54a00;
+}
+
+.viewme p {
+  background-color: #2EADD9;
+  margin: 0.5rem auto;
+  width: 100px;
+  height: 1rem;
+  color: white;
+}
+
+.viewme p:hover {
+  background-color: #2eaed980;
+}
+
+#showmore:hover {
+  color: rgba(255,255,255,0.7)
+}

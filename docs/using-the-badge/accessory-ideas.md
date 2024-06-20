@@ -7,9 +7,15 @@ weight: 5
 
 ### A 3D-printed case
 
-You can pring the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
+You can print the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
 
 ![Badge bumper case](../images/badge-photos/Bumper%20Case.png)
+
+### A 3D-printed stand
+
+You can print a [Tildagon stand](https://www.printables.com/model/909352-tildagon-stand) to better display your badge.
+
+![Tildagon stand](../images/badge-photos/stand.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ### Fancy lanyard
 
@@ -26,9 +32,9 @@ Some suitable cables are:
 You can also use one that doesn't glow, search for "usb c to usb c", or add "rgb" on the end if you want to research your own glowing ones.
 : Note, that we do not recommend metal-shrouded usb cables as they can short circuits if they touch hexpansions.
 
-!!! note "Lanyard not lighting up?"
+!!! info "Lanyard not lighting up?"
 
-   Unfortunately, not all badges support the glowing USB cables. We're not currently sure why.
+    Unfortunately, not all badges support the glowing USB cables. We're not currently sure why.
 
 ### Share your addon
 
@@ -38,11 +44,10 @@ You can also use one that doesn't glow, search for "usb c to usb c", or add "rgb
 
 ## Accessory Hexpansions
 
-<div class="scroll-container">
+<div class="scroll-container admonition info">
 {%
    include-markdown "../index.md"
    start="<!--hexpansions-start-->"
    end="<!--hexpansions-end-->"
 %}
 </div>
-
