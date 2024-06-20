@@ -116,7 +116,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
             for port in range(1, 7):
                 print(f"Searching for hexpansion on port: {port}")
                 i2c = I2C(port)
-                addr = detect_eeprom_addr(i2c)
+                addr,addr_len = detect_eeprom_addr(i2c) # Firmware version 1.8 and upwards only!
 
                 if addr is None:
                     continue
