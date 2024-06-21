@@ -30,7 +30,7 @@ You can use Thonny file manager to edit or remove any file on the badge.
 
 Using Thonny with the file manager open (if it isn't, select `View -> Files` on the top bar), open the `boot.py` file. This is the file you need to edit for all of this. It runs once on startup (before handing over to the main badge software).
 
-!!! danger
+!!! warning
 
     If you edit the `boot.py`, this may stop the badge fully starting up into the normal EMF software. To revert back to the normal EMF software, you can always delete everything from within the `boot.py` file and save this back to the badge, using Thonny.
     You may then need to press the `reboop` button to restart the badge (one of the 3 buttons on the side of the lower circuit board).
