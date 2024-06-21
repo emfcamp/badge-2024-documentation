@@ -116,7 +116,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
             for port in range(1, 7):
                 print(f"Searching for hexpansion on port: {port}")
                 i2c = I2C(port)
-                addr = detect_eeprom_addr(i2c)
+                addr, addr_len = detect_eeprom_addr(i2c) # This only works for firmware 1.8 and upwards!
 
                 if addr is None:
                     continue
@@ -181,6 +181,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 # This might look weird, but we're just drawing a shape as a port indicator.
                 ctx.save()
                 ctx.font_size = 22
+                ctx.text_align = ctx.CENTER
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, -120, 240, 100).fill()
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
                 rotation_angle = self.menu.position*pi/3
@@ -192,9 +193,9 @@ Below is an example of how you find which port your hexpansion is plugged in to 
             else:
                 ctx.save()
                 ctx.font_size = 24
+                ctx.text_align = ctx.CENTER
                 msg = "Hexpansion in port " + str(self.hexpansion_config.port)
-                msg_width = ctx.text_width(msg)
-                ctx.rgb(1, 1, 1).move_to(-msg_width/2, 0).text(msg)
+                ctx.rgb(1, 1, 1).text(msg)
                 ctx.restore()
 
     __app_export__ = ExampleApp
