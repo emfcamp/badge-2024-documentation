@@ -13,7 +13,7 @@ For example, if you plug a hexpansion into the port on the right-hand side of th
 
 ## Unable to update
 
-If your badge fails the update, try moving to a spot with better WiFi. If the updates continues to fail, you may have to follow the steps to [flash your badge](./end-user-manual.md#flash-your-badge).
+If your badge fails the update, try moving to a spot with better WiFi. If the updates continues to fail, you may have to follow the steps to [flash your badge](./end-user-manual.md#4-flash-your-badge).
 
 ## Broken components
 
@@ -50,4 +50,4 @@ settings.set("name", "YourNewName")
 settings.save()
 ```
 
-If you don't have any important data on your badge you can [flash your badge](./end-user-manual.md#flash-your-badge) which will erase all your data.
+If you don't have any important data on your badge you can [flash your badge](./end-user-manual.md#4-flash-your-badge) which will erase all your data.

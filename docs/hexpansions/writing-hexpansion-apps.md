@@ -212,7 +212,7 @@ The `HexpansionConfig` object that you get after following the examples is where
 | ------ | ----------- | ------------- |
 | `HexpansionConfig.port` | The port number your hexpansion is connected to. | |
 | `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html) |
-| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
+| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See pins](../tildagon-apps/reference/badge-hardware.md#pins) |
 | `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
 ### Pin vs ePin

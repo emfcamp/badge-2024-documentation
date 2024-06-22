@@ -85,7 +85,7 @@ Attach the other end of the flexible ribbon cable to the back board. Then gently
 
 !!! note "Display not working?"
 
-    See [Replace your screen](./common-problems.md#replace-your-screen).
+    See [Replace your screen](./common-problems.md#broken-components).
 
 ### 4. Flash your badge
 
