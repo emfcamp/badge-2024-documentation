@@ -459,7 +459,8 @@ This example adds an image to the canvas. It also contains logic for getting the
 
 ```python
 import app
-import sys, os
+import sys
+import os
 
 from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
@@ -480,6 +481,7 @@ else:
     # while testing, put your files in the folder you are developing in,
     # for example: example/streak.jpg
     ASSET_PATH = "apps/example/"
+
 
 class ExampleApp(app.App):
     def __init__(self):

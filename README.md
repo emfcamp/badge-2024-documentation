@@ -50,6 +50,19 @@ You can serve the resulting docs with:
 python3 -m http.server 9000 --directory public
 ```
 
+### Linters
+
+To run linters locally:
+
+Install [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) and ensure you have run `pipenv install` and `pipenv activate`.
+
+Then run the following commands to lint the markdown files and the python code snippets:
+
+```sh
+make lint-markdown
+make lint-py
+```
+
 ## Contribute to the documentation
 
 Want to improve our documentation? Please do! You can [open a PR](https://docs.github.com/en/desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop) and we'll take a look.
