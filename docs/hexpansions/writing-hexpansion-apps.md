@@ -185,15 +185,9 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, -120, 240, 100).fill()
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
                 rotation_angle = self.menu.position*pi/3
-<<<<<<< HEAD
-                ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80,-120,40,240).fill()
-                prompt_message = "Select hexpansion port:"
-                ctx.rgb(1,1,1).rotate(-rotation_angle).move_to(0,-45).text(prompt_message)
-=======
                 ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80, -120, 40, 240).fill()
                 prompt_message = "Select hexpansion port:"
                 ctx.rgb(1, 1, 1).rotate(-rotation_angle).move_to(0, -45).text(prompt_message)
->>>>>>> upstream/main
                 ctx.restore()
 
             else:
@@ -207,10 +201,6 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     __app_export__ = ExampleApp
     ```
 
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/main
 In all of these examples, the `HexpansionConfig` object is used to provide information about the port your hexpansion is plugged into.
 
 ## The HexpansionConfig class
@@ -219,36 +209,19 @@ The `HexpansionConfig` object that you get after following the examples is where
 
 <!-- prettier-ignore -->
 | Object | Description | Example Usage |
-<<<<<<< HEAD
-| ------ | ----------- | --------- |
-| `HexpansionConfig.port` | The port number your hexpansion is connected to. |  |
-| `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html)  | 
-| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. |  [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
-=======
 | ------ | ----------- | ------------- |
 | `HexpansionConfig.port` | The port number your hexpansion is connected to. | |
 | `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html) |
 | `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See eGPIO](../tildagon-apps/reference/badge-hardware.md#egpio) |
->>>>>>> upstream/main
 | `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
 ### Pin vs ePin
 
-<<<<<<< HEAD
-Hexpansion ports have two types of GPIO pins -  `Pin` objects and `ePin` objects. The difference between these is important, and would have been a key design consideration for your hexpansion.
-=======
 Hexpansion ports have two types of GPIO pins - `Pin` objects and `ePin` objects. The difference between these is important, and would have been a key design consideration for your hexpansion.
->>>>>>> upstream/main
 
 `Pin` objects are regular high speed GPIO pins. These are available through `HexpansionConfig.pin[]`. They are connected directly to the GPIO pins of the ESP32-S3, and can be controlled using the standard MicroPython `Pin` API. These pins are available for routing any of the unused peripherals from the ESP32-S3 to, so you could configure them as an `SPI` bus, use the `RMT` peripheral, be a `PWM` output etc. You can also use them for any other GPIO tasks where switching speed is important, such as communicating on an arbitrary protocol. Don't try to source or sink too much current from these pins - the usual rules for connecting things to microcontroller pins apply here.
 
 !!! note "Using the ADC"
-<<<<<<< HEAD
-    If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
-
-`ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
-
-=======
 If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
 
 <!-- markdown-link-check-disable -->
@@ -256,7 +229,6 @@ If you want to use the analogue to digital converter (`ADC`) peripheral of the E
 `ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
 
 <!-- markdown-link-check-enable -->
->>>>>>> upstream/main
 
 ## Further development
 
