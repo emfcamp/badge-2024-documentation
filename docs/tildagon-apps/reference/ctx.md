@@ -453,6 +453,10 @@ __app_export__ = ExampleApp
 
 This example adds an image to the canvas. It also contains logic for getting the correct file path for the image depending on whether the app is deployed with the app store or being locally developed.
 
+!!! note "Keep images small"
+
+    Images above a certain file size may cause the app to crash.
+
 ```python
 import app
 import sys, os
