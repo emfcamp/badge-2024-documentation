@@ -133,7 +133,7 @@ Afterwards, you'll learn how to [update state while an app is minimized](#update
 
 #### Common Usage
 
-!!! important ""
+!!! note ""
 
     You can think of the apps on your badge as objects with `update()` and `draw()` methods.
 

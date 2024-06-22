@@ -50,7 +50,7 @@ div.scroll-container .img-container {
 }
 
 #showmore {
-  background-color: #a47bea;
+  background-color: #528329;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -59,6 +59,10 @@ div.scroll-container .img-container {
   display: inline-block;
   font-size: 16px;
   width: 100%;
+}
+
+.md-content .buyme a, .md-content .printme a, .md-content .viewme a {
+  text-decoration: none;
 }
 
 .buyme p {
@@ -99,4 +103,106 @@ div.scroll-container .img-container {
 
 #showmore:hover {
   color: rgba(255,255,255,0.7)
+}
+
+/* // ---------------------------------------------------------------------------- */
+/* // COLORS */
+/* // ---------------------------------------------------------------------------- */
+
+:root {
+
+  /* Primary color shades */
+  --md-primary-fg-color: #000000;
+  --md-primary-fg-color--light: #861f4194;
+  --md-primary-fg-color--dark: #F55089;
+  --md-primary-bg-color: hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-text-link-color: #2EADD9;
+
+  /* Accent color shades */
+  --md-accent-fg-color--transparent: hsla(189, 100%, 37%, 0.1);
+  --md-accent-bg-color: hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+
+[data-md-color-scheme=slate][data-md-color-primary=indigo] {
+  --md-typeset-a-color: white;
+}
+
+[data-md-color-scheme=slate] {
+  --md-default-bg-color: #213018;
+}
+
+:root > * {
+
+  /* Primary color shades */
+  --md-primary-fg-color: #528329;
+  --md-primary-fg-color--light: #213018;
+  --md-primary-fg-color--dark: #528329;
+  --md-primary-bg-color: hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-text-link-color: hsla(231, 48%, 48%, 1);
+  --md-typeset-a-color: black;
+
+  /* Accent color shades */
+  --md-accent-fg-color: #2EADD9;
+  --md-accent-fg-color--transparent: hsla(189, 100%, 37%, 0.1);
+  --md-accent-bg-color: #hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+
+  /* Code block color shades */
+  --md-code-bg-color: rgb(20, 10, 10, 0.1);
+  --md-code-bg-color--dark: rgb(20, 10, 10, 0.8);
+  --md-code-fg-color: hsla(200, 18%, 26%, 1);
+
+  /* Footer */
+  --md-footer-bg-color: #528329;
+  --md-footer-bg-color--dark: hsla(0, 0%, 0%, 0.32);
+  --md-footer-fg-color: hsla(0, 0%, 100%, 1);
+  --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
+  --md-footer-fg-color--lighter: hsla(0, 0%, 100%, 0.3);
+}
+
+.md-typeset .admonition.info, .md-typeset details.info, .md-typeset .admonition.note, .md-typeset details.note  {
+  border-color: #2EADD9;
+}
+
+.md-typeset .info>.admonition-title:before, .md-typeset .note>.admonition-title:before {
+  background-color:#2EADD9
+}
+
+.md-typeset .info>.admonition-title, .md-typeset .info>summary, .md-typeset .note>.admonition-title, .md-typeset .note>summary {
+  background-color: rgba(46, 173, 217,0.2)
+}
+
+.md-typeset .admonition.tip, .md-typeset details.tip  {
+  border-color: #AFC944;
+}
+
+.md-typeset .tip>.admonition-title:before {
+  background-color:#AFC944
+}
+
+.md-typeset .tip>.admonition-title, .md-typeset .tip>summary {
+  background-color: rgba(175, 201, 68,0.2)
+}
+
+.md-typeset .admonition.warning, .md-typeset details.warning  {
+  border-color: rgb(246, 127, 2);
+}
+
+.md-typeset .warning>.admonition-title:before {
+  background-color:rgb(246, 127, 2);
+}
+
+.md-typeset .warning>.admonition-title, .md-typeset .warning>summary {
+  background-color: rgba(246, 127, 2,0.2)
+}
+
+.md-content a {
+  text-decoration: underline;
+}
+
+.grid.cards a {
+  text-decoration: none;
 }
