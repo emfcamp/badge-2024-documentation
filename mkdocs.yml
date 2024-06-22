@@ -52,4 +52,7 @@ plugins:
   - mkdocs-nav-weight
   - include-markdown
   - social:
-      cards: true
+      cards_layout_options:
+        background_color: "#528329"
+        color: "#ffffff"
+        font-family: "Roboto"
