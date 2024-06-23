@@ -83,7 +83,6 @@ plugins:
 
       # whether to only check in strict mode
       strict_only: no
-  - git-revision-date-localized
   - git-committers:
       repository: emfcamp/badge-2024-documentation
       token: !ENV GITHUB_TOKEN
