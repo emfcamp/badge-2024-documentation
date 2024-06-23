@@ -52,6 +52,12 @@ plugins:
       caption_position: bottom
   - mkdocs-nav-weight
   - include-markdown
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
   - social:
       cards_layout_options:
         background_color: "#528329"

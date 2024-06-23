@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8e72da5d86fa83620fb20ec52ce589636805f1a114773ce827f5b9358abf69c9"
+            "sha256": "ec8440c9c8f73d01f5bf1151fb05713758531ac216a2796ffc004c338a3fafe0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -244,6 +244,12 @@
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6'",
             "version": "==0.4.6"
         },
+        "csscompressor": {
+            "hashes": [
+                "sha256:afa22badbcf3120a4f392e4d22f9fff485c044a1feda4a950ecc5eba9dd31a05"
+            ],
+            "version": "==0.9.5"
+        },
         "cssselect2": {
             "hashes": [
                 "sha256:1ccd984dab89fc68955043aca4e1b03e0cf29cad9880f6e28e3ba7a74b14aa5a",
@@ -307,6 +313,12 @@
             "markers": "python_version >= '3.7'",
             "version": "==0.14.0"
         },
+        "htmlmin2": {
+            "hashes": [
+                "sha256:75609f2a42e64f7ce57dbff28a39890363bde9e7e5885db633317efbdf8c79a2"
+            ],
+            "version": "==0.1.13"
+        },
         "httpcore": {
             "hashes": [
                 "sha256:34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61",
@@ -338,6 +350,12 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==3.1.4"
+        },
+        "jsmin": {
+            "hashes": [
+                "sha256:c0959a121ef94542e807a674142606f7e90214a2b3d1eb17300244bbb5cc2bfc"
+            ],
+            "version": "==3.0.1"
         },
         "markdown": {
             "hashes": [
@@ -495,6 +513,15 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==1.3.1"
+        },
+        "mkdocs-minify-plugin": {
+            "hashes": [
+                "sha256:5fba1a3f7bd9a2142c9954a6559a57e946587b21f133165ece30ea145c66aee6",
+                "sha256:bc11b78b8120d79e817308e2b11539d790d21445eb63df831e393f76e52e753d"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==0.8.0"
         },
         "mkdocs-nav-weight": {
             "hashes": [

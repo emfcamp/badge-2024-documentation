@@ -15,6 +15,7 @@ flake8-markdown = "*"
 neoteroi-mkdocs = "*"
 mkdocs-spellcheck = "*"
 codespell = "*"
+mkdocs-minify-plugin = "*"
 
 [dev-packages]
 
