@@ -28,7 +28,7 @@ jobs:
       - name: Build docs
         uses: VaultVulp/action-pipenv@v2.0.1
         with:
-          command: run mkdocs build
+          command: git config --global --add safe.directory "/github/workspace" && run mkdocs build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
