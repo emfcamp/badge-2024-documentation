@@ -26,9 +26,10 @@ jobs:
           command: install -d
       - name: Build docs
         uses: VaultVulp/action-pipenv@v2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           command: run mkdocs build
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
