@@ -24,7 +24,7 @@ jobs:
       # Setup Python (faster than using Python container)
       - name: Install pipenv
         run: |
-          python -m pip install --upgrade pipenv
+          python -m pip install --upgrade pipenv mkdocs
 
       - name: Install dependencies
         run: |
