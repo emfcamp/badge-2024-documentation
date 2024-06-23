@@ -12,11 +12,9 @@ social = "*"
 mkdocs-nav-weight = "*"
 mkdocs-include-markdown-plugin = "*"
 flake8-markdown = "*"
-neoteroi-mkdocs = "*"
 mkdocs-spellcheck = "*"
 codespell = "*"
 mkdocs-minify-plugin = "*"
-mkdocs-git-revision-date-localized-plugin = "*"
 mkdocs-git-committers-plugin = "*"
 
 [dev-packages]
