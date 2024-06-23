@@ -17,6 +17,7 @@ mkdocs-spellcheck = "*"
 codespell = "*"
 mkdocs-minify-plugin = "*"
 mkdocs-git-revision-date-localized-plugin = "*"
+mkdocs-git-committers-plugin = "*"
 
 [dev-packages]
 
