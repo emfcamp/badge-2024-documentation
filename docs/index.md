@@ -454,7 +454,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/laser.jpg" loading="lazy" alt="Laser Tag and Shieldallion hexpansions" data-title="Laser Tag Shieldallion by kianryan" data-description=".custom-desc-jittery">
     <span class="label">Laser Tag Shieldallion by <a href="https://oldbytes.space/@kianryan/112541772244815335">kianryan</a></span>
     <div class="glightbox-desc custom-desc-jittery">
-      <p>Sofware link may be available later...</p>
+      <p>Software link may be available later...</p>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
