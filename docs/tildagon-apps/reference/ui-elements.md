@@ -825,12 +825,12 @@ To use layouts:
 
         To initialize the definition display use the following parameters:
 
- | Parameter | Type | Description |
- | --------- | ---- | ----------- |
- | `label` | `str` | The text to display for the label. |
- | `value` | `str` | The text to display for the definition. |
- | `height` | `int` | The height at which to display the definition display. |
- | `button_handler` | `method` | The handler for button events. |
+        | Parameter | Type | Description |
+        | --------- | ---- | ----------- |
+        | `label` | `str` | The text to display for the label. |
+        | `value` | `str` | The text to display for the definition. |
+        | `height` | `int` | The height at which to display the definition display. |
+        | `button_handler` | `method` | The handler for button events. |
 
     === "TextDisplay"
 
@@ -845,11 +845,11 @@ To use layouts:
 
         To initialize the `TextDisplay` use the ?following parameters:
 
- | Parameter | Type | Description |
- | --------- | ---- | ----------- |
- | `text` | `str` | The long text to display. |
- | `font_size` | `int` | The font size to display the text in. |
- | `rgb` | `tuple` | The color to display the text in. |
+        | Parameter | Type | Description |
+        | --------- | ---- | ----------- |
+        | `text` | `str` | The long text to display. |
+        | `font_size` | `int` | The font size to display the text in. |
+        | `rgb` | `tuple` | The color to display the text in. |
 
     === "ButtonDisplay"
 
@@ -869,13 +869,13 @@ To use layouts:
 
         To initialize the button display use the following parameters:
 
- | Parameter | Type | Description |
- | --------- | ---- | ----------- |
- | `text` | `str` | The long text to display. |
- | `app` | `App` | The app to add the button display to. |
- | `font_size` | `int` | The font size to display the text in. |
- | `rgb` | `tuple` | The color to display the text in. |
- | `button_handler` | `method` | The handler for button events. |
+        | Parameter | Type | Description |
+        | --------- | ---- | ----------- |
+        | `text` | `str` | The long text to display. |
+        | `app` | `App` | The app to add the button display to. |
+        | `font_size` | `int` | The font size to display the text in. |
+        | `rgb` | `tuple` | The color to display the text in. |
+        | `button_handler` | `method` | The handler for button events. |
 
         Create an asynchronous `select_handler` that does something when a button is pressed:
 
