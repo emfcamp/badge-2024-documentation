@@ -58,6 +58,25 @@ plugins:
         color: "#ffffff"
         font-family: "Roboto"
   - search
+  - spellcheck:
+      backends:  # the backends you want to use
+      - codespell:  # or nested configs
+          dictionaries: [clear, rare]
+
+      # ignore words in <code> tags
+      ignore_code: yes
+
+      # minimum length of words to consider
+      min_length: 2
+
+      # maximum number of capital letters in a word
+      max_capital: 1
+
+      # keep unicode characters
+      allow_unicode: yes
+
+      # whether to only check in strict mode
+      strict_only: no
   - neoteroi.contribs:
       contributors:
         - email: 5212232+npentrel@users.noreply.github.com

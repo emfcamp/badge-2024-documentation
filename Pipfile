@@ -13,6 +13,8 @@ mkdocs-nav-weight = "*"
 mkdocs-include-markdown-plugin = "*"
 flake8-markdown = "*"
 neoteroi-mkdocs = "*"
+mkdocs-spellcheck = "*"
+codespell = "*"
 
 [dev-packages]
 
