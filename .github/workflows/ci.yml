@@ -24,11 +24,15 @@ jobs:
       # Setup Python (faster than using Python container)
       - name: Install pipenv
         run: |
-          python -m pip install --upgrade pipenv mkdocs
+          python -m pip install --upgrade pipenv mkdocs pymdownx
 
       - name: Install dependencies
         run: |
           pipenv install
+
+      - name: Open shell
+        run: |
+          pipenv shell
 
       - name: Build docs
         run: |
