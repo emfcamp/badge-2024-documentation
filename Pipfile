@@ -12,6 +12,7 @@ social = "*"
 mkdocs-nav-weight = "*"
 mkdocs-include-markdown-plugin = "*"
 flake8-markdown = "*"
+neoteroi-mkdocs = "*"
 
 [dev-packages]
 
