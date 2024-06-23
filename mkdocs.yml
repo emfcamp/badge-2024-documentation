@@ -83,33 +83,8 @@ plugins:
 
       # whether to only check in strict mode
       strict_only: no
-  - neoteroi.contribs:
-      contributors:
-        - email: 5212232+npentrel@users.noreply.github.com
-          image: https://avatars.githubusercontent.com/u/5212232?s=64&v=4
-        - email: bob@clough.me
-          image: https://avatars.githubusercontent.com/u/1016780?s=60&v=4
-        - email: hughr2005@gmail.com
-          image: https://avatars.githubusercontent.com/u/829836?s=60&v=4
-        - email: hughrawlinson@users.noreply.github.com
-          image: https://avatars.githubusercontent.com/u/829836?s=60&v=4
-        - email: andypiper@users.noreply.github.com
-          image: https://avatars.githubusercontent.com/u/552452?s=60&v=4
-        - email: daniel.walker1991@gmail.com
-          image: https://avatars.githubusercontent.com/u/16877618?s=60&v=4
-        - email: jonty@jonty.co.uk
-          image: https://avatars.githubusercontent.com/u/1553?s=60&v=4
-        - email: 90399509+Skyler84@users.noreply.github.com
-          image: https://avatars.githubusercontent.com/u/90399509?s=60&v=4
-        - email: dratini0@gmail.com
-          image: https://avatars.githubusercontent.com/u/1625485?s=60&v=4
-        - email: jon@blankpad.net
-          image: https://avatars.githubusercontent.com/u/362?s=60&v=4
-        - email: emilywselwood@gmail.com
-          image: https://avatars.githubusercontent.com/u/645622?s=60&v=4
-        - email: t.lynch@arts.ac.uk
-          image: https://avatars.githubusercontent.com/u/147143?s=96&v=4
-        - email: git@matthewwilkes.name
-          image: https://avatars.githubusercontent.com/u/98908?s=60&v=4
-        - email: tanyafxg@gmail.com
-          image: https://avatars.githubusercontent.com/u/17356167?s=60&v=4
+  - git-revision-date-localized
+  - git-committers:
+      repository: emfcamp/badge-2024-documentation
+      token: !ENV GITHUB_TOKEN
+      branch: main

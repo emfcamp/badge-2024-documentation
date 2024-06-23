@@ -16,6 +16,7 @@ neoteroi-mkdocs = "*"
 mkdocs-spellcheck = "*"
 codespell = "*"
 mkdocs-minify-plugin = "*"
+mkdocs-git-revision-date-localized-plugin = "*"
 
 [dev-packages]
 
