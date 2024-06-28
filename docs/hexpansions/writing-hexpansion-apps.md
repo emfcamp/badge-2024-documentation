@@ -22,32 +22,34 @@ If your hexpansion has no EEPROM then you can still interact with it from your a
 
 ## Finding your hexpansion
 
-In order to make your hexpansion do something, you'll need to know where it is plugged in on the badge. The six hexpansion ports are numbered 1-6, clockwise from the upper-right-hand port (the port above the USB out connector).
+In order to make your hexpansion do something, you'll need to know where it is plugged in on the badge. The six hexpansion ports are numbered 1-6, clockwise from the upper-right-hand port (the port above the USB out connector). Information about where your hexpansion is plugged in and the I/O available to it is stored in a [`HexpansionConfig` object](#the-hexpansionconfig-class).
 
-Below is an example of how you find which port your hexpansion is plugged in to for each of the three scenarios.
+Below is an example of how you find which port your hexpansion is plugged in to for each of the above three scenarios.
 
 === "App loaded from EEPROM"
 
-    If your app is loaded from EEPROM on a hexpansion, you can get the port from the `HexpansionConfig` object that is automatically passed to your app:
+    If your app is loaded from EEPROM on a hexpansion, the relevant `HexpansionConfig` object that is automatically passed to your app.
 
-    !!! note "Untested"
-
-        This code is currently untested and may not work. If you work on this, please let us know what you find or what you have to fix at [issue](https://github.com/emfcamp/badge-2024-documentation/issues/176).
+    Note that your app must emit a `RequestForegroundPushEvent` in order to display automatically when the hexpansion is inserted.
 
     ```python
     import app
-
     from app_components import clear_background
-    from events.input import Buttons, BUTTON_TYPES
+    from system.eventbus import eventbus
+    from events.input import Buttons, BUTTON_TYPES, ButtonDownEvent
+    from system.scheduler.events import RequestForegroundPushEvent
 
     class ExampleApp(app.App):
         def __init__(self, config=None):
             self.button_states = Buttons(self)
             self.hexpansion_config = config
+            self.foregrounded = False
+            eventbus.on(ButtonDownEvent, self._handle_buttondown, self)
 
         def update(self, delta):
-            if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-                self.minimise()
+            if not self.foregrounded: # Bring the app to the foreground on first run
+                eventbus.emit(RequestForegroundPushEvent(self))
+                self.foregrounded = True
 
             if self.hexpansion_config:
                 print(self.hexpansion_config.i2c)
@@ -55,12 +57,20 @@ Below is an example of how you find which port your hexpansion is plugged in to 
         def draw(self, ctx):
             ctx.save()
             clear_background(ctx)
-            ctx.rgb(0, 1, 0).move_to(-90, -40).text("Hello from your\nhexpansion!")
+            ctx.rgb(0, 1, 0).move_to(50,0).text("Hello from your\nhexpansion!")
             ctx.restore()
 
             return None
 
-    __app_export__ = ExampleApp
+        def _handle_buttondown(self, event: ButtonDownEvent):
+            if BUTTON_TYPES["CANCEL"] in event.button:
+                self._cleanup()
+                self.minimise()
+
+        def _cleanup(self):
+            eventbus.remove(ButtonDownEvent, self._handle_buttondown, self.app)
+
+        __app_export__ = ExampleApp
     ```
 
 === "App loaded from badge, with EEPROM"
@@ -68,7 +78,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     !!! note "Information"
         For this method to work, your EEPROM needs to be properly provisioned with the [correct header information.](eeprom.md)
 
-    If it's an app loaded from the badge, you'll need to check each port:
+    If it's an app loaded from the badge, you'll need to search each port for your hexpansion, and then create the `HexpansionConfig` object once you've found it:
 
     ```python
     import app
@@ -142,7 +152,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
 
 === "App loaded from badge, no EEPROM"
 
-    If your hexpansion does not have an EEPROM, there is nothing for the badge to look for to detect it's presence. Because of this, you can ask the user to select the hexpansion port manually using a simple [menu](../tildagon-apps/reference/ui-elements.md#menu) system:
+    If your hexpansion does not have an EEPROM, there is nothing for the badge to look for to detect it's presence. Because of this, you can ask the user to select the hexpansion port manually using a simple [menu](../tildagon-apps/reference/ui-elements.md#menu) system, and then create a `HexpansionConfig` object from there:
 
     ```python
     import asyncio
@@ -201,8 +211,6 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     __app_export__ = ExampleApp
     ```
 
-In all of these examples, the `HexpansionConfig` object is used to provide information about the port your hexpansion is plugged into.
-
 ## The HexpansionConfig class
 
 The `HexpansionConfig` object that you get after following the examples is where the magic all happens. It allows you to access the following:
@@ -212,7 +220,7 @@ The `HexpansionConfig` object that you get after following the examples is where
 | ------ | ----------- | ------------- |
 | `HexpansionConfig.port` | The port number your hexpansion is connected to. | |
 | `HexpansionConfig.pin[]` | A list of 4 `Pin` objects. These are the high-speed, direct GPIO pins for this hexpansion port. | [See MicroPython Docs](https://docs.micropython.org/en/latest/library/machine.Pin.html) |
-| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the emulated, low-speed GPIO pins for this hexpansion port. | [See pins](../tildagon-apps/reference/badge-hardware.md#pins) |
+| `HexpansionConfig.ls_pin[]` | A list of 5 `ePin` objects for this hexpansion port. These are the external, low-speed GPIO pins for this hexpansion port. | [See pins](../tildagon-apps/reference/badge-hardware.md#pins) |
 | `HexpansionConfig.i2c` | The dedicated `I2C` object for this hexpansion port. | [See I2C](../tildagon-apps/reference/badge-hardware.md#i2c) |
 
 ### Pin vs ePin
@@ -226,7 +234,7 @@ If you want to use the analogue to digital converter (`ADC`) peripheral of the E
 
 <!-- markdown-link-check-disable -->
 
-`ePin` objects are lower speed, emulated GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a different API to `Pin` objects.
+`ePin` objects are lower speed, external GPIOs. These are not connected directly to the ESP32-S3, but are instead connected via a [GPIO expander IC](https://github.com/emfcamp/badge-2024-hardware/blob/main/datasheets/AW9523%2BEnglish%2BDatasheet.pdf) over an I2C bus. Because the badge has to talk to the GPIO expander to change the state of the pins, these pins cannot be switched as fast as the `Pin` objects, but are still plenty fast for indicator LEDs, input buttons, or anything that requires a simple high/low logic level. The GPIO expander IC also provides a constant current LED driver, so you can connect LEDs directly to these pins and control their brightness in hardware. `ePin` objects use a [slightly different API](../tildagon-apps/reference/badge-hardware.md#pins) to `Pin` objects.
 
 <!-- markdown-link-check-enable -->
 
