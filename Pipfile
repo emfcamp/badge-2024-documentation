@@ -11,6 +11,8 @@ cairosvg="*"
 social = "*"
 mkdocs-nav-weight = "*"
 mkdocs-include-markdown-plugin = "*"
+flake8-markdown = "*"
+
 [dev-packages]
 
 [requires]

@@ -449,6 +449,60 @@ __app_export__ = ExampleApp
 
 ![Hello there world text split across two lines](../../images/ctx-examples/text_long.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
+### Adding images
+
+This example adds an image to the canvas. It also contains logic for getting the correct file path for the image depending on whether the app is deployed with the app store or being locally developed.
+
+!!! note "Keep image size to approximately 30KB or smaller"
+
+    Images above a certain file size may cause the app to crash. The display size is approximately 240px x 240px.
+
+```python
+import app
+import sys
+import os
+
+from app_components import clear_background
+from events.input import Buttons, BUTTON_TYPES
+
+if sys.implementation.name == "micropython":
+    apps = os.listdir("/apps")
+    path = ""
+    for a in apps:
+        # This is important for apps deployed to the appstore
+        # The Snake app from naomi stored at
+        # https://github.com/npentrel/tildagon-snake/
+        # has all its files in the folder
+        # npentrel_tildagon_snake
+        if a == "github_user_github_repo_name":
+            path = "/apps/" + a
+    ASSET_PATH = path + "/assets/"
+else:
+    # while testing, put your files in the folder you are developing in,
+    # for example: example/streak.jpg
+    ASSET_PATH = "apps/example/"
+
+
+class ExampleApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.save()
+        ctx.image(ASSET_PATH + "streak.jpg", -100, -100, 200, 200)
+        ctx.restore()
+
+
+__app_export__ = ExampleApp
+```
+
+![Example image](../../images/ctx-examples/image.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
 ### Shapes: Arcs and Rectangles
 
 This example draws a big yellow filled circle. It then draws a filled green rectangle on top with opacity 50%. Finally, it draws the outline of a blue circle on top.
@@ -791,12 +845,6 @@ __app_export__ = ExampleApp
 
 ![A bézier curve](../../images/ctx-examples/bezier.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
-### Add an image
-
-!!! tip "You've found a badge CHALLENGE!"
-
-    Your challenge, should you choose to accept it, is to create a minimal example app that shows how you can add an image to an app. To see more information and accept the challenge (that is, comment on the issue), see this [issue](https://github.com/emfcamp/badge-2024-documentation/issues/74).
-
 ## Methods
 
 You can use the following methods on a `ctx` canvas object:
@@ -821,7 +869,7 @@ You can use the following methods on a `ctx` canvas object:
 | `rgb(r, g, b)` | Color the canvas in the color `(r, g, b)`. | <ul><li>`r`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`g`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`b`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li></ul> | `self`: The `ctx` object. |
 | `text(s)` | Draw the provided text on the canvas. | `s`: The text to draw provided as a string. | `self`: The `ctx` object. |
 | `round_rectangle(x, y, width, height, radius)` | Add a rounded rectangle on the canvas at position `(x, y)` with the provided width, height, and corner radius. | <ul><li>`x`: The horizontal position to draw the rectangle at.</li><li>`y`: The vertical position to draw the rectangle at.</li><li>`width`: The width of the rectangle to draw.</li><li>`height`: The height of the rectangle to draw.</li><li>`radius`: The radius of the rectangle's corners.</li></ul> | `self`: The `ctx` object. |
-| `image(path, x, y, w, h)` | **Currently not functional.** Draw an image to be read from the provided path onto the canvas. | <ul><li>`path`: The path to an image file.</li><li>`x`: The x-axis coordinate of the top left corner of the image to draw.</li><li>`y`: The y-axis coordinate of the top left corner of the image to draw.</li><li>`w`: The width of the image to draw.</li><li>`h`: The height of the image to draw.</li></ul> | `self`: The `ctx` object. |
+| `image(path, x, y, w, h)` | Draw an image to be read from the provided path onto the canvas. | <ul><li>`path`: The path to an image file.</li><li>`x`: The x-axis coordinate of the top left corner of the image to draw.</li><li>`y`: The y-axis coordinate of the top left corner of the image to draw.</li><li>`w`: The width of the image to draw.</li><li>`h`: The height of the image to draw.</li></ul> | `self`: The `ctx` object. |
 | `rectangle(x, y, width, height)` | Add a rectangle to the current path. Like other methods that modify the current path, this method does not directly render anything. To draw the rectangle onto a canvas, you can use the `fill()` or `stroke()` methods. The `rect()` method creates a rectangular path whose starting point is at `(x, y)` and whose size is specified by width and height. | <ul><li>`x`: The x-axis coordinate (horizontal) of the rectangle's starting point. </li><li>`y`: The y-axis coordinate (vertical) of the rectangle's starting point.</li><li>`width`: The rectangle's width. Positive values are to the right, and negative to the left.</li><li>`height`: The rectangle's height. Positive values are down, and negative are up.</li></ul> | `self`: The `ctx` object. |
 | `stroke()` | Stroke (outline) the current or given path with the current stroke style. | None. | `self`: The `ctx` object. |
 | `save()` | Save the entire state of the canvas by pushing the current state onto a stack. | None. | `self`: The `ctx` object. |

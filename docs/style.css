@@ -67,10 +67,11 @@ div.scroll-container .img-container {
 
 .buyme p {
   background-color: #528329;
-  margin: 0.5rem auto;
+  margin: 0.25rem auto 0 auto;
   width: 100px;
   height: 1rem;
   color: white;
+  text-align: center;
 }
 
 .buyme p:hover {
@@ -79,10 +80,11 @@ div.scroll-container .img-container {
 
 .printme p {
   background-color: #F77F02;
-  margin: 0.5rem auto;
+  margin: 0.25rem auto 0 auto;
   width: 100px;
   height: 1rem;
   color: white;
+  text-align: center;
 }
 
 .printme p:hover {
@@ -91,10 +93,11 @@ div.scroll-container .img-container {
 
 .viewme p {
   background-color: #2EADD9;
-  margin: 0.5rem auto;
+  margin: 0.25rem auto 0 auto;
   width: 100px;
   height: 1rem;
   color: white;
+  text-align: center;
 }
 
 .viewme p:hover {
@@ -103,6 +106,14 @@ div.scroll-container .img-container {
 
 #showmore:hover {
   color: rgba(255,255,255,0.7)
+}
+
+.detailbuttons {
+  display: flex;
+}
+
+.detailbuttons .viewme, .detailbuttons .buyme, .detailbuttons .printme {
+  padding: 0 0.5rem 0 0;
 }
 
 /* // ---------------------------------------------------------------------------- */
@@ -154,7 +165,6 @@ div.scroll-container .img-container {
   --md-code-bg-color: rgb(20, 10, 10, 0.1);
   --md-code-bg-color--dark: rgb(20, 10, 10, 0.8);
   --md-code-fg-color: var(--md-code-fg-color--light);
-  
 
   /* Footer */
   --md-footer-bg-color: #528329;

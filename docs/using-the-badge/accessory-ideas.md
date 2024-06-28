@@ -36,6 +36,10 @@ You can also use one that doesn't glow, search for "usb c to usb c", or add "rgb
 
     Unfortunately, not all badges support the glowing USB cables. We're not currently sure why.
 
+### Thumbscrews
+
+- [Aliexpress link](https://a.aliexpress.com/_Eu8bBsx)
+
 ### Share your addon
 
 !!! note "Have an addon to share?"

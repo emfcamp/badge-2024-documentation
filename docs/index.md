@@ -57,7 +57,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion">OG Hexpansion</a> by kliment</span>
     <span class="viewme"><a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-og">
-      <p>Link: <a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container">
@@ -73,11 +75,13 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">EEH Hexpansion by Matt</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/goose.png" loading="lazy" alt="Skyler's Goosespansion" data-title="Goosespansion by Skyler Mansfield" data-description=".custom-desc-makerspace">
+    <img src=" ../../images/hexpansions/goose.png" loading="lazy" alt="Skyler's Goosespansion" data-title="Goosespansion by Skyler Mansfield" data-description=".custom-desc-goosespansion">
     <span class="label">Goosespansion by Skyler Mansfield</span>
     <span class="viewme"><a href="https://github.com/skyler84-tildagon-addons/goosepansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-goosespansion">
-      <p>Link: <a href="https://github.com/skyler84-tildagon-addons/goosepansion">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/skyler84-tildagon-addons/goosepansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container">
@@ -85,10 +89,15 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">LED Filament hexpansion by John Thurmond</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Makerspace hexpansion" data-title="Maker Space badge by Dan" data-description=".custom-desc-makerspace">
-    <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
-    <div class="glightbox-desc custom-desc-makerspace">
-      <p>Link: <a href="https://www.makerspace.org.uk/">GitHub</a></p>
+    <img src=" ../../images/hexpansions/interposer.png" loading="lazy" alt="interposer hexpansion" data-title="Interposer by The Untitled Goose" data-description=".custom-desc-interposer">
+    <span class="label"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka">Interposer</a> by The Untitled Goose</span>
+    <span class="buyme"><a href="https://www.gavinchester.com/Hexpansion.htm"><p>💰 BUY HERE</p></a></span>
+    <span class="viewme"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-interposer">
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://www.gavinchester.com/Hexpansion.htm"><p>💰 BUY HERE</p></a></span>
+        <span class="viewme"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container">
@@ -100,7 +109,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/">Protoboard Hexpansion</a> by Jake Walker</span>
     <span class="buyme"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/"><p>💰 BUY HERE</p></a></span>
     <div class="glightbox-desc custom-desc-protoboard">
-      <p>Link: <a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/"></a></p>
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://www.tindie.com/products/jakew/protoboard-hexpansion/"><p>💰 BUY HERE</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container">
@@ -108,7 +119,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://robotmad.odoo.com/shop">Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
     <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
     <div class="glightbox-desc custom-desc-robotmad">
-      <p>Link: <a href="https://robotmad.odoo.com/shop">BUY HERE</a></p>
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -116,12 +129,21 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Makerspace hexpansion" data-title="Maker Space badge by Dan" data-description=".custom-desc-makerspace">
+    <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
+    <div class="glightbox-desc custom-desc-makerspace">
+      <p>Link: <a href="https://www.makerspace.org.uk/">GitHub</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="Floppy disk 'Flopagon' by Nathan Dumont" data-description=".custom-desc-flopagon">
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan
     Dumont</span>
     <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-flopagon">
-      <p>Link: <a href="https://github.com/hairymnstr/Flopagon">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -133,7 +155,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://github.com/hairymnstr/omni-wheel-hexpansion">Omni wheel</a> by Nathan Dumont</span>
     <span class="viewme"><a href="https://github.com/hairymnstr/omni-wheel-hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-wheel">
-      <p>Link: <a href="https://github.com/hairymnstr/omni-wheel-hexpansion">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/hairymnstr/omni-wheel-hexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -145,7 +169,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">7-Segment display</a> by Iain Yarnall.</span>
     <span class="printme"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-segment">
-      <p>Link: <a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -180,8 +206,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/gridfinity-expansion.webp" loading="lazy" alt="Gridfinity expansion" data-title="Gridfinity expansion hexpansion by Jack Fitton" data-description=".custom-desc-gridfinity">
     <span class="label"><a href="https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity">Gridfinity expansion hexpansion</a> by Jack Fitton</span>
     <span class="printme"><a href="https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity"><p>🖨️ PRINT ME</p></a></span>
-    <div class="glightbox-desc custom-desc-segment">
-      <p>Link: <a href="https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity">Printables</a></p>
+    <div class="glightbox-desc custom-desc-gridfinity">
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/883719-emf-tildagon-hexpansion-gridfinity"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -200,7 +228,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.thingiverse.com/thing:6633547">Eye hexpansion</a> by Alistair</span>
     <span class="printme"><a href="https://www.thingiverse.com/thing:6633547"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-eyes">
-      <p>Link: <a href="https://www.thingiverse.com/thing:6633547">Thingiverse</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.thingiverse.com/thing:6633547"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -208,7 +238,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.thingiverse.com/thing:6635025">Smile hexpansion</a> by Alistair</span>
     <span class="printme"><a href="https://www.thingiverse.com/thing:6635025"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-smile">
-      <p>Link: <a href="https://www.thingiverse.com/thing:6635025">Thingiverse</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.thingiverse.com/thing:6635025"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -216,7 +248,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/893545-spirit-level-hexpansions">Spirit level hexpansions</a> by Andy Piper</span>
     <span class="printme"><a href="https://www.printables.com/model/893545-spirit-level-hexpansions"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-spirits">
-      <p>Link: <a href="https://www.printables.com/model/893545-spirit-level-hexpansions">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/893545-spirit-level-hexpansions"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -228,7 +262,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion">Bat wing hexpansions</a> by clayalien</span>
     <span class="printme"><a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-wings">
-      <p>Link: <a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -236,7 +272,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion">Not lego baseplate hexpansion</a> by adie</span>
     <span class="printme"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-compatible">
-      <p>Link: <a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -244,7 +282,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/894438-display-platform-hexpansion">Display platform hexpansion</a> by adie</span>
     <span class="printme"><a href="https://www.printables.com/model/894438-display-platform-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-display">
-      <p>Link: <a href="https://www.printables.com/model/894438-display-platform-hexpansion">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/894438-display-platform-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -252,7 +292,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Glowing pronoun hexpansions</a> by Emily S</span>
     <span class="printme"><a href="https://www.printables.com/model/885935-pronoun-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-glonouns">
-      <p>Link: <a href="https://www.printables.com/model/885935-pronoun-hexpansion">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/885935-pronoun-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -260,7 +302,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/885935-pronoun-hexpansion">Pronoun hexpansions</a> by Emily S</span>
     <span class="printme"><a href="https://www.printables.com/model/885935-pronoun-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-pronouns">
-      <p>Link: <a href="https://www.printables.com/model/885935-pronoun-hexpansion">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/885935-pronoun-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -276,16 +320,20 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion">Many eyes</a> by Bob</span>
     <span class="viewme"><a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-lit">
-      <p>Link: <a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/sao.jpg" loading="lazy" alt="&quot;Legacy&quot; adapter" data-title="Legacy adapter (SAO, TiDAL, QW/ST)</a> by dratini0" data-description=".custom-desc-sao">
-      <div><span class="label"><a href="https://github.com/dratini0/legacy-adapter-hexpansion">&quot;Legacy&quot; adapter (SAO, TiDAL, QW/ST)</a> by dratini0</span>
+    <img src=" ../../images/hexpansions/sao.jpg" loading="lazy" alt="&quot;Legacy&quot; adapter" data-title="Legacy adapter (SAO, TiDAL, QW/ST) by dratini0" data-description=".custom-desc-dratini">
+      <div><span class="label"><a href="https://github.com/dratini0/legacy-adapter-hexpansion">"Legacy" adapter (SAO, TiDAL, QW/ST)</a> by dratini0</span>
       <span class="viewme"><a href="https://github.com/dratini0/legacy-adapter-hexpansion"><p>👀 VIEW FILES</p></a></span>
       </div>
-      <div class="glightbox-desc custom-desc-sao">
-        <p>Link: <a href="https://github.com/dratini0/legacy-adapter-hexpansion">GitHub</a></p>
+      <div class="glightbox-desc custom-desc-dratini">
+        <div class="detailbuttons">
+          <span class="viewme"><a href="https://github.com/dratini0/legacy-adapter-hexpansion"><p>👀 VIEW FILES</p></a></span>
+        </div>
       </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -293,7 +341,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://github.com/dratini0/hub75-hexpansion">HUB75 hexpansion</a> by dratini0</span>
     <span class="viewme"><a href="https://github.com/dratini0/hub75-hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-hub75">
-      <p>Link: <a href="https://github.com/dratini0/hub75-hexpansion">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/dratini0/hub75-hexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -309,7 +359,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion">Cat ears and whiskers</a> by catnerd</span>
     <span class="printme"><a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-whisker">
-      <p>Link: <a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion">Printables</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/de/model/888105-catear-and-whisker-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -336,15 +388,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://www.printables.com/model/895999-6flags-hexpansion">6flags Hexpansion</a> by Ambrosia</span>
     <span class="printme"><a href="https://www.printables.com/model/895999-6flags-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-6flags">
-      <p>Link: <a href="https://www.printables.com/model/895999-6flags-hexpansion">Printables</a></p>
-    </div>
-  </span>
-  <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/interposer.png" loading="lazy" alt="interposer hexpansion" data-title="Interposer by The Untitled Goose" data-description=".custom-desc-interposer">
-    <span class="label"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka">Interposer</a> by The Untitled Goose</span>
-    <span class="viewme"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka"><p>👀 VIEW FILES</p></a></span>
-    <div class="glightbox-desc custom-desc-interposer">
-      <p>Link: <a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/895999-6flags-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -388,7 +434,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label"><a href="https://github.com/walkerdanny/caffeine-jitters/">Caffeine Jitters</a> by Danny Walker</span>
     <span class="viewme"><a href="https://github.com/walkerdanny/caffeine-jitters/"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-jittery">
-      <p>Link: <a href="https://github.com/walkerdanny/caffeine-jitters/">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/walkerdanny/caffeine-jitters/"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -397,7 +445,9 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="viewme"><a href="https://github.com/magicmonkey/emf_badge/blob/main/hexpansion_footprints.svg"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-petals">
       <p>Petals on a badge</p>
-      <p>Link: <a href="https://github.com/magicmonkey/emf_badge/blob/main/hexpansion_footprints.svg">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/magicmonkey/emf_badge/blob/main/hexpansion_footprints.svg"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
