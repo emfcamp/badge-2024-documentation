@@ -412,7 +412,7 @@ class ExampleApp(app.App):
 __app_export__ = ExampleApp
 ```
 
-The following example app measures steps as you walk aroudn with your badge:
+The following example app measures steps as you walk around with your badge:
 
 ```python
 import app

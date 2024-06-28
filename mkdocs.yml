@@ -51,8 +51,39 @@ plugins:
       caption_position: bottom
   - mkdocs-nav-weight
   - include-markdown
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
   - social:
       cards_layout_options:
         background_color: "#528329"
         color: "#ffffff"
         font-family: "Roboto"
+  - search
+  - spellcheck:
+      backends:  # the backends you want to use
+      - codespell:  # or nested configs
+          dictionaries: [clear, rare]
+
+      # ignore words in <code> tags
+      ignore_code: yes
+
+      # minimum length of words to consider
+      min_length: 2
+
+      # maximum number of capital letters in a word
+      max_capital: 1
+
+      # keep unicode characters
+      allow_unicode: yes
+
+      # whether to only check in strict mode
+      strict_only: no
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: emfcamp/badge-2024-documentation
+      token: !ENV GITHUB_TOKEN
+      branch: main

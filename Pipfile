@@ -12,6 +12,10 @@ social = "*"
 mkdocs-nav-weight = "*"
 mkdocs-include-markdown-plugin = "*"
 flake8-markdown = "*"
+mkdocs-spellcheck = "*"
+codespell = "*"
+mkdocs-minify-plugin = "*"
+mkdocs-git-committers-plugin = "*"
 
 [dev-packages]
 

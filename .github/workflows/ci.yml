@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
@@ -24,6 +26,9 @@ jobs:
           command: install -d
       - name: Build docs
         uses: VaultVulp/action-pipenv@v2.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          CI: True
         with:
           command: run mkdocs build
       - name: Upload Pages artifact
