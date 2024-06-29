@@ -218,7 +218,7 @@ You can see a more comprehensive example in [`dialog.py`](https://github.com/emf
 
 Each hexpansion has:
 
-- 5 low speed (LS) emulated GPIO (eGPIO) pins which you can use with [the tildagonos `Pin`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py) (2, 3, 7, 8, 9)
+- 5 low speed (LS) external GPIO (egpio) pins which you can use with the [`tildagon.Pin`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py)
 - 4 high speed (HS) GPIO pins which you can use with the `machine.Pin` library (12, 13, 18, 19)
 - 6 GND pins (1, 10, 11, 14, 17, 20)
 - 1 pin that detects insertion (6)
@@ -268,7 +268,7 @@ class ExampleApp(app.App):
         if self.hexpansion_config and not self.pins:
             # eGPIO pins
             self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
-
+            self.pins["ls_1"].init(self.pins["ls_1"].OUT)
             # GPIO pins
             self.pins["hs_1"] = self.hexpansion_config.pin[0]
             # All HS pins start in low mode. Initialize them as follows:
@@ -337,9 +337,9 @@ A more elaborate example is this [breadboard tester app](https://github.com/npen
 
 ### Methods
 
-GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html).
+gpio pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html). These are refered to as high speed pins as they are connected directly to the ESP32.
 
-[eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) support the following methods:
+[egpio pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) are refered to as low speed pins as they are connected to a port expander by I2C and support the following methods:
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
@@ -347,6 +347,7 @@ GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.
 | `on()` | Drive the pin high. | None | None |
 | `off()` | Drive the pin low. | None | None |
 | `value()` | If provided with a value, sets the `Pin` value. If called without value, gets the `Pin` value. | None | `value`: The pin value. If called without a `value`. |
+| `duty()` | When in PWM mode, sets the duty cycle of the open collector output | `duty`: The duty cycle, 0-255 | None |
 
 ### Usage
 
@@ -357,17 +358,25 @@ To use the `Pin`s:
    ```python
    # eGPIO pins
    self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
+   self.pins["ls_2"] = self.hexpansion_config.ls_pin[1]
 
    # GPIO pins
    self.pins["hs_1"] = self.hexpansion_config.pin[0]
-   # All HS pins start in low mode. Initialize them as follows:
+   
+   # All pins start in inputs mode. Initialize them as follows:
    self.pins["hs_1"].init(self.pins["hs_1"].OUT)
+   self.pins["ls_1"].init(self.pins["ls_1"].OUT)
+   
+   # Only LS pins support the PWM function directly.
+   self.pins["ls_2"].init(self.pins["ls_2"].PWM)
    ```
 
-2. Call one of the methods, for example `off()`.
+2. Call one of the methods, for example `off()`, `on()` or for LS pins `duty()`.
 
    ```python
    self.pins["hs_1"].off()
+   self.pins["ls_1"].on()
+   self.pins["ls_2"].duty()
    ```
 
 ## `IMU`
@@ -537,7 +546,7 @@ To use the `power` package:
 | `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
 | `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
 | `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA). |
-| `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in mA. |
+| `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in A. |
 | `Vbat()` | Get the battery voltage. | None. | `voltage` (`float`): The battery voltage in V. |
 | `Vin()` | Get the input voltage. | None. | `voltage` (`float`): The input voltage in V. |
 | `Vsys()` (`float`) | Get the system voltage. | None. | `voltage` (`float`): Get the system voltage in V. |
