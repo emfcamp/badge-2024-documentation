@@ -28,7 +28,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
 
 === "App loaded from EEPROM"
 
-    If your app is loaded from EEPROM on a hexpansion, the relevant `HexpansionConfig` object that is automatically passed to your app.
+    If your app is loaded from EEPROM on a hexpansion, the relevant `HexpansionConfig` object is automatically passed to your app.
 
     Note that your app must emit a `RequestForegroundPushEvent` in order to display automatically when the hexpansion is inserted.
 
