@@ -218,7 +218,7 @@ You can see a more comprehensive example in [`dialog.py`](https://github.com/emf
 
 Each hexpansion has:
 
-- 5 low speed (LS) external GPIO (egpio) pins which you can use with the [`tildagon.Pin`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py)
+- 5 low speed (LS) external GPIO (eGPIO) pins which you can use with the [`tildagon.Pin`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagonos.py)
 - 4 high speed (HS) GPIO pins which you can use with the `machine.Pin` library (12, 13, 18, 19)
 - 6 GND pins (1, 10, 11, 14, 17, 20)
 - 1 pin that detects insertion (6)
@@ -337,9 +337,9 @@ A more elaborate example is this [breadboard tester app](https://github.com/npen
 
 ### Methods
 
-gpio pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html). These are refered to as high speed pins as they are connected directly to the ESP32.
+GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html). These are refered to as high speed pins as they are connected directly to the ESP32.
 
-[egpio pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) are refered to as low speed pins as they are connected to a port expander by I2C and support the following methods:
+[eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) are refered to as low speed pins as they are connected to a port expander by I2C and support the following methods:
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
