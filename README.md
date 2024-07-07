@@ -65,6 +65,8 @@ make lint-py
 
 ## Contribute to the documentation
 
+[![GitHub repo Good Issues for newbies](https://img.shields.io/github/issues/emfcamp/badge-2024-documentation/good%20first%20issue?style=flat&logo=github&logoColor=green&label=Good%20First%20issues)](https://github.com/emfcamp/badge-2024-documentation/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) [![GitHub Help Wanted issues](https://img.shields.io/github/issues/emfcamp/badge-2024-documentation/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20issues)](https://github.com/emfcamp/badge-2024-documentation/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) [![GitHub Help Wanted PRs](https://img.shields.io/github/issues-pr/emfcamp/badge-2024-documentation/help%20wanted?style=flat&logo=github&logoColor=b545d1&label=%22Help%20Wanted%22%20PRs)](https://github.com/emfcamp/badge-2024-documentation/pulls?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) [![GitHub repo Issues](https://img.shields.io/github/issues/emfcamp/badge-2024-documentation?style=flat&logo=github&logoColor=red&label=Issues)](https://github.com/emfcamp/badge-2024-documentation/issues?q=is%3Aopen)
+
 Want to improve our documentation? Please do! You can [open a PR](https://docs.github.com/en/desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request-from-github-desktop) and we'll take a look.
 
 Resources:
