@@ -107,7 +107,7 @@ The Detect pin lets the Tildagon know that a hexpansion has been inserted or rem
 
 The +3V3 pins can provide up to 600mA of current at 3.3V. If your hexpansion needs more power than that, you will have to provide it externally. 3.3V power to your hexpansion will be disconnected if you exceed this current level.
 
-Pins 4 and 5 provide an I2C interface. Each hexpansion port has a separate I2C interface. You can put any devices you like on that bus, and they can use any I2C address, **except 0x77**. The badge needs that address to talk to the I2C mux, and if a hexpansion responds to it, the Tildagon has to disconnect its I2C bus. There are no pullups on the I2C bus - you have to provide those yourself.
+Pins 4 and 5 provide an I2C interface. Each hexpansion port has a separate I2C interface. You can put any I2C devices you like on that bus, and they can use any I2C address, **except 0x77**. The badge needs that address to talk to the I2C mux, and if a hexpansion responds to it, the Tildagon has to disconnect its I2C bus. There are no pullups on the I2C bus - you have to provide those yourself.
 
 If you want code on the Tildagon to be able to recognize your hexpansion, you can add an I2C EEPROM. We have currently tested two EEPROM ICs, but many more will work if they have the same address and interface as one of those. The ones we tested are:
 
