@@ -131,7 +131,7 @@ The filesystem should contain a file named `app.py` which contains MicroPython c
 
 ### Example
 
-`b'THEX2024\x40\x00\\x40\x00\x00\x00\x01\x00\x55\xf0\x01\x00\x02\x00EXAMPLE\x00\x00\x8b'`
+`b'THEX2024\x40\x00\x40\x00\x00\x00\x01\x00\x55\xf0\x01\x00\x02\x00EXAMPLE\x00\x00\xeb'`
 
 - Magic "THEX"
 - Version "2024"
@@ -142,7 +142,7 @@ The filesystem should contain a file named `app.py` which contains MicroPython c
 - PID 0x0001
 - Unique ID in use, value 0x0002
 - Friendly name is "EXAMPLE" (padded with zeroes)
-- Checksum is 0x8b
+- Checksum is 0xeb
 
 (header length: 32 bytes)
 
