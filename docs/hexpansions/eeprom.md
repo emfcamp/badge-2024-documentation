@@ -135,9 +135,9 @@ The filesystem should contain a file named `app.py` which contains MicroPython c
 
 - Magic "THEX"
 - Version "2024"
-- Filesystem offset 64 bytes (0x4000)
-- Filesystem page size 64 bytes (0x4000)
-- Filesystem total size 64k (0x00000100)
+- Filesystem offset 64 bytes (0x0040)
+- Filesystem page size 64 bytes (0x0040)
+- Filesystem total size 64k (0x00010000)
 - VID 0xf055
 - PID 0x0001
 - Unique ID in use, value 0x0002
