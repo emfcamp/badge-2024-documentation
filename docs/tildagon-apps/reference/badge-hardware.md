@@ -743,3 +743,23 @@ i2c.writeto_mem(42, 2, b'\x10')
 ```
 
 For more information, see [MicroPython I2C docs](https://docs.micropython.org/en/latest/library/machine.I2C.html).
+
+## Version
+
+You can use the `ota` package to obtain the insntalled TildagonOS version:
+
+### Usage
+
+To use the buttons:
+
+1. Import the `ota` package:
+
+   ```python
+   import ota
+   ```
+
+2. Use the `get_version()` method:
+
+   ```python
+   ota.get_version()
+   ```

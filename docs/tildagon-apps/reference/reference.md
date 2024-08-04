@@ -33,6 +33,7 @@ You can use the following hardware with the inbuilt interfaces:
 - [Pins](./badge-hardware.md#pins)
 - [IMU](./badge-hardware.md#imu)
 - [Power](./badge-hardware.md#power)
+- [Version](./badge-hardware.md#over-the-air-ota)
 
 ## Using APIs
 
