@@ -127,14 +127,14 @@ Think of the `ctx` object as a canvas. The object stores the drawing state of th
 
   - `font_size`: The font size to be used for text. Default: `10.0`.
   - `global_alpha`: The alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas. Default: `1.0`.
-  - `text_align`: The alignment to be used for text. Default: `"start"`. Options:
+  - `text_align`: The alignment to be used for text. Default: `ctx.START`. Options:
 
-    - `"right"`: The text is right-aligned.
-    - `"left"`: The text is left-aligned.
-    - `"justify"`: The text is justified.
-    - `"center`: The text is centered.
-    - `"start"`: The text is aligned at the normal start of the line (left-aligned for left-to-right locales, right-aligned for right-to-left locales).
-    - `"end"`: The text is aligned at the normal end of the line (right-aligned for left-to-right locales, left-aligned for right-to-left locales).
+    - `ctx.RIGHT`: The text is right-aligned.
+    - `ctx.LEFT`: The text is left-aligned.
+    - `ctx.JUSTIFY`: The text is justified.
+    - `ctx.CENTER`: The text is centered.
+    - `ctx.START`: The text is aligned at the normal start of the line (left-aligned for left-to-right locales, right-aligned for right-to-left locales).
+    - `ctx.END`: The text is aligned at the normal end of the line (right-aligned for left-to-right locales, left-aligned for right-to-left locales).
 
   - `text_baseline`: The baseline to be used for text. Default `"alphabetic"`. Options:
     - `"alphabetic"`: The text baseline is the normal alphabetic baseline.
