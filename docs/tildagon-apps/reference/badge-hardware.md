@@ -337,9 +337,9 @@ A more elaborate example is this [breadboard tester app](https://github.com/npen
 
 ### Methods
 
-GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html). These are refered to as high speed pins as they are connected directly to the ESP32.
+GPIO pins support the standard [`machine.Pin` methods](https://docs.micropython.org/en/latest/library/machine.Pin.html). These are referred to as high speed pins as they are connected directly to the ESP32.
 
-[eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) are refered to as low speed pins as they are connected to a port expander by I2C and support the following methods:
+[eGPIO pins](https://github.com/emfcamp/badge-2024-software/blob/main/modules/tildagon/pins.py) are referred to as low speed pins as they are connected to a port expander by I2C and support the following methods:
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
@@ -362,11 +362,11 @@ To use the `Pin`s:
 
    # GPIO pins
    self.pins["hs_1"] = self.hexpansion_config.pin[0]
-   
+
    # All pins start in inputs mode. Initialize them as follows:
    self.pins["hs_1"].init(self.pins["hs_1"].OUT)
    self.pins["ls_1"].init(self.pins["ls_1"].OUT)
-   
+
    # Only LS pins support the PWM function directly.
    self.pins["ls_2"].init(self.pins["ls_2"].PWM)
    ```

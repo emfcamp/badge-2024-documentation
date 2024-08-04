@@ -31,12 +31,22 @@ See [Replacing badge components](./replacing-parts.md).
 
 [Install `mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html) and follow the steps in [Debug your app on your badge](../tildagon-apps/run-on-badge.md#debug-your-app-on-your-badge) to get a shell on your badge and then run the following commands:
 
-```sh
-import machine
-import bq25895
+=== "v1.8.0 and above"
 
-bq25895.bq25895(machine.I2C(7)).disconnect_battery()
-```
+    ```sh
+    import power
+
+    power.Off()
+    ```
+
+=== "below v1.8.0"
+
+    ```sh
+    import machine
+    import bq25895
+
+    bq25895.bq25895(machine.I2C(7)).disconnect_battery()
+    ```
 
 After running the command, disconnect your badge from the USB cable and your badge will be turned off.
 
