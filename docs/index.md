@@ -483,7 +483,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/mrtildagon.jpg" loading="lazy" alt="Mr tildagon" data-title="Helping HexpHANDsion by Yvan" data-description=".custom-hands">
-    <span class="label"><a href="https://www.printables.com/model/942402-katarm-hexpansion">Helping HexpHANDsion Spinner</a> by Yvan</span>
+    <span class="label"><a href="https://www.printables.com/model/942402-katarm-hexpansion">Helping HexpHANDsion</a> by Yvan</span>
     <span class="printme"><a href="https://www.printables.com/model/942402-katarm-hexpansion"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-hands">
       <div class="detailbuttons">
