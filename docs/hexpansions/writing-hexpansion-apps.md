@@ -230,7 +230,8 @@ Hexpansion ports have two types of GPIO pins - `Pin` objects and `ePin` objects.
 `Pin` objects are regular high speed GPIO pins. These are available through `HexpansionConfig.pin[]`. They are connected directly to the GPIO pins of the ESP32-S3, and can be controlled using the standard MicroPython `Pin` API. These pins are available for routing any of the unused peripherals from the ESP32-S3 to, so you could configure them as an `SPI` bus, use the `RMT` peripheral, be a `PWM` output etc. You can also use them for any other GPIO tasks where switching speed is important, such as communicating on an arbitrary protocol. Don't try to source or sink too much current from these pins - the usual rules for connecting things to microcontroller pins apply here.
 
 !!! note "Using the ADC"
-If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
+
+    If you want to use the analogue to digital converter (`ADC`) peripheral of the ESP32-S3, your hexpansion needs to be in port 4, 5 or 6. Your detection code should be written to check for this and act accordingly. See [electrical interface](creating-hexpansions.md#electrical-interface).
 
 <!-- markdown-link-check-disable -->
 
