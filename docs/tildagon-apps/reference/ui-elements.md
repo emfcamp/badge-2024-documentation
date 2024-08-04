@@ -487,7 +487,7 @@ The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modu
 
             ctx.save()
             if self.name:
-                ctx.text_align = "center"
+                ctx.text_align = ctx.CENTER
                 ctx.gray(1).move_to(0, 0).text("Hello " + self.name)
             ctx.restore()
 
@@ -527,7 +527,7 @@ The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modu
             clear_background(ctx)
 
             ctx.save()
-            ctx.text_align = "center"
+            ctx.text_align = ctx.CENTER
             ctx.gray(1).move_to(0, 0).text("Hello " + self.name)
             ctx.restore()
 
