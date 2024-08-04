@@ -166,7 +166,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/segment-display.jpg" loading="lazy" alt="A 7 segment display hexpansion" data-title="7-segment display by Iain Yarnall" data-description=".custom-desc-segment">
-    <span class="label"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">7-Segment display</a> by Iain Yarnall.</span>
+    <span class="label"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display">7-Segment display</a> by Iain Yarnall</span>
     <span class="printme"><a href="https://www.printables.com/model/888549-emf-tildagon-hexpansion-7-segment-display"><p>🖨️ PRINT ME</p></a></span>
     <div class="glightbox-desc custom-desc-segment">
       <div class="detailbuttons">
@@ -191,8 +191,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Le Carnard de Bleu by Dan</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/fidget.jpg" loading="lazy" alt="Fidget Spinner hexpansion" data-title="Fidget Spinner by Catherine" data-description="">
-    <span class="label">Fidget Spinner by Catherine</span>
+    <img src=" ../../images/hexpansions/fidget.jpg" loading="lazy" alt="Fidget Spinner hexpansion" data-title="Fidget Spinner by Catherine" data-description=".custom-fidget">
+    <span class="label"><a href="https://www.printables.com/model/925402-tildagon-hexpansion-fidget-spinnery">Fidget Spinner</a> by Catherine</span>
+    <span class="printme"><a href="https://www.printables.com/model/925402-tildagon-hexpansion-fidget-spinner"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-fidget">
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/925402-tildagon-hexpansion-fidget-spinner"><p>🖨️ PRINT ME</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/breadbeard.jpg" loading="lazy" alt="Breadbeard hexpansion" data-title="Breadbeard Hexpansion by Danny Walker" data-description="">
@@ -473,6 +479,16 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Polybius Biotech Employee Authenticator by Graham Sutherland (Polybius Biotech)</span>
     <div class="glightbox-desc custom-desc-polybius">
       <p>DESCRIPTION REDACTED BY POLYBIUS BIOTECH SECURITY</p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/mrtildagon.jpg" loading="lazy" alt="Mr tildagon" data-title="Helping HexpHANDsion by Yvan" data-description=".custom-hands">
+    <span class="label"><a href="https://www.printables.com/model/942402-katarm-hexpansion">Helping HexpHANDsion Spinner</a> by Yvan</span>
+    <span class="printme"><a href="https://www.printables.com/model/942402-katarm-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-hands">
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/942402-katarm-hexpansion"><p>🖨️ PRINT ME</p></a></span>
+      </div>
     </div>
   </span>
   <span class="button-container">
