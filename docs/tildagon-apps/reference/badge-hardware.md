@@ -746,11 +746,9 @@ For more information, see [MicroPython I2C docs](https://docs.micropython.org/en
 
 ## Version
 
-You can use the `ota` package to obtain the insntalled TildagonOS version:
+You can use the `ota` package to obtain the installed TildagonOS version:
 
 ### Usage
-
-To use the buttons:
 
 1. Import the `ota` package:
 
