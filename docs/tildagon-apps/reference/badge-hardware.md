@@ -252,20 +252,24 @@ class ExampleApp(app.App):
                          back_handler=self.back_handler)
         self.hexpansion_config = None
         self.button_states = Buttons(self)
-        self.pins = {}
+        self.pins = None
 
     def select_handler(self, item, idx):
         self.hexpansion_config = HexpansionConfig(idx+1)
-        self.menu = None
 
     def back_handler(self):
-        self.minimise()
+        if self.hexpansion_config:
+            self.hexpansion_config = None
+            self.pins = None
+        else:
+            self.minimise()
 
     def update(self, delta):
         if self.hexpansion_config is None:
             self.menu.update(delta)
 
         if self.hexpansion_config and not self.pins:
+            self.pins = {}
             # eGPIO pins
             self.pins["ls_1"] = self.hexpansion_config.ls_pin[0]
             self.pins["ls_1"].init(self.pins["ls_1"].OUT)
@@ -274,15 +278,14 @@ class ExampleApp(app.App):
             # All HS pins start in low mode. Initialize them as follows:
             self.pins["hs_1"].init(self.pins["hs_1"].OUT)
 
-        if not self.menu and self.button_states.get(BUTTON_TYPES["UP"]):
-            print()
+        if self.pins and self.button_states.get(BUTTON_TYPES["UP"]):
             self.button_states.clear()
             # Toggle pin ls_1
             if self.pins["ls_1"].value():
                 self.pins["ls_1"].off()
             else:
                 self.pins["ls_1"].on()
-        if not self.menu and self.button_states.get(BUTTON_TYPES["DOWN"]):
+        if self.pins and self.button_states.get(BUTTON_TYPES["DOWN"]):
             self.button_states.clear()
             # Toggle pin hs_1
             if self.pins["hs_1"].value():
@@ -303,7 +306,7 @@ class ExampleApp(app.App):
                 -120, -120, 240, 100).fill()
             ctx.rgb(*colors["dark_green"]).rectangle(
                 -120, 20, 240, 100).fill()
-            rotation_angle = self.menu.position*pi/3
+            rotation_angle = (self.menu.position - 1) * pi/3
             ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(
                 80, -120, 40, 240).fill()
             prompt_message = "Select hexpansion port:"
@@ -311,7 +314,7 @@ class ExampleApp(app.App):
                 0, -45).text(prompt_message)
             ctx.restore()
 
-        else:
+        elif self.pins:
             ctx.save()
             ctx.font_size = 24
             msg = "Hexpansion in port " + str(self.hexpansion_config.port)
