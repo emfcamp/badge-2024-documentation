@@ -20,6 +20,8 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+      - name: Install pipenv
+        run: pip install pipenv
       - name: Install dependencies
         uses: VaultVulp/action-pipenv@v2.0.1
         with:
