@@ -10,11 +10,11 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
    ```json
    {
      "name": "<app-name>",
-     "path": "apps.<folder-name>.app"
+     "path": "apps.<folder-name>.<source-name>"
    }
    ```
 
-   The folder name is the name of the folder you will copy the app to. For example:
+   The folder name is the name of the folder you will copy the app to. The source name is the name of the Python source file containing your app, without the `.py` extension. For example, if your app is in a file called `app.py`:
 
    ```json
    {
