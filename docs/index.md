@@ -71,8 +71,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/eeh.gif" loading="lazy" alt="Rabbit hexpansion" data-title="EEH Hexpansion by Matt" data-description="">
-    <span class="label">EEH Hexpansion by Matt</span>
+    <img src=" ../../images/hexpansions/keyboard-hexpansion.png" loading="lazy" alt="Keyboard hexpansion" data-title="Keyboard hexpansion by Alex" data-description="">
+    <span class="label">Keyboard hexpansion by <a href="https://www.youtube.com/watch?v=5mLt09UtY2E">Alex</a></span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/goose.png" loading="lazy" alt="Skyler's Goosespansion" data-title="Goosespansion by Skyler Mansfield" data-description=".custom-desc-goosespansion">
@@ -123,6 +123,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
         <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
       </div>
     </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/eeh.gif" loading="lazy" alt="Rabbit hexpansion" data-title="EEH Hexpansion by Matt" data-description="">
+    <span class="label">EEH Hexpansion by Matt</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)" data-title="Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond" data-description="">
