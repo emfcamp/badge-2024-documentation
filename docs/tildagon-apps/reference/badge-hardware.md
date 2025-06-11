@@ -547,12 +547,24 @@ To use the `power` package:
 | `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
 | `BatteryLevel()` | Return the battery charge level. | None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
 | `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
-| `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |
-| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples containing supply type, voltage (V) and current (mA). |
+| `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired. |
+| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples, contents described below. |
 | `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in A. |
 | `Vbat()` | Get the battery voltage. | None. | `voltage` (`float`): The battery voltage in V. |
 | `Vin()` | Get the input voltage. | None. | `voltage` (`float`): The input voltage in V. |
 | `Vsys()` (`float`) | Get the system voltage. | None. | `voltage` (`float`): Get the system voltage in V. |
+
+#### SupplyCapabilities Tuple Contents
+<!-- prettier-ignore -->
+| 1. Type | 2. | 3. | 4. | 5. |
+| ------- | -- | -- | -- | -- |
+| `fixed` | (int) Max. Current (mA) | (float) Voltage (V) | - | - |
+| `battery` | (float) Power (W) | (float) Min. Voltage (V) | (float) Max. Voltage (V) | - |
+| `variable` | (int) Max. Current (mA) | (float) Min. Voltage (V) | (float) Max. Voltage (V) | - |
+| `Prog PSU` | (int) Max. Current (mA) | (float) Min. Voltage (V) | (float) Max. Voltage (V) | (bool) power limited |
+| `EPR Adj V` | (int) Power (W) | (float) Min. Voltage (V) | (float) Max. Voltage (V) | (int) peak Current (see USB standard) |
+| `SPR Adj V` | (int) Max. Current for 15-20V range (mA) | (int) Max. Current for 9-15V range (mA) | (int) peak Current (see USB standard) | - |
+
 
 ### Events
 
