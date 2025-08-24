@@ -56,14 +56,14 @@ class ExampleApp(app.App):
         for port in range(1, 7):
             print(f"Searching for hexpansion on port: {port}")
             i2c = I2C(port)
-            addr = detect_eeprom_addr(i2c)
+            addr, addr_len = detect_eeprom_addr(i2c)
 
             if addr is None:
                 continue
             else:
                 print("Found EEPROM at addr " + hex(addr))
 
-            header = read_hexpansion_header(i2c, addr)
+            header = read_hexpansion_header(i2c, addr, addr_len=addr_len)
             if header is None:
                 continue
             else:
