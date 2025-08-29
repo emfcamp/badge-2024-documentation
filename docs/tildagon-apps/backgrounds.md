@@ -46,11 +46,12 @@ from app_components.background import Background as bg
 then call the update and draw functions from the same functions in your app:
 
 ```python
-    def draw(self, ctx):
-        bg.draw(ctx)
-        # add you code
+def draw(self, ctx):
+    bg.draw(ctx)
+    # add you code
 
-    def update(self, delta):
-        bg.update(delta)
-        # add you code
+
+def update(self, delta):
+    bg.update(delta)
+    # add you code
 ```
