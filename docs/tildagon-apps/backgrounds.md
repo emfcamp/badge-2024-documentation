@@ -50,6 +50,7 @@ def draw(self, ctx):
     bg.draw(ctx)
     # add you code
 
+
 def update(self, delta):
     bg.update(delta)
     # add you code
