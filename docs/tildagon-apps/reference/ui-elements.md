@@ -448,7 +448,7 @@ The [`TextDialog`](https://github.com/emfcamp/badge-2024-software/blob/main/modu
 
 === "Synchronous"
 
-    This example app shows a dialog that asks you for your name and then says hell:
+    This example app shows a dialog that asks you for your name and then says hello:
 
     ```python
     import app
