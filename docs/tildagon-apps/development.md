@@ -268,6 +268,8 @@ class TimeCounterApp(app.App):
 __app_export__ = TimeCounterApp
 ```
 
+By default, the `background_task()` method is automatically run by the scheduler, regardless of whether the app is in the foreground or background, and calls `background_update()` every 0.05 seconds. You can overwrite this method to change the frequency at which you perform tasks or call the `background_update()` method.
+
 #### Draw multiple objects
 
 The `draw_overlays()` method allows you to draw multiple objects that are stored in the `self.overlays` property. To make use of the inbuilt functionality of the `draw_overlays()` method, add all objects that you want to draw and that have a `draw()` method to the `self.overlays` property.
@@ -381,8 +383,6 @@ class BasicApp(app.App):
 
 __app_export__ = BasicApp
 ```
-
-By default, the `background_task()` method is automatically run by the scheduler, regardless of whether the app is in the foreground or background, and calls `background_update()` every 0.05 seconds. You can overwrite this method to change the frequency at which you perform tasks or call the `background_update()` method.
 
 ### Properties
 
