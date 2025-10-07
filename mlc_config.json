@@ -1,10 +1,23 @@
 {
-    "httpHeaders": [
-      {
-        "urls": ["https://github.com/", "https://guides.github.com/", "https://help.github.com/", "https://docs.github.com/"],
-        "headers": {
-          "Accept-Encoding": "zstd, br, gzip, deflate"
-        }
+  "ignorePatterns": [
+    {
+      "pattern": "^https://www.printables.com"
+    },
+    {
+      "pattern": "^https://badge.emfcamp.org"
+    },
+    {
+      "pattern": "^\.\./\.\./images/"
+    }
+  ],
+  "httpHeaders": [
+    {
+      "urls": ["https://github.com/", "https://guides.github.com/", "https://help.github.com/", "https://docs.github.com/"],
+      "headers": {
+        "Accept-Encoding": "zstd, br, gzip, deflate"
       }
-    ]
-  }
+    }
+  ],
+  "retryOn429": true,
+  "retryCount": 5
+}
