@@ -590,12 +590,16 @@ from system.hexpansion.events import \
     HexpansionRemovalEvent, HexpansionInsertionEvent
 ```
 
-Then `emit()` the event as following:
+Then attach a function to the event as following:
 
 ```python
-eventbus.emit(
-    events.RequestChargeEvent(events.PowerEvent("Charge Cycle change"))
-)
+class ChargeApp(app.App):
+    def __init__(self):
+        eventbus.on(events.RequestChargeEvent, self._handle_charge_event, self)
+
+    def _handle_charge_event(self, event: RequestChargeEvent):
+        # do something
+        return None
 ```
 
 ## I2C
