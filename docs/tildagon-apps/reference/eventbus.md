@@ -47,7 +47,7 @@ You can use your own events directly with an event handler that you register on 
         eventbus.on_async(SpecialEvent, self.handle_event_async, self.app)
     ```
 
-5.  Add code to emit the event, for example in your app's `update()` method. Depending on whether the event handler is a synchronous or asynchronous method call `emit()` or `emit_async()`:
+5.  Add code to emit the event, for example in your app's `update()` method. Depending on whether you are emitting in a synchronous or asynchronous method, call `emit()` or `emit_async()`:
 
     ```python
     def update(self, delta):
@@ -82,6 +82,6 @@ You can use the following methods on the `eventbus`:
 | ------ | ----------- | --------- | ------- |
 | `on(event_type, event_handler, app)` | Register an event for an app alongside the synchronous handler to be called when the event fires. | <ul><li><code>event_type</code>: The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`.</li><li><code>event_handler</code>: The synchronous function to be called when the event fires to handle the event.</li><li><code>app</code>: The app this event is being registered for.</li></ul> | None |
 | `on_async(event_type, event_handler, app)` | Register an event for an app alongside the asynchronous handler to be called when the event fires. | <ul><li><code>event_type</code>: The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`.</li><li><code>event_handler</code>: The asynchronous function to be called when the event fires to handle the event.</li><li><code>app</code>: The app this event is being registered for.</li></ul> | None |
-| `emit(event)` | Emit an event to the eventbus. The handler for the event must be synchronous. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
-| `emit_async(event)` | Emit an event to the eventbus. The handler for the event must be asynchronous. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
+| `emit(event)` | Emit an event to the eventbus. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
+| `emit_async(event)` | Emit an event to the eventbus. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
 | `remove(event_type, event_handler, app)` | Remove the event for an app from the eventbus. | <ul><li><code>event_type</code>: The event to be removed.</li><li><code>event_handler</code>: The asynchronous function to be called when the event fires to handle the event.</li><li><code>app</code>: The app this event is being removed for.</li></ul> | None |
