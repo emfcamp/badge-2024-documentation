@@ -167,12 +167,12 @@ class ExampleApp(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
-        ctx.rgb(200, 0, 0)
+        ctx.rgb(0.78, 0, 0)
         ctx.rectangle(0, -40, 5, 5).fill()
         ctx.rectangle(0, -30, 5, 5).fill()
         ctx.rectangle(0, -20, 5, 5).fill()
         ctx.save()
-        ctx.rgb(0, 200, 0).rectangle(0, -10, 5, 5).fill()
+        ctx.rgb(0, 0.78, 0).rectangle(0, -10, 5, 5).fill()
         # Restore to the state saved by the most recent call to save()
         ctx.restore()
         ctx.rectangle(0, 0, 5, 5).fill()
@@ -212,10 +212,10 @@ class ExampleApp(app.App):
         ctx.save()
 
         # red left circle
-        ctx.rgb(255, 0, 0).arc(-30, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.rgb(1, 0, 0).arc(-30, 0, 40, 0, 2 * math.pi, True).fill()
 
         # blue right circle
-        ctx.rgb(0, 0, 255).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.rgb(0, 0, 1).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
 
         ctx.restore()
 
@@ -248,10 +248,10 @@ class ExampleApp(app.App):
         ctx.save()
 
         # red left circle
-        ctx.rgba(255, 0, 0, 1).arc(-30, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.rgba(1, 0, 0, 1).arc(-30, 0, 40, 0, 2 * math.pi, True).fill()
 
         # blue right circle, 50% opacity
-        ctx.rgba(0, 0, 100, 0.5).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
+        ctx.rgba(0, 0, 0.4, 0.5).arc(30, 0, 40, 0, 2 * math.pi, True).fill()
 
         ctx.restore()
 
@@ -389,8 +389,8 @@ class ExampleApp(app.App):
     def draw(self, ctx):
         ctx.save()
         ctx.font = ctx.get_font_name(5)
-        ctx.rgb(100, 0, 0).rectangle(-120, -120, 240, 240).fill()
-        ctx.rgb(255, 0, 0).move_to(-80, 0).text("Hello world")
+        ctx.rgb(0.4, 0, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
         ctx.restore()
 
 
@@ -431,16 +431,16 @@ class ExampleApp(app.App):
         clear_background(ctx)
         ctx.save()
         ctx.font = ctx.get_font_name(5)
-        ctx.rgb(100, 0, 0).rectangle(-60, -30, 120, 60).fill()
+        ctx.rgb(0.4, 0, 0).rectangle(-60, -30, 120, 60).fill()
         text = "Hello there world!"
         # we know the rectangle is 120 wide, with a margin of 5 on each side
         # that leaves 110 for text
         if ctx.text_width(text) >= 110:
             line_1, line_2 = self.reduce_text_until_fits(ctx, text, 110)
-            ctx.rgb(255, 0, 0).move_to(-55, -10).text(line_1)
-            ctx.rgb(255, 0, 0).move_to(-55, 10).text(line_2)
+            ctx.rgb(1, 0, 0).move_to(-55, -10).text(line_1)
+            ctx.rgb(1, 0, 0).move_to(-55, 10).text(line_2)
         else:
-            ctx.rgb(255, 0, 0).move_to(-55, 0).text(text)
+            ctx.rgb(1, 0, 0).move_to(-55, 0).text(text)
         ctx.restore()
 
 
@@ -527,11 +527,11 @@ class ExampleApp(app.App):
         clear_background(ctx)
         ctx.save()
         # Yellow circle in the middle
-        ctx.rgb(255, 234, 0).arc(0, 0, 60, 0, 2 * math.pi, True).fill()
+        ctx.rgb(1, 0.92, 0).arc(0, 0, 60, 0, 2 * math.pi, True).fill()
         # Green rectangle with 50% opacity
-        ctx.rgba(0, 200, 0, 0.5).rectangle(-25, -25, 50, 50).fill()
+        ctx.rgba(0, 0.78, 0, 0.5).rectangle(-25, -25, 50, 50).fill()
         # Blue circle outline
-        ctx.rgb(0, 0, 200).arc(0, 0, 10, 0, 2 * math.pi, True).stroke()
+        ctx.rgb(0, 0, 0.78).arc(0, 0, 10, 0, 2 * math.pi, True).stroke()
         ctx.restore()
 
 
@@ -565,14 +565,14 @@ class ExampleApp(app.App):
         ctx.save()
         # Blue circle
         ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
-        ctx.rgb(0, 0, 255).fill()
+        ctx.rgb(0, 0, 1).fill()
 
         # Define a clipping area for the circle
         ctx.arc(0, 0, 60, 0, 2 * math.pi, True)
         ctx.clip()
         # Add the shape into the clipping area
         ctx.rectangle(0, 0, 80, 80)
-        ctx.rgb(255, 0, 0).fill()
+        ctx.rgb(1, 0, 0).fill()
         ctx.restore()
 
 
@@ -603,9 +603,9 @@ class ExampleApp(app.App):
     def draw(self, ctx):
         clear_background(ctx)
         ctx.save()
-        ctx.rgb(100, 0, 0).rectangle(-40, 0, 40, 20).fill()
+        ctx.rgb(0.4, 0, 0).rectangle(-40, 0, 40, 20).fill()
         ctx.scale(1, 3)
-        ctx.rgb(0, 100, 0).rectangle(0, 0, 40, 20).fill()
+        ctx.rgb(0, 0.4, 0).rectangle(0, 0, 40, 20).fill()
         ctx.restore()
 
 
@@ -636,9 +636,9 @@ class ExampleApp(app.App):
         clear_background(ctx)
         ctx.save()
         ctx.rotate(math.pi)
-        ctx.rgb(100, 0, 0).rectangle(-40, 0, 40, 20).fill()
+        ctx.rgb(0.4, 0, 0).rectangle(-40, 0, 40, 20).fill()
         ctx.scale(1, 3)
-        ctx.rgb(0, 100, 0).rectangle(0, 0, 40, 20).fill()
+        ctx.rgb(0, 0.4, 0).rectangle(0, 0, 40, 20).fill()
         ctx.restore()
 
 
@@ -670,9 +670,9 @@ class ExampleApp(app.App):
         ctx.save()
         ctx.translate(-50, 0)
         ctx.rotate(math.pi)
-        ctx.rgb(100, 0, 0).rectangle(-40, 0, 40, 20).fill()
+        ctx.rgb(0.4, 0, 0).rectangle(-40, 0, 40, 20).fill()
         ctx.scale(1, 3)
-        ctx.rgb(0, 100, 0).rectangle(0, 0, 40, 20).fill()
+        ctx.rgb(0, 0.4, 0).rectangle(0, 0, 40, 20).fill()
         ctx.restore()
 
 
@@ -865,8 +865,8 @@ You can use the following methods on a `ctx` canvas object:
 | `rel_line_to(x, y)` | Add a straight line to the current sub-path by connecting the sub-path's last point to a point moved `x` units horizontally and `y` units vertically on the grid. Like other methods that modify the current path, this method does not directly render anything. To draw the path onto a canvas, you can use the `fill()` or `stroke()` methods. | <ul><li>`x`: The path will be drawn towards a point moved horizontally by `x` units and vertically by `y` units.</li><li>`y`: The path will be drawn towards a point moved horizontally by `x` units and vertically by `y` units.</li></ul> | `self`: The `ctx` object. |
 | `rotate(v)` | Add a rotation to the transformation matrix. The rotation center point is always the canvas origin. To change the center point, you will need to move the canvas by using the `translate()` method. | `v`: The rotation angle, clockwise in radians. You can use degree \* pi / 180 to calculate a radian from a degree. | `self`: The `ctx` object. |
 | `gray(v)` | Sets the color of the canvas to a color between `0.0` (black) and `1.0`. | `v`: Intensity of the gray color. `0.0` results in black and `1.0` in white. | `self`: The `ctx` object. |
-| `rgba(r, g, b, a)` | Color the canvas in the color `(r, g, b)` with an alpha channel. | <ul><li>`r`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`g`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`b`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`a`: The alpha channel which specifies the opacity for a color between `0.0` (fully transparent) and `1.0` (not transparent at all).</li></ul> | `self`: The `ctx` object. |
-| `rgb(r, g, b)` | Color the canvas in the color `(r, g, b)`. | <ul><li>`r`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`g`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li><li>`b`: The intensity of the color with a value between `0` and `255` or between `0.0` and `1.0`.</li></ul> | `self`: The `ctx` object. |
+| `rgba(r, g, b, a)` | Color the canvas in the color `(r, g, b)` with an alpha channel. | <ul><li>`r`: The intensity of red with a value between `0.0` and `1.0`.</li><li>`g`: The intensity of green with a value between `0.0` and `1.0`.</li><li>`b`: The intensity of blue with a value between `0.0` and `1.0`.</li><li>`a`: The alpha channel which specifies the opacity for a color between `0.0` (fully transparent) and `1.0` (not transparent at all).</li></ul> | `self`: The `ctx` object. |
+| `rgb(r, g, b)` | Color the canvas in the color `(r, g, b)`. | <ul><li>`r`: The intensity of red with a value between `0.0` and `1.0`.</li><li>`g`: The intensity of green with a value between `0.0` and `1.0`.</li><li>`b`: The intensity of blue with a value between `0.0` and `1.0`.</li></ul> | `self`: The `ctx` object. |
 | `text(s)` | Draw the provided text on the canvas. | `s`: The text to draw provided as a string. | `self`: The `ctx` object. |
 | `round_rectangle(x, y, width, height, radius)` | Add a rounded rectangle on the canvas at position `(x, y)` with the provided width, height, and corner radius. | <ul><li>`x`: The horizontal position to draw the rectangle at.</li><li>`y`: The vertical position to draw the rectangle at.</li><li>`width`: The width of the rectangle to draw.</li><li>`height`: The height of the rectangle to draw.</li><li>`radius`: The radius of the rectangle's corners.</li></ul> | `self`: The `ctx` object. |
 | `image(path, x, y, w, h)` | Draw an image to be read from the provided path onto the canvas. | <ul><li>`path`: The path to an image file.</li><li>`x`: The x-axis coordinate of the top left corner of the image to draw.</li><li>`y`: The y-axis coordinate of the top left corner of the image to draw.</li><li>`w`: The width of the image to draw.</li><li>`h`: The height of the image to draw.</li></ul> | `self`: The `ctx` object. |
