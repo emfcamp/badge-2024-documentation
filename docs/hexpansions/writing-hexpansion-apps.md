@@ -70,7 +70,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
         def _cleanup(self):
             eventbus.remove(ButtonDownEvent, self._handle_buttondown, self.app)
 
-        __app_export__ = ExampleApp
+    __app_export__ = ExampleApp
     ```
 
 === "App loaded from badge, with EEPROM"
