@@ -616,17 +616,23 @@ from pd import Host, Device
 
 main_menu_items = ["rainbow", "cylon", "flash", "off"]
 
+
 class LedSyncApp(App):
     def __init__(self):
         self.usb_in = Device()
         self.usb_out = Host()
-        self.menu = Menu(self, main_menu_items, select_handler=self.select_handler, back_handler=self.back_handler)
+        self.menu = Menu(
+            self,
+            main_menu_items,
+            select_handler=self.select_handler,
+            back_handler=self.back_handler,
+        )
         eventbus.on(events.VendorMsgDevRxEvent, self._handle_dev_msg, self)
         eventbus.on(events.VendorMsgHostRxEvent, self._handle_host_msg, self)
         eventbus.on(events.BadgeAsHostAttachEvent, self._handle_host_detect, self)
         self.state = main_menu_items[0]
 
-    def _handle_dev_msg(self, event:VendorMsgDevRxEvent):
+    def _handle_dev_msg(self, event: VendorMsgDevRxEvent):
         msg = self.usb_in.get_vendor_msg()
         if msg is not None:
             settings.set("pattern", main_menu_items[msg[0]])
@@ -635,37 +641,38 @@ class LedSyncApp(App):
             if self.usb_out.badge_connected():
                 self.usb_out.send_vendor_msg(msg)
 
-    def _handle_host_msg(self, event:VendorMsgHostRxEvent):
+    def _handle_host_msg(self, event: VendorMsgHostRxEvent):
         msg = self.usb_out.get_vendor_msg()
         if msg is not None:
             settings.set("pattern", main_menu_items[msg[0]])
             eventbus.emit(PatternReload())
-            self.state = main_menu_items[msg[0]] 
+            self.state = main_menu_items[msg[0]]
             if self.usb_in.badge_connected():
                 self.usb_in.send_vendor_msg(msg)
-   
-    def _handle_host_detect(self, event:BadgeAsHostAttachEvent):
+
+    def _handle_host_detect(self, event: BadgeAsHostAttachEvent):
         idx = main_menu_items.index(self.state)
-        self.usb_out.send_vendor_msg(bytearray([idx])) 
+        self.usb_out.send_vendor_msg(bytearray([idx]))
 
     def select_handler(self, item, item_idx):
-        self.state = main_menu_items[item_idx] 
+        self.state = main_menu_items[item_idx]
         settings.set("pattern", main_menu_items[item_idx])
         eventbus.emit(PatternReload())
         if self.usb_in.badge_connected():
             self.usb_in.send_vendor_msg(bytearray([item_idx]))
         if self.usb_out.badge_connected():
             self.usb_out.send_vendor_msg(bytearray([item_idx]))
-            
+
     def back_handler(self):
         self.minimise()
- 
+
     def draw(self, ctx):
         clear_background(ctx)
         self.menu.draw(ctx)
 
     def update(self, delta):
         self.menu.update(delta)
+
 
 __app_export__ = LedSyncApp
 ```
@@ -748,7 +755,9 @@ from system.power.pd_helper import pdHelper, vdmCmd
 
 pdh = pdHelper()
 header = pdh.header(dataType.VENDOR_DEFINED, 1)
-vendor_header = pdh.vdm_structured_header(vdmCmd.DISCOVER_IDENTITY, 0xFF00, 0, 0)
+vendor_header = pdh.vdm_structured_header(
+    vdmCmd.DISCOVER_IDENTITY, 0xFF00, 0, 0
+)
 usb_out = Host()
 usb_out.send_prime_msg(
     header.to_bytes(2, "little") + vendor_header.to_bytes(4, "little")
