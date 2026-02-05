@@ -604,7 +604,6 @@ The PD module allows sending and receiving PD messages on the USB in and out por
 
 ### Example
 
-
 ```python
 import settings
 from app import App
@@ -629,7 +628,9 @@ class LedSyncApp(App):
         )
         eventbus.on(events.VendorMsgDevRxEvent, self._handle_dev_msg, self)
         eventbus.on(events.VendorMsgHostRxEvent, self._handle_host_msg, self)
-        eventbus.on(events.BadgeAsHostAttachEvent, self._handle_host_detect, self)
+        eventbus.on(
+            events.BadgeAsHostAttachEvent, self._handle_host_detect, self
+        )
         self.state = main_menu_items[0]
 
     def _handle_dev_msg(self, event: VendorMsgDevRxEvent):
@@ -680,22 +681,24 @@ __app_export__ = LedSyncApp
 ### Usage
 
 To use either of the USB ports for PD communications, import the Host or Device classes. To assist with the creation of a message import the helper.
+
 ```python
 from pd import Host, Device
 ```
 
-Then create the objects, 
+Then create the objects,
+
 ```python
 usb_in = Device()
 usb_out = Host()
 ```
 
 Check the connection state and send a message
+
 ```python
 if usb_out.pd_enabled():
     usb_out.send_vendor_msg(data, length)
 ```
-
 
 ### Methods
 
@@ -748,6 +751,7 @@ pdh.device_send_badge_id()
 ```
 
 ### Usage
+
 The helper can be used as follows to create the headers required for a discover identity command.
 
 ```python
@@ -768,13 +772,13 @@ usb_out.send_prime_msg(
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
-| ------ | ----------- | --------- | ------- | 
+| ------ | ----------- | --------- | ------- |
 | device_send_badge_id | Sends the id used to detect another badge on the USB in port | None | None |
 | host_disc_id_dbl_prime | Sends the discover identity command to a cables plug | None | None |
-| host_disc_id_prime | None | None |
+| host_disc_id_prime | Sends the discover identity command to a cables plug | None | None |
 | host_send_badge_id | Sends the id used to detect another badge on the USB out port | None | None |
 | pd_header | Create a message header with space for the badge to fill in physical layer info | `message_type`(`int`): see dataType and cmdType below, `no_objects`(`int`): number of 4 byte objects, optional, default 0 | `header`(`int`): 16 bit header |
-| vdm_structured_header | Creates a structured vendor header | `command`(`int`): see vdmCmd below, `SVID`(`int`): Standard or Vendor ID, optional, default 0xFF00, `obj_pos`(`int`):For the Enter Mode, Exit Mode and Attention Commands, optional, default 0, `version`(`int`): Structured VDM Version, optional, default 0, | `vendor_header`(`int`): 32 bit vendor header | 
+| vdm_structured_header | Creates a structured vendor header | `command`(`int`): see vdmCmd below, `SVID`(`int`): Standard or Vendor ID, optional, default 0xFF00, `obj_pos`(`int`):For the Enter Mode, Exit Mode and Attention Commands, optional, default 0, `version`(`int`): Structured VDM Version, optional, default 0, | `vendor_header`(`int`): 32 bit vendor header |
 | vdm_unstructured_header | Creates an unstructured vendor header |  `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
 | vdm_header_extract | extract the fields of a vendor header | `vendor_header`(`int`): 32 bit vendor header | `vendor_header`(`dict`): dictionary containing each field of the header |
 
@@ -783,8 +787,8 @@ usb_out.send_prime_msg(
 The following constants are available for use in the two headers.
 
 <!-- prettier-ignore -->
-| Class | Constant | 
-| ------ | ----------- | 
+| Class | Constant |
+| ------ | ----------- |
 | vdmCmd | DISCOVER_IDENTITY |
 | vdmCmd | DISCOVER_SVIDS |
 | vdmCmd | DISCOVER_MODES |
