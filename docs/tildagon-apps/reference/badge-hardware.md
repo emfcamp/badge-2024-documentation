@@ -473,7 +473,7 @@ In order to support alternative imu devices a base set of functionality is provi
 | `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°).|
 | `id()` | Get the device id | None | `id`: string id of device. |
 | `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
-| `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. | 
+| `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
 
 ### Usage
 

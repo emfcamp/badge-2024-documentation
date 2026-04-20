@@ -10,6 +10,11 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 - a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
 - the `tildagon-app` [topic applied to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository)
 
+!!! note "Ignoring additional files"
+
+      If you would like to have additional files in the repository that don't need to be downloaded to the badge, you can add the export-ignore attribtue to the file. For example add the following to a .gitattributes file to prevent a readme from being downloaded to the badge: 
+      README.md export-ignore
+
 ## Instructions
 
 1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this [GitHub repository](https://github.com/hughrawlinson/tildagon-demo/).
