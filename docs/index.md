@@ -125,7 +125,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       </div>
     </div>
   </span>
-  <span class="img-container">
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/dectspansion.png" loading="lazy" alt="DECTspansion PCB render" data-title="DECTspansion by jasonalexander-ja" data-description=".custom-desc-dectspansion">
     <span class="label"><a href="https://github.com/jasonalexander-ja/dectspansion">DECTspansion</a> by <a href="https://github.com/jasonalexander-ja">jasonalexander-ja</a></span>
     <span class="viewme"><a href="https://github.com/jasonalexander-ja/dectspansion"><p>👀 VIEW FILES</p></a></span>
