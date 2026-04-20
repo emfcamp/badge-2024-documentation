@@ -115,6 +115,28 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
+    <img src=" ../../images/hexpansions/gps.webp" loading="lazy" alt="GPS Hexpansion" data-title="GPS Hexpansion by The Machine Shop" data-description=".custom-desc-gps-hexpansion">
+    <span class="label"><a href="https://themachineshop.uk/product/gps-hexpansion/">GPS Hexpansion</a> (preorder) by The Machine Shop</span>
+    <span class="buyme"><a href="https://themachineshop.uk/product/gps-hexpansion/"><p>💰 BUY HERE</p></a></span>
+    <span class="viewme"><a href="https://github.com/TechCabin/EMFBadge-Hexpansions-GPS"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-gps-hexpansion">
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://themachineshop.uk/product/gps-hexpansion/"><p>💰 BUY HERE</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/dectspansion.png" loading="lazy" alt="DECTspansion PCB render" data-title="DECTspansion by jasonalexander-ja" data-description=".custom-desc-dectspansion">
+    <span class="label"><a href="https://github.com/jasonalexander-ja/dectspansion">DECTspansion</a> by <a href="https://github.com/jasonalexander-ja">jasonalexander-ja</a></span>
+    <span class="viewme"><a href="https://github.com/jasonalexander-ja/dectspansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-dectspansion">
+      <p>DECT module for the Tildagon badge. Requires a headphone (audio) connection. Design builds on the SC14CVM DECT devboard and the EMF hexpansion. Early prototype. License: CERN-OHL-S-2.0.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/jasonalexander-ja/dectspansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
     <span class="label"><a href="https://robotmad.odoo.com/shop">Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
     <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
@@ -147,6 +169,38 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <div class="glightbox-desc custom-desc-flopagon">
       <div class="detailbuttons">
         <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/flipspansion.png" loading="lazy" alt="Flipspansion adapter PCB" data-title="Flipspansion by kliment" data-description=".custom-desc-flipspansion">
+    <span class="label"><a href="https://codeberg.org/kliment/flipspansion">Flipspansion</a> by kliment</span>
+    <span class="viewme"><a href="https://codeberg.org/kliment/flipspansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-flipspansion">
+      <p>Adapter to mount a hexpansion upside down. Use only in hexpansion slots that are <em>not</em> above a USB port (see project README).</p>
+      <p>As requested by DuncanT.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://codeberg.org/kliment/flipspansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/microphone-hexpansion.png" loading="lazy" alt="Tildagon badge with microphone hexpansion" data-title="Microphone hexpansion by Lix" data-description=".custom-desc-microphone-hexpansion">
+    <span class="label"><a href="https://mastodon.social/@GlitchEngine/116410291765902200">Microphone hexpansion</a> by Lix</span>
+    <div class="glightbox-desc custom-desc-microphone-hexpansion">
+      <p>Prototype: audio sampling with on-device visualisations stored on EEPROM, no app download required.</p>
+      <p>Link: <a href="https://mastodon.social/@GlitchEngine/116410291765902200">@GlitchEngine on Mastodon</a> (post includes video)</p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/light-hexpansion.png" loading="lazy" alt="TGSTL sound-to-light hexpansion (still from project video)" data-title="TGSTL sound-to-light by Tony Goacher" data-description=".custom-desc-tgstl">
+    <span class="label"><a href="https://github.com/tonygoacher/tildagon_soundtolight">TGSTL</a> sound-to-light by Tony Goacher</span>
+    <span class="viewme"><a href="https://github.com/tonygoacher/tildagon_soundtolight"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-tgstl">
+      <p>TGSTL turns the Tildagon badge into a portable sound-to-light unit using the onboard LEDs, with multiple lighting effects and adjustable sensitivity. There is also a manually selectable RGB fader when there is no music.</p>
+      <p>Video: <a href="https://www.youtube.com/watch?v=Oy822CMz1iM">YouTube</a> · Photo: <a href="https://photos.app.goo.gl/WsUy2U74gAunsbfm8">Google Photos</a> · Resources: <a href="https://github.com/tonygoacher/tildagon_soundtolight">GitHub</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/tonygoacher/tildagon_soundtolight"><p>👀 VIEW FILES</p></a></span>
       </div>
     </div>
   </span>
@@ -285,6 +339,25 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <div class="detailbuttons">
         <span class="printme"><a href="https://www.printables.com/model/894472-not-lego-baseplate-hexpansion"><p>🖨️ PRINT ME</p></a></span>
       </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/interlocking-brick-hexpansions.png" loading="lazy" alt="Interlocking brick hexpansions in several plate sizes" data-title="Interlocking Brick Hexpansions by Floppy" data-description=".custom-desc-brick-hexpansions">
+    <span class="label"><a href="https://manyfold.floppy.org.uk/models/pqlm541tkf16">Interlocking Brick Hexpansions</a> by Floppy</span>
+    <span class="printme"><a href="https://manyfold.floppy.org.uk/models/pqlm541tkf16"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-desc-brick-hexpansions">
+      <p>Stud-compatible plates in several sizes, including versions with a USB-C cutout. (The 2x6 is slightly oversize for the spec if you want to go there.) FDM: print on their side so layer lines are not along the board edge. Hexpansion base template: <a href="https://3dprint.social/@andypiper">@andypiper@3dprint.social</a>.</p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://manyfold.floppy.org.uk/models/pqlm541tkf16"><p>🖨️ PRINT ME</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/legospansion.jpg" loading="lazy" alt="A Lego 2x1 plate hotglued into a repurposed hexpansion mount" data-title="Legospansion by pikesley" data-description=".custom-desc-legospansion">
+    <span class="label"><a href="https://mastodon.me.uk/@pikesley/116358523931957822">Legospansion</a> by pikesley</span>
+    <div class="glightbox-desc custom-desc-legospansion">
+      <p>Lego stud hexpansion idea, prototyped with hot glue.</p>
+      <p>Link: <a href="https://mastodon.me.uk/@pikesley/116358523931957822">@pikesley on mastodon.me.uk</a></p>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
