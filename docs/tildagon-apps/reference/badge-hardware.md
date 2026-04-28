@@ -49,6 +49,8 @@ class LEDExampleApp(app.App):
             for i in range(0, 12):
                 tildagonos.leds[i+1] = (0, 0, 0)
 
+        tildagonos.leds.write()
+
     def draw(self, ctx):
         clear_background(ctx)
 
@@ -128,6 +130,8 @@ class LEDExampleApp(app.App):
         else:
             for i in range(0, 12):
                 tildagonos.leds[i+1] = (0, 0, 0)
+
+        tildagonos.leds.write()
 
     def draw(self, ctx):
         clear_background(ctx)
