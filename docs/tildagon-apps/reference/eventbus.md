@@ -6,21 +6,22 @@ You can register your events and event handlers with the [`Eventbus`](https://gi
 
 You can use your own events directly with an event handler that you register on the [`eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py).
 
-1.  Import the `system.eventbus` package:
+1.  Import the `system.eventbus` and `events` packages:
 
     ```python
     from system.eventbus import eventbus
+    from events import Event
     ```
 
 2.  Define an event:
 
     ```python
-    class SpecialEvent:
-    def __init__(self):
-        pass
+    class SpecialEvent(Event):
+        def __init__(self):
+            pass
 
-    def __str__(self):
-        return "special event"
+        def __str__(self):
+            return "special event"
     ```
 
 3.  Define a synchronous or asynchronous method to be called when the event occurs:
