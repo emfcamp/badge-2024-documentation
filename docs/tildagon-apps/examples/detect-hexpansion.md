@@ -3,7 +3,7 @@ title: Detect a hexpansion
 weight: 6
 ---
 
-The following demo app demonstrates how you can detect hexpansion insertions and removals:
+The following demo app demonstrates how you can detect hexpansion insertions and removals for Hexpansions with an EEPROM, to determine if an insertion is a specific, supported Hexpansion.
 
 ```python
 import app
@@ -14,8 +14,8 @@ from app_components import clear_background
 from events.input import Buttons, BUTTON_TYPES
 from system.eventbus import eventbus
 from system.hexpansion.events import \
-    HexpansionRemovalEvent, HexpansionInsertionEvent
-from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
+    HexpansionUnmountedEvent, HexpansionMountedEvent
+from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr, get_slots_by_vid_pid
 
 
 class ExampleApp(app.App):
@@ -26,11 +26,11 @@ class ExampleApp(app.App):
         self.scan_for_hexpansion()
 
         eventbus.on(
-            HexpansionInsertionEvent,
+            HexpansionMountedEvent,
             self.handle_hexpansion_insertion,
             self)
         eventbus.on(
-            HexpansionRemovalEvent,
+            HexpansionUnmountedEvent,
             self.handle_hexpansion_removal,
             self)
 
@@ -52,37 +52,13 @@ class ExampleApp(app.App):
         ctx.restore()
 
     def scan_for_hexpansion(self):
-        found = False
-        for port in range(1, 7):
-            print(f"Searching for hexpansion on port: {port}")
-            i2c = I2C(port)
-            addr, addr_len = detect_eeprom_addr(i2c)
-
-            if addr is None:
-                continue
-            else:
-                print("Found EEPROM at addr " + hex(addr))
-
-            header = read_hexpansion_header(i2c, addr, addr_len=addr_len)
-            if header is None:
-                continue
-            else:
-                print("Read header: " + str(header))
-            self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(
-                hex(header.vid), hex(header.pid), port)
-            found = True
-
-            # Swap 0xCAFE with your EEPROM header vid
-            # Swap 0xCAFF with your EEPROM header pid
-            if (header.vid == 0xCAFE) and (header.pid == 0xCAFF):
-                print("Found the desired hexpansion in port " + str(port))
-                self.color = (0, 1, 0)
-            else:
-                print()
-        if not found:
-            self.color = (1, 0, 0)
+        ports = get_slots_by_vid_pid(0xCAFE, 0xCAFF)
+        if ports:
+            self.text = "Found in ports: {}".format(", ".join(ports))
+            self.color = (0, 1, 0)
+        else:
             self.text = "No hexpansion found."
-
+            self.color = (1, 0, 0)
         return None
 ```
 
