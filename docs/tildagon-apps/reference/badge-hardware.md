@@ -49,6 +49,8 @@ class LEDExampleApp(app.App):
             for i in range(0, 12):
                 tildagonos.leds[i+1] = (0, 0, 0)
 
+        tildagonos.leds.write()
+
     def draw(self, ctx):
         clear_background(ctx)
 
@@ -128,6 +130,8 @@ class LEDExampleApp(app.App):
         else:
             for i in range(0, 12):
                 tildagonos.leds[i+1] = (0, 0, 0)
+
+        tildagonos.leds.write()
 
     def draw(self, ctx):
         clear_background(ctx)
@@ -462,7 +466,7 @@ __app_export__ = ExampleApp
 
 ### Methods
 
-The api currently only allows access to the raw data.
+In order to support alternative imu devices a base set of functionality is provided along with i2c access to the device for apps to add functionality. An identify function is provided to determine which device is on the badge. Only the prototype badges have a different imu, but this may change in the future.
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
@@ -470,6 +474,10 @@ The api currently only allows access to the raw data.
 | `acc_read()` | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
 | `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 | `step_counter_read()` | Get the step count | None | `count`: The step count |
+| `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°).|
+| `id()` | Get the device id | None | `id`: string id of device. |
+| `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
+| `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
 
 ### Usage
 
@@ -590,12 +598,16 @@ from system.hexpansion.events import \
     HexpansionRemovalEvent, HexpansionInsertionEvent
 ```
 
-Then `emit()` the event as following:
+Then attach a function to the event as following:
 
 ```python
-eventbus.emit(
-    events.RequestChargeEvent(events.PowerEvent("Charge Cycle change"))
-)
+class ChargeApp(app.App):
+    def __init__(self):
+        eventbus.on(events.RequestChargeEvent, self._handle_charge_event, self)
+
+    def _handle_charge_event(self, event: RequestChargeEvent):
+        # do something
+        return None
 ```
 
 ## PD

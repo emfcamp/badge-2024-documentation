@@ -91,7 +91,7 @@ The header is 32 bytes long and contains the following values:
   - 4 bytes total size (total filesystem size in bytes)
 - VID/PID (offset 16, length 4)
   - 2 bytes VID
-    - This is a Vendor ID. Vendor IDs are assigned by the Unnecessary Hexpansion Bureaucracy Implementers Forum ([UHB-IF](https://badge.emfcamp.org/wiki/UHB-IF)). To obtain a Vendor ID, contact the UHB-IF at (location to be disclosed). If you don't want to do that, use a vendor ID from [the Wiki](https://badge.emfcamp.org/wiki/UHB-IF/Uncontrolled_IDs).
+    - This is a Vendor ID. Vendor IDs are assigned by the Unnecessary Hexpansion Bureaucracy Implementers Forum ([UHB-IF](https://badge.emfcamp.org/wiki/UHB-IF)). To obtain a Vendor ID, contact the UHB-IF at (location to be disclosed). If you don't want to do that, use one of [these vendor IDs](https://badge.emfcamp.org/wiki/UHB-IF/Uncontrolled_IDs).
   - 2 bytes PID
     - This is a Product ID. If you have a Vendor ID, you can choose your own Product ID. If you are using the free-for-all Vendor ID, you will have to coordinate number assignments with other users on a wiki page (to be disclosed). Each hexpansion design with an EEPROM needs a unique VID/PID combination.
 - Unique ID (offset 20, length 2)
