@@ -12,7 +12,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 
 !!! note "Ignoring additional files"
 
-      If you would like to have additional files in the repository that don't need to be downloaded to the badge, you can add the export-ignore attribtue to the file. For example add the following to a .gitattributes file to prevent a readme from being downloaded to the badge: 
+      If you would like to have additional files in the repository that don't need to be downloaded to the badge, you can add the export-ignore attribute to the file. For example add the following to a .gitattributes file to prevent a readme from being downloaded to the badge: 
       README.md export-ignore
 
 ## Instructions
