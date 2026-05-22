@@ -725,7 +725,7 @@ Both the Host and Device ports support the following methods.
 | get_vendor_msg | Gets vendor message from the in port | None. | `message`(`tuple`): `vendor header`(int) message header, `length`(`int`)message length, `buffer`(`list`) list of data |
 | send_vendor_msg | Sends a vendor message on the in port | `data`(`bytearray`): data, contents (VDOs) left to the user and the helper. the data will be padded to the 4 byte VDO boundry, max 28 bytes | None. |
 
-The Host port also supports sending messages to the cable plug at either end, known as prime and double prime messages. The are as follwos:
+The Host port also supports sending messages to the cable plug at either end, known as prime and double prime messages. The are as follows:
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
