@@ -612,7 +612,7 @@ class ChargeApp(app.App):
 
 ## PD
 
-The PD module allows sending and receiving PD messages on the USB in and out ports. The message header is handled entirely by the badge for Venodr messages and will automatically fill the fields of the header relating to the physical layer. This leaves the user to only fill the message type and number of objects for the Prime messages used to communicate with the cables plugs. The fusb302b part that the badge uses supports USB PD 2.0, Version 1.1 and uses the number of objects field of the header to determine message length, preventing us from sending extended messages. Each message that it sends must have a 2 byte header then 0-7 4 byte data objects. To assist with this the badge will padd the messsages sent to the next 4 byte boundry, so messages received from another badge may have additional 0s appended to the end.
+The PD module allows sending and receiving PD messages on the USB in and out ports. The message header is handled entirely by the badge for Vendor messages and will automatically fill the fields of the header relating to the physical layer. This leaves the user to only fill the message type and number of objects for the Prime messages used to communicate with the cables plugs. The fusb302b part that the badge uses supports USB PD 2.0, Version 1.1 and uses the number of objects field of the header to determine message length, preventing us from sending extended messages. Each message that it sends must have a 2 byte header then 0-7 4 byte data objects. To assist with this the badge will pad the messages sent to the next 4 byte boundary, so messages received from another badge may have additional 0s appended to the end.
 
 ### Example
 
