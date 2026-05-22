@@ -3,12 +3,17 @@ title: Publish your app
 weight: 4
 ---
 
-To publish your Tildagon App, you need to create a GitHub repository with:
+To publish your Tildagon App, you need to create a GitHub or Codeberg repository with:
 
 - an `app.py` file containing the app and defining the `__app_export__` variable
 - a [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) file containing metadata about the app
 - a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
 - the `tildagon-app` [topic applied to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository)
+
+!!! note "Ignoring additional files"
+
+      If you would like to have additional files in the repository that don't need to be downloaded to the badge, you can add the export-ignore attribute to the file. For example add the following to a .gitattributes file to prevent a readme from being downloaded to the badge: 
+      README.md export-ignore
 
 ## Instructions
 
@@ -91,7 +96,7 @@ To publish your Tildagon App, you need to create a GitHub repository with:
 
 4. Add the `tildagon-app` [topic to the repo](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository).
 
-5. Create a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) using GitHub. If you are unsure what settings to use, choose
+5. Create a [release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release) using GitHub or Codeberg. If you are unsure what settings to use, choose
 
    - `v0.0.1` for your tag
    - `v0.0.1` for your release title
@@ -100,7 +105,7 @@ Your app will become available in the Tildagon [app store](https://apps.badge.em
 
 !!! note "Updating the version"
 
-      If you make changes to your app, you will need to update the version number in the `tildagon.toml` file create a new release on GitHub with an incremented version number.
+      If you make changes to your app, you will need to update the version number in the `tildagon.toml` file create a new release on GitHub or Codeberg with an incremented version number.
 
 ## Troubleshooting
 
@@ -111,9 +116,9 @@ If your app doesn't show up within 15 minutes, check the [Errors page](https://a
 - the app store can't see your app, for example because your repository is private or that you may need to [add the `tildagon-app` topic to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository), or
 - your app is listed and available to the badge - and may have an error there. In this case, check [debug your app on your badge](./run-on-badge.md).
 
-## Support
+## Code Forge Support
 
-You can currently only publish Tildagon Apps through GitHub. Contributions to support other ways of publishing are welcome at [emfcamp/badge-2024-app-store](https://github.com/emfcamp/badge-2024-app-store)!
+You can currently only publish Tildagon Apps through GitHub or Codeberg. Contributions to support other ways of publishing are welcome at [emfcamp/badge-2024-app-store](https://github.com/emfcamp/badge-2024-app-store)!
 
 ## What next?
 

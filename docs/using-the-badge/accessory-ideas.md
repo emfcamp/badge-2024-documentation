@@ -5,11 +5,25 @@ weight: 5
 
 ## General Accessories
 
-### A 3D-printed case
+### 3D-printed badge cases
 
 You can print the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
 
 ![Badge bumper case](../images/badge-photos/Bumper%20Case.png)
+
+Alternatively, you can print the [EMF Tildagon badge case](https://www.printables.com/model/1643166-emf-tildagon-badge-case-emf-2024-badge) by [Nightcaster](https://www.printables.com/@Nightcaster_2199699).
+
+![Colourful badge case](../images/badge-photos/badge-case.webp)
+
+You can also print the [EMF Camp Tildagon badge top bumper cover](https://www.printables.com/model/917443-emfcamp-tildagon-badge-top-bumpercover).
+
+![EMFCamp Tildagon Badge Top-Bumper/Cover](../images/badge-photos/bumper-cover.webp)
+
+### Screen shim
+
+You can print a [GC9A01 screen shim for the EMF Tildagon badge](https://www.printables.com/model/917684-emfcamp-tildagon-badge-gc9a01-screen-shim-with-loc) to help position and support the display; the model includes locating features for a precise fit.
+
+![GC9A01 screen shim for the Tildagon badge](../images/badge-photos/screen-shim.webp)
 
 ### A 3D-printed stand
 
@@ -60,6 +74,10 @@ and even a [Tildacase with hole for USB-C](https://www.printables.com/model/9479
 ):
 
 ![Tildacase box with USB-C](../images/hexpansions/tildacase-c.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+Or this [remixed Tildacase](https://www.printables.com/model/940651-tildagon-tildacase-fits-badge-with-both-bumpers):
+
+![Tildacases in different colours](../images/badge-photos/tildacase-remix.webp)
 
 ### Mozartkugeln box
 
