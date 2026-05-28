@@ -116,14 +116,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/gps.webp" loading="lazy" alt="GPS Hexpansion" data-title="GPS Hexpansion by The Machine Shop" data-description=".custom-desc-gps-hexpansion">
-    <span class="label"><a href="https://themachineshop.uk/product/gps-hexpansion/">GPS Hexpansion</a> (preorder) by The Machine Shop</span>
-    <span class="buyme"><a href="https://themachineshop.uk/product/gps-hexpansion/"><p>💰 BUY HERE</p></a></span>
-    <span class="viewme"><a href="https://github.com/TechCabin/EMFBadge-Hexpansions-GPS"><p>👀 VIEW FILES</p></a></span>
-    <div class="glightbox-desc custom-desc-gps-hexpansion">
-      <div class="detailbuttons">
-        <span class="buyme"><a href="https://themachineshop.uk/product/gps-hexpansion/"><p>💰 BUY HERE</p></a></span>
-      </div>
-    </div>
+    <span class="label">GPS Hexpansion by The Machine Shop</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/dectspansion.png" loading="lazy" alt="DECTspansion PCB render" data-title="DECTspansion by jasonalexander-ja" data-description=".custom-desc-dectspansion">
