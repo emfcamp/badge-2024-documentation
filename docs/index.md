@@ -53,6 +53,16 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <div class="scroll-container admonition info">
 <!--hexpansions-start-->
   <span class="img-container">
+    <img src="https://blog.emfcamp.org/images/2026-badge-photos/keebdeck_prototype.jpeg" loading="lazy" alt="Keyboard hexpansion prototype with Tildagon badge" data-title="Keyboard Hexpansion by sodoku and davedarko" data-description=".custom-desc-keyboard-hexpansion">
+    <span class="label"><a href="https://www.emfcamp.org/tickets/badge">Keyboard Hexpansion</a> by sodoku and davedarko</span>
+    <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
+    <div class="glightbox-desc custom-desc-keyboard-hexpansion">
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container">
     <img src=" ../../images/hexpansions/og-hexpansion.jpg" loading="lazy" alt="hexpansion exposing pins" data-title="The OG Hexpansion by kliment" data-description=".custom-desc-og">
     <span class="label"><a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion">OG Hexpansion</a> by kliment</span>
     <span class="viewme"><a href="https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion"><p>👀 VIEW FILES</p></a></span>
@@ -69,10 +79,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <p>EMF ducks sixties style flying porcelain ducks</p>
       <p>Link: <a href="https://www.instagram.com/tiffleek/reel/C7yx5jmNJ9d/">Instagram</a></p>
     </div>
-  </span>
-  <span class="img-container">
-    <img src=" ../../images/hexpansions/keyboard-hexpansion.png" loading="lazy" alt="Keyboard hexpansion" data-title="Keyboard hexpansion by Alex" data-description="">
-    <span class="label">Keyboard hexpansion by <a href="https://www.youtube.com/watch?v=5mLt09UtY2E">Alex</a></span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/goose.png" loading="lazy" alt="Skyler's Goosespansion" data-title="Goosespansion by Skyler Mansfield" data-description=".custom-desc-goosespansion">
@@ -117,6 +123,12 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src=" ../../images/hexpansions/gps.webp" loading="lazy" alt="GPS Hexpansion" data-title="GPS Hexpansion by The Machine Shop" data-description=".custom-desc-gps-hexpansion">
     <span class="label">GPS Hexpansion by The Machine Shop</span>
+    <span class="viewme"><a href="https://github.com/TechCabin/EMFBadge-Hexpansions-GPS"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-gps-hexpansion">
+      <div class="detailbuttons">
+      <span class="viewme"><a href="https://github.com/TechCabin/EMFBadge-Hexpansions-GPS"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/dectspansion.png" loading="lazy" alt="DECTspansion PCB render" data-title="DECTspansion by jasonalexander-ja" data-description=".custom-desc-dectspansion">
@@ -176,6 +188,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
         <span class="viewme"><a href="https://codeberg.org/kliment/flipspansion"><p>👀 VIEW FILES</p></a></span>
       </div>
     </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/keyboard-hexpansion.png" loading="lazy" alt="Keyboard hexpansion" data-title="Keyboard hexpansion by Alex" data-description="">
+    <span class="label">Keebdeck Keyboard hexpansion by Alex</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/microphone-hexpansion.png" loading="lazy" alt="Tildagon badge with microphone hexpansion" data-title="Microphone hexpansion by Lix" data-description=".custom-desc-microphone-hexpansion">

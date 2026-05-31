@@ -89,6 +89,12 @@ Or this [remixed Tildacase](https://www.printables.com/model/940651-tildagon-til
 
 ![Charbonnel et Walker box](../images/hexpansions/charbonnel.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
+### Lego pick-a-brick pots
+
+![Lego case](../images/badge-photos/lego-case.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+![Lego case](../images/badge-photos/lego-case-2.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
+
 ### Share your addon
 
 !!! note "Have an addon to share?"

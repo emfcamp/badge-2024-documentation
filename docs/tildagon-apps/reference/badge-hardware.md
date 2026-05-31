@@ -70,13 +70,13 @@ To use the LEDs:
    from tildagonos import tildagonos
    ```
 
-2. Enable the LEDs (this step is generally optional, but needed if running outside of an app (or from repl):
+2. Enable the LEDs (this step is generally optional, but needed if running outside of an app or from repl):
 
    ```python
    tildagonos.set_led_power(True)
    ```
 
-3. Set the LEDs by assigning a color tuple to one of the 12 LEDs:
+3. Set the LEDs by assigning a colour tuple to one of the 12 LEDs:
 
    ```python
    tildagonos.leds[2] = (255, 0, 0)
@@ -90,7 +90,7 @@ To use the LEDs:
 
 ## Buttons
 
-You can use the board's Buttons with the [`events.input`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/events/input.py) package:
+You can use the board's `Buttons` with the [`events.input`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/events/input.py) package:
 
 ### Example
 
@@ -610,9 +610,9 @@ class ChargeApp(app.App):
         return None
 ```
 
-## PD
+## Power Delivery (PD)
 
-The PD module allows sending and receiving PD messages on the USB in and out ports. The message header is handled entirely by the badge for Vendor messages and will automatically fill the fields of the header relating to the physical layer. This leaves the user to only fill the message type and number of objects for the Prime messages used to communicate with the cables plugs. The fusb302b part that the badge uses supports USB PD 2.0, Version 1.1 and uses the number of objects field of the header to determine message length, preventing us from sending extended messages. Each message that it sends must have a 2 byte header then 0-7 4 byte data objects. To assist with this the badge will pad the messages sent to the next 4 byte boundary, so messages received from another badge may have additional 0s appended to the end.
+The PD module allows sending and receiving PD messages on the USB in and out ports. The message header is handled entirely by the badge for Vendor messages and will automatically fill the fields of the header relating to the physical layer. This leaves the user to only fill the message type and number of objects for the Prime messages used to communicate with the cables plugs. The fusb302b part that the badge uses supports USB PD 2.0, Version 1.1 and uses the number of objects field of the header to determine message length, preventing us from sending extended messages. Each message that it sends must have a 2 byte header followed by 0-7 4 byte data objects. To assist with this the badge will pad the messages sent to the next 4 byte boundary, so messages received from another badge may have additional 0s appended to the end.
 
 ### Example
 
@@ -692,20 +692,20 @@ __app_export__ = LedSyncApp
 
 ### Usage
 
-To use either of the USB ports for PD communications, import the Host or Device classes. To assist with the creation of a message import the helper.
+To use either of the USB ports for PD communications, import the `Host` or `Device` classes. To assist with the creation of a message import the helper.
 
 ```python
 from pd import Host, Device
 ```
 
-Then create the objects,
+Then create the objects:
 
 ```python
 usb_in = Device()
 usb_out = Host()
 ```
 
-Check the connection state and send a message
+Check the connection state and send a message:
 
 ```python
 if usb_out.pd_enabled():
@@ -714,44 +714,44 @@ if usb_out.pd_enabled():
 
 ### Methods
 
-Both the Host and Device ports support the following methods.
+Both the `Host` and `Device` ports support the following methods.
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| connected | Gets if the badge is connected as a device. | None. | `state`(`bool`): Connection state |
-| pd_enabled | Is the PD enbled on this port | None | `state`(`bool`): PD enabled |
-| badge_connected | Gets if the badge is connected to another badge as a device | None. | `state`(`bool`): Connection state |
-| get_vendor_msg | Gets vendor message from the in port | None. | `message`(`tuple`): `vendor header`(int) message header, `length`(`int`)message length, `buffer`(`list`) list of data |
-| send_vendor_msg | Sends a vendor message on the in port | `data`(`bytearray`): data, contents (VDOs) left to the user and the helper. the data will be padded to the 4 byte VDO boundry, max 28 bytes | None. |
+| `connected` | Returns whether the badge is connected as a device. | None. | `state`(`bool`): Connection state |
+| `pd_enabled` | Returns whether PD is enabled on this port | None | `state`(`bool`): PD enabled |
+| `badge_connected` | Returns whether the badge is connected to another badge as a device | None. | `state`(`bool`): Connection state |
+| `get_vendor_msg` | Gets vendor message from the in port | None. | `message`(`tuple`): `vendor header`(int) message header, `length`(`int`)message length, `buffer`(`list`) list of data |
+| `send_vendor_msg` | Sends a vendor message on the in port | `data`(`bytearray`): data, contents (VDOs) left to the user and the helper. the data will be padded to the 4 byte VDO boundary, max 28 bytes | None. |
 
-The Host port also supports sending messages to the cable plug at either end, known as prime and double prime messages. The are as follows:
+The `Host` port also supports sending messages to the cable plug at either end, known as prime and double prime messages:
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| send_prime_msg | Send a prime message | `data`(`bytearray`): data, must include 2 byte header | None |
-| send_dbl_prime_msg | Send a double prime message | `data`(`bytearray`): data, must include 2 byte header | None |
-| get_prime_msg | Get a received prime message | None | `data`(`bytearray`): data, includes 2 byte header |
-| get_dbl_prime_msg | Get a received double prime message| None | `data`(`bytearray`): data, includes 2 byte header |
+| `send_prime_msg` | Sends a prime message | `data`(`bytearray`): data, must include 2 byte header | None |
+| `send_dbl_prime_msg` | Sends a double prime message | `data`(`bytearray`): data, must include 2 byte header | None |
+| `get_prime_msg` | Gets a received prime message | None | `data`(`bytearray`): data, includes 2 byte header |
+| `get_dbl_prime_msg` | Gets a received double prime message| None | `data`(`bytearray`): data, includes 2 byte header |
 
 ### Events
 
 <!-- prettier-ignore -->
 | Method | Description |
 | ------ | ----------- |
-| BadgeAsDeviceAttachEvent | The badge has detected another badge and connected as a device |
-| BadgeAsDeviceDetachEvent | The badge has disconnected |
-| BadgeAsHostAttachEvent | The badge has detected another badge and connected as a host |
-| BadgeAsHostDetachEvent | The badge has disconnected |
-| VendorMsgDevRxEvent | The badge has received a message on the USB in port |
-| VendorMsgHostRxEvent | The badge has received a message on the USB out port |
-| PrimeMsgHostRxEvent | The badge has received a prime message on the USB out port |
-| DblPrimeMsgHostRxEvent | The badge has received a double prime message on the USB out port |
+| `BadgeAsDeviceAttachEvent` | The badge has detected another badge and connected as a device |
+| `BadgeAsDeviceDetachEvent` | The badge has disconnected |
+| `BadgeAsHostAttachEvent` | The badge has detected another badge and connected as a host |
+| `BadgeAsHostDetachEvent` | The badge has disconnected |
+| `VendorMsgDevRxEvent` | The badge has received a message on the USB in port |
+| `VendorMsgHostRxEvent` | The badge has received a message on the USB out port |
+| `PrimeMsgHostRxEvent` | The badge has received a prime message on the USB out port |
+| `DblPrimeMsgHostRxEvent` | The badge has received a double prime message on the USB out port |
 
-## PD helper
+## PD helper API
 
-Here is the helper api. It can be used to create structured and unstructured vendor headers and send the badge id message. The badge id message is sent automatically on connection to the usb out port. If this is detected by another badge on the usb in port it will respond with the same message and set the badge connected state to true. The vendor header is only required when not communicating with another badge.
+You can use the PD helper API to create structured and unstructured vendor headers and send the badge ID message. The badge ID message is sent automatically on connection to the usb out port. If this is detected by another badge on the usb in port it will respond with the same message and set the badge connected state to true. The vendor header is only required when not communicating with another badge.
 
 ### Example
 
@@ -764,7 +764,7 @@ pdh.device_send_badge_id()
 
 ### Usage
 
-The helper can be used as follows to create the headers required for a discover identity command.
+You can use the helper as follows to create the headers required for a discover identity command:
 
 ```python
 from system.power.pd_helper import pdHelper, vdmCmd
@@ -785,14 +785,14 @@ usb_out.send_prime_msg(
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| device_send_badge_id | Sends the id used to detect another badge on the USB in port | None | None |
-| host_disc_id_dbl_prime | Sends the discover identity command to a cables plug | None | None |
-| host_disc_id_prime | Sends the discover identity command to a cables plug | None | None |
-| host_send_badge_id | Sends the id used to detect another badge on the USB out port | None | None |
-| pd_header | Create a message header with space for the badge to fill in physical layer info | `message_type`(`int`): see dataType and cmdType below, `no_objects`(`int`): number of 4 byte objects, optional, default 0 | `header`(`int`): 16 bit header |
-| vdm_structured_header | Creates a structured vendor header | `command`(`int`): see vdmCmd below, `SVID`(`int`): Standard or Vendor ID, optional, default 0xFF00, `obj_pos`(`int`):For the Enter Mode, Exit Mode and Attention Commands, optional, default 0, `version`(`int`): Structured VDM Version, optional, default 0, | `vendor_header`(`int`): 32 bit vendor header |
-| vdm_unstructured_header | Creates an unstructured vendor header |  `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
-| vdm_header_extract | extract the fields of a vendor header | `vendor_header`(`int`): 32 bit vendor header | `vendor_header`(`dict`): dictionary containing each field of the header |
+| `device_send_badge_id` | Sends the id used to detect another badge on the USB in port | None | None |
+| `host_disc_id_dbl_prime` | Sends the discover identity command to a cables plug | None | None |
+| `host_disc_id_prime` | Sends the discover identity command to a cables plug | None | None |
+| `host_send_badge_id` | Sends the id used to detect another badge on the USB out port | None | None |
+| `pd_header` | Create a message header with space for the badge to fill in physical layer info | `message_type`(`int`): see dataType and cmdType below, `no_objects`(`int`): number of 4 byte objects, optional, default 0 | `header`(`int`): 16 bit header |
+| `vdm_structured_header` | Creates a structured vendor header | `command`(`int`): see vdmCmd below, `SVID`(`int`): Standard or Vendor ID, optional, default 0xFF00, `obj_pos`(`int`):For the Enter Mode, Exit Mode and Attention Commands, optional, default 0, `version`(`int`): Structured VDM Version, optional, default 0, | `vendor_header`(`int`): 32 bit vendor header |
+| `vdm_unstructured_header` | Creates an unstructured vendor header |  `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
+| `vdm_header_extract` | extract the fields of a vendor header | `vendor_header`(`int`): 32 bit vendor header | `vendor_header`(`dict`): dictionary containing each field of the header |
 
 ### Constants
 
@@ -801,17 +801,17 @@ The following constants are available for use in the two headers.
 <!-- prettier-ignore -->
 | Class | Constant |
 | ------ | ----------- |
-| vdmCmd | DISCOVER_IDENTITY |
-| vdmCmd | DISCOVER_SVIDS |
-| vdmCmd | DISCOVER_MODES |
-| vdmCmd | ENTER_MODE |
-| vdmCmd | EXIT_MODE |
-| vdmCmd | ATTENTION |
-| dataType | BIST |
-| dataType | VENDOR_DEFINED |
-| cmdType | ACCEPT |
-| cmdType | REJECT |
-| cmdType | SOFT_RESET |
+| `vdmCmd` | DISCOVER_IDENTITY |
+| `vdmCmd` | DISCOVER_SVIDS |
+| `vdmCmd` | DISCOVER_MODES |
+| `vdmCmd` | ENTER_MODE |
+| `vdmCmd` | EXIT_MODE |
+| `vdmCmd` | ATTENTION |
+| `dataType` | BIST |
+| `dataType` | VENDOR_DEFINED |
+| `cmdType` | ACCEPT |
+| `cmdType` | REJECT |
+| `cmdType` | SOFT_RESET |
 
 ## I2C
 

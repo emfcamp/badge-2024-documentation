@@ -39,12 +39,12 @@ twist off the battery as this can damage it.
 To remove the battery, you will need to soften the glue dots. The most effective
 way we’ve found to do this is using a chemical solution to temporarily deactivate
 the glue and then gently twist the battery back and forth without bending it
-until it separates. [This product](https://www.ifixit.com/en-gb/products/ifixit-adhesive-remover)
+until it separates. [Adhesive remover](https://www.ifixit.com/en-gb/products/ifixit-adhesive-remover)
 works well, but we’ve also had success with 99% isopropyl alcohol. We will have
 adhesive remover on site during EMF 2026 so if you do not feel comfortable doing
 this at home or in your hackspace, just bring your 2024 badge to the event with
 the battery still attached.
 
-Once your battery is disconnected set it aside.  You can unclip the top board
+Once your battery is disconnected set it aside. You can unclip the top board
 FPC connector from the white cable in the same way you did from the base board
 and set aside the white FPC cable.
