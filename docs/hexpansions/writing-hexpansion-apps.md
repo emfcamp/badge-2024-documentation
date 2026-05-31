@@ -194,7 +194,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
                 ctx.text_align = ctx.CENTER
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, -120, 240, 100).fill()
                 ctx.rgb(*colors["dark_green"]).rectangle(-120, 20, 240, 100).fill()
-                rotation_angle = self.menu.position*pi/3
+                rotation_angle = (self.menu.position - 1)*pi/3
                 ctx.rgb(*colors["mid_green"]).rotate(rotation_angle).rectangle(80, -120, 40, 240).fill()
                 prompt_message = "Select hexpansion port:"
                 ctx.rgb(1, 1, 1).rotate(-rotation_angle).move_to(0, -45).text(prompt_message)
