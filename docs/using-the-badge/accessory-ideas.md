@@ -60,6 +60,10 @@ You can print a [storage for 6/12/18 Hexpansions and for Gridfinity fans a 1x1x2
 
 ![Hexpansion Storage for EMF Camp Tildagon Badge](../images/badge-photos/hexpansion-storage.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
 
+### Hexpansion "storage"
+
+![hexpansion bandolier](../images/hexpansions/bandolier.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
+
 ## Badge storage solutions
 
 People have created printable cases and also found several other containers that fit the badge well:
@@ -95,7 +99,7 @@ Or this [remixed Tildacase](https://www.printables.com/model/940651-tildagon-til
 
 ![Lego case](../images/badge-photos/lego-case-2.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
-### Share your addon
+## Share your addon
 
 !!! note "Have an addon to share?"
 
