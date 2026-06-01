@@ -206,13 +206,64 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/light-hexpansion.png" loading="lazy" alt="TGSTL sound-to-light hexpansion (still from project video)" data-title="TGSTL sound-to-light by Tony Goacher" data-description=".custom-desc-tgstl">
     <span class="label"><a href="https://github.com/tonygoacher/tildagon_soundtolight">TGSTL</a> sound-to-light by Tony Goacher</span>
     <span class="viewme"><a href="https://github.com/tonygoacher/tildagon_soundtolight"><p>👀 VIEW FILES</p></a></span>
+    <span class="viewme"><a href="https://hackaday.io/project/205329-sound-to-light-for-emf-tildagon-badge"><p>📖 READ BLOG</p></a></span>
+    <span class="viewme"><a href="https://www.youtube.com/watch?v=Oy822CMz1iM"><p>🎥 WATCH IT</p></a></span>
     <div class="glightbox-desc custom-desc-tgstl">
       <p>TGSTL turns the Tildagon badge into a portable sound-to-light unit using the onboard LEDs, with multiple lighting effects and adjustable sensitivity. There is also a manually selectable RGB fader when there is no music.</p>
       <p>Video: <a href="https://www.youtube.com/watch?v=Oy822CMz1iM">YouTube</a> · Photo: <a href="https://photos.app.goo.gl/WsUy2U74gAunsbfm8">Google Photos</a> · Resources: <a href="https://github.com/tonygoacher/tildagon_soundtolight">GitHub</a></p>
       <div class="detailbuttons">
         <span class="viewme"><a href="https://github.com/tonygoacher/tildagon_soundtolight"><p>👀 VIEW FILES</p></a></span>
+        <span class="viewme"><a href="https://hackaday.io/project/205329-sound-to-light-for-emf-tildagon-badge"><p>📖 READ BLOG</p></a></span>
+        <span class="viewme"><a href="https://www.youtube.com/watch?v=Oy822CMz1iM"><p>🎥 WATCH IT</p></a></span>
       </div>
     </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hexpansions-models.webp" loading="lazy" alt="EMF Tildagon hexpansion template" data-title="EMF Tildagon hexpansion template by Andy Piper" data-description=".custom-desc-hexpansion-template">
+    <span class="label"><a href="https://www.printables.com/model/826094-emf-tildagon-hexpansion-template">EMF Tildagon hexpansion template</a> by Andy Piper</span>
+    <span class="printme"><a href="https://www.printables.com/model/826094-emf-tildagon-hexpansion-template"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-desc-hexpansion-template">
+      <p>Templates for prototyping hexpansion boards for the Tildagon badge.</p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/826094-emf-tildagon-hexpansion-template"><p>🖨️ PRINT ME (Printables)</p></a></span>
+        <span class="printme"><a href="https://www.thingiverse.com/thing:6556964"><p>🖨️ PRINT ME (Thingyverse)</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/johnT.jpg" loading="lazy" alt="Edge-lit Millennium Falcon hexpansion" data-title="Edge-lit Millennium Falcon hexpansion by grajohnt" data-description="">
+    <span class="label">Edge-lit Millennium Falcon hexpansion by grajohnt</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/Hexatetrahedron.jpg" loading="lazy" alt="Hexatetrahedron hexpansion" data-title="Hexatetrahedron by grajohnt" data-description="">
+    <span class="label">Hexatetrahedron by grajohnt</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/radio.jpg" loading="lazy" alt="Audio output hexpansion" data-title="Audio output hexpansion by Andrea" data-description="">
+    <span class="label">Audio output hexpansion hexpansion by Andrea</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/Radiolarian.png" loading="lazy" alt="Radiolarian hexpansion" data-title="Radiolarian by webmariner" data-description=".custom-desc-radiolarian">
+    <span class="label"><a href="https://github.com/webmariner/Radiolarian">Radiolarian</a> by webmariner</span>
+    <span class="viewme"><a href="https://github.com/webmariner/Radiolarian"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-radiolarian">
+      <p>A flexible digital radio hexpansion for the Tildagon.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/webmariner/Radiolarian"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/gppk.jpg" loading="lazy" alt="Mustache hexpansion" data-title="Mustache hexpansion by GPPK" data-description="">
+    <span class="label">Mustache hexpansion by GPPK</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/gppk2.jpg" loading="lazy" alt="EMF sign hexpansion" data-title="EMF sign hexpansion by GPPK" data-description="">
+    <span class="label">EMF sign hexpansion by GPPK</span>
+  </span>
+    <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/max.jpg" loading="lazy" alt="Max hexpansion by Catherine" data-title="Max hexpansion by Catherine" data-description="">
+    <span class="label">Max hexpansion by Catherine</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/googly.png" loading="lazy" alt="Floppy disk hexpansion" data-title="40mm Googly Eye by John Dumont" data-description="">
@@ -259,6 +310,23 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Le Carnard de Bleu by Dan</span>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/duck-light.jpg" loading="lazy" alt="Duck light hexpansion" data-title="Duck light by Frankie" data-description="">
+    <span class="label">Duck light by Frankie</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/light-driver.jpg" loading="lazy" alt="LED driver hexpansion" data-title="LED driver hexpansion by grajohnt" data-description="">
+    <span class="label">LED driver hexpansion by grajohnt</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/snail.jpg" loading="lazy" alt="Synth snail hexpansion" data-title="Synth snail hexpansion by grajohnt" data-description=".custom-desc-snail">
+    <span class="label">Synth snail hexpansion by grajohnt</span>
+    <span class="viewme"><a href="https://photos.app.goo.gl/PaQdymf4zkRWYKiZ8"><p>🎥 WATCH IT</p></a></span>
+    <div class="glightbox-desc custom-desc-snail">
+      <p>Video: <a href="https://photos.app.goo.gl/PaQdymf4zkRWYKiZ8">watch this</a></p>
+      <span class="viewme"><a href="https://photos.app.goo.gl/PaQdymf4zkRWYKiZ8"><p>🎥 WATCH IT</p></a></span>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/fidget.jpg" loading="lazy" alt="Fidget Spinner hexpansion" data-title="Fidget Spinner by Catherine" data-description=".custom-fidget">
     <span class="label"><a href="https://www.printables.com/model/925402-tildagon-hexpansion-fidget-spinnery">Fidget Spinner</a> by Catherine</span>
     <span class="printme"><a href="https://www.printables.com/model/925402-tildagon-hexpansion-fidget-spinner"><p>🖨️ PRINT ME</p></a></span>
@@ -296,6 +364,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/cable.jpg" loading="lazy" alt="Megadrive controller hexpansion" data-title="Megadrive controller by Matthew Wilkes" data-description="">
     <span class="label">Megadrive controller by Matthew Wilkes</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/matt-w.jpg" loading="lazy" alt="Too many LED hexpansion" data-title="Too many LED hexpansion by Matt W" data-description="">
+    <span class="label">Too many LED hexpansion by Matt W</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/eyes.jpg" loading="lazy" alt="Eye hexpansion" data-title="Eye hexpansion by Alistair" data-description=".custom-desc-eyes">
@@ -340,6 +412,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
         <span class="printme"><a href="https://www.printables.com/model/910264-emf-tildagon-dragon-wings-hexpansion"><p>🖨️ PRINT ME</p></a></span>
       </div>
     </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/fairy-wings.jpg" loading="lazy" alt="Fairy wings hexpansion" data-title="Fairy wings by unknown child artist" data-description="">
+    <span class="label">Fairy wings by unknown child artist</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/not_lego_but_compatible.webp" loading="lazy" alt="Not lego baseplate hexpansion" data-title="Not lego baseplate hexpansion by adie" data-description=".custom-desc-compatible">
@@ -505,6 +581,21 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/hacktheplanet.png" loading="lazy" alt="Hack the Planet hexpansion" data-title="Hack the Planet by The Untitled Goose" data-description="">
     <span class="label">Hack the Planet by The Untitled Goose</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/Nyancat.jpg" loading="lazy" alt="Nyan cat hexpansion" data-title="Nyan cat hexpansion by The Untitled Goose" data-description="">
+    <span class="label">Nyan cat hexpansion by The Untitled Goose</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/doggo.gif" loading="lazy" alt="K9 hexpansion" data-title="K9 hexpansion by emericklaw" data-description=".custom-desc-k9">
+    <span class="label">K9 hexpansion by emericklaw</span>
+    <span class="viewme"><a href="https://youtube.com/shorts/mpWKbsG5E6w"><p>🎥 WATCH IT</p></a></span>
+    <div class="glightbox-desc custom-desc-k9">
+      <p>Video: <a href="https://youtube.com/shorts/mpWKbsG5E6w">YouTube</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://youtube.com/shorts/mpWKbsG5E6w"><p>🎥 WATCH IT</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/henchmen.jpg" loading="lazy" alt="Henchmen hexpansion" data-title="Henchmen by Brian Corteil" data-description="">
