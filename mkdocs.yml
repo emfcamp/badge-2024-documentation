@@ -1,5 +1,5 @@
 site_name: Tildagon Badge Documentation
-site_description: "Documentation for the Tildagon Badge used at Electromagnetic Field 2024."
+site_description: "Documentation for the Tildagon Badge used at Electromagnetic Field 2024 and 2026."
 site_url: https://tildagon.badge.emfcamp.org
 repo_url: https://github.com/emfcamp/badge-2024-documentation
 theme:
