@@ -86,3 +86,43 @@ You can use the following methods on the `eventbus`:
 | `emit(event)` | Emit an event to the eventbus. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
 | `emit_async(event)` | Emit an event to the eventbus. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
 | `remove(event_type, event_handler, app)` | Remove the event for an app from the eventbus. | <ul><li><code>event_type</code>: The event to be removed.</li><li><code>event_handler</code>: The event handler previously registered with `on` or `on_async`.</li><li><code>app</code>: The app this event is being removed for.</li></ul> | None |
+
+## Common built-in events
+
+There are a lot of event types built into the firmware. Here are a few that are useful to know about:
+
+* ``ButtonDownEvent`` and ``ButtonUpEvent``
+
+  This is sent by the firmware when one of the buttons is pressed.
+
+  You can register to receive this event if you want to respond to button presses in your application.
+
+  If you want to make the Tildagon think a button has been pressed, you can emit this event. For example, the megadrive controller hexpansion [firmware](https://github.com/MatthewWilkes/md-updater/blob/main/sega.py) emits a button event when a user presses the equivalent buttons on an attached megadrive controller so the controller can be used to navigate Tildagon apps.
+
+  ```python
+  from events.input import Button
+  ```
+
+* ``PatternDisable`` and ``PatternEnable``
+
+  When an app is supposed to take over the front LEDs that usually show a pattern, it can emit a ``PatternDisable`` event. The pattern manager will receive that event and stop updating the LEDs, leaving them free for the app. Then the app can set the LEDs however it wants. When the app is finished with the LEDs (for example, when it is put in the background) it can emit a ``PatternEnable`` event to start the pattern again.
+
+  You probably don't need to listen for this event.
+
+  ```python
+  from system.patterndisplay.events import PatternDisable, PatternEnable
+  ```
+
+* ``HexpansionInsertionEvent`` and ``HexpansionRemovalEvent``
+
+  The hexpansion manager emits these events when it detects a hexpansion has been inserted or removed.
+
+  You can listen for these events if you want to do something interesting when a hexpansion is inserted or removed.
+
+  These events are only emitted for a PCB hexpansion with circuitry on it, because it is the electrical connection that triggers these events. Purely-decorative (cardboard or 3D printed) hexpansions do not cause these events to be emitted.
+
+  You probably shouldn't emit these events yourself.
+
+  ```python
+  from system.hexpansion.events import HexpansionInsertionEvent, HexpansionRemovalEvent
+  ```
