@@ -35,7 +35,7 @@ __Background__ = WigglingHexagons
 
 Only the update and draw functions are called to display the background before the firmware app displays on top. The background should be fairly simple so as to not slow down the badge.
 
-The differences with a standard app are that nothing is passed in to the constructor and the export is named \_\_Background\_\_. The toml file category also needs to be set to Background in order for the app store to detect it is a Background and for it to be installed into the backgrounds folder.
+The differences with a standard app are that nothing is passed in to the constructor and the export is named \_\_Background\_\_. The toml file `category` also needs to be set to `Background` so the app store installs it into the backgrounds folder. See [app categories](publish.md#app-categories) for how categories are used.
 
 Any app can use the background by importing the background object:
 

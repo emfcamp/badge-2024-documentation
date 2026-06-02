@@ -428,6 +428,17 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/lego-2.jpg" loading="lazy" alt="Brickspansion (6x6) hexpansion" data-title="Brickspansion (6x6) by Crumplump" data-description=".custom-desc-brickspansion-6x6">
+    <span class="label"><a href="https://www.printables.com/model/895774-lego-compatible-hexpansion-for-emf-tilgadon-badge">Brickspansion (6x6)</a> by Crumplump</span>
+    <span class="printme"><a href="https://www.printables.com/model/895774-lego-compatible-hexpansion-for-emf-tilgadon-badge"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-desc-brickspansion-6x6">
+      <p>Remix of Adie's design to allow 6 plates to be attached to the badge, without colliding.</p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/895774-lego-compatible-hexpansion-for-emf-tilgadon-badge"><p>🖨️ PRINT ME</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/interlocking-brick-hexpansions.png" loading="lazy" alt="Interlocking brick hexpansions in several plate sizes" data-title="Interlocking Brick Hexpansions by Floppy" data-description=".custom-desc-brick-hexpansions">
     <span class="label"><a href="https://manyfold.floppy.org.uk/models/pqlm541tkf16">Interlocking Brick Hexpansions</a> by Floppy</span>
     <span class="printme"><a href="https://manyfold.floppy.org.uk/models/pqlm541tkf16"><p>🖨️ PRINT ME</p></a></span>

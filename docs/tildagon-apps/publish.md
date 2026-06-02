@@ -12,8 +12,10 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
 
 !!! note "Ignoring additional files"
 
-      If you would like to have additional files in the repository that don't need to be downloaded to the badge, you can add the export-ignore attribute to the file. For example add the following to a .gitattributes file to prevent a readme from being downloaded to the badge: 
+      If you would like to have additional files in the repository that don't need to be downloaded to the badge, you can add the export-ignore attribute to the file. For example add the following to a .gitattributes file to prevent a readme from being downloaded to the badge:
+      ```
       README.md export-ignore
+      ```
 
 ## Instructions
 
@@ -25,8 +27,8 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
    # The name of your app as displayed in the menu
    name = "Your Hexceptional App"
 
-   # The submenu where your app should appear.
-   # One of: "Badge", "Music", "Media", "Apps", "Games"
+   # The submenu where your app should appear. See "App categories" above.
+   # One of: "Badge", "Music", "Media", "Apps", "Games", "Background", "Pattern"
    category = "Badge"
 
    # OPTIONAL: Same as above, for compatibility with older firmware
@@ -106,6 +108,20 @@ Your app will become available in the Tildagon [app store](https://apps.badge.em
 !!! note "Updating the version"
 
       If you make changes to your app, you will need to update the version number in the `tildagon.toml` file create a new release on GitHub or Codeberg with an incremented version number.
+
+## App categories
+
+Set `category` in your `tildagon.toml` to control where your app appears in the badge menu and how the app store classifies it:
+
+| Category | Description |
+| -------- | ----------- |
+| **Badge** | Displays the name of the user |
+| **Music** | Music related apps |
+| **Media** | Video, social, news, canvas and sculpture |
+| **Apps** | General purpose Tildagon apps |
+| **Games** | DOOM, probably |
+| **Background** | Visualisations that run behind the badge menu |
+| **Pattern** | Colors and animations for the Tildagon's RGB LEDs |
 
 ## Troubleshooting
 

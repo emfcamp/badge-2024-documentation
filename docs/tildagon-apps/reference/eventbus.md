@@ -107,7 +107,7 @@ There are a lot of event types built into the firmware. Here are a few that are 
 
   You can register to receive this event if you want to respond to button presses in your application.
 
-  If you want to make the Tildagon think a button has been pressed, you can emit this event. For example, the megadrive controller hexpansion [firmware](https://github.com/MatthewWilkes/md-updater/blob/main/sega.py) emits a button event when a user presses the equivalent buttons on an attached megadrive controller so the controller can be used to nagivate Tildagon apps.
+  If you want to make the Tildagon think a button has been pressed, you can emit this event. For example, the megadrive controller hexpansion [firmware](https://github.com/MatthewWilkes/md-updater/blob/main/sega.py) emits a button event when a user presses the equivalent buttons on an attached megadrive controller so the controller can be used to navigate Tildagon apps.
 
   ```python
   from events.input import Button
