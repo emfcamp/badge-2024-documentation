@@ -53,12 +53,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <div class="scroll-container admonition info">
 <!--hexpansions-start-->
   <span class="img-container">
-    <img src="https://blog.emfcamp.org/images/2026-badge-photos/keebdeck_prototype.jpeg" loading="lazy" alt="Keyboard hexpansion prototype with Tildagon badge" data-title="Keyboard Hexpansion by sodoku and davedarko" data-description=".custom-desc-keyboard-hexpansion">
-    <span class="label"><a href="https://www.emfcamp.org/tickets/badge">Keyboard Hexpansion</a> by sodoku and davedarko</span>
+    <img src="https://blog.emfcamp.org/images/2026-badge-photos/keebdeck_prototype.jpeg" loading="lazy" alt="Keyboard hexpansion prototype with Tildagon badge" data-title="Keebdexspansion by sodoku and davedarko" data-description=".custom-desc-keyboard-hexpansion">
+    <span class="label"><a href="https://www.emfcamp.org/tickets/badge">Keebdexspansion</a> by sodoku and davedarko</span>
     <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
+    <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-keyboard-hexpansion">
       <div class="detailbuttons">
         <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
+        <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
       </div>
     </div>
   </span>
@@ -191,8 +193,16 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/keyboard-hexpansion.png" loading="lazy" alt="Keyboard hexpansion" data-title="Keyboard hexpansion by Alex" data-description="">
-    <span class="label">Keebdeck Keyboard hexpansion by Alex</span>
+    <img src=" ../../images/hexpansions/keebdeck-hexpansion.jpeg" loading="lazy" alt="KeebDeck keyboard hexpansion Prototype with Tildagon badge" data-title="KeebDeck Hexpansion by Dave and sodoku" data-description=".custom-desc-keebdeck">
+    <span class="label"><a href="https://github.com/davedarko/KeebDeckHexpansion">KeebDeck Hexpansion Prototype</a> by Dave and sodoku</span>
+    <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-keebdeck">
+      <p>Full-layout keyboard hexpansion using the <a href="https://www.solder.party/docs/keebdeck/keyboard/">solder.party KeebDeck</a>, with RGB-backlit keys for typing in text inputs. Hardware by Dave; software by sodoku.</p>
+      <p>Software: <a href="https://github.com/sodoku/tildagon-keebdexpansion">tildagon-keebdexpansion</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/microphone-hexpansion.png" loading="lazy" alt="Tildagon badge with microphone hexpansion" data-title="Microphone hexpansion by Lix" data-description=".custom-desc-microphone-hexpansion">
@@ -366,8 +376,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Megadrive controller by Matthew Wilkes</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/matt-w.jpg" loading="lazy" alt="Too many LED hexpansion" data-title="Too many LED hexpansion by Matt W" data-description="">
-    <span class="label">Too many LED hexpansion by Matt W</span>
+    <img src=" ../../images/hexpansions/matt-w.gif" loading="lazy" alt="Too many LED hexpansion" data-title="Too many LED hexpansion by Matthew Wilkes" data-description="">
+    <span class="label">Too many LED hexpansion by Matthew Wilkes</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/eyes.jpg" loading="lazy" alt="Eye hexpansion" data-title="Eye hexpansion by Alistair" data-description=".custom-desc-eyes">
