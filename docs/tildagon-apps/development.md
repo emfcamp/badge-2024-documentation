@@ -37,7 +37,7 @@ class ExampleApp(app.App):
 __app_export__ = ExampleApp
 ```
 
-To test the app, you can use the [simulator](./simulate.md) or [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
+To test the app, you can use the [web emulator](https://emulator.badge.emfcamp.org/), the [local simulator](./simulate.md), or [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
 
 ## The `App` class
 

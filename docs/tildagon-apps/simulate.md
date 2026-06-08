@@ -2,9 +2,19 @@
 title: Simulate your app
 ---
 
-You can simulate your badge apps with the [Tildagon badge simulator](https://github.com/emfcamp/badge-2024-software/tree/main/sim).
+You can try badge apps in your browser with the [Tildagon web emulator](https://emulator.badge.emfcamp.org/), or run the local simulator from the [badge-2024-software](https://github.com/emfcamp/badge-2024-software/tree/main/sim) repo.
 
-## Installation
+## Web emulator
+
+The [web emulator](https://emulator.badge.emfcamp.org/) runs in your browser — no install required. Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge.
+
+App store listings include a **Run app in web emulator** link for supported apps.
+
+## Local simulator
+
+You can also simulate your badge apps locally with the [Tildagon badge simulator](https://github.com/emfcamp/badge-2024-software/tree/main/sim). This is the best option when you are developing your own app.
+
+### Installation
 
 1. Clone the [badge-2024-software repo](https://github.com/emfcamp/badge-2024-software/tree/main/).
 2. Open a terminal and navigate to the [sim](https://github.com/emfcamp/badge-2024-software/tree/main/sim) folder.
@@ -14,9 +24,9 @@ You can simulate your badge apps with the [Tildagon badge simulator](https://git
 
       Check the [known issues](https://github.com/emfcamp/badge-2024-software/tree/main/sim#known-issues).
 
-## Simulate your app
+### Simulate your app
 
-The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder To test your app, place your app's python file into the `sim/apps/` folder:
+The local badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder. To test your app, place your app's python file into the `sim/apps/` folder:
 
 1. Create a folder for your app, for example `MyApp`.
 2. In the new folder (for example `sim/apps/MyApp/`), copy your app's python file. For example, this is `app.py` for an example app:

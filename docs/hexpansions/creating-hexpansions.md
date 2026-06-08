@@ -1,5 +1,19 @@
 # Create a hexpansion
 
+!!! tip "$50 OFF - NextPCB sponsorship for community hexpansions"
+
+    EMF has a sponsor for community hexpansion PCB/PCBA! 🎉
+
+    [NextPCB](https://www.nextpcb.com/) have given us codes for **$50 off PCB and PCBA orders**. Codes can only be used on PCB costs - not on shipping costs.
+
+    To claim, your hexpansion must have the NextPCB logo printed on it:
+
+    ![NextPCB logo](../images/hexpansions/NextPCB.svg){: style="height:40px;width:auto;" }
+
+    [Download NextPCB.svg](../images/hexpansions/NextPCB.svg)
+
+    If you'd like to claim a code, email [badge@emfcamp.org](mailto:badge@emfcamp.org) with a couple of lines about your hexpansion and a screenshot showing the logo placement.
+
 {%
    include-markdown "../index.md"
    start="<!--hexpansions-definition-start-->"
@@ -49,6 +63,20 @@ If you're laser-cutting a hexpansion out of plastic, note that _cast_ acrylic sh
 !!! tip "Templates for PCB Hexpansions"
 
     There is a [sample KiCAD hexpansion project](https://github.com/emfcamp/badge-2024-hardware/tree/main/hexpansion), which is the easiest way of getting started making a Hexpansion PCB.
+
+!!! tip "$50 OFF - NextPCB sponsorship for community hexpansions"
+
+    EMF has a sponsor for community hexpansion PCB/PCBA! 🎉
+
+    [NextPCB](https://www.nextpcb.com/) have given us codes for **$50 off PCB and PCBA orders**. Codes can only be used on PCB costs - not on shipping costs.
+
+    To claim, your hexpansion must have the NextPCB logo printed on it:
+
+    ![NextPCB logo](../images/hexpansions/NextPCB.svg){: style="height:40px;width:auto;" }
+
+    [Download NextPCB.svg](../images/hexpansions/NextPCB.svg)
+
+    If you'd like to claim a code, email [badge@emfcamp.org](mailto:badge@emfcamp.org) with a couple of lines about your hexpansion and a screenshot showing the logo placement.
 
 ## Shape and size
 

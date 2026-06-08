@@ -38,13 +38,15 @@ From top to bottom, left to right:
 - badge front
 - badge base
 - display
-- 3 screws, 2 glue stickers
+- 3 M3×5 screws, 2 glue stickers
 - flexible cable
 - Tildagon sticker
 
+The large screws in your kit are **M3×5** and fit the brass **M3** standoffs on the base board. If you mount hexpansions with screws, those use the smaller **M2** screws — see [Create a hexpansion](../hexpansions/creating-hexpansions.md#mounting-holes).
+
 ### 1. Attach the standoffs to the base of the badge
 
-Get the three golden standoffs. Remove the plastic protector stickers on top of the middle screw mounts wherever you see three mounts together:
+Get the three brass M3 standoffs. Remove the plastic protector stickers on top of the middle screw mounts wherever you see three mounts together:
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/screws1.jpg" width="100" alt="Screw mounts" style="width:200px;height: auto;" />
@@ -113,7 +115,7 @@ Then attach the battery cable to battery connector on the back board.
 
 ### 6. Screw the badge front to the badge back
 
-Use the 3 screws to screw the badge front to the badge base. The top of the base board is between the two USB-C ports and should be aligned with the top of the front board which is where the **A** button is.
+Use the 3 **M3×5** screws to screw the badge front to the badge base, into the brass M3 standoffs. The top of the base board is between the two USB-C ports and should be aligned with the top of the front board which is where the **A** button is.
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/orientation.jpg" width="100" alt="Aligned orientation of the front and back" style="width:auto;height: 200px;" />
