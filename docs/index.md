@@ -261,6 +261,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/fridgehead.jpg" loading="lazy" alt="DECTalk speech synthesizer hexpansion" data-title="DECTalk hexpansion by tomwyatt" data-description=".custom-desc-dectalk">
+    <span class="label"><a href="https://infosec.exchange/@fridgehead/116240064715205161">DECTalk hexpansion</a> by tomwyatt</span>
+    <div class="glightbox-desc custom-desc-dectalk">
+      <p>Hexpansion with a DECtalk speech synthesizer</p>
+      <p>Link: <a href="https://infosec.exchange/@fridgehead/116240064715205161">@fridgehead on infosec.exchange</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/headphone-hexpansion.png" loading="lazy" alt="Headphone jack hexpansion PCB render" data-title="Headphone jack hexpansion by ArcaneNibble" data-description=".custom-desc-headphone-hexpansion">
     <span class="label"><a href="https://github.com/ArcaneNibble/hexpansion-headphones">Headphone jack hexpansion</a> by ArcaneNibble</span>
     <span class="viewme"><a href="https://github.com/ArcaneNibble/hexpansion-headphones"><p>👀 VIEW FILES</p></a></span>
