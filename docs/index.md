@@ -53,12 +53,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <div class="scroll-container admonition info">
 <!--hexpansions-start-->
   <span class="img-container">
-    <img src="https://blog.emfcamp.org/images/2026-badge-photos/keebdeck_prototype.jpeg" loading="lazy" alt="Keyboard hexpansion prototype with Tildagon badge" data-title="Keyboard Hexpansion by sodoku and davedarko" data-description=".custom-desc-keyboard-hexpansion">
-    <span class="label"><a href="https://www.emfcamp.org/tickets/badge">Keyboard Hexpansion</a> by sodoku and davedarko</span>
+    <img src="https://blog.emfcamp.org/images/2026-badge-photos/keebdeck_prototype.jpeg" loading="lazy" alt="Keyboard hexpansion prototype with Tildagon badge" data-title="Keebdexspansion by sodoku and davedarko" data-description=".custom-desc-keyboard-hexpansion">
+    <span class="label"><a href="https://www.emfcamp.org/tickets/badge">Keebdexspansion</a> by sodoku and davedarko</span>
     <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
+    <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-keyboard-hexpansion">
       <div class="detailbuttons">
         <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
+        <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
       </div>
     </div>
   </span>
@@ -90,12 +92,21 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       </div>
     </div>
   </span>
-  <span class="img-container">
-    <img src=" ../../images/hexpansions/rainbow.jpg" loading="lazy" alt="LED Rainbow Filament hexpansion" data-title="LED Filament hexpansion by John Thurmond" data-description="">
-    <span class="label">LED Filament hexpansion by John Thurmond</span>
+    <span class="img-container">
+    <img src=" ../../images/hexpansions/bleepie.jpg" loading="lazy" alt="Bleepie paging hexpansion on Tildagon badge" data-title="Bleepie paging hexpansion by Sam Machin" data-description=".custom-desc-bleepie">
+    <span class="label"><a href="https://www.youtube.com/watch?v=itg0bViiKIg">Bleepie paging hexpansion</a> by Sam Machin</span>
+    <span class="viewme"><a href="https://www.youtube.com/watch?v=itg0bViiKIg"><p>🎥 WATCH IT</p></a></span>
+    <div class="glightbox-desc custom-desc-bleepie">
+      <p>Paging hexpansion with RAIO2, RP2040, and bleeper modules. The badge detects the hexpansion on plug-in and can send and receive pages.</p>
+      <p>Videos: <a href="https://www.youtube.com/watch?v=itg0bViiKIg">YouTube</a> · <a href="https://www.youtube.com/watch?v=791P1Sn_h2k">YouTube</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://www.youtube.com/watch?v=itg0bViiKIg"><p>🎥 WATCH IT</p></a></span>
+        <span class="viewme"><a href="https://www.youtube.com/watch?v=791P1Sn_h2k"><p>🎥 WATCH IT</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/interposer.png" loading="lazy" alt="interposer hexpansion" data-title="Interposer by The Untitled Goose" data-description=".custom-desc-interposer">
+    <img src=" ../../images/hexpansions/interposer.jpg" loading="lazy" alt="interposer hexpansion" data-title="Interposer by The Untitled Goose" data-description=".custom-desc-interposer">
     <span class="label"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka">Interposer</a> by The Untitled Goose</span>
     <span class="buyme"><a href="https://www.gavinchester.com/Hexpansion.htm"><p>💰 BUY HERE</p></a></span>
     <span class="viewme"><a href="https://github.com/eastabrooka/badge-2024-addons/tree/eastabrooka/Interposer/UntitledGoose-Eastabrooka"><p>👀 VIEW FILES</p></a></span>
@@ -143,6 +154,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/rainbow.jpg" loading="lazy" alt="LED Rainbow Filament hexpansion" data-title="LED Filament hexpansion by John Thurmond" data-description="">
+    <span class="label">LED Filament hexpansion by John Thurmond</span>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/robotmad.jpg" loading="lazy" alt="Hex-Drive plugged into Hex-Dev" data-title="Hex-Drive and Hex-Dev by Team RobotMad" data-description=".custom-desc-robotmad">
     <span class="label"><a href="https://robotmad.odoo.com/shop">Hex-Drive and Hex-Dev</a> by Team RobotMad</span>
     <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
@@ -168,6 +183,29 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/ethernet.jpg" loading="lazy" alt="Ethernet and PoE hexpansion on Tildagon badge" data-title="Ethernet hexpansion by Dan" data-description=".custom-desc-ethernet">
+    <span class="label"><a href="https://github.com/DanNixon/ethernet-hexpansion">Ethernet hexpansion</a> by Dan</span>
+    <span class="viewme"><a href="https://github.com/DanNixon/ethernet-hexpansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-ethernet">
+      <p>W5500-based Ethernet and PoE hexpansion using a WIZnet WIZPoE-P1 module.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/DanNixon/ethernet-hexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/doubleSD.jpg" loading="lazy" alt="Double micro SD card hexpansion on Tildagon badge" data-title="Double SD hexpansion by Dan" data-description="">
+    <span class="label">Double SD hexpansion by Dan</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/jwst-hexpansion.jpg" loading="lazy" alt="Tildagon badge surrounded by yellow hexagons in James Webb Space Telescope mirror style" data-title="James Webb Space Telescope hexpansion by Ben C" data-description=".custom-desc-jwst-hexpansion">
+    <span class="label"><a href="https://morehammer.uk/@bencc/116704814965510084">James Webb Space Telescope hexpansion</a> by Ben C</span>
+    <div class="glightbox-desc custom-desc-jwst-hexpansion">
+      <p>Decorative hexpansion with 18 yellow hexagonal tiles arranged like the James Webb Space Telescope primary mirror.</p>
+      <p>Link: <a href="https://morehammer.uk/@bencc/116704814965510084">@bencc on morehammer.uk</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/floppy-disk.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="Floppy disk 'Flopagon' by Nathan Dumont" data-description=".custom-desc-flopagon">
     <span class="label">Floppy disk <a href="https://github.com/hairymnstr/Flopagon">"Flopagon"</a> by Nathan
     Dumont</span>
@@ -177,6 +215,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
         <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
       </div>
     </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/croc-clip.jpg" loading="lazy" alt="Croc-clip friendly I/O pads hexpansion on Tildagon badge" data-title="Croc-clip friendly I/O pads hexpansion by Nathan Dumont" data-description="">
+    <span class="label">Croc-clip friendly I/O pads hexpansion by Nathan Dumont</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/flipspansion.png" loading="lazy" alt="Flipspansion adapter PCB" data-title="Flipspansion by kliment" data-description=".custom-desc-flipspansion">
@@ -191,15 +233,53 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/keyboard-hexpansion.png" loading="lazy" alt="Keyboard hexpansion" data-title="Keyboard hexpansion by Alex" data-description="">
-    <span class="label">Keebdeck Keyboard hexpansion by Alex</span>
+    <img src=" ../../images/hexpansions/microsd.jpg" loading="lazy" alt="Micro SD card hexpansion with Tildagon badge" data-title="SD card hexpansion by DuncanT" data-description="">
+    <span class="label">SD card hexpansion by DuncanT</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/keebdeck-hexpansion.jpg" loading="lazy" alt="KeebDeck keyboard hexpansion Prototype with Tildagon badge" data-title="KeebDeck Hexpansion by Dave and sodoku" data-description=".custom-desc-keebdeck">
+    <span class="label"><a href="https://github.com/davedarko/KeebDeckHexpansion">KeebDeck Hexpansion Prototype</a> by Dave and sodoku</span>
+    <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-keebdeck">
+      <p>Full-layout keyboard hexpansion using the <a href="https://www.solder.party/docs/keebdeck/keyboard/">solder.party KeebDeck</a>, with RGB-backlit keys for typing in text inputs. Hardware by Dave; software by sodoku.</p>
+      <p>Software: <a href="https://github.com/sodoku/tildagon-keebdexpansion">tildagon-keebdexpansion</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/davedarko/KeebDeckHexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/microphone-hexpansion.png" loading="lazy" alt="Tildagon badge with microphone hexpansion" data-title="Microphone hexpansion by Lix" data-description=".custom-desc-microphone-hexpansion">
     <span class="label"><a href="https://mastodon.social/@GlitchEngine/116410291765902200">Microphone hexpansion</a> by Lix</span>
+    <span class="viewme"><a href="https://mastodon.social/@GlitchEngine/116410291765902200"><p>🎥 WATCH IT</p></a></span>
     <div class="glightbox-desc custom-desc-microphone-hexpansion">
-      <p>Prototype: audio sampling with on-device visualisations stored on EEPROM, no app download required.</p>
-      <p>Link: <a href="https://mastodon.social/@GlitchEngine/116410291765902200">@GlitchEngine on Mastodon</a> (post includes video)</p>
+      <p>Microphone hexpansion that captures audio samples and runs on-device visualisations from EEPROM — no app download required.</p>
+      <p>Video: <a href="https://mastodon.social/@GlitchEngine/116410291765902200">@GlitchEngine on Mastodon</a></p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://mastodon.social/@GlitchEngine/116410291765902200"><p>🎥 WATCH IT</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/headphone-hexpansion.png" loading="lazy" alt="Headphone jack hexpansion PCB render" data-title="Headphone jack hexpansion by ArcaneNibble" data-description=".custom-desc-headphone-hexpansion">
+    <span class="label"><a href="https://github.com/ArcaneNibble/hexpansion-headphones">Headphone jack hexpansion</a> by ArcaneNibble</span>
+    <span class="viewme"><a href="https://github.com/ArcaneNibble/hexpansion-headphones"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-headphone-hexpansion">
+      <p>Hexpansion with ES8388 headphone codec and 3.5mm jack.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/ArcaneNibble/hexpansion-headphones"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/ir-hexpansion.jpg" loading="lazy" alt="IR Tx/Rx hexpansion PCB render" data-title="IR Tx/Rx hexpansion by ArcaneNibble" data-description=".custom-desc-ir-hexpansion">
+    <span class="label"><a href="https://github.com/ArcaneNibble/hexpansion-ir-tool">IR Tx/Rx hexpansion</a> by ArcaneNibble</span>
+    <span class="viewme"><a href="https://github.com/ArcaneNibble/hexpansion-ir-tool"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-ir-hexpansion">
+      <p>38 kHz consumer infrared transmit and receive, with a Puya PY32 microcontroller.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/ArcaneNibble/hexpansion-ir-tool"><p>👀 VIEW FILES</p></a></span>
+      </div>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -266,7 +346,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Max hexpansion by Catherine</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/googly.png" loading="lazy" alt="Floppy disk hexpansion" data-title="40mm Googly Eye by John Dumont" data-description="">
+    <img src=" ../../images/hexpansions/googly.jpg" loading="lazy" alt="Floppy disk hexpansion" data-title="40mm Googly Eye by John Dumont" data-description="">
     <span class="label">40mm Googly Eye by John Dumont</span>
   </span>
   <span class="img-container collapsible collapsed">
@@ -312,6 +392,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/duck-light.jpg" loading="lazy" alt="Duck light hexpansion" data-title="Duck light by Frankie" data-description="">
     <span class="label">Duck light by Frankie</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/flame.gif" loading="lazy" alt="Flame hexpansion" data-title="Flame hexpansion by Frankie (Threadz 'n' Webz)" data-description="">
+    <span class="label">Flame hexpansion by Frankie (Threadz 'n' Webz)</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/light-driver.jpg" loading="lazy" alt="LED driver hexpansion" data-title="LED driver hexpansion by grajohnt" data-description="">
@@ -366,8 +450,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Megadrive controller by Matthew Wilkes</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/matt-w.jpg" loading="lazy" alt="Too many LED hexpansion" data-title="Too many LED hexpansion by Matt W" data-description="">
-    <span class="label">Too many LED hexpansion by Matt W</span>
+    <img src=" ../../images/hexpansions/matt-w.gif" loading="lazy" alt="Too many LED hexpansion" data-title="Too many LED hexpansion by Matthew Wilkes" data-description="">
+    <span class="label">Too many LED hexpansion by Matthew Wilkes</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/eyes.jpg" loading="lazy" alt="Eye hexpansion" data-title="Eye hexpansion by Alistair" data-description=".custom-desc-eyes">
@@ -414,8 +498,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/fairy-wings.jpg" loading="lazy" alt="Fairy wings hexpansion" data-title="Fairy wings by unknown child artist" data-description="">
-    <span class="label">Fairy wings by unknown child artist</span>
+    <img src=" ../../images/hexpansions/fairy-wings.jpg" loading="lazy" alt="Fairy wings hexpansion" data-title="Fairy wings by Charlotte Dumont" data-description="">
+    <span class="label">Fairy wings by Charlotte Dumont</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/not_lego_but_compatible.webp" loading="lazy" alt="Not lego baseplate hexpansion" data-title="Not lego baseplate hexpansion by adie" data-description=".custom-desc-compatible">
@@ -496,6 +580,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Frog prototype by Bob</span>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/social-battery.jpg" loading="lazy" alt="Social battery hexpansion with LED bar graph" data-title="Social battery by Bob" data-description="">
+    <span class="label">Social battery by Bob</span>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/eyes-lit.gif" loading="lazy" alt="Bob's googly eye hexpansion" data-title="Many eyes by Bob" data-description=".custom-desc-lit">
     <span class="label"><a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion">Many eyes</a> by Bob</span>
     <span class="viewme"><a href="https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion"><p>👀 VIEW FILES</p></a></span>
@@ -574,7 +662,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/honk.png" loading="lazy" alt="goose hexpansion" data-title="Simple Honk by The Untitled Goose" data-description="">
+    <img src=" ../../images/hexpansions/honk.jpg" loading="lazy" alt="goose hexpansion" data-title="Simple Honk by The Untitled Goose" data-description="">
     <span class="label">Simple Honk by The Untitled Goose</span>
   </span>
   <span class="img-container collapsible collapsed">
@@ -590,11 +678,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Hexnotoad by The Untitled Goose</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/hacktheplanet.png" loading="lazy" alt="Hack the Planet hexpansion" data-title="Hack the Planet by The Untitled Goose" data-description="">
+    <img src=" ../../images/hexpansions/hacktheplanet.jpg" loading="lazy" alt="Hack the Planet hexpansion" data-title="Hack the Planet by The Untitled Goose" data-description="">
     <span class="label">Hack the Planet by The Untitled Goose</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/Nyancat.jpg" loading="lazy" alt="Nyan cat hexpansion" data-title="Nyan cat hexpansion by The Untitled Goose" data-description="">
+    <img src=" ../../images/hexpansions/nyancat.gif" loading="lazy" alt="Nyan cat hexpansion" data-title="Nyan cat hexpansion by The Untitled Goose" data-description="">
     <span class="label">Nyan cat hexpansion by The Untitled Goose</span>
   </span>
   <span class="img-container collapsible collapsed">
@@ -657,7 +745,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Cat hexpansion</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/brainslug.jpeg" loading="lazy" alt="Brain slug hexpansions" data-title="Brainslug by Paul Beech" data-description=".custom-desc-jittery">
+    <img src=" ../../images/hexpansions/brainslug.jpg" loading="lazy" alt="Brain slug hexpansions" data-title="Brainslug by Paul Beech" data-description=".custom-desc-jittery">
     <span class="label">Brainslug by <a href="https://x.com/guru/status/1793620540403613986">Paul Beech</a></span>
     <div class="glightbox-desc custom-desc-jittery">
       <p>Link: <a href="https://x.com/guru/status/1793620540403613986">Twitter</a></p>

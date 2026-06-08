@@ -1,3 +1,8 @@
+---
+title: Overview
+weight: -10
+---
+
 ## Tildagon OS Firmware
 
 Although hardware is complete and ordered for emfcamp 2024, the firmware is

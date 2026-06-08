@@ -14,7 +14,7 @@ PCB - the screen module should just pull out with minimal force.  Set this aside
 
 ## 2: Remove frontboard
 
-Using a PH2 screwdriver, unscrew the 3 screws holding the frontboard to the
+Using a PH2 screwdriver, unscrew the 3 **M3×5** screws holding the frontboard to the
 base board.
 
 Once this is done, gently lift the two halves of the badge apart, then use a
@@ -27,8 +27,8 @@ each side of the battery connector with your fingernails or some pliers, and
 gently wobble the connector from side-to-side while pulling.  After a few wobbles
 the connector should disconnect
 
-You can now set aside your base board with the brass standoffs attached, and the
-3 screws.
+You can now set aside your base board with the brass M3 standoffs attached, and the
+3 M3×5 screws.
 
 ## 3: Remove battery and FPC from frontboard
 
