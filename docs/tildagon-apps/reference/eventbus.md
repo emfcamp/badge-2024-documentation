@@ -1,10 +1,10 @@
 # Eventbus overview
 
-You can register your events and event handlers with the [`Eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py) package:
+The [`Eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py) lets a Tildagon app broadcast an event, and other apps register to receive that event if they are interested. Some examples are: a button press (a ``ButtonDownEvent``) or an app wants to take over the pattern LEDs (a ``PatternDisable`` event). You can also define your own types of event, if you have something interesting to broadcast to other apps.
 
 ## Usage
 
-You can use your own events directly with an event handler that you register on the [`eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py).
+The following steps are the basic steps for using the Eventbus directly with an event handler that you register on the [`eventbus`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/system/eventbus.py).
 
 1.  Import the `system.eventbus` and `events` packages:
 
@@ -13,12 +13,22 @@ You can use your own events directly with an event handler that you register on 
     from events import Event
     ```
 
-2.  Define an event:
+2.  Import an event definition, or define your own event type.
+
+    To use button events, for example:
 
     ```python
+    from events.input import ButtonDownEvent
+    ```
+
+    To define your own event type, subclass ``Event``:
+
+    ```python
+    from system.eventbus import Event
+
     class SpecialEvent(Event):
-        def __init__(self):
-            pass
+    def __init__(self):
+        pass
 
         def __str__(self):
             return "special event"
@@ -83,8 +93,8 @@ You can use the following methods on the `eventbus`:
 | ------ | ----------- | --------- | ------- |
 | `on(event_type, event_handler, app)` | Register an event for an app alongside the synchronous handler to be called when the event fires. | <ul><li><code>event_type</code>: The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`.</li><li><code>event_handler</code>: The synchronous function to be called when the event fires to handle the event.</li><li><code>app</code>: The app this event is being registered for.</li></ul> | None |
 | `on_async(event_type, event_handler, app)` | Register an event for an app alongside the asynchronous handler to be called when the event fires. | <ul><li><code>event_type</code>: The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`.</li><li><code>event_handler</code>: The asynchronous function to be called when the event fires to handle the event.</li><li><code>app</code>: The app this event is being registered for.</li></ul> | None |
-| `emit(event)` | Emit an event to the eventbus. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
-| `emit_async(event)` | Emit an event to the eventbus. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
+| `emit(event)` | Emit an event to the eventbus. The handler for the event must be synchronous. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
+| `emit_async(event)` | Emit an event to the eventbus. The handler for the event must be asynchronous. | `event` : The event, for example `ButtonDownEvent`. An `event` object must have the methods `__init__()` and `__str__()`. | None |
 | `remove(event_type, event_handler, app)` | Remove the event for an app from the eventbus. | <ul><li><code>event_type</code>: The event to be removed.</li><li><code>event_handler</code>: The event handler previously registered with `on` or `on_async`.</li><li><code>app</code>: The app this event is being removed for.</li></ul> | None |
 
 ## Common built-in events
