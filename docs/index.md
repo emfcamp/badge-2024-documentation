@@ -197,7 +197,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="viewme"><a href="https://github.com/DanNixon/microsd-hexpansion"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/smol-breakout.jpg" loading="lazy" alt="Two smol breakout hexpansions, showing both sides" data-title="Smol breakout hexpansion by Dan Nixon" data-description="">
+    <img src=" ../../images/hexpansions/smol-breakout.jpeg" loading="lazy" alt="Two smol breakout hexpansions, showing both sides" data-title="Smol breakout hexpansion by Dan Nixon" data-description="">
     <span class="label">Smol breakout hexpansion by Dan</span>
     <span class="viewme"><a href="https://github.com/DanNixon/smol-breakout-hexpansion"><p>👀 VIEW FILES</p></a></span>
   </span>
