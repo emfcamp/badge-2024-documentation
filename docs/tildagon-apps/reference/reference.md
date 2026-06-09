@@ -42,3 +42,5 @@ Apps can persist JSON configuration across restarts using the `settings` module.
 ## Using APIs and network services
 
 To learn how to use APIs in your apps, see [Use an API in an app](../examples/api.md#examples).
+
+For MQTT, see [Use MQTT in an app](../examples/mqtt.md).
