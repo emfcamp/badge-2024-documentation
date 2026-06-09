@@ -4,13 +4,15 @@ function shuffleHexpansionGallery() {
   document.querySelectorAll(".scroll-container").forEach((container) => {
     const items = [...container.querySelectorAll(":scope > .img-container")];
     const buttonContainer = container.querySelector(":scope > .button-container");
+    const pinned = items.filter((item) => item.classList.contains("pinned"));
+    const unpinned = items.filter((item) => !item.classList.contains("pinned"));
 
-    for (let i = items.length - 1; i > 0; i--) {
+    for (let i = unpinned.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [items[i], items[j]] = [items[j], items[i]];
+      [unpinned[i], unpinned[j]] = [unpinned[j], unpinned[i]];
     }
 
-    items.forEach((item, index) => {
+    [...pinned, ...unpinned].forEach((item, index) => {
       container.insertBefore(item, buttonContainer);
       if (index < VISIBLE_HEXPANSION_COUNT) {
         item.classList.remove("collapsible", "collapsed");
