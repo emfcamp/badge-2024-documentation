@@ -5,6 +5,20 @@ weight: 7
 
 MQTT is a lightweight publish/subscribe protocol that works well for badge apps talking to brokers on your network or the internet. The badge firmware includes MicroPython's [`umqtt.simple`](https://docs.micropython.org/en/latest/library/umqtt.simple.html) library.
 
+## EMF Camp MQTT broker
+
+At EMF Camp there is an on-site MQTT broker at `mqtt.emf.camp` (port `1883`, no authentication). Full connection details, topic rules, and wildcard tips are on the [MQTT broker](https://developer.emfcamp.org/mqtt/) page.
+
+You can publish and subscribe on any topic name **except** those starting with `emf/`, which are reserved for event infrastructure. You can still **subscribe** to `emf/` topics to read live camp data. Known namespaces include:
+
+- `emf/bar/` — live stats from the bars
+- `emf/films/` — EMF Films data
+- `emf/weather/` — live weather from HQ
+
+For your own badge apps or village projects, pick a topic outside `emf/` — for example `emfcamp/tildagonapp` or `myvillage/badge/status`. Use a hierarchical name so others can subscribe with wildcards (see the [developer docs](https://developer.emfcamp.org/mqtt/) for `+` and `#`).
+
+The examples below use the public test broker `test.mosquitto.org` so you can try them at home. At the event, swap the hostname for `mqtt.emf.camp` and use a topic that is not under `emf/`.
+
 ## Connect to WiFi first
 
 MQTT needs a working network connection, like HTTP requests do.
