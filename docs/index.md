@@ -176,15 +176,13 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Makerspace hexpansion" data-title="Maker Space badge by Dan" data-description=".custom-desc-makerspace">
-    <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan</span>
-    <div class="glightbox-desc custom-desc-makerspace">
-      <p>Link: <a href="https://www.makerspace.org.uk/">GitHub</a></p>
-    </div>
+    <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Makerspace hexpansion" data-title="Maker Space badge by Dan Nixon" data-description=".custom-desc-makerspace">
+    <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan Nixon</span>
+    <span class="viewme"><a href="https://github.com/DanNixon/hexpansions/tree/main/makerspace-badge"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/ethernet.jpg" loading="lazy" alt="Ethernet and PoE hexpansion on Tildagon badge" data-title="Ethernet hexpansion by Dan" data-description=".custom-desc-ethernet">
-    <span class="label"><a href="https://github.com/DanNixon/ethernet-hexpansion">Ethernet hexpansion</a> by Dan</span>
+    <img src=" ../../images/hexpansions/ethernet.jpg" loading="lazy" alt="Ethernet and PoE hexpansion on Tildagon badge" data-title="Ethernet hexpansion by Dan Nixon" data-description=".custom-desc-ethernet">
+    <span class="label"><a href="https://github.com/DanNixon/ethernet-hexpansion">Ethernet hexpansion</a> by Dan Nixon</span>
     <span class="viewme"><a href="https://github.com/DanNixon/ethernet-hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-ethernet">
       <p>W5500-based Ethernet and PoE hexpansion using a WIZnet WIZPoE-P1 module.</p>
@@ -194,8 +192,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/doubleSD.jpg" loading="lazy" alt="Double micro SD card hexpansion on Tildagon badge" data-title="Double SD hexpansion by Dan" data-description="">
-    <span class="label">Double SD hexpansion by Dan</span>
+    <img src=" ../../images/hexpansions/doubleSD.jpg" loading="lazy" alt="Double micro SD card hexpansion on Tildagon badge" data-title="Double SD hexpansion by Dan Nixon" data-description="">
+    <span class="label">Double micro SD hexpansion by Dan Nixon</span>
+    <span class="viewme"><a href="https://github.com/DanNixon/microsd-hexpansion"><p>👀 VIEW FILES</p></a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/smol-breakout.jpg" loading="lazy" alt="Two smol breakout hexpansions, showing both sides" data-title="Smol breakout hexpansion by Dan Nixon" data-description="">
+    <span class="label">Smol breakout hexpansion by Dan</span>
+    <span class="viewme"><a href="https://github.com/DanNixon/smol-breakout-hexpansion"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/jwst-hexpansion.jpg" loading="lazy" alt="Tildagon badge surrounded by yellow hexagons in James Webb Space Telescope mirror style" data-title="James Webb Space Telescope hexpansion by Ben C" data-description=".custom-desc-jwst-hexpansion">
@@ -390,12 +394,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Spirit level by Chris</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/rabbit.jpg" loading="lazy" alt="Rabbit hexpansion" data-title="That Rabbit by Dan" data-description="">
-    <span class="label">That Rabbit by Dan</span>
+    <img src=" ../../images/hexpansions/rabbit.jpg" loading="lazy" alt="Rabbit hexpansion" data-title="That Rabbit by Dan Nixon" data-description="">
+    <span class="label">That Rabbit by Dan Nixon</span>
+    <span class="viewme"><a href="https://github.com/DanNixon/hexpansions/tree/main/rabbit"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/duck.jpg" loading="lazy" alt="Rabbit hexpansion" data-title="Le Carnard de Bleu by Dan" data-description="">
-    <span class="label">Le Carnard de Bleu by Dan</span>
+    <img src=" ../../images/hexpansions/duck.jpg" loading="lazy" alt="Rabbit hexpansion" data-title="Le Carnard de Bleu by Dan Nixon" data-description="">
+    <span class="label">Le Carnard de Bleu by Dan Nixon</span>
+    <span class="viewme"><a href="https://github.com/DanNixon/hexpansions/tree/main/le-carnard-bleu"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/duck-light.jpg" loading="lazy" alt="Duck light hexpansion" data-title="Duck light by Frankie" data-description="">
