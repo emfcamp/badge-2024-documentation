@@ -11,13 +11,13 @@ At EMF Camp there is an on-site MQTT broker at `mqtt.emf.camp` (port `1883`, no 
 
 You can publish and subscribe on any topic name **except** those starting with `emf/`, which are reserved for event infrastructure. You can still **subscribe** to `emf/` topics to read live camp data. Known namespaces include:
 
-- `emf/bar/` — live stats from the bars
-- `emf/films/` — EMF Films data
-- `emf/weather/` — live weather from HQ
+- `emf/bar/` for live stats from the bars
+- `emf/films/` for EMF Films data
+- `emf/weather/` for live weather from HQ
 
-For your own badge apps or village projects, pick a topic outside `emf/` — for example `emfcamp/tildagonapp` or `myvillage/badge/status`. Use a hierarchical name so others can subscribe with wildcards (see the [developer docs](https://developer.emfcamp.org/mqtt/) for `+` and `#`).
+For your own badge apps or village projects, pick a topic outside `emf/`, such as `emfcamp/tildagonapp` or `myvillage/badge/status`. Use a hierarchical name so others can subscribe with wildcards (see the [developer docs](https://developer.emfcamp.org/mqtt/) for `+` and `#`).
 
-The examples below use the public test broker `test.mosquitto.org` so you can try them at home. At the event, swap the hostname for `mqtt.emf.camp` and use a topic that is not under `emf/`.
+The following examples use the public test broker `test.mosquitto.org` so you can try them at home. At the event, swap the hostname for `mqtt.emf.camp`.
 
 ## Connect to WiFi first
 
@@ -310,8 +310,8 @@ mosquitto_pub -h test.mosquitto.org -t emfcamp/tildagonapp -m "hello from my lap
 
 !!! tip "`OSError: -202` when connecting or publishing"
 
-    If you see `OSError: -202` while using MQTT (or other network code such as `requests` or `socket`), the badge is probably not connected to Wi-Fi yet and you are trying to do something that needs the network — for example resolving your broker hostname or opening a socket.
+    If you see `OSError: -202` while using MQTT (or other network code such as `requests` or `socket`), the badge is probably not connected to Wi-Fi yet and you are trying to do something that needs the network.
 
     Call `wifi.connect()` and use `wifi.wait()` (or check `wifi.status()`) before `client.connect()` or similar calls. Wi-Fi connection is asynchronous; calling your network code too early is a common cause of this error.
 
-    If you are definitely connected and still see `-202`, it can also indicate a DNS problem resolving the hostname — try your broker's IP address instead to narrow it down.
+    If you are definitely connected and still see `-202`, it can also indicate a DNS problem resolving the hostname. Try your broker's IP address instead to narrow it down.
