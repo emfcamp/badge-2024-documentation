@@ -5,38 +5,292 @@ weight: 7
 
 MQTT is a lightweight publish/subscribe protocol that works well for badge apps talking to brokers on your network or the internet. The badge firmware includes MicroPython's [`umqtt.simple`](https://docs.micropython.org/en/latest/library/umqtt.simple.html) library.
 
-## Connect to Wi-Fi first
+## Connect to WiFi first
 
-MQTT needs a working network connection, like HTTP requests do. Call `wifi.connect()` and wait for the connection before opening a socket to your broker:
+MQTT needs a working network connection, like HTTP requests do.
+Check whether the badge is already connected to WiFi and if not try to connect and wait for the connection before opening a socket to your broker:
 
 ```python
 import wifi
 
-wifi.connect()
-if not wifi.wait():
-    raise Exception("Could not connect to Wi-Fi")
+
+def _connect_wifi():
+    try:
+        if wifi.status():
+            return True
+
+        wifi.disconnect()
+        wifi.connect()
+        if wifi.wait():
+            return True
+
+        return False
+    except OSError as e:
+        return False
 ```
 
-If your badge is not on a network you have configured, see [connect to Wi-Fi](../../using-the-badge/connect-to-wifi.md).
+If your badge is not connected to WiFi yet, see [connect to Wi-Fi](../../using-the-badge/connect-to-wifi.md).
 
-See [Use an API in an app](./api.md) for another example of connecting before doing network I/O.
-
-## Minimal example
+## Connect to MQTTT
 
 ```python
 from umqtt.simple import MQTTClient
-import wifi
 
-wifi.connect()
-wifi.wait()
 
-client = MQTTClient("tildagon-demo", "test.mosquitto.org")
-client.connect()
-client.publish(b"emfcamp/tildagon", b"hello from a badge")
-client.disconnect()
+def _connect_mqtt():
+    try:
+        client = MQTTClient("tildagon-demo", "test.mosquitto.org")
+        client.connect()
+        return True
+    except OSError as e:
+        client = None
+        return False
 ```
 
-In a Tildagon app, call `client.check_msg()` from `update()` or `background_update()` if you subscribe to topics and need to process incoming messages.
+## Subscribe to a channel
+
+The following code connects to a channel and listens for messages:
+
+```python
+import app
+from umqtt.simple import MQTTClient
+import wifi
+
+from app_components.tokens import line_height
+from events.input import Buttons, BUTTON_TYPES
+
+TOPIC = b"emfcamp/tildagonapp"
+
+
+class MqttListenerApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+        self.message = "Starting..."
+        self.client = None
+
+    def _connect_wifi(self):
+        try:
+            if wifi.status():
+                self.message = "WiFi OK"
+                return True
+
+            wifi.disconnect()
+            wifi.connect()
+            if wifi.wait():
+                self.message = "WiFi OK"
+                return True
+
+            self.message = "WiFi failed"
+            return False
+        except OSError as e:
+            self.message = f"WiFi error: {e}"
+            return False
+
+    def _connect_mqtt(self):
+        try:
+            self.client = MQTTClient("tildagon-demo", "test.mosquitto.org")
+            self.client.set_callback(self.on_message)
+            self.client.connect()
+            self.client.subscribe(TOPIC)
+            self.message = "Waiting for messages..."
+            return True
+        except OSError as e:
+            self.message = f"MQTT error: {e}"
+            self.client = None
+            return False
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+            self.minimise()
+            return
+
+        if self.message == "Starting...":
+            if self._connect_wifi():
+                self._connect_mqtt()
+
+    def on_message(self, topic, msg):
+        self.message = msg.decode()
+        print("Message received:", self.message)
+
+    def _reduce_text_until_fits(self, ctx, text, width_limit):
+        extra_text = ""
+        text_that_fits = text
+        while ctx.text_width(text_that_fits) > width_limit and text_that_fits:
+            character = text_that_fits[-1]
+            text_that_fits = text_that_fits[:-1]
+            extra_text = character + extra_text
+        return text_that_fits, extra_text
+
+    def _wrap_text(self, ctx, text, width_limit):
+        lines = []
+        remaining = text
+        while remaining:
+            line, remaining = self._reduce_text_until_fits(
+                ctx, remaining, width_limit
+            )
+            if not line:
+                line = remaining[:1]
+                remaining = remaining[1:]
+            lines.append(line)
+        return lines
+
+    def background_update(self, delta):
+        if self.client:
+            try:
+                self.client.check_msg()
+            except OSError:
+                self.message = "MQTT disconnected"
+                self.client = None
+
+    def draw(self, ctx):
+        ctx.save()
+        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(1, 1, 1)
+
+        text = f"Message: {self.message}"
+        width_limit = 200  # 240px screen minus margins
+        lines = self._wrap_text(ctx, text, width_limit)
+
+        spacing = line_height * 16  # scale to your font size
+        start_y = -((len(lines) - 1) * spacing) / 2
+
+        for i, line in enumerate(lines):
+            y = start_y + i * spacing
+            line_width = ctx.text_width(line)
+            ctx.move_to(-line_width / 2, y).text(line)
+
+        ctx.restore()
+
+
+__app_export__ = MqttListenerApp
+```
+
+In a Tildagon app, call `client.check_msg()` from `update()` or `background_update()`to check for new messages on subscribed topics. For a full example, see [Example app](#example-app).
+
+To receive a message from a computer, install [Mosquitto](https://mosquitto.org/download/) and use `mosquitto_sub`:
+
+```bash
+mosquitto_sub -h test.mosquitto.org -t emfcamp/tildagonapp
+```
+
+## Send messages to a channel
+
+The following code connects to a channel and sends a message `"hello from a badge"`:
+
+```python
+import app
+from umqtt.simple import MQTTClient
+import wifi
+
+from app_components.tokens import line_height
+from events.input import Buttons, BUTTON_TYPES
+
+TOPIC = b"emfcamp/tildagonapp"
+
+
+class MqttPublisherApp(app.App):
+    def __init__(self):
+        self.button_states = Buttons(self)
+        self.message = "Starting..."
+        self.client = None
+
+    def _connect_wifi(self):
+        try:
+            if wifi.status():
+                self.message = "WiFi OK"
+                return True
+
+            wifi.disconnect()
+            wifi.connect()
+            if wifi.wait():
+                self.message = "WiFi OK"
+                return True
+
+            self.message = "WiFi failed"
+            return False
+        except OSError as e:
+            self.message = f"WiFi error: {e}"
+            return False
+
+    def _connect_mqtt(self):
+        try:
+            self.client = MQTTClient("tildagon-demo", "test.mosquitto.org")
+            self.client.set_callback(self.on_message)
+            self.client.connect()
+            self.client.publish(b"emfcamp/tildagonapp", b"hello from a badge")
+            self.message = "Message sent"
+            self.client.disconnect()
+            return True
+        except OSError as e:
+            self.message = f"MQTT error: {e}"
+            self.client = None
+            return False
+
+    def update(self, delta):
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+            self.minimise()
+            return
+
+        if self.message == "Starting...":
+            if self._connect_wifi():
+                self._connect_mqtt()
+
+    def on_message(self, topic, msg):
+        self.message = msg.decode()
+        print("Message received:", self.message)
+
+    def _reduce_text_until_fits(self, ctx, text, width_limit):
+        extra_text = ""
+        text_that_fits = text
+        while ctx.text_width(text_that_fits) > width_limit and text_that_fits:
+            character = text_that_fits[-1]
+            text_that_fits = text_that_fits[:-1]
+            extra_text = character + extra_text
+        return text_that_fits, extra_text
+
+    def _wrap_text(self, ctx, text, width_limit):
+        lines = []
+        remaining = text
+        while remaining:
+            line, remaining = self._reduce_text_until_fits(
+                ctx, remaining, width_limit
+            )
+            if not line:
+                line = remaining[:1]
+                remaining = remaining[1:]
+            lines.append(line)
+        return lines
+
+    def draw(self, ctx):
+        ctx.save()
+        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
+        ctx.rgb(1, 1, 1)
+
+        text = f"Message: {self.message}"
+        width_limit = 200  # 240px screen minus margins
+        lines = self._wrap_text(ctx, text, width_limit)
+
+        spacing = line_height * 16  # scale to your font size
+        start_y = -((len(lines) - 1) * spacing) / 2
+
+        for i, line in enumerate(lines):
+            y = start_y + i * spacing
+            line_width = ctx.text_width(line)
+            ctx.move_to(-line_width / 2, y).text(line)
+
+        ctx.restore()
+
+
+__app_export__ = MqttPublisherApp
+```
+
+To send a message from a computer, install [Mosquitto](https://mosquitto.org/download/) and use `mosquitto_pub`:
+
+```bash
+mosquitto_pub -h test.mosquitto.org -t emfcamp/tildagonapp -m "hello from my laptop"
+```
 
 ## Troubleshooting
 
