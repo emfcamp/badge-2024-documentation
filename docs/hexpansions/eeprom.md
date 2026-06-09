@@ -24,13 +24,34 @@ If you want your EEPROM-equipped hexpansion to do something automatically, you n
        manifest_version="2024",
        fs_offset=32,
        eeprom_page_size=16,
-       eeprom_total_size=1024 * (16 // 8) // 8,
+       eeprom_total_size=256,  # 2 kbit EEPROM (1024 * (16 // 8) // 8)
        vid=0xCA75,
        pid=0x1337,
        unique_id=0x0,
        friendly_name="Flopagon",
    )
    ```
+
+   ??? tip "Setting `eeprom_total_size`"
+
+       `eeprom_total_size` is the total filesystem size in **bytes**. Set it to match your EEPROM chip — check the datasheet for the capacity in bits, then divide by 8.
+
+       In MicroPython, `//` is integer division. The final `// 8` in any formula converts bits to bytes. The `(16 // 8)` term relates to the 16-byte page size, but once you know your chip's capacity you can set the value directly.
+
+       The example above uses a **2 kbit** EEPROM (2048 bits = 256 bytes):
+
+       ```python
+       eeprom_total_size=256
+       # same as: 1024 * (16 // 8) // 8
+       ```
+
+       For other chips, substitute your EEPROM's bit capacity. For example, the **AT24C32** is a 32 kbit device (4096 bytes):
+
+       ```python
+       eeprom_total_size=4096
+       # or: 32768 // 8
+       # or: (32 * 1024) // 8
+       ```
 
    For more information see [EEPROM format](#eeprom-format).
 
