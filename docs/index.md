@@ -52,7 +52,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
 <!--hexpansions-definition-end-->
 <div class="scroll-container admonition info">
 <!--hexpansions-start-->
-  <span class="img-container">
+  <span class="img-container pinned">
     <img src="https://blog.emfcamp.org/images/2026-badge-photos/keebdeck_prototype.jpeg" loading="lazy" alt="Keyboard hexpansion prototype with Tildagon badge" data-title="Keebdexspansion by sodoku and davedarko" data-description=".custom-desc-keyboard-hexpansion">
     <span class="label"><a href="https://www.emfcamp.org/tickets/badge">Keebdexspansion</a> by sodoku, davedarko, and kliment</span>
     <span class="buyme"><a href="https://www.emfcamp.org/tickets/badge"><p>💰 BUY HERE</p></a></span>
