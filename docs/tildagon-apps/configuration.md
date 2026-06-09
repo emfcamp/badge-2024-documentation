@@ -29,7 +29,7 @@ This keeps your settings together and avoids clashes with badge-level keys such 
 ```python
 import settings
 
-CONFIG_KEY = "example_app" # set to a unique key
+CONFIG_KEY = "example_app"  # set to a unique key
 
 DEFAULT_CONFIG = {
     "player_name": "Player",
