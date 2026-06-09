@@ -30,6 +30,7 @@ Here is an example that alternates flashing green and off around the ring:
 ```python
 from patterns.base import BasePattern
 
+
 class AlternateFlashPattern(BasePattern):
     def __init__(self):
         super().__init__()
@@ -49,6 +50,7 @@ class AlternateFlashPattern(BasePattern):
             ]
         ]
 
+
 # Export both casing variations to satisfy PatternDisplay and the App Store
 __pattern_export__ = AlternateFlashPattern
 __Pattern_Export__ = AlternateFlashPattern
@@ -57,6 +59,7 @@ __Pattern_Export__ = AlternateFlashPattern
 ### 2. Creating a Custom Pattern from Scratch
 
 If you need more control over state, or want to calculate frames procedurally on the fly, you do not need to use the base class. Your class simply needs to implement:
+
 *   `self.fps`: An integer property representing update speed.
 *   `next(self)`: A synchronous method returning a list of 12 RGB tuples.
 
@@ -75,10 +78,11 @@ class CyclePattern:
         self.index = 0
 
     def next(self):
-        # Update state and return the next frame (list of self.num_leds RGB tuples)
+        # Return next frame: list of self.num_leds RGB tuples
         color = self.colors[self.index]
         self.index = (self.index + 1) % len(self.colors)
         return [color] * self.num_leds
+
 
 # Export both casing variations to satisfy PatternDisplay and the App Store
 __pattern_export__ = CyclePattern
@@ -87,10 +91,7 @@ __Pattern_Export__ = CyclePattern
 
 > [!WARNING]
 > **Important Casing Discrepancy:**
-> Currently, Tildagon OS has a casing mismatch in how patterns are handled:
-> *   The **App Store** (UI catalog) looks for `__Pattern_Export__` (capital `P` and capital `E`) to discover the app.
-> *   The **PatternDisplay** engine (which runs it) looks for `__pattern_export__` (lowercase `p` and lowercase `e`) to load the class.
-> You **must** export your pattern class under both names (as shown above) to ensure the pattern is both visible and executable.
+> Currently, Tildagon OS has a casing mismatch in how patterns are handled. The **App Store** (UI catalog) looks for `__Pattern_Export__` (capital `P` and capital `E`) to discover the app, while the **PatternDisplay** engine looks for `__pattern_export__` (all lowercase) to run it. You **must** export your pattern class under both names (as shown above) to ensure the pattern is both visible and executable.
 
 > [!TIP]
 > **Brightness is handled automatically:**
@@ -125,14 +126,19 @@ To clean up when your app is minimized or closed (so the badge returns to the us
 ```python
 import app
 from system.eventbus import eventbus
-from system.patterndisplay.events import PatternSet, PatternReload, PatternEnable
+from system.patterndisplay.events import (
+    PatternSet, PatternReload, PatternEnable
+)
 from events.input import Buttons, BUTTON_TYPES
+
 
 class MyDynamicPattern:
     def __init__(self):
         self.fps = 1
+
     def next(self):
-        return [(0, 0, 255)] * 12 # Solid blue
+        return [(0, 0, 255)] * 12  # Solid blue
+
 
 class ExampleApp(app.App):
     def __init__(self):
@@ -164,12 +170,13 @@ from system.patterndisplay.events import PatternEnable, PatternDisable
 from tildagonos import tildagonos
 from events.input import Buttons, BUTTON_TYPES
 
+
 class DirectControlApp(app.App):
     def __init__(self):
         self.button_states = Buttons(self)
         # Stop background patterns so we can write to the LEDs
         eventbus.emit(PatternDisable())
-        self._set_solid_color((255, 105, 180)) # Pink
+        self._set_solid_color((255, 105, 180))  # Pink
 
     def _set_solid_color(self, color):
         for i in range(1, 13):
