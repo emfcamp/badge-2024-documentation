@@ -27,9 +27,13 @@ You can print a [GC9A01 screen shim for the EMF Tildagon badge](https://www.prin
 
 ### A 3D-printed stand
 
-You can print a [Tildagon stand](https://www.printables.com/model/909352-tildagon-stand) to better display your badge.
+You can print this [Tildagon badge stand](https://www.printables.com/model/900532-emf-tildagon-badge-stand) to keep your badge propped up and on display. All buttons and USB ports stay accessible, but the stand blocks the bottom two hexpansion ports. It prints without supports; check the remixed versions on Printables if your badge has a bumper case.
 
-![Tildagon stand](../images/badge-photos/stand.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
+![EMF Tildagon badge stand](../images/badge-photos/badge-stand.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+Alternatively, you can print this [Tildagon stand](https://www.printables.com/model/909352-tildagon-stand). It requires 2x M3 x 6mm machine screws.
+
+![Tildagon stand with screw mount](../images/badge-photos/tildagon-stand-screws.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 ### Fancy lanyard
 
