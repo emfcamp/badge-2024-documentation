@@ -180,7 +180,7 @@ class MqttListenerApp(app.App):
 __app_export__ = MqttListenerApp
 ```
 
-In a Tildagon app, call `client.check_msg()` from `update()` or `background_update()`to check for new messages on subscribed topics. For a full example, see [Example app](#example-app).
+In a Tildagon app, call `client.check_msg()` from `update()` or `background_update()` to check for new messages on subscribed topics.
 
 To receive a message from a computer, install [Mosquitto](https://mosquitto.org/download/) and use `mosquitto_sub`:
 
