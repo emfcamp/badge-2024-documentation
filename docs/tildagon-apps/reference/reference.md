@@ -35,6 +35,10 @@ You can use the following hardware with the inbuilt interfaces:
 - [Power](./badge-hardware.md#power)
 - [Version](./badge-hardware.md#version)
 
-## Using APIs
+## Settings and configuration
 
-To learn how to use APIs in your APPs, see [Use an API in an app](../examples/api.md#examples).
+Apps can persist JSON configuration across restarts using the `settings` module. See [Configuration management in an app](../configuration.md).
+
+## Using APIs and network services
+
+To learn how to use APIs in your apps, see [Use an API in an app](../examples/api.md#examples).

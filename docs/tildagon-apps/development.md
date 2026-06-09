@@ -435,6 +435,7 @@ You can test your app on-device, without publishing it, see the instructions to 
 <div class="grid cards" markdown>
 
 - [Tildagon OS Programming Interface Reference](./reference/reference.md)
+- [Configuration management in an app](./configuration.md)
 - [Using the badge simulator][simulator]
 - [Publish your app](./publish.md)
 - [Interfacing with badge hardware](./reference/badge-hardware.md)

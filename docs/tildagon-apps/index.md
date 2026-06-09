@@ -21,6 +21,7 @@ You can publish your apps to the [app store](https://apps.badge.emfcamp.org/) so
 <div class="grid cards" markdown>
 
 - [Write a Tildagon OS App](./development.md)
+- [Configuration management in an app](./configuration.md)
 - [Tildagon OS Programming Interface Reference](./reference/reference.md)
 - [Publish your app](./publish.md)
 - [Examples](./examples/examples.md)
