@@ -382,6 +382,28 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/earplug-case.jpg" loading="lazy" alt="Earplug case hexpansion on Tildagon badge" data-title="Earplug case hexpansion by Iain Yarnall" data-description=".custom-desc-earplug-case">
+    <span class="label"><a href="https://www.printables.com/model/1746745-emf-festival-tildagon-hexpansion-earplug-case">Earplug case hexpansion</a> by Iain Yarnall</span>
+    <span class="printme"><a href="https://www.printables.com/model/1746745-emf-festival-tildagon-hexpansion-earplug-case"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-desc-earplug-case">
+      <p>Box hexpansion for keeping earplugs safe at the festival.</p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/1746745-emf-festival-tildagon-hexpansion-earplug-case"><p>🖨️ PRINT ME</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/sample-tube-holders.jpg" loading="lazy" alt="Sample tube holder hexpansions on Tildagon badge" data-title="Sample tube holders hexpansion by NekoLilly" data-description=".custom-desc-sample-tube-holders">
+    <span class="label"><a href="https://www.printables.com/model/1741153-hexpansion-sample-tube-holders">Sample tube holders hexpansion</a> by NekoLilly</span>
+    <span class="printme"><a href="https://www.printables.com/model/1741153-hexpansion-sample-tube-holders"><p>🖨️ PRINT ME</p></a></span>
+    <div class="glightbox-desc custom-desc-sample-tube-holders">
+      <p>Hexpansion adapters for 5 ml sample tubes.</p>
+      <div class="detailbuttons">
+        <span class="printme"><a href="https://www.printables.com/model/1741153-hexpansion-sample-tube-holders"><p>🖨️ PRINT ME</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/mysterious-qr.jpg" loading="lazy" alt="A hexpansion with a QR code that might rickroll you" data-title="Mysterious QR Code by grajohnt" data-description="">
     <span class="label">Mysterious QR Code by grajohnt</span>
   </span>
