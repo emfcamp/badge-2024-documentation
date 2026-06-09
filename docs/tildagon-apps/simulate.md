@@ -6,7 +6,7 @@ You can try badge apps in your browser with the [Tildagon web emulator](https://
 
 ## Web emulator
 
-The [web emulator](https://emulator.badge.emfcamp.org/) runs in your browser — no install required. Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge.
+The [web emulator](https://emulator.badge.emfcamp.org/) runs in your browser. Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge.
 
 App store listings include a **Run app in web emulator** link for supported apps.
 

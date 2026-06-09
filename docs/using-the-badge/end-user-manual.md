@@ -42,7 +42,7 @@ From top to bottom, left to right:
 - flexible cable
 - Tildagon sticker
 
-The large screws in your kit are **M3×5** and fit the brass **M3** standoffs on the base board. If you mount hexpansions with screws, those use the smaller **M2** screws — see [Create a hexpansion](../hexpansions/creating-hexpansions.md#mounting-holes).
+The large screws in your kit are **M3×5** and fit the brass **M3** standoffs on the base board. If you mount hexpansions with screws, those use the smaller **M2** screws. See [Create a hexpansion](../hexpansions/creating-hexpansions.md#mounting-holes).
 
 ### 1. Attach the standoffs to the base of the badge
 

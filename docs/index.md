@@ -253,11 +253,22 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src="https://codeberg.org/davedarko/LEGspansion/raw/branch/main/Images/LEGspansion_front.png" loading="lazy" alt="LEGspansion PCB render with three servo connectors" data-title="LEGspansion by davedarko" data-description=".custom-desc-legspansion">
+    <span class="label"><a href="https://codeberg.org/davedarko/LEGspansion">LEGspansion</a> by davedarko</span>
+    <span class="viewme"><a href="https://codeberg.org/davedarko/LEGspansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-legspansion">
+      <p>Tildagon hexpansion PCB with three servo outputs. Firmware for the CH32V003 microcontroller is based on <a href="https://github.com/deshipu/mite-servo">deshipu's mite-servo</a>.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://codeberg.org/davedarko/LEGspansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/microphone-hexpansion.png" loading="lazy" alt="Tildagon badge with microphone hexpansion" data-title="Microphone hexpansion by Lix" data-description=".custom-desc-microphone-hexpansion">
     <span class="label"><a href="https://mastodon.social/@GlitchEngine/116410291765902200">Microphone hexpansion</a> by Lix</span>
     <span class="viewme"><a href="https://mastodon.social/@GlitchEngine/116410291765902200"><p>🎥 WATCH IT</p></a></span>
     <div class="glightbox-desc custom-desc-microphone-hexpansion">
-      <p>Microphone hexpansion that captures audio samples and runs on-device visualisations from EEPROM — no app download required.</p>
+      <p>Microphone hexpansion that captures audio samples and runs on-device visualisations from EEPROM.</p>
       <p>Video: <a href="https://mastodon.social/@GlitchEngine/116410291765902200">@GlitchEngine on Mastodon</a></p>
       <div class="detailbuttons">
         <span class="viewme"><a href="https://mastodon.social/@GlitchEngine/116410291765902200"><p>🎥 WATCH IT</p></a></span>
