@@ -466,7 +466,7 @@ __app_export__ = ExampleApp
 
 ### Methods
 
-In order to support alternative imu devices a base set of functionality is provided along with i2c access to the device for apps to add functionality. An identify function is provided to determine which device is on the badge. Only the prototype badges have a different imu, but this may change in the future.
+In order to support alternative imu devices a base set of functionality is provided along with i2c access to the device for apps to add functionality. An identify function is provided to determine which device is on the badge. Only the prototype badges have a different imu, but this may change in the future. On boards that have a compass available
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
@@ -478,6 +478,7 @@ In order to support alternative imu devices a base set of functionality is provi
 | `id()` | Get the device id | None | `id`: string id of device. |
 | `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
 | `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
+| `mag_read()` | Get the magnetometer data if available | None | `(x,y,z)`: The magnetometer data as a tuple of floats (guass). |
 
 ### Usage
 
