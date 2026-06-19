@@ -447,6 +447,9 @@ class ExampleApp(app.App):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             self.button_states.clear()
             self.minimise()
+        elif self.button_states.get(BUTTON_TYPES["RIGHT"]):
+            self.button_states.clear()
+            imu.step_counter_reset()
         else:
             self.steps_read = imu.step_counter_read()
 
@@ -474,6 +477,7 @@ In order to support alternative imu devices a base set of functionality is provi
 | `acc_read()` | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
 | `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 | `step_counter_read()` | Get the step count | None | `count`: The step count |
+| `step_counter_reset()` | Reset the step count | None | None |
 | `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°).|
 | `id()` | Get the device id | None | `id`: string id of device. |
 | `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
