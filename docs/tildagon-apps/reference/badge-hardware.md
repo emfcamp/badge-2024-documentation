@@ -484,10 +484,10 @@ In order to support alternative imu devices a base set of functionality is provi
 
 To use the `imu` package:
 
-1. Import the `power` package:
+1. Import the `imu` package:
 
    ```python
-   import power
+   import imu
    ```
 
 2. Call one of the methods, for example `imu.acc_read()`.

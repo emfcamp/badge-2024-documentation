@@ -194,6 +194,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/doubleSD.jpg" loading="lazy" alt="Double micro SD card hexpansion on Tildagon badge" data-title="Double SD hexpansion by Dan Nixon" data-description="">
     <span class="label">Double micro SD hexpansion by Dan Nixon</span>
+    <span class="buyme"><a href="https://themachineshop.uk/products/dual-sd-card-hexpansion"><p>💰 BUY HERE</p></a></span>
     <span class="viewme"><a href="https://github.com/DanNixon/microsd-hexpansion"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
