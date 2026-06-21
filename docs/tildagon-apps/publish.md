@@ -19,8 +19,8 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
 
 ## Instructions
 
-1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this [GitHub repository](https://github.com/hughrawlinson/tildagon-demo/).
-2. Edit the app properties in the [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) with your name, the category of the app, and other metadata:
+1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this [GitHub repository](https://github.com/Binney/tildagon-demo/).
+2. Edit the app properties in the [`tildagon.toml` file](https://github.com/Binney/tildagon-demo/blob/main/tildagon.toml) with your name, the category of the app, and other metadata:
 
    ```toml
    [app]
