@@ -2,17 +2,9 @@
 title: Simulate your app
 ---
 
-You can try badge apps in your browser with the [Tildagon web emulator](https://emulator.badge.emfcamp.org/), or run the local simulator from the [badge-2024-software](https://github.com/emfcamp/badge-2024-software/tree/main/sim) repo.
+You can run badge apps on your computer with the local simulator from the [badge-2024-software](https://github.com/emfcamp/badge-2024-software/tree/main/sim) repo.
 
-## Web emulator
-
-The [web emulator](https://emulator.badge.emfcamp.org/) runs in your browser. Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge.
-
-App store listings include a **Run app in web emulator** link for supported apps.
-
-## Local simulator
-
-You can also simulate your badge apps locally with the [Tildagon badge simulator](https://github.com/emfcamp/badge-2024-software/tree/main/sim). This is the best option when you are developing your own app.
+There is also a [web emulator](https://emulator.badge.emfcamp.org/) but as of 21st June 2026 it does not support running your own app.
 
 ### Installation
 

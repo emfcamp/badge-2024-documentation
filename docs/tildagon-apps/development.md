@@ -17,7 +17,7 @@ There are 2 main ways to run the app: either on the badge itself, or in an emula
 
 If you have a real badge, [deploy your app to it using `mpremote`](./run-on-badge.md).
 
-Otherwise, use the [web emulator](https://emulator.badge.emfcamp.org/) or the [local simulator](./simulate.md).
+Otherwise, install the [local simulator](./simulate.md) on your computer and test it there. There is also a [web emulator](https://emulator.badge.emfcamp.org/) but as of 21st June 2026 it does not currently support running your own app.
 
 Once you're ready, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
 
