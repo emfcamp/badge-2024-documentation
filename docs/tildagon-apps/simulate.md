@@ -16,9 +16,12 @@ You can also simulate your badge apps locally with the [Tildagon badge simulator
 
 ### Installation
 
+1. Install [Python](https://www.python.org/downloads/).
+1. Install pipenv if you didn't already: `pip install --user pipenv`.
+1. You should now be able to run `pipenv --version` in a terminal and it shouldn't error. If you don't, try `python -m pipenv --version`. If that works but `pipenv --version` didn't, you'll need to remember to type `python -m` before `pipenv` for the rest of this guide.
 1. Clone the [badge-2024-software repo](https://github.com/emfcamp/badge-2024-software/tree/main/).
-2. Open a terminal and navigate to the [sim](https://github.com/emfcamp/badge-2024-software/tree/main/sim) folder.
-3. From there, run `pipenv install` to install all dependencies.
+1. Open a terminal and navigate to the [sim](https://github.com/emfcamp/badge-2024-software/tree/main/sim) folder.
+1. From there, run `pipenv install` to install all dependencies.
 
 !!! note "Not running as expected?"
 

@@ -11,14 +11,14 @@ If you want to see the finished code, see [Finished Code](#finished-code).
 
 ## Environment setup
 
-To start developing your own app, you first need to set up your environment. Follow the installation steps in [Simulate your app](../simulate.md).
+To start developing your own app, you first need to get your badge talking to your computer. Plug it in over USB-C and follow the instructions in [Run the app on your badge](../run-on-badge.md).
 
-## Create the app and test is
+If you don't have a badge handy, you can instead use a simulator. Follow the installation steps in [Simulate your app](../simulate.md).
 
-The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder.
+## Create the app and test it
 
-1.  Create a folder for your snake app called `snake`.
-2.  In the new folder (`sim/apps/snake/`), create a file called `app.py` and add the following code:
+1. Create a folder for your snake app called `snake`. If you're using the simulator, this needs to live in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder.
+2.  In your new folder, create a file called `app.py` and add the following code:
 
     ```python
     import app
@@ -70,7 +70,17 @@ The badge simulator simulates all apps in the [`sim/apps/`](https://github.com/e
     }
     ```
 
-5.  At this point you can run your app with the simulator for the first time. You should do this before continuing the tutorial to test that everything is working:
+5.  At this point you can run your app for the first time. You should do this before continuing the tutorial to test that everything is working. 
+
+If you're using a real badge and `mpremote`, open a terminal in your new `snake` folder and run:
+
+    ```sh
+    mpremote cp ./* :/apps/snake
+    ```
+
+Then press the **reboop** button for 2 seconds to restart the app.
+
+If you're using the simulator, open a terminal in the `sim/` folder:
 
     ```sh
     pipenv run python run.py
@@ -156,7 +166,7 @@ class SnakeApp(app.App):
     __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to ensure you can see the board:
+Go ahead and run your app to ensure you can see the board:
 
 ![App showing the snake game board](../../images/snake/board.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
@@ -232,7 +242,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to ensure you can see the snake:
+Go ahead and run your app to ensure you can see the snake:
 
 ![App showing the snake game board](../../images/snake/snake-start.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
@@ -368,7 +378,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator, then press the up, down, right, or left buttons to ensure you can move the snake. Be aware that your snake can currently move off the visible screen, so pay attention when you open the app!
+Go ahead and run your app, then press the up, down, right, or left buttons to ensure you can move the snake. Be aware that your snake can currently move off the visible screen, so pay attention when you open the app!
 
 ![App showing the snake moving slowlier](../../images/snake/run-off.gif){: style="margin:auto;display:block;" }
 
@@ -462,7 +472,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to ensure your snake now moves more slowly:
+Go ahead and run your app to ensure your snake now moves more slowly:
 
 ![App showing the snake moving slowlier](../../images/snake/slower.gif){: style="margin:auto;display:block;" }
 
@@ -619,7 +629,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to see your food appear:
+Go ahead and run your app to see your food appear:
 
 ![App showing food appearing](../../images/snake/food.gif){: style="margin:auto;display:block;" }
 
@@ -743,7 +753,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to ensure your snake can eat the food:
+Go ahead and run your app to ensure your snake can eat the food:
 
 ![App showing the snake moving slowlier](../../images/snake/eat.gif){: style="margin:auto;display:block;" }
 
@@ -887,7 +897,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to check the score:
+Go ahead and run your app to check the score:
 
 ![App showing the score](../../images/snake/score.png){: style="width:400px;height: auto;margin:auto;display:block;" }
 
@@ -1171,7 +1181,7 @@ class SnakeApp(app.App):
 __app_export__ = SnakeApp
 ```
 
-Go ahead and run your app in the simulator to test the game state logic:
+Go ahead and run your app to test the game state logic:
 
 ![App showing the game over dialogue](../../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
 
