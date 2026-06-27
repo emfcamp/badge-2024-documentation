@@ -860,9 +860,7 @@ To use layouts:
         ```python
         button_display = ButtonDisplay(
             text="Select me",
-            app=self,
             font_size=8,
-            rgb=(50, 0, 0),
             button_handler=self.select_handler)
         self.layout.items.append(button_display)
         ```
@@ -872,9 +870,7 @@ To use layouts:
         | Parameter | Type | Description |
         | --------- | ---- | ----------- |
         | `text` | `str` | The long text to display. |
-        | `app` | `App` | The app to add the button display to. |
         | `font_size` | `int` | The font size to display the text in. |
-        | `rgb` | `tuple` | The color to display the text in. |
         | `button_handler` | `method` | The handler for button events. |
 
         Create an asynchronous `select_handler` that does something when a button is pressed:
