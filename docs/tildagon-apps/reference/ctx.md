@@ -284,9 +284,9 @@ class ExampleApp(app.App):
         clear_background(ctx)
         ctx.save()
 
-        ctx.radial_gradient(30, 30, 80, -30, -50, 70)
-        ctx.add_stop(0, (100, 0, 100), 0.5)
-        ctx.add_stop(1, (100, 0, 0), 0.8)
+        ctx.radial_gradient(0, 0, 80, 0, 0, 20)
+        ctx.add_stop(0, (0.5, 0, 0), 0.9)
+        ctx.add_stop(1, (0.5, 0, 0.5), 0.5)
         ctx.rectangle(-100, -100, 200, 200).fill()
 
         ctx.restore()
