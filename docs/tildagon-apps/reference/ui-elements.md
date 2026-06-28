@@ -839,7 +839,7 @@ To use layouts:
         Initialize the text_display in your `__init__` or in your `update` method and add it to the `self.layout.items` variable:
 
         ```python
-        text_display = TextDisplay("My long text", font_size=8, rgb=(0, 0, 50))
+        text_display = TextDisplay("My long text", font_size=8, rgb=(0, 0, 1))
         self.layout.items.append(text_display)
         ```
 
