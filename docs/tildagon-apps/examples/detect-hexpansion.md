@@ -15,7 +15,8 @@ from events.input import Buttons, BUTTON_TYPES
 from system.eventbus import eventbus
 from system.hexpansion.events import \
     HexpansionUnmountedEvent, HexpansionMountedEvent
-from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr, get_slots_by_vid_pid
+from system.hexpansion.util import \
+    read_hexpansion_header, detect_eeprom_addr, get_slots_by_vid_pid
 
 
 class ExampleApp(app.App):
