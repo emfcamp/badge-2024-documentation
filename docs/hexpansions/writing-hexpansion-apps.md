@@ -243,4 +243,25 @@ Hexpansion ports have two types of GPIO pins - `Pin` objects and `ePin` objects.
 
 The objects you can access through `HexpansionConfig` should allow you to develop your app using standard MicroPython methods.
 
-Your app can also register handlers for `HexpansionInsertionEvent` and `HexpansionRemovalEvent` event types, to deal with new hexpansions being plugged in or removed. An example of this is [available in the app examples.](../tildagon-apps/examples/detect-hexpansion.md)
+Apps running on the badge can also register handlers for `HexpansionInsertionEvent` and `HexpansionRemovalEvent` event types, to deal with new hexpansions being plugged in or removed. An example of this is [available in the app examples.](../tildagon-apps/examples/detect-hexpansion.md). Note that apps running off Hexpansion EEPROMs are not guaranteed to receive a `HexpansionRemovalEvent` before they are terminated when removing a hexpansion, in this case implement a `deinit` method.
+
+Apps running from the Hexpansion EEPROM should implement a `deinit` function if they need to clean up after removal. This will be called synchronously in the hexpansion removal handler and is a suitable place for calling the Micropython `deinit` methods of hardware (SPI, SD Card etc.) or for unmounting storage etc. Below is a snippet of code for a Hexpansion app that uses the hardware SPI peripheral disables it again when the hexpansion is removed.
+
+    ```python
+    class AwesomeHexpansionApp(app.App):
+        def __init__(self, config=None):
+            super().__init__()
+
+            self.spi = SPI(
+                        1,
+                        10000000,
+                        sck=self.config.pin[1],
+                        mosi=self.config.pin[2],
+                        miso=self.config.pin[3]
+            )
+
+        def deinit(self):
+            self.spi.deinit()
+        
+        ...
+    ```
