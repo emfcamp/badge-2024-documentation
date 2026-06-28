@@ -8,8 +8,12 @@ div.scroll-container {
 }
 
 div.scroll-container img {
-  padding: 0px 10px;
-  max-height: 150px;
+  width: calc(100% - 20px);
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 10px;
 }
 
 div.scroll-container .img-container {
@@ -50,9 +54,9 @@ div.scroll-container .img-container {
 }
 
 #showmore {
-  background-color: #528329;
+  background-color: #F77F02;
   border: none;
-  color: white;
+  color: var(--emf-dark-blue);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -66,46 +70,58 @@ div.scroll-container .img-container {
 }
 
 .buyme p {
-  background-color: #528329;
+  background-color: #2AE28C;
   margin: 0.25rem auto 0 auto;
   width: 100px;
-  height: 1rem;
-  color: white;
-  text-align: center;
+  min-height: 1rem;
+  color: #000730;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.25rem;
 }
 
 .buyme p:hover {
-  background-color: #213018;
+  background-color: #005D96;
+  color: white;
 }
 
 .printme p {
   background-color: #F77F02;
   margin: 0.25rem auto 0 auto;
   width: 100px;
-  height: 1rem;
-  color: white;
-  text-align: center;
+  min-height: 1rem;
+  color: var(--emf-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.25rem;
 }
 
 .printme p:hover {
-  background-color: #c54a00;
+  background-color: #F5515E;
+  color: var(--emf-dark-blue);
 }
 
 .viewme p {
   background-color: #2EADD9;
   margin: 0.25rem auto 0 auto;
   width: 100px;
-  height: 1rem;
-  color: white;
-  text-align: center;
+  min-height: 1rem;
+  color: var(--emf-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.25rem;
 }
 
 .viewme p:hover {
   background-color: #2eaed980;
+  color: var(--emf-dark-blue);
 }
 
 #showmore:hover {
-  color: rgba(255,255,255,0.7)
+  color: rgba(0, 7, 48, 0.7);
 }
 
 .detailbuttons {
@@ -117,61 +133,95 @@ div.scroll-container .img-container {
 }
 
 /* // ---------------------------------------------------------------------------- */
-/* // COLORS */
+/* // COLORS — EMF 2026 palette (https://www.emfcamp.org/about/branding) */
 /* // ---------------------------------------------------------------------------- */
 
 :root {
-
-  /* Primary color shades */
-  --md-primary-fg-color: #000000;
-  --md-primary-fg-color--light: #861f4194;
-  --md-primary-fg-color--dark: #F55089;
-  --md-primary-bg-color: hsla(0, 0%, 100%, 1);
-  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
-  --md-text-link-color: #2EADD9;
-
-  /* Accent color shades */
-  --md-accent-fg-color--transparent: hsla(189, 100%, 37%, 0.1);
-  --md-accent-bg-color: hsla(0, 0%, 100%, 1);
-  --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+  --emf-orange: #F77F02;
+  --emf-coral: #F5515E;
+  --emf-yellow: #F9E200;
+  --emf-green: #2AE28C;
+  --emf-light-blue: #2EADD9;
+  --emf-mid-blue: #005D96;
+  --emf-dark-blue: #000730;
 }
 
 [data-md-color-scheme=slate][data-md-color-primary=indigo] {
-  --md-typeset-a-color: white;
-}
-
-[data-md-color-scheme=slate] {
-  --md-default-bg-color: #213018;
+  --md-typeset-a-color: #ffffff;
 }
 
 :root > * {
 
   /* Primary color shades */
-  --md-primary-fg-color: #528329;
-  --md-primary-fg-color--light: #213018;
-  --md-primary-fg-color--dark: #528329;
+  --md-primary-fg-color: var(--emf-orange);
+  --md-primary-fg-color--light: var(--emf-mid-blue);
+  --md-primary-fg-color--dark: var(--emf-coral);
   --md-primary-bg-color: hsla(0, 0%, 100%, 1);
   --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
-  --md-text-link-color: hsla(231, 48%, 48%, 1);
-  --md-typeset-a-color: black;
+  --md-text-link-color: var(--emf-mid-blue);
+  --md-typeset-a-color: var(--md-typeset-color);
 
   /* Accent color shades */
   --md-accent-fg-color: #2EADD9;
   --md-accent-fg-color--transparent: hsla(189, 100%, 37%, 0.1);
-  --md-accent-bg-color: #hsla(0, 0%, 100%, 1);
+  --md-accent-bg-color: hsla(0, 0%, 100%, 1);
   --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
 
-  /* Code block color shades */
-  --md-code-bg-color: rgb(20, 10, 10, 0.1);
-  --md-code-bg-color--dark: rgb(20, 10, 10, 0.8);
-  --md-code-fg-color: var(--md-code-fg-color--light);
-
-  /* Footer */
-  --md-footer-bg-color: #528329;
+  /* Footer — dark-blue text on orange gives 7.7:1 contrast (WCAG AA) */
+  --md-footer-bg-color: var(--emf-orange);
   --md-footer-bg-color--dark: hsla(0, 0%, 0%, 0.32);
-  --md-footer-fg-color: hsla(0, 0%, 100%, 1);
-  --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
-  --md-footer-fg-color--lighter: hsla(0, 0%, 100%, 0.3);
+  --md-footer-fg-color: var(--emf-dark-blue);
+  --md-footer-fg-color--light: rgba(0, 7, 48, 0.7);
+  --md-footer-fg-color--lighter: rgba(0, 7, 48, 0.5);
+}
+
+/* Code backgrounds — must come after :root > * which would otherwise override them */
+[data-md-color-scheme=default] {
+  --md-code-bg-color: rgba(0, 7, 48, 0.06);
+  --md-code-bg-color--dark: rgba(0, 7, 48, 0.8);
+  --md-primary-bg-color: var(--emf-dark-blue);
+  --md-primary-bg-color--light: rgba(0, 7, 48, 0.7);
+
+  /* Syntax highlighting — light theme */
+  --md-code-hl-keyword-color:     var(--emf-mid-blue);
+  --md-code-hl-name-color:        var(--emf-dark-blue);
+  --md-code-hl-variable-color:    var(--emf-mid-blue);
+  --md-code-hl-function-color:    var(--emf-coral);
+  --md-code-hl-string-color:      var(--emf-coral);
+  --md-code-hl-number-color:      var(--emf-orange);
+  --md-code-hl-constant-color:    var(--emf-orange);
+  --md-code-hl-operator-color:    var(--emf-orange);
+  --md-code-hl-punctuation-color: var(--emf-mid-blue);
+  --md-code-hl-special-color:     var(--emf-orange);
+  --md-code-hl-generic-color:     var(--emf-mid-blue);
+  --md-code-hl-comment-color:     var(--emf-mid-blue);
+}
+
+[data-md-color-scheme=slate] {
+  --md-default-bg-color: var(--emf-dark-blue);
+  --md-primary-fg-color: var(--emf-yellow);
+  --md-primary-fg-color--light: var(--emf-mid-blue);
+  --md-primary-fg-color--dark: var(--emf-coral);
+  --md-primary-bg-color: var(--emf-dark-blue);
+  --md-primary-bg-color--light: rgba(0, 7, 48, 0.7);
+  /* white tint: dark-blue rgba is invisible on the dark-blue page background */
+  --md-code-bg-color: rgba(255, 255, 255, 0.1);
+  --md-code-bg-color--dark: rgba(255, 255, 255, 0.16);
+  --md-code-hl-color: hsla(0, 0%, 100%, 0.1);
+
+  /* Syntax highlighting — dark theme */
+  --md-code-hl-keyword-color:     var(--emf-yellow);
+  --md-code-hl-name-color:        #ffffff;
+  --md-code-hl-variable-color:    var(--emf-light-blue);
+  --md-code-hl-function-color:    var(--emf-light-blue);
+  --md-code-hl-string-color:      var(--emf-green);
+  --md-code-hl-number-color:      var(--emf-orange);
+  --md-code-hl-constant-color:    var(--emf-coral);
+  --md-code-hl-operator-color:    var(--emf-yellow);
+  --md-code-hl-punctuation-color: var(--emf-light-blue);
+  --md-code-hl-special-color:     var(--emf-orange);
+  --md-code-hl-generic-color:     var(--emf-light-blue);
+  --md-code-hl-comment-color:     var(--emf-light-blue);
 }
 
 .md-typeset .admonition.info, .md-typeset details.info, .md-typeset .admonition.note, .md-typeset details.note  {
@@ -187,33 +237,61 @@ div.scroll-container .img-container {
 }
 
 .md-typeset .admonition.tip, .md-typeset details.tip  {
-  border-color: #AFC944;
+  border-color: #2AE28C;
 }
 
 .md-typeset .tip>.admonition-title:before {
-  background-color:#AFC944
+  background-color: #2AE28C;
 }
 
 .md-typeset .tip>.admonition-title, .md-typeset .tip>summary {
-  background-color: rgba(175, 201, 68,0.2)
+  background-color: rgba(42, 226, 140, 0.2);
 }
 
 .md-typeset .admonition.warning, .md-typeset details.warning  {
-  border-color: rgb(246, 127, 2);
+  border-color: #F77F02;
 }
 
 .md-typeset .warning>.admonition-title:before {
-  background-color:rgb(246, 127, 2);
+  background-color: #F77F02;
 }
 
 .md-typeset .warning>.admonition-title, .md-typeset .warning>summary {
-  background-color: rgba(246, 127, 2,0.2)
+  background-color: rgba(247, 127, 2, 0.2);
 }
 
 .md-content a {
   text-decoration: underline;
 }
 
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: var(--emf-mid-blue);
+}
+
+[data-md-color-scheme=slate] .md-typeset a {
+  color: #ffffff;
+}
+
+[data-md-color-scheme=slate] .md-typeset a:hover,
+[data-md-color-scheme=slate] .md-typeset a:focus {
+  color: var(--emf-light-blue);
+}
+
 .grid.cards a {
   text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
 }

@@ -6,6 +6,9 @@ theme:
   name: material
   logo: "images/badge icon_64 wide cutouts_dark.svg"
   favicon: images/favicon.png
+  font:
+    text: Raleway
+    code: Roboto Mono
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -59,9 +62,9 @@ plugins:
       cache_safe: true
   - social:
       cards_layout_options:
-        background_color: "#528329"
+        background_color: "#F77F02"
         color: "#ffffff"
-        font-family: "Roboto"
+        font-family: "Raleway"
   - search
   - spellcheck:
       backends:  # the backends you want to use
