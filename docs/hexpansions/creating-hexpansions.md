@@ -108,6 +108,10 @@ Hexpansion connectors provide:
 - 5 lower-speed GPIO pins connected to a GPIO expander/LED driver
 - 1 hexpansion detection pin (also used to switch power to the hexpansion on/off if needed)
 
+??? tip "Need 5V on your hexpansion?"
+
+    Hexpansion connectors only provide 3.3V. If your design needs a stable 5V rail (for example to drive certain LEDs or peripherals), step up from 3.3V with a boost converter. Community hexpansions, like the [googly-eye hexpansion](https://github.com/emfcamp/badge-2024-addons/tree/main/thinkl33t/googly-eye-hexpansion) have used the **AP3602** (AP3602A) for this.
+
 A hexpansion can optionally provide an I2C EEPROM from the list of approved devices. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there.
 
 For more information see [EEPROM format](./eeprom.md).
