@@ -852,7 +852,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/bodgeham-smart-pass.jpg" loading="lazy" alt="Bodgeham Smart Pass hexpansion by Joe Nash" data-title="Bodgeham Smart Pass by Joe Nash" data-description="">
-    <span class="label">Bodgeham Smart Pass by Joe Nash</span>
+    <span class="label">Bodgeham Smart Pass by Joe Nash on behalf of [BECCO](https://www.bodgeham-on-wye-gov.uk/)</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/batspansion.jpg" loading="lazy" alt="Batspansion hexpansion by Joe Nash" data-title="Batspansion by Joe Nash" data-description="">
