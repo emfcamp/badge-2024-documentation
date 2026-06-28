@@ -46,6 +46,10 @@ The large screws in your kit are **M3×5** and fit the brass **M3** standoffs on
 
 ### 1. Attach the standoffs to the base of the badge
 
+!!! warning "Important: board spacing update for 2026 badge"
+
+    To avoid battery squishing, we're increasing board spacing by 1mm to use 11mm tall standoffs! If you're assembling your badge, please use the updated standoffs included in your kit.
+
 Get the three brass M3 standoffs. Remove the plastic protector stickers on top of the middle screw mounts wherever you see three mounts together:
 
 <p style="text-align: center;">

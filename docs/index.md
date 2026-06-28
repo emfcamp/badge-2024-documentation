@@ -230,6 +230,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     Dumont</span>
     <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-flopagon">
+      <p>Floppy disk hexpansion with app and EEPROM support. See the <a href="https://github.com/hairymnstr/flopagon#software">software setup instructions</a> on GitHub.</p>
       <div class="detailbuttons">
         <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
       </div>
@@ -847,6 +848,42 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/colours.gif" loading="lazy" alt="LEDspansion hexpansion by eastabrooka" data-title="LEDspansion by eastabrooka" data-description="">
+    <span class="label">LEDspansion by eastabrooka</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/bodgeham-smart-pass.jpg" loading="lazy" alt="Bodgeham Smart Pass hexpansion by Joe Nash" data-title="Bodgeham Smart Pass by Joe Nash" data-description="">
+    <span class="label">Bodgeham Smart Pass by Joe Nash on behalf of [Bodgeham Electronics Consulting Co-Operative (BECCO)](https://www.bodgeham-on-wye-gov.uk/)</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/batspansion.jpg" loading="lazy" alt="Batspansion hexpansion by Joe Nash" data-title="Batspansion by Joe Nash" data-description="">
+    <span class="label">Batspansion by Joe Nash</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/rox-catear.jpg" loading="lazy" alt="EMF badge with two purple cat ear hexpansions with multicoloured LEDs" data-title="Cat ear hexpansion by Rox" data-description=".custom-desc-rox-catear">
+    <span class="label"><a href="https://catcatnya.com/@rox/116739377032116481">Cat ear hexpansion</a> by Rox</span>
+    <div class="glightbox-desc custom-desc-rox-catear">
+      <p>Purple PCB cat ear hexpansions with multicoloured LEDs.</p>
+      <p>Link: <a href="https://catcatnya.com/@rox/116739377032116481">rox</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hexpansion-extender.png" loading="lazy" alt="Hexpansion extender PCB render by Matt" data-title="Hexpansion extender by Matt" data-description="">
+    <span class="label">Hexpansion extender by Matt</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hextension.png" loading="lazy" alt="Hextension hexpansion hub PCB render by Danny Walker" data-title="Hextension by Danny Walker" data-description="">
+    <span class="label">Hextension by Danny Walker</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/donglegon.jpg" loading="lazy" alt="Donglegon hexpansion PCBs — yellow and purple versions" data-title="Donglegon by Kristian" data-description="">
+    <span class="label">Donglegon by Kristian</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/planet.gif" loading="lazy" alt="Orrery hexpansion by Danny Walker" data-title="Orrery hexpansion by Danny Walker" data-description="">
+    <span class="label">Orrery hexpansion by Danny Walker</span>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/hexpaaaansion.png" loading="lazy" alt="Hexpaaaansion flexible PCB with extended arm and microSD connector" data-title="Hexpaaaansion by kliment" data-description=".custom-desc-hexpaaaansion">
     <span class="label">Hexpaaaansion by kliment</span>
     <div class="glightbox-desc custom-desc-hexpaaaansion">
@@ -857,10 +894,13 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/badgebot.png" loading="lazy" alt="Badgebot HEX-DRIVE-V2 PCB render by RobotMad" data-title="Badgebot by RobotMad" data-description=".custom-desc-badgebot">
     <span class="label">Badgebot by Team RobotMad</span>
     <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
+    <span class="viewme"><a href="https://www.youtube.com/watch?v=nwokSwrpd7Y"><p>🎥 WATCH IT</p></a></span>
     <div class="glightbox-desc custom-desc-badgebot">
       <p>HEX-DRIVE-V2: robot driver hexpansion with 2 motors, 2 servos, TOF distance sensor, and colour sensor.</p>
+      <p>Video: <a href="https://www.youtube.com/watch?v=nwokSwrpd7Y">The Making of BadgeBot 2026</a></p>
       <div class="detailbuttons">
         <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
+        <span class="viewme"><a href="https://www.youtube.com/watch?v=nwokSwrpd7Y"><p>🎥 WATCH IT</p></a></span>
       </div>
     </div>
   </span>
