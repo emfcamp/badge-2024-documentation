@@ -594,6 +594,7 @@ You can also use the following hexpansion-related events
 - `HexpansionInsertionEvent`
 - `HexpansionFormattedEvent`
 - `HexpansionMountedEvent`
+- `HexpansionUnmountedEvent`
 
 To use these events with the `EventBus`, import the following package:
 
@@ -869,7 +870,7 @@ bus = I2C(1)
 
 === "App loaded from badge"
 
-    If it's an app loaded from the badge, you'll need to check each port:
+    If it's an app loaded from the badge, you'll need to find the port:
 
     ```python
     import app
@@ -879,7 +880,7 @@ bus = I2C(1)
     from app_components import clear_background
     from events.input import Buttons, BUTTON_TYPES
     from system.eventbus import eventbus
-    from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+    from system.hexpansion.events import HexpansionUnmountedEvent, HexpansionMountedEvent
     from system.hexpansion.config import HexpansionConfig
     from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
 
@@ -889,8 +890,8 @@ bus = I2C(1)
             self.text = "No hexpansion found."
             self.hexpansion_config = self.scan_for_hexpansion()
 
-            eventbus.on(HexpansionInsertionEvent, self.handle_hexpansion_insertion, self)
-            eventbus.on(HexpansionRemovalEvent, self.handle_hexpansion_removal, self)
+            eventbus.on(HexpansionMountedEvent, self.handle_hexpansion_insertion, self)
+            eventbus.on(HexpansionUnmountedEvent, self.handle_hexpansion_removal, self)
 
         def handle_hexpansion_insertion(self, event):
             self.hexpansion_config = self.scan_for_hexpansion()
@@ -914,27 +915,10 @@ bus = I2C(1)
             ctx.restore()
 
         def scan_for_hexpansion(self):
-            for port in range(1, 7):
-                print(f"Searching for hexpansion on port: {port}")
-                i2c = I2C(port)
-                addr, addr_len = detect_eeprom_addr(i2c)
-
-                if addr is None:
-                    continue
-                else:
-                    print("Found EEPROM at addr " + hex(addr))
-
-                header = read_hexpansion_header(i2c, addr, addr_len=addr_len)
-                if header is None:
-                    continue
-                else:
-                    print("Read header: " + str(header))
-                self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
-                return HexpansionConfig(port)
-
-            self.color = (1, 0, 0)
-            self.text = "No hexpansion found."
-
+            # Enter the vid/pid pair here
+            slots = get_slots_by_vid_pid(vid=0x0000, pid=0x0000)
+            if slots:
+                return HexpansionConfig(slots[0])
             return None
 
         __app_export__ = ExampleApp
