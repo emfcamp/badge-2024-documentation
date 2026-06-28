@@ -573,7 +573,6 @@ To use the `power` package:
 | `EPR Adj V` | (int) Power (W) | (float) Min. Voltage (V) | (float) Max. Voltage (V) | (int) peak Current (see USB standard) |
 | `SPR Adj V` | (int) Max. Current for 15-20V range (mA) | (int) Max. Current for 9-15V range (mA) | (int) peak Current (see USB standard) | - |
 
-
 ### Events
 
 If you want to use the [`EventBus`](./eventbus.md), you can use it with the following events:
