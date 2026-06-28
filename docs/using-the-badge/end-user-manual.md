@@ -19,6 +19,7 @@ The hexpansions that the badge supports allow you to extend the functionality of
 - [I want to know how to assemble the badge](#assembly)
 - [I want to connect to another Wi-Fi network](./connect-to-wifi.md)
 - [(Re)flash your badge](./flash-the-badge.md)
+- [Insert hexpansions](#hexpansions)
 - [Operate your badge](#operate-your-badge)
 - [Accessories](./accessory-ideas.md)
 - [Common problems](./common-problems.md)
@@ -129,6 +130,14 @@ Use the 3 **M3×5** screws to screw the badge front to the badge base, into the 
 ![Finished badge](../images/badge-photos/finished.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
 
 That's it!
+
+## Hexpansions
+
+Slide a hexpansion into a slot on the edge of the badge until the connector tab is fully connected. The badge should detect it automatically and light up the port.
+
+![Inserting a hexpansion](../images/hexpansions/inserthexpansion.png){: style="width:100px;height: auto;margin:auto;display:block;" }
+
+Hexpansions must be **1mm thick** to fit properly. If yours is not detected, see [Detecting hexpansions](./common-problems.md#detecting-hexpansions).
 
 ## Operate your badge
 
