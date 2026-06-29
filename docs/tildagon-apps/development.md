@@ -5,15 +5,18 @@ weight: -3
 
 This guide will help you build a "Hello, World" app for the Tildagon badge.
 
-## Download the demo
+## Hello World app
 
-Download the demo app from Github: [https://github.com/Binney/tildagon-demo](https://github.com/Binney/tildagon-demo).
+This is a small Tildagon app. The app imports the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), sets a button to allow you to cancel out of the app, and writes `Hello, world!` to the badge screen:
 
-Use Git, or download it directly (Code -> Download ZIP).
 
 ## Run the app
 
-There are 2 main ways to run the app: either on the badge itself, or in an emulator.
+To test the app, we recommend the [local simulator](./simulate.md).
+
+If you need to access badge hardware, [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). 
+
+Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/). After the app is published you can also use it in the [web emulator](https://emulator.badge.emfcamp.org/).
 
 If you have a real badge, [deploy your app to it using `mpremote`](./run-on-badge.md).
 
@@ -21,36 +24,7 @@ Otherwise, install the [local simulator](./simulate.md) on your computer and tes
 
 Once you're ready, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
 
-## What's in an app?
 
-Here's the core source code. It's ultra simple: we import the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), set a button to allow you to cancel out of the app, and write `Hello, world!` to the badge screen:
-
-```python
-from app import App
-from app_components import clear_background
-
-from events.input import Buttons, BUTTON_TYPES
-
-class DemoApp(App):
-  def __init__(self):
-    self.button_states = Buttons(self)
-
-  def update(self, delta):
-    if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-      # The button_states do not update while you are in the background.
-      # Calling clear() ensures the next time you open the app, it stays
-      # open. Without it the app would close again immediately.
-      self.button_states.clear()
-      self.minimise()
-
-  def draw(self, ctx):
-    clear_background(ctx)
-    ctx.text_align = ctx.CENTER
-    ctx.text_baseline = ctx.MIDDLE
-    ctx.move_to(0, 0).rgb(0.7, 1, 1).text("Hello, world!")
-
-__app_export__ = DemoApp
-```
 
 ![A simulation of the hexagonal camp badge. The circular screen in the middle has a dark red background and the words "Hello, world!" in pale blue in the middle.](images/hello-world.png"){: style="width:300px;height: auto;margin:auto;display:block;" }
 
