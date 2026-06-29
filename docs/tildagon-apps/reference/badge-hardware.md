@@ -164,6 +164,20 @@ To use the buttons:
         # do something
    ```
 
+There are alternative groups of types, for the 2024 frontboard the alternatives are:
+
+<!-- prettier-ignore -->
+| Button | Event Type | Name |
+| ------ | ---------- | ---- |
+| `"A"` | `BUTTON_TYPES["UP"]` and `FRONTBOARD_BUTTON_TYPES["A"]` | `"A"` |
+| `"B"` | `BUTTON_TYPES["RIGHT"]` and `FRONTBOARD_BUTTON_TYPES["B"]` | `"B"` |
+| `"C"` | `BUTTON_TYPES["CONFIRM"]` and `FRONTBOARD_BUTTON_TYPES["C"]` | `"C"` |
+| `"D"` | `BUTTON_TYPES["DOWN"]` and `FRONTBOARD_BUTTON_TYPES["D"]` | `"D"` |
+| `"E"` | `BUTTON_TYPES["LEFT"]` and `FRONTBOARD_BUTTON_TYPES["E"]` | `"E"` |
+| `"F"` | `BUTTON_TYPES["CANCEL"]` and `FRONTBOARD_BUTTON_TYPES["F"]` | `"F"` |
+
+for the 2026 frontboard types see [Spaceagon](tildagon-apps/reference/spaceagon.md/#Spaceagon) 
+
 4. The `button_state` will continue returning true while the button is pressed. If you want to only do something once you can clear the `button_state` once the event has fired once:
 
    ```python

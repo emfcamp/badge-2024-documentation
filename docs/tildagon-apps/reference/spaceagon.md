@@ -24,23 +24,23 @@ each with a type for each button available with BUTTON_TYPES:
 <!-- prettier-ignore -->
 | Button | Event Type | Name |
 | ------ | ---------- | ---- |
-| `"A"` | `"UP"` | `"A"` |
-| `"C"` | `"RIGHT"` | `"C"` |
-| `"D"` | `"CONFIRM"` | `"D"` |
-| `"E"` | `"DOWN"` | `"E"` |
-| `"F"` | `"LEFT"` | `"F"` |
-| `"G"` | `"CANCEL"` | `"G"` |
+| `"A"` | `BUTTON_TYPES["UP"]` and `FRONTBOARD_BUTTON_TYPES["A"]` | `"A"` |
+| `"B"` | `BUTTON_TYPES["RIGHT"]` and `FRONTBOARD_BUTTON_TYPES["B"]` | `"B"` |
+| `"C"` | `BUTTON_TYPES["CONFIRM"]` and `FRONTBOARD_BUTTON_TYPES["C"]` | `"C"` |
+| `"D"` | `BUTTON_TYPES["DOWN"]` and `FRONTBOARD_BUTTON_TYPES["D"]` | `"D"` |
+| `"E"` | `BUTTON_TYPES["LEFT"]` and `FRONTBOARD_BUTTON_TYPES["E"]` | `"E"` |
+| `"F"` | `BUTTON_TYPES["CANCEL"]` and `FRONTBOARD_BUTTON_TYPES["F"]` | `"F"` |
 
 ### Joystick
 
 <!-- prettier-ignore -->
 | Direction | Event Type | Name |
 | --------- | ---------- | ---- |
-| `"Up"`  | `"UP"` | `"JOYUP"` |
-| `"Down"` | `"DOWN"` | `"JOYDOWN"` |
-| `"Left"` | `"LEFT"` | `"JOYLEFT"` |
-| `"Right` | `"RIGHT"` | `"JOYRIGHT"` |
-| `"Fire"`  | `"CONFIRM"` | `"JOYFIRE"` |
+| `"Up"`  | `BUTTON_TYPES["UP"]` and `JOYSTICK_BUTTON_TYPES["UP"]` | `"JOYUP"` |
+| `"Down"` | `BUTTON_TYPES["DOWN"]` and `JOYSTICK_BUTTON_TYPES["DOWN"]` | `"JOYDOWN"` |
+| `"Left"` | `BUTTON_TYPES["LEFT"]` and `JOYSTICK_BUTTON_TYPES["LEFT"]` | `"JOYLEFT"` |
+| `"Right` | `BUTTON_TYPES["RIGHT"]` and `JOYSTICK_BUTTON_TYPES["RIGHT"]` | `"JOYRIGHT"` |
+| `"Fire"`  | `BUTTON_TYPES["CONFIRM"]` and `JOYSTICK_BUTTON_TYPES["SELECT"]` | `"JOYFIRE"` |
 
 ### Touch
 
@@ -70,11 +70,18 @@ each with a type for each button available with BUTTON_TYPES:
 
 ### Usage
 
-As for the 2024 front board, there are two ways to get the button that triggered the event. This is through either the event types listed above using the system buttons as follows:
+As for the 2024 front board, there are three ways to get the button that triggered the event. This is through either the event types listed above using the system buttons as follows:
 
 ```python
-if BUTTON_TYPES["CANCEL"] in event.button:
-    print("Cancel pressed!")
+if BUTTON_TYPES["CONFIRM"] in event.button:
+    print("Confirm pressed!")
+```
+
+or using the source group:
+
+```python
+if JOYSTICK_BUTTON_TYPES["SELECT"] in event.button:
+    print("Select pressed!")
 ```
 
 or using the individual button names:
