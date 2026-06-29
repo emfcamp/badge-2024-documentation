@@ -13,7 +13,7 @@ This is a small Tildagon app. The app imports the [app base class](https://githu
 
 To test the app, we recommend the [local simulator](./simulate.md).
 
-If you need to access badge hardware, [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). 
+If you need to access badge hardware, [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge).
 
 Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/). After the app is published you can also use it in the [web emulator](https://emulator.badge.emfcamp.org/).
 
