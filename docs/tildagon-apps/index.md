@@ -6,7 +6,7 @@ Tildagon OS is the name for the firmware that runs on the badge. It is based on 
 
 You can write apps for the badge in MicroPython. You can use most MicroPython libraries, and for some functionality we provide abstractions - for example, you can access all buttons through [`events.input`](./reference/badge-hardware.md#buttons).
 
-For more info check out [Write a Tildagon OS App]([app-getting-started]) or follow the tutorial to [Build a snake app](./examples/snake.md).
+For more info check out [Write a Tildagon OS App](./development.md) or follow the tutorial to [Build a snake app](./examples/snake.md).
 
 ## Running your app
 
