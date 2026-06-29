@@ -70,7 +70,7 @@ If you need to have access to badge hardware that is not in the simulator, you c
     }
     ```
 
-5.  At this point you can run your app for the first time. You should do this before continuing the tutorial to test that everything is working. 
+5.  At this point you can run your app for the first time. You should do this before continuing the tutorial to test that everything is working.
 
     If you're using a real badge and `mpremote`, open a terminal in your new `snake` folder and run:
 
@@ -105,7 +105,6 @@ If you need to have access to badge hardware that is not in the simulator, you c
     !!! info "Debugging"
 
         To see debug messages, follow the steps to [debug your app on your badge](../run-on-badge.md/#debug-your-app-on-your-badge).
-
 
 ## Draw the game background
 
@@ -1214,7 +1213,7 @@ To use the imu, import the `imu` package:
 import imu
 ```
 
-Then add the `self.acc_read` variable to the ``__init__()` method:
+Then add the `self.acc_read` variable to the `__init__()` method:
 
 ```python
 def __init__(self):
