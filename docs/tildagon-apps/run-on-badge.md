@@ -5,6 +5,10 @@ weight: -3
 
 You can test your app on-device, without publishing it, using [`mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html).
 
+1. Plug the badge into your computer over USB-C. Make sure the cable is going into the USB IN port not the USB OUT port!
+1. Install [Python](https://www.python.org/downloads/) if you don't already have it.
+1. [Install `mpremote`](https://docs.micropython.org/en/latest/reference/mpremote.html).
+1. Run `mpremote --version` in a terminal. If you do not see a version, try `python -m mpremote --version`. If that works but `mpremote --version` didn't, you'll need to remember to type `python -m` before `mpremote` for the rest of this guide.
 1. Create a `metadata.json` file in your app's directory. This is necessary **only** during development. Remove this file before publishing your app to the app store.
 
    ```json
@@ -23,7 +27,6 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
    }
    ```
 
-1. Install `mpremote` following the [installation instructions](https://docs.micropython.org/en/latest/reference/mpremote.html).
 1. Create the `apps` folder if it doesn't already exist:
 
    ```sh

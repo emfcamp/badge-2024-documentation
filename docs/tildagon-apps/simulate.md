@@ -2,23 +2,19 @@
 title: Simulate your app
 ---
 
-You can try badge apps in your browser with the [Tildagon web emulator](https://emulator.badge.emfcamp.org/), or run the local simulator from the [badge-2024-software](https://github.com/emfcamp/badge-2024-software/tree/main/sim) repo.
+You can run badge apps on your computer with the local simulator from the [badge-2024-software](https://github.com/emfcamp/badge-2024-software/tree/main/sim) repo.
 
-## Web emulator
-
-The [web emulator](https://emulator.badge.emfcamp.org/) runs in your browser. Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge.
-
-App store listings include a **Run app in web emulator** link for supported apps.
-
-## Local simulator
-
-You can also simulate your badge apps locally with the [Tildagon badge simulator](https://github.com/emfcamp/badge-2024-software/tree/main/sim). This is the best option when you are developing your own app.
+There is also a [web emulator](https://emulator.badge.emfcamp.org/).
+Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge. Once you [publish your apps](./publish.md) you can also try them there.
 
 ### Installation
 
+1. Install [Python](https://www.python.org/downloads/).
+1. Install pipenv: `pip install --user pipenv`.
+1. Run `pipenv --version` in a terminal. If you don't see a version number, try `python -m pipenv --version`. If that works but `pipenv --version` didn't, you'll need to remember to type `python -m` before `pipenv` for the rest of this guide.
 1. Clone the [badge-2024-software repo](https://github.com/emfcamp/badge-2024-software/tree/main/).
-2. Open a terminal and navigate to the [sim](https://github.com/emfcamp/badge-2024-software/tree/main/sim) folder.
-3. From there, run `pipenv install` to install all dependencies.
+1. Open a terminal and navigate to the [sim](https://github.com/emfcamp/badge-2024-software/tree/main/sim) folder.
+1. From there, run `pipenv install` to install all dependencies.
 
 !!! note "Not running as expected?"
 
