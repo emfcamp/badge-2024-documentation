@@ -2,7 +2,7 @@
 
 Tildagon OS is the name for the firmware that runs on the badge. It is based on [MicroPython](https://docs.micropython.org/en/latest/), and provides some software interfaces for apps to use to interact with the badge hardware, and to provide a user interface.
 
-## Building your app
+## Building an app
 
 You can write apps for the badge in MicroPython. You can use most MicroPython libraries, and for some functionality we provide abstractions - for example, you can access all buttons through [`events.input`](./reference/badge-hardware.md#buttons).
 
@@ -10,9 +10,9 @@ For more info check out [Write a Tildagon OS App]([app-getting-started]) or foll
 
 ## Running your app
 
-You can run your app on your badge by connecting it up to your computer over USB-C. Instructions are [here](./run-on-badge.md).
+You can [run your app on your badge](./run-on-badge.md) by connecting it to your computer over USB-C.
 
-If you don't have a badge handy, or want a slightly nicer debugging experience, you can also use an emulator. Instructions on how to set that up are [here](./simulate.md). There is also a [web emulator](https://emulator.badge.emfcamp.org/) but it does not currently (21st June 2026) support running your own app.
+If you don't have a badge handy, or want a slightly nicer debugging experience, you can also [run your app on an emulator](./simulate.md). There is also a [web emulator](https://emulator.badge.emfcamp.org/) where you can run your [published apps](./publish.md).
 
 ## Publishing your app
 
