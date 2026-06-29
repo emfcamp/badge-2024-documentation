@@ -9,7 +9,6 @@ This guide will help you build a "Hello, World" app for the Tildagon badge.
 
 This is a small Tildagon app. The app imports the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), sets a button to allow you to cancel out of the app, and writes `Hello, world!` to the badge screen:
 
-
 ## Run the app
 
 To test the app, we recommend the [local simulator](./simulate.md).
@@ -23,8 +22,6 @@ If you have a real badge, [deploy your app to it using `mpremote`](./run-on-badg
 Otherwise, install the [local simulator](./simulate.md) on your computer and test it there. There is also a [web emulator](https://emulator.badge.emfcamp.org/) but as of 21st June 2026 it does not currently support running your own app.
 
 Once you're ready, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
-
-
 
 ![A simulation of the hexagonal camp badge. The circular screen in the middle has a dark red background and the words "Hello, world!" in pale blue in the middle.](images/hello-world.png"){: style="width:300px;height: auto;margin:auto;display:block;" }
 
@@ -418,6 +415,7 @@ You can also create your own user interfaces using the [`ctx` graphics library](
 ## Use `mpremote` to test an app on your badge
 
 You can test your app on-device, without publishing it, see the instructions to [run your app on your badge](./run-on-badge.md).
+
 ## What next?
 
 <div class="grid cards" markdown>
