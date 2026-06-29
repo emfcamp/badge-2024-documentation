@@ -18,8 +18,6 @@ If you don't have a badge handy, or want a slightly nicer debugging experience, 
 
 You can publish your apps to the [app store](https://apps.badge.emfcamp.org/) so EMF attendees can use them. For more info see [Publish your app](publish.md).
 
-[app-getting-started]: ./development.md
-
 ## What next?
 
 <div class="grid cards" markdown>
