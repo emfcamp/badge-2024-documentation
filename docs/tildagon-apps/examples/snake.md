@@ -86,7 +86,26 @@ If you're using the simulator, open a terminal in the `sim/` folder:
     pipenv run python run.py
     ```
 
-![App showing text This will be my snake game soon](../../images/snake/soon.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+    If you're using the simulator, open a terminal in the `sim/` folder:
+
+    ```sh
+    pipenv run python run.py
+    ```
+
+    ![App showing text This will be my snake game soon](../../images/snake/soon.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+    If you're using a real badge and `mpremote`, open a terminal in your new `snake` folder and run:
+
+    ```sh
+    mpremote cp ./* :/apps/snake
+    ```
+
+    Then press the **reboop** button for 2 seconds to restart the app.
+
+!!! info "Debugging"
+
+    To see debug messages, follow the steps to [debug your app on your badge](../run-on-badge.md/#debug-your-app-on-your-badge).
+
 
 ## Draw the game background
 
