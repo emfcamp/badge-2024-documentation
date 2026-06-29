@@ -415,6 +415,9 @@ You can use the following premade [`app_components`](reference/ui-elements.md) t
 
 You can also create your own user interfaces using the [`ctx` graphics library](./reference/ctx.md).
 
+## Use `mpremote` to test an app on your badge
+
+You can test your app on-device, without publishing it, see the instructions to [run your app on your badge](./run-on-badge.md).
 ## What next?
 
 <div class="grid cards" markdown>
