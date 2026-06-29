@@ -11,9 +11,9 @@ If you want to see the finished code, see [Finished Code](#finished-code).
 
 ## Environment setup
 
-To start developing your own app, you first need to get your badge talking to your computer. Plug it in over USB-C and follow the instructions in [Run the app on your badge](../run-on-badge.md).
+To start developing your own app, you first need to set up your environment. Follow the installation steps in [Simulate your app](../simulate.md).
 
-If you don't have a badge handy, you can instead use a simulator. Follow the installation steps in [Simulate your app](../simulate.md).
+If you need to have access to badge hardware that is not in the simulator, you can instead [Run the app on your badge](../run-on-badge.md).
 
 ## Create the app and test it
 
@@ -72,15 +72,15 @@ If you don't have a badge handy, you can instead use a simulator. Follow the ins
 
 5.  At this point you can run your app for the first time. You should do this before continuing the tutorial to test that everything is working. 
 
-If you're using a real badge and `mpremote`, open a terminal in your new `snake` folder and run:
+    If you're using a real badge and `mpremote`, open a terminal in your new `snake` folder and run:
 
     ```sh
     mpremote cp ./* :/apps/snake
     ```
 
-Then press the **reboop** button for 2 seconds to restart the app.
+    Then press the **reboop** button for 2 seconds to restart the app.
 
-If you're using the simulator, open a terminal in the `sim/` folder:
+    If you're using the simulator, open a terminal in the `sim/` folder:
 
     ```sh
     pipenv run python run.py
@@ -102,9 +102,9 @@ If you're using the simulator, open a terminal in the `sim/` folder:
 
     Then press the **reboop** button for 2 seconds to restart the app.
 
-!!! info "Debugging"
+    !!! info "Debugging"
 
-    To see debug messages, follow the steps to [debug your app on your badge](../run-on-badge.md/#debug-your-app-on-your-badge).
+        To see debug messages, follow the steps to [debug your app on your badge](../run-on-badge.md/#debug-your-app-on-your-badge).
 
 
 ## Draw the game background
