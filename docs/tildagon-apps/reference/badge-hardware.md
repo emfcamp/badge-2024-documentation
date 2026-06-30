@@ -164,6 +164,20 @@ To use the buttons:
         # do something
    ```
 
+There are alternative groups of types, for the 2024 frontboard the alternatives are:
+
+<!-- prettier-ignore -->
+| Button | Event Type | Name |
+| ------ | ---------- | ---- |
+| `"A"` | `BUTTON_TYPES["UP"]` and `FRONTBOARD_BUTTON_TYPES["A"]` | `"A"` |
+| `"B"` | `BUTTON_TYPES["RIGHT"]` and `FRONTBOARD_BUTTON_TYPES["B"]` | `"B"` |
+| `"C"` | `BUTTON_TYPES["CONFIRM"]` and `FRONTBOARD_BUTTON_TYPES["C"]` | `"C"` |
+| `"D"` | `BUTTON_TYPES["DOWN"]` and `FRONTBOARD_BUTTON_TYPES["D"]` | `"D"` |
+| `"E"` | `BUTTON_TYPES["LEFT"]` and `FRONTBOARD_BUTTON_TYPES["E"]` | `"E"` |
+| `"F"` | `BUTTON_TYPES["CANCEL"]` and `FRONTBOARD_BUTTON_TYPES["F"]` | `"F"` |
+
+for the 2026 frontboard types see [Spaceagon](tildagon-apps/reference/spaceagon.md/#Spaceagon)
+
 4. The `button_state` will continue returning true while the button is pressed. If you want to only do something once you can clear the `button_state` once the event has fired once:
 
    ```python
@@ -469,7 +483,7 @@ __app_export__ = ExampleApp
 
 ### Methods
 
-In order to support alternative imu devices a base set of functionality is provided along with i2c access to the device for apps to add functionality. An identify function is provided to determine which device is on the badge. Only the prototype badges have a different imu, but this may change in the future.
+In order to support alternative imu devices a base set of functionality is provided along with i2c access to the device for apps to add functionality. An identify function is provided to determine which device is on the badge. Only the prototype badges have a different imu, but this may change in the future. On boards that have a compass available
 
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
@@ -482,6 +496,7 @@ In order to support alternative imu devices a base set of functionality is provi
 | `id()` | Get the device id | None | `id`: string id of device. |
 | `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
 | `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
+| `mag_read()` | Get the magnetometer data if available | None | `(x,y,z)`: The magnetometer data as a tuple of floats (guass). |
 
 ### Usage
 
