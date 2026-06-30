@@ -176,7 +176,7 @@ There are alternative groups of types, for the 2024 frontboard the alternatives 
 | `"E"` | `BUTTON_TYPES["LEFT"]` and `FRONTBOARD_BUTTON_TYPES["E"]` | `"E"` |
 | `"F"` | `BUTTON_TYPES["CANCEL"]` and `FRONTBOARD_BUTTON_TYPES["F"]` | `"F"` |
 
-for the 2026 frontboard types see [Spaceagon](tildagon-apps/reference/spaceagon.md/#Spaceagon) 
+for the 2026 frontboard types see [Spaceagon](tildagon-apps/reference/spaceagon.md/#Spaceagon)
 
 4. The `button_state` will continue returning true while the button is pressed. If you want to only do something once you can clear the `button_state` once the event has fired once:
 
