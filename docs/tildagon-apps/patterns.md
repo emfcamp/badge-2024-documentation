@@ -89,9 +89,9 @@ __pattern_export__ = CyclePattern
 __Pattern_Export__ = CyclePattern
 ```
 
-> [!WARNING]
-> **Important Casing Discrepancy:**
-> Currently, Tildagon OS has a casing mismatch in how patterns are handled. The **App Store** (UI catalog) looks for `__Pattern_Export__` (capital `P` and capital `E`) to discover the app, while the **PatternDisplay** engine looks for `__pattern_export__` (all lowercase) to run it. You **must** export your pattern class under both names (as shown above) to ensure the pattern is both visible and executable.
+!!! warning "Important Casing Discrepancy"
+
+    Currently, Tildagon OS has a casing mismatch in how patterns are handled. The **App Store** (UI catalog) looks for `__Pattern_Export__` (capital `P` and capital `E`) to discover the app, while the **PatternDisplay** engine looks for `__pattern_export__` (all lowercase) to run it. You **must** export your pattern class under both names (as shown above) to ensure the pattern is both visible and executable.
 
 ---
 
@@ -187,6 +187,6 @@ class DirectControlApp(app.App):
             self.minimise()
 ```
 
-> [!TIP]
-> **Brightness is handled automatically:**
-> You do not need to read the user's pattern brightness setting or scale your RGB values. The `PatternDisplay` engine automatically scales all colours returned by `next()` using the global brightness configuration. Always return your colours at their full intended brightness (0-255).
+!!! info "Brightness is handled automatically"
+
+    You do not need to read the user's pattern brightness setting or scale your RGB values. The `PatternDisplay` engine automatically scales all colours returned by `next()` using the global brightness configuration. Always return your colours at their full intended brightness (0-255).
