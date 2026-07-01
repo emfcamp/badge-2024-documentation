@@ -478,10 +478,10 @@ In order to support alternative imu devices a base set of functionality is provi
 | `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 | `step_counter_read()` | Get the step count | None | `count`: The step count |
 | `step_counter_reset()` | Reset the step count | None | None |
-| `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°).|
+| `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°). |
 | `id()` | Get the device id | None | `id`: string id of device. |
-| `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
-| `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
+| `readfrom()` | Read from a device register | `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
+| `writeto()` | Write data to a device register | `(register address, bytes)`: address to start write to, data. | `error`: or None if ok. |
 
 ### Usage
 
@@ -555,7 +555,7 @@ To use the `power` package:
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| `Off()`| Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
+| `Off()` | Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
 | `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
 | `BatteryLevel()` | Return the battery charge level. | None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
 | `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
@@ -738,7 +738,7 @@ The `Host` port also supports sending messages to the cable plug at either end, 
 | `send_prime_msg` | Sends a prime message | `data`(`bytearray`): data, must include 2 byte header | None |
 | `send_dbl_prime_msg` | Sends a double prime message | `data`(`bytearray`): data, must include 2 byte header | None |
 | `get_prime_msg` | Gets a received prime message | None | `data`(`bytearray`): data, includes 2 byte header |
-| `get_dbl_prime_msg` | Gets a received double prime message| None | `data`(`bytearray`): data, includes 2 byte header |
+| `get_dbl_prime_msg` | Gets a received double prime message | None | `data`(`bytearray`): data, includes 2 byte header |
 
 ### Events
 
@@ -796,7 +796,7 @@ usb_out.send_prime_msg(
 | `host_send_badge_id` | Sends the id used to detect another badge on the USB out port | None | None |
 | `pd_header` | Create a message header with space for the badge to fill in physical layer info | `message_type`(`int`): see dataType and cmdType below, `no_objects`(`int`): number of 4 byte objects, optional, default 0 | `header`(`int`): 16 bit header |
 | `vdm_structured_header` | Creates a structured vendor header | `command`(`int`): see vdmCmd below, `SVID`(`int`): Standard or Vendor ID, optional, default 0xFF00, `obj_pos`(`int`):For the Enter Mode, Exit Mode and Attention Commands, optional, default 0, `version`(`int`): Structured VDM Version, optional, default 0, | `vendor_header`(`int`): 32 bit vendor header |
-| `vdm_unstructured_header` | Creates an unstructured vendor header |  `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
+| `vdm_unstructured_header` | Creates an unstructured vendor header | `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
 | `vdm_header_extract` | extract the fields of a vendor header | `vendor_header`(`int`): 32 bit vendor header | `vendor_header`(`dict`): dictionary containing each field of the header |
 
 ### Constants
