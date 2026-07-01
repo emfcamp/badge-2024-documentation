@@ -1,5 +1,5 @@
 lint-markdown:
-	markdownlint -c .markdownlint.yaml docs/**/*.md
+	npx markdownlint -c .markdownlint.yaml docs/**/*.md
 
 lint-py:
 	flake8-markdown "docs/**/*.md"

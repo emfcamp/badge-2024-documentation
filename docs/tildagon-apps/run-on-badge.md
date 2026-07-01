@@ -53,7 +53,7 @@ You can test your app on-device, without publishing it, using [`mpremote`](https
 
 1. Restart your app by holding the **reboop** button for 2 seconds.
 
-### Debug your app on your badge
+## Debug your app on your badge
 
 If your app crashes when it's started, you can get debug information from `mpremote`:
 
