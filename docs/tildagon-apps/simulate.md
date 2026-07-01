@@ -7,7 +7,7 @@ You can run badge apps on your computer with the local simulator from the [badge
 There is also a [web emulator](https://emulator.badge.emfcamp.org/).
 Use it to explore the badge UI and try apps from the [app store](https://apps.badge.emfcamp.org/) before installing them on your badge. Once you [publish your apps](./publish.md) you can also try them there.
 
-### Installation
+## Installation
 
 1. Install [Python](https://www.python.org/downloads/).
 1. Install pipenv: `pip install --user pipenv`.
@@ -20,7 +20,7 @@ Use it to explore the badge UI and try apps from the [app store](https://apps.ba
 
       Check the [known issues](https://github.com/emfcamp/badge-2024-software/tree/main/sim#known-issues).
 
-### Simulate your app
+## Simulate your app
 
 The local badge simulator simulates all apps in the [`sim/apps/`](https://github.com/emfcamp/badge-2024-software/tree/main/sim/apps/example/) folder. To test your app, place your app's python file into the `sim/apps/` folder:
 
