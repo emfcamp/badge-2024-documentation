@@ -916,6 +916,21 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <p>Link: <a href="https://mastodon.social/@ktbsupremo/116723111354841051">ktbsupremo</a></p>
     </div>
   </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/ExtSpansion.jpg" loading="lazy" alt="ExtSpansion hexpansion" data-title="ExtSpansion" data-description="">
+    <span class="label">ExtSpansion by Bob</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hexpansion-grove.jpg" loading="lazy" alt="Grove I/O Hexpansion PCB with three Grove connectors" data-title="Grove I/O Hexpansion by Andrew Lindsay" data-description=".custom-desc-hexpansion-grove">
+    <span class="label"><a href="https://github.com/thiseldo/hexpansion_grove/tree/main">Grove I/O Hexpansion</a> by Andrew Lindsay</span>
+    <span class="viewme"><a href="https://github.com/thiseldo/hexpansion_grove/tree/main"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-hexpansion-grove">
+      <p>A hexpansion to enable the many Seeed Studio Grove compatible boards to be used with the badge. Example apps included and more to be added.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/thiseldo/hexpansion_grove/tree/main"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
   <span class="button-container">
     <button type="button" id="showmore" aria-expanded="false" onclick="window.hexpansionToggleShowMore()">SHOW MORE</button>
   </span>
