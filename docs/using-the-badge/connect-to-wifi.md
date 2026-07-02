@@ -42,21 +42,13 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     import settings
     settings.set('wifi_ssid', 'changeme')
     settings.set('wifi_password', 'changeme')
-    ```
-
-    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
-
-    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
-
-    ```
     settings.set('wifi_wpa2ent_username', None)
-    ```
-
-    Run the following command to save the settings
-
-    ```
     settings.save()
     ```
+
+    !!! info "This may error. If so, ignore the error and continue. (The
+    instructions is to ensure the value isn't set, if it is already not set it
+    errors.)"
 
 === "WPA2 Enterprise network"
 
@@ -88,21 +80,11 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     import settings
     settings.set('wifi_ssid', 'changeme')
     settings.set('wifi_password', 'changeme')
-    ```
-
-    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
-
-    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
-
-    ```
     settings.set('wifi_wpa2ent_username', None)
-    ```
-
-    Run the following command to save the settings
-
-    ```
     settings.save()
     ```
+
+    !!! info "The `wifi_wpa2ent_username` line may error if the value was never set — that's fine, ignore it and continue."
 
 === "WPA2 Enterprise network"
 
