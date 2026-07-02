@@ -127,7 +127,7 @@ There are a lot of event types built into the firmware. Here are a few that are 
 
   The hexpansion manager emits these events after the firmware has finished handling the hexpansion being inserted or removed. For example, after the EEPROM filesystem has been mounted and a contained hexpansion app has been started.
 
-  In most cases you should listen for these events rather than `HexpansionInsertionEvent` / `HexpansionRemovalEvent`, because by the time `HexpansionMountedEvent` fires the hexpansion is fully ready to use.
+  In most cases you should listen for these events rather than `HexpansionInsertionEvent` and `HexpansionRemovalEvent`, because by the time `HexpansionMountedEvent` fires the hexpansion is fully ready to use.
 
   ```python
   from system.hexpansion.events import HexpansionMountedEvent, HexpansionUnmountedEvent
