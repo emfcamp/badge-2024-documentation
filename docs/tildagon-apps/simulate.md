@@ -10,6 +10,15 @@ Use it to explore the badge UI and try apps from the [app store](https://apps.ba
 ## Installation
 
 1. Install [Python](https://www.python.org/downloads/).
+
+    !!! note "macOS"
+
+        The simulator depends on SDL2. Install it with Homebrew before continuing:
+
+        ```sh
+        brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf pkg-config
+        ```
+
 1. Install pipenv: `pip install --user pipenv`.
 1. Run `pipenv --version` in a terminal. If you don't see a version number, try `python -m pipenv --version`. If that works but `pipenv --version` didn't, you'll need to remember to type `python -m` before `pipenv` for the rest of this guide.
 1. Clone the [badge-2024-software repo](https://github.com/emfcamp/badge-2024-software/tree/main/).

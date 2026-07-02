@@ -230,10 +230,6 @@ Each hexpansion has:
 - 1 SDA pin (Data) (4)
 - 1 SCL pin (Clock) (5)
 
-!!! warning
-
-    eGPIO does not work correctly in version 1.6.0.
-
 ### Example
 
 Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can see how to access an toggle the `Pin`s in the update methods:

@@ -123,11 +123,19 @@ There are a lot of event types built into the firmware. Here are a few that are 
   from system.patterndisplay.events import PatternDisable, PatternEnable
   ```
 
+* ``HexpansionMountedEvent`` and ``HexpansionUnmountedEvent``
+
+  The hexpansion manager emits these events after the firmware has finished handling the hexpansion being inserted or removed. For example, after the EEPROM filesystem has been mounted and a contained hexpansion app has been started.
+
+  In most cases you should listen for these events rather than `HexpansionInsertionEvent` and `HexpansionRemovalEvent`, because by the time `HexpansionMountedEvent` fires the hexpansion is fully ready to use.
+
+  ```python
+  from system.hexpansion.events import HexpansionMountedEvent, HexpansionUnmountedEvent
+  ```
+
 * ``HexpansionInsertionEvent`` and ``HexpansionRemovalEvent``
 
-  The hexpansion manager emits these events when it detects a hexpansion has been inserted or removed.
-
-  You can listen for these events if you want to do something interesting when a hexpansion is inserted or removed.
+  The hexpansion manager emits these events immediately when it detects a hexpansion being inserted or removed. They fire before the firmware has finished its own internal handling (such as mounting the EEPROM filesystem).
 
   These events are only emitted for a PCB hexpansion with circuitry on it, because it is the electrical connection that triggers these events. Purely-decorative (cardboard or 3D printed) hexpansions do not cause these events to be emitted.
 

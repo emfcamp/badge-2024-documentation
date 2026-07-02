@@ -279,6 +279,16 @@ div.scroll-container .img-container {
   text-decoration: none;
 }
 
+/* badge image next to text on mobile */
+@media (max-width: 459px) {
+  img[align="right"] {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1rem auto;
+    max-width: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
