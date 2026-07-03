@@ -997,3 +997,7 @@ from app_components.tokens import symbols
 | `["spider"]` | Spider | 臩 | :glyphs-spider: |
 | `["bat_open"]` | Bat with Wings Open | 멺 | :glyphs-bat_open: |
 | `["bat_closed"]` | Bat with Wings Closed | 멻 | :glyphs-bat_closed: |
+
+The spider glyph is used with kind permission of [David Thorne](https://27bslash6.com/).
+
+The keyboard glyphs are part of the [Solder Party KeebDeck](https://www.solder.party/keeb/).
