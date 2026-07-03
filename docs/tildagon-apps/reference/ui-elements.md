@@ -954,7 +954,9 @@ For colors:
 
 The default badge font is a rebuild of [Raleway](https://www.theleagueofmoveabletype.com/raleway) with some extra glyphs added to make UI design a little easier and allow for some symbols inline with text.
 
-These can be accessed from the `symbols` dict (note that `symbols` is a nested dictionary of strings for convenience of copying e.g. all arrows). Some of the special glyphs occupy spaces meant for other glyphs within the Unicode mapping, but most are mapped directly where possible. If you don't want to import the `symbols` dict for whatever reason, or you want to use a symbol in an app name, the equivalent Unicode characters are provided below so you can copy and paste them.
+These can be accessed from the `symbols` dict. This is a nested dictionary of strings for convenience of accessing e.g. all keyboard symbols. 
+
+Some of the special glyphs occupy spaces meant for other glyphs within the Unicode mapping, but most are mapped directly to their Unicode equivalents where possible. If you don't want to import the `symbols` dict for whatever reason, or you want to use a symbol in an app name, the equivalent Unicode characters are provided below so you can copy and paste them.
 
 ```python
 from app_components.tokens import symbols
