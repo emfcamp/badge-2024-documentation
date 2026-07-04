@@ -23,7 +23,7 @@ Otherwise, install the [local simulator](./simulate.md) on your computer and tes
 
 Once you're ready, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
 
-![A simulation of the hexagonal camp badge. The circular screen in the middle has a dark red background and the words "Hello, world!" in pale blue in the middle.](images/hello-world.png"){: style="width:300px;height: auto;margin:auto;display:block;" }
+![A simulation of the hexagonal camp badge. The circular screen in the middle has a dark red background and the words "Hello, world!" in pale blue in the middle.](../images/hello-world.png){: style="width:300px;height: auto;margin:auto;display:block;" }
 
 ## The `App` class
 
