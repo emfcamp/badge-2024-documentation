@@ -949,3 +949,55 @@ For colors:
 - `colors.blue`
 - `ui_colors.background`
 - `ui_colors.label`
+
+## Symbols
+
+The default badge font is a rebuild of [Raleway](https://www.theleagueofmoveabletype.com/raleway) with some extra glyphs added to make UI design a little easier and allow for some symbols inline with text.
+
+These can be accessed from the `symbols` dict. This is a nested dictionary of strings for convenience of accessing e.g. all keyboard symbols.
+
+Some of the special glyphs occupy spaces meant for other glyphs within the Unicode mapping, but most are mapped directly to their Unicode equivalents where possible. If you don't want to import the `symbols` dict for whatever reason, or you want to use a symbol in an app name, the equivalent Unicode characters are provided below so you can copy and paste them.
+
+```python
+from app_components.tokens import symbols
+```
+
+| `symbols` Key | Name | Unicode Character | Symbol Rendered on Badge |
+| -------------------- | ---- | ----------------- | ------- |
+| `["arrows"]["left"]` | Left Pointing Arrow | ← | :glyphs-pointing_arrow_left: |
+| `["arrows"]["right"]` | Right Pointing Arrow | → | :glyphs-pointing_arrow_right: |
+| `["arrows"]["up"]` | Up Pointing Arrow | ↑ | :glyphs-pointing_arrow_up: |
+| `["arrows"]["down"]` | Down Pointing Arrow | ↓ | :glyphs-pointing_arrow_down: |
+| `["arrows"]["left_right"]` | Left and Right Pointing Arrow | ↔ | :glyphs-pointing_arrow_leftright: |
+| `["arrows"]["up_down"]` | Up and Down Pointing Arrow | ↕ | :glyphs-pointing_arrow_updown: |
+| `["arrows"]["north_east"]` | North East Pointing Arrow | ↗ | :glyphs-pointing_arrow_northeast: |
+| `["arrows"]["north_west"]` | North West Pointing Arrow | ↖ | :glyphs-pointing_arrow_northwest: |
+| `["arrows"]["south_east"]` | South East Pointing Arrow | ↘ | :glyphs-pointing_arrow_southeast: |
+| `["arrows"]["south_west"]` | South West Pointing Arrow | ↙ | :glyphs-pointing_arrow_southwest: |
+| `["hexagons"]["outline"]` | Hexagon Outline | ⬡ | :glyphs-hexagon_white: |
+| `["hexagons"]["filled"]` | Hexagon Filled | ⬢ | :glyphs-hexagon_black: |
+| `["keyboard"]["return"]` | Return | ⏎ | :glyphs-return: |
+| `["keyboard"]["backspace"]` | Backspace | ␈ | :glyphs-backspace: |
+| `["keyboard"]["shift"]` | Shift | ␏ | :glyphs-shift: |
+| `["keyboard"]["square"]` | Square | □ | :glyphs-square: |
+| `["keyboard"]["triangle"]` | Triangle | △ | :glyphs-triangle: |
+| `["keyboard"]["diamond"]` | Diamond | ◇ | :glyphs-diamond: |
+| `["keyboard"]["circle"]` | Circle | ○ | :glyphs-circle: |
+| `["keyboard"]["club"]` | Club | ♣ | :glyphs-club: |
+| `["keyboard"]["cross"]` | Cross | ✕ | :glyphs-cross: |
+| `["keyboard"]["solderparty"]` | [Solder Party](https://www.solder.party/) Logo | ⭍ | :glyphs-solderparty: |
+| `["pointing_triangles"]["up"]` | Up Pointing Triangle | ▲ | :glyphs-triangle_up: |
+| `["pointing_triangles"]["down"]` | Down Pointing Triangle | ▼ | :glyphs-triangle_down: |
+| `["pointing_triangles"]["left"]` | Left Pointing Triangle | ◀ | :glyphs-triangle_left: |
+| `["pointing_triangles"]["right"]` | Right Pointing Triangle | ▶ | :glyphs-triangle_right: |
+| `["hexpansion"]` | Hexpansion | ⬣ | :glyphs-hexpansion: |
+| `["emf_logo"]` | EMF Camp Logo |  | :glyphs-emflogo2026: |
+| `["shark"]` | Shark | ǩ | :glyphs-shark: |
+| `["duck"]` | Duck | ⇩ | :glyphs-duck: |
+| `["spider"]` | Spider | 臩 | :glyphs-spider: |
+| `["bat_open"]` | Bat with Wings Open | 멺 | :glyphs-bat_open: |
+| `["bat_closed"]` | Bat with Wings Closed | 멻 | :glyphs-bat_closed: |
+
+The spider glyph is used with kind permission of [David Thorne](https://27bslash6.com/).
+
+The keyboard glyphs are part of the [Solder Party KeebDeck](https://www.solder.party/keeb/).
