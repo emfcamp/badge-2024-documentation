@@ -105,6 +105,12 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
 
 Your app will become available in the Tildagon [app store](https://apps.badge.emfcamp.org/) within 15 minutes.
 
+Each app has a permanent URL in the app store:
+
+```text
+https://apps.badge.emfcamp.org/apps/<app-id>/
+```
+
 !!! note "Updating the version"
 
       If you make changes to your app, you will need to update the version number in the `tildagon.toml` file create a new release on GitHub or Codeberg with an incremented version number.

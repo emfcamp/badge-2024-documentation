@@ -10,6 +10,13 @@ weight: 5
 !!! warning
     The frontboard of the 2026 badge is different from the 2024 badge, so 3D-printed cases designed for the 2024 badge may not fit the 2026 badge correctly.
 
+#### 2026 badge cases
+
+You can print the [Spaceagon Case](https://github.com/nightcaster/Spaceagon-Case):
+
+![Spaceagon Case](../images/badge-photos/spaceagon-case.jpg)
+
+#### 2024 badge cases
 You can print the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
 
 ![Badge bumper case](../images/badge-photos/Bumper%20Case.png)
