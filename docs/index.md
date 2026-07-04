@@ -97,10 +97,12 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/bleepie.jpg" loading="lazy" alt="Bleepie paging hexpansion on Tildagon badge" data-title="Bleepie paging hexpansion by Sam Machin" data-description=".custom-desc-bleepie">
     <span class="label"><a href="https://www.youtube.com/watch?v=itg0bViiKIg">Bleepie paging hexpansion</a> by Sam Machin</span>
     <span class="viewme"><a href="https://www.youtube.com/watch?v=itg0bViiKIg"><p>🎥 WATCH IT</p></a></span>
+    <span class="viewme"><a href="https://github.com/sammachin/rp2040-hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-bleepie">
       <p>Paging hexpansion with RAIO2, RP2040, and bleeper modules. The badge detects the hexpansion on plug-in and can send and receive pages.</p>
       <p>Videos: <a href="https://www.youtube.com/watch?v=itg0bViiKIg">YouTube</a> · <a href="https://www.youtube.com/watch?v=791P1Sn_h2k">YouTube</a></p>
       <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/sammachin/rp2040-hexpansion"><p>👀 VIEW FILES</p></a></span>
         <span class="viewme"><a href="https://www.youtube.com/watch?v=itg0bViiKIg"><p>🎥 WATCH IT</p></a></span>
         <span class="viewme"><a href="https://www.youtube.com/watch?v=791P1Sn_h2k"><p>🎥 WATCH IT</p></a></span>
       </div>
@@ -121,6 +123,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src=" ../../images/hexpansions/plotter.gif" loading="lazy" alt="Plotter hexpansion" data-title="Plotter hexpansion by Danny Walker" data-description="">
     <span class="label">Plotter hexpansion by Danny Walker</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/breakout-danny-walker.jpg" loading="lazy" alt="Breakout hexpansion by Danny Walker" data-title="Breakout hexpansion by Danny Walker" data-description="">
+    <span class="label">Breakout hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/protoboard.jpg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">

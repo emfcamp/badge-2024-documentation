@@ -166,7 +166,7 @@ div.scroll-container .img-container {
 
   /* Footer — dark-blue text on orange gives 7.7:1 contrast (WCAG AA) */
   --md-footer-bg-color: var(--emf-orange);
-  --md-footer-bg-color--dark: hsla(0, 0%, 0%, 0.32);
+  --md-footer-bg-color--dark: var(--emf-orange);
   --md-footer-fg-color: var(--emf-dark-blue);
   --md-footer-fg-color--light: rgba(0, 7, 48, 0.7);
   --md-footer-fg-color--lighter: rgba(0, 7, 48, 0.5);
@@ -197,6 +197,11 @@ div.scroll-container .img-container {
 [data-md-color-scheme=slate] {
   --md-default-bg-color: var(--emf-dark-blue);
   --md-primary-fg-color: var(--emf-yellow);
+  --md-footer-bg-color: var(--emf-yellow);
+  --md-footer-bg-color--dark: var(--emf-yellow);
+  --md-footer-fg-color: var(--emf-dark-blue);
+  --md-footer-fg-color--light: rgba(0, 7, 48, 0.7);
+  --md-footer-fg-color--lighter: rgba(0, 7, 48, 0.5);
   --md-primary-fg-color--light: var(--emf-mid-blue);
   --md-primary-fg-color--dark: var(--emf-coral);
   --md-primary-bg-color: var(--emf-dark-blue);
