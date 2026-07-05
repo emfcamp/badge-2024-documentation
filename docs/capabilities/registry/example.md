@@ -4,7 +4,7 @@ title: Capability - Mysterious Pings
 
 Capability Identifier:
 
-```
+```bash
 https://tildagon.badge.emfcamp.org/capabilities/registry/example/
 ```
 
@@ -36,11 +36,11 @@ bus.
 
 from events.custom import CustomEvent
 
+
 class MysteriousPingProviderApp:
     def __init__(self):
         pass
 
     def mysteriously():
         eventbus.emit(CustomEvent(type="mysterious_ping", data={}))
-
 ```

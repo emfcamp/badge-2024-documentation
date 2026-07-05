@@ -42,7 +42,7 @@ or tildagon.json file.
 ```toml
 [[metadata.providedCapabilities]]
 type = "ProvidedCapability"
-capability = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/mysterious-pings" }
+capability = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/registry/mysterious-pings" }
 ```
 
 ```json
@@ -51,7 +51,7 @@ capability = { type = "Capability", identifier = "https://tildagon.badge.emfcamp
     "providedCapabilities": [
       {
         "type": "ProvidedCapability",
-        "identifier": "https://tildagon.badge.emfcamp.org/capabilities/mysterious-pings"
+        "identifier": "https://tildagon.badge.emfcamp.org/capabilities/registry/mysterious-pings"
       }
     ]
   }
@@ -111,8 +111,8 @@ and even that specific micropython code can be imported from a given path.
 
 !!! note Work in Progress
 
-Badge Team is working hard to get hardware and software ready for EMF 2026.
-We will document cross-app micropython imports as soon as possible.
+    Badge Team is working hard to get hardware and software ready for EMF 2026.
+    We will document cross-app micropython imports as soon as possible.
 
 ## Can apps declare a requirement for a specific hexpansion by it's VID/PID pair?
 
@@ -135,8 +135,10 @@ The `required` value specifies whether the feature is required or supported
 
 !!! note What is a feature in contrast to a Capability?
 
-Apps can require, support or provide Capabilities, but they can also require or
-support a specific hexpansion by its VID and PID,
+    Apps can require, support or provide Capabilities, but they can also
+    require or support a specific hexpansion by its VID and PID, a Frontboard, or a
+    Tildagon OS version. "Feature" is the term we use to include these additional
+    things apps can require that are not Capabilities.
 
 ## Can apps declare a requirement or support for a particular frontboard?
 
