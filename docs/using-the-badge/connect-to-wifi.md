@@ -7,7 +7,7 @@ There are several ways to connect your Tildagon to Wi-Fi depending on what appro
 
 !!! tip "Switch between multiple Wi-Fi networks"
 
-    If you regularly move between several networks (for example home, work, and a makerspace), install [Wifi Switcher](https://apps.badge.emfcamp.org/apps/04033124/) from the app store. Use **CodeInstall** and enter **04033124** to install it. The app saves multiple network profiles so you can switch between them on the badge without retyping your SSID and password each time.
+    If you regularly move between several networks (for example home, work, and a makerspace), install [Wifi Switcher](https://apps.badge.emfcamp.org/apps/04033124/) from the app store. Use **CodeInstall** and enter _04033124_ to install it. The app saves multiple network profiles so you can switch between them on the badge without retyping your SSID and password each time.
 
 ## Option 1 - Through the GUI
 
