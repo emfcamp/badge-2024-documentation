@@ -79,6 +79,18 @@ required = true
 feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/mysterious-pings" }
 ```
 
+Declaring support or requirement of multiple Capabilities works in toml as follows:
+
+```toml
+[[metadata.capabilities]]
+required = true
+feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/mysterious-pings" }
+
+[[metadata.capabilities]]
+required = true
+feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/badger-detector" }
+```
+
 ## How can my app see which Capabilities are provided on the current running badge?
 
 Check back here soon, we're working on it!
