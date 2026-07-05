@@ -41,6 +41,6 @@ class MysteriousPingProviderApp:
         pass
 
     def mysteriously():
-        eventbus.emit(CustomEvent(type="mysterious_ping", data={})
+        eventbus.emit(CustomEvent(type="mysterious_ping", data={}))
 
 ```
