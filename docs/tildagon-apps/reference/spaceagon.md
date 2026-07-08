@@ -1,16 +1,15 @@
 # Spaceagon
 
-The frontboard for 2026 is the Spaceagon!
+The EMF 2026 badge uses a new frontboard with a different physical layout from the 2024 badge.
+It has:
 
-## Features
+- **6 buttons** labeled A-F arranged in a row
+- a **5-way joystick** (`JOYUP`, `JOYDOWN`, `JOYLEFT`, `JOYRIGHT`, `JOYFIRE`)
+- a **12-sensor touch strip** in clock format (`TOUCH1`-`TOUCH12`)
+- **2 proximity sensors**  at the left and right hand sides (`LEFTPROX`, `RIGHTPROX`)
+- a **compass** (see [IMU](tildagon-apps/reference/badge-hardware.md/#IMU) section)
 
-- 6 Buttons
-- 5 position joystick
-- 12 touch sensors in a clock format
-- 2 proximity sensors at the left and right hand sides
-- Compass, this has been added to the [IMU](tildagon-apps/reference/badge-hardware.md/#IMU) section
-
-## Api
+## API
 
 The inputs of the Spaceagon all generate the following events:
 
@@ -32,6 +31,8 @@ each with a type for each button available with BUTTON_TYPES:
 | `"F"` | `BUTTON_TYPES["CANCEL"]` and `FRONTBOARD_BUTTON_TYPES["F"]` | `"F"` |
 
 ### Joystick
+
+Using the `BUTTON_TYPES` types makes your code compatible with both buttons and joystick, whereas the `FRONTBOARD_BUTTON_TYPES` and `JOYSTICK_BUTTON_TYPES` will only respond to usage from the buttons or joystick respectively.
 
 <!-- prettier-ignore -->
 | Direction | Event Type | Name |
