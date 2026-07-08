@@ -12,6 +12,7 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 
 <div class="grid cards" markdown>
 
+- [I want to get my own badge](https://www.emfcamp.org/about/badge)
 - [I want to know how to assemble and use the badge](using-the-badge/end-user-manual.md)
 - [I want to connect to another Wi-Fi network](using-the-badge/connect-to-wifi.md)
 - [I want to make a badge app](tildagon-apps/development.md)
@@ -96,10 +97,12 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/bleepie.jpg" loading="lazy" alt="Bleepie paging hexpansion on Tildagon badge" data-title="Bleepie paging hexpansion by Sam Machin" data-description=".custom-desc-bleepie">
     <span class="label"><a href="https://www.youtube.com/watch?v=itg0bViiKIg">Bleepie paging hexpansion</a> by Sam Machin</span>
     <span class="viewme"><a href="https://www.youtube.com/watch?v=itg0bViiKIg"><p>🎥 WATCH IT</p></a></span>
+    <span class="viewme"><a href="https://github.com/sammachin/rp2040-hexpansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-bleepie">
       <p>Paging hexpansion with RAIO2, RP2040, and bleeper modules. The badge detects the hexpansion on plug-in and can send and receive pages.</p>
       <p>Videos: <a href="https://www.youtube.com/watch?v=itg0bViiKIg">YouTube</a> · <a href="https://www.youtube.com/watch?v=791P1Sn_h2k">YouTube</a></p>
       <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/sammachin/rp2040-hexpansion"><p>👀 VIEW FILES</p></a></span>
         <span class="viewme"><a href="https://www.youtube.com/watch?v=itg0bViiKIg"><p>🎥 WATCH IT</p></a></span>
         <span class="viewme"><a href="https://www.youtube.com/watch?v=791P1Sn_h2k"><p>🎥 WATCH IT</p></a></span>
       </div>
@@ -120,6 +123,10 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src=" ../../images/hexpansions/plotter.gif" loading="lazy" alt="Plotter hexpansion" data-title="Plotter hexpansion by Danny Walker" data-description="">
     <span class="label">Plotter hexpansion by Danny Walker</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/breakout-danny-walker.jpg" loading="lazy" alt="Breakout hexpansion by Danny Walker" data-title="Breakout hexpansion by Danny Walker" data-description="">
+    <span class="label">Breakout hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/protoboard.jpg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
@@ -179,6 +186,11 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <img src=" ../../images/hexpansions/makerspace.gif" loading="lazy" alt="Makerspace hexpansion" data-title="Maker Space badge by Dan Nixon" data-description=".custom-desc-makerspace">
     <span class="label"><a href="https://www.makerspace.org.uk/">Maker Space</a> badge by Dan Nixon</span>
     <span class="viewme"><a href="https://github.com/DanNixon/hexpansions/tree/main/makerspace-badge"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-makerspace">
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/DanNixon/hexpansions/tree/main/makerspace-badge"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/ethernet.jpg" loading="lazy" alt="Ethernet and PoE hexpansion on Tildagon badge" data-title="Ethernet hexpansion by Dan Nixon" data-description=".custom-desc-ethernet">
@@ -192,10 +204,18 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/doubleSD.jpg" loading="lazy" alt="Double micro SD card hexpansion on Tildagon badge" data-title="Double SD hexpansion by Dan Nixon" data-description="">
-    <span class="label">Double micro SD hexpansion by Dan Nixon</span>
+    <img src=" ../../images/hexpansions/doubleSD.jpg" loading="lazy" alt="Dual micro SD card hexpansion on Tildagon badge" data-title="Dual SD Card hexpansion by Dan Nixon" data-description=".custom-desc-dual-sd-hexpansion">
+    <span class="label"><a href="https://themachineshop.uk/products/dual-sd-card-hexpansion">Dual SD Card hexpansion</a> by Dan Nixon</span>
     <span class="buyme"><a href="https://themachineshop.uk/products/dual-sd-card-hexpansion"><p>💰 BUY HERE</p></a></span>
     <span class="viewme"><a href="https://github.com/DanNixon/microsd-hexpansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-dual-sd-hexpansion">
+      <p>Two microSD card slots on a shared SPI bus, with physical card detection.</p>
+      <p>Link: <a href="https://fediscience.org/@samtygier/116778172027213412">@samtygier on fediscience.org</a></p>
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://themachineshop.uk/products/dual-sd-card-hexpansion"><p>💰 BUY HERE</p></a></span>
+        <span class="viewme"><a href="https://github.com/DanNixon/microsd-hexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/smol-breakout.jpeg" loading="lazy" alt="Two smol breakout hexpansions, showing both sides" data-title="Smol breakout hexpansion by Dan Nixon" data-description="">
@@ -216,6 +236,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     Dumont</span>
     <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-flopagon">
+      <p>Floppy disk hexpansion with app and EEPROM support. See the <a href="https://github.com/hairymnstr/flopagon#software">software setup instructions</a> on GitHub.</p>
       <div class="detailbuttons">
         <span class="viewme"><a href="https://github.com/hairymnstr/Flopagon"><p>👀 VIEW FILES</p></a></span>
       </div>
@@ -254,7 +275,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src="https://codeberg.org/davedarko/LEGspansion/raw/branch/main/Images/LEGspansion_front.png" loading="lazy" alt="LEGspansion PCB render with three servo connectors" data-title="LEGspansion by davedarko" data-description=".custom-desc-legspansion">
+    <img src="../../images/hexpansions/hexapod-hexpansion.png" loading="lazy" alt="LEGspansion PCB render with three servo connectors" data-title="LEGspansion by davedarko" data-description=".custom-desc-legspansion">
     <span class="label"><a href="https://codeberg.org/davedarko/LEGspansion">LEGspansion</a> by davedarko</span>
     <span class="viewme"><a href="https://codeberg.org/davedarko/LEGspansion"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-legspansion">
@@ -307,7 +328,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/light-hexpansion.png" loading="lazy" alt="TGSTL sound-to-light hexpansion (still from project video)" data-title="TGSTL sound-to-light by Tony Goacher" data-description=".custom-desc-tgstl">
+    <img src=" ../../images/hexpansions/light-hexpansion.jpg" loading="lazy" alt="TGSTL sound-to-light hexpansion (still from project video)" data-title="TGSTL sound-to-light by Tony Goacher" data-description=".custom-desc-tgstl">
     <span class="label"><a href="https://github.com/tonygoacher/tildagon_soundtolight">TGSTL</a> sound-to-light by Tony Goacher</span>
     <span class="viewme"><a href="https://github.com/tonygoacher/tildagon_soundtolight"><p>👀 VIEW FILES</p></a></span>
     <span class="viewme"><a href="https://hackaday.io/project/205329-sound-to-light-for-emf-tildagon-badge"><p>📖 READ BLOG</p></a></span>
@@ -409,6 +430,14 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/multi-threading.jpg" loading="lazy" alt="Multi-threading hexpansion with spools of thread on Tildagon badge" data-title="Multi-threading hexpansion by Iain Y" data-description=".custom-desc-multi-threading-hexpansion">
+    <span class="label"><a href="https://mastodon.social/@IainY/116782414199666576">Multi-threading hexpansion</a> by Iain Yarnall</span>
+    <div class="glightbox-desc custom-desc-multi-threading-hexpansion">
+      <p>A multi-threading hexpansion for EMF Camp.</p>
+      <p>Link: <a href="https://mastodon.social/@IainY/116782414199666576">Iain Y</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/sample-tube-holders.jpg" loading="lazy" alt="Sample tube holder hexpansions on Tildagon badge" data-title="Sample tube holders hexpansion by NekoLilly" data-description=".custom-desc-sample-tube-holders">
     <span class="label"><a href="https://www.printables.com/model/1741153-hexpansion-sample-tube-holders">Sample tube holders hexpansion</a> by NekoLilly</span>
     <span class="printme"><a href="https://www.printables.com/model/1741153-hexpansion-sample-tube-holders"><p>🖨️ PRINT ME</p></a></span>
@@ -450,12 +479,20 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">LED driver hexpansion by grajohnt</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/snail.jpg" loading="lazy" alt="Synth snail hexpansion" data-title="Synth snail hexpansion by grajohnt" data-description=".custom-desc-snail">
-    <span class="label">Synth snail hexpansion by grajohnt</span>
+    <img src=" ../../images/hexpansions/hypnosnail.gif" loading="lazy" alt="HypnoSnail hexpansion" data-title="HypnoSnail hexpansion by grajohnt" data-description=".custom-desc-snail">
+    <span class="label">HypnoSnail hexpansion by grajohnt</span>
     <span class="viewme"><a href="https://photos.app.goo.gl/PaQdymf4zkRWYKiZ8"><p>🎥 WATCH IT</p></a></span>
     <div class="glightbox-desc custom-desc-snail">
       <p>Video: <a href="https://photos.app.goo.gl/PaQdymf4zkRWYKiZ8">watch this</a></p>
       <span class="viewme"><a href="https://photos.app.goo.gl/PaQdymf4zkRWYKiZ8"><p>🎥 WATCH IT</p></a></span>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/duospander.png" loading="lazy" alt="Duospander hexpansion on Tildagon badge with two googly-eyed hexpansions" data-title="Duospander by grajohnt" data-description=".custom-desc-duospander">
+    <span class="label"><a href="https://chaos.social/@grajohnt/116261942753286887">Duospander</a> by grajohnt</span>
+    <div class="glightbox-desc custom-desc-duospander">
+      <p>Unpowered hexpansion duospander. These will be available at EMF Camp.</p>
+      <p>Link: <a href="https://chaos.social/@grajohnt/116261942753286887">grajohnt on chaos.socia</a></p>
     </div>
   </span>
   <span class="img-container collapsible collapsed">
@@ -816,8 +853,92 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       </div>
     </div>
   </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/colours.gif" loading="lazy" alt="LEDspansion hexpansion by eastabrooka" data-title="LEDspansion by eastabrooka" data-description="">
+    <span class="label">LEDspansion by eastabrooka</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/bodgeham-smart-pass.jpg" loading="lazy" alt="Bodgeham Smart Pass hexpansion by Joe Nash" data-title="Bodgeham Smart Pass by Joe Nash" data-description="">
+    <span class="label">Bodgeham Smart Pass by Joe Nash, <a href="https://www.bodgeham-on-wye-gov.uk/">(Bodgeham Electronics Consulting Co-Operative (BECCO))</a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/batspansion.jpg" loading="lazy" alt="Batspansion hexpansion by Joe Nash" data-title="Batspansion by Joe Nash" data-description="">
+    <span class="label">Batspansion by Joe Nash</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/rox-catear.jpg" loading="lazy" alt="EMF badge with two purple cat ear hexpansions with multicoloured LEDs" data-title="Cat ear hexpansion by Rox" data-description=".custom-desc-rox-catear">
+    <span class="label"><a href="https://catcatnya.com/@rox/116739377032116481">Cat ear hexpansion</a> by Rox</span>
+    <div class="glightbox-desc custom-desc-rox-catear">
+      <p>Purple PCB cat ear hexpansions with multicoloured LEDs.</p>
+      <p>Link: <a href="https://catcatnya.com/@rox/116739377032116481">rox</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hexpansion-extender.png" loading="lazy" alt="Hexpansion extender PCB render by Matt" data-title="Hexpansion extender by Matt" data-description="">
+    <span class="label">Hexpansion extender by Matt</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hextension.png" loading="lazy" alt="Hextension hexpansion hub PCB render by Danny Walker" data-title="Hextension by Danny Walker" data-description="">
+    <span class="label">Hextension by Danny Walker</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/donglegon.jpg" loading="lazy" alt="Donglegon hexpansion PCBs — yellow and purple versions" data-title="Donglegon by Kristian" data-description="">
+    <span class="label">Donglegon by Kristian</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/planet.gif" loading="lazy" alt="Orrery hexpansion by Danny Walker" data-title="Orrery hexpansion by Danny Walker" data-description="">
+    <span class="label">Orrery hexpansion by Danny Walker</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hexpaaaansion.png" loading="lazy" alt="Hexpaaaansion flexible PCB with extended arm and microSD connector" data-title="Hexpaaaansion by kliment" data-description=".custom-desc-hexpaaaansion">
+    <span class="label">Hexpaaaansion by kliment</span>
+    <div class="glightbox-desc custom-desc-hexpaaaansion">
+      <p>Flexible PCB hexpansion with an extended arm, bringing a connector further away from the badge.</p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/badgebot.png" loading="lazy" alt="Badgebot HEX-DRIVE-V2 PCB render by RobotMad" data-title="Badgebot by RobotMad" data-description=".custom-desc-badgebot">
+    <span class="label">Badgebot by Team RobotMad</span>
+    <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
+    <span class="viewme"><a href="https://www.youtube.com/watch?v=nwokSwrpd7Y"><p>🎥 WATCH IT</p></a></span>
+    <div class="glightbox-desc custom-desc-badgebot">
+      <p>HEX-DRIVE-V2: robot driver hexpansion with 2 motors, 2 servos, TOF distance sensor, and colour sensor.</p>
+      <p>Video: <a href="https://www.youtube.com/watch?v=nwokSwrpd7Y">The Making of BadgeBot 2026</a></p>
+      <div class="detailbuttons">
+        <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
+        <span class="viewme"><a href="https://www.youtube.com/watch?v=nwokSwrpd7Y"><p>🎥 WATCH IT</p></a></span>
+      </div>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/space-unicorn.png" loading="lazy" alt="Space unicorn hexpansion" data-title="Space Unicorn hexpansion by Brian C" data-description="">
+    <span class="label">Space Unicorn hexpansion by Brian C</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/ktbsupremo-hexpansion.jpg" loading="lazy" alt="KiCAD render of a hexpansion PCB featuring 5 LEDs, 2 piezo buzzers and an EEPROM" data-title="LED/Buzzer/EEPROM hexpansion by Ktbsupremo" data-description=".custom-desc-ktbsupremo">
+    <span class="label"><a href="https://mastodon.social/@ktbsupremo/116723111354841051">LED/Buzzer/EEPROM hexpansion</a> by Ktbsupremo</span>
+    <div class="glightbox-desc custom-desc-ktbsupremo">
+      <p>First PCB design featuring 5 LEDs, 2 piezo electric buzzers and an EEPROM. The EEPROM holds code to auto-load when plugged into the Tildagon.</p>
+      <p>Link: <a href="https://mastodon.social/@ktbsupremo/116723111354841051">ktbsupremo</a></p>
+    </div>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/ExtSpansion.jpg" loading="lazy" alt="ExtSpansion hexpansion" data-title="ExtSpansion" data-description="">
+    <span class="label">ExtSpansion by Bob</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/hexpansion-grove.jpg" loading="lazy" alt="Grove I/O Hexpansion PCB with three Grove connectors" data-title="Grove I/O Hexpansion by Andrew Lindsay" data-description=".custom-desc-hexpansion-grove">
+    <span class="label"><a href="https://github.com/thiseldo/hexpansion_grove/tree/main">Grove I/O Hexpansion</a> by Andrew Lindsay</span>
+    <span class="viewme"><a href="https://github.com/thiseldo/hexpansion_grove/tree/main"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-hexpansion-grove">
+      <p>A hexpansion to enable the many Seeed Studio Grove compatible boards to be used with the badge. Example apps included and more to be added.</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/thiseldo/hexpansion_grove/tree/main"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
+  </span>
   <span class="button-container">
-    <button id="showmore">SHOW MORE</button>
+    <button type="button" id="showmore" aria-expanded="false" onclick="window.hexpansionToggleShowMore()">SHOW MORE</button>
   </span>
 <!--hexpansions-end-->
 </div>

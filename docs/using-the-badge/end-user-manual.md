@@ -19,6 +19,7 @@ The hexpansions that the badge supports allow you to extend the functionality of
 - [I want to know how to assemble the badge](#assembly)
 - [I want to connect to another Wi-Fi network](./connect-to-wifi.md)
 - [(Re)flash your badge](./flash-the-badge.md)
+- [Insert hexpansions](#hexpansions)
 - [Operate your badge](#operate-your-badge)
 - [Accessories](./accessory-ideas.md)
 - [Common problems](./common-problems.md)
@@ -45,6 +46,10 @@ From top to bottom, left to right:
 The large screws in your kit are **M3×5** and fit the brass **M3** standoffs on the base board. If you mount hexpansions with screws, those use the smaller **M2** screws. See [Create a hexpansion](../hexpansions/creating-hexpansions.md#mounting-holes).
 
 ### 1. Attach the standoffs to the base of the badge
+
+!!! warning "Important: board spacing update for 2026 badge"
+
+    To avoid battery squishing, we're increasing board spacing by 1mm to use 11mm tall standoffs! If you're assembling your badge, please use the updated standoffs included in your kit.
 
 Get the three brass M3 standoffs. Remove the plastic protector stickers on top of the middle screw mounts wherever you see three mounts together:
 
@@ -125,6 +130,14 @@ Use the 3 **M3×5** screws to screw the badge front to the badge base, into the 
 ![Finished badge](../images/badge-photos/finished.jpg){: style="width:500px;height: auto;margin:auto;display:block;" }
 
 That's it!
+
+## Hexpansions
+
+Slide a hexpansion into a slot on the edge of the badge until the connector tab is fully connected. The badge should detect it automatically and light up the port.
+
+![Inserting a hexpansion](../images/hexpansions/inserthexpansion.png){: style="width:100px;height: auto;margin:auto;display:block;" }
+
+Hexpansions must be **1mm thick** to fit properly. If yours is not detected, see [Detecting hexpansions](./common-problems.md#detecting-hexpansions).
 
 ## Operate your badge
 

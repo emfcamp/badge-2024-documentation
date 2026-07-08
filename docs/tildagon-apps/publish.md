@@ -20,7 +20,7 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
 ## Instructions
 
 1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this [GitHub repository](https://github.com/hughrawlinson/tildagon-demo/).
-2. Edit the app properties in the [`tildagon.toml` file](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml) with your name, the category of the app, and other metadata:
+2. Edit the app properties in the `tildagon.toml` file with your name, the category of the app, and other metadata ([example](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml)):
 
    ```toml
    [app]
@@ -105,6 +105,12 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
 
 Your app will become available in the Tildagon [app store](https://apps.badge.emfcamp.org/) within 15 minutes.
 
+Each app has a permanent URL in the app store:
+
+```text
+https://apps.badge.emfcamp.org/apps/<app-id>/
+```
+
 !!! note "Updating the version"
 
       If you make changes to your app, you will need to update the version number in the `tildagon.toml` file create a new release on GitHub or Codeberg with an incremented version number.
@@ -127,7 +133,7 @@ Set `category` in your `tildagon.toml` to control where your app appears in the 
 
 ### My app isn't showing up
 
-If your app doesn't show up within 15 minutes, check the [Errors page](https://apps.badge.emfcamp.org/errors/) page. If there's no error there, that means either:
+If your app doesn't show up within 15 minutes, check the [Errors page](https://apps.badge.emfcamp.org/errors/). If there's no error there, that means either:
 
 - the app store can't see your app, for example because your repository is private or that you may need to [add the `tildagon-app` topic to your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics#adding-topics-to-your-repository), or
 - your app is listed and available to the badge - and may have an error there. In this case, check [debug your app on your badge](./run-on-badge.md).

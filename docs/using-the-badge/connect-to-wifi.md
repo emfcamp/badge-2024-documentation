@@ -7,7 +7,7 @@ There are several ways to connect your Tildagon to Wi-Fi depending on what appro
 
 !!! tip "Switch between multiple Wi-Fi networks"
 
-    If you regularly move between several networks (for example home, work, and a makerspace), install [Wifi Switcher](https://apps.badge.emfcamp.org/apps/40433243/) from the app store. Use **CodeInstall** and enter **40433243** to install it. The app saves multiple network profiles so you can switch between them on the badge without retyping your SSID and password each time.
+    If you regularly move between several networks (for example home, work, and a makerspace), install [Wifi Switcher](https://apps.badge.emfcamp.org/apps/04033124/) from the app store. Use **CodeInstall** and enter **40333313* to install it. The app saves multiple network profiles so you can switch between them on the badge without retyping your SSID and password each time.
 
 ## Option 1 - Through the GUI
 
@@ -42,21 +42,13 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     import settings
     settings.set('wifi_ssid', 'changeme')
     settings.set('wifi_password', 'changeme')
-    ```
-
-    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
-
-    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
-
-    ```
     settings.set('wifi_wpa2ent_username', None)
-    ```
-
-    Run the following command to save the settings
-
-    ```
     settings.save()
     ```
+
+    !!! info "This may error. If so, ignore the error and continue. (The
+    instructions is to ensure the value isn't set, if it is already not set it
+    errors.)"
 
 === "WPA2 Enterprise network"
 
@@ -88,21 +80,11 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     import settings
     settings.set('wifi_ssid', 'changeme')
     settings.set('wifi_password', 'changeme')
-    ```
-
-    If you are on version 1.6.0 you also need to set the `wifi_wpa2ent_username` value to `None`.
-
-    !!! info "This may error. If so, ignore the error and continue. (The instructions is to ensure the value isn't set, if it is already not set it errors.)"
-
-    ```
     settings.set('wifi_wpa2ent_username', None)
-    ```
-
-    Run the following command to save the settings
-
-    ```
     settings.save()
     ```
+
+    !!! info "The `wifi_wpa2ent_username` line may error if the value was never set — that's fine, ignore it and continue."
 
 === "WPA2 Enterprise network"
 

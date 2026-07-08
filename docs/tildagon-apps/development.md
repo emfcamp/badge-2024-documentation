@@ -3,41 +3,27 @@ title: Write a Tildagon OS app
 weight: -3
 ---
 
-This guide will help you write an "Hello, World" app for the Tildagon badge.
+This guide will help you build a "Hello, World" app for the Tildagon badge.
 
 ## Hello World app
 
 This is a small Tildagon app. The app imports the [app base class](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py), sets a button to allow you to cancel out of the app, and writes `Hello, world!` to the badge screen:
 
-```python
-import app
+## Run the app
 
-from events.input import Buttons, BUTTON_TYPES
+To test the app, we recommend the [local simulator](./simulate.md).
 
+If you need to access badge hardware, [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge).
 
-class ExampleApp(app.App):
-    def __init__(self):
-        self.button_states = Buttons(self)
+Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/). After the app is published you can also use it in the [web emulator](https://emulator.badge.emfcamp.org/).
 
-    def update(self, delta):
-        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
-            # The button_states do not update while you are in the background.
-            # Calling clear() ensures the next time you open the app, it stays
-            # open. Without it the app would close again immediately.
-            self.button_states.clear()
-            self.minimise()
+If you have a real badge, [deploy your app to it using `mpremote`](./run-on-badge.md).
 
-    def draw(self, ctx):
-        ctx.save()
-        ctx.rgb(0.2, 0, 0).rectangle(-120, -120, 240, 240).fill()
-        ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
-        ctx.restore()
+Otherwise, install the [local simulator](./simulate.md) on your computer and test it there. There is also a [web emulator](https://emulator.badge.emfcamp.org/) but as of 21st June 2026 it does not currently support running your own app.
 
+Once you're ready, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
 
-__app_export__ = ExampleApp
-```
-
-To test the app, you can use the [web emulator](https://emulator.badge.emfcamp.org/), the [local simulator](./simulate.md), or [use `mpremote` to copy the app onto your real-life badge](#use-mpremote-to-test-an-app-on-your-badge). Once you're ready with development, you can [publish it](./publish.md) to the [app store](https://apps.badge.emfcamp.org/).
+![A simulation of the hexagonal camp badge. The circular screen in the middle has a dark red background and the words "Hello, world!" in pale blue in the middle.](../images/hello-world.png){: style="width:300px;height: auto;margin:auto;display:block;" }
 
 ## The `App` class
 

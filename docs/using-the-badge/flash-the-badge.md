@@ -35,6 +35,6 @@ When you see the **Installation complete** notification, your badge is flashed. 
 
     You can also manually flash the badge following the instructions in the [`badge-2024-software` Readme](https://github.com/emfcamp/badge-2024-software).
 
-### Troubleshooting
+## Troubleshooting
 
 For common issues, see [Common problems](../using-the-badge/common-problems.md).

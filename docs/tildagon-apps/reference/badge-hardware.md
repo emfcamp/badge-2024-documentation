@@ -244,10 +244,6 @@ Each hexpansion has:
 - 1 SDA pin (Data) (4)
 - 1 SCL pin (Clock) (5)
 
-!!! warning
-
-    eGPIO does not work correctly in version 1.6.0.
-
 ### Example
 
 Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can see how to access an toggle the `Pin`s in the update methods:
@@ -461,6 +457,9 @@ class ExampleApp(app.App):
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             self.button_states.clear()
             self.minimise()
+        elif self.button_states.get(BUTTON_TYPES["RIGHT"]):
+            self.button_states.clear()
+            imu.step_counter_reset()
         else:
             self.steps_read = imu.step_counter_read()
 
@@ -488,10 +487,11 @@ In order to support alternative IMU devices a base set of functionality is provi
 | `acc_read()` | Get the accelerometer data. | None | `(x,y,z)`: The accelerometer data as a tuple of floats (m/s^2). |
 | `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 | `step_counter_read()` | Get the step count | None | `count`: The step count |
-| `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°).|
+| `step_counter_reset()` | Reset the step count | None | None |
+| `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°). |
 | `id()` | Get the device id | None | `id`: string id of device. |
-| `readfrom()` | Read from a device register| `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
-| `writeto()` | Write data to a device register |  `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
+| `readfrom()` | Read from a device register | `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
+| `writeto()` | Write data to a device register | `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
 | `mag_read()` | Get the magnetometer (compass) data if available. Only works on badges with the 2026 frontboard attached. | None | `(x,y,z)`: The magnetometer data as a tuple of floats (guass). |
 
 ### Usage
@@ -566,7 +566,7 @@ To use the `power` package:
 <!-- prettier-ignore -->
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
-| `Off()`| Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
+| `Off()` | Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
 | `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
 | `BatteryLevel()` | Return the battery charge level. | None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
 | `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
@@ -605,6 +605,7 @@ You can also use the following hexpansion-related events
 - `HexpansionInsertionEvent`
 - `HexpansionFormattedEvent`
 - `HexpansionMountedEvent`
+- `HexpansionUnmountedEvent`
 
 To use these events with the `EventBus`, import the following package:
 
@@ -748,7 +749,7 @@ The `Host` port also supports sending messages to the cable plug at either end, 
 | `send_prime_msg` | Sends a prime message | `data`(`bytearray`): data, must include 2 byte header | None |
 | `send_dbl_prime_msg` | Sends a double prime message | `data`(`bytearray`): data, must include 2 byte header | None |
 | `get_prime_msg` | Gets a received prime message | None | `data`(`bytearray`): data, includes 2 byte header |
-| `get_dbl_prime_msg` | Gets a received double prime message| None | `data`(`bytearray`): data, includes 2 byte header |
+| `get_dbl_prime_msg` | Gets a received double prime message | None | `data`(`bytearray`): data, includes 2 byte header |
 
 ### Events
 
@@ -806,7 +807,7 @@ usb_out.send_prime_msg(
 | `host_send_badge_id` | Sends the id used to detect another badge on the USB out port | None | None |
 | `pd_header` | Create a message header with space for the badge to fill in physical layer info | `message_type`(`int`): see dataType and cmdType below, `no_objects`(`int`): number of 4 byte objects, optional, default 0 | `header`(`int`): 16 bit header |
 | `vdm_structured_header` | Creates a structured vendor header | `command`(`int`): see vdmCmd below, `SVID`(`int`): Standard or Vendor ID, optional, default 0xFF00, `obj_pos`(`int`):For the Enter Mode, Exit Mode and Attention Commands, optional, default 0, `version`(`int`): Structured VDM Version, optional, default 0, | `vendor_header`(`int`): 32 bit vendor header |
-| `vdm_unstructured_header` | Creates an unstructured vendor header |  `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
+| `vdm_unstructured_header` | Creates an unstructured vendor header | `SVID`(`int`): optional, default 0xFF00, `data`(`int`): 15 bits of vendor defined data | `vendor_header`(`int`): 32 bit vendor header |
 | `vdm_header_extract` | extract the fields of a vendor header | `vendor_header`(`int`): 32 bit vendor header | `vendor_header`(`dict`): dictionary containing each field of the header |
 
 ### Constants
@@ -880,7 +881,7 @@ bus = I2C(1)
 
 === "App loaded from badge"
 
-    If it's an app loaded from the badge, you'll need to check each port:
+    If it's an app loaded from the badge, you'll need to find the port:
 
     ```python
     import app
@@ -890,7 +891,7 @@ bus = I2C(1)
     from app_components import clear_background
     from events.input import Buttons, BUTTON_TYPES
     from system.eventbus import eventbus
-    from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+    from system.hexpansion.events import HexpansionUnmountedEvent, HexpansionMountedEvent
     from system.hexpansion.config import HexpansionConfig
     from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
 
@@ -900,8 +901,8 @@ bus = I2C(1)
             self.text = "No hexpansion found."
             self.hexpansion_config = self.scan_for_hexpansion()
 
-            eventbus.on(HexpansionInsertionEvent, self.handle_hexpansion_insertion, self)
-            eventbus.on(HexpansionRemovalEvent, self.handle_hexpansion_removal, self)
+            eventbus.on(HexpansionMountedEvent, self.handle_hexpansion_insertion, self)
+            eventbus.on(HexpansionUnmountedEvent, self.handle_hexpansion_removal, self)
 
         def handle_hexpansion_insertion(self, event):
             self.hexpansion_config = self.scan_for_hexpansion()
@@ -925,27 +926,10 @@ bus = I2C(1)
             ctx.restore()
 
         def scan_for_hexpansion(self):
-            for port in range(1, 7):
-                print(f"Searching for hexpansion on port: {port}")
-                i2c = I2C(port)
-                addr, addr_len = detect_eeprom_addr(i2c)
-
-                if addr is None:
-                    continue
-                else:
-                    print("Found EEPROM at addr " + hex(addr))
-
-                header = read_hexpansion_header(i2c, addr, addr_len=addr_len)
-                if header is None:
-                    continue
-                else:
-                    print("Read header: " + str(header))
-                self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
-                return HexpansionConfig(port)
-
-            self.color = (1, 0, 0)
-            self.text = "No hexpansion found."
-
+            # Enter the vid/pid pair here
+            slots = get_slots_by_vid_pid(vid=0x0000, pid=0x0000)
+            if slots:
+                return HexpansionConfig(slots[0])
             return None
 
         __app_export__ = ExampleApp

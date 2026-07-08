@@ -78,7 +78,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     !!! note "Information"
         For this method to work, your EEPROM needs to be properly provisioned with the [correct header information.](eeprom.md)
 
-    If it's an app loaded from the badge, you'll need to search each port for your hexpansion, and then create the `HexpansionConfig` object once you've found it:
+    If it's an app loaded from the badge, you'll need to search each port for your hexpansion, and then create the `HexpansionConfig` object once you've found it.
 
     ```python
     import app
@@ -88,9 +88,9 @@ Below is an example of how you find which port your hexpansion is plugged in to 
     from app_components import clear_background
     from events.input import Buttons, BUTTON_TYPES
     from system.eventbus import eventbus
-    from system.hexpansion.events import HexpansionRemovalEvent, HexpansionInsertionEvent
+    from system.hexpansion.events import HexpansionUnmountedEvent, HexpansionMountedEvent
     from system.hexpansion.config import HexpansionConfig
-    from system.hexpansion.util import read_hexpansion_header, detect_eeprom_addr
+    from system.hexpansion.util import get_slots_by_vid_pid
 
     class ExampleApp(app.App):
         def __init__(self):
@@ -98,8 +98,9 @@ Below is an example of how you find which port your hexpansion is plugged in to 
             self.text = "No hexpansion found."
             self.hexpansion_config = self.scan_for_hexpansion()
 
-            eventbus.on(HexpansionInsertionEvent, self.handle_hexpansion_insertion, self)
-            eventbus.on(HexpansionRemovalEvent, self.handle_hexpansion_removal, self)
+            # Use the mounted forms of the events, to detect completion of built-in handling
+            eventbus.on(HexpansionMountedEvent, self.handle_hexpansion_insertion, self)
+            eventbus.on(HexpansionUnmountedEvent, self.handle_hexpansion_removal, self)
 
         def handle_hexpansion_insertion(self, event):
             self.hexpansion_config = self.scan_for_hexpansion()
@@ -123,28 +124,10 @@ Below is an example of how you find which port your hexpansion is plugged in to 
             ctx.restore()
 
         def scan_for_hexpansion(self):
-            for port in range(1, 7):
-                print(f"Searching for hexpansion on port: {port}")
-                i2c = I2C(port)
-                addr, addr_len = detect_eeprom_addr(i2c) # Firmware version 1.8 and upwards only!
-
-                if addr is None:
-                    continue
-                else:
-                    print("Found EEPROM at addr " + hex(addr))
-
-                header = read_hexpansion_header(i2c, addr, addr_len=addr_len)
-                if header is None:
-                    continue
-                else:
-                    print("Read header: " + str(header))
-                self.text = "Hexp. found.\nvid: {}\npid: {}\nat port: {}".format(hex(header.vid), hex(header.pid), port)
-                # You can add some logic here to check the PID and VID match your hexpansion
-                return HexpansionConfig(port)
-
-            self.color = (1, 0, 0)
-            self.text = "No hexpansion found."
-
+            # Enter the vid/pid pair here
+            slots = get_slots_by_vid_pid(vid=0x0000, pid=0x0000)
+            if slots:
+                return HexpansionConfig(slots[0])
             return None
 
     __app_export__ = ExampleApp
@@ -243,4 +226,27 @@ Hexpansion ports have two types of GPIO pins - `Pin` objects and `ePin` objects.
 
 The objects you can access through `HexpansionConfig` should allow you to develop your app using standard MicroPython methods.
 
-Your app can also register handlers for `HexpansionInsertionEvent` and `HexpansionRemovalEvent` event types, to deal with new hexpansions being plugged in or removed. An example of this is [available in the app examples.](../tildagon-apps/examples/detect-hexpansion.md)
+Apps running on the badge can register handlers for `HexpansionMountedEvent` and `HexpansionUnmountedEvent` to deal with hexpansions being plugged in or removed. These events fire after the firmware has finished its own internal handling, so the hexpansion is fully ready to use when `HexpansionMountedEvent` fires. An example is [available in the app examples.](../tildagon-apps/examples/detect-hexpansion.md).
+
+`HexpansionInsertionEvent` and `HexpansionRemovalEvent` also exist and fire immediately on insertion, before the firmware finishes its handling. In most cases you should use `HexpansionMountedEvent` and `HexpansionUnmountedEvent`.
+
+Note that apps running off hexpansion EEPROMs are not guaranteed to receive an `HexpansionUnmountedEvent` before they are terminated when a hexpansion is removed. Apps running from the Hexpansion EEPROM should implement a `deinit` function if they need to clean up after removal. This will be called synchronously in the hexpansion removal handler and is a suitable place for calling the Micropython `deinit` methods of hardware (SPI, SD Card etc.) or for unmounting storage etc. Below is a snippet of code for a Hexpansion app that uses the hardware SPI peripheral disables it again when the hexpansion is removed.
+
+    ```python
+    class AwesomeHexpansionApp(app.App):
+        def __init__(self, config=None):
+            super().__init__()
+
+            self.spi = SPI(
+                        1,
+                        10000000,
+                        sck=self.config.pin[1],
+                        mosi=self.config.pin[2],
+                        miso=self.config.pin[3]
+            )
+
+        def deinit(self):
+            self.spi.deinit()
+        
+        ...
+    ```

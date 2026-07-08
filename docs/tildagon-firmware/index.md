@@ -5,11 +5,7 @@ weight: -10
 
 ## Tildagon OS Firmware
 
-Although hardware is complete and ordered for emfcamp 2024, the firmware is
-still in development. If you would like to get involved with writing the
-MicroPython code that interfaces with badge hardware, provides programming
-interfaces for apps, and provides a user interface, then please get in touch
-with the badge team.
+The Tildagon firmware is the MicroPython-based operating system that runs on the badge. It was first shipped for EMF 2024 and continues to be developed for EMF 2026, with a commitment to also be used for EMF 2028. If you would like to get involved with writing the MicroPython code that interfaces with badge hardware, provides programming interfaces for apps, and provides a user interface, then please get in touch with the badge team.
 
 !!! info
 

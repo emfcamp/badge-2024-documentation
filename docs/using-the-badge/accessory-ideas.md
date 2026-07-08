@@ -7,6 +7,17 @@ weight: 5
 
 ### 3D-printed badge cases
 
+!!! warning
+    The frontboard of the 2026 badge is different from the 2024 badge, so 3D-printed cases designed for the 2024 badge may not fit the 2026 badge correctly.
+
+#### 2026 badge cases
+
+You can print the [Spaceagon Case](https://github.com/nightcaster/Spaceagon-Case):
+
+![Spaceagon Case](../images/badge-photos/spaceagon-case.jpg)
+
+#### 2024 badge cases
+
 You can print the [Official 3d Printable Case for the 2024 EMF Camp Badge](https://github.com/emfcamp/badge-2024-addons/tree/main/3d-printable-case).
 
 ![Badge bumper case](../images/badge-photos/Bumper%20Case.png)
@@ -34,6 +45,13 @@ You can print this [Tildagon badge stand](https://www.printables.com/model/90053
 Alternatively, you can print this [Tildagon stand](https://www.printables.com/model/909352-tildagon-stand). It requires 2x M3 x 6mm machine screws.
 
 ![Tildagon stand with screw mount](../images/badge-photos/tildagon-stand-screws.webp){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### Rear grab handle
+
+You can print a [Tildagon Handle](https://www.printables.com/model/1756046-tildagon-handle) by Danny Walker — a rear grab handle that makes the badge easier to hold when you have lots of hexpansions plugged in. It attaches to the rear of the badge with 3 × M3 screws through the standard screw holes.
+
+!!! note "Screw length"
+    The 2026 version of the badge has screws inserted from this direction, so you'll likely need longer screws than stock. For the 2024 version, M3 × 5 screws into the PCB standoffs should work.
 
 ### Fancy lanyard
 

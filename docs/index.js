@@ -29,19 +29,24 @@ const showmoreBtn = document.getElementById("showmore");
 if (showmoreBtn) {
   let collapsibleItems = document.getElementsByClassName("img-container collapsible");
   showmoreBtn.textContent = "SHOW " + collapsibleItems.length + " MORE";
+  showmoreBtn.setAttribute("aria-expanded", "false");
+
   showmoreBtn.addEventListener("click", function () {
-    if (showmoreBtn.textContent.endsWith("MORE")) {
-      collapsibleItems = document.getElementsByClassName("img-container collapsible");
+    const isExpanded = showmoreBtn.getAttribute("aria-expanded") === "true";
+    collapsibleItems = document.getElementsByClassName("img-container collapsible");
+
+    if (!isExpanded) {
       for (const item of collapsibleItems) {
         item.classList.remove("collapsed");
       }
       showmoreBtn.textContent = "SHOW LESS";
+      showmoreBtn.setAttribute("aria-expanded", "true");
     } else {
-      collapsibleItems = document.getElementsByClassName("img-container collapsible");
       for (const item of collapsibleItems) {
         item.classList.add("collapsed");
       }
       showmoreBtn.textContent = "SHOW " + collapsibleItems.length + " MORE";
+      showmoreBtn.setAttribute("aria-expanded", "false");
     }
   });
 }
