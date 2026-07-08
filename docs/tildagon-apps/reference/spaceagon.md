@@ -37,11 +37,11 @@ Using the `BUTTON_TYPES` types makes your code compatible with both buttons and 
 <!-- prettier-ignore -->
 | Direction | Event Type | Name |
 | --------- | ---------- | ---- |
-| `"Up"`  | `BUTTON_TYPES["UP"]` and `JOYSTICK_BUTTON_TYPES["UP"]` | `"JOYUP"` |
+| `"Up"` | `BUTTON_TYPES["UP"]` and `JOYSTICK_BUTTON_TYPES["UP"]` | `"JOYUP"` |
 | `"Down"` | `BUTTON_TYPES["DOWN"]` and `JOYSTICK_BUTTON_TYPES["DOWN"]` | `"JOYDOWN"` |
 | `"Left"` | `BUTTON_TYPES["LEFT"]` and `JOYSTICK_BUTTON_TYPES["LEFT"]` | `"JOYLEFT"` |
 | `"Right` | `BUTTON_TYPES["RIGHT"]` and `JOYSTICK_BUTTON_TYPES["RIGHT"]` | `"JOYRIGHT"` |
-| `"Fire"`  | `BUTTON_TYPES["CONFIRM"]` and `JOYSTICK_BUTTON_TYPES["SELECT"]` | `"JOYFIRE"` |
+| `"Fire"` | `BUTTON_TYPES["CONFIRM"]` and `JOYSTICK_BUTTON_TYPES["SELECT"]` | `"JOYFIRE"` |
 
 ### Touch
 
