@@ -491,7 +491,7 @@ In order to support alternative IMU devices a base set of functionality is provi
 | `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°). |
 | `id()` | Get the device id | None | `id`: string id of device. |
 | `readfrom()` | Read from a device register | `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
-| `writeto()` | Write data to a device register | `(register address, bytes)`: address to start write to, data.| `error`: or None if ok. |
+| `writeto()` | Write data to a device register | `(register address, bytes)`: address to start write to, data. | `error`: or None if ok. |
 | `mag_read()` | Get the magnetometer (compass) data if available. Only works on badges with the 2026 frontboard attached. | None | `(x,y,z)`: The magnetometer data as a tuple of floats (guass). |
 
 ### Usage
