@@ -26,7 +26,7 @@ eventbus.emit(CustomEvent(type="haptic", params={}))
 ```
 
 For more info on the event bus, see [the EventBus
-docs](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/pingpong_app.py)
+docs](../../tildagon-apps/reference/eventbus.md)
 
 ## Providers
 
