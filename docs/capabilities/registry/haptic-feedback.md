@@ -12,26 +12,11 @@ The capability to give haptic feedback to your user via a hexpansion. This could
 
 ## Consumers
 
-It is expected that consumers are hexpansions with some form of mechanical actuator attached.
-
-Consumers should subscribe to events of type `haptic` on the event bus:
-
-```python
-
-eventbus.on("haptic", self.haptic_handler, app)
-
-```
-
-From there, your handler will need to parse the event and its parameters to decide what to do with it. This will be specific to your hexpansion hardware design (actuator choice, motor driver etc.) For a list of parameters, see the [Parameters](#parameters) section below
-
-For more info on the event bus, see [the EventBus
-docs](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/pingpong_app.py)
-
-## Providers
+Consumers of this capability are apps that want to give haptic feedback.
 
 To give your app some haptic feedback via a compatible hexpansion, just emit a `haptic` type `CustomEvent` on the event bus.
 
-There's no need to scan for consumer hexpansions to do this, but you might want to implement that if your app requires haptic feedback to function at all. For apps where haptic feedback is an enhancement, like when you crash in a game of snake, simply emitting the event would be enough.
+There's no need to scan for provider hexpansions to do this, but you might want to implement that if your app _requires_ haptic feedback to function at all. For apps where haptic feedback is an _supported_ but not _required_, like vibrating when you crash in a game of snake, simply emitting the event would be enough.
 
 ```python
 
@@ -41,6 +26,22 @@ eventbus.emit(CustomEvent(type="haptic", params={}))
 
 ```
 
+For more info on the event bus, see [the EventBus
+docs](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/pingpong_app.py)
+
+## Providers
+
+It is expected that providers of this capabilty are hexpansions with some form of mechanical actuator attached.
+
+Providers should subscribe to events of type `haptic` on the event bus:
+
+```python
+
+eventbus.on("haptic", self.haptic_handler, app)
+
+```
+
+From there, your handler will need to parse the event and its parameters to decide what to do with it. This will be specific to your hexpansion hardware design (actuator choice, motor driver etc.) For a list of parameters, see the [Parameters](#parameters) section below
 
 ## Parameters
 
@@ -63,11 +64,11 @@ Haptic capability consumers may choose to implement a subset of these parameters
     - `"ramp_down_long"`
     - `"continuous"` (See below)
     - `"hum"` (See below)
-- `"duration"`: The amount of time you want the effect to last for, in milliseconds. Required only for `continuous` and `hum` effects. Emitting one of these event types without a `duration` parameter should result in no response. Other effects do nothing with this parameter.
-- `"strength"`: The strength of the effect, as a float from 0.0 to 1.0. Consumers should default to 1.0 if no strength is passed, and can ignore this parameter if not implemented.
+- `"duration"`: The amount of time the effect should last for, in milliseconds. Required only for `continuous` and `hum` effects. Emitting one of these event types without a `duration` parameter should result in no response. Other effects do nothing with this parameter.
+- `"strength"`: The strength of the effect, as a float from `0.0` to `1.0`. Providers should default to `1.0` if no strength is passed, and can ignore this parameter if not implemented.
 
-## List of known Consumers
+## List of known Providers
 
-An incomplete list of hexpansions that are consumers of this capability:
+An incomplete list of hexpansions that are providers of this capability:
 
 - [Caffeine Jitters](https://github.com/emfcamp/hexpansion-firmwares/tree/main/0x70ad/0xcaff)
