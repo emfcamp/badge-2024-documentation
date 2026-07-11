@@ -12,7 +12,7 @@ Provides access to a string of neopixels that have a different logical behaviour
 
 This can be useful when the routing of the neopixels doesn't make intuitive sense, or when some should always be combined.
 
-This capability is a superset of the neopixels capability. You should always also declare that one if declaring this one. Users of this capability should also read and understand the underlying neopixels capability.
+This capability is a superset of the [neopixels capability](./neopixels.md). You should always also declare that one if declaring this one. Users of this capability should also read and understand the underlying [neopixels capability](./neopixels.md).
 
 1. The `leds` attribute behaves as before, but now refers to the logical LED string, not the underlying one
 2. The `led_owner` attribute behaves as before.
