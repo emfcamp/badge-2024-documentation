@@ -10,7 +10,7 @@ https://tildagon.badge.emfcamp.org/capabilities/registry/nmea/
 
 Gives access to NMEA 0183 sentences, detailing GPS fix information.
 
-Note: Do not use this for finding user position in general, use the position capability instead. This is only for detailed introspection of GPS data.
+Note: Do not use this for finding user position in general, use the [position capability](./position.md) instead. This is only for detailed introspection of GPS data.
 
 The `sentences` attribute contains a non-exhaustive list of received NMEA sentences, with the checksums stripped.
 
