@@ -26,8 +26,11 @@ class NMEAConsumerApp(App):
 
     def update(self, delta):
         position = None
-        gps_apps = get_apps_by_capability("https://tildagon.badge.emfcamp.org/capabilities/registry/nmea/")
-        
+        gps_apps = get_apps_by_capability(
+            "https://tildagon.badge.emfcamp.org/capabilities/registry/"
+            "nmea/"
+        )
+
         if not gps_apps:
             return
 
@@ -44,8 +47,12 @@ class NMEAConsumerApp(App):
                 time_field = fields[1]  # hhmmss(.sss)
                 date_field = fields[9]  # ddmmyy
 
-                hour, minute, second = time_field[0:2], time_field[2:4], time_field[4:6]
-                day, month, year = date_field[0:2], date_field[2:4], date_field[4:6]
+                hour = time_field[0:2]
+                minute = time_field[2:4]
+                second = time_field[4:6]
+                day = date_field[0:2]
+                month = date_field[2:4]
+                year = date_field[4:6]
 
                 print("UTC: 20{}-{}-{} {}:{}:{}".format(
                     year, month, day, hour, minute, second
@@ -61,7 +68,6 @@ class NMEAConsumerApp(App):
                 print("Satellites in view: {}".format(satellites_in_view))
 ```
 
-
 ## Providers
 
 Strip the checksum from received sentences, and place them in a ring-buffer.
@@ -70,16 +76,15 @@ Strip the checksum from received sentences, and place them in a ring-buffer.
 class LocationProviderApp:
     def __init__(self):
         self.sentences = []
-    
+
     def update(self, delta):
-        l = self.uart.readline()
-        if l:
+        raw = self.uart.readline()
+        if raw:
             try:
-                line = l.decode().strip()
+                line = raw.decode().strip()
                 self.sentences.append(line.split('*')[0])
                 if len(self.sentences) > 40:
                     self.sentences = self.sentences[-40:]
-            except:
+            except Exception:
                 pass
-
 ```

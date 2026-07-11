@@ -19,19 +19,21 @@ Iterate over the apps to find all the LED strings. Before you drive them, you mu
 
 Do not release ownership between frames of a pattern unless you do not intend to reacquire ownership soon, as otherwise two apps could fight over access.
 
-
 ```python
 
 class LEDColourApp(App):
     # Changes all LEDs on hexpansion to the same colour
-    
+
     def __init__(self):
         self.color = (0.4, 0, 0.2)
         self.button_states = Buttons(self)
 
     def update(self, delta):
-        led_apps = get_apps_by_capability("https://tildagon.badge.emfcamp.org/capabilities/registry/neopixels/")
-        
+        led_apps = get_apps_by_capability(
+            "https://tildagon.badge.emfcamp.org/capabilities/registry/"
+            "neopixels/"
+        )
+
         strings = []
 
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
@@ -46,13 +48,11 @@ class LEDColourApp(App):
                 led_app.led_owner = self
             if led_app.led_owner is self:
                 strings.append(led_app.leds)
-            
+
         for string in strings:
             string.fill(self.color)
             string.write()
-
 ```
-
 
 ## Providers
 
@@ -70,5 +70,4 @@ class FiveRedLedsDriverApp:
         if self.led_owner in {None, self}:
             self.leds.fill((1.0, 0.0, 0.0))
             self.leds.write()
-
 ```
