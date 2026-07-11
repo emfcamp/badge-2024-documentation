@@ -24,19 +24,21 @@ This capability is a superset of the [neopixels capability](./neopixels.md). You
 
 Iterate over the apps to find all the LED strings. Once you've found them, set up the LEDs and drive them as desired.
 
-
 ```python
 
 class LEDColourApp(App):
-    
+
     def __init__(self):
         self.color = (0.4, 0, 0.2)
         self.button_states = Buttons(self)
         self.pattern = None
 
     def update(self, delta):
-        led_apps = get_apps_by_capability("https://tildagon.badge.emfcamp.org/capabilities/registry/merged_neopixels/")
-        
+        led_apps = get_apps_by_capability(
+            "https://tildagon.badge.emfcamp.org/capabilities/registry/"
+            "merged_neopixels/"
+        )
+
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             for led_app in led_apps:
                 if led_app.led_owner is self:
@@ -51,9 +53,9 @@ class LEDColourApp(App):
                 led_app.led_owner = self
                 arrangements = list(led_app.LED_GROUPS.keys())
                 led_app.setup_led_group(random.choice(arrangements))
-                
+
                 self.pattern = RainbowPattern(len(led_app.leds))
-            
+
             if led_app.led_owner is self:
                 frame = self.pattern.next()
                 for i in range(len(led_app.leds)):
@@ -61,13 +63,11 @@ class LEDColourApp(App):
                 led_app.leds.write()
 ```
 
-
 ## Providers
 
 When you instantiate your neopixels, make sure you store them on as an `inner_leds` attribute for the raw string. Set up your combined ones on the `leds` attribute. Make sure you implement the relevant physical to logical mapping.
 
 Note: You may use other neopixel like objects as `self.leds`, if desired. Although this example uses `MergedNeopixel`, any wrapper that looks like a neopixel string is acceptable.
-
 
 ```python
 class LedsDriverApp:
@@ -100,11 +100,12 @@ class LedsDriverApp:
         self.setup_led_group('outer')
 
     def setup_led_group(self, led_group_name):
-        self.leds = neopixel.MergedNeoPixel(self.inner_leds, self.LED_GROUPS[led_group_name])
+        self.leds = neopixel.MergedNeoPixel(
+            self.inner_leds, self.LED_GROUPS[led_group_name]
+        )
 
     def update(self, delta):
         if self.led_owner in {None, self}:
             self.leds.fill((1.0, 0.0, 0.0))
             self.leds.write()
-
 ```
