@@ -48,15 +48,15 @@ Using the `BUTTON_TYPES` types makes your code compatible with both buttons and 
 <!-- prettier-ignore -->
 | Touchpad | Event Type |
 | -------- | ---------- |
-| `"Touch1"` | `"TOUCH1"` |
-| `"Touch2"` | `"TOUCH2"` |
-| `"Touch3"` | `"TOUCH3"` |
-| `"Touch4"` | `"TOUCH4"` |
-| `"Touch5"` | `"TOUCH5"` |
-| `"Touch6"` | `"TOUCH6"` |
-| `"Touch7"` | `"TOUCH7"` |
-| `"Touch8"` | `"TOUCH8"` |
-| `"Touch9"` | `"TOUCH9"` |
+| `"Touch01"` | `"TOUCH01"` |
+| `"Touch02"` | `"TOUCH02"` |
+| `"Touch03"` | `"TOUCH03"` |
+| `"Touch04"` | `"TOUCH04"` |
+| `"Touch05"` | `"TOUCH05"` |
+| `"Touch06"` | `"TOUCH06"` |
+| `"Touch07"` | `"TOUCH07"` |
+| `"Touch08"` | `"TOUCH08"` |
+| `"Touch09"` | `"TOUCH09"` |
 | `"Touch10"` | `"TOUCH10"` |
 | `"Touch11"` | `"TOUCH11"` |
 | `"Touch12"` | `"TOUCH12"` |
@@ -99,7 +99,7 @@ Using just "FIRE" and not "JOYFIRE" means if there's another input with FIRE in 
 <!-- prettier-ignore -->
 | Method | Description | Returns |
 | ------ | ----------- | ------- |
-| `detect_frontboard()` | Identifies which frontbboard is attached and provisions a blank frontboard based on the devices present. | `id`: 0x2600 for the Spaceagon, 0x2400 for the 2024 frontboard. Defaults to 0x2400. |
+| `detect_frontboard()` | Identifies which frontbboard is attached and provisions a blank frontboard based on the devices present. | `id`: 0x26XX for the Spaceagon, 0x2400 for the 2024 frontboard. Defaults to 0x2400. |
 
 ### Usage
 
