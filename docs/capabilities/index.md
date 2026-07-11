@@ -3,7 +3,7 @@ title: Capabilities Overview
 ---
 
 Capabilities are a way for apps and hexpansions to offer functionality to other
-apps and hexpansions on the tildagon. If you are an hexpansion creator, and you
+apps and hexpansions on the Tildagon. If you are an hexpansion creator, and you
 want app authors to be able to interface with your hexpansion, you can have
 your hexpansion _provide_ a Capability. If you are an app author and you want
 to use a hardware feature, you can specify that your app either _requires_ or
@@ -119,12 +119,12 @@ Tildagon Event Bus, check out our [reference documentation][Tildagon Event Bus].
 Capabilities are not restricted to using the event bus - they can specify that
 devices are available on a given [I2C
 Bus](https://tildagon.badge.emfcamp.org/tildagon-apps/reference/badge-hardware/#i2c),
-and even that specific micropython code can be imported from a given path.
+and even that specific MicroPython code can be imported from a given path.
 
-!!! note Work in Progress
+!!! note "Work in Progress"
 
     Badge Team is working hard to get hardware and software ready for EMF 2026.
-    We will document cross-app micropython imports as soon as possible.
+    We will document cross-app MicroPython imports as soon as possible.
 
 ## Can apps declare a requirement for a specific hexpansion by it's VID/PID pair?
 
@@ -145,7 +145,7 @@ feature = {
 
 The `required` value specifies whether the feature is required or supported
 
-!!! note What is a feature in contrast to a Capability?
+!!! note "What is a feature in contrast to a Capability?"
 
     Apps can require, support or provide Capabilities, but they can also
     require or support a specific hexpansion by its VID and PID, a Frontboard, or a
