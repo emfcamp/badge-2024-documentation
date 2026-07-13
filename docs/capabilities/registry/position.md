@@ -30,7 +30,7 @@ class LocationConsumerApp(App):
 
     def update(self, delta):
         position = None
-        position_apps = get_apps_by_capability(
+        position_apps = get_running_apps_by_capability(
             "https://tildagon.badge.emfcamp.org/capabilities/registry/"
             "position/"
         )
