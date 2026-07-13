@@ -29,7 +29,7 @@ class LEDColourApp(App):
         self.button_states = Buttons(self)
 
     def update(self, delta):
-        led_apps = get_apps_by_capability(
+        led_apps = get_running_apps_by_capability(
             "https://tildagon.badge.emfcamp.org/capabilities/registry/"
             "neopixels/"
         )

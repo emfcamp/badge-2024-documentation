@@ -26,7 +26,7 @@ class NMEAConsumerApp(App):
 
     def update(self, delta):
         position = None
-        gps_apps = get_apps_by_capability(
+        gps_apps = get_running_apps_by_capability(
             "https://tildagon.badge.emfcamp.org/capabilities/registry/"
             "nmea/"
         )

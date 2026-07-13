@@ -93,7 +93,18 @@ feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.or
 
 ## How can my app see which Capabilities are provided on the current running badge?
 
-Check back here soon, we're working on it!
+You can check which running apps implement a capability with the `get_running_apps_by_capability` method:
+
+```python
+from system.capabilities.utils import get_running_apps_by_capability
+
+neopixel_apps = get_running_apps_by_capability(
+  "https://tildagon.badge.emfcamp.org/capabilities/registry/neopixels/"
+)
+```
+
+This will only include running apps. We will add the ability to trigger launching an app that offers capabilities but is not yet running at a later date.
+
 
 ## What should my Capability look like?
 
