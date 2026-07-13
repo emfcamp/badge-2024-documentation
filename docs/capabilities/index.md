@@ -117,7 +117,6 @@ neopixel_apps = get_running_apps_by_capability(
 
 This will only include running apps. We will add the ability to trigger launching an app that offers capabilities but is not yet running at a later date.
 
-
 ## What should my Capability look like?
 
 The minimum requirement from a Capability specification is that the reader
