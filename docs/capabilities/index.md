@@ -91,6 +91,18 @@ required = true
 feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/badger-detector" }
 ```
 
+### Hexpansions where EEPROM space is at a premium
+
+Adding this file will take up at least 2 filesystem blocks on your EEPROM, which could be significant if you're low on bytes. There is a compact representation of capabilities that you can use on hexpansions only to reduce this. That is:
+
+```python
+class GPSApp(app.App):
+
+    CAP = ["@nmea/", "@position/"]
+```
+
+In this notation, the `CAP` attribute lists the identifiers that are provided by this hexpansion. The string `@` is replaced with `https://tildagon.badge.emfcamp.org/capabilities/`, to allow lower filesizes when implementing common capabilities.
+
 ## How can my app see which Capabilities are provided on the current running badge?
 
 You can check which running apps implement a capability with the `get_running_apps_by_capability` method:
