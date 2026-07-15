@@ -391,7 +391,8 @@ You can use the following methods on an `App` object:
 | `draw_overlays(ctx)` | Draw each overlay stored in `self.overlays` on the screen. If you overwrite your `draw()` method and have any overlays, you need to call this method manually. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](./reference/ctx.md). | None |
 | `background_task()` | _Asynchronous_. A loop for all applications, regardless of focused status. By default, it will call `background_update()` every 0.05 seconds. You can overwrite this behaviour. If you do, you can use the [original implementation](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app.py#L39) for reference. | None | None |
 | `background_update(delta)` | This method is called by `background_task()` every 0.05 seconds. By default, it has _no implementation_. You can overwrite this method to perform updates in the background, that means even if your app is not in the foreground. | `delta`: Time difference between the last update call and the current update call. | None |
-| `minimise()` | Minimise the app. | None | None |
+| `minimise()` | Minimise the app (it still runs in the background). | None | None |
+| `terminate(restore_pattern)` | Terminates the app. This method available in Tildagon OS v2.0.0 or newer. | `restore_pattern`: Whether to restore the LED pattern back to the user's preference, defaults to `False`. | None |
 
 ## Creating User Interfaces
 
