@@ -232,7 +232,7 @@ If your app is loaded from the EEPROM of your hexpansion, it isn't automatically
 import app
 from system.eventbus import eventbus
 from events.input import Buttons, BUTTON_TYPES
-from system.hexpansion.events import HexpansionAppLauncherAddEvent # <-- Remember to import!
+from system.hexpansion.events import HexpansionAppLauncherAddEvent
 from app_components import clear_background
 from system.scheduler.events import RequestForegroundPushEvent
 
@@ -295,6 +295,5 @@ class AwesomeHexpansionApp(app.App):
 
     def deinit(self):
         self.spi.deinit()
-    
     ...
 ```
