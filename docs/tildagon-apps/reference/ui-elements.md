@@ -96,6 +96,12 @@ To use a menu:
    self.current_menu = None
    ```
 
+!!! warning "Always call `_cleanup()` before replacing a menu"
+
+    When switching between menus, you must call `_cleanup()` on the existing menu before replacing it. Without this, the old menu's button handlers remain registered and both menus respond to button presses simultaneously.
+
+    You can see this pattern in the [`menu_demo.py`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/firmware_apps/menu_demo.py) firmware app.
+
 5. Define the `select_handler` and the `back_handler`:
 
    ```python
@@ -135,6 +141,7 @@ You can use the following methods on a `Menu` object:
 | `down_handler()` | Manually moves you down one position in the menu. | None | None |
 | `update(delta)` | Update the menu as animations are happening. You need to call this method in your app's `update()` method. | `delta`: Time difference between the last update call and the current update call. | None |
 | `draw(ctx)` | Add the menu to the screen. You need to call this method in your app's `draw()` method. | `ctx`: The canvas that let's you add graphics or texts. See [`ctx` library](../reference/ctx.md). | None |
+| `_cleanup()` | Deregisters the menu's button event handlers. **You must call this before replacing a menu with a new one**, otherwise the old menu's handlers will remain active and interfere with the new menu. | None | None |
 
 ## Notification
 
@@ -891,7 +898,10 @@ To use layouts:
 
 ## Tokens
 
-The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use: - functions for clearing the background and setting a color - constants for the display properties and colors
+The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use:
+
+- functions for clearing the background and setting a color
+- constants for the display properties and colors
 
 ### Functions
 

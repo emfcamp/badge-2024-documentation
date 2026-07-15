@@ -113,17 +113,10 @@ Think of the `ctx` object as a canvas. The object stores the drawing state of th
 
   - `x`: The current x coordinate. Think of it as where your cursor is on the canvas, ready to draw.
   - `y`: The current y coordinate.
-  - `font`: The font to be used for text. Default: `""`. Options:
+  - `font`: The font to be used for text. Default: `""`. Only one font is
+    built into the firmware, at index `0`:
 
-    - `"Arimo Regular"`
-    - `"Arimo Bold"`
-    - `"Arimo Italic"`
-    - `"Arimo Bold Italic"`
-    - `"Camp Font 1"`
-    - `"Camp Font 2"`
-    - `"Camp Font 3"`
-    - `"Material Icons"`
-    - `"Comic Mono"`
+    - `"EMF Camp Font"`
 
   - `font_size`: The font size to be used for text. Default: `10.0`.
   - `global_alpha`: The alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas. Default: `1.0`.
@@ -370,7 +363,7 @@ __app_export__ = ExampleApp
 
 ### Creating text
 
-This example adds a big, light red, filled rectangle to the canvas that is so big you won't see the edges of it. It forms the background. On top of the background, the example adds red text `Hello world` with the font `Camp Font 2` to the canvas on top of a big rectangle that.
+This example adds a big, light red, filled rectangle to the canvas that is so big you won't see the edges of it. It forms the background. On top of the background, the example adds red text `Hello world` with the font `EMF Camp Font` to the canvas on top of a big rectangle that.
 
 ```python
 import app
@@ -388,7 +381,7 @@ class ExampleApp(app.App):
 
     def draw(self, ctx):
         ctx.save()
-        ctx.font = ctx.get_font_name(5)
+        ctx.font = ctx.get_font_name(0)
         ctx.rgb(0.4, 0, 0).rectangle(-120, -120, 240, 240).fill()
         ctx.rgb(1, 0, 0).move_to(-80, 0).text("Hello world")
         ctx.restore()
@@ -430,7 +423,7 @@ class ExampleApp(app.App):
     def draw(self, ctx):
         clear_background(ctx)
         ctx.save()
-        ctx.font = ctx.get_font_name(5)
+        ctx.font = ctx.get_font_name(0)
         ctx.rgb(0.4, 0, 0).rectangle(-60, -30, 120, 60).fill()
         text = "Hello there world!"
         # we know the rectangle is 120 wide, with a margin of 5 on each side
