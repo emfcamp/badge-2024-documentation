@@ -898,7 +898,10 @@ To use layouts:
 
 ## Tokens
 
-The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use: - functions for clearing the background and setting a color - constants for the display properties and colors
+The [`Tokens`](https://github.com/emfcamp/badge-2024-software/blob/main/modules/app_components/tokens.py) component allows you to use:
+
+- functions for clearing the background and setting a color
+- constants for the display properties and colors
 
 ### Functions
 
