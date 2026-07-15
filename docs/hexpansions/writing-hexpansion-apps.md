@@ -32,6 +32,8 @@ Below is an example of how you find which port your hexpansion is plugged in to 
 
     Note that your app must emit a `RequestForegroundPushEvent` in order to display automatically when the hexpansion is inserted.
 
+    You can also optionally emit a [`HexpansionAppLauncherAddEvent`](#adding-to-launcher) to add your app to the main launcher. This allows you to restore focus to your app later if it is minimised.
+
     ```python
     import app
     from app_components import clear_background
@@ -222,6 +224,59 @@ Hexpansion ports have two types of GPIO pins - `Pin` objects and `ePin` objects.
 
 <!-- markdown-link-check-enable -->
 
+## Adding to Launcher
+
+If your app is loaded from the EEPROM of your hexpansion, it isn't automatically added to the main launcher menu on the badge. If you'd like your app to be shown in the launcher, you should emit a `HexpansionAppLauncherAddEvent(port, name)` from your app, where `port` is the port number your hexpansion is plugged in to, and `name` is the name of your app you want to display in the launcher:
+
+```python
+import app
+from system.eventbus import eventbus
+from events.input import Buttons, BUTTON_TYPES
+from system.hexpansion.events import HexpansionAppLauncherAddEvent
+from app_components import clear_background
+from system.scheduler.events import RequestForegroundPushEvent
+
+
+class TestApp(app.App):
+    def __init__(self, config=None):
+        self.button_states = Buttons(self)
+        self.hexpansion_config = config
+        self.foregrounded = False
+        self.add_to_launcher()
+
+    def add_to_launcher(self):
+        eventbus.emit(HexpansionAppLauncherAddEvent(
+            self.hexpansion_config.port,
+            "Hexpansion Test App")
+            )
+
+    def update(self, delta):
+        if not self.foregrounded:
+            print("Requesting foreground push")
+            eventbus.emit(RequestForegroundPushEvent(self))
+            self.foregrounded = True
+        if self.button_states.get(BUTTON_TYPES["CANCEL"]):
+            self.button_states.clear()
+            self.minimise()
+
+    def background_update(self, delta):
+        # Do nothing in the background
+        pass
+
+    def draw(self, ctx):
+        clear_background(ctx)
+        ctx.font_size = 20
+        ctx.text_align = ctx.CENTER
+        ctx.rgb(255, 255, 255).move_to(0, 0).text(
+            f"Hexpansion {self.hexpansion_config.port} app"
+            )
+
+
+__app_export__ = TestApp
+```
+
+Your app will then be listed in the launcher with a :glyphs-hexpansion: symbol and the port number prepended to it's name.
+
 ## Further development
 
 The objects you can access through `HexpansionConfig` should allow you to develop your app using standard MicroPython methods.
@@ -230,23 +285,22 @@ Apps running on the badge can register handlers for `HexpansionMountedEvent` and
 
 `HexpansionInsertionEvent` and `HexpansionRemovalEvent` also exist and fire immediately on insertion, before the firmware finishes its handling. In most cases you should use `HexpansionMountedEvent` and `HexpansionUnmountedEvent`.
 
-Note that apps running off hexpansion EEPROMs are not guaranteed to receive an `HexpansionUnmountedEvent` before they are terminated when a hexpansion is removed. Apps running from the Hexpansion EEPROM should implement a `deinit` function if they need to clean up after removal. This will be called synchronously in the hexpansion removal handler and is a suitable place for calling the Micropython `deinit` methods of hardware (SPI, SD Card etc.) or for unmounting storage etc. Below is a snippet of code for a Hexpansion app that uses the hardware SPI peripheral disables it again when the hexpansion is removed.
+Note that apps running from hexpansion EEPROMs are not guaranteed to receive an `HexpansionUnmountedEvent` before they are terminated when a hexpansion is removed. Apps running from the Hexpansion EEPROM should implement a `deinit` function if they need to clean up after removal. This will be called synchronously in the hexpansion removal handler and is a suitable place for calling the Micropython `deinit` methods of hardware (SPI, SD Card etc.), deregistering eventbus handlers or for unmounting storage etc. Below is a snippet of code for a Hexpansion app that uses the hardware SPI peripheral disables it again when the hexpansion is removed.
 
-    ```python
-    class AwesomeHexpansionApp(app.App):
-        def __init__(self, config=None):
-            super().__init__()
+```python
+class AwesomeHexpansionApp(app.App):
+    def __init__(self, config=None):
+        super().__init__()
 
-            self.spi = SPI(
-                        1,
-                        10000000,
-                        sck=self.config.pin[1],
-                        mosi=self.config.pin[2],
-                        miso=self.config.pin[3]
-            )
+        self.spi = SPI(
+                    1,
+                    10000000,
+                    sck=self.config.pin[1],
+                    mosi=self.config.pin[2],
+                    miso=self.config.pin[3]
+        )
 
-        def deinit(self):
-            self.spi.deinit()
-        
-        ...
-    ```
+    def deinit(self):
+        self.spi.deinit()
+    ...
+```

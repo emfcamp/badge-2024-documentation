@@ -7,7 +7,11 @@ There are several ways to connect your Tildagon to Wi-Fi depending on what appro
 
 !!! tip "Switch between multiple Wi-Fi networks"
 
-    If you regularly move between several networks (for example home, work, and a makerspace), install [Wifi Switcher](https://apps.badge.emfcamp.org/apps/04033124/) from the app store. Use **CodeInstall** and enter **40333313* to install it. The app saves multiple network profiles so you can switch between them on the badge without retyping your SSID and password each time.
+    If you regularly move between several networks (for example home, work, and a makerspace), install [Wifi Switcher](https://apps.badge.emfcamp.org/apps/04033124/) from the app store. In the app store on the badge, select **Use Code** (or CodeInstall on older firmwares) and enter **04033124* to install it. The app saves multiple network profiles so you can switch between them on the badge without retyping your SSID and password each time.
+
+??? note "Compatibility of 2.4GHz and 5GHz networks"
+
+    The badge hardware only supports 2.4GHz Wi-Fi networks. Many routers offer both 2.4GHz and 5GHz networks under the same SSID, and use band steering to push devices onto the 5GHz network. The ESP32 in the badge is known to not handle this well in some cases, so you might find yourself unable to connect to some Wi-Fi networks. If you can, it might help to disable band steering on your router, or set the 2.4GHz network to a different SSID and connect to that directly.
 
 ## Option 1 - Through the GUI
 
@@ -45,10 +49,7 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     settings.set('wifi_wpa2ent_username', None)
     settings.save()
     ```
-
-    !!! info "This may error. If so, ignore the error and continue. (The
-    instructions is to ensure the value isn't set, if it is already not set it
-    errors.)"
+    !!! info "This may error in older firmwares. If so, ignore the error and continue. (The instructions are to ensure the value isn't set, if it is already not set it errors.)"
 
 === "WPA2 Enterprise network"
 
@@ -61,8 +62,6 @@ Probably the simplest option is to open [Tildagon Flasher](https://emfcamp.githu
     ```
 
 6. Push the Reboop button and try connecting.
-
-!!! info "If the Wi-Fi won't connect after performing these steps, try changing the SSID and password commands to be in single quotes instead of double quotes. This seems to make a difference in certain circumstances."
 
 ## Option 3 - Use mpremote
 

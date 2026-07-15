@@ -53,7 +53,23 @@ You can print a [Tildagon Handle](https://www.printables.com/model/1756046-tilda
 !!! note "Screw length"
     The 2026 version of the badge has screws inserted from this direction, so you'll likely need longer screws than stock. For the 2024 version, M3 × 5 screws into the PCB standoffs should work.
 
+### Pixel-snap & MagSafe mount
+
+A 3D-printed adapter that attaches to the rear of the badge, letting you snap on Pixel-snap and MagSafe compatible accessories. By Brian Corteil.
+
+![Pixel-snap and MagSafe mount for the Tildagon badge](../images/badge-photos/magsafe-mount.png){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+### EMF model
+
+Whle not technically an accessory, please enjoy this giant build of a Tildagon.
+
+![Giant badge](../images/badge-photos/giant-badge.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
+
+[See more on Hachyderm](https://hachyderm.io/@HughEvansDev/116716666838418028)
+
 ### Fancy lanyard
+
+![Badge worn with a braided orange USB-C lanyard cable](../images/badge-photos/lanyard.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 The badge uses a USB-C to USB-C cable as the lanyard - any USB-C cable will do, we recommend one around a meter long but it's up to you! You can also use regular lanyards if you would prefer.
 

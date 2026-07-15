@@ -125,6 +125,31 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
+    <img src=" ../../images/hexpansions/plotter v0.3.gif" loading="lazy" alt="Plotter v0.3 hexpansion" data-title="Plotter v0.3 hexpansion by Danny Walker" data-description="">
+    <span class="label">Plotter v0.3 hexpansion by Danny Walker</span>
+    <span class="viewme"><a href="https://www.youtube.com/watch?v=HdHqGJh4LIc"><p>👀 VIEW VIDEO</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/sao-to-hexpansion.jpg" loading="lazy" alt="SAO-to-Hexpansion, Hexpansion-to-SAO adapter" data-title="SAO-to-Hexpansion, Hexpansion-to-SAO by grajohnt" data-description="">
+    <span class="label">SAO-to-Hexpansion, Hexpansion-to-SAO by grajohnt</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/evil-henchman.jpg" loading="lazy" alt="Evil Henchman hexpansion" data-title="Evil Henchman by Brian Corteil" data-description="">
+    <span class="label">Evil Henchman by Brian Corteil</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/fig-pi.jpg" loading="lazy" alt="Fig Pi hexpansion" data-title="Fig Pi hexpansion by Andy Piper" data-description="">
+    <span class="label">Fig Pi hexpansion by Andy Piper</span>
+    <span class="viewme"><a href="https://makertube.net/w/ox4SxPRwP4gZuLuBhTCzXx"><p>👀 VIEW VIDEO</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/monsterspansion.jpg" loading="lazy" alt="Monsterspansion hexpansion with glowing green neopixel eyes" data-title="Monsterspansion by Matthew" data-description=".custom-desc-monsterspansion">
+    <span class="label">Monsterspansion by Matthew</span>
+    <div class="glightbox-desc custom-desc-monsterspansion">
+      <p>A canvas for people to be artistic. Draw a face — yours, an animal, some sort of monster, whatever — and the app lets you pick an eye colour for the neopixels.</p>
+    </div>
+  </span>
+  <span class="img-container">
     <img src=" ../../images/hexpansions/breakout-danny-walker.jpg" loading="lazy" alt="Breakout hexpansion by Danny Walker" data-title="Breakout hexpansion by Danny Walker" data-description="">
     <span class="label">Breakout hexpansion by Danny Walker</span>
   </span>
@@ -173,10 +198,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
         <span class="buyme"><a href="https://robotmad.odoo.com/shop"><p>💰 BUY HERE</p></a></span>
       </div>
     </div>
-  </span>
-  <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/eeh.gif" loading="lazy" alt="Rabbit hexpansion" data-title="EEH Hexpansion by Matt" data-description="">
-    <span class="label">EEH Hexpansion by Matt</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/tabasco.jpg" loading="lazy" alt="Hot Sauce hexpansion (chipotle flavor)" data-title="Emergency Hot Sauce hexpansion (chipotle flavor) by John Thurmond" data-description="">
@@ -771,15 +792,34 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Nyan cat hexpansion by The Untitled Goose</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/doggo.gif" loading="lazy" alt="K9 hexpansion" data-title="K9 hexpansion by emericklaw" data-description=".custom-desc-k9">
-    <span class="label">K9 hexpansion by emericklaw</span>
-    <span class="viewme"><a href="https://youtube.com/shorts/mpWKbsG5E6w"><p>🎥 WATCH IT</p></a></span>
-    <div class="glightbox-desc custom-desc-k9">
-      <p>Video: <a href="https://youtube.com/shorts/mpWKbsG5E6w">YouTube</a></p>
-      <div class="detailbuttons">
-        <span class="viewme"><a href="https://youtube.com/shorts/mpWKbsG5E6w"><p>🎥 WATCH IT</p></a></span>
-      </div>
-    </div>
+    <img src=" ../../images/hexpansions/matt-eeh-logo.gif" loading="lazy" alt="East Essex Hackspace Logo by Matt/EEH" data-title="East Essex Hackspace Logo by Matt/EEH" data-description="">
+    <span class="label">East Essex Hackspace Logo by Matt/EEH</span>
+    <span class="buyme"><a href="https://vending-machine.emericklaw.co.uk/"><p>💰 BUY HERE</p></a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/matt-eeh-dalek.gif" loading="lazy" alt="Dalek by Matt/EEH" data-title="Dalek by Matt/EEH" data-description="">
+    <span class="label">Dalek by Matt/EEH</span>
+    <span class="buyme"><a href="https://vending-machine.emericklaw.co.uk/"><p>💰 BUY HERE</p></a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/matt-eeh-k9.gif" loading="lazy" alt="K9 by Matt/EEH" data-title="K9 by Matt/EEH" data-description="">
+    <span class="label">K9 by Matt/EEH</span>
+    <span class="buyme"><a href="https://vending-machine.emericklaw.co.uk/"><p>💰 BUY HERE</p></a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/matt-eeh-tardis.gif" loading="lazy" alt="Tardis by Matt/EEH" data-title="Tardis by Matt/EEH" data-description="">
+    <span class="label">Tardis by Matt/EEH</span>
+    <span class="buyme"><a href="https://vending-machine.emericklaw.co.uk/"><p>💰 BUY HERE</p></a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/matt-eeh-sonic-screwdriver.gif" loading="lazy" alt="Sonic Screwdriver by Matt/EEH" data-title="Sonic Screwdriver by Matt/EEH" data-description="">
+    <span class="label">Sonic Screwdriver by Matt/EEH</span>
+    <span class="buyme"><a href="https://vending-machine.emericklaw.co.uk/"><p>💰 BUY HERE</p></a></span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/matt-hexpansion-extender.jpg" loading="lazy" alt="Hexpansion Extender by Matt" data-title="Hexpansion Extender by Matt" data-description="">
+    <span class="label">Hexpansion Extender by Matt</span>
+    <span class="buyme"><a href="https://vending-machine.emericklaw.co.uk/"><p>💰 BUY HERE</p></a></span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/henchmen.jpg" loading="lazy" alt="Henchmen hexpansion" data-title="Henchmen by Brian Corteil" data-description="">
@@ -872,10 +912,6 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
       <p>Purple PCB cat ear hexpansions with multicoloured LEDs.</p>
       <p>Link: <a href="https://catcatnya.com/@rox/116739377032116481">rox</a></p>
     </div>
-  </span>
-  <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/hexpansion-extender.png" loading="lazy" alt="Hexpansion extender PCB render by Matt" data-title="Hexpansion extender by Matt" data-description="">
-    <span class="label">Hexpansion extender by Matt</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/hextension.png" loading="lazy" alt="Hextension hexpansion hub PCB render by Danny Walker" data-title="Hextension by Danny Walker" data-description="">

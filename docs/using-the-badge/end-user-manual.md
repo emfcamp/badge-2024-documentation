@@ -170,6 +170,8 @@ If your screen is broken, follow the steps in [Turn off badge with broken screen
 
 ### Back of the board
 
+The **boop**, **reboop**, and **bat** buttons are on the base board (the back half of the badge), on the left-hand side. Their names are printed on the board next to each button.
+
 - **reboop**: Press and hold the **reboop** button to perform a soft (re)boot.
 - **boop**: Press and hold the **boop** button while connecting to power to load the bootloader (the badge needs to be powered off before connecting to power).
 - **bat**: Press the **bat** button to power on your badge.
