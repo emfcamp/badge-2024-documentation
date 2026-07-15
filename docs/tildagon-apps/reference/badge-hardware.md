@@ -563,6 +563,7 @@ To use the `power` package:
 | `Vsys()` (`float`) | Get the system voltage. | None. | `voltage` (`float`): Get the system voltage in V. |
 
 #### SupplyCapabilities Tuple Contents
+
 <!-- prettier-ignore -->
 | 1. Type | 2. | 3. | 4. | 5. |
 | ------- | -- | -- | -- | -- |
