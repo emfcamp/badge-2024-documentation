@@ -556,7 +556,7 @@ To use the `power` package:
 | `BatteryLevel()` | Return the battery charge level. | None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
 | `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
 | `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired. |
-| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples, contents described below. |
+| `SupplyCapabilities()` | Read the capabilities of the power supply. | None. | `capabilities` (`List`): List of tuples, see [SupplyCapabilities Tuple Contents](#supplycapabilities-tuple-contents). |
 | `Icharge()` | Get the battery charge current | None. | `current` (`float`): The charge current in A. |
 | `Vbat()` | Get the battery voltage. | None. | `voltage` (`float`): The battery voltage in V. |
 | `Vin()` | Get the input voltage. | None. | `voltage` (`float`): The input voltage in V. |
