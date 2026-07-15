@@ -246,7 +246,7 @@ Each hexpansion has:
 
 ### Example
 
-Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can see how to access an toggle the `Pin`s in the update methods:
+Select a hexpansion port, then press the **UP** button to toggle the eGPIO value `ls_1` or the **DOWN** button to toggle the GPIO value `hs_1`. You can see how to access and toggle the `Pin`s in the update methods:
 
 ```python
 import app
@@ -488,11 +488,11 @@ In order to support alternative IMU devices a base set of functionality is provi
 | `gyro_read()` | Get the gyro data. | None | `(x,y,z)`: The gyro data as a tuple of floats (d/s). |
 | `step_counter_read()` | Get the step count | None | `count`: The step count |
 | `step_counter_reset()` | Reset the step count | None | None |
-| `temperature_read()` | Get the temperature | None | `temerature`: Temperature (°). |
+| `temperature_read()` | Get the temperature | None | `temperature`: Temperature (°). |
 | `id()` | Get the device id | None | `id`: string id of device. |
 | `readfrom()` | Read from a device register | `(register address, length)`: address to start read from, length of read | `data`: bytes of the data or -ve error code. |
 | `writeto()` | Write data to a device register | `(register address, bytes)`: address to start write to, data. | `error`: or None if ok. |
-| `mag_read()` | Get the magnetometer (compass) data if available. Only works on badges with the 2026 frontboard attached. | None | `(x,y,z)`: The magnetometer data as a tuple of floats (guass). |
+| `mag_read()` | Get the magnetometer (compass) data if available. Only works on badges with the 2026 frontboard attached. | None | `(x,y,z)`: The magnetometer data as a tuple of floats (gauss). |
 
 ### Usage
 
@@ -567,7 +567,7 @@ To use the `power` package:
 | Method | Description | Arguments | Returns |
 | ------ | ----------- | --------- | ------- |
 | `Off()` | Turn off the battery. When the usb is disconnected the badge will turn off. | None | None |
-| `BatteryChargeState()` | Status of the Battery charing cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
+| `BatteryChargeState()` | Status of the Battery charging cycle. | None | `status` (`string`): `"Not Charging"`, `"Pre-Charging"`, `"Fast Charging"`, `"Terminated"`. |
 | `BatteryLevel()` | Return the battery charge level. | None. | `level` (`float`): Battery charge level as a float representing the charge percentage. |
 | `Enable5V()` | Enable the usb out 5V supply. | `enable` (`Boolean`): whether to enable or disable the 5V supply. | None. |
 | `Fault()` | Get the PMIC fault status. | None. | - `fault`: The battery fault. Battery: Normal, Over Voltage; Boost: Normal, Overloaded or low battery; Charge: Normal, Input Fault, Safety Timer expired |

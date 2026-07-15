@@ -3,7 +3,7 @@ title: Capabilities Overview
 ---
 
 Capabilities are a way for apps and hexpansions to offer functionality to other
-apps and hexpansions on the tildagon. If you are an hexpansion creator, and you
+apps and hexpansions on the Tildagon. If you are an hexpansion creator, and you
 want app authors to be able to interface with your hexpansion, you can have
 your hexpansion _provide_ a Capability. If you are an app author and you want
 to use a hardware feature, you can specify that your app either _requires_ or
@@ -91,9 +91,31 @@ required = true
 feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/badger-detector" }
 ```
 
+### Hexpansions where EEPROM space is at a premium
+
+Adding this file will take up at least 2 filesystem blocks on your EEPROM, which could be significant if you're low on bytes. There is a compact representation of capabilities that you can use on hexpansions only to reduce this. That is:
+
+```python
+class GPSApp(app.App):
+
+    CAP = ["@nmea/", "@position/"]
+```
+
+In this notation, the `CAP` attribute lists the identifiers that are provided by this hexpansion. The string `@` is replaced with `https://tildagon.badge.emfcamp.org/capabilities/`, to allow lower filesizes when implementing common capabilities.
+
 ## How can my app see which Capabilities are provided on the current running badge?
 
-Check back here soon, we're working on it!
+You can check which running apps implement a capability with the `get_running_apps_by_capability` method:
+
+```python
+from system.capabilities.utils import get_running_apps_by_capability
+
+neopixel_apps = get_running_apps_by_capability(
+  "https://tildagon.badge.emfcamp.org/capabilities/registry/neopixels/"
+)
+```
+
+This will only include running apps. We will add the ability to trigger launching an app that offers capabilities but is not yet running at a later date.
 
 ## What should my Capability look like?
 
@@ -119,12 +141,12 @@ Tildagon Event Bus, check out our [reference documentation][Tildagon Event Bus].
 Capabilities are not restricted to using the event bus - they can specify that
 devices are available on a given [I2C
 Bus](https://tildagon.badge.emfcamp.org/tildagon-apps/reference/badge-hardware/#i2c),
-and even that specific micropython code can be imported from a given path.
+and even that specific MicroPython code can be imported from a given path.
 
-!!! note Work in Progress
+!!! note "Work in Progress"
 
     Badge Team is working hard to get hardware and software ready for EMF 2026.
-    We will document cross-app micropython imports as soon as possible.
+    We will document cross-app MicroPython imports as soon as possible.
 
 ## Can apps declare a requirement for a specific hexpansion by it's VID/PID pair?
 
@@ -145,7 +167,7 @@ feature = {
 
 The `required` value specifies whether the feature is required or supported
 
-!!! note What is a feature in contrast to a Capability?
+!!! note "What is a feature in contrast to a Capability?"
 
     Apps can require, support or provide Capabilities, but they can also
     require or support a specific hexpansion by its VID and PID, a Frontboard, or a
