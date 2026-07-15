@@ -236,6 +236,7 @@ from system.hexpansion.events import HexpansionAppLauncherAddEvent
 from app_components import clear_background
 from system.scheduler.events import RequestForegroundPushEvent
 
+
 class TestApp(app.App):
     def __init__(self, config=None):
         self.button_states = Buttons(self)
@@ -244,7 +245,10 @@ class TestApp(app.App):
         self.add_to_launcher()
 
     def add_to_launcher(self):
-        eventbus.emit(HexpansionAppLauncherAddEvent(self.hexpansion_config.port, "Hexpansion Test App"))
+        eventbus.emit(HexpansionAppLauncherAddEvent(
+            self.hexpansion_config.port,
+            "Hexpansion Test App")
+            )
 
     def update(self, delta):
         if not self.foregrounded:
@@ -263,7 +267,10 @@ class TestApp(app.App):
         clear_background(ctx)
         ctx.font_size = 20
         ctx.text_align = ctx.CENTER
-        ctx.rgb(255,255,255).move_to(0, 0).text(f"Hexpansion {self.hexpansion_config.port} app")
+        ctx.rgb(255, 255, 255).move_to(0, 0).text(
+            f"Hexpansion {self.hexpansion_config.port} app"
+            )
+
 
 __app_export__ = TestApp
 ```
