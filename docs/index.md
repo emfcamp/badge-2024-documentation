@@ -125,6 +125,31 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Plotter hexpansion by Danny Walker</span>
   </span>
   <span class="img-container">
+    <img src=" ../../images/hexpansions/plotter v0.3.gif" loading="lazy" alt="Plotter v0.3 hexpansion" data-title="Plotter v0.3 hexpansion by Danny Walker" data-description="">
+    <span class="label">Plotter v0.3 hexpansion by Danny Walker</span>
+    <span class="viewme"><a href="https://www.youtube.com/watch?v=HdHqGJh4LIc"><p>👀 VIEW VIDEO</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/sao-to-hexpansion.jpg" loading="lazy" alt="SAO-to-Hexpansion, Hexpansion-to-SAO adapter" data-title="SAO-to-Hexpansion, Hexpansion-to-SAO by grajohnt" data-description="">
+    <span class="label">SAO-to-Hexpansion, Hexpansion-to-SAO by grajohnt</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/evil-henchman.jpg" loading="lazy" alt="Evil Henchman hexpansion" data-title="Evil Henchman by Brian Corteil" data-description="">
+    <span class="label">Evil Henchman by Brian Corteil</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/fig-pi.jpg" loading="lazy" alt="Fig Pi hexpansion" data-title="Fig Pi hexpansion by Andy Piper" data-description="">
+    <span class="label">Fig Pi hexpansion by Andy Piper</span>
+    <span class="viewme"><a href="https://makertube.net/w/ox4SxPRwP4gZuLuBhTCzXx"><p>👀 VIEW VIDEO</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/monsterspansion.jpg" loading="lazy" alt="Monsterspansion hexpansion with glowing green neopixel eyes" data-title="Monsterspansion by Matthew" data-description=".custom-desc-monsterspansion">
+    <span class="label">Monsterspansion by Matthew</span>
+    <div class="glightbox-desc custom-desc-monsterspansion">
+      <p>A canvas for people to be artistic. Draw a face — yours, an animal, some sort of monster, whatever — and the app lets you pick an eye colour for the neopixels.</p>
+    </div>
+  </span>
+  <span class="img-container">
     <img src=" ../../images/hexpansions/breakout-danny-walker.jpg" loading="lazy" alt="Breakout hexpansion by Danny Walker" data-title="Breakout hexpansion by Danny Walker" data-description="">
     <span class="label">Breakout hexpansion by Danny Walker</span>
   </span>

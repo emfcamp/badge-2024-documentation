@@ -15,6 +15,12 @@ For example, if you plug a hexpansion into the port on the right-hand side of th
 
 If your badge fails the update, try moving to a spot with better WiFi. If the updates continues to fail, you may have to follow the steps to [flash your badge](./end-user-manual.md#4-flash-your-badge).
 
+### Update says "No update needed" despite a newer version being available
+
+The badge may incorrectly report "No update needed" even when a newer version is available, for example, showing **Current: v1.4.0 / New: v1.12.3**. This is caused by a version string comparison bug where versions like `1.4.0` are sorted as greater than `1.12.0` alphabetically.
+
+In this case, you must [flash the badge](./flash-the-badge.md) manually using the web flasher to install the latest firmware.
+
 ## Broken components
 
 See [Replacing badge components](./replacing-parts.md).
