@@ -25,7 +25,7 @@ class MenuDemo(App):
         )
         self.notification = None
 
-    def select_handler(self, item):
+    def select_handler(self, item, idx):
         self.notification = Notification('You selected "' + item + '"!')
 
     def back_handler(self):
@@ -111,7 +111,7 @@ To use a menu:
            self.minimise()
        self.set_menu("main")
 
-   def select_handler(self, item):
+   def select_handler(self, item, idx):
        # Do something based on the selection, like moving to a new menu or performing an action.
 
    ```
