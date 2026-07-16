@@ -139,7 +139,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Evil Henchman by Brian Corteil</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/fig-pi.jpg" loading="lazy" alt="Fig Pi hexpansion" data-title="Fig Pi hexpansion by Andy Piper" data-description="">
+    <img src=" ../../images/hexpansions/figpi.gif" loading="lazy" alt="Fig Pi hexpansion" data-title="Fig Pi hexpansion by Andy Piper" data-description="">
     <span class="label">Fig Pi hexpansion by Andy Piper</span>
     <span class="viewme"><a href="https://makertube.net/w/ox4SxPRwP4gZuLuBhTCzXx"><p>👀 VIEW VIDEO</p></a></span>
   </span>

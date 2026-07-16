@@ -7,7 +7,7 @@ It has:
 - a **5-way joystick** (`JOYUP`, `JOYDOWN`, `JOYLEFT`, `JOYRIGHT`, `JOYFIRE`)
 - a **12-sensor touch strip** in clock format (`TOUCH1`-`TOUCH12`)
 - **2 proximity sensors**  at the left and right hand sides (`LEFTPROX`, `RIGHTPROX`)
-- a **compass** (see [IMU](tildagon-apps/reference/badge-hardware.md/#IMU) section)
+- a **compass** (see [IMU](./badge-hardware.md#imu) section)
 
 ## API
 
