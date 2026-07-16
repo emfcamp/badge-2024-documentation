@@ -176,7 +176,7 @@ The EMF 2026 badge uses a new frontboard with a different physical layout from t
 | `"E"` | `BUTTON_TYPES["LEFT"]` and `FRONTBOARD_BUTTON_TYPES["E"]` | `"E"` |
 | `"F"` | `BUTTON_TYPES["CANCEL"]` and `FRONTBOARD_BUTTON_TYPES["F"]` | `"F"` |
 
-For more information on the 2026 frontboard types see [Spaceagon](tildagon-apps/reference/spaceagon.md/#Spaceagon).
+For more information on the 2026 frontboard types see [Spaceagon](./spaceagon.md).
 
 4. The `button_state` will continue returning true while the button is pressed. If you want to only do something once you can clear the `button_state` once the event has fired once:
 

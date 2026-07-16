@@ -9,9 +9,7 @@ weight: 2
 - A complete 2026 Spaceagon kit
 - Isopropyl alcohol
 
-![Spaceagon upgrade kit and parts](../images/spaceagon-assembly/requirements-1.jpg){: style="width:550px;height: auto;" }
-
-![Assembled Spaceagon badge](../images/spaceagon-assembly/requirements-2.jpg){: style="width:550px;height: auto;" }
+![Spaceagon upgrade kit and parts](../images/spaceagon-assembly/requirements-2.jpg){: style="width:550px;height: auto;" }
 
 ## Preparation
 
@@ -36,6 +34,8 @@ If you cannot update your badge, [flash your badge](./flash-the-badge.md) instea
 
 ## Remove the 2024 frontboard
 
+If you bought a complete kit, skip ahead to [Assemble the new badge](#assemble-the-new-badge).
+
 ### Step 3: Remove the display
 
 Carefully grip the display by the plastic near the pins and lift the display off the badge.
@@ -58,7 +58,7 @@ Then lift the black flap of the cable connector and slide out the ribbon cable.
 
 ### Step 6: Disconnect the battery cable
 
-Now remove the plastic battery connector:
+Now remove the plastic battery connector by pulling the connector, **not the wires**:
 
 ![Battery connector on the board](../images/spaceagon-assembly/step-06-battery-1.jpg){: style="width:550px;height: auto;" }
 
@@ -73,9 +73,7 @@ Then wiggle the battery gently until it comes loose.
 
 ![Applying isopropyl to the battery glue dots](../images/spaceagon-assembly/step-07-isopropyl-1.jpg){: style="width:550px;height: auto;" }
 
-![Wiggling the battery loose](../images/spaceagon-assembly/step-07-isopropyl-2.jpg){: style="width:550px;height: auto;" }
-
-![Battery removed from the frontboard](../images/spaceagon-assembly/step-07-isopropyl-3.jpg){: style="width:550px;height: auto;" }
+![Battery removed from the frontboard](../images/spaceagon-assembly/step-07-isopropyl-2.jpg){: style="width:550px;height: auto;" }
 
 ### Step 8: Remove the golden standoffs
 
@@ -85,26 +83,26 @@ Remove the three standoffs from the base board. You will need them later.
 
 ## Assemble the new badge
 
-### Step 9: Attach the standoffs to the blue middleboard
+### Step 9: Attach your screen to the blue middleboard
 
-![Attaching standoffs to the blue middleboard](../images/spaceagon-assembly/step-09-standoffs-1.jpg){: style="width:550px;height: auto;" }
+![Placing the screen on the blue middleboard](../images/spaceagon-assembly/step-09-screen-1.jpg){: style="width:550px;height: auto;" }
 
-![Standoffs attached to the middleboard](../images/spaceagon-assembly/step-09-standoffs-2.jpg){: style="width:550px;height: auto;" }
+![Screen attached to the middleboard](../images/spaceagon-assembly/step-09-screen-2.jpg){: style="width:550px;height: auto;" }
 
-### Step 10: Attach your screen to the blue middleboard
-
-![Placing the screen on the blue middleboard](../images/spaceagon-assembly/step-10-screen-1.jpg){: style="width:550px;height: auto;" }
-
-![Screen attached to the middleboard](../images/spaceagon-assembly/step-10-screen-2.jpg){: style="width:550px;height: auto;" }
-
-### Step 11: Attach the plastic nubbin
+### Step 10: Attach the plastic nubbin
 
 Align the flat edge of the nubbin to the display and push the nubbin on the joystick.
 Push the nubbin on strongly.
 
-![Aligning the plastic nubbin](../images/spaceagon-assembly/step-11-nubbin-1.jpg){: style="width:550px;height: auto;" }
+![Aligning the plastic nubbin](../images/spaceagon-assembly/step-10-nubbin-1.jpg){: style="width:550px;height: auto;" }
 
-![Nubbin attached to the joystick](../images/spaceagon-assembly/step-11-nubbin-2.jpg){: style="width:550px;height: auto;" }
+![Nubbin attached to the joystick](../images/spaceagon-assembly/step-10-nubbin-2.jpg){: style="width:550px;height: auto;" }
+
+### Step 11: Remove the stickers
+
+Remove the middle sticker from each corner of the middleboard.
+
+![Removing the stickers from the middleboard](../images/spaceagon-assembly/step-11-stickers.jpg){: style="width:550px;height: auto;" }
 
 ### Step 12: Attach the frontboard
 
@@ -118,13 +116,15 @@ Push both boards together.
 
 ![Frontboard and middleboard assembled](../images/spaceagon-assembly/step-12-frontboard-3.jpg){: style="width:550px;height: auto;" }
 
+![Frontboard and middleboard assembled sideview](../images/spaceagon-assembly/step-12-frontboard-4.jpg){: style="width:550px;height: auto;" }
+
 ### Step 13: Attach the (new) display cable
 
 Lift the black flap of the display connector and slide in the display cable.
 
-![Opening the display cable connector](../images/spaceagon-assembly/step-13-display-cable-1.jpg){: style="width:550px;height: auto;" }
+![Lift the flap of the display connector](../images/spaceagon-assembly/step-13-display-cable-1.jpg){: style="width:550px;height: auto;" }
 
-![Display cable seated in the connector](../images/spaceagon-assembly/step-13-display-cable-2.jpg){: style="width:550px;height: auto;" }
+![Attach the ribbon cable](../images/spaceagon-assembly/step-13-display-cable-1.jpg){: style="width:550px;height: auto;" }
 
 ### Step 14: Attach the battery
 
@@ -132,27 +132,27 @@ Using the same or new glue dots, attach the battery over the display cable.
 
 ![Battery attached over the display cable](../images/spaceagon-assembly/step-14-battery.jpg){: style="width:550px;height: auto;" }
 
-### Step 15: Attach the display cable to the backboard
+### Step 15: Attach the standoffs to the blue middleboard
+
+![Attach standoffs](../images/spaceagon-assembly/step-15-standoffs.jpg){: style="width:550px;height: auto;" }
+
+### Step 16: Attach the display cable to the backboard
 
 Lift the black flap of the display connector and slide in the display cable.
 
-![Connecting the display cable to the backboard](../images/spaceagon-assembly/step-15-display-cable-backboard.jpg){: style="width:550px;height: auto;" }
+![Connecting the display cable to the backboard](../images/spaceagon-assembly/step-16-display-cable-backboard.jpg){: style="width:550px;height: auto;" }
 
-### Step 16: Attach the battery connector
+### Step 17: Attach the battery connector
 
-![Attaching the battery connector](../images/spaceagon-assembly/step-16-battery-connector.jpg){: style="width:550px;height: auto;" }
+![Attaching the battery connector](../images/spaceagon-assembly/step-17-battery-connector.jpg){: style="width:550px;height: auto;" }
 
 At this point the display should show the badge menu.
 
-![Badge menu on the display](../images/spaceagon-assembly/step-16-menu.jpg){: style="width:550px;height: auto;" }
+### Step 18: Screw in the three screws to secure the backboard
 
-### Step 17: Screw in the three screws to secure the backboard
+![Screwing the backboard in place](../images/spaceagon-assembly/step-18-screws-1.jpg){: style="width:550px;height: auto;" }
 
-![Screwing the backboard in place](../images/spaceagon-assembly/step-17-screws-1.jpg){: style="width:550px;height: auto;" }
-
-![Backboard secured with three screws](../images/spaceagon-assembly/step-17-screws-2.jpg){: style="width:550px;height: auto;" }
-
-### Step 18: Test your badge
+### Step 19: Test your badge
 
 Optionally, you can download and test your badge using the [Spaceagon Test](https://apps.badge.emfcamp.org/apps/21230442) app.
 In the app store on the badge, select Use Code (or CodeInstall on older firmwares) and enter **21230442** to install it.
@@ -161,6 +161,6 @@ In the app store on the badge, select Use Code (or CodeInstall on older firmware
 
     If you did not update your badge before assembling the badge, the badge buttons on the new frontboard will not work. Use the joystick input to update your badge.
 
-### Step 19: Enjoy your badge
+### Step 20: Enjoy your badge
 
-![Finished Spaceagon badge](../images/spaceagon-assembly/step-19-enjoy.jpg){: style="width:550px;height: auto;" }
+![Finished Spaceagon badge](../images/spaceagon-assembly/step-20-enjoy.jpg){: style="width:550px;height: auto;" }
