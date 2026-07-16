@@ -61,7 +61,7 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
    # Version number of your app.  If you push a commit where this number is
    # increased, we interpret this as a new version being released.
    #
-   # Version number must be an integer!
+   # Version number must be a string!
    version = "0.0.1"
    ```
 
