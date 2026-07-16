@@ -17,6 +17,7 @@ The hexpansions that the badge supports allow you to extend the functionality of
 <div class="grid cards" markdown>
 
 - [I want to know how to assemble the badge](#assembly)
+- [I want to assemble a Spaceagon (2026)](./spaceagon-assembly.md)
 - [I want to connect to another Wi-Fi network](./connect-to-wifi.md)
 - [(Re)flash your badge](./flash-the-badge.md)
 - [Insert hexpansions](#hexpansions)
