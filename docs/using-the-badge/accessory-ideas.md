@@ -61,7 +61,7 @@ A 3D-printed adapter that attaches to the rear of the badge, letting you snap on
 
 ### EMF model
 
-Whle not technically an accessory, please enjoy this giant build of a Tildagon.
+While not technically an accessory, please enjoy this giant build of a Tildagon.
 
 ![Giant badge](../images/badge-photos/giant-badge.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 

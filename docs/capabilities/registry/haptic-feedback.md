@@ -30,7 +30,7 @@ docs](../../tildagon-apps/reference/eventbus.md)
 
 ## Providers
 
-It is expected that providers of this capabilty are hexpansions with some form of mechanical actuator attached.
+It is expected that providers of this capability are hexpansions with some form of mechanical actuator attached.
 
 Providers should subscribe to events of type `haptic` on the event bus:
 

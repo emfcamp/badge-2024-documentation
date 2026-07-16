@@ -16,7 +16,7 @@ The `sentences` attribute contains a non-exhaustive list of received NMEA senten
 
 ## Consumers
 
-Find an implementor of the nmea capability from the currently running apps. This application will have a `sentences` attribute, which contains a list of recently recevied sentences.  You must not modify that list.
+Find an implementer of the nmea capability from the currently running apps. This application will have a `sentences` attribute, which contains a list of recently received sentences.  You must not modify that list.
 
 ```python
 

@@ -6,6 +6,8 @@ theme:
   name: material
   logo: "images/badge icon_64 wide cutouts_dark.svg"
   favicon: images/favicon.png
+  features:
+    - content.code.copy
   font:
     text: Raleway
     code: Roboto Mono
@@ -37,10 +39,12 @@ extra_javascript:
 markdown_extensions:
   - attr_list
   - md_in_html
-  - codehilite
-  - fenced_code
   - admonition
   - sane_lists
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.emoji:

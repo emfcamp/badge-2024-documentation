@@ -12,7 +12,7 @@ Provides the position of the badge to applications.
 
 ## Consumers
 
-Find an implementor of the position capability from the currently running apps. This application will have a `position` attribute, which contains either `None`, or the tuple `(latitude, longitude)`.
+Find an implementer of the position capability from the currently running apps. This application will have a `position` attribute, which contains either `None`, or the tuple `(latitude, longitude)`.
 
 It also provides some additional metadata, which isn't always available on all position implementations.
 

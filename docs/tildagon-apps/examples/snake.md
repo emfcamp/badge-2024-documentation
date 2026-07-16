@@ -75,6 +75,7 @@ If you need to have access to badge hardware that is not in the simulator, you c
     If you're using a real badge and `mpremote`, open a terminal in your new `snake` folder and run:
 
     ```sh
+    mpremote mkdir :/apps/snake
     mpremote cp ./* :/apps/snake
     ```
 
@@ -100,7 +101,7 @@ If you need to have access to badge hardware that is not in the simulator, you c
     mpremote cp ./* :/apps/snake
     ```
 
-    Then press the **reboop** button for 2 seconds to restart the app.
+    Then press the **reboop** button for 2 seconds to restart the badge.
 
     !!! info "Debugging"
 
@@ -806,13 +807,15 @@ Next, add the score to the display by adding it to the `draw()` method:
 - Calculate the width of the text using the `text_width()` method.
 - Then add the text to the display using the `text()` method.
 
-Draw the score before you call the `translate()` method:
+The score uses the screen's centered coordinate system `(0, 0)`, so draw it in its own `ctx.save()` / `ctx.restore()` block **before** the board's `translate()`. This prevents the `-80` board translation from affecting the score position:
 
 ```python
 # draw score
+ctx.save()
 ctx.font_size = 12
 width = ctx.text_width("Score: {}".format(self.score))
 ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text("Score: {}".format(self.score))
+ctx.restore()
 ```
 
 Your app should now resemble this:
@@ -889,6 +892,7 @@ class SnakeApp(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
+
         ctx.save()
 
         # draw score
@@ -896,7 +900,9 @@ class SnakeApp(app.App):
         width = ctx.text_width("Score: {}".format(self.score))
         ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text(
             "Score: {}".format(self.score))
+        ctx.restore()
 
+        ctx.save()
         ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
@@ -1049,7 +1055,7 @@ def _exit(self):
     self.minimise()
 ```
 
-Lastly, add the logic in the `draw()` method to draw the notification:
+Lastly, add the logic in the `draw()` method to draw the dialog. It must be drawn **after** the board's `ctx.restore()`, since it expects `(0, 0)` to be the screen centre:
 
 ```python
 if self.dialog:
@@ -1170,6 +1176,7 @@ class SnakeApp(app.App):
 
     def draw(self, ctx):
         clear_background(ctx)
+
         ctx.save()
 
         # draw score
@@ -1177,7 +1184,9 @@ class SnakeApp(app.App):
         width = ctx.text_width("Score: {}".format(self.score))
         ctx.rgb(1, 0, 0).move_to(0 - width/2, 100).text(
             "Score: {}".format(self.score))
+        ctx.restore()
 
+        ctx.save()
         ctx.translate(-80, -80)
         # draw game board
         ctx.rgb(0, 0, 0).rectangle(0, 0, 160, 160).fill()
@@ -1203,6 +1212,57 @@ Go ahead and run your app to test the game state logic:
 
 ![App showing the game over dialogue](../../images/snake/game-over.gif){: style="width:400px;height: auto;margin:auto;display:block;" }
 
+## Optional: Add emote events
+
+The badge supports [emote events](../reference/eventbus.md#common-built-in-events), which is a mechanism to signal to the rest of the badge and any attached hexpansions that something good or bad just happened.
+By default the firmware flashes the back-of-board LEDs green for a positive emote and red for a negative one.
+Apps and hexpansions can also listen to these events and perform custom behaviour.
+
+Let's add a positive emote whenever the snake eats food and a negative emote when the player loses.
+
+First, add the imports at the top of the file alongside your other imports:
+
+```python
+from system.eventbus import eventbus
+from events.emote import EmotePositiveEvent, EmoteNegativeEvent
+```
+
+Then, in `_move_snake()`, emit `EmotePositiveEvent` when food is eaten and `EmoteNegativeEvent` when the game ends:
+
+```python hl_lines="21 30 31"
+def _move_snake(self):
+    first_x, first_y = self.snake[0]
+    if self.direction == "RIGHT":
+        self.snake = [(first_x + 1, first_y)] + self.snake
+        self.snake = self.snake[:-1]
+    if self.direction == "LEFT":
+        self.snake = [(first_x - 1, first_y)] + self.snake
+        self.snake = self.snake[:-1]
+    if self.direction == "UP":
+        self.snake = [(first_x, first_y - 1)] + self.snake
+        self.snake = self.snake[:-1]
+    if self.direction == "DOWN":
+        self.snake = [(first_x, first_y + 1)] + self.snake
+        self.snake = self.snake[:-1]
+
+    # if there is food there, eat food
+    if self.snake[0] in self.food:
+        self.food.remove(self.snake[0])
+        self.snake = self.snake + [self.snake[0]]
+        self.score = self.score + 1
+        eventbus.emit(EmotePositiveEvent())  # flash back LEDs green
+
+    # check if outside game borders
+    x, y = self.snake[0]
+    if x < 0 or x >= 32:
+        self.game = "OVER"
+    if y < 0 or y >= 32:
+        self.game = "OVER"
+
+    if self.game == "OVER":
+        eventbus.emit(EmoteNegativeEvent())  # flash back LEDs red
+```
+
 ## Optional: Use the IMU
 
 You can optionally use the IMU on the badge to move the snake by tilting the badge. Note that this only works on the badge itself, so you will need to [debug your app on your badge](../run-on-badge.md).
@@ -1215,7 +1275,7 @@ import imu
 
 Then add the `self.acc_read` variable to the `__init__()` method:
 
-```python
+```python hl_lines="12"
 def __init__(self):
     # Need to call to access overlays
     super().__init__()
@@ -1278,7 +1338,7 @@ def update(self, delta):
             self._move_snake()
     elif self.game == "OVER":
         self.dialog = YesNoDialog(
-            message="Game Over.\nPlay Again?",
+            message=["Game Over.", "Play Again?"],
             on_yes=self._reset,
             on_no=self._exit,
             app=self,
