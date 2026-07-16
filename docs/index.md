@@ -13,7 +13,8 @@ Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is t
 <div class="grid cards" markdown>
 
 - [I want to get my own badge](https://www.emfcamp.org/about/badge)
-- [I want to know how to assemble and use the badge](using-the-badge/end-user-manual.md)
+- [I want to know how to assemble and use the Tildagon badge](using-the-badge/end-user-manual.md)
+- [I want to assemble a Spaceagon (2026)](using-the-badge/spaceagon-assembly.md)
 - [I want to connect to another Wi-Fi network](using-the-badge/connect-to-wifi.md)
 - [I want to make a badge app](tildagon-apps/development.md)
 - [I want to make a hexpansion](hexpansions/creating-hexpansions.md)
