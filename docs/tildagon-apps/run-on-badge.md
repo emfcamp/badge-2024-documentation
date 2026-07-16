@@ -65,3 +65,4 @@ If your app crashes when it's started, you can get debug information from `mprem
 
 2. Press `CTRL-C` to cancel the current running program and then `CTRL-D` to do a soft-reset while staying connected to the shell.
 3. Now you can use the badge menu to start your app and you will see errors and print statements from your app.
+4. Press `CTRL-X` to leave the shell.

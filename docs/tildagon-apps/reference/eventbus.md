@@ -144,3 +144,34 @@ There are a lot of event types built into the firmware. Here are a few that are 
   ```python
   from system.hexpansion.events import HexpansionInsertionEvent, HexpansionRemovalEvent
   ```
+
+* ``EmotePositiveEvent`` and ``EmoteNegativeEvent``
+
+  Emote events are a lightweight way for a foreground app to signal to other components, such as hexpansion drivers or the back-of-board LED manager, that something good or bad just happened in the user interface.
+  The components can react in their own way, for example by flashing the back LEDs green or red, or playing a short jingle on an audio hexpansion.
+
+  By default the firmware flashes the backboard LEDs green on a positive emote and red on a negative emote. This behaviour can be turned off in the badge settings.
+
+  Guidelines for use:
+
+  * Only emit emotes when your app is in the foreground.
+  * Send at most a handful of emotes per minute, as receivers may generate behaviours lasting several seconds (e.g. an audio jingle).
+
+  ```python
+  from events.emote import EmotePositiveEvent, EmoteNegativeEvent
+
+  # signal success
+  eventbus.emit(EmotePositiveEvent())
+
+  # signal failure
+  eventbus.emit(EmoteNegativeEvent())
+  ```
+
+  If you are writing a hexpansion driver or app, you can listen for emote events:
+
+  ```python
+  from events.emote import EmotePositiveEvent, EmoteNegativeEvent
+
+  eventbus.on(EmotePositiveEvent, self.handle_positive, self)
+  eventbus.on(EmoteNegativeEvent, self.handle_negative, self)
+  ```
