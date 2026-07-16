@@ -23,6 +23,6 @@ weight: -10
 
 - [Create a hexpansion](./creating-hexpansions.md)
 - [Write an app for a hexpansion](./writing-hexpansion-apps.md)
-- [Write an app to an EEPROM](./eeprom.md)
+- [EEPROM apps and firmware updates](./eeprom.md)
 
 </div>

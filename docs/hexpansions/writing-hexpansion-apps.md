@@ -78,7 +78,7 @@ Below is an example of how you find which port your hexpansion is plugged in to 
 === "App loaded from badge, with EEPROM"
 
     !!! note "Information"
-        For this method to work, your EEPROM needs to be properly provisioned with the [correct header information.](eeprom.md)
+        For this method to work, your EEPROM needs to be properly provisioned with the [correct header information.](./eeprom.md#eeprom-format).
 
     If it's an app loaded from the badge, you'll need to search each port for your hexpansion, and then create the `HexpansionConfig` object once you've found it.
 

@@ -114,7 +114,7 @@ Hexpansion connectors provide:
 
 A hexpansion can optionally provide an I2C EEPROM from the list of approved devices. If an EEPROM is present, the badge will be able to read a hexpansion identifier and name. You can also store code on the EEPROM, which will be copied to the badge and run from there.
 
-For more information see [EEPROM format](./eeprom.md).
+For more information see [EEPROM apps and firmware updates](./eeprom.md).
 
 ## Electrical interface
 
