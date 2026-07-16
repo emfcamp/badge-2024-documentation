@@ -27,10 +27,10 @@ There are two routes depending on how many different hexpansion types you plan t
 
 Two shared vendor IDs are open for anyone to use:
 
-| VID | Who can use it |
-|-----|----------------|
-| `0xCAFE` | Anyone |
-| `0xF055` | Open-source hardware only |
+| VID      | Who can use it             |
+|----------|----------------------------|
+| `0xCAFE` | Anyone                     |
+| `0xF055` | Open-source hardware only  |
 
 To get a PID within one of these shared vendors, [open an issue](https://github.com/emfcamp/hexpansion-firmwares/issues/new?template=product_id.yml) on the hexpansion-firmwares repository. A pull request will be automatically opened and merged to create a directory for your hexpansion.
 
