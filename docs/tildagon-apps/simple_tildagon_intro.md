@@ -1,5 +1,5 @@
 ---
-title: Tildagon Coding for Beginners
+title: Tildagon Coding for Beginners Intro
 weight: 7
 ---
 
