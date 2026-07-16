@@ -6,7 +6,9 @@ Tildagon OS is the name for the firmware that runs on the badge. It is based on 
 
 You can write apps for the badge in MicroPython. You can use most MicroPython libraries, and for some functionality we provide abstractions - for example, you can access all buttons through [`events.input`](./reference/badge-hardware.md#buttons).
 
-For more info check out [Write a Tildagon OS App](./development.md) or follow the tutorial to [Build a snake app](./examples/snake.md).
+For more info check out [Write a Tildagon OS App](./development.md) or follow the tutorial to [Build a snake app](./examples/snake.md).   
+   
+Looking for something for complete beginners to coding or Python? Check out the [simple_tildagon guide](simple_tildagon_intro.md) - Available in Blocks Coding or beginner Python Coding.
 
 ## Running your app
 
@@ -23,6 +25,7 @@ You can publish your apps to the [app store](https://apps.badge.emfcamp.org/) so
 <div class="grid cards" markdown>
 
 - [Write a Tildagon OS App](./development.md)
+- [Write a Tildagon App without any Python/Coding Experience](simple_tildagon_intro.md)
 - [Configuration management in an app](./configuration.md)
 - [Tildagon OS Programming Interface Reference](./reference/reference.md)
 - [Publish your app](./publish.md)
