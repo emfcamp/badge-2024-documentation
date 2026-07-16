@@ -17,7 +17,7 @@ The [Tildagon Blockly guide is here](simple_tildagon_blocks.md).
 2. [Thonny](https://thonny.org/) - A powerful general purpose Python editor for beginners and power users alike. Must be downloaded and installed.     
 The [Thonny Python guide is here](simple_tildagon_python.md).
 
-## Option 1 - Tildagon Blockly - Web browser based.   
+## [Option 1 - Tildagon Blockly - Web browser based](simple_tildagon_blocks.md)   
 
 Not programmed before or not familiar with Python? This is a great place to start! You can use a blocks based programming environment (similar to MIT Scratch).   
    
@@ -32,7 +32,7 @@ Note that Tildagon Blockly requires a web browser with Web Serial support.
 
 The [Tildagon Blockly beginners guide is here](simple_tildagon_blocks.md).   
 
-## Option 2 - Thonny - Desktop program
+## [Option 2 - Thonny - Desktop program](simple_tildagon_python.md)
 
 Thonny is a more extensive general purpose Python editor. It needs to be downloaded and installed, but does allow more advanced Python programs.   
 Thonny also includes the ability to interact directly with the badge and it's files.   
