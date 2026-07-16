@@ -161,6 +161,6 @@ In the app store on the badge, select Use Code (or CodeInstall on older firmware
 
     If you did not update your badge before assembling the badge, the badge buttons on the new frontboard will not work. Use the joystick input to update your badge.
 
-### Step 19: Enjoy your badge!
+### Step 19: Enjoy your badge
 
 ![Finished Spaceagon badge](../images/spaceagon-assembly/step-19-enjoy.jpg){: style="width:550px;height: auto;" }
