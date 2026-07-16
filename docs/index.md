@@ -150,7 +150,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/hexyhexymic.png" loading="lazy" alt="HexyHexyMic hexpansion PCBs" data-title="HexyHexyMic by AlexJMcIntyre" data-description=".custom-desc-hexyhexymic">
+    <img src=" ../../images/hexpansions/hexyhexymic.jpg" loading="lazy" alt="HexyHexyMic hexpansion PCBs" data-title="HexyHexyMic by AlexJMcIntyre" data-description=".custom-desc-hexyhexymic">
     <span class="label">HexyHexyMic by AlexJMcIntyre</span>
     <span class="viewme"><a href="https://github.com/AlexJMcIntyre/HexyHexyMic"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-hexyhexymic">
