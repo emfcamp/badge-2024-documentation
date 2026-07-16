@@ -22,7 +22,7 @@ Want to complete this guide with Python? Click here for the [Thonny Python guide
 
 ## What is Tildagon Blockly?    
 
-Not programmed before or not familiar with Python? This is a great place to start! You can use a blocks based programming environment (similar to MIT Scratch).   
+Not programmed before or not familiar with Python? This is a great place to start! You can use a block-based programming environment (similar to MIT Scratch).   
 ![Tildagon Blockly](../images/simple_tildagon_workshop/tildagon-blockly.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
 - Connect badge - This needs to be run first, to connect up to your badge so it's ready to copy programs over to.   
@@ -34,8 +34,8 @@ Not programmed before or not familiar with Python? This is a great place to star
 Already a Python expert? Click here for the [Thonny Python guide](simple_tildagon_python.md) instead.    
 
 ## Getting started with Tildagon Blockly  
-To get started with Tildagon Blockly, first click `connect badge`. You will need to select the badge from the pop up web serial box.   
-Once your ready to test your program, click `upload program to badge`.   
+To get started with Tildagon Blockly, first click `connect badge`. You will need to select the badge from the pop-up Web Serial dialog box.   
+Once you're ready to test your program, click `upload program to badge`.   
 
 !!! warning
 
@@ -66,7 +66,7 @@ Try uploading it to your badge!
     ```
     ImportError: no module named 'simple_tildagon'
     ```
-    This means your badge needs updated before you can do this workshop. See [here on how to do this](../using-the-badge/end-user-manual.md), or use the built in OTA updater.
+    This means your badge needs to be updated before you can do this activity. See [here on how to do this](../using-the-badge/end-user-manual.md), or use the built-in OTA updater.
 
 ### Exercise 1
 
@@ -83,7 +83,7 @@ Try to set the following LEDs to colours
 
 The badge contains an IMU (Inertial Measurement Unit). This is a combination of an accelerometer, gyroscopes and sometimes a magnetometer (compass). It allows you to measure movement of the badge and for example the direction it is tilting.
 
-To use it
+To use it, use the following code:
 
 ![IMU tilt code](../images/simple_tildagon_workshop/tildagon-blockly-tilt.jpg){: style="width:400px;height:auto;display:block;margin:0;" }
 This program (one of the examples) sets all LEDs to blue when the badge is tilted to the left. When the badge is not being tilted, it switches all LEDs off.   
@@ -94,7 +94,7 @@ You can also check if the badge has been shaken, or pull the raw acceleration va
 ### Exercise 2
 
 Create a program that has individual LEDs switched on using the `badge is tilted` block. So if you tilt the badge left, LED 9 and 10 should come on.
-If they shake, it should reset them all back to off.
+If the badge is shaken, it should reset them all back to off.
 
 !!! info "Tip"
 
@@ -104,14 +104,14 @@ If they shake, it should reset them all back to off.
 
 There are 6 buttons around the outside of the badge labeled A-F (plus 3 additional buttons on the bottom layer circuit board used for managing the badge). You can check if the 6 buttons are being pressed with the following program.
 
-To use it use the following code:
+To use it, use the following code:
 
 ![Buttons code](../images/simple_tildagon_workshop/tildagon-blockly-button.jpg){: style="width:400px;height:auto;display:block;margin:0;" }     
-The above example sets LED 1 to red when the A button is pressed, the yellow when the B button is pressed.   
+The above example sets LED 1 to red when the A button is pressed, then to yellow when the B button is pressed.   
 
 ### Exercise 3
 
-Extend your previous program to switch all LEDs to purple once you press B button.
+Extend your previous program to switch all LEDs to purple once you press the B button.
 
 
 ### Exercise 4
@@ -135,7 +135,7 @@ You can display a basic picture on the screen using the `Display show` block.
 Extend your previous program to show a happy face when tilted left and a sad face when tilted right.   
 When shaken, show a surprised face.   
 
-### Exercise 6   
+### Exercise 6   
    
 Create a new program that displays a message on screen, that every 2 seconds, switches to a different colour.  
 
@@ -149,7 +149,7 @@ Now that you know the basics of using the hardware on the badge, here's a few ot
 
 3. Create a simple dice roller. When you shake the badge, a random LED is chosen (which is associated with a number).
 
-4. Create a reaction game - An LEDs shows up by a button, the user must quickly press that button, after which another random LED lights up and they must press the button nearest that.   
+4. Create a reaction game - An LED shows up by a button, the user must quickly press that button, after which another random LED lights up and they must press the button nearest that.   
 
 5. Create a name badge - Using the display functions, create a "Hello my name is ...." badge. Planning to show text over multiple lines? You need to be careful with how you use the `clear before` option in `display draw text`.   
 
