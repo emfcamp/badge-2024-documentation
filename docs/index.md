@@ -150,7 +150,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/hexyhexymic.png" loading="lazy" alt="HexyHexyMic hexpansion PCBs" data-title="HexyHexyMic by AlexJMcIntyre" data-description=".custom-desc-hexyhexymic">
+    <img src=" ../../images/hexpansions/hexyhexymic.jpg" loading="lazy" alt="HexyHexyMic hexpansion PCBs" data-title="HexyHexyMic by AlexJMcIntyre" data-description=".custom-desc-hexyhexymic">
     <span class="label">HexyHexyMic by AlexJMcIntyre</span>
     <span class="viewme"><a href="https://github.com/AlexJMcIntyre/HexyHexyMic"><p>👀 VIEW FILES</p></a></span>
     <div class="glightbox-desc custom-desc-hexyhexymic">
@@ -159,6 +159,43 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
         <span class="viewme"><a href="https://github.com/AlexJMcIntyre/HexyHexyMic"><p>👀 VIEW FILES</p></a></span>
       </div>
     </div>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/eepromagon.jpg" loading="lazy" alt="EEPROMagon hexpansion" data-title="EEPROMagon by Matt W" data-description="">
+    <span class="label">EEPROMagon by Matt W</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/matrix-hexpansion.png" loading="lazy" alt="LED matrix hexpansion with 156 0603 LEDs forming a rainbow ring" data-title="Matrix hexpansion by Kristian Hentschel" data-description="">
+    <span class="label">Matrix hexpansion by Kristian Hentschel</span>
+    <span class="viewme"><a href="https://gts.alwaysplottingsomething.com/@kristian/statuses/01KXE38YQYEDYN13WJJSWR18QC"><p>👀 VIEW POST</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/wifispansion.jpg" loading="lazy" alt="WiFiSpansion hexpansion" data-title="WiFiSpansion by Bob" data-description="">
+    <span class="label">WiFiSpansion by Bob</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/screen-hexpansion.png" loading="lazy" alt="Screen hexpansion with round displays showing eye graphics" data-title="Screen hexpansion by mbooth" data-description="">
+    <span class="label">Screen hexpansion by mbooth</span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/geiger-hexpansion.jpg" loading="lazy" alt="Geiger counter hexpansion" data-title="Geiger counter hexpansion by dratini0" data-description="">
+    <span class="label">Geiger counter hexpansion by dratini0</span>
+    <span class="viewme"><a href="https://go.dratini0.hu/geiger-hexpansion/"><p>👀 VIEW FILES</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/y-adapter-hexpansion.jpg" loading="lazy" alt="Y adapter hexpansion" data-title="Y adapter hexpansion by dratini0" data-description="">
+    <span class="label">Y adapter hexpansion by dratini0</span>
+    <span class="viewme"><a href="https://go.dratini0.hu/y-adapter-hexpansion/"><p>👀 VIEW FILES</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/sk9822-recycling-hexpansion.jpg" loading="lazy" alt="SK9822 recycling hexpansion" data-title="SK9822 recycling hexpansion by dratini0" data-description="">
+    <span class="label">SK9822 recycling hexpansion by dratini0</span>
+    <span class="viewme"><a href="https://go.dratini0.hu/sk9822-recycling-hexpansion/"><p>👀 VIEW FILES</p></a></span>
+  </span>
+  <span class="img-container">
+    <img src=" ../../images/hexpansions/gps-ublox-hexpansion.jpg" loading="lazy" alt="GPS ublox hexpansion" data-title="GPS (ublox) hexpansion by dratini0" data-description="">
+    <span class="label">GPS (ublox) hexpansion by dratini0</span>
+    <span class="viewme"><a href="https://go.dratini0.hu/gps-hexpansion/"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/breakout-danny-walker.jpg" loading="lazy" alt="Breakout hexpansion by Danny Walker" data-title="Breakout hexpansion by Danny Walker" data-description="">
