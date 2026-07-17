@@ -167,7 +167,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">EEPROMagon by Matt W</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/matrix-hexpansion.png" loading="lazy" alt="LED matrix hexpansion with 156 0603 LEDs forming a rainbow ring" data-title="Matrix hexpansion by Kristian Hentschel" data-description="">
+    <img src=" ../../images/hexpansions/matrix-hexpansion.jpg" loading="lazy" alt="LED matrix hexpansion with 156 0603 LEDs forming a rainbow ring" data-title="Matrix hexpansion by Kristian Hentschel" data-description="">
     <span class="label">Matrix hexpansion by Kristian Hentschel</span>
     <span class="viewme"><a href="https://gts.alwaysplottingsomething.com/@kristian/statuses/01KXE38YQYEDYN13WJJSWR18QC"><p>👀 VIEW POST</p></a></span>
   </span>
@@ -176,7 +176,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">WiFiSpansion by Bob</span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/screen-hexpansion.png" loading="lazy" alt="Screen hexpansion with round displays showing eye graphics" data-title="Screen hexpansion by mbooth" data-description="">
+    <img src=" ../../images/hexpansions/screen-hexpansion.jpg" loading="lazy" alt="Screen hexpansion with round displays showing eye graphics" data-title="Screen hexpansion by mbooth" data-description="">
     <span class="label">Screen hexpansion by mbooth</span>
   </span>
   <span class="img-container">
