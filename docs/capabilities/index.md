@@ -50,8 +50,10 @@ capability = { type = "Capability", identifier = "https://tildagon.badge.emfcamp
   "metadata": {
     "providedCapabilities": [
       {
-        "type": "ProvidedCapability",
-        "identifier": "https://tildagon.badge.emfcamp.org/capabilities/registry/mysterious-pings"
+        "capability": {
+          "type": "ProvidedCapability",
+          "identifier": "https://tildagon.badge.emfcamp.org/capabilities/registry/mysterious-pings"
+        }
       }
     ]
   }
