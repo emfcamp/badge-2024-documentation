@@ -1,8 +1,8 @@
-# Tildagon
+# Spaceagon
 
-![A hexagonal camp badge, with three smaller hexagonal PCBs containing breakout pins peaking out from the edges, and a screen showing @emfcamp](images/badge-photos/badge-with-screen.jpg "Tildagon with attached Hexpansions and screen"){: style="width:300px; height: auto" , align=right }
+![Finished Spaceagon badge](images/spaceagon-assembly/step-20-enjoy.jpg "Finished Spaceagon badge"){: style="width:300px; height: auto" , align=right }
 
-This year's badge is the Tildagon badge. It's a hexagon with a slot on each side that you can plug _[hexpansions](#hexpansions)_ into. A hexpansion is a 1 mm thick object with a hexagon shape on one edge (a six-sided polygon like this: ⬡). It can be made of card stock, so you can quickly add some cat ears to your badge, or it can be a printed circuit.
+This year's badge is the Spaceagon badge - a new and improved version of the Tildagon. It's a hexagon with a slot on each side that you can plug _[hexpansions](#hexpansions)_ into. A hexpansion is a 1 mm thick object with a hexagon shape on one edge (a six-sided polygon like this: ⬡). It can be made of card stock, so you can quickly add some cat ears to your badge, or it can be a printed circuit.
 
 Unlike in previous years, [Electromagnetic Field](https://www.emfcamp.org/) is trying to make a [longer-lasting platform](#a-reusable-platform-with-an-interchangeable-part) so any apps developed for it will work for multiple years.
 
