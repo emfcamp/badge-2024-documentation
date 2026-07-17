@@ -12,7 +12,7 @@ weight: 8
 
 ## Building your badge
 
-If you haven't already built your badge, you need to [follow the instructions here](../using-the-badge/end-user-manual.md).
+If you haven't already built your badge, you need to [follow the Spaceagon assembly instructions](../using-the-badge/spaceagon-assembly.md).
 
 ## What software do I need?
 
