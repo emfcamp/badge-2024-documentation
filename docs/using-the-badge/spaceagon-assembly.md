@@ -102,7 +102,7 @@ Push the nubbin on strongly.
 
 ### Step 11: Remove the stickers
 
-Remove the middle sticker from each corner of the middleboard.
+Remove the orange stickers covering the three mounting points on the middleboard, as shown in the image.
 
 ![Removing the stickers from the middleboard](../images/spaceagon-assembly/step-11-stickers.jpg){: style="width:550px;height: auto;" }
 
