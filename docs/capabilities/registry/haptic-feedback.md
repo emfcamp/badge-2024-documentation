@@ -22,8 +22,10 @@ There's no need to scan for provider hexpansions to do this, but you might want 
 
 from events.custom import CustomEvent
 
-eventbus.emit(CustomEvent(type="haptic", params={}))
+eventbus.emit(CustomEvent("haptic", {}))
 ```
+
+The `{}` is a `dict` of parameters as below.
 
 For more info on the event bus, see [the EventBus
 docs](../../tildagon-apps/reference/eventbus.md)
@@ -37,6 +39,14 @@ Providers should subscribe to events of type `haptic` on the event bus:
 ```python
 
 eventbus.on("haptic", self.haptic_handler, app)
+
+
+def haptic_handler(self, event):
+    data = event.data
+    effect = data.effect  # "click", "tick" etc.
+    duration = data.duration  # optional
+
+    # Use this for some kind of haptic feedback.
 ```
 
 From there, your handler will need to parse the event and its parameters to decide what to do with it. This will be specific to your hexpansion hardware design (actuator choice, motor driver etc.) For a list of parameters, see the [Parameters](#parameters) section below
