@@ -5,24 +5,24 @@ weight: 9
 
 ## Goals for the guide
 
-1. Flash some multicoloured (RGB) LEDs.   
-2. Detect presses of the buttons.   
-3. Use the direction sensor (accelerometer which is part of the IMU).  
-4. Show some pictures and text on the display.  
+1. Flash some multicoloured (RGB) LEDs.
+2. Detect presses of the buttons.
+3. Use the direction sensor (accelerometer which is part of the IMU).
+4. Show some pictures and text on the display.
 
 ## Building your badge
 
-If you haven't already built your badge, you need to [follow the instructions here](../using-the-badge/end-user-manual.md).
+If you haven't already built your badge, you need to [follow the Spaceagon assembly instructions](../using-the-badge/spaceagon-assembly.md).
 
 ## What software do I need?
 
-You will need to [download and install Thonny](https://thonny.org/). Thonny is a powerful general-purpose Python editor for beginners and power users alike. 
-   
-Are you a beginner to coding? Want to complete this guide with block coding instead? Click here for the [Tildagon Blockly guide](simple_tildagon_blocks.md).   
+You will need to [download and install Thonny](https://thonny.org/). Thonny is a powerful general-purpose Python editor for beginners and power users alike.
+
+Are you a beginner to coding? Want to complete this guide with block coding instead? Click here for the [Tildagon Blockly guide](simple_tildagon_blocks.md).
 
 ## Thonny - Desktop program
 
-Thonny is a more extensive general-purpose Python editor. It needs to be downloaded and installed, but does allow more advanced Python programs.   
+Thonny is a more extensive general-purpose Python editor. It needs to be downloaded and installed, but does allow more advanced Python programs.
 Thonny also includes the ability to interact directly with the badge and its files.
 ![Thonny](../images/simple_tildagon_workshop/thonny.jpg){: style="width:400px;height: auto;margin:auto;display:block;" }
 
@@ -32,7 +32,7 @@ Thonny also includes the ability to interact directly with the badge and its fil
 
 You can use Thonny's file manager to edit or remove any file on the badge.
 
-## Getting started with Thonny  
+## Getting started with Thonny
 
 Using Thonny with the file manager open (if it isn't, select `View -> Files` on the top bar), open the `boot.py` file. This is the file you need to edit for all of this. It runs once on startup (before handing over to the main badge software).
 
@@ -105,7 +105,6 @@ To use it, use the following code:
 import simple_tildagon as st
 import time
 
-
 while True:
     # Options include is_tilted_left, is_tilted_right,
     # is_tilted_forward, is_tilted_back
@@ -136,7 +135,6 @@ To use it, use the following code:
 import simple_tildagon as st
 import time
 
-
 while True:
     # Options include is_tilted_left, is_tilted_right, is_tilted_forward,
     # is_tilted_back
@@ -163,13 +161,13 @@ Extend your previous program to finish when the `F` button is pressed. This will
 
 ## Display
 
-You can display basic images and text on the display using the display functions.    
+You can display basic images and text on the display using the display functions.
 
 !!! warning "Warning"
 
-    The display module in `simple_tildagon.py` is new for EMF 2026. As such, you need to make sure you are running badge software version 2.1.0 and above. You can check this from the `Update` app on the badge.   
+    The display module in `simple_tildagon.py` is new for EMF 2026. As such, you need to make sure you are running badge software version 2.1.0 and above. You can check this from the `Update` app on the badge.
 
-You can display a basic picture on the screen using `st.display.show()`.    
+You can display a basic picture on the screen using `st.display.show()`.
 
 ```python
 
@@ -182,22 +180,22 @@ while True:
     time.sleep(1)  # Only updating every second
 ```
 
-![Display happy](../images/simple_tildagon_workshop/tildagon-blockly-happy.jpg){: style="width:400px;height:auto;display:block;margin:0;" }  
+![Display happy](../images/simple_tildagon_workshop/tildagon-blockly-happy.jpg){: style="width:400px;height:auto;display:block;margin:0;" }
 
-The full list of available Image items is below:   
-- HAPPY  
-- SAD   
-- SURPRISED   
-- ANGRY   
-- CONFUSED   
-- HEART   
-- HEART_SMALL   
-- YES   
-- NO   
-- ARROW_N - ARROW_S - ARROW_E - ARROW_W   
-   
+The full list of available Image items is below:
 
-You're also able to display text on screen as well.   
+- HAPPY
+- SAD
+- SURPRISED
+- ANGRY
+- CONFUSED
+- HEART
+- HEART_SMALL
+- YES
+- NO
+- ARROW_N - ARROW_S - ARROW_E - ARROW_W
+
+You're also able to display text on screen as well.
 
 ```python
 
@@ -205,19 +203,20 @@ import simple_tildagon as st
 import time
 
 while True:
-    # Other optional parameters include delay=0, x=0, y=0, font_size=30, color=(255, 255, 255))
+    # Other optional parameters: delay=0, x=0, y=0, font_size=30,
+    # color=(255, 255, 255)
     st.display.draw_text('Hello world', clear_before=True)
     time.sleep(1)  # Only updating every second
 ```
 
-   
-### Exercise 5  
+### Exercise 5
 
-Extend your previous program to show a happy face when tilted left and a sad face when tilted right.   
-When shaken, show a surprised face.  
+Extend your previous program to show a happy face when tilted left and a sad face when tilted right.
+When shaken, show a surprised face.
 
-### Exercise 6   
-Create a new program that displays a message on screen that switches to a different colour every 2 seconds.   
+### Exercise 6
+
+Create a new program that displays a message on screen that switches to a different colour every 2 seconds.
 
 !!! info "Tip"
 
@@ -244,7 +243,6 @@ Now that you know the basics of using the hardware on the badge, here's a few ot
 4. Create a reaction game - An LED shows up by a button, the user must quickly press that button, after which another random LED lights up and they must press the button nearest that.
 
    You might want to make sure you use a very short `time.sleep(X)` value for this in the `while True:` loop!
-   
 
 ## Building a full app
 

@@ -1,6 +1,6 @@
 ---
-title: Spaceagon Assembly
-weight: 2
+title: Spaceagon Assembly (2026)
+weight: 1
 ---
 
 ## Requirements
@@ -34,7 +34,9 @@ If you cannot update your badge, [flash your badge](./flash-the-badge.md) instea
 
 ## Remove the 2024 frontboard
 
-If you bought a complete kit, skip ahead to [Assemble the new badge](#assemble-the-new-badge).
+!!! tip "Don't have a 2024 badge?"
+
+    If you have a complete kit, skip ahead to [Assemble the new badge](#assemble-the-new-badge).
 
 ### Step 3: Remove the display
 
@@ -151,6 +153,10 @@ At this point the display should show the badge menu.
 ### Step 18: Screw in the three screws to secure the backboard
 
 ![Screwing the backboard in place](../images/spaceagon-assembly/step-18-screws-1.jpg){: style="width:550px;height: auto;" }
+
+!!! tip "Screws not reaching standoffs?"
+
+    If the standoffs don't connect, you may have put them into the wrong board. They attach to the blue middleboard, not the black backboard.
 
 ### Step 19: Test your badge
 

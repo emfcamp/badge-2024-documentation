@@ -31,7 +31,7 @@ The badge uses a [JUSHUO AFC01-S30FCC-00](https://www.lcsc.com/product-detail/FF
 
 The badge uses a [HCTL HC-FFC05-30P-100-A-01 (30 pin 0.5mm pitch 100mm same side connector)](https://www.lcsc.com/product-detail/FFC-FPC-Connect-Cables_HCTL-HC-FFC05-30P-100-A-01_C6575029.html).
 
-Check out the steps to [Assemble your badge](./end-user-manual.md#assembly) to see how your badge was assembled. Reverse the steps by unscrewing your badge front and then carefully opening the connectors to remove the cable and replace it with the new one.
+Check out the steps to [Assemble your badge](./tildagon-assembly.md) to see how your badge was assembled. Reverse the steps by unscrewing your badge front and then carefully opening the connectors to remove the cable and replace it with the new one.
 
 <p style="text-align: center;">
   <img src="../../images/badge-photos/ribbon1.jpg" width="100" alt="Ribbon connector with black bit lifted" style="width:200px;height: auto;" />
@@ -65,4 +65,4 @@ Make sure the connector and pinout are correct. Compare the photo of the connect
 
 ![Battery side of the front of the badge](../images/badge-photos/front-battery-side.jpg){: style="width:300px;height: auto;margin:auto;display:block;" }
 
-Check out the steps to [Assemble your badge](./end-user-manual.md#assembly) to see how your badge was assembled. Reverse the steps by unscrewing your badge front and then carefully removing the old battery from the glue dots. You will probably need small pliers to pull the connector out of its socket.
+Check out the steps to [Assemble your badge](./tildagon-assembly.md) to see how your badge was assembled. Reverse the steps by unscrewing your badge front and then carefully removing the old battery from the glue dots. You will probably need small pliers to pull the connector out of its socket.
