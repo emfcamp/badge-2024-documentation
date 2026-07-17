@@ -205,7 +205,8 @@ import simple_tildagon as st
 import time
 
 while True:
-    # Other optional parameters include delay=0, x=0, y=0, font_size=30, color=(255, 255, 255))
+    # Other optional parameters: delay=0, x=0, y=0, font_size=30,
+    # color=(255, 255, 255)
     st.display.draw_text('Hello world', clear_before=True)
     time.sleep(1)  # Only updating every second
 ```
