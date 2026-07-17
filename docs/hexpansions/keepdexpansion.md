@@ -22,7 +22,7 @@ The driver software for the hexpansion is [provided by @sodoku](https://github.c
 <!-- prettier-ignore -->
 | Keys | Description |
 | ---- | ----------- |
-| FN + ESC | Turn leds off|
+| FN + ESC | Turn leds off |
 | FN + SQUARE | Set all leds to red |
 | FN + TRIANGLE | Set all leds to orange |
 | FN + CROSS | Set all leds to yellow |
