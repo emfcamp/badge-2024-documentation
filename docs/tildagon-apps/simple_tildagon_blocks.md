@@ -33,6 +33,7 @@ Not programmed before or not familiar with Python? This is a great place to star
 Already a Python expert? Click here for the [Thonny Python guide](simple_tildagon_python.md) instead.
 
 ## Getting started with Tildagon Blockly
+
 To get started with Tildagon Blockly, first click `connect badge`. You will need to select the badge from the pop-up Web Serial dialog box.
 Once you're ready to test your program, click `upload program to badge`.
 
