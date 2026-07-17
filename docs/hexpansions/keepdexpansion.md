@@ -19,7 +19,7 @@ The driver software for the hexpansion is [provided by @sodoku](https://github.c
 
 ## Key combinations
 
-
+<!-- prettier-ignore -->
 | Keys | Description |
 | ---- | ----------- |
 | FN + ESC | Turn leds off|
@@ -32,4 +32,3 @@ The driver software for the hexpansion is [provided by @sodoku](https://github.c
 | FN + SOLDERPARTY | Make leds follow tildagon pattern |
 
 Note: `SOLDERPARTY` is the key next to CTRL
-
