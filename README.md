@@ -50,18 +50,35 @@ You can serve the resulting docs with:
 python3 -m http.server 9000 --directory public
 ```
 
-### Linters
+### Linting
 
-To run linters locally:
+CI checks Markdown style and Python snippets in the docs. To run the same checks locally:
 
-Install [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) and ensure you have run `pipenv install` and `pipenv activate`.
+1. Install Node dependencies (for [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)):
 
-Then run the following commands to lint the markdown files and the python code snippets:
+   ```sh
+   npm install
+   ```
 
-```sh
-make lint-markdown
-make lint-py
-```
+2. Install Python dependencies and activate the virtual environment (includes `flake8-markdown`):
+
+   ```sh
+   pipenv install
+   pipenv shell
+   ```
+
+3. Run the linters:
+
+   ```sh
+   make lint
+   ```
+
+   Or run them separately:
+
+   ```sh
+   make lint-markdown   # Markdown style (trailing spaces, headings, etc.)
+   make lint-py         # Python code snippets in Markdown files
+   ```
 
 ## Contribute to the documentation
 
