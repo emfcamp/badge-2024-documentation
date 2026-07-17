@@ -126,7 +126,7 @@ Lift the black flap of the display connector and slide in the display cable.
 
 ![Lift the flap of the display connector](../images/spaceagon-assembly/step-13-display-cable-1.jpg){: style="width:550px;height: auto;" }
 
-![Attach the ribbon cable](../images/spaceagon-assembly/step-13-display-cable-1.jpg){: style="width:550px;height: auto;" }
+![Attach the ribbon cable](../images/spaceagon-assembly/step-13-display-cable-2.jpg){: style="width:550px;height: auto;" }
 
 ### Step 14: Attach the battery
 
