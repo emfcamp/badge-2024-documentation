@@ -28,7 +28,7 @@ The driver software for the hexpansion is [provided by @sodoku](https://github.c
 | FN + CROSS | Set all leds to yellow |
 | FN + CIRCLE | Set all leds to green |
 | FN + CLOUD | Set all leds to blue |
-| FN + DIAMOND | Set all leds to purble |
+| FN + DIAMOND | Set all leds to purple |
 | FN + SOLDERPARTY | Make leds follow tildagon pattern |
 
 Note: `SOLDERPARTY` is the key next to CTRL
