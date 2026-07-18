@@ -140,6 +140,10 @@ Using the same or new glue dots, attach the battery over the display cable.
 
 ### Step 16: Attach the display cable to the backboard
 
+Remove all stickers from the mounting points as shown below.  Note the one hidden under the cable.
+
+![Remove stickers](../images/spaceagon-assembly/step-16-remove-stickers.jpg){: style="width:550px;height: auto;" }
+
 Lift the black flap of the display connector and slide in the display cable.
 
 ![Connecting the display cable to the backboard](../images/spaceagon-assembly/step-16-display-cable-backboard.jpg){: style="width:550px;height: auto;" }
