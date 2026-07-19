@@ -120,9 +120,9 @@ Push both boards together.
 
 ![Frontboard and middleboard assembled sideview](../images/spaceagon-assembly/step-12-frontboard-4.jpg){: style="width:550px;height: auto;" }
 
-### Step 13: Attach the (new) display cable
+### Step 13: Attach the display cable
 
-Lift the black flap of the display connector and slide in the display cable.
+Lift the black flap of the display connector and slide in the display cable.  If you have an upgrade kit please reuse your old cable - if your cable is broken we have a small number of replacements available at the badge tent.
 
 ![Lift the flap of the display connector](../images/spaceagon-assembly/step-13-display-cable-1.jpg){: style="width:550px;height: auto;" }
 
@@ -135,6 +135,8 @@ Using the same or new glue dots, attach the battery over the display cable.
 ![Battery attached over the display cable](../images/spaceagon-assembly/step-14-battery.jpg){: style="width:550px;height: auto;" }
 
 ### Step 15: Attach the standoffs to the blue middleboard
+
+If you're upgrading, these are now mounted the opposite way around to the original board!
 
 ![Attach standoffs](../images/spaceagon-assembly/step-15-standoffs.jpg){: style="width:550px;height: auto;" }
 
