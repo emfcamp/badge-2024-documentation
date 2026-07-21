@@ -140,6 +140,8 @@ If you're upgrading, these are now mounted the opposite way around to the origin
 
 ![Attach standoffs](../images/spaceagon-assembly/step-15-standoffs.jpg){: style="width:550px;height: auto;" }
 
+![With standoffs attached](../images/spaceagon-assembly/step-15-standoffs-attached.jpg){: style="width:550px;height: auto;" }
+
 ### Step 16: Attach the display cable to the backboard
 
 Remove all stickers from the mounting points as shown below.  Note the one hidden under the cable.
