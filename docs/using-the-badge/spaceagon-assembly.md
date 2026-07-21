@@ -102,7 +102,7 @@ Push the nubbin on strongly.
 
 ### Step 11: Remove the stickers
 
-Remove the orange stickers covering the three mounting points on the middleboard, as shown in the image.
+Remove the orange stickers covering the three mounting points on the black frontboard, as shown in the image.
 
 ![Removing the stickers from the middleboard](../images/spaceagon-assembly/step-11-stickers.jpg){: style="width:550px;height: auto;" }
 
@@ -139,6 +139,8 @@ Using the same or new glue dots, attach the battery over the display cable.
 If you're upgrading, these are now mounted the opposite way around to the original board!
 
 ![Attach standoffs](../images/spaceagon-assembly/step-15-standoffs.jpg){: style="width:550px;height: auto;" }
+
+![With standoffs attached](../images/spaceagon-assembly/step-15-standoffs-attached.jpg){: style="width:550px;height: auto;" }
 
 ### Step 16: Attach the display cable to the backboard
 
