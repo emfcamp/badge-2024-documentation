@@ -19,50 +19,23 @@ To publish your Tildagon App, you need to create a GitHub or Codeberg repository
 
 ## Instructions
 
-1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this [GitHub repository](https://github.com/hughrawlinson/tildagon-demo/).
-2. Edit the app properties in the `tildagon.toml` file with your name, the category of the app, and other metadata ([example](https://github.com/npentrel/tildagon-demo/blob/main/tildagon.toml)):
+1. [Create a new repository](https://github.com/new?template_name=tildagon-demo&template_owner=hughrawlinson) based on this [GitHub template repository](https://github.com/hughrawlinson/tildagon-demo/).
+2. Edit the app properties in the `tildagon.json` file with your name, the category of the app, and other metadata ([example](https://github.com/hughrawlinson/tildagon-demo/blob/main/tildagon.json)):
 
-   ```toml
-   [app]
-   # The name of your app as displayed in the menu
-   name = "Your Hexceptional App"
-
-   # The submenu where your app should appear. See "App categories" above.
-   # One of: "Badge", "Music", "Media", "Apps", "Games", "Background", "Pattern"
-   category = "Badge"
-
-   # OPTIONAL: Same as above, for compatibility with older firmware
-   # versions that can't handle categories introduced afterwards.
-   # One of: "Badge", "Music", "Apps"
-   # menu = "Badge"
-
-   # OPTIONAL: If your app prefers wifi to be off or on when entering.
-   # Useful if you want more resources (false) or need wifi (true).
-   # Remove if you don't want to change wifi state!
-   # wifi_preference = false
-
-   [entry]
-   # The name of your entry point `Application` class
-   # class = "NickApp"
-
-   [metadata]
-   # Your nickname.  Must be at most 32 characters!
-   author = "your-name"
-
-   # License of your app as an SPDX identifier: <https://spdx.org/licenses/>
-   license = "LGPL-3.0-only"
-
-   # URL to the repository of your app.
-   url = "https://www.github.com/username/repo"
-
-   # Description of your app.  Maximum 140 characters!
-   description = "A hexceptional tildagon app for hexceptional people."
-
-   # Version number of your app.  If you push a commit where this number is
-   # increased, we interpret this as a new version being released.
-   #
-   # Version number must be a string!
-   version = "0.0.1"
+   ```json
+   {
+     "app": {
+       "name": "Your Hexceptional App",
+       "category": ["Badge"]
+     },
+     "metadata": {
+       "author": "your-name",
+       "license": "LGPL-3.0-only",
+       "url": "https://www.github.com/username/repo",
+       "description": "A hexceptional tildagon app for hexceptional people.",
+       "version": "0.0.1"
+     }
+   }
    ```
 
 3. Edit the `app.py` to set the `__app_export__` variable and to add your app contents.
@@ -119,15 +92,15 @@ https://apps.badge.emfcamp.org/apps/<app-id>/
 
 Set `category` in your `tildagon.toml` to control where your app appears in the badge menu and how the app store classifies it:
 
-| Category | Description |
-| -------- | ----------- |
-| **Badge** | Displays the name of the user |
-| **Music** | Music related apps |
-| **Media** | Video, social, news, canvas and sculpture |
-| **Apps** | General purpose Tildagon apps |
-| **Games** | DOOM, probably |
-| **Background** | Visualisations that run behind the badge menu |
-| **Pattern** | Colors and animations for the Tildagon's RGB LEDs |
+| Category       | Description                                       |
+| -------------- | ------------------------------------------------- |
+| **Badge**      | Displays the name of the user                     |
+| **Music**      | Music related apps                                |
+| **Media**      | Video, social, news, canvas and sculpture         |
+| **Apps**       | General purpose Tildagon apps                     |
+| **Games**      | DOOM, probably                                    |
+| **Background** | Visualisations that run behind the badge menu     |
+| **Pattern**    | Colors and animations for the Tildagon's RGB LEDs |
 
 ## Troubleshooting
 
