@@ -178,6 +178,7 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
   <span class="img-container">
     <img src=" ../../images/hexpansions/screen-hexpansion.jpg" loading="lazy" alt="Screen hexpansion with round displays showing eye graphics" data-title="Screen hexpansion by mbooth" data-description="">
     <span class="label">Screen hexpansion by mbooth</span>
+    <span class="viewme"><a href="https://github.com/mbooth101/emf-screen-hexpansion/"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/geiger-hexpansion.jpg" loading="lazy" alt="Geiger counter hexpansion" data-title="Geiger counter hexpansion by dratini0" data-description="">
