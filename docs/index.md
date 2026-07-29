@@ -201,8 +201,8 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="viewme"><a href="https://go.dratini0.hu/gps-hexpansion/"><p>👀 VIEW FILES</p></a></span>
   </span>
   <span class="img-container">
-    <img src=" ../../images/hexpansions/breakout-danny-walker.jpg" loading="lazy" alt="Breakout hexpansion by Danny Walker" data-title="Breakout hexpansion by Danny Walker" data-description="">
-    <span class="label">Breakout hexpansion by Danny Walker</span>
+    <img src=" ../../images/hexpansions/hextension.jpg" loading="lazy" alt="Hextension by Danny Walker" data-title="Hextension by Danny Walker" data-description="">
+    <span class="label">Hextension by Danny Walker</span>
   </span>
   <span class="img-container">
     <img src=" ../../images/hexpansions/protoboard.jpg" loading="lazy" alt="A prototyping hexpansion for the EMF 2024 Tildagon Badge." data-title="Protoboard Hexpansion by Jake Walker" data-description=".custom-desc-protoboard">
@@ -965,8 +965,12 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     </div>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/hextension.png" loading="lazy" alt="Hextension hexpansion hub PCB render by Danny Walker" data-title="Hextension by Danny Walker" data-description="">
-    <span class="label">Hextension by Danny Walker</span>
+    <img src=" ../../images/hexpansions/moderate_button.jpg" loading="lazy" alt="Moderately Sized Red Button by Danny Walker" data-title="Moderately Sized Red Button by Danny Walker" data-description="">
+    <span class="label">Moderately Sized Red Button by Danny Walker</span>
+  </span>
+  <span class="img-container collapsible collapsed">
+    <img src=" ../../images/hexpansions/spider.jpg" loading="lazy" alt="Hex-spide-sion by Danny Walker" data-title="Hexs-pide-sion by Danny Walker" data-description="">
+    <span class="label">Hex-spide-sion by Danny Walker</span>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/donglegon.jpg" loading="lazy" alt="Donglegon hexpansion PCBs — yellow and purple versions" data-title="Donglegon by Kristian" data-description="">
