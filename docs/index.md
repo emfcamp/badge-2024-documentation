@@ -436,8 +436,15 @@ Hexpansions are accessories that plug into the badge's expansion connectors. Alm
     <span class="label">Hexatetrahedron by grajohnt</span>
   </span>
   <span class="img-container collapsible collapsed">
-    <img src=" ../../images/hexpansions/radio.jpg" loading="lazy" alt="Audio output hexpansion" data-title="Audio output hexpansion by Andrea" data-description="">
-    <span class="label">Audio output hexpansion hexpansion by Andrea</span>
+    <img src=" ../../images/hexpansions/radio.jpg" loading="lazy" alt="Audio output hexpansion" data-title="Audio output hexpansion by Andrea -emuboy- Campanella " data-description=".custom-desc-audio-output">
+    <span class="label"><a href="https://github.com/andreacampanella/AudioHexpansion">Audio output hexpansion</a> by Andrea</span>
+    <span class="viewme"><a href="https://github.com/andreacampanella/AudioHexpansion"><p>👀 VIEW FILES</p></a></span>
+    <div class="glightbox-desc custom-desc-audio-output">
+      <p>an I2S expansion for the EMF Camp Tildagon Badge</p>
+      <div class="detailbuttons">
+        <span class="viewme"><a href="https://github.com/andreacampanella/AudioHexpansion"><p>👀 VIEW FILES</p></a></span>
+      </div>
+    </div>
   </span>
   <span class="img-container collapsible collapsed">
     <img src=" ../../images/hexpansions/Radiolarian.png" loading="lazy" alt="Radiolarian hexpansion" data-title="Radiolarian by webmariner" data-description=".custom-desc-radiolarian">
