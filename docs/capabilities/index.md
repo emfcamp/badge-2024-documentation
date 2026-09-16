@@ -78,7 +78,7 @@ their tildagon.toml files
 ```toml
 [[metadata.capabilities]]
 required = true
-feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/mysterious-pings" }
+feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/registry/mysterious-pings" }
 ```
 
 Declaring support or requirement of multiple Capabilities works in toml as follows:
@@ -86,11 +86,11 @@ Declaring support or requirement of multiple Capabilities works in toml as follo
 ```toml
 [[metadata.capabilities]]
 required = true
-feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/mysterious-pings" }
+feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/registry/mysterious-pings" }
 
 [[metadata.capabilities]]
 required = true
-feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/badger-detector" }
+feature = { type = "Capability", identifier = "https://tildagon.badge.emfcamp.org/capabilities/registry/badger-detector" }
 ```
 
 ### Hexpansions where EEPROM space is at a premium
@@ -103,7 +103,7 @@ class GPSApp(app.App):
     CAP = ["@nmea/", "@position/"]
 ```
 
-In this notation, the `CAP` attribute lists the identifiers that are provided by this hexpansion. The string `@` is replaced with `https://tildagon.badge.emfcamp.org/capabilities/`, to allow lower filesizes when implementing common capabilities.
+In this notation, the `CAP` attribute lists the identifiers that are provided by this hexpansion. The string `@` is replaced with `https://tildagon.badge.emfcamp.org/capabilities/registry/`, to allow lower filesizes when implementing common capabilities.
 
 ## How can my app see which Capabilities are provided on the current running badge?
 
