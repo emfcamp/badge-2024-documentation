@@ -145,6 +145,20 @@ There are a lot of event types built into the firmware. Here are a few that are 
   from system.hexpansion.events import HexpansionInsertionEvent, HexpansionRemovalEvent
   ```
 
+* ``HexpansionAppLauncherAddEvent`` and ``HexpansionAppLauncherRemoveEvent``
+
+  Hexpansions which provide an app via eeprom may use these events in order to add the app to the app launcher in the same manner as apps downloaded from the app store. The event may be emitted by apps when they first run.
+
+  When a hexpansion is removed from a port the `HexpansionAppLauncherRemoveEvent` event is fired automatically, however if an app wishes to remove itself prior to this point from the app launcher, the app may emit the event via the remove event.
+
+  Apps added to the launcher via these events will be identified by the :glyphs-hexpansion: icon, port number and provided name e.g. `:glyphs-hexpansion:4 Test App`
+
+  Apps distributed via the app store shouldn't emit these events.
+
+  ```python
+  from system.hexpansion.events import HexpansionAppLauncherAddEvent, HexpansionAppLauncherRemoveEvent
+  ```
+
 * ``EmotePositiveEvent`` and ``EmoteNegativeEvent``
 
   Emote events are a lightweight way for a foreground app to signal to other components, such as hexpansion drivers or the back-of-board LED manager, that something good or bad just happened in the user interface.
